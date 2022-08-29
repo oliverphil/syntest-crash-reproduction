@@ -1,0 +1,13 @@
+TypeError [ERR_ASYNC_TYPE]: Invalid name for async "type":
+    at new NodeError (node:internal/errors:372:5)
+    at new AsyncResource (node:async_hooks:182:15)
+    at Object.core.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/union/lib/core.js:100:18)
+    at new HttpServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:179:13)
+    at Object.exports.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:22:10)
+    at Object.<anonymous> (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js:3:6)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12) {
+  code: 'ERR_ASYNC_TYPE'
+}

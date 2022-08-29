@@ -1,0 +1,16 @@
+{
+  "issueNumber": 1,
+  "info": "Throw standard error when options contains crash object",
+  "url": "https://github.com/http-party/http-server",
+  "nodeVersion": "18.4.0",
+  "version": "14.1.1",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "setup": {
+    "copy": {
+      "from": "core.js",
+      "to": "node_modules/union/lib/core.js"
+    }
+  }
+}

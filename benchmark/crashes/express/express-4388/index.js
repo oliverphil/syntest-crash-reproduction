@@ -1,0 +1,1 @@
+import {Object.createSecureContext} from '_tls_common';

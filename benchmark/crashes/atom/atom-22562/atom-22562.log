@@ -1,0 +1,9 @@
+Error: EPERM: operation not permitted, lstat '\\path\user$\user'
+    at Proxy.realpathSync (fs.js:1529:7)
+    at Proxy.<anonymous> (electron/js2c/asar.js:302:42)
+    at ~/AppData/Local/atom/app-1.57.0/resources/app/static/<embedded>:11:805935
+    at Array.map (<anonymous>)
+    at Object.startTask (~/AppData/Local/atom/app-1.57.0/resources/app/static/<embedded>:11:805926)
+    at Object.startLoadPathsTask (~/AppData/Local/atom/app-1.57.0/resources/app/static/<embedded>:11:191186)
+    at ~/AppData/Local/atom/app-1.57.0/resources/app/static/<embedded>:11:189150
+    at processTicksAndRejections (internal/process/task_queues.js:76:11)

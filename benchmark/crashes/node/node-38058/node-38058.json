@@ -1,0 +1,8 @@
+{
+  "issueNumber": 38058,
+  "info": "TypeError [ERR_INVALID_ARG_TYPE]: The \"path\" argument must be of type string or an instance of Buffer or URL. Received null",
+  "url": "https://github.com/nodejs/node/issues/38058",
+  "version": "16.0.0-v8-canary202104037284782541",
+  "node-version": "16.0.0-v8-canary202104037284782541",
+  "dependencies": {}
+}

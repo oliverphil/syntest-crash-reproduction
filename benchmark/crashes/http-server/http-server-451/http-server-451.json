@@ -1,0 +1,7 @@
+{
+  "issueNumber": 451,
+  "info": "Proxy option leads to uncaught exception if passed without protocol",
+  "url": "https://github.com/http-party/http-server/issues/451",
+  "version": "13.0.0",
+  "dependencies": {}
+}

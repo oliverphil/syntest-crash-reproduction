@@ -1,0 +1,1 @@
+import {Function.Module._resolveFilename} from 'module';

@@ -1,0 +1,17 @@
+Exception while invoking method 'createDiscussion' TypeError: Cannot read property 'localeCompare' of undefined
+     at app/lib/server/functions/createDirectRoom.js:31:74
+     at Array.sort (<anonymous>)
+     at createDirectRoom (app/lib/server/functions/createDirectRoom.js:31:32)
+     at createRoom (app/lib/server/functions/createRoom.js:16:10)
+     at create (app/discussion/server/methods/createDiscussion.js:89:21)
+     at MethodInvocation.createDiscussion (app/discussion/server/methods/createDiscussion.js:137:10)
+     at MethodInvocation.methodsMap.computed> (app/lib/server/lib/debug.js:67:34)
+     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1771:12)
+     at packages/ddp-server/livedata_server.js:719:19
+     at Meteor.EnvironmentVariable.EVp.withValue (packages/meteor.js:1234:12)
+     at packages/ddp-server/livedata_server.js:717:46
+     at Meteor.EnvironmentVariable.EVp.withValue (packages/meteor.js:1234:12)
+     at packages/ddp-server/livedata_server.js:715:46
+     at new Promise (<anonymous>)
+     at Session.method (packages/ddp-server/livedata_server.js:689:23)
+     at packages/ddp-server/livedata_server.js:559:43

@@ -1,0 +1,7 @@
+Error: Cannot call function 'getPosition' on missing remote object 3160
+    at throwRPCError (/Applications/Atom.app/Contents/Resources/electron.asar/browser/rpc-server.js:148:17)
+    at /Applications/Atom.app/Contents/Resources/electron.asar/browser/rpc-server.js:406:5
+    at EventEmitter.ipcMain.on.args (/Applications/Atom.app/Contents/Resources/electron.asar/browser/rpc-server.js:273:21)
+    at EventEmitter.emit (events.js:182:13)
+    at WebContents.<anonymous> (/Applications/Atom.app/Contents/Resources/electron.asar/browser/api/web-contents.js:368:21)
+    at WebContents.emit (events.js:182:13)

@@ -1,0 +1,8 @@
+{
+  "issueNumber": 17246,
+  "info": "Starting a discussion stopped working on 3.1.0",
+  "url": "https://github.com/RocketChat/Rocket.Chat/issues/17246",
+  "version": "3.1.0",
+  "dependencies": {
+  }
+}

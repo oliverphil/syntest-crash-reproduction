@@ -1,0 +1,20 @@
+98% after emitting(node:79437) UnhandledPromiseRejectionWarning: Error [ERR_INSPECTOR_NOT_CONNECTED]: Session is not connected
+    at Session.post (inspector.js:75:13)
+    at Promise (node_modules/webpack/lib/debug/ProfilingPlugin.js:54:25)
+    at new Promise (<anonymous>)
+    at Profiler.sendCommand (node_modules/webpack/lib/debug/ProfilingPlugin.js:53:11)
+    at Profiler.stopProfiling (node_modules/webpack/lib/debug/ProfilingPlugin.js:76:15)
+    at compiler.hooks.done.tapAsync (node_modules/webpack/lib/debug/ProfilingPlugin.js:209:21)
+    at args (node_modules/webpack/lib/debug/ProfilingPlugin.js:394:11)
+    at AsyncSeriesHook.eval [as callAsync] (eval at create (node_modules/webpack/node_modules/tapable/lib/HookCodeFactory.js:32:10), <anonymous>:18:1)
+    at Watching._done (node_modules/webpack/lib/Watching.js:97:28)
+    at compiler.emitRecords.err (node_modules/webpack/lib/Watching.js:72:19)
+    at Compiler.emitRecords (node_modules/webpack/lib/Compiler.js:449:39)
+    at compiler.emitAssets.err (node_modules/webpack/lib/Watching.js:53:20)
+    at hooks.afterEmit.callAsync.err (node_modules/webpack/lib/Compiler.js:435:14)
+    at AsyncSeriesHook.eval [as callAsync] (eval at create (node_modules/webpack/node_modules/tapable/lib/HookCodeFactory.js:32:10), <anonymous>:9:1)
+    at asyncLib.forEachLimit.err (node_modules/webpack/lib/Compiler.js:432:27)
+    at node_modules/neo-async/async.js:2760:7
+    at done (node_modules/neo-async/async.js:3450:9)
+    at node_modules/graceful-fs/graceful-fs.js:43:10
+    at FSReqWrap.oncomplete (fs.js:141:20)

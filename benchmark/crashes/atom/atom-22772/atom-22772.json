@@ -1,0 +1,9 @@
+{
+  "issueNumber": 22772,
+  "info": "Install and update of packages fail with exception in rimraf.",
+  "url": "https://github.com/atom/atom/issues/22772",
+  "nodeVersion": "12.14.1",
+  "version": "1.57.0",
+  "dependencies": {
+  }
+}

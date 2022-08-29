@@ -1,0 +1,8 @@
+{
+  "issueNumber": 15579,
+  "info": "Bug: no-magic-numbers error message for invalid BigInt in configuration",
+  "url": "https://github.com/eslint/eslint/issues/15579",
+  "version": "8.8.0",
+  "nodeVersion": "17.4.0",
+  "dependencies": {}
+}

@@ -1,0 +1,8 @@
+{
+  "issueNumber": 13380,
+  "info": "TypeError: The 'compilation' argument must be an instance of Compilation",
+  "url": "https://github.com/webpack/webpack/issues/13380",
+  "version": "5.37.0",
+  "nodeVersion": "14.16.1",
+  "dependencies": {}
+}

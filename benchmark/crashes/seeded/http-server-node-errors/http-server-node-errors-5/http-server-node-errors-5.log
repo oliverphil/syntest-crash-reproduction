@@ -1,0 +1,13 @@
+TypeError [ERR_ASYNC_CALLBACK]: hook.before must be a function
+    at new NodeError (node:internal/errors:371:5)
+    at new AsyncHook (node:async_hooks:74:13)
+    at Object.createHook (node:async_hooks:149:10)
+    at Object.core.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/union/lib/core.js:100:17)
+    at new HttpServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:179:13)
+    at Object.exports.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:22:10)
+    at Object.<anonymous> (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js:3:6)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32) {
+  code: 'ERR_ASYNC_CALLBACK'
+}

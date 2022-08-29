@@ -1,0 +1,9 @@
+{
+  "issueNumber": 14554,
+  "info": "\"TypeError: Cannot read property 'type' of undefined\" while entering useEffect statement on VSCode",
+  "url": "https://github.com/eslint/eslint/issues/14554",
+  "version": "7.25.0",
+  "nodeVersion": "15.13.0",
+  "dependencies": {
+  }
+}

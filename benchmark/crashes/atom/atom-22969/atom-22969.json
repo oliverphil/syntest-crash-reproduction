@@ -1,0 +1,10 @@
+{
+  "issueNumber": 22969,
+  "info": "Bootstrap syntax error",
+  "url": "https://github.com/atom/atom/issues/22969",
+  "version": "1.58.0",
+  "nodeVersion": "10.0.0",
+  "dependencies": {
+    "electron": "9.4.4"
+  }
+}

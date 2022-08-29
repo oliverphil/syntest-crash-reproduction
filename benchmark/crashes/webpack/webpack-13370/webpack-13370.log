@@ -1,0 +1,11 @@
+TypeError: this.generator.getConcatenationBailoutReason is not a function
+    at NormalModule.getConcatenationBailoutReason (webpack/lib/NormalModule.js:1018:25)
+    at webpack/lib/optimize/ModuleConcatenationPlugin.js:132:36
+    at Hook.eval [as callAsync] (eval at create (tapable/lib/HookCodeFactory.js:33:10), <anonymous>:7:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (tapable/lib/Hook.js:18:14)
+    at webpack/lib/Compilation.js:2408:36
+    at Hook.eval [as callAsync] (eval at create (tapable/lib/HookCodeFactory.js:33:10), <anonymous>:6:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (tapable/lib/Hook.js:18:14)
+    at Compilation.seal (webpack/lib/Compilation.js:2399:27)
+    at webpack/lib/Compiler.js:1094:20
+    at webpack/lib/Compilation.js:2216:4

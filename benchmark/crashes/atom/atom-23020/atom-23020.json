@@ -1,0 +1,9 @@
+{
+  "issueNumber": 23020,
+  "info": "Uncaught Error: dlopen(/private/var/folders/v_/2sg4330s3v3_yfvymns8wglr0000gn/T/AppTranslocation/...",
+  "url": "https://github.com/atom/atom/issues/23020",
+  "version": "1.58.0",
+  "dependencies": {
+    "electron": "9.4.4"
+  }
+}

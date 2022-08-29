@@ -1,0 +1,9 @@
+{
+  "issueNumber": 22920,
+  "info": "Uncaught Error: Cannot call function 'getPosition' on missing remote object 3160",
+  "url": "https://github.com/atom/atom/issues/22920",
+  "version": "1.41.0",
+  "dependencies": {
+    "electron": "4.2.7"
+  }
+}

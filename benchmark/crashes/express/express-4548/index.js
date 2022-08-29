@@ -1,0 +1,1 @@
+import * as routes from '/home/yash/Desktop/files/works/projects/simple-rbs/src/modules/user/routes.ts';

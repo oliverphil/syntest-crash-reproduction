@@ -1,0 +1,1 @@
+import * as index from '/scratch/rpatrick/promises-rm-bug/index.js';

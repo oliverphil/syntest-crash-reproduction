@@ -1,0 +1,18 @@
+{
+  "issueNumber": 22893,
+  "info": "Uncaught Error: dlopen(/Volumes/MacExt/application/Atom.app/Contents/Resources/app.asar.unpacked/...",
+  "url": "https://github.com/atom/atom/issues/22893",
+  "version": "1.55.0",
+  "nodeVersion": "10.0.0",
+  "dependencies": {
+    "electron": "6.1.12",
+    "atom-beautify": "0.33.4",
+    "atom-ternjs": "0.20.0",
+    "autoclose-html": "0.23.0",
+    "csslint": "1.2.0",
+    "emmet": "2.4.3",
+    "linter": "3.3.0",
+    "linter-jshint": "3.1.19",
+    "linter-ui-default": "3.3.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"standard-1494","version":"1.0.0","main":"index.js","engineStrict":true,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node src/index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"standard":"14.3.2"},"engines":{"node":"8.9.4"}}

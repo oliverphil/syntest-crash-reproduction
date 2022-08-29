@@ -1,0 +1,1 @@
+import {SourceCode.getTokenBefore} from 'eslint/lib/source-code/token-store/index.js';

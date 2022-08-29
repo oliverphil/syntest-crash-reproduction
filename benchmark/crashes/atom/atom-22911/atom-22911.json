@@ -1,0 +1,9 @@
+{
+  "issueNumber": 22911,
+  "info": "Uncaught TypeError: Cannot read property 'path' of undefined",
+  "url": "https://github.com/atom/atom/issues/22911",
+  "version": "1.58.0",
+  "dependencies": {
+    "electron": "9.4.4"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "issueNumber": 37705,
+  "info": "Accidental breaking change on v15.7.0",
+  "url": "https://github.com/nodejs/node/issues/37705",
+  "version": "15.7.0",
+  "node-version": "15.7.0",
+  "dependencies": {}
+}

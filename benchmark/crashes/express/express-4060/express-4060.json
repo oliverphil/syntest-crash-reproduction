@@ -1,0 +1,9 @@
+{
+  "issueNumber": 4060,
+  "info": "Debugging ERR_HTTP_HEADERS_SENT errors in res.render",
+  "url": "https://github.com/expressjs/express/issues/4060",
+  "version": "4.17.1",
+  "dependencies": {
+
+  }
+}

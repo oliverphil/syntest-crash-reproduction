@@ -1,0 +1,9 @@
+{
+  "issueNumber": 22962,
+  "info": "Uncaught Error: ENOENT: no such file or directory, lstat '/ Tutoring.md' #22962",
+  "url": "https://github.com/atom/atom/issues/22962",
+  "version": "1.50.0",
+  "dependencies": {
+    "electron": "5.0.13"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "issueNumber": 22963,
+  "info": "Uncaught Error: dlopen(/private/var/folders/lh/zr_hs6q13w5_6wkl337_r5n80000gn/T/wzQL.6Csvwz/Atom....",
+  "url": "https://github.com/atom/atom/issues/22963",
+  "version": "1.58.0",
+  "dependencies": {
+    "electron": "9.4.4"
+  }
+}
