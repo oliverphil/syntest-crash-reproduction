@@ -20,17 +20,19 @@ module.exports = {
     constant_pool_probability: 0.5,
 
     // logging
-    console_log_level: "info",
-    log_to_file: ["info", "warn", "error"],
+    console_log_level: "verbose",
+    log_to_file: ["info", "warn", "error", "verbose"],
 
     use_type_inference: true,
+    crash_reproduction: true,
 
     include: [
-        "./benchmark/top10npm/lodash/result.js",
-        "./benchmark/top10npm/lodash/slice.js",
-        "./benchmark/top10npm/lodash/split.js",
-        "./benchmark/top10npm/lodash/uniq.js",
-        "./benchmark/top10npm/lodash/unzip.js",
+        "./benchmark/crashes/http-server/**",
+        // "./benchmark/top10npm/lodash/result.js",
+        // "./benchmark/top10npm/lodash/slice.js",
+        // "./benchmark/top10npm/lodash/split.js",
+        // "./benchmark/top10npm/lodash/uniq.js",
+        // "./benchmark/top10npm/lodash/unzip.js",
 
         // "./benchmark/top10npm/lodash/**/a*.js",
         // "./benchmark/top10npm/commanderjs/lib/*.js",
@@ -74,9 +76,9 @@ module.exports = {
         // './benchmark/top10npm/lodash/y*.js',
         // './benchmark/top10npm/lodash/z*.js',
 
-        "./benchmark/top10npm/commanderjs/lib/argument.js",
-        "./benchmark/top10npm/commanderjs/lib/command.js",
-        "./benchmark/top10npm/commanderjs/lib/error.js",
+        // "./benchmark/top10npm/commanderjs/lib/argument.js",
+        // "./benchmark/top10npm/commanderjs/lib/command.js",
+        // "./benchmark/top10npm/commanderjs/lib/error.js",
 
     ]
 }
