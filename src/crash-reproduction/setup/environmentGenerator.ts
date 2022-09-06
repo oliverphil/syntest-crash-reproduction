@@ -8,6 +8,7 @@ import {
   switchMap, tap,
 } from 'rxjs';
 import StackTraceProcessor from './preprocessing/stackTraceProcessor';
+import {log} from "util";
 
 /**
  * Generate environments for each crash to be reproduced
@@ -20,9 +21,9 @@ class EnvironmentGenerator {
    * Generate the environments for each crash
    * @return {Crash[]} the crashes
    */
-  public async generate(): Promise<Crash[]> {
+  public generate(): Crash[] {
     const crashes: Crash[] = [];
-    await this.loadAssets().forEach((crash) => {
+    this.loadAssets().forEach((crash) => {
       this.generatePackage(crash);
       this.generateDockerfile(crash);
       crashes.push(crash);
@@ -35,103 +36,65 @@ class EnvironmentGenerator {
    * @private
    * @return {Observable<Crash>} an observable to provide crashes
    */
-  loadAssets(): Observable<Crash> {
+  loadAssets(): Crash[] {
     console.log('Loading Crashes... ');
     const assetDir = './benchmark/crashes';
-    const standardCrashes = from(fs.promises.readdir(assetDir)).pipe(
-        concatAll(),
-        filter((value) => value !== '.gitignore' && value !== 'seeded'),
-        switchMap((projItem) => {
-          const projectName = projItem;
-          return of([projectName,
-            fs.readdirSync(`${assetDir}/${projectName}`)]);
-        }),
-        switchMap((value) => {
-          // console.log(value);
-          const projectsArray: string[][] = [];
-          (value[1] as string[]).forEach((p) => {
-            projectsArray.push([value[0] as string, p]);
-          });
-          return projectsArray;
-        }),
-        switchMap((crashFileItem) => {
-          const projectName = crashFileItem[0];
-          const crashName = crashFileItem[1];
-          const crashFileString = `${assetDir}/` +
-              `${projectName}/${crashName}/${crashName}`;
-          return of([
-            projectName,
-            crashName,
-            fs.readFileSync(`${crashFileString}.json`),
-            fs.readFileSync(`${crashFileString}.log`),
-          ]);
-        }),
-        switchMap((value) => {
-          const projectName = value[0];
-          const crashName = value[1];
-          const crashFile = value[2];
-          const logFile = value[3];
-          console.log(crashName);
-          const crash: Crash = {
-            project: projectName,
-            stackTrace: StackTraceProcessor.process(logFile.toString()),
-            ...JSON.parse(crashFile.toString()),
-            crashId: crashName,
-          };
-          if (crash.version && crash.project !== 'node') {
-            crash.dependencies[crash.project] = crash.version;
-          }
-          return of(crash);
-        }),
-    );
-    const seededCrashes = from(fs.promises.readdir(`${assetDir}/seeded`)).pipe(
-        concatAll(),
-        skipWhile((folder) => folder === 'http-server'),
-        switchMap((projItem) => {
-          const projectName = projItem;
-          return of([projectName,
-            fs.readdirSync(`${assetDir}/seeded/${projectName}`)]);
-        }),
-        switchMap((value) => {
-          // console.log(value);
-          const projectsArray: string[][] = [];
-          (value[1] as string[]).forEach((p) => {
-            projectsArray.push([value[0] as string, p]);
-          });
-          return projectsArray;
-        }),
-        switchMap((crashFileItem) => {
-          const projectName = crashFileItem[0];
-          const crashName = crashFileItem[1];
-          const crashFileString = `${assetDir}/seeded/` +
-              `${projectName}/${crashName}/${crashName}`;
-          return of([
-            projectName,
-            crashName,
-            fs.readFileSync(`${crashFileString}.json`),
-            fs.readFileSync(`${crashFileString}.log`),
-          ]);
-        }),
-        switchMap((value) => {
-          const projectName = value[0];
-          const crashName = value[1];
-          const crashFile = value[2];
-          const logFile = value[3];
-          console.log(crashName);
-          const crash: Crash = {
-            project: projectName,
-            stackTrace: StackTraceProcessor.process(logFile.toString()),
-            ...JSON.parse(crashFile.toString()),
-            crashId: crashName,
-            seeded: true,
-          };
-          if (crash.version && crash.project !== 'node' && !crash.seeded) {
-            crash.dependencies[crash.project] = crash.version;
-          }
-          return of(crash);
-        }),
-    );
-    return merge(standardCrashes, seededCrashes);
+    const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
+        && value !== 'seeded');
+    const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) => value !== 'http-server');
+    const assetSubDirs = assetDirContents.map((projItem) => {
+      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
+    });
+    const seededAssetSubDirs = seededAssetDirContents.map((projItem) => {
+      const projectName = projItem;
+      return [projectName, fs.readdirSync(`${assetDir}/seeded/${projectName}`), true];
+    });
+    assetSubDirs.push(...seededAssetSubDirs);
+    const projectsArray = assetSubDirs.map((value) => {
+      const projectsArray= [];
+      (value[1] as string[]).forEach((p) => {
+        projectsArray.push([value[0] as string, p, value[2]]);
+      });
+      return projectsArray;
+    });
+    const crashInfo = [];
+    projectsArray.forEach(proj => {
+      crashInfo.push(...proj.map((crashFileItem) => {
+        const projectName = crashFileItem[0];
+        const crashName = crashFileItem[1];
+        let crashFileString = `${assetDir}/${projectName}/${crashName}/${crashName}`;
+        if (crashFileItem[2]) {
+          crashFileString = `${assetDir}/seeded/${projectName}/${crashName}/${crashName}`;
+        }
+        return [
+          projectName,
+          crashName,
+          fs.readFileSync(`${crashFileString}.json`),
+          fs.readFileSync(`${crashFileString}.log`),
+          crashFileItem[2],
+        ];
+      }));
+    })
+    const crashes = crashInfo.map((value) => {
+      const projectName = value[0];
+      const crashName = value[1];
+      const crashFile = value[2];
+      const logFile = value[3];
+      console.log(crashName);
+      const crash: Crash = {
+        project: projectName,
+        stackTrace: StackTraceProcessor.process(logFile.toString()),
+        ...JSON.parse(crashFile.toString()),
+        crashId: crashName,
+        seeded: value[4]
+      };
+      if (crash.version && crash.project !== 'node') {
+        crash.dependencies[crash.project] = crash.version;
+      }
+      return crash;
+    });
+
+    return crashes;
   }
 
   /**
@@ -148,7 +111,7 @@ class EnvironmentGenerator {
       engineStrict: crash.nodeVersion ? true : false,
       scripts: {
         test: 'echo "Error: no test specified" && exit 1',
-        crash: 'node src/index.js',
+        crash: 'node index.js',
       },
       author: 'Philip Oliver',
       license: 'ISC',
@@ -169,14 +132,16 @@ class EnvironmentGenerator {
    */
   generateDockerfile(crash: Crash) {
     const dockerfileString = `FROM node:${crash.nodeVersion ?? 'latest'} \n` +
-        `COPY assets/${crash.seeded ? 'seeded/' : ''}${crash.project}/${crash.crashId}/* ` +
+        `ARG CACHEBUST=1 \n` +
+        `COPY benchmark/crashes/${crash.seeded ? 'seeded/' : ''}${crash.project}/${crash.crashId}/* ` +
         `/${crash.crashId}/ \n` +
-        `COPY src/containerInternals/readFunctions.mjs /${crash.crashId}/readFunctions.mjs \n` +
+        `COPY src/crash-reproduction/containerInternals/readFunctions.mjs /${crash.crashId}/readFunctions.mjs \n` +
+        `RUN ls ${crash.crashId} \n` +
         `WORKDIR /${crash.crashId}/ \n` +
+        `VOLUME /${crash.crashId} \n` +
         `RUN ["npm", "i"] \n` +
         (crash.setup?.copy ? `RUN cp ${crash.setup?.copy?.from} ${crash.setup?.copy?.to} \n` : '') +
         `RUN ["node", "readFunctions.mjs"] \n` +
-        `VOLUME /${crash.crashId}/src \n` +
         `ENTRYPOINT ["npm", "run", "crash"]`;
     crash.dockerfile = dockerfileString;
   }

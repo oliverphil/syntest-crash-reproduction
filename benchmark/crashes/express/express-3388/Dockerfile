@@ -1,6 +1,6 @@
 FROM node:latest 
-COPY assets/express/express-3388/* /express-3388/ 
-COPY src/containerInternals/readFunctions.mjs /express-3388/readFunctions.mjs 
+COPY benchmark/crashes/express/express-3388/* /express-3388/ 
+COPY src/crash-reproduction/containerInternals/readFunctions.mjs /express-3388/readFunctions.mjs 
 WORKDIR /express-3388/ 
 RUN ["npm", "i"] 
 RUN ["node", "readFunctions.mjs"] 

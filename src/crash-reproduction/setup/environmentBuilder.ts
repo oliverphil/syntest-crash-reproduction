@@ -1,6 +1,6 @@
 import {Crash} from '../types/importTypes';
 import * as fs from 'fs';
-import {exec} from 'child_process';
+import {execSync} from 'child_process';
 import * as util from 'util';
 
 /**
@@ -12,10 +12,13 @@ class EnvironmentBuilder {
    * @param {Crash} crash the crash to create the environment for
    * @return {Promise<FunctionResults>} the functions present in the crash files
    */
-  public static async createCrashEnvironment(crash: Crash): Promise<FunctionResults> {
+  public static createCrashEnvironment(crash: Crash): FunctionResults {
     // console.log(crash);
     const assetDir = './benchmark/crashes';
-    const crashFolder = `${assetDir}/${crash.project}/${crash.crashId}`;
+    let crashFolder = `${assetDir}/${crash.project}/${crash.crashId}`;
+    if (crash.seeded) {
+      crashFolder = `${assetDir}/seeded/${crash.project}/${crash.crashId}`;
+    }
     const stackTraceFiles: string[] = [];
     for (const frame of crash.stackTrace.trace) {
       let file = frame.file;
@@ -36,16 +39,14 @@ class EnvironmentBuilder {
         JSON.stringify(crash.package));
     fs.writeFileSync(`${crashFolder}/Dockerfile`,
         crash.dockerfile as string);
-    console.log(`docker build -t ${crash.crashId}:latest ${crashFolder}`);
-    const execProm = util.promisify(exec);
+    console.log(`docker build -t ${crash.crashId}:latest  ${crashFolder}`);
     let stdout = '';
-    let stderr;
+    let stderr = '';
     try {
-      const res = await execProm(
-          `docker build -t ${crash.crashId}:latest -f ${crashFolder}/Dockerfile .`);
-      stdout = res.stdout;
-      stderr = res.stderr;
+      stdout = execSync(`docker build -t ${crash.crashId}:latest -f ${crashFolder}/Dockerfile --build-arg CACHEBUST=$(date +%s) .`).toString();
     } catch (e) {
+      stdout = e.stdout.toString();
+      stderr = e.stderr.toString();
       // console.error(e);
     }
     console.log(stdout);

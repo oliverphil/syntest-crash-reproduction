@@ -1,6 +1,6 @@
 FROM node:latest 
-COPY assets/node/node-38808/* /node-38808/ 
-COPY src/containerInternals/readFunctions.mjs /node-38808/readFunctions.mjs 
+COPY benchmark/crashes/node/node-38808/* /node-38808/ 
+COPY src/crash-reproduction/containerInternals/readFunctions.mjs /node-38808/readFunctions.mjs 
 WORKDIR /node-38808/ 
 RUN ["npm", "i"] 
 RUN ["node", "readFunctions.mjs"] 

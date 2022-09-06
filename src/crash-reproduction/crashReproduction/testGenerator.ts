@@ -18,7 +18,7 @@ class TestGenerator {
    * @param {FunctionResults} functionResults functions in files from stack trace
    * @return {string[]} a string array which contains the initial test files' contents
    */
-  public static async generateInitialTestFiles(crash: Crash, functionResults: FunctionResults): Promise<string[]> {
+  public static generateInitialTestFiles(crash: Crash, functionResults: FunctionResults): string[] {
     const testFiles: string[] = [];
 
     Object.keys(functionResults).forEach((fileName) => {
@@ -66,9 +66,6 @@ class TestGenerator {
     return testFiles;
   }
 
-  public static syntestGenerator() {
-
-  }
 }
 
 export default TestGenerator;

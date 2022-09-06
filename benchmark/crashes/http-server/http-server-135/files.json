@@ -1,1 +1,1 @@
-["fs","/usr/local/lib/http-server/node_modules/union/lib/core.js","/usr/local/lib/http-server/lib/http-server.js","/usr/local/lib/http-server/bin/http-server","/usr/local/lib/http-server/node_modules/portfinder/lib/portfinder.js","events"]
+["fs","http-server/","http-server/lib/http-server.js","http-server/bin/http-server","events"]

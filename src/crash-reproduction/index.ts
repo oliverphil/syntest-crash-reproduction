@@ -15,12 +15,12 @@ const TIMEOUT = 1800000;
  */
 async function run() {
   const environmentGenerator = new EnvironmentGenerator();
-  const crashes: Crash[] = await environmentGenerator.generate();
+  const crashes: Crash[] = environmentGenerator.generate();
   for (const crash of crashes) {
-    if (crash.project !== 'webpack' || crash.crashId !== 'webpack-13370') continue;
+    if (crash.project !== 'webpack') continue;
     // if (crash.project === 'eslint') continue;
-    const functionResults: FunctionResults = await EnvironmentBuilder.createCrashEnvironment(crash);
-    /* const result = */await runCrashWithTimeout(crash, functionResults);
+    const functionResults: FunctionResults = EnvironmentBuilder.createCrashEnvironment(crash);
+    const result = runCrashWithTimeout(crash, functionResults);
     if (process.argv.includes('--rm')) {
       await Cleanup.cleanEnvironments(crash);
     }
@@ -33,14 +33,14 @@ async function run() {
  * @param {FunctionResults} functionResults the results from analysing the code
  * @return {Promise<{fitness: number, testCase: string}>} the best result from the GP algorithm
  */
-async function runCrashWithTimeout(crash: Crash, functionResults: FunctionResults):
-  Promise<{fitness: number, testCase: string}> {
+function runCrashWithTimeout(crash: Crash, functionResults: FunctionResults):
+  {fitness: number, testCase: string} {
   const startTime = Date.now();
-  const files: string[] = await TestGenerator.generateInitialTestFiles(crash, functionResults);
+  const files: string[] = TestGenerator.generateInitialTestFiles(crash, functionResults);
   let fitness = Number.MAX_VALUE;
   let crashResults;
   while (fitness > 0 && Date.now() < startTime + TIMEOUT) {
-    crashResults = await DockerRunner.runCrash(crash, files);
+    crashResults = DockerRunner.runCrash(crash, files);
     const fitnessValues = Fitness.calculateFitness(crashResults, crash.stackTrace).sort(
         (a, b) => a.fitness - b.fitness);
     const bestFitness = fitnessValues[0]?.fitness;

@@ -1,6 +1,6 @@
 FROM node:latest 
-COPY assets/rocketchat/rocketchat-18506/* /rocketchat-18506/ 
-COPY src/containerInternals/readFunctions.mjs /rocketchat-18506/readFunctions.mjs 
+COPY benchmark/crashes/rocketchat/rocketchat-18506/* /rocketchat-18506/ 
+COPY src/crash-reproduction/containerInternals/readFunctions.mjs /rocketchat-18506/readFunctions.mjs 
 WORKDIR /rocketchat-18506/ 
 RUN ["npm", "i"] 
 RUN ["node", "readFunctions.mjs"] 

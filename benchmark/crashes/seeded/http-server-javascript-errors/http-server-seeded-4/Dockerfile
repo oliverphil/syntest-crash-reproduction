@@ -1,6 +1,6 @@
 FROM node:18.4.0 
-COPY assets/seeded/http-server-javascript-errors/http-server-seeded-4/* /http-server-seeded-4/ 
-COPY src/containerInternals/readFunctions.mjs /http-server-seeded-4/readFunctions.mjs 
+COPY benchmark/crashes/seeded/http-server-javascript-errors/http-server-seeded-4/* /http-server-seeded-4/ 
+COPY src/crash-reproduction/containerInternals/readFunctions.mjs /http-server-seeded-4/readFunctions.mjs 
 WORKDIR /http-server-seeded-4/ 
 RUN ["npm", "i"] 
 RUN cp core.js node_modules/union/lib/core.js 

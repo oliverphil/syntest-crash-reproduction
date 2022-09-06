@@ -1,1 +1,1 @@
-["fs","<...>/yarn/global/ecstatic/lib/ecstatic.js","<...>/yarn/global/union/lib/routing-stream.js","events","<...>/yarn/global/http-server/lib/http-server.js"]
+["fs","ecstatic/lib/ecstatic.js","union/lib/routing-stream.js","events","http-server/lib/http-server.js"]

@@ -1,1 +1,1 @@
-["inspector","webpack/lib/debug/ProfilingPlugin.js","new","webpack/node_modules/tapable/lib/HookCodeFactory.js","webpack/lib/Watching.js","webpack/lib/Compiler.js","neo-async/async.js","graceful-fs/graceful-fs.js","fs"]
+["inspector","webpack/lib/debug/ProfilingPlugin.js","new","webpack/","webpack/lib/Watching.js","webpack/lib/Compiler.js","neo-async/async.js","graceful-fs/graceful-fs.js","fs"]
