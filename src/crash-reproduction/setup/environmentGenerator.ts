@@ -94,7 +94,9 @@ class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes;
+    return crashes.filter(crash => !crash.crashId.includes('eslint') && crash.crashId !== 'webpack-13440'
+    && crash.crashId !== 'express-2761'
+    && crash.crashId !== 'http-server-209');
   }
 
   /**
@@ -108,7 +110,7 @@ class EnvironmentGenerator {
       version: '1.0.0',
       description: crash.title,
       main: 'index.js',
-      engineStrict: crash.nodeVersion ? true : false,
+      engineStrict: false, // crash.nodeVersion ? true : false,
       scripts: {
         test: 'echo "Error: no test specified" && exit 1',
         crash: 'node index.js',

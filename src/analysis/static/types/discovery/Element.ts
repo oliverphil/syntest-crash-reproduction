@@ -38,6 +38,7 @@ export enum ElementType {
 }
 
 export function getElement(scope: Scope, node): Element {
+  // TODO: FunctionExpression
   if (node.type === "StringLiteral"
   || node.type === "TemplateLiteral") {
     return {
@@ -88,6 +89,12 @@ export function getElement(scope: Scope, node): Element {
       scope: scope,
       type: ElementType.Identifier,
       value: 'super'
+    }
+  } else if (node.type === 'FunctionExpression') {
+    return {
+      scope,
+      type: ElementType.Identifier,
+      value: node.name
     }
   } else if (node.type === 'UnaryExpression'
     || node.type === 'UpdateExpression'

@@ -48,7 +48,7 @@ export class TargetVisitor {
   };
 
   public ClassMethod: (path) => void = (path) => {
-    const targetName = path.parentPath.parentPath.node.id.name;
+    const targetName = path.parentPath.parentPath.node.id?.name;
     const functionName = path.node.key.name;
 
     let visibility = ActionVisibility.PUBLIC;
@@ -58,7 +58,7 @@ export class TargetVisitor {
       visibility = ActionVisibility.PROTECTED;
     }
 
-    this._functionMap.get(targetName).set(functionName, {
+    this._functionMap.get(targetName)?.set(functionName, {
       name: functionName,
       type: functionName === "constructor" ? ActionType.CONSTRUCTOR : ActionType.METHOD,
       visibility: visibility,

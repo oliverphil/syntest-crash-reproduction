@@ -239,11 +239,19 @@ export class JavaScriptTargetPool extends TargetPool {
         const pathLib = path.join(path.dirname(targetPath), importPath);
 
         // Scan for libraries with public or external functions
-        const exports = this.getExports(pathLib)
+        let exports = [];
+        try {
+          exports = this.getExports(pathLib)
+        } catch (e) {
+          // do nothing
+        }
 
         // Import the found libraries
-        // TODO: check for duplicates in libraries
-        libraries.push(...exports);
+        for (const exp of exports) {
+          if (!libraries.includes(exp)) {
+            libraries.push(exp);
+          }
+        }
       });
 
       this._dependencyMaps

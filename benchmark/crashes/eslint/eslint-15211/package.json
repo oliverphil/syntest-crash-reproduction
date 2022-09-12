@@ -1,1 +1,1 @@
-{"name":"eslint-15211","version":"1.0.0","main":"index.js","engineStrict":true,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node src/index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"eslint":"8.1.0"},"engines":{"node":"10.13.0"}}
+{"name":"eslint-15211","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"eslint":"8.1.0"},"engines":{"node":"10.13.0"}}

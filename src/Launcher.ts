@@ -69,6 +69,9 @@ import { TypeResolverInference } from "./analysis/static/types/resolving/logic/T
 import { TypeResolverUnknown } from "./analysis/static/types/resolving/TypeResolverUnknown";
 import { ScopeType } from "./analysis/static/types/discovery/Scope";
 import { TypeResolver } from "./analysis/static/types/resolving/TypeResolver";
+import EnvironmentGenerator from "./crash-reproduction/setup/environmentGenerator";
+import {Crash} from "./crash-reproduction/types/importTypes";
+import EnvironmentBuilder from "./crash-reproduction/setup/environmentBuilder";
 
 const originalrequire = require("original-require");
 const Mocha = require('mocha')
@@ -80,7 +83,8 @@ export class Launcher {
   public async run() {
     try {
       await guessCWD(null);
-      const targetPool = await this.setup();
+      await this.setupShared();
+      const targetPool = await (Properties.crash_reproduction ? this.setupCrashReproduction() : this.setup());
       const [archive, dependencies, exports] = await this.search(targetPool);
       await this.finalize(targetPool, archive, dependencies, exports);
 
@@ -91,7 +95,7 @@ export class Launcher {
     }
   }
 
-  private async setup(): Promise<JavaScriptTargetPool> {
+  private async setupShared() {
     // Filesystem & Compiler Re-configuration
     const additionalOptions = {
       use_type_inference: {
@@ -103,7 +107,7 @@ export class Launcher {
     setupOptions(this._program, additionalOptions);
 
     const programArgs = process.argv.filter(
-      (a) => a.includes(this._program) || a.includes("bin.ts")
+        (a) => a.includes(this._program) || a.includes("bin.ts")
     );
     const index = process.argv.indexOf(programArgs[programArgs.length - 1]);
     const args = process.argv.slice(index + 1);
@@ -116,11 +120,11 @@ export class Launcher {
 
     const messages = new Messages();
     setUserInterface(
-      new JavaScriptCommandLineInterface(
-        Properties.console_log_level === "silent",
-        Properties.console_log_level === "verbose",
-        messages
-      )
+        new JavaScriptCommandLineInterface(
+            Properties.console_log_level === "silent",
+            Properties.console_log_level === "verbose",
+            messages
+        )
     );
 
     getUserInterface().report("clear", []);
@@ -131,7 +135,47 @@ export class Launcher {
       getUserInterface().report("help", []);
       await this.exit();
     } // Exit if --help
+  }
 
+  private async setupCrashReproduction(): Promise<JavaScriptTargetPool> {
+    // setup crashes
+    // get all crash files
+    // generate packages
+    // npm i
+    // insert files from stack trace into test generation subjects
+
+    const environmentGenerator = new EnvironmentGenerator();
+    const crashes: Crash[] = environmentGenerator.loadAssets();
+    const crashesToRemove: Crash[] = [];
+    crashes.forEach(crash => {
+      environmentGenerator.generatePackage(crash);
+      if (EnvironmentBuilder.createCrashEnvironment(crash)) {
+        crashesToRemove.push(crash);
+      }
+    });
+    Properties.include = [];
+    Properties.exclude = [];
+    crashes.filter(crash => !crashesToRemove.includes(crash))
+        .forEach(crash => {
+          crash.stackTrace.trace.forEach(frame => {
+            const crashFile = crash;
+            if (frame.file.includes('.js')) {
+              let crashFile = `./benchmark/crashes/${crash.project}/${crash.crashId}/**/${frame.file}`;
+              if (crash.seeded) {
+                crashFile = `./benchmark/crashes/seeded/${crash.project}/${crash.crashId}/**/${frame.file}`;
+              }
+              Properties.include.push(crashFile);
+            }
+            Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/mkdirp/test/**/*.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/mkdirp/examples/**/*.js`);
+          });
+        });
+
+    return await this.setup();
+  }
+
+  private async setup(): Promise<JavaScriptTargetPool> {
     const abstractSyntaxTreeGenerator = new AbstractSyntaxTreeGenerator();
     const targetMapGenerator = new TargetMapGenerator();
 

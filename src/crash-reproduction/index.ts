@@ -19,8 +19,8 @@ async function run() {
   for (const crash of crashes) {
     if (crash.project !== 'webpack') continue;
     // if (crash.project === 'eslint') continue;
-    const functionResults: FunctionResults = EnvironmentBuilder.createCrashEnvironment(crash);
-    const result = runCrashWithTimeout(crash, functionResults);
+    // const functionResults: FunctionResults = EnvironmentBuilder.createCrashEnvironment(crash);
+    // const result = runCrashWithTimeout(crash, functionResults);
     if (process.argv.includes('--rm')) {
       await Cleanup.cleanEnvironments(crash);
     }

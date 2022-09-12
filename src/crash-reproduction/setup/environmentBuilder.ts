@@ -12,7 +12,7 @@ class EnvironmentBuilder {
    * @param {Crash} crash the crash to create the environment for
    * @return {Promise<FunctionResults>} the functions present in the crash files
    */
-  public static createCrashEnvironment(crash: Crash): FunctionResults {
+  public static createCrashEnvironment(crash: Crash): boolean {
     // console.log(crash);
     const assetDir = './benchmark/crashes';
     let crashFolder = `${assetDir}/${crash.project}/${crash.crashId}`;
@@ -37,21 +37,20 @@ class EnvironmentBuilder {
     fs.writeFileSync(
         `${crashFolder}/package.json`,
         JSON.stringify(crash.package));
-    fs.writeFileSync(`${crashFolder}/Dockerfile`,
-        crash.dockerfile as string);
-    console.log(`docker build -t ${crash.crashId}:latest  ${crashFolder}`);
     let stdout = '';
     let stderr = '';
+    let error = false;
     try {
-      stdout = execSync(`docker build -t ${crash.crashId}:latest -f ${crashFolder}/Dockerfile --build-arg CACHEBUST=$(date +%s) .`).toString();
+      stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
     } catch (e) {
       stdout = e.stdout.toString();
       stderr = e.stderr.toString();
+      error = true;
       // console.error(e);
     }
     console.log(stdout);
     console.error(stderr);
-    return this.parseFunctions(stdout);
+    return error;
   }
 
   /**

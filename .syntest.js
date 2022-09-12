@@ -27,18 +27,18 @@ module.exports = {
     crash_reproduction: true,
 
     include: [
-        "./benchmark/crashes/http-server/**",
-        // "./benchmark/top10npm/lodash/result.js",
-        // "./benchmark/top10npm/lodash/slice.js",
-        // "./benchmark/top10npm/lodash/split.js",
-        // "./benchmark/top10npm/lodash/uniq.js",
-        // "./benchmark/top10npm/lodash/unzip.js",
+        // "./benchmark/crashes/http-server/**",
+        "./benchmark/top10npm/lodash/result.js",
+        "./benchmark/top10npm/lodash/slice.js",
+        "./benchmark/top10npm/lodash/split.js",
+        "./benchmark/top10npm/lodash/uniq.js",
+        "./benchmark/top10npm/lodash/unzip.js",
 
         // "./benchmark/top10npm/lodash/**/a*.js",
         // "./benchmark/top10npm/commanderjs/lib/*.js",
-
+        //
         // "./benchmark/top10npm/lodash/.internal/**/*.js",
-        // "./benchmark/top10npm/lodash/.internal/baseClone.js"
+        // "./benchmark/top10npm/lodash/.internal/baseClone.js",
         // './benchmark/top10npm/lodash/b*.js',
         // "./benchmark/custom/tests.js",
         // "./benchmark/top10npm/lodash/sampleSize.js",
@@ -46,8 +46,8 @@ module.exports = {
 
     ],
     exclude: [
-        // './benchmark/top10npm/lodash/test/.internal/*.js',
-        // './benchmark/top10npm/lodash/test/**/*.js',
+        './benchmark/top10npm/lodash/test/.internal/*.js',
+        './benchmark/top10npm/lodash/test/**/*.js',
 
         // './benchmark/top10npm/lodash/a*.js',
         // './benchmark/top10npm/lodash/b*.js',
@@ -76,9 +76,9 @@ module.exports = {
         // './benchmark/top10npm/lodash/y*.js',
         // './benchmark/top10npm/lodash/z*.js',
 
-        // "./benchmark/top10npm/commanderjs/lib/argument.js",
-        // "./benchmark/top10npm/commanderjs/lib/command.js",
-        // "./benchmark/top10npm/commanderjs/lib/error.js",
+        "./benchmark/top10npm/commanderjs/lib/argument.js",
+        "./benchmark/top10npm/commanderjs/lib/command.js",
+        "./benchmark/top10npm/commanderjs/lib/error.js",
 
     ]
 }

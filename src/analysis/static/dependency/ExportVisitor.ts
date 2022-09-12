@@ -109,6 +109,7 @@ export class ExportVisitor {
           })
         } else if (path.node.expression.right.type === 'ObjectExpression') {
           for (const property of path.node.expression.right.properties) {
+
             this._exports.push({
               name: property.key.name,
               type: this._getType(property.key.type, property.key.name),
@@ -157,7 +158,10 @@ export class ExportVisitor {
     for (const declaration of path.node.declarations) {
       const identifier = declaration.id.name;
 
-      if (declaration.init && declaration.init.type === "ArrowFunctionExpression") {
+      if (declaration.init && (
+          declaration.init.type === "ArrowFunctionExpression" ||
+          declaration.init.type === "FunctionExpression"
+      )) {
         this._identifiers.set(identifier, ExportType.function) // not always the case
       } else {
         this._identifiers.set(identifier, ExportType.const) // not always the case
@@ -173,11 +177,16 @@ export class ExportVisitor {
       return ExportType.const
     }  else if (type === 'NewExpression') {
       return ExportType.const
+    } else if (type === 'StringLiteral') {
+      return ExportType.class;
     } else if (type === 'ClassDeclaration') {
       return ExportType.class
     } else if (type === 'Identifier') {
       if (!this._identifiers.has(name)) {
-        throw new Error("Cannot find identifier that is exported: " + name + " - " + type)
+        // TODO: identifiers in objects don't seem to work
+        // throw new Error("Cannot find identifier that is exported: " + name + " - " + type)
+        this._identifiers.set(name, ExportType.class);
+        return ExportType.class;
       }
 
       return this._identifiers.get(name)

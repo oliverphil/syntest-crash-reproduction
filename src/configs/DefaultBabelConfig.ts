@@ -17,6 +17,7 @@ export const defaultBabelOptions: TransformOptions = {
       "dynamicImport",
       "objectRestSpread",
     ],
+    strictMode: false,
   },
   plugins: [],
 };

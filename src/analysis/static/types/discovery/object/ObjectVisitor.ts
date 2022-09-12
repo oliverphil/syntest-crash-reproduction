@@ -58,7 +58,7 @@ export class ObjectVisitor {
     if (path.node.object.type === "ThisExpression") {
       const _object = this._objects[this._objects.length - 1]
 
-      _object.properties.add(path.node.property.name)
+      _object?.properties?.add(path.node.property.name)
     }
   }
 
