@@ -48,7 +48,6 @@ import {
 import { JavaScriptTestCase } from "./testcase/JavaScriptTestCase";
 import { JavaScriptTargetMetaData, JavaScriptTargetPool } from "./analysis/static/JavaScriptTargetPool";
 import { AbstractSyntaxTreeGenerator } from "./analysis/static/ast/AbstractSyntaxTreeGenerator";
-import { Instrumenter } from "./instrumentation/Instrumenter";
 import * as path from "path";
 import { TargetMapGenerator } from "./analysis/static/map/TargetMapGenerator";
 import { JavaScriptSubject } from "./search/JavaScriptSubject";
@@ -64,21 +63,24 @@ import { ControlFlowGraphGenerator } from "./analysis/static/cfg/ControlFlowGrap
 import { ImportGenerator } from "./analysis/static/dependency/ImportGenerator";
 import { ExportGenerator } from "./analysis/static/dependency/ExportGenerator";
 import { Export } from "./analysis/static/dependency/ExportVisitor";
-import { Runner } from "mocha";
 import { TypeResolverInference } from "./analysis/static/types/resolving/logic/TypeResolverInference";
 import { TypeResolverUnknown } from "./analysis/static/types/resolving/TypeResolverUnknown";
-import { ScopeType } from "./analysis/static/types/discovery/Scope";
 import { TypeResolver } from "./analysis/static/types/resolving/TypeResolver";
 import EnvironmentGenerator from "./crash-reproduction/setup/environmentGenerator";
 import {Crash} from "./crash-reproduction/types/importTypes";
 import EnvironmentBuilder from "./crash-reproduction/setup/environmentBuilder";
+import { ActionType } from "./analysis/static/parsing/ActionType";
+import { existsSync } from "fs";
 
 const originalrequire = require("original-require");
 const Mocha = require('mocha')
 const { outputFileSync } = require("fs-extra");
 
+
 export class Launcher {
   private readonly _program = "syntest-javascript";
+
+  private coveredInPath = new Map<string, Archive<JavaScriptTestCase>>()
 
   public async run() {
     try {
@@ -98,10 +100,20 @@ export class Launcher {
   private async setupShared() {
     // Filesystem & Compiler Re-configuration
     const additionalOptions = {
-      use_type_inference: {
-        description: "The type inference mode",
+      incorporate_execution_information: {
+        description: "Incorporate execution information",
         type: "boolean",
         default: true,
+      },
+      type_inference_mode: {
+        description: "The type inference mode: [proportional, ranked, none]",
+        type: "string",
+        default: "proportional",
+      },
+      random_type_probability: {
+        description: "The probability we use a random type regardless of the inferred type",
+        type: "number",
+        default: 0.1,
       },
     };
     setupOptions(this._program, additionalOptions);
@@ -115,6 +127,11 @@ export class Launcher {
     const config = loadConfig(args);
     processConfig(config, args);
     setupLogger();
+
+    if (existsSync('.syntest')) {
+      await deleteTempDirectories();
+    }
+
     await createDirectoryStructure();
     await createTempDirectoryStructure();
 
@@ -181,10 +198,10 @@ export class Launcher {
 
     let typeResolver: TypeResolver
 
-    if (Properties['use_type_inference']) {
-      typeResolver = new TypeResolverInference()
-    } else {
+    if (Properties['type_inference_mode'] === 'none') {
       typeResolver = new TypeResolverUnknown()
+    } else {
+      typeResolver = new TypeResolverInference()
     }
 
     const controlFlowGraphGenerator = new ControlFlowGraphGenerator()
@@ -206,6 +223,13 @@ export class Launcher {
 
     getUserInterface().report("header", ["TARGETS"]);
 
+    getUserInterface().report("property-set", [
+      "Target Settings",
+      [
+        ["Target Root Directory", Properties.target_root_directory],
+      ],
+    ]);
+
     await targetPool.loadTargets();
 
     if (!targetPool.targets.length) {
@@ -215,7 +239,7 @@ export class Launcher {
       await this.exit();
     }
 
-    let names = [];
+    let names: string[] = [];
 
     targetPool.targets.forEach((target) =>
       names.push(
@@ -266,6 +290,15 @@ export class Launcher {
       ],
     ]);
 
+    getUserInterface().report("property-set", [
+      "Type Inference",
+      [
+        ["Incorporate Execution Information", Properties['incorporate_execution_information']],
+        ["Type Inference Mode", Properties['type_inference_mode']],
+        ["Random Type Probability", Properties['random_type_probability']],
+      ],
+    ]);
+
     return targetPool;
   }
 
@@ -274,36 +307,13 @@ export class Launcher {
   ): Promise<
     [Archive<JavaScriptTestCase>, Map<string, Export[]>, Export[]]
   > {
-    const targetPaths= new Set<string>();
+    await targetPool.prepareAndInstrument()
 
-    for (const target of targetPool.targets) {
-      targetPool.getInstrumentationTargets(target.canonicalPath)
-        .forEach((path) => {
-          targetPaths.add(path)
-        })
-    }
-
-    const instrumenter = new Instrumenter();
-
-    for (const targetPath of targetPaths) {
-      const source = targetPool.getSource(targetPath)
-      const instrumentedSource = await instrumenter.instrument(
-        source,
-        targetPath
-      );
-
-      const _path = path
-        .normalize(targetPath)
-        .replace(
-          process.cwd(),
-          Properties.temp_instrumented_directory
-        );
-      await outputFileSync(_path, instrumentedSource);
-    }
+    targetPool.scanTargetRootDirectory()
 
     const finalArchive = new Archive<JavaScriptTestCase>();
-    let finalDependencies: Map<string, Export[]> = new Map();
-    let finalExports: Export[] = []
+    const finalDependencies: Map<string, Export[]> = new Map();
+    const finalExports: Export[] = []
 
     for (const target of targetPool.targets) {
       const archive = await this.testTarget(
@@ -327,11 +337,9 @@ export class Launcher {
     targetPath: string,
     targetMeta: JavaScriptTargetMetaData
   ): Promise<Archive<JavaScriptTestCase>> {
-    targetPool.resolveTypes(targetPath)
-
     const cfg = targetPool.getCFG(targetPath, targetMeta.name);
 
-    if (Properties.draw_cfg || true) {
+    if (Properties.draw_cfg) {
       drawGraph(
         cfg,
         path.join(
@@ -345,10 +353,17 @@ export class Launcher {
     const functionMap = targetPool.getFunctionMap(targetPath, targetMeta.name)
 
     // couple types to parameters
-    for (const key of functionMap.keys()) {
-      const func = functionMap.get(key)
+    // TODO do this type matching already in the target visitor
+    for (const func of functionMap.values()) {
       for (const param of func.parameters) {
-        param.type = targetPool.typeResolver.getTyping(func.name, ScopeType.Function, param.name)
+        if (func.type === ActionType.FUNCTION) {
+          param.typeProbabilityMap = targetPool.typeResolver.getTyping(func.scope, param.name)
+        } else if (func.type === ActionType.METHOD
+          || func.type === ActionType.CONSTRUCTOR) {
+          param.typeProbabilityMap = targetPool.typeResolver.getTyping(func.scope, param.name)
+        } else {
+          throw new Error(`Unimplemented action identifierDescription ${func.type}`)
+        }
       }
     // TODO return types
     }
@@ -370,14 +385,13 @@ export class Launcher {
     dependencyMap.set(targetMeta.name, dependencies)
     const exports = targetPool.getExports(targetPath)
 
-
-    const decoder = new JavaScriptDecoder(dependencyMap, exports)
+    const decoder = new JavaScriptDecoder(targetPool, dependencyMap, exports)
     const suiteBuilder = new JavaScriptSuiteBuilder(decoder)
     const runner = new JavaScriptRunner(suiteBuilder)
 
     // TODO constant pool
 
-    const sampler = new JavaScriptRandomSampler(currentSubject)
+    const sampler = new JavaScriptRandomSampler(currentSubject, targetPool)
     const crossover = new JavaScriptTreeCrossover()
     const algorithm = createAlgorithmFromConfig(sampler, runner, crossover);
 
@@ -412,6 +426,13 @@ export class Launcher {
       budgetManager,
       terminationManager
     );
+
+    if (this.coveredInPath.has(targetPath)) {
+      archive.merge(this.coveredInPath.get(targetPath))
+      this.coveredInPath.set(targetPath, archive)
+    } else {
+      this.coveredInPath.set(targetPath, archive)
+    }
 
     // Gather statistics after the search
     collectStatistics(
@@ -453,126 +474,45 @@ export class Launcher {
     await clearDirectory(testDir);
 
     const decoder = new JavaScriptDecoder(
+      targetPool,
       dependencies,
       exports,
-      '../../.syntest/instrumented'
     );
+    // TODO fix hardcoded paths
 
     const suiteBuilder = new JavaScriptSuiteBuilder(decoder);
 
-    const paths = await suiteBuilder.createSuite(archive);
+    const reducedArchive = suiteBuilder.reduceArchive(archive);
 
-    const mocha = new Mocha()
+    let paths = await suiteBuilder.createSuite(reducedArchive, '../instrumented/', Properties.temp_test_directory, true, false);
+    await suiteBuilder.runSuite(paths, false, targetPool)
 
-    // require('ts-node/register')
+    // reset states
+    await suiteBuilder.clearDirectory(Properties.temp_test_directory);
+    await suiteBuilder.resetInstrumentationData()
 
-    require("regenerator-runtime/runtime");
-    require('@babel/register')({
-      presets: [
-        "@babel/preset-env"
-      ]
-    })
-
-    for (const _path of paths) {
-      delete originalrequire.cache[_path];
-      mocha.addFile(_path);
+    // run with assertions and report results
+    for (const key of reducedArchive.keys()) {
+      await suiteBuilder.gatherAssertions(reducedArchive.get(key));
     }
+    paths = await suiteBuilder.createSuite(reducedArchive, '../instrumented/', Properties.temp_test_directory, false, true);
+    await suiteBuilder.runSuite(paths, true, targetPool)
 
-    // // By replacing the global log function we disable the output of the truffle test framework
-    // const levels = ['log', 'debug', 'info', 'warn', 'error'];
-    // const originalFunctions = levels.map(level => console[level]);
-    // levels.forEach((level) => {
-    //   // eslint-disable-next-line @typescript-eslint/no-empty-function
-    //   console[level] = () => {}
-    // })
+    const originalSourceDir = path
+      .join('../../', path.relative(
+        process.cwd(),
+        Properties.target_root_directory
+        ))
+      .replace(path.basename(Properties.target_root_directory), '')
 
-    let runner: Runner = null
-
-    // Finally, run mocha.
-    process.on("unhandledRejection", reason => {
-      throw reason;
-    });
-
-    await new Promise((resolve) => {
-      runner = mocha.run((failures) => {
-        resolve(failures)
-      })
-    })
-
-    // levels.forEach((level, index) => {
-    //   console[level] = originalFunctions[index]
-    // })
-
-    getUserInterface().report("header", ["SEARCH RESULTS"]);
-    const instrumentationData = global.__coverage__
-
-    // Run Istanbul
-    // TODO
-
-    getUserInterface().report("report-coverage", ['Coverage report', { branch: 'Branch', statement: 'Statement', function: 'Function' }, true])
-
-    const overall = {
-      branch: 0,
-      statement: 0,
-      function: 0
-    }
-    let totalBranches = 0
-    let totalStatements = 0
-    let totalFunctions = 0
-    for (const file of Object.keys(instrumentationData)) {
-      if (!targetPool.targets.find((t) => t.canonicalPath === file)) {
-        continue
-      }
-
-      const data = instrumentationData[file]
-
-      const summary = {
-        branch: 0,
-        statement: 0,
-        function: 0
-      }
-
-      for (const statementKey of Object.keys(data.s)) {
-        summary['statement'] += data.s[statementKey] ? 1 : 0
-        overall['statement'] += data.s[statementKey] ? 1 : 0
-      }
-
-      for (const branchKey of Object.keys(data.b)) {
-        summary['branch'] += data.b[branchKey][0] ? 1 : 0
-        overall['branch'] += data.b[branchKey][0] ? 1 : 0
-        summary['branch'] += data.b[branchKey][1] ? 1 : 0
-        overall['branch'] += data.b[branchKey][1] ? 1 : 0
-      }
-
-      for (const functionKey of Object.keys(data.f)) {
-        summary['function'] += data.f[functionKey] ? 1 : 0
-        overall['function'] += data.f[functionKey] ? 1 : 0
-      }
-
-      totalStatements += Object.keys(data.s).length
-      totalBranches += (Object.keys(data.b).length * 2)
-      totalFunctions += Object.keys(data.f).length
-
-      getUserInterface().report("report-coverage", [file, {
-        'statement': summary['statement'] + ' / ' + Object.keys(data.s).length,
-        'branch': summary['branch'] + ' / ' + (Object.keys(data.b).length * 2),
-        'function': summary['function'] + ' / ' + Object.keys(data.f).length
-      }, false])
-
-      // console.log(Object.keys(data.s).filter((x) => data.s[x] === 0).map((x) => data.statementMap[x].start.line))
-    }
-
-    overall['statement'] /= totalStatements
-    overall['branch'] /= totalBranches
-    overall['function'] /= totalFunctions
-
-    getUserInterface().report("report-coverage", ['Total', {
-      'statement': (overall['statement'] * 100) + ' %',
-      'branch': (overall['branch'] * 100) + ' %',
-      'function': (overall['function'] * 100) + ' %'
-    }, true])
-
-
+    // create final suite
+    await suiteBuilder.createSuite(
+      reducedArchive,
+      originalSourceDir,
+      Properties.final_suite_directory,
+      false,
+      true
+    );
   }
 
   async exit(): Promise<void> {

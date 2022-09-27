@@ -19,8 +19,9 @@
 import { prng, Properties } from "@syntest/framework";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
-import { Parameter } from "../../../analysis/static/parsing/Parameter";
+import { IdentifierDescription } from "../../../analysis/static/parsing/IdentifierDescription";
 import * as path from "path";
+import { TypeProbability } from "../../../analysis/static/types/resolving/TypeProbability";
 
 /**
  * @author Dimitri Stallenberg
@@ -29,8 +30,8 @@ import * as path from "path";
 export class ArrayStatement extends Statement {
   private _children: Statement[];
 
-  constructor(type: Parameter, uniqueId: string, children: Statement[]) {
-    super(type, uniqueId);
+  constructor(identifierDescription: IdentifierDescription, type: string, uniqueId: string, children: Statement[]) {
+    super(identifierDescription, type, uniqueId);
     this._children = children
     this._classType = 'ArrayStatement'
   }
@@ -41,7 +42,7 @@ export class ArrayStatement extends Statement {
     // if (children.length !== 0) {
     //   const index = prng.nextInt(0, children.length - 1);
     //   if (prng.nextBoolean(Properties.resample_gene_probability)) { // TODO should be different property
-    //     children[index] = sampler.sampleArgument(depth + 1, children[index].type)
+    //     children[index] = sampler.sampleArgument(depth + 1, children[index].identifierDescription)
     //   } else {
     //     children[index] = children[index].mutate(sampler, depth + 1);
     //   }
@@ -51,7 +52,7 @@ export class ArrayStatement extends Statement {
 
     if (children.length === 0) {
       // add a call
-      finalChildren.push(sampler.sampleArgument(depth + 1, null))
+      finalChildren.push(sampler.sampleArgument(depth + 1, { name: 'arrayValue', typeProbabilityMap: new TypeProbability() }))
     } else {
       // go over each call
       for (let i = 0; i < children.length; i++) {
@@ -61,14 +62,14 @@ export class ArrayStatement extends Statement {
 
           if (choice < 0.1) {
             // 10% chance to add a call on this position
-            finalChildren.push(sampler.sampleArgument(depth + 1, null))
+            finalChildren.push(sampler.sampleArgument(depth + 1, { name: 'arrayValue', typeProbabilityMap: new TypeProbability() }))
             finalChildren.push(children[i])
           } else if (choice < 0.2) {
-            // 10% chance to delete the call
+            // 10% chance to delete the child
           } else {
-            // 80% chance to just mutate the call
+            // 80% chance to just mutate the child
             if (Properties.resample_gene_probability) {
-              finalChildren.push(sampler.sampleArgument(depth + 1, null))
+              finalChildren.push(sampler.sampleArgument(depth + 1, { name: 'arrayValue', typeProbabilityMap: new TypeProbability() }))
             } else {
               finalChildren.push(children[i].mutate(sampler, depth + 1))
             }
@@ -77,30 +78,30 @@ export class ArrayStatement extends Statement {
       }
     }
 
-    return new ArrayStatement(this.type, prng.uniqueId(), finalChildren);
+    return new ArrayStatement(this.identifierDescription, this.type, prng.uniqueId(), finalChildren);
   }
 
   copy(): ArrayStatement {
-    return new ArrayStatement(this.type, this.id, this._children.map(a => a.copy()));
+    return new ArrayStatement(this.identifierDescription, this.type, this.id, this._children.map(a => a.copy()));
   }
 
-  decode(addLogs: boolean): Decoding[] {
+  decode(id: string, options: { addLogs: boolean, exception: boolean }): Decoding[] {
     const children = this._children
       .map((a) => a.varName)
       .join(', ')
 
     const childStatements: Decoding[] = this._children
-      .flatMap((a) => a.decode(addLogs))
+      .flatMap((a) => a.decode(id, options))
 
     let decoded = `const ${this.varName} = [${children}]`
 
-    if (addLogs) {
+    if (options.addLogs) {
       const logDir = path.join(
         Properties.temp_log_directory,
-        // testCase.id,
+        id,
         this.varName
       )
-      decoded += `\nawait fs.writeFileSync('${logDir}', '' + ${this.varName})`
+      decoded += `\nawait fs.writeFileSync('${logDir}', '' + ${this.varName} + ';sep;' + JSON.stringify(${this.varName}))`
     }
 
     return [
@@ -134,5 +135,12 @@ export class ArrayStatement extends Statement {
 
   get children(): Statement[] {
     return this._children;
+  }
+
+  getFlatTypes(): string[] {
+    return [
+      "array",
+      ...this.children.flatMap((a) => a.getFlatTypes())
+    ]
   }
 }

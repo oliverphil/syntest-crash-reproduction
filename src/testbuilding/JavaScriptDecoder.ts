@@ -2,30 +2,29 @@ import { Decoder, Properties } from "@syntest/framework";
 import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
 import * as path from "path";
 import { ConstructorCall } from "../testcase/statements/root/ConstructorCall";
-import { MethodCall } from "../testcase/statements/action/MethodCall";
-import { Decoding, Statement } from "../testcase/statements/Statement";
-import { PrimitiveStatement } from "../testcase/statements/primitive/PrimitiveStatement";
+import { Decoding } from "../testcase/statements/Statement";
 import { Export } from "../analysis/static/dependency/ExportVisitor";
 import { FunctionCall } from "../testcase/statements/root/FunctionCall";
 import { RootStatement } from "../testcase/statements/root/RootStatement";
+import { JavaScriptTargetPool } from "../analysis/static/JavaScriptTargetPool";
 
 
 export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
+  private targetPool: JavaScriptTargetPool
   private dependencies: Map<string, Export[]>;
   private exports: Export[]
-  private folder: string
 
   constructor(
+    targetPool: JavaScriptTargetPool,
     dependencies: Map<string, Export[]>,
     exports: Export[],
-    folder: string = '../instrumented'
   ) {
+    this.targetPool = targetPool
     this.dependencies = dependencies;
     this.exports = exports
-    this.folder = folder
   }
 
-  decode(testCases: JavaScriptTestCase | JavaScriptTestCase[], targetName: string, addLogs = false): string {
+  decode(testCases: JavaScriptTestCase | JavaScriptTestCase[], targetName: string, addLogs = false, sourceDir = '../instrumented'): string {
     if (testCases instanceof JavaScriptTestCase) {
       testCases = [testCases];
     }
@@ -37,8 +36,8 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
       const root = testCase.root;
 
       const importableGenes: RootStatement[] = [];
-      const statements: Decoding[] = root.decode(addLogs)
-      const assertions: string[] = [];
+      let statements: Decoding[] = root.decode(testCase.id, { addLogs, exception: false })
+
 
       const testString: string[] = [];
       if (addLogs) {
@@ -47,21 +46,36 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
           `\t\tawait fs.mkdirSync('${path.join(
             Properties.temp_log_directory,
             testCase.id
-          )}', { recursive: true })\n`
+          )}', { recursive: true })\n
+          \t\tlet count = 0;
+          \t\ttry {\n`
         );
-        testString.push("try {");
       }
 
       if (testCase.assertions.size !== 0 && testCase.assertions.has("error")) {
-        const stopAfter = testCase.assertions.size;
-        // TODO this would only work if each variable is printed...
-        // TODO best would be to extract the stack trace and do it based on line number
+        const index = parseInt(testCase.assertions.get('error'))
+        // TODO does not work
+        //  the .to.throw stuff does not work somehow
+        // const decoded = statements[index].reference instanceof MethodCall
+        //   ? (<MethodCall>statements[index].reference).decodeWithObject(testCase.id, { addLogs, exception: true }, statements[index].objectVariable)
+        //   : statements[index].reference.decode(testCase.id, { addLogs, exception: true })
+        // statements[index] = decoded.find((x) => x.reference === statements[index].reference)
+
+        // delete statements after
+        statements = statements.slice(0, index + 1)
       }
 
-      statements.forEach((value) => {
+      statements.forEach((value, i) => {
         if (value.reference instanceof RootStatement) {
           importableGenes.push(value.reference)
         }
+        if (addLogs) {
+          // add log per statement
+          testString.push(
+            '\t\t' + `count = ${i};`
+          )
+        }
+
         testString.push(
           '\t\t' + value.decoded.replace('\n', '\n\t\t')
         )
@@ -74,12 +88,14 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
             Properties.temp_log_directory,
             testCase.id,
             "error"
-          )}', '' + e.stack)`
+          )}', '' + count)`
         );
         testString.push("}");
       }
 
-      const importsOfTest = this.gatherImports(importableGenes);
+      imports.push(`export {}`);
+
+      const importsOfTest = this.gatherImports(sourceDir, testString, importableGenes);
       imports.push(...importsOfTest);
 
       if (testCase.assertions.size) {
@@ -89,14 +105,22 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
         imports.push(`chai.use(chaiAsPromised);`);
       }
 
-      assertions.unshift(...this.generateAssertions(testCase));
+      const assertions: string[] = this.generateAssertions(testCase)
 
       const body = [];
+
       if (testString.length) {
-        body.push(`${testString.join("\n")}`);
-      }
-      if (assertions.length) {
+        let errorStatement: string
+        if (assertions.length && testCase.assertions.size !== 0 && testCase.assertions.has("error")) {
+          errorStatement = testString.pop()
+        }
+
+        body.push(`${testString.join("\n")}`)
         body.push(`${assertions.join("\n")}`);
+
+        if (errorStatement) {
+          body.push(`\t\ttry {\n\t${errorStatement}\n\t\t} catch (e) {\n\t\t\texpect(e).to.be.an('error')\n\t\t}`)
+        }
       }
 
       // TODO instead of using the targetName use the function call or a better description of the test
@@ -115,6 +139,7 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
     // Add the imports
     test =
       imports
+        // remove duplicates
         .filter((value, index, self) => self.indexOf(value) === index)
         .join("\n") +
       `\n\n` +
@@ -123,16 +148,30 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
     return test;
   }
 
-  gatherImports(importableGenes: RootStatement[]): string[] {
+  gatherImports(sourceDir: string, testStrings: string[], importableGenes: RootStatement[]): string[] {
     const imports: string[] = [];
+    const importedDependencies: Set<string> = new Set<string>()
 
     for (const gene of importableGenes) {
-      const importName = gene instanceof FunctionCall ? gene.functionName : (gene instanceof ConstructorCall ? gene.constructorName : null);
-      const export_: Export = this.exports.find((x) => x.name === importName)
+      const importName = gene instanceof FunctionCall ? gene.functionName : (gene instanceof ConstructorCall ? gene.constructorName : gene.type);
+      const complexObject = gene.identifierDescription.typeProbabilityMap.getObjectDescription(importName)
+      const export_: Export = complexObject?.export || this.exports.find((x) => x.name === importName)
       if (!export_) {
         throw new Error('Cannot find an export corresponding to the importable gene: ' + importName)
       }
-      const importString: string = this.getImport(export_)
+
+      // no duplicates
+      if (importedDependencies.has(export_.name)) {
+        continue
+      }
+      importedDependencies.add(export_.name)
+
+      // skip non-used imports
+      if (!testStrings.find((s) => s.includes(export_.name))) {
+        continue
+      }
+
+      const importString: string = this.getImport(sourceDir, export_)
 
       if (imports.includes(importString) || importString.length === 0) {
         continue;
@@ -140,32 +179,48 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
 
       imports.push(importString);
 
-      let count = 0;
-      for (const dependency of this.dependencies.get(importName)) {
-        const importString: string = this.getImport(dependency);
-
-        if (imports.includes(importString) || importString.length === 0) {
-          continue;
-        }
-
-        imports.push(importString);
-
-        count += 1;
-      }
+      // let count = 0;
+      // for (const dependency of this.dependencies.get(importName)) {
+      //   // no duplicates
+      //   if (importedDependencies.has(dependency.name)) {
+      //     continue
+      //   }
+      //   importedDependencies.add(dependency.name)
+      //
+      //   // skip non-used imports
+      //   if (!testStrings.find((s) => s.includes(dependency.name))) {
+      //     continue
+      //   }
+      //
+      //   const importString: string = this.getImport(dependency);
+      //
+      //   if (imports.includes(importString) || importString.length === 0) {
+      //     continue;
+      //   }
+      //
+      //   imports.push(importString);
+      //
+      //   count += 1;
+      // }
     }
 
     return imports;
   }
 
-  getImport(dependency: Export): string {
-    // TODO correct import (something without the hardcoded "/instrumented/" stuff
-    const _path = dependency.filePath.replace(process.cwd(), '')
-    // TODO module imports etc
+  getImport(sourceDir: string, dependency: Export): string {
+    const _path = dependency.filePath.replace(path.resolve(Properties.target_root_directory), path.join(sourceDir, path.basename(Properties.target_root_directory)))
 
+    if (dependency.module) {
+      if (dependency.default) {
+        return `const ${dependency.name} = require("${_path}");`;
+      } else {
+        return `const {${dependency.name}} = require("${_path}");`;
+      }
+    }
     if (dependency.default) {
-      return `import ${dependency.name} from "${this.folder}${_path}";`;
+      return `import ${dependency.name} from "${_path}";`;
     } else {
-      return `import {${dependency.name}} from "${this.folder}${_path}";`;
+      return `import {${dependency.name}} from "${_path}";`;
     }
   }
 
@@ -177,19 +232,36 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
           continue;
         }
 
-        if (testCase.assertions.get(variableName) === "[object OBJECT]") continue;
+        const assertion = testCase.assertions.get(variableName).split(';sep;')
+        const original = assertion[0]
+        let stringified = assertion[1]
 
-        if (variableName.includes("string")) {
+        if (original === 'undefined') {
           assertions.push(
-            `\t\tassert.equal(${variableName}, "${testCase.assertions.get(
-              variableName
-            )}")`
+            `\t\texpect(${variableName}).to.equal(${original})`
+          );
+          continue
+        } else if (original === 'NaN') {
+          assertions.push(
+            `\t\texpect(${variableName}).to.be.NaN`
+          );
+          continue
+        }
+
+        // TODO dirty hack because json.parse does not allow undefined/NaN
+        // TODO undefined/NaN can happen in arrays
+        stringified = stringified.replace('undefined', 'null')
+        stringified = stringified.replace('NaN', 'null')
+
+        const value = JSON.parse(stringified)
+
+        if (typeof value === 'object' || typeof value === 'function') {
+          assertions.push(
+            `\t\texpect(JSON.parse(JSON.stringify(${variableName}))).to.deep.equal(${stringified})`
           );
         } else {
           assertions.push(
-            `\t\tassert.equal(${variableName}, ${testCase.assertions.get(
-              variableName
-            )})`
+            `\t\texpect(${variableName}).to.equal(${stringified})`
           );
         }
       }

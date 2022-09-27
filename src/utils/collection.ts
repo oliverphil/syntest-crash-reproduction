@@ -68,6 +68,7 @@ export function collectStatistics(
     RuntimeVariable.COVERED_OBJECTIVES,
     archive.getObjectives().length
   );
+
   collector.recordVariable(
     RuntimeVariable.INITIALIZATION_TIME,
     totalTimeBudget.getUsedBudget() - searchBudget.getUsedBudget()
@@ -115,23 +116,22 @@ export function collectCoverageData(
   for (const key of archive.getObjectives()) {
     const test = archive.getEncoding(key);
     const result: ExecutionResult = test.getExecutionResult();
-    const fileName = key.getSubject().name.concat(".js");
+    // TODO this does not work when there are files with the same name in different directories!!
+    const paths = key.getSubject().path.split("/");
+    const fileName = paths[paths.length - 1]
 
     result
       .getTraces()
       .filter((element) => element.type.includes(objectiveType))
-      .filter((element) => {
-        const paths = (element as any).path.split("/");
-        return paths[paths.length - 1].includes(fileName);
-      })
+      .filter((element) => element.path.includes(fileName))
       .forEach((current) => {
         total.add(
-          current.type + "_" + current.line + "_" + current.locationIdx
+          current.id + "_" + current.branchType
         );
 
         if (current.hits > 0)
           covered.add(
-            current.type + "_" + current.line + "_" + current.locationIdx
+            current.id + "_" + current.branchType
           );
       });
   }

@@ -27,25 +27,21 @@ import { IdentifierDescription } from "../../../analysis/static/parsing/Identifi
 /**
  * @author Dimitri Stallenberg
  */
-export class BoolStatement extends PrimitiveStatement<boolean> {
-  constructor(identifierDescription: IdentifierDescription, type: string, uniqueId: string, value: boolean) {
-    super(identifierDescription, type, uniqueId, value);
-    this._classType = 'BoolStatement'
+export class NullStatement extends PrimitiveStatement<boolean> {
+  constructor(identifierDescription: IdentifierDescription, type: string, uniqueId: string) {
+    super(identifierDescription, type, uniqueId, null);
+    this._classType = 'NullStatement'
   }
 
-  mutate(sampler: JavaScriptTestCaseSampler, depth: number): BoolStatement {
-    if (prng.nextBoolean(Properties.resample_gene_probability)) {
-      return sampler.sampleBool(this.identifierDescription, this.type);
-    }
-
-    return new BoolStatement(this.identifierDescription, this.type, prng.uniqueId(), !this.value);
+  mutate(sampler: JavaScriptTestCaseSampler, depth: number): NullStatement {
+    return new NullStatement(this.identifierDescription, this.type, prng.uniqueId());
   }
 
-  copy(): BoolStatement {
-    return new BoolStatement(this.identifierDescription, this.type, this.id, this.value);
+  copy(): NullStatement {
+    return new NullStatement(this.identifierDescription, this.type, this.id);
   }
 
   getFlatTypes(): string[] {
-    return ["bool"]
+    return ["null"]
   }
 }

@@ -98,6 +98,14 @@ export class Visitor {
       INITIAL: coverageNode,
       HASH: this.types.stringLiteral(hash),
     });
+
+    const meta = metaTemplate({
+      GLOBAL_META_VAR: "\"__meta__\"",
+      META_FUNCTION: this.types.identifier(this.visitState.metaVarName),
+      PATH: this.types.stringLiteral(this.sourceFilePath),
+      HASH: this.types.stringLiteral(hash),
+    });
+
     // explicitly call this.varName to ensure coverage is always initialized
     path.node.body.unshift(
       this.types.expressionStatement(
@@ -108,6 +116,7 @@ export class Visitor {
       )
     );
     path.node.body.unshift(cv);
+    path.node.body.unshift(meta)
     return {
       fileCoverage: coverageData,
       sourceMappingURL: this.visitState.sourceMappingURL,
@@ -233,6 +242,80 @@ function coverIfBranches(path) {
   } else {
     this.insertBranchCounter(path.get("alternate"), branch);
   }
+
+  const T = this.types;
+  const test = path.get('test')
+  const variables = []
+  test.traverse({
+    Identifier: {
+      enter: (p) => {
+        if (p.parent.type === "MemberExpression") {
+          return
+        }
+        variables.push(p.node.name)
+      }
+    },
+    MemberExpression: {
+      enter: (p) => {
+        // calls and such are possible but are problamatic because they could have side effects changing the behaviour
+        if (p.node.object.type === 'Identifier' && p.node.property.type === 'Identifier') {
+          variables.push(p.getSource())
+        }
+      }
+    }
+    // calls and such are possible but are problamatic because they could have side effects changing the behaviour
+  }, test)
+  const metaTracker = this.getBranchMetaTracker(branch, test.node, test.getSource(), variables)
+  path.insertBefore(T.expressionStatement(metaTracker));
+}
+
+function coverLoopBranch(path) {
+  const n = path.node;
+  const branch = this.cov.newBranch("loop", n.loc);
+
+  this.insertBranchCounter(path.get("body"), branch, n.loc);
+
+  const T = this.types;
+
+  const increment = this.getBranchIncrement(branch, path.node.loc);
+  path.insertAfter(T.expressionStatement(increment));
+
+  // TODO we should actually print what the just defined variable is set to
+  const justDefinedVariables = []
+
+  path.get('init').traverse({
+    VariableDeclarator: {
+      enter: (p) => {
+        justDefinedVariables.push(p.node.id.name)
+      }
+    }
+  })
+
+  const test = path.get('test')
+  const variables = []
+  test.traverse({
+    Identifier: {
+      enter: (p) => {
+        if (p.parent.type === "MemberExpression") {
+          return
+        }
+        if (justDefinedVariables.includes(p.node.name)) {
+          return
+        }
+        variables.push(p.node.name)
+      }
+    },
+    MemberExpression: {
+      enter: (p) => {
+        // calls and such are possible but are problamatic because they could have side effects changing the behaviour
+        if (p.node.object.type === 'Identifier' && p.node.property.type === 'Identifier') {
+          variables.push(p.getSource())
+        }
+      }
+    }
+  }, test)
+  const metaTracker = this.getBranchMetaTracker(branch, test.node, test.getSource(), variables)
+  path.insertBefore(T.expressionStatement(metaTracker));
 }
 
 function createSwitchBranch(path) {
@@ -263,41 +346,70 @@ function coverTernary(path) {
   if (aHint !== "next") {
     this.insertBranchCounter(path.get("alternate"), branch);
   }
+
+  const T = this.types;
+  const test = path.get('test')
+  const variables = []
+  test.traverse({
+    Identifier: {
+      enter: (p) => {
+        if (p.parent.type === "MemberExpression") {
+          return
+        }
+        variables.push(p.node.name)
+      }
+    },
+    MemberExpression: {
+      enter: (p) => {
+        // calls and such are possible but are problamatic because they could have side effects changing the behaviour
+        if (p.node.object.type === 'Identifier' && p.node.property.type === 'Identifier') {
+          variables.push(p.getSource())
+        }
+      }
+    }
+  }, test)
+  const metaTracker = this.getBranchMetaTracker(branch, test.node, test.getSource(), variables)
+  // path.parentPath.insertBefore(metaTracker)
+  // path.replaceWith(T.sequenceExpression([metaTracker, path.node]))
+  test.replaceWith(T.sequenceExpression([metaTracker, test.node]));
 }
 
+// TODO not sure how to handle the metatracker for this
+// TODO also unhandy since a chain of statements will be seen as a multi-sides branch
 function coverLogicalExpression(path) {
-  const T = this.types;
-  if (path.parentPath.node.type === "LogicalExpression") {
-    return; // already processed
-  }
-  const leaves = [];
-  this.findLeaves(path.node, leaves);
-  const b = this.cov.newBranch("binary-expr", path.node.loc, this.reportLogic);
-  for (let i = 0; i < leaves.length; i += 1) {
-    const leaf = leaves[i];
-    const hint = this.hintFor(leaf.node);
-    if (hint === "next") {
-      continue;
-    }
-
-    if (this.reportLogic) {
-      const increment = this.getBranchLogicIncrement(leaf, b, leaf.node.loc);
-      if (!increment[0]) {
-        continue;
-      }
-      leaf.parent[leaf.property] = T.sequenceExpression([
-        increment[0],
-        increment[1],
-      ]);
-      continue;
-    }
-
-    const increment = this.getBranchIncrement(b, leaf.node.loc);
-    if (!increment) {
-      continue;
-    }
-    leaf.parent[leaf.property] = T.sequenceExpression([increment, leaf.node]);
-  }
+  // const T = this.types;
+  // if (path.parentPath.node.type === "LogicalExpression") {
+  //   return; // already processed
+  // }
+  //
+  // const leaves = [];
+  // this.findLeaves(path.node, leaves);
+  // const b = this.cov.newBranch("binary-expr", path.node.loc, this.reportLogic);
+  // for (let i = 0; i < leaves.length; i += 1) {
+  //   const leaf = leaves[i];
+  //   const hint = this.hintFor(leaf.node);
+  //   if (hint === "next") {
+  //     continue;
+  //   }
+  //
+  //   if (this.reportLogic) {
+  //     const increment = this.getBranchLogicIncrement(leaf, b, leaf.node.loc);
+  //     if (!increment[0]) {
+  //       continue;
+  //     }
+  //     leaf.parent[leaf.property] = T.sequenceExpression([
+  //       increment[0],
+  //       increment[1],
+  //     ]);
+  //     continue;
+  //   }
+  //
+  //   const increment = this.getBranchIncrement(b, leaf.node.loc);
+  //   if (!increment) {
+  //     continue;
+  //   }
+  //   leaf.parent[leaf.property] = T.sequenceExpression([increment, leaf.node]);
+  // }
 }
 
 const codeVisitor = {
@@ -326,11 +438,26 @@ const codeVisitor = {
     coverStatement,
     coverIfBranches
   ),
-  ForStatement: entries(blockProp("body"), coverStatement),
-  ForInStatement: entries(blockProp("body"), coverStatement),
-  ForOfStatement: entries(blockProp("body"), coverStatement),
-  WhileStatement: entries(blockProp("body"), coverStatement),
-  DoWhileStatement: entries(blockProp("body"), coverStatement),
+  ForStatement: entries(blockProp("body"),
+    coverStatement,
+    coverLoopBranch
+  ),
+  ForInStatement: entries(blockProp("body"),
+    coverStatement,
+    // coverLoopBranch
+  ),
+  ForOfStatement: entries(blockProp("body"),
+    coverStatement,
+    // coverLoopBranch
+  ),
+  WhileStatement: entries(blockProp("body"),
+    coverStatement,
+    coverLoopBranch
+  ),
+  DoWhileStatement: entries(blockProp("body"),
+    coverStatement,
+    coverLoopBranch
+  ),
   SwitchStatement: entries(createSwitchBranch, coverStatement),
   SwitchCase: entries(coverSwitchCase),
   WithStatement: entries(blockProp("body"), coverStatement),
@@ -341,29 +468,29 @@ const codeVisitor = {
   LogicalExpression: entries(coverLogicalExpression),
 };
 const globalTemplateAlteredFunction = template(`
-        var Function = (function(){}).constructor;
-        var global = (new Function(GLOBAL_COVERAGE_SCOPE))();
+        const Function = (function(){}).constructor;
+        const global = (new Function(GLOBAL_COVERAGE_SCOPE))();
 `);
 const globalTemplateFunction = template(`
-        var global = (new Function(GLOBAL_COVERAGE_SCOPE))();
+        const global = (new Function(GLOBAL_COVERAGE_SCOPE))();
 `);
 const globalTemplateVariable = template(`
-        var global = GLOBAL_COVERAGE_SCOPE;
+        const global = GLOBAL_COVERAGE_SCOPE;
 `);
 // the template to insert at the top of the program.
 const coverageTemplate = template(
   `
     function COVERAGE_FUNCTION () {
-        var path = PATH;
-        var hash = HASH;
+        const path = PATH;
+        const hash = HASH;
         GLOBAL_COVERAGE_TEMPLATE
-        var gcv = GLOBAL_COVERAGE_VAR;
-        var coverageData = INITIAL;
-        var coverage = global[gcv] || (global[gcv] = {});
+        const gcv = GLOBAL_COVERAGE_VAR;
+        const coverageData = INITIAL;
+        const coverage = global[gcv] || (global[gcv] = {});
         if (!coverage[path] || coverage[path].hash !== hash) {
             coverage[path] = coverageData;
         }
-        var actualCoverage = coverage[path];
+        const actualCoverage = coverage[path];
         {
             // @ts-ignore
             COVERAGE_FUNCTION = function () {
@@ -371,6 +498,31 @@ const coverageTemplate = template(
             }
         }
         return actualCoverage;
+    }
+`,
+  { preserveComments: true }
+);
+
+const metaTemplate = template(
+  `
+    function META_FUNCTION (branch, metaInformation) {
+        const path = PATH;
+        const hash = HASH;
+        const gmv = GLOBAL_META_VAR;
+        const meta = global[gmv] || (global[gmv] = {});
+                
+        if (!meta[path] || meta[path].hash !== hash) {
+            meta[path] = {
+              hash: hash,
+              meta: {}
+            };
+        }
+        
+        if (!meta[path].meta[branch]) {
+          meta[path].meta[branch] = {}
+        }
+        
+        meta[path].meta[branch] = metaInformation
     }
 `,
   { preserveComments: true }

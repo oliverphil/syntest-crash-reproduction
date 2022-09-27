@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2022 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2021 Delft University of Technology and SynTest contributors
  *
  * This file is part of SynTest JavaScript.
  *
@@ -16,13 +16,21 @@
  * limitations under the License.
  */
 
-import { TypeProbability } from "../../resolving/TypeProbability";
-import { Export } from "../../../dependency/ExportVisitor";
+import { TypeProbability } from "../types/resolving/TypeProbability";
 
-export interface ComplexObject {
-  export?: Export,
-  name: string,
-  properties: Set<string>
-  functions: Set<string>
-  propertyType?: Map<string, TypeProbability>
+/**
+ * Interface for a IdentifierDescription Description.
+ *
+ * @author Dimitri Stallenberg
+ */
+export interface IdentifierDescription {
+  /**
+   * Name of the parameter.
+   */
+  name: string;
+
+  /**
+   * Type probability map of the parameter.
+   */
+  typeProbabilityMap: TypeProbability;
 }

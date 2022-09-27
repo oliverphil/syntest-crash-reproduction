@@ -17,29 +17,24 @@
  */
 
 import { traverse } from "@babel/core";
-import { Export, ExportVisitor } from "./ExportVisitor";
-import { IdentifierVisitor } from "./IdentifierVisitor";
+import { CFGVisitor } from "./CFGVisitor";
 
 /**
  * Exports generator for targets.
  *
  * @author Dimitri Stallenberg
  */
-export class ExportGenerator {
+export class CFGGenerator {
   /**
    * Generate function map for specified target.
    *
    * @param targetPath The path of the AST
    * @param targetAST The AST of the target
    */
-  generate(targetPath: string, targetAST: any): Export[] {
-    const identifierVisitor = new IdentifierVisitor(targetPath)
-    traverse(targetAST, identifierVisitor)
-
-    const visitor = new ExportVisitor(targetPath, identifierVisitor.identifiers);
+  generate(targetPath: string, targetAST: any): void {
+    const visitor = new CFGVisitor(targetPath);
 
     traverse(targetAST, visitor);
 
-    return visitor.exports;
   }
 }

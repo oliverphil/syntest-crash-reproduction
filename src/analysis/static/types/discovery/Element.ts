@@ -32,6 +32,7 @@ export enum ElementType {
   NumericalConstant='numericalConstant',
   BooleanConstant='booleanConstant',
   NullConstant='nullConstant',
+  UndefinedConstant='undefinedConstant',
   RegexConstant='regexConstant',
   Identifier='identifier',
   Relation='relation'
@@ -131,5 +132,8 @@ export function getElement(scope: Scope, node): Element {
 }
 
 export function getElementId(element: Element): string {
-  return `scope=(name=${element.scope.name},filePath=${element.scope.filePath},type=${element.scope.type}),type=${element.type},value=${element.value}`
+  if (!element.scope) {
+    return `scope=null,type=${element.type},value=${element.value}`
+  }
+  return `scope=(id=${element.scope.uid},filePath=${element.scope.filePath}),type=${element.type},value=${element.value}`
 }

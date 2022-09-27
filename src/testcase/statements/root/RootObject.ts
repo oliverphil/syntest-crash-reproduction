@@ -29,36 +29,23 @@ import { ActionType } from "../../../analysis/static/parsing/ActionType";
 /**
  * @author Dimitri Stallenberg
  */
-export class ConstructorCall extends RootStatement {
+export class RootObject extends RootStatement {
 
-  private readonly _constructorName: string;
 
   /**
    * Constructor
    * @param type the return identifierDescription of the constructor
    * @param uniqueId optional argument
-   * @param args the arguments of the constructor
    * @param calls the child calls on the object
-   * @param constructorName the name of the constructor
    */
   constructor(
     identifierDescription: IdentifierDescription,
     type: string,
     uniqueId: string,
-    args: Statement[],
     calls: Statement[],
-    constructorName: string,
   ) {
-    super(identifierDescription, type, uniqueId, args, calls);
-    this._classType = 'ConstructorCall'
-
-    this._constructorName = constructorName;
-
-    for (const arg of args) {
-      if (arg instanceof MethodCall) {
-        throw new Error("Constructor args cannot be of identifierDescription MethodCall")
-      }
-    }
+    super(identifierDescription, type, uniqueId, [], calls);
+    this._classType = 'RootObject'
 
     for (const call of calls) {
       if (!(call instanceof MethodCall)) {
@@ -67,23 +54,9 @@ export class ConstructorCall extends RootStatement {
     }
   }
 
-  mutate(sampler: JavaScriptTestCaseSampler, depth: number): ConstructorCall {
+  mutate(sampler: JavaScriptTestCaseSampler, depth: number): RootObject {
     // TODO replace entire constructor?
-    const args = [...this.args.map((a: Statement) => a.copy())];
     const calls = [...this.children.map((a: Statement) => a.copy())];
-
-    if (args.length !== 0) {
-      // go over each arg
-      for (let i = 0; i < args.length; i++) {
-        if (prng.nextBoolean(1 / args.length)) {
-          if (prng.nextBoolean(Properties.resample_gene_probability)) { // TODO should be different property
-            args[i] = sampler.sampleArgument(depth + 1, args[i].identifierDescription)
-          } else {
-            args[i] = args[i].mutate(sampler, depth + 1);
-          }
-        }
-      }
-    }
 
     const methodsAvailable = !!(<JavaScriptSubject>sampler.subject).getPossibleActions(ActionType.METHOD).length
 
@@ -122,39 +95,26 @@ export class ConstructorCall extends RootStatement {
     //     args[index] = args[index].mutate(sampler, depth + 1);
     // }
 
-    return new ConstructorCall(this.identifierDescription, this.type, prng.uniqueId(), args, finalCalls, this.constructorName);
+    return new RootObject(this.identifierDescription, this.type, prng.uniqueId(), finalCalls);
   }
 
-  copy(): ConstructorCall {
-    const deepCopyArgs = [...this.args.map((a: Statement) => a.copy())];
+  copy(): RootObject {
     const deepCopyChildren = [...this.children.map((a: Statement) => a.copy())];
 
-    return new ConstructorCall(
+    return new RootObject(
       this.identifierDescription,
       this.type,
       this.id,
-      deepCopyArgs,
-      deepCopyChildren,
-      this.constructorName
+      deepCopyChildren
     );
   }
 
-  get constructorName(): string {
-    return this._constructorName;
-  }
 
   decode(id: string, options: { addLogs: boolean, exception: boolean }): Decoding[] {
-    const args = this.args
-      .map((a) => a.varName)
-      .join(", ");
-
-    const argStatements: Decoding[] = this.args
-      .flatMap((a) => a.decode(id, options))
-
     const childStatements: Decoding[] = this.children
       .flatMap((a: MethodCall) => a.decodeWithObject(id, options, this.varName))
 
-    let decoded = `const ${this.varName} = new ${this.constructorName}(${args})`
+    let decoded = `const ${this.varName} = ${this.type}`
 
     if (options.addLogs) {
       const logDir = path.join(
@@ -166,7 +126,6 @@ export class ConstructorCall extends RootStatement {
     }
 
     return [
-      ...argStatements,
       {
         decoded: decoded,
         reference: this

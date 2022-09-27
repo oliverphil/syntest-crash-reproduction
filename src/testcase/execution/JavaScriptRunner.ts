@@ -10,17 +10,26 @@ import * as path from "path";
 import { JavaScriptExecutionResult, JavaScriptExecutionStatus } from "../../search/JavaScriptExecutionResult";
 import { Runner } from "mocha";
 import { JavaScriptSuiteBuilder } from "../../testbuilding/JavaScriptSuiteBuilder";
-import { handleRequires } from "mocha/lib/cli/run-helpers"
 import * as _ from 'lodash'
-import { spawn } from "child_process";
+import { SilentMochaReporter } from "./SilentMochaReporter";
+import ExecutionInformationIntegrator from "./ExecutionInformationIntegrator";
 const Mocha = require('mocha')
 const originalrequire = require("original-require");
 
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected suiteBuilder: JavaScriptSuiteBuilder;
+  protected errorProcessor: ExecutionInformationIntegrator
 
   constructor(suiteBuilder: JavaScriptSuiteBuilder) {
     this.suiteBuilder = suiteBuilder
+    this.errorProcessor = new ExecutionInformationIntegrator()
+
+    process.on("uncaughtException", reason => {
+      throw reason;
+    });
+    process.on("unhandledRejection", reason => {
+      throw reason;
+    });
   }
 
   async execute(
@@ -33,13 +42,12 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     // TODO make this running in memory
 
-    let argv = {
-      spec: testPath
+    const argv = {
+      spec: testPath,
+      reporter: SilentMochaReporter
     }
 
-    const mocha = new Mocha(argv)
-
-    // require('ts-node/register')
+    const mocha = new Mocha(argv)// require('ts-node/register')
 
     require("regenerator-runtime/runtime");
     require('@babel/register')({
@@ -51,45 +59,32 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     delete originalrequire.cache[testPath];
     mocha.addFile(testPath);
 
-    // By replacing the global log function we disable the output of the truffle test framework
-    const levels = ['log', 'debug', 'info', 'warn', 'error'];
-    const originalFunctions = levels.map(level => console[level]);
-    levels.forEach((level) => {
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-      console[level] = () => {}
-    })
-
     let runner: Runner = null
 
     // Finally, run mocha.
-    process.on("unhandledRejection", reason => {
-      throw reason;
-    });
-
     await new Promise((resolve) => {
-      runner = mocha.run((failures) => {
-        resolve(failures)
-      })
-    })
-
-    levels.forEach((level, index) => {
-      console[level] = originalFunctions[index]
+      runner = mocha.run((failures) => resolve(failures))
     })
 
     const stats = runner.stats
 
+    const test = runner.suite.suites[0].tests[0];
+
     // If one of the executions failed, log it
     if (stats.failures > 0) {
+      this.errorProcessor.processError(testCase, test)
       getUserInterface().error("Test case has failed!");
+    } else {
+      this.errorProcessor.processSuccess(testCase, test)
     }
 
     // Retrieve execution traces
     const instrumentationData = _.cloneDeep(global.__coverage__)
+    const metaData = _.cloneDeep(global.__meta__)
 
     const traces: Datapoint[] = [];
     for (const key of Object.keys(instrumentationData)) {
-      if (instrumentationData[key].path.includes(subject.name))
-        for (const functionKey of Object.keys(instrumentationData[key].fnMap)) {
+      for (const functionKey of Object.keys(instrumentationData[key].fnMap)) {
           const fn = instrumentationData[key].fnMap[functionKey]
           const hits = instrumentationData[key].f[functionKey]
 
@@ -108,10 +103,10 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
           const hits = instrumentationData[key].s[statementKey]
 
           traces.push({
-            id: `f-${statement.line}`,
+            id: `s-${statement.start.line}`,
             type: "statement",
             path: key,
-            line: statement.line,
+            line: statement.start.line,
 
             hits: hits,
           })
@@ -120,6 +115,17 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         for (const branchKey of Object.keys(instrumentationData[key].branchMap)) {
           const branch = instrumentationData[key].branchMap[branchKey]
           const hits = instrumentationData[key].b[branchKey]
+
+          // if (!hits.find((h) => h !== 0)) {
+          //   // if there are no hits the meta object is not created and thus we cannot query it
+          //   continue
+          // }
+          //
+          // if (!metaData[key] || !metaData[key].meta || !metaData[key].meta[branchKey]) {
+          //   continue
+          // }
+
+          const meta = metaData?.[key]?.meta?.[branchKey]
 
           traces.push({
             id: `b-${branch.line}`,
@@ -132,10 +138,9 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
             hits: hits[0],
 
-            // TODO
-            left: [],
-            opcode: "",
-            right: [],
+            condition_ast: meta?.condition_ast,
+            condition: meta?.condition,
+            variables: meta?.variables
           });
 
           traces.push({
@@ -149,13 +154,11 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
             hits: hits[1],
 
-            // TODO
-            left: [],
-            opcode: "",
-            right: [],
+            condition_ast: meta?.condition_ast,
+            condition: meta?.condition,
+            variables: meta?.variables
           });
         }
-
     }
 
     // Retrieve execution information
@@ -199,6 +202,8 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     // Remove test file
     await this.suiteBuilder.deleteTestCase(testPath);
+
+    await mocha.dispose()
 
     return executionResult;
   }

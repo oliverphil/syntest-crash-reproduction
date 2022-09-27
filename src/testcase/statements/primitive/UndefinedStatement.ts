@@ -18,7 +18,6 @@
 
 import {
   prng,
-  Properties,
 } from "@syntest/framework";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { PrimitiveStatement } from "./PrimitiveStatement";
@@ -27,25 +26,21 @@ import { IdentifierDescription } from "../../../analysis/static/parsing/Identifi
 /**
  * @author Dimitri Stallenberg
  */
-export class BoolStatement extends PrimitiveStatement<boolean> {
-  constructor(identifierDescription: IdentifierDescription, type: string, uniqueId: string, value: boolean) {
-    super(identifierDescription, type, uniqueId, value);
-    this._classType = 'BoolStatement'
+export class UndefinedStatement extends PrimitiveStatement<boolean> {
+  constructor(identifierDescription: IdentifierDescription, type: string, uniqueId: string) {
+    super(identifierDescription, type, uniqueId, undefined);
+    this._classType = 'UndefinedStatement'
   }
 
-  mutate(sampler: JavaScriptTestCaseSampler, depth: number): BoolStatement {
-    if (prng.nextBoolean(Properties.resample_gene_probability)) {
-      return sampler.sampleBool(this.identifierDescription, this.type);
-    }
-
-    return new BoolStatement(this.identifierDescription, this.type, prng.uniqueId(), !this.value);
+  mutate(sampler: JavaScriptTestCaseSampler, depth: number): UndefinedStatement {
+    return new UndefinedStatement(this.identifierDescription, this.type, prng.uniqueId());
   }
 
-  copy(): BoolStatement {
-    return new BoolStatement(this.identifierDescription, this.type, this.id, this.value);
+  copy(): UndefinedStatement {
+    return new UndefinedStatement(this.identifierDescription, this.type, this.id);
   }
 
   getFlatTypes(): string[] {
-    return ["bool"]
+    return ["undefined"]
   }
 }
