@@ -10,7 +10,7 @@ module.exports = {
     explore_illegal_values: false,
 
     algorithm: "DynaMOSA",
-    search_time: 60,
+    search_time: 5,
     total_time: 60000,
     iteration_budget: 1000000,
 
@@ -68,7 +68,7 @@ module.exports = {
         // "../syntest-javascript-benchmark/axios/lib/core/buildFullPath.js",
         // "../syntest-javascript-benchmark/axios/lib/core/Axios.js",
 
-        // "../syntest-javascript-benchmark/commanderjs/lib/help.js",
+        "../syntest-javascript-benchmark/commanderjs/lib/help.js",
 
         // "../syntest-javascript-benchmark/lodash/.internal/equalArrays.js",
         // "../syntest-javascript-benchmark/lodash/hasPath.js",
