@@ -64,10 +64,9 @@ export class ExportVisitor extends Visitor {
        }
 
     } else if (path.node.specifiers) {
-
       if (path.node.source) {
         // TODO skip because we already tested it in another file
-        return
+        return;
       }
 
       for (const specifier of path.node.specifiers) {
@@ -79,9 +78,9 @@ export class ExportVisitor extends Visitor {
           filePath: this.filePath
         })
       }
+    } else {
+      throw new Error('ANY named export');
     }
-
-    // throw new Error('ANY named export')
   };
 
   public ExportDefaultDeclaration: (path) => void = (path) => {
@@ -182,6 +181,7 @@ export class ExportVisitor extends Visitor {
     }
   };
 
+
   private _getName(node): string {
     switch (node.type) {
       case 'Identifier':
@@ -208,7 +208,7 @@ export class ExportVisitor extends Visitor {
     } else if (type === 'VariableDeclaration'
       || type === 'VariableDeclarator') {
       return ExportType.const
-    }  else if (type === 'NewExpression') {
+    } else if (type === 'NewExpression') {
       return ExportType.const
     } else if (type === 'ClassDeclaration') {
       return ExportType.class

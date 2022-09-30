@@ -2,7 +2,11 @@ import { TransformOptions } from "@babel/core";
 
 export const defaultBabelOptions: TransformOptions = {
   configFile: false,
-  // "presets": ["@babel/preset-react"],
+  presets: [
+    "@babel/preset-typescript",
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
   babelrc: false,
   ast: true,
   sourceMaps: true,
@@ -16,8 +20,19 @@ export const defaultBabelOptions: TransformOptions = {
       "classProperties",
       "dynamicImport",
       "objectRestSpread",
+      // "@babel/plugin-transform-typescript",
+      // "@babel/plugin-transform-react-jsx",
+      // "@babel/plugin-transform-strict-mode",
+      // "@babel/plugin-proposal-numeric-separator",
+      // "@babel/plugin-transform-literals"
     ],
     strictMode: false,
   },
-  plugins: [],
+  plugins: [
+    "@babel/plugin-transform-typescript",
+    // "@babel/plugin-transform-react-jsx",
+    // "@babel/plugin-transform-strict-mode",
+    // "@babel/plugin-proposal-numeric-separator",
+    //   "@babel/plugin-transform-literals"
+  ],
 };

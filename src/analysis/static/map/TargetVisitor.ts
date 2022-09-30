@@ -51,7 +51,12 @@ export class TargetVisitor extends Visitor {
       || path.parent.type === 'ReturnStatement'
       || path.parent.type === 'LogicalExpression'
       || path.parent.type === 'ConditionalExpression'
-      || path.parent.type === 'AssignmentExpression') {
+      || path.parent.type === 'AssignmentExpression'
+      || path.parent.type === 'MemberExpression'
+      || path.parent.type === 'ArrayExpression'
+      || path.parent.type === 'SequenceExpression'
+      || path.parent.type === 'ArrowFunctionExpression'
+      || path.parent.type === 'UnaryExpression') {
       // anonymous argument function cannot call is not target
       return
     }
@@ -85,7 +90,7 @@ export class TargetVisitor extends Visitor {
       }
 
     } else {
-      throw new Error("unknown function expression name")
+      throw new Error("unknown function expression name " + path.parent.type);
     }
 
     const functionName = targetName;
@@ -164,7 +169,7 @@ export class TargetVisitor extends Visitor {
   };
 
   public FunctionDeclaration: (path) => void = (path) => {
-    const targetName = path.node.id.name;
+    const targetName = path.node.id?.name || path.node.params[0].name;
     const functionName = targetName;
 
     this._createMaps(targetName)
@@ -199,7 +204,7 @@ export class TargetVisitor extends Visitor {
       visibility = ActionVisibility.PROTECTED;
     }
 
-
+    if (!this._functionMap.get(targetName)) return;
     this._functionMap.get(targetName).set(functionName, {
       scope: {
         uid: `${path.scope.uid - this.scopeIdOffset}`,
@@ -323,7 +328,7 @@ export class TargetVisitor extends Visitor {
           this._createMaps(targetName)
           // modify original
           // but there is no original so... no constructor?
-        } else {
+        } else if (this._functionMap.get(targetName).get(targetName)) {
           // modify original
           this._functionMap.get(targetName).get(targetName).type = ActionType.CONSTRUCTOR
           this._functionMap.get(targetName).get(targetName).isConstructor = true
@@ -358,7 +363,8 @@ export class TargetVisitor extends Visitor {
         }
 
         if (functionName === "method") {
-          throw new Error("Invalid functionName")
+          return;
+          // throw new Error("Invalid functionName")
         }
 
         if (!this._functionMap.has(targetName)) {
@@ -419,21 +425,24 @@ export class TargetVisitor extends Visitor {
   }
 
   _extractParam(param: any): IdentifierDescription {
-      if (param.type === 'RestElement') {
+      if (!param) return undefined;
+      if (param?.type === 'RestElement') {
         // TODO this can actually be an infinite amount of arguments...
         return this._extractParam(param.argument)
       }
 
-      if (param.type === "AssignmentPattern") {
+      if (param?.type === "AssignmentPattern") {
         return this._extractParam(param.left)
       }
 
-      if (param.type === "ObjectPattern") {
+      if (param?.type === "ObjectPattern") {
         const typeProbability = new TypeProbability()
 
         const object: ComplexObject = {
           name: "objectPattern",
-          properties: new Set(param.properties.map((x)=> this._extractParam(x.key).name)), // TODO resolve these types
+          properties: new Set(param.properties
+              .filter(x => x.key)
+              .map((x)=> this._extractParam(x.key).name)), // TODO resolve these types
           functions: new Set()
         }
 
@@ -444,7 +453,7 @@ export class TargetVisitor extends Visitor {
         }
       }
 
-      if (param.type === "ArrayPattern") {
+      if (param?.type === "ArrayPattern") {
         const typeProbability = new TypeProbability()
 
         const object: ComplexObject = {
@@ -461,13 +470,13 @@ export class TargetVisitor extends Visitor {
         }
       }
 
-      if (!param.name) {
+      if (!param?.name) {
         throw new Error(`Unknown param ${JSON.stringify(param)}\n ${this.filePath}`)
       }
 
       return {
         typeProbabilityMap: undefined,
-        name: param.name,
+        name: param?.name,
       };
 
   }

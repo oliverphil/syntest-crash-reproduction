@@ -71,6 +71,7 @@ import {Crash} from "./crash-reproduction/types/importTypes";
 import EnvironmentBuilder from "./crash-reproduction/setup/environmentBuilder";
 import { ActionType } from "./analysis/static/parsing/ActionType";
 import { existsSync } from "fs";
+import * as fs from "fs";
 
 const originalrequire = require("original-require");
 const Mocha = require('mocha')
@@ -188,9 +189,21 @@ export class Launcher {
             Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
             // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/mkdirp/test/**/*.js`);
             // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/mkdirp/examples/**/*.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/acorn-jsx/index.js`);
+            Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/punycode/punycode.es6.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/regexpp/index.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/acorn/**/acorn.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/ajv/**/ajv.bundle.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/argparse/**/argument_parser.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/chardet/**/utf8.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/type-check/**/parse-type.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/uri-js/**/uri.all.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/terser/**/bundle.min.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/terser/**/ast.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/terser/**/*.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/watchpack/**/watchEventSource.js`);
           });
         });
-
     return await this.setup();
   }
 

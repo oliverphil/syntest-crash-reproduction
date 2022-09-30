@@ -1,1 +1,0 @@
-import {Module._compile} from 'internal/modules/cjs/loader.js';

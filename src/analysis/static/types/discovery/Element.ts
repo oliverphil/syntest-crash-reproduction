@@ -128,7 +128,7 @@ export function getElement(scope: Scope, node): Element {
       value: `%${node.start}-${node.end}`
     }
   }
-  throw new Error(`Cannot get element: "${scope.name}" -> ${node.type}`)
+  throw new Error(`Cannot get element: "${scope.filePath}" -> ${node.type}`)
 }
 
 export function getElementId(element: Element): string {

@@ -96,7 +96,8 @@ class EnvironmentGenerator {
 
     return crashes.filter(crash => !crash.crashId.includes('eslint') && crash.crashId !== 'webpack-13440'
     && crash.crashId !== 'express-2761'
-    && crash.crashId !== 'http-server-209');
+    && crash.crashId !== 'http-server-209'
+    && crash.crashId !== 'standard-1450');
   }
 
   /**

@@ -34,7 +34,7 @@ module.exports = {
 
 
     // target_root_directory: "../syntest-javascript-benchmark/axios",
-    target_root_directory: "../syntest-javascript-benchmark/commanderjs",
+    // target_root_directory: "/syntest-javascript-benchmark/commanderjs",
     // target_root_directory: "../syntest-javascript-benchmark/express",
     // target_root_directory: "../syntest-javascript-benchmark/lodash",
     // target_root_directory: "../syntest-javascript-benchmark/moment/src",
@@ -44,6 +44,8 @@ module.exports = {
     // target_root_directory: "../syntest-javascript-benchmark/chalk",
     // target_root_directory: "../syntest-javascript-benchmark/jquery",
     // target_root_directory: "../syntest-javascript-benchmark/npm_cli",
+
+    target_root_directory: "./benchmark/crashes",
 
     include: [
         // "./benchmark/crashes/http-server/**",
@@ -124,9 +126,10 @@ module.exports = {
         "../syntest-javascript-benchmark/moment/src/lib/moment/clone.js",
         "../syntest-javascript-benchmark/moment/src/lib/moment/creation-data.js",
         "../syntest-javascript-benchmark/moment/src/lib/moment/valid.js",
-        "../syntest-javascript-benchmark/moment/src/lib/moment/moment.js"
+        "../syntest-javascript-benchmark/moment/src/lib/moment/moment.js",
 
         // "../syntest-javascript-benchmark/chalk/source/vendor/supports-color/*.*",
+        "./benchmark/crashes/**/acorn-jsx/*.js"
 
     ]
 }
