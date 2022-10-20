@@ -64,11 +64,11 @@ class StackTraceProcessor {
    */
   private static parseTrace(lines: string[]): StackFrame[] {
     const moduleRegex: RegExp =
-      /at\s(.+)\s\(([\d\w~/\\\-<>._?@+]+):(\d+):?(\d+)?\)/m;
+      /at\s(.+)\s\(([\d\w~\/\\\-<>._?@+]+):(\d+):?(\d+)?\)/m;
     const fileRegex: RegExp =
-      /at\s([:a-zA-Z~/\\\-<>._@+]+)(?::(\d+)?:?(\d+)?$|[\s()<>\\\w]+$)/m;
+      /at\s([:a-zA-Z~\/\\\-<>._@+]+)(?::(\d+)?:?(\d+)?$|[\s()<>\\\w]+$)/m;
     const internalsRegex: RegExp =
-      /at\s(?:new)?\s?([:a-zA-Z~/\\\-<>._@+]+)\s\(([A-Za-z]+:[A-Za-z/_]+):(\d+):(\d+)\)/m;
+      /at\s(?:new)?\s?([:a-zA-Z~\/\\\-<>._@+]+)\s\(([A-Za-z]+:[A-Za-z/_]+):(\d+):(\d+)\)/m;
     const frames: StackFrame[] = [];
     for (const line of lines.filter((l) => l.length > 0)) {
       let result = moduleRegex.exec(line);

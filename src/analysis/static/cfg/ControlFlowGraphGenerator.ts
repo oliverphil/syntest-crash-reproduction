@@ -60,7 +60,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     const removableNodes = [];
     this.cfg.nodes
       // Find all placeholder nodes
-      .filter((n) => n.type === NodeType.Placeholder)
+      .filter((n) => n && n.type === NodeType.Placeholder)
       .forEach((placeholderNode) => {
         this.cfg.edges
           // Find all placeholder nodes that are not end nodes
@@ -93,7 +93,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   compress(): void {
-    const roots = this.cfg.nodes.filter((n) => n.type === NodeType.Root);
+    const roots = this.cfg.nodes.filter((n) => n && n.type === NodeType.Root);
 
     // create  node map for easy lookup
     const nodeMap = new Map<string, Node>();
@@ -314,9 +314,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       "ImportDeclaration",
       "ClassProperty",
       "EmptyStatement",
+        "LabeledStatement"
     ];
 
-    if (skipable.includes(child.type)) {
+    if (!child || skipable.includes(child.type)) {
       return {
         childNodes: parents,
         breakNodes: [],
@@ -325,6 +326,11 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
     switch (child.type) {
       // passthrough
+      // case undefined:
+      //   return {
+      //     childNodes: parents,
+      //     breakNodes: []
+      //   }
       case "File":
         return this.visitChild(child.program, parents)
       case "ExportDefaultDeclaration":
@@ -370,6 +376,8 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       case "AwaitExpression":
       case "UpdateExpression":
       case "SequenceExpression":
+      // case undefined:
+      // case "LabeledStatement":
 
       case "VariableDeclarator":
         return this.visitGeneralExpression(child, parents);
@@ -457,16 +465,16 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       //   return this.BreakStatement(cfg, child, parents);
 
       default:
-        throw new Error(`ast type: ${child.type} is not supported currently!`);
+        throw new Error(`ast type: ${child?.type} is not supported currently!`);
     }
   }
 
   private visitProgram(ast: any): ReturnValue {
     for (const child of ast.body) {
       // TODO add more probably
-      // if (!['FunctionDeclaration', 'ClassDeclaration', 'ExpressionStatement'].includes(child.type)) {
+      // if (!['FunctionDeclaration', 'ClassDeclaration', 'ExpressionStatement'].includes(child?.type)) {
 
-      // if (['ImportDeclaration', 'ClassDeclaration', 'ExpressionStatement'].includes(child.type)) {
+      // if (['ImportDeclaration', 'ClassDeclaration', 'ExpressionStatement'].includes(child?.type)) {
       //   continue
       // }
       this.visitChild(child, []);
@@ -486,7 +494,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       };
     }
     const node: RootNode = this.createRootNode(
-      [ast.loc.start.line],
+      [ast.loc?.start.line],
       [],
       ast.id.name
     );
@@ -525,7 +533,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     ast: any,
     parents: Node[]
   ): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
+    const node: Node = this.createNode([ast.loc?.start?.line], []);
     this.connectParents(parents, [node]);
     let nodes = [node]
     for (const arg of ast.arguments) {
@@ -565,7 +573,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     ast: any,
     parents: Node[]
   ): ReturnValue {
-    if (['LogicalExpression', 'BinaryExpression'].includes(ast.type)) {
+    if (['LogicalExpression', 'BinaryExpression'].includes(ast?.type)) {
       const left = this.visitChild(ast.left, parents);
       const right = this.visitChild(ast.right, left.childNodes);
 
@@ -573,14 +581,14 @@ export class ControlFlowGraphGenerator implements CFGFactory {
         childNodes: [...right.childNodes],
         breakNodes: [...left.breakNodes, ...right.breakNodes],
       };
-    } else if (ast.type === 'AssignmentExpression') {
+    } else if (ast?.type === 'AssignmentExpression') {
       return this.visitChild(ast.right, parents);
-    } else if (ast.type === 'VariableDeclarator') {
+    } else if (ast?.type === 'VariableDeclarator') {
       if (ast.init) {
         return this.visitChild(ast.init, parents);
       }
 
-      const node: Node = this.createNode([ast.loc.start.line], []);
+      const node: Node = this.createNode([ast.loc?.start?.line], []);
       this.connectParents(parents, [node]);
 
 
@@ -588,10 +596,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
         childNodes: [node],
         breakNodes: [],
       };
-    } else if (ast.type === 'FunctionExpression'
-    || ast.type === 'ArrowFunctionExpression') {
+    } else if (ast?.type === 'FunctionExpression'
+    || ast?.type === 'ArrowFunctionExpression') {
       const node: RootNode = this.createRootNode(
-        [ast.loc.start.line],
+        [ast.loc?.start.line],
         [],
       );
       this.connectParents(parents, [node]);
@@ -605,7 +613,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
         breakNodes: [],
       };
     } else {
-      const node: Node = this.createNode([ast.loc.start.line], []);
+      const node: Node = this.createNode([ast.loc?.start?.line], []);
       this.connectParents(parents, [node]);
 
       return {
@@ -619,7 +627,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   private visitBlockStatement(ast: any, parents: Node[]): ReturnValue {
     let nodes = parents;
     const totalBreakNodes = [];
-    for (const child of ast.body) {
+    for (const child of ast?.body) {
       const { childNodes, breakNodes } = this.visitChild(child, nodes);
       nodes = childNodes;
       totalBreakNodes.push(...breakNodes);
@@ -647,7 +655,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
     if (!this.cfg.edges[count]) {
       // if no nodes are created we add one
-      const node: Node = this.createNode([ast.loc.start.line], []);
+      const node: Node = this.createNode([ast.loc?.start.line], []);
       this.connectParents(parents, [node]);
     }
 
@@ -659,7 +667,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   // TODO try catch support
   private visitThrowStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -682,7 +690,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   private visitClassMethod(ast: any): ReturnValue {
     const node: RootNode = this.createRootNode(
-      [ast.loc.start.line],
+      [ast.loc?.start.line],
       [],
       ast.key.name
     );
@@ -704,7 +712,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     ast: any,
     parents: Node[]
   ): ReturnValue {
-    // const node: Node = this.createNode([ast.loc.start.line], []);
+    // const node: Node = this.createNode([ast.loc?.start.line], []);
     // this.connectParents(parents, [node]);
 
     let nodes = parents
@@ -723,10 +731,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   private visitIfStatement(ast: any, parents: Node[]): ReturnValue {
     const node: BranchNode = this.createBranchNode(
-      [ast.loc.start.line],
+      [ast.loc?.start.line],
       [],
       {
-        type: ast.test.type,
+        type: ast.test?.type,
         operator: ast.test.operator,
       }
     );
@@ -749,7 +757,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     if (!this.cfg.edges[count]) {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.consequent.loc.start.line],
+        [ast.consequent.loc?.start.line],
         []
       );
       this.connectParents([node], [emptyChildNode])
@@ -782,7 +790,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       } else {
         // Add empty placeholder node
         const emptyChildNode = this.createPlaceholderNode(
-          [ast.alternate.loc.start.line],
+          [ast.alternate.loc?.start.line],
           []
         );
         falseNodes.push(emptyChildNode);
@@ -821,11 +829,11 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   private visitConditional(ast: any, parents: Node[]): ReturnValue {
     const node: BranchNode = this.createBranchNode(
-      [ast.loc.start.line],
+      [ast.loc?.start?.line],
       [],
       {
-        type: ast.test.type,
-        operator: ast.test.operator,
+        type: ast.test?.type,
+        operator: ast.test?.operator,
       });
     this.connectParents(parents, [node]);
 
@@ -847,7 +855,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.consequent.loc.start.line],
+        [ast.consequent.loc?.start.line],
         []
       );
       trueNodes.push(emptyChildNode);
@@ -876,7 +884,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       } else {
         // Add empty placeholder node
         const emptyChildNode = this.createPlaceholderNode(
-          [ast.alternate.loc.start.line],
+          [ast.alternate.loc?.start.line],
           []
         );
         falseNodes.push(emptyChildNode);
@@ -912,10 +920,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   private visitTryStatement(ast: any, parents:Node[]): ReturnValue {
     // TODO finalizer try -> catch -> finally
     const node: BranchNode = this.createBranchNode(
-      [ast.loc.start.line],
+      [ast.loc?.start.line],
       [],
       {
-        type: ast.type,
+        type: ast?.type,
         operator: 'exception',
       }
     );
@@ -940,7 +948,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.consequent.loc.start.line],
+        [ast.consequent.loc?.start.line],
         []
       );
       tryChildNodes.push(emptyChildNode);
@@ -966,10 +974,18 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       this.cfg.edges[count].branchType = false;
     } else {
       // Add empty placeholder node
-      const emptyChildNode = this.createPlaceholderNode(
-        [ast.alternate.loc.start.line],
-        []
-      );
+      let emptyChildNode;
+      if (!ast || !ast.alternate || !ast.loc) {
+        emptyChildNode = this.createPlaceholderNode(
+            [],
+            []
+        );
+      } else {
+        emptyChildNode = this.createPlaceholderNode(
+            [ast.alternate.loc.start.line],
+            []
+        );
+      }
       catchChildNodes.push(emptyChildNode);
 
       this.cfg.edges.push({
@@ -986,7 +1002,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   private visitCatchClause(ast: any, parents:Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -996,8 +1012,8 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   private visitWhileStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
-      type: ast.test.type,
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
+      type: ast.test?.type,
       operator: ast.test.operator,
     });
     this.connectParents(parents, [node]);
@@ -1013,7 +1029,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.loc.start.line],
+        [ast.loc?.start.line],
         []
       );
       trueNodes.push(emptyChildNode);
@@ -1051,7 +1067,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   private visitForOfStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: 'CallExpression',
       operator: 'isEmpty',
     });
@@ -1068,7 +1084,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.loc.start.line],
+        [ast.loc?.start.line],
         []
       );
       loopNodes.push(emptyChildNode);
@@ -1113,7 +1129,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
    * @private
    */
   private visitBreakStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -1124,7 +1140,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   // TODO currently incorrect is passthrough now
   private visitContinueStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -1136,10 +1152,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   private visitDoWhileStatement(ast: any, parents: Node[]): ReturnValue {
     // entry node
     const entryNode: Node = this.createBranchNode(
-      [ast.loc.start.line],
+      [ast.loc?.start.line],
       [],
       {
-        type: ast.test.type,
+        type: ast.test?.type,
         operator: ast.test.operator,
       }
     );
@@ -1154,10 +1170,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
     // while check
     const whileNode: Node = this.createBranchNode(
-      [ast.loc.start.line],
+      [ast.loc?.start.line],
       [],
       {
-        type: ast.test.type,
+        type: ast.test?.type,
         operator: ast.test.operator,
       }
     );
@@ -1197,7 +1213,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   private visitSwitchStatement(ast: any, parents: Node[]): ReturnValue {
     // TODO currently incorrect
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: 'Switch',
       operator: '==',
     });
@@ -1234,7 +1250,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   private visitSwitchCase(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: 'switchCase',
       operator: '==',
     });
@@ -1260,7 +1276,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.loc.start.line],
+        [ast.loc?.start.line],
         []
       );
       trueNodes.push(emptyChildNode);
@@ -1275,7 +1291,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     }
 
     // Add empty placeholder node for the false flow
-    const falseNode = this.createPlaceholderNode([ast.loc.start.line], []);
+    const falseNode = this.createPlaceholderNode([ast.loc?.start.line], []);
     this.cfg.edges.push({
       from: node.id,
       to: falseNode.id,
@@ -1289,8 +1305,8 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   private visitForStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
-      type: ast.test.type,
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
+      type: ast.test?.type,
       operator: ast.test.operator || ast.test.name || ast.test.value,
     });
     this.connectParents(parents, [node]);
@@ -1311,7 +1327,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.loc.start.line],
+        [ast.loc?.start.line],
         []
       );
       trueNodes.push(emptyChildNode);
@@ -1323,8 +1339,13 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       });
     }
 
+    let falseNode;
+    if (!ast || !ast.loc || !ast.loc.end) {
+      falseNode = this.createPlaceholderNode([], []);
+    } else {
+      falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
+    }
     // Add empty placeholder node for the false flow
-    const falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
     this.cfg.edges.push({
       from: node.id,
       to: falseNode.id,

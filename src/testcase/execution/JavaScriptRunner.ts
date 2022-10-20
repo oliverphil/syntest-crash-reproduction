@@ -21,17 +21,26 @@ const originalrequire = require("original-require");
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected decoder: JavaScriptDecoder;
   protected errorProcessor: ExecutionInformationIntegrator
+  protected mocha: Mocha;
 
   constructor(decoder: JavaScriptDecoder) {
     this.decoder = decoder
     this.errorProcessor = new ExecutionInformationIntegrator()
 
-    process.on("uncaughtException", reason => {
-      throw reason;
-    });
-    process.on("unhandledRejection", reason => {
-      throw reason;
-    });
+    if (process.listenerCount('uncaughtException') < 1) {
+      process.on("uncaughtException", reason => {
+        console.log(reason);
+        this.mocha.dispose();
+        // throw reason;
+      });
+    }
+    if (process.listenerCount('unhandledRejection') < 1) {
+      process.on("unhandledRejection", reason => {
+        console.log(reason);
+        this.mocha.dispose();
+        // throw reason;
+      });
+    }
   }
 
   async writeTestCase(filePath: string, testCase: JavaScriptTestCase, targetName: string, addLogs = false): Promise<void> {
@@ -69,10 +78,18 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     const argv = {
       spec: paths,
-      reporter: SilentMochaReporter
+      reporter: SilentMochaReporter,
+      allowUncaught: true,
+      // isWorker: true,
+      // parallel: true,
+      require: [
+          '@babel/register',
+        "@babel/preset-env"
+      ],
+      timeout: 60000
     }
 
-    const mocha = new Mocha(argv)// require('ts-node/register')
+    this.mocha = new Mocha(argv)// require('ts-node/register')
 
     require("regenerator-runtime/runtime");
     require('@babel/register')({
@@ -83,17 +100,25 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     for (const _path of paths) {
       delete originalrequire.cache[_path];
-      mocha.addFile(_path);
+      this.mocha.addFile(_path);
     }
 
     let runner: Runner = null
 
-    // Finally, run mocha.
-    await new Promise((resolve) => {
-      runner = mocha.run((failures) => resolve(failures))
-    })
+    try {
+      // Finally, run mocha.
+      await new Promise((resolve, reject) => {
+        try {
+          runner = this.mocha.run((failures) => failures > 0 ? reject(failures) : resolve(failures))
+        } catch (e) {
+          reject(e);
+        }
+      })
+    } catch (e) {
+      console.log('caught', e);
+    }
 
-    await mocha.dispose()
+    await this.mocha.dispose()
     return runner
   }
 
@@ -105,8 +130,12 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     await this.writeTestCase(testPath, testCase, subject.name);
 
-    const runner = await this.run([testPath])
-
+    let runner;
+    // try {
+      runner = await this.run([testPath])
+    // } catch (e) {
+      // console.log(e);
+    // }
     const stats = runner.stats
 
     const test = runner.suite.suites[0].tests[0];

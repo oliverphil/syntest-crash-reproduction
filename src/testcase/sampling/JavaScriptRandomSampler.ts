@@ -37,7 +37,11 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
     let root: RootStatement
 
     if ((<JavaScriptSubject>this._subject).type === SubjectType.function) {
-      root = this.sampleFunctionCall(0)
+      try {
+        root = this.sampleFunctionCall(0)
+      } catch (e) {
+        console.log(e);
+      }
     } else if ((<JavaScriptSubject>this._subject).type === SubjectType.class) {
       root = this.sampleConstructor(0)
     } else if ((<JavaScriptSubject>this._subject).type === SubjectType.object) {
