@@ -4,5 +4,6 @@
   "url": "https://github.com/webpack/webpack/issues/13419",
   "version": "5.35.1",
   "nodeVersion": "12.15.0",
-  "dependencies": {}
+  "dependencies": {},
+  "requireCrashDependency": true
 }

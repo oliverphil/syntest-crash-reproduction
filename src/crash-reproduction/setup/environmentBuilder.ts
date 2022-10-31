@@ -41,7 +41,12 @@ class EnvironmentBuilder {
     let stderr = '';
     let error = false;
     try {
-      stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
+      if (crash.nodeVersion) {
+        stdout = execSync(`source /local/scratch/.nvm/nvm.sh; nvm install ${crash.nodeVersion}; npm --prefix ${crashFolder} i`).toString();
+      } else {
+        stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
+      }
+      EnvironmentBuilder.handleSetupOptions(crash, crashFolder);
     } catch (e) {
       stdout = e.stdout.toString();
       stderr = e.stderr.toString();
@@ -51,6 +56,24 @@ class EnvironmentBuilder {
     console.log(stdout);
     console.error(stderr);
     return error;
+  }
+
+  private static handleSetupOptions(crash: Crash, crashFolder: string) {
+    if (!crash.setup) {
+      return;
+    }
+    let stdout = '';
+    let stderr = '';
+    if (crash.setup.copy) {
+      try {
+        stdout = execSync(`cp ${crashFolder}/${crash.setup.copy.from} ${crashFolder}/${crash.setup.copy.to}`).toString();
+      } catch (e) {
+        stdout = e.stdout;
+        stderr = e.stderr;
+      }
+      console.log(stdout);
+      console.error(stderr);
+    }
   }
 
   /**

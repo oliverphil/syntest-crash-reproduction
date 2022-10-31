@@ -3,5 +3,6 @@
   "info": "SSL certificate issue with .ca-bundle file",
   "url": "https://github.com/expressjs/express/issues/4388",
   "version": "4.17.1",
-  "dependencies": {}
+  "dependencies": {},
+  "requireCrashDependency": true
 }

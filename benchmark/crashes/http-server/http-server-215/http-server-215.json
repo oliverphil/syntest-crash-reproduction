@@ -4,5 +4,6 @@
   "url": "https://github.com/http-party/http-server/issues/215",
   "nodeVersion": "4.2.2",
   "version": "0.9.0",
-  "dependencies": {}
+  "dependencies": {},
+  "requireCrashDependency": true
 }

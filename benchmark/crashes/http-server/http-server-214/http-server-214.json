@@ -3,5 +3,6 @@
   "info": "https certificate error when proxying to server with self-signed certificate",
   "url": "https://github.com/http-party/http-server/issues/214",
   "version": "0.9.0",
-  "dependencies": {}
+  "dependencies": {},
+  "requireCrashDependency": true
 }

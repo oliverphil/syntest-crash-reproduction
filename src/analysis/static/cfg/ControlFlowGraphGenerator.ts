@@ -809,7 +809,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const falseNode: Node = this.createPlaceholderNode(
-        [ast.loc.end.line],
+        [ast.loc?.end.line],
         []
       );
 
@@ -902,7 +902,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       };
     } else {
       // Add empty placeholder node
-      const falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
+      const falseNode = this.createPlaceholderNode([ast.loc?.end.line], []);
 
       this.cfg.edges.push({
         from: node.id,
@@ -982,7 +982,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
         );
       } else {
         emptyChildNode = this.createPlaceholderNode(
-            [ast.alternate.loc.start.line],
+            [ast.alternate.loc?.start.line],
             []
         );
       }
@@ -1042,7 +1042,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     }
 
     // Add empty placeholder node for the false flow
-    const falseNode = this.createPlaceholderNode( [ast.loc.end.line], []);
+    const falseNode = this.createPlaceholderNode( [ast.loc?.end.line], []);
     this.cfg.edges.push({
       from: node.id,
       to: falseNode.id,
@@ -1097,7 +1097,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     }
 
     // Add empty placeholder node for the false flow
-    const falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
+    const falseNode = this.createPlaceholderNode([ast.loc?.end.line], []);
     this.cfg.edges.push({
       from: node.id,
       to: falseNode.id,
@@ -1188,7 +1188,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
     // Add empty placeholder node for the false flow
     const falseNode: Node = this.createPlaceholderNode(
-      [ast.loc.end.line],
+      [ast.loc?.end.line],
       []
     );
     this.cfg.edges.push({
@@ -1220,7 +1220,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     this.connectParents(parents, [node]);
 
     // Add empty placeholder node for the false flow
-    const falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
+    const falseNode = this.createPlaceholderNode([ast.loc?.end.line], []);
 
     let nodes = [node]
     for (const switchCase of ast.cases) {
@@ -1340,10 +1340,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     }
 
     let falseNode;
-    if (!ast || !ast.loc || !ast.loc.end) {
+    if (!ast || !ast.loc || !ast.loc?.end) {
       falseNode = this.createPlaceholderNode([], []);
     } else {
-      falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
+      falseNode = this.createPlaceholderNode([ast.loc?.end.line], []);
     }
     // Add empty placeholder node for the false flow
     this.cfg.edges.push({

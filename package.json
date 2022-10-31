@@ -45,7 +45,7 @@
     "prepare": "npm run build",
     "run": "node --inspect ./dist/bin.js",
     "run-ts": "npm run build:framework; node -r ts-node/register --max-old-space-size=8000 ./src/bin.ts",
-    "run-ts:crash": "npm run build:framework; ts-node ./src/crash-reproduction/index.ts",
+    "run-ts:crash": "npm run build:framework; NVM_DIR=/local/scratch/.nvm ts-node ./src/crash-reproduction/index.ts",
     "test": "mocha",
     "test:coverage": "nyc mocha",
     "test:watch": "mocha --watch"

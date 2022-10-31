@@ -5,5 +5,6 @@
   "version": "4.17.1",
   "dependencies": {
     "http2": "3.2.0"
-  }
+  },
+  "requireCrashDependency": true
 }

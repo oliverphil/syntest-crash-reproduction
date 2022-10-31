@@ -1,14 +1,6 @@
 import * as fs from 'fs';
 import {Crash, Project, PackageFormat} from '../types/importTypes';
-import {
-  concatAll, filter,
-  from, merge,
-  Observable,
-  of, skipWhile,
-  switchMap, tap,
-} from 'rxjs';
 import StackTraceProcessor from './preprocessing/stackTraceProcessor';
-import {log} from "util";
 
 /**
  * Generate environments for each crash to be reproduced
@@ -88,16 +80,17 @@ class EnvironmentGenerator {
         crashId: crashName,
         seeded: value[4]
       };
-      if (crash.version && crash.project !== 'node') {
+      if (crash.requireCrashDependency) {
         crash.dependencies[crash.project] = crash.version;
       }
       return crash;
     });
 
-    return crashes.filter(crash => !crash.crashId.includes('eslint') && crash.crashId !== 'webpack-13440'
-    && crash.crashId !== 'express-2761'
-    && crash.crashId !== 'http-server-209'
-    && crash.crashId !== 'standard-1450');
+    return crashes;
+    // return crashes.filter(crash => !crash.crashId.includes('eslint') && crash.crashId !== 'webpack-13440'
+    // && crash.crashId !== 'express-2761'
+    // && crash.crashId !== 'http-server-209'
+    // && crash.crashId !== 'standard-1450');
   }
 
   /**

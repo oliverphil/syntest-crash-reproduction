@@ -25,7 +25,8 @@ export interface Crash {
             from: string;
             to: string;
         }
-    }
+    },
+    requireCrashDependency?: boolean
 }
 
 export interface PackageFormat {

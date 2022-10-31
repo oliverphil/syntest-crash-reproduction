@@ -5,5 +5,6 @@
   "version": "7.32.0",
   "nodeVersion": "16.10.0",
   "dependencies": {
-  }
+  },
+  "requireCrashDependency": true
 }

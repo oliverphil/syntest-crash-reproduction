@@ -4,5 +4,6 @@
   "url": "https://github.com/eslint/eslint/issues/15579",
   "version": "8.8.0",
   "nodeVersion": "17.4.0",
-  "dependencies": {}
+  "dependencies": {},
+  "requireCrashDependency": true
 }

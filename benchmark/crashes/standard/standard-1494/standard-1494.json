@@ -4,5 +4,6 @@
   "url": "https://github.com/standard/standard/issues/1494",
   "version": "14.3.2",
   "nodeVersion": "8.9.4",
-  "dependencies": {}
+  "dependencies": {},
+  "requireCrashDependency": true
 }

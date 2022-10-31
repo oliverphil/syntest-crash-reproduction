@@ -1,1 +1,18 @@
-{"name":"webpack-13419","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"webpack":"5.35.1"},"engines":{"node":"12.15.0"}}
+{
+  "name": "webpack-13419",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engineStrict": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "crash": "node index.js"
+  },
+  "author": "Philip Oliver",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "5.35.1"
+  },
+  "engines": {
+    "node": "12.15.0"
+  }
+}
