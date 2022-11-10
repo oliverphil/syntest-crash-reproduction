@@ -56,7 +56,8 @@ export class TargetVisitor extends Visitor {
       || path.parent.type === 'ArrayExpression'
       || path.parent.type === 'SequenceExpression'
       || path.parent.type === 'ArrowFunctionExpression'
-      || path.parent.type === 'UnaryExpression') {
+      || path.parent.type === 'UnaryExpression'
+      || path.parent.type === 'ExpressionStatement') {
       // anonymous argument function cannot call is not target
       return
     }

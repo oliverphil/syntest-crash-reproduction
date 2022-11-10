@@ -24,6 +24,10 @@ export interface Crash {
         copy?: {
             from: string;
             to: string;
+        },
+        "download"?: {
+            "url": string;
+            "unpack": "tar.gz";
         }
     },
     requireCrashDependency?: boolean

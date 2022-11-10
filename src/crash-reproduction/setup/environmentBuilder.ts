@@ -59,6 +59,9 @@ class EnvironmentBuilder {
   }
 
   private static handleSetupOptions(crash: Crash, crashFolder: string) {
+    const assetDir = './benchmark/crashes';
+    const projectName = crash.project;
+    const crashName = crash.crashId;
     if (!crash.setup) {
       return;
     }
@@ -74,6 +77,15 @@ class EnvironmentBuilder {
       console.log(stdout);
       console.error(stderr);
     }
+    const tarName = `${crash.project}-${crash.version}.tar.gz`;
+    const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
+    const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
+    // if (crash.setup.download) {
+    //   execSync(`wget -O ${tarFile} ` + crash.setup.download.url);
+    //   if (crash.setup.download.unpack === 'tar.gz') {
+    //     execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+    //   }
+    // }
   }
 
   /**
@@ -83,10 +95,10 @@ class EnvironmentBuilder {
    * @private
    */
   private static parseFunctions(stdout: string): FunctionResults {
-    const regex = new RegExp('\\*+Start Function List for ([$A-Za-z_][0-9a-zA-Z_$/.\-]*)\\*+\\n(' +
-      '(?:[$A-Za-z_][0-9a-zA-Z_$\-:]*|\\n)*)\\n(?:' +
-      '(?:\\*+Failed Reading Function List for [$A-Za-z_][0-9a-zA-Z_$/.\-]*\\*+)|' +
-      '(?:\\*+End Function List for [$A-Za-z_][0-9a-zA-Z_$/.\-]*\\*+))', 'gm');
+    const regex = new RegExp('\\*+Start Function List for ([$A-Za-z_][0-9a-zA-Z_$/.-]*)\\*+\\n(' +
+      '(?:[$A-Za-z_][0-9a-zA-Z_$-:]*|\\n)*)\\n(?:' +
+      '(?:\\*+Failed Reading Function List for [$A-Za-z_][0-9a-zA-Z_$/.-]*\\*+)|' +
+      '(?:\\*+End Function List for [$A-Za-z_][0-9a-zA-Z_$/.-]*\\*+))', 'gm');
     const result = stdout.matchAll(regex);
     const functionResults: FunctionResults = {};
     for (const match of result) {

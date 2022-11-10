@@ -72,10 +72,12 @@ import EnvironmentBuilder from "./crash-reproduction/setup/environmentBuilder";
 import { ActionType } from "./analysis/static/parsing/ActionType";
 import { existsSync } from "fs";
 import * as fs from "fs";
+import { defaultBabelOptions } from "./configs/DefaultBabelConfig";
 
 const originalrequire = require("original-require");
 const Mocha = require('mocha')
 const { outputFileSync } = require("fs-extra");
+const globby = require("globby");
 
 
 export class Launcher {
@@ -187,9 +189,45 @@ export class Launcher {
               Properties.include.push(crashFile);
             }
             // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
-            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/punycode/punycode.es6.js`);
+            // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
           });
         });
+
+    const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
+    const excluded = [];
+    options.exclude.forEach((exclude) => {
+      let _path;
+      let target;
+      if (exclude.includes(":")) {
+        _path = exclude.split(":")[0];
+        target = exclude.split(":")[1];
+      } else {
+        _path = exclude;
+        target = "*";
+      }
+
+      excluded.push(...globby.sync(_path));
+    });
+    const included = [];
+    Properties.include.forEach((include) => {
+      let _path;
+      let target;
+      if (include.includes(":")) {
+        _path = include.split(":")[0];
+        target = include.split(":")[1];
+      } else {
+        _path = include;
+        target = "*";
+      }
+
+      included.push(...globby.sync(_path));
+    });
+    const exclude = excluded.map(p => path.resolve(p));
+    const include = included.map(p => path.resolve(p));
+    Properties.include = include;
+    Properties.exclude = exclude;
+    // console.log(include, exclude);
+
     return await this.setup();
   }
 

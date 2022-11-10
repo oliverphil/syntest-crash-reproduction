@@ -5,5 +5,11 @@
   "version": "1.41.0",
   "dependencies": {
     "electron": "4.2.7"
+  },
+  "setup": {
+    "download": {
+      "url": "https://github.com/atom/atom/archive/refs/tags/v1.41.0.tar.gz",
+      "unpack": "tar.gz"
+    }
   }
 }

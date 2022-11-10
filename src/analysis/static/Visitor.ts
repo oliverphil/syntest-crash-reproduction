@@ -118,21 +118,22 @@ export abstract class Visitor {
       // }
 
       // TODO these might be wrong
-      if (path.parent.type === 'ClassMethod'
-        || path.parent.type === 'ObjectMethod'
-        || path.parent.type === 'AssignmentExpression'
-        || path.parent.type === 'FunctionExpression'
-        || path.parent.type === 'ObjectProperty'
-        || path.parent.type === 'MetaProperty') {
-        const uid = path.scope.getBlockParent()?.uid
+      // if (path.parent.type === 'ClassMethod'
+      //   || path.parent.type === 'ObjectMethod'
+      //   || path.parent.type === 'AssignmentExpression'
+      //   || path.parent.type === 'FunctionExpression'
+      //   || path.parent.type === 'ObjectProperty'
+      //   || path.parent.type === 'MetaProperty') {
+      //
+      // }
+      const uid = path.scope.getBlockParent()?.uid
 
-        return {
-          filePath: this.filePath,
-          uid: `${uid - this.scopeIdOffset}`
-        }
+      return {
+        filePath: this.filePath,
+        uid: `${uid - this.scopeIdOffset}`
       }
 
-      throw new Error(`Cannot find scope of Identifier ${path.node.name}\n${this.filePath}\n${path.getSource()}`)
+      // throw new Error(`Cannot find scope of Identifier ${path.node.name}\n${this.filePath}\n${path.getSource()}`)
     }
 
     // TODO super should be handled like this actually (kind off)
@@ -223,7 +224,9 @@ export abstract class Visitor {
         }
     }
 
-    if (path.node.type === "Identifier") {
+    if (path.node.type === "Identifier"
+        || path.node.type === "OptionalMemberExpression"
+        || path.node.type === "OptionalCallExpression") {
       if (path.node.name === 'undefined') {
         return {
           scope: scope,
@@ -291,6 +294,7 @@ export abstract class Visitor {
         value: `%-${this.filePath}-${path.node.start}-${path.node.end}`
       }
     }
+
     throw new Error(`Cannot get element: "${path.node.name}" -> ${path.node.type}\n${this.filePath}`)
   }
 

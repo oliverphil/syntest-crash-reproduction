@@ -129,3 +129,8 @@ temp/
 syntest/
 profiling/
 experiments/results/*
+
+*.tar.gz
+node-v*/
+
+benchmark/crashes/atom/*/atom-*/

@@ -14,5 +14,11 @@
     "linter": "3.3.0",
     "linter-jshint": "3.1.19",
     "linter-ui-default": "3.3.0"
+  },
+  "setup": {
+    "download": {
+      "url": "https://github.com/atom/atom/archive/refs/tags/v1.55.0.tar.gz",
+      "unpack": "tar.gz"
+    }
   }
 }

@@ -76,7 +76,7 @@ class StackTraceProcessor {
         line.includes('<embedded>');
       if (result) {
         let file = result[2].toString().replace(/\\/g, '/');
-        file = file.includes('node_modules') ? file.split('node_modules/')[1] : file;
+        file = file.includes('node_modules') ? 'node_modules/' + file.split('node_modules/')[1] : file;
         frames.push({
           method: result[1].toString(),
           lineNumber: parseInt(result[3].toString()),

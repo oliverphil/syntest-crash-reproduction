@@ -5,9 +5,9 @@ export const defaultBabelOptions: TransformOptions = {
   presets: [
     "@babel/preset-typescript",
     "@babel/preset-env",
-    "@babel/preset-react"
+    "@babel/preset-react",
+    // "babel-preset-atomic",
   ],
-  babelrc: false,
   ast: true,
   sourceMaps: true,
   compact: false,
@@ -19,20 +19,22 @@ export const defaultBabelOptions: TransformOptions = {
       "asyncGenerators",
       "classProperties",
       "dynamicImport",
-      "objectRestSpread",
-      // "@babel/plugin-transform-typescript",
-      // "@babel/plugin-transform-react-jsx",
-      // "@babel/plugin-transform-strict-mode",
-      // "@babel/plugin-proposal-numeric-separator",
-      // "@babel/plugin-transform-literals"
+      "objectRestSpread"
     ],
     strictMode: false,
   },
   plugins: [
     "@babel/plugin-transform-typescript",
-    // "@babel/plugin-transform-react-jsx",
-    // "@babel/plugin-transform-strict-mode",
-    // "@babel/plugin-proposal-numeric-separator",
-    //   "@babel/plugin-transform-literals"
+    "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-syntax-jsx",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-react-inline-elements",
+    "@babel/plugin-transform-runtime"
   ],
+  exclude: [
+    // "gatsby-browser.js",
+    // "gatsby-ssr.js",
+    // "Accordion.js",
+    "./benchmark/crashes/**/npm/docs/**/*.js"
+  ]
 };

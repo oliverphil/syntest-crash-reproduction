@@ -30,14 +30,14 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     if (process.listenerCount('uncaughtException') < 1) {
       process.on("uncaughtException", reason => {
         console.log(reason);
-        this.mocha.dispose();
+        // this.mocha.dispose();
         // throw reason;
       });
     }
     if (process.listenerCount('unhandledRejection') < 1) {
       process.on("unhandledRejection", reason => {
         console.log(reason);
-        this.mocha.dispose();
+        // this.mocha.dispose();
         // throw reason;
       });
     }
@@ -82,21 +82,32 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       allowUncaught: true,
       // isWorker: true,
       // parallel: true,
-      require: [
-          '@babel/register',
-        "@babel/preset-env"
-      ],
-      timeout: 60000
+      // require: [
+      //   '@babel/register',
+      //   "@babel/preset-env",
+      //   "@babel/preset-react",
+      //   "@babel/plugin-transform-react-jsx",
+      //   "@babel/plugin-proposal-object-rest-spread"
+      // ],
+      timeout: Properties.search_time
     }
 
-    this.mocha = new Mocha(argv)// require('ts-node/register')
+    this.mocha = new Mocha(argv)// require('ts-node/register'
 
-    require("regenerator-runtime/runtime");
-    require('@babel/register')({
-      presets: [
-        require.resolve("@babel/preset-env")
-      ]
-    })
+    // require("regenerator-runtime/runtime");
+    // require('@babel/register')({
+    //   presets: [
+    //     require.resolve("@babel/preset-env"),
+    //     require.resolve("@babel/preset-react"),
+    //     require.resolve("@babel/plugin-transform-react-jsx"),
+    //     require.resolve("@babel/plugin-proposal-object-rest-spread"),
+    //     require.resolve("@babel/plugin-transform-typescript"),
+    //     require.resolve("@babel/plugin-syntax-jsx")
+    //   ],
+    //   ignore: [
+    //     "**/deprecation-cop-view.js"
+    //   ]
+    // });
 
     for (const _path of paths) {
       delete originalrequire.cache[_path];
@@ -111,14 +122,18 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         try {
           runner = this.mocha.run((failures) => failures > 0 ? reject(failures) : resolve(failures))
         } catch (e) {
+          console.log(e);
           reject(e);
         }
       })
     } catch (e) {
       console.log('caught', e);
     }
-
-    await this.mocha.dispose()
+    try {
+      await runner.dispose();
+    } catch(e) {
+      await runner.abort();
+    }
     return runner
   }
 

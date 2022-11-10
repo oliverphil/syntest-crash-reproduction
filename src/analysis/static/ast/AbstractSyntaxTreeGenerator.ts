@@ -16,13 +16,38 @@
  * limitations under the License.
  */
 import { defaultBabelOptions } from "../../../configs/DefaultBabelConfig";
+import * as path from "path";
+import * as fs from "fs";
+import { Properties } from "@syntest/framework";
 const { transformSync } = require("@babel/core");
+const globby = require("globby");
 
 export class AbstractSyntaxTreeGenerator {
   generate(source, target) {
     const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
 
     options.filename = target || String(new Date().getTime()) + ".js";
+
+    // console.log(Properties.include);
+    // console.log(Properties.exclude);
+
+    if (Properties.exclude.includes(options.filename) || !Properties.include.includes(options.filename)) {
+      console.log(options.filename);
+      return;
+    }
+    // for (const ex of Properties.exclude) {
+    //   if (options.filename.includes(ex)) {
+    //     return;
+    //   }
+    // }
+    // for (const inc of Properties.include) {
+    //   if (!options.filename.includes(inc)) {
+    //     return;
+    //   }
+    // }
+    if (source.includes('etch.dom')) {
+      return;
+    }
 
     const codeMap = transformSync(source, options);
 

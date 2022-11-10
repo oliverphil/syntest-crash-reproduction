@@ -20,5 +20,11 @@
     "react": "0.18.0",
     "react-native-components": "0.1.1",
     "tool-bar": "1.4.2"
+  },
+  "setup": {
+    "download": {
+      "url": "https://github.com/atom/atom/archive/refs/tags/v1.54.0.tar.gz",
+      "unpack": "tar.gz"
+    }
   }
 }
