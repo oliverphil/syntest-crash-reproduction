@@ -20,7 +20,7 @@ export class SilentMochaReporter {
 
     runner
       .once(EVENT_RUN_BEGIN, () => {
-        // console.log('start');
+        console.log('start');
       })
       .on(EVENT_SUITE_BEGIN, () => {
         this.increaseIndent();

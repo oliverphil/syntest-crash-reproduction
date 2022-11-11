@@ -42,9 +42,9 @@ export class Instrumenter {
     ]);
 
     if (Properties.exclude.includes(options.filename) || !Properties.include.includes(options.filename)) {
-      console.log(options.filename);
       return;
     }
+    // console.log(options.filename);
     // for (const ex of Properties.exclude) {
     //   if (options.filename.includes(ex)) {
     //     return;

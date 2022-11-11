@@ -35,6 +35,6 @@ export const defaultBabelOptions: TransformOptions = {
     // "gatsby-browser.js",
     // "gatsby-ssr.js",
     // "Accordion.js",
-    "./benchmark/crashes/**/npm/docs/**/*.js"
+    // "./benchmark/crashes/**/npm/docs/**/*.js"
   ]
 };

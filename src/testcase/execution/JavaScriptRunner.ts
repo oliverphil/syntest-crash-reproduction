@@ -80,15 +80,15 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       spec: paths,
       reporter: SilentMochaReporter,
       allowUncaught: true,
-      // isWorker: true,
-      // parallel: true,
-      // require: [
-      //   '@babel/register',
-      //   "@babel/preset-env",
-      //   "@babel/preset-react",
-      //   "@babel/plugin-transform-react-jsx",
-      //   "@babel/plugin-proposal-object-rest-spread"
-      // ],
+      isWorker: true,
+      parallel: true,
+      require: [
+        '@babel/register',
+        "@babel/preset-env",
+        "@babel/preset-react",
+        // "@babel/plugin-transform-react-jsx",
+        // "@babel/plugin-proposal-object-rest-spread"
+      ],
       timeout: Properties.search_time
     }
 
@@ -103,9 +103,6 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     //     require.resolve("@babel/plugin-proposal-object-rest-spread"),
     //     require.resolve("@babel/plugin-transform-typescript"),
     //     require.resolve("@babel/plugin-syntax-jsx")
-    //   ],
-    //   ignore: [
-    //     "**/deprecation-cop-view.js"
     //   ]
     // });
 
@@ -120,12 +117,15 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       // Finally, run mocha.
       await new Promise((resolve, reject) => {
         try {
+          console.log('mocha run');
           runner = this.mocha.run((failures) => failures > 0 ? reject(failures) : resolve(failures))
+          resolve(runner);
         } catch (e) {
           console.log(e);
           reject(e);
         }
       })
+      console.log('mocha done');
     } catch (e) {
       console.log('caught', e);
     }
@@ -134,6 +134,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     } catch(e) {
       await runner.abort();
     }
+    console.log('return runner');
     return runner
   }
 
@@ -146,14 +147,14 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     await this.writeTestCase(testPath, testCase, subject.name);
 
     let runner;
-    // try {
+    try {
       runner = await this.run([testPath])
-    // } catch (e) {
-      // console.log(e);
-    // }
+    } catch (e) {
+      console.log(e);
+    }
     const stats = runner.stats
 
-    const test = runner.suite.suites[0].tests[0];
+    const test = runner.suite.suites[0]?.tests[0];
 
     // If one of the executions failed, log it
     if (stats.failures > 0) {
@@ -167,7 +168,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     const metaData = _.cloneDeep(global.__meta__)
 
     const traces: Datapoint[] = [];
-    for (const key of Object.keys(instrumentationData)) {
+    for (const key of Object.keys(instrumentationData || {})) {
       for (const functionKey of Object.keys(instrumentationData[key].fnMap)) {
           const fn = instrumentationData[key].fnMap[functionKey]
           const hits = instrumentationData[key].f[functionKey]
@@ -291,7 +292,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   }
 
   resetInstrumentationData () {
-    for (const key of Object.keys(global.__coverage__)) {
+    for (const key of Object.keys(global.__coverage__ || {})) {
       for (const statementKey of Object.keys(global.__coverage__[key].s)) {
         global.__coverage__[key].s[statementKey] = 0
       }

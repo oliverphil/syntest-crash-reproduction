@@ -42,7 +42,7 @@ class EnvironmentBuilder {
     let error = false;
     try {
       if (crash.nodeVersion) {
-        stdout = execSync(`source /local/scratch/.nvm/nvm.sh; nvm install ${crash.nodeVersion}; npm --prefix ${crashFolder} i`).toString();
+        stdout = execSync(`source $HOME/.nvm/nvm.sh; nvm install ${crash.nodeVersion}; npm --prefix ${crashFolder} i`).toString();
       } else {
         stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
       }

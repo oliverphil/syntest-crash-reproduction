@@ -5,5 +5,9 @@
 
   ],
   "exclude": [],
-  "references": [{ "path": "src/" }]
+  "references": [{ "path": "src/" }],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6"
+  }
 }

@@ -32,7 +32,7 @@ export class AbstractSyntaxTreeGenerator {
     // console.log(Properties.exclude);
 
     if (Properties.exclude.includes(options.filename) || !Properties.include.includes(options.filename)) {
-      console.log(options.filename);
+      // console.log(options.filename);
       return;
     }
     // for (const ex of Properties.exclude) {

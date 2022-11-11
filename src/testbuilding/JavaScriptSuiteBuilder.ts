@@ -115,7 +115,7 @@ export class JavaScriptSuiteBuilder {
       let totalBranches = 0
       let totalStatements = 0
       let totalFunctions = 0
-      for (const file of Object.keys(instrumentationData)) {
+      for (const file of Object.keys(instrumentationData || {})) {
         if (!targetPool.targets.find((t) => t.canonicalPath === file)) {
           continue
         }
