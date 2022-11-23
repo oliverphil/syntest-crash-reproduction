@@ -13,7 +13,7 @@ import { SilentMochaReporter } from "./SilentMochaReporter";
 import ExecutionInformationIntegrator from "./ExecutionInformationIntegrator";
 
 import { Runner } from "mocha";
-import { unlinkSync, writeFileSync } from "fs";
+import { unlinkSync, writeFileSync, rmdirSync } from "fs";
 import { JavaScriptDecoder } from "../../testbuilding/JavaScriptDecoder";
 const Mocha = require('mocha')
 const originalrequire = require("original-require");
@@ -80,31 +80,31 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       spec: paths,
       reporter: SilentMochaReporter,
       allowUncaught: true,
-      isWorker: true,
-      parallel: true,
-      require: [
-        '@babel/register',
-        "@babel/preset-env",
-        "@babel/preset-react",
-        // "@babel/plugin-transform-react-jsx",
-        // "@babel/plugin-proposal-object-rest-spread"
-      ],
+      // isWorker: true,
+      // parallel: true,
+      // require: [
+      //   '@babel/register',
+      //   "@babel/preset-env",
+      //   "@babel/preset-react",
+      //   // "@babel/plugin-transform-react-jsx",
+      //   // "@babel/plugin-proposal-object-rest-spread"
+      // ],
       timeout: Properties.search_time
     }
 
-    this.mocha = new Mocha(argv)// require('ts-node/register'
-
-    // require("regenerator-runtime/runtime");
-    // require('@babel/register')({
-    //   presets: [
-    //     require.resolve("@babel/preset-env"),
+    this.mocha = new Mocha(argv)
+    // require('ts-node/register');
+    require("regenerator-runtime/runtime");
+    require('@babel/register')({
+      presets: [
+        require.resolve("@babel/preset-env"),
     //     require.resolve("@babel/preset-react"),
-    //     require.resolve("@babel/plugin-transform-react-jsx"),
-    //     require.resolve("@babel/plugin-proposal-object-rest-spread"),
-    //     require.resolve("@babel/plugin-transform-typescript"),
-    //     require.resolve("@babel/plugin-syntax-jsx")
-    //   ]
-    // });
+    //     // require.resolve("@babel/plugin-transform-react-jsx"),
+    //     // require.resolve("@babel/plugin-proposal-object-rest-spread"),
+    //     // require.resolve("@babel/plugin-transform-typescript"),
+    //     // require.resolve("@babel/plugin-syntax-jsx")
+      ]
+    });
 
     for (const _path of paths) {
       delete originalrequire.cache[_path];
@@ -117,7 +117,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       // Finally, run mocha.
       await new Promise((resolve, reject) => {
         try {
-          console.log('mocha run');
+          // console.log('mocha run');
           runner = this.mocha.run((failures) => failures > 0 ? reject(failures) : resolve(failures))
           resolve(runner);
         } catch (e) {
@@ -125,16 +125,21 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
           reject(e);
         }
       })
-      console.log('mocha done');
+      // console.log('mocha done');
     } catch (e) {
-      console.log('caught', e);
+      // console.log('caught', e);
     }
     try {
-      await runner.dispose();
+      await runner?.dispose();
     } catch(e) {
-      await runner.abort();
+      await runner?.abort();
     }
-    console.log('return runner');
+    try {
+      rmdirSync(path.join(process.cwd(), '/node_modules/.cache'), {recursive: true});
+    } catch (e) {
+      // console.log(e); 
+    }
+    // console.log('return runner');
     return runner
   }
 
@@ -263,7 +268,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         status = JavaScriptExecutionStatus.TIMED_OUT;
       } else {
         status = JavaScriptExecutionStatus.FAILED;
-        exception = test.err.message;
+        exception = test.err?.message;
       }
 
       const duration = test.duration;
@@ -281,6 +286,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         stats.duration
       );
     }
+    // console.log(executionResult.hasPassed(), executionResult.hasTimedOut(), executionResult.getExceptions());
 
     // Reset instrumentation data (no hits)
     this.resetInstrumentationData();

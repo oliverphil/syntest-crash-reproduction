@@ -327,6 +327,7 @@ export class JavaScriptTargetPool extends TargetPool {
 
     const destinationPath = path.resolve(Properties.temp_instrumented_directory, path.basename(Properties.target_root_directory))
 
+    console.log(absoluteRootPath, destinationPath);
     // copy everything
     await copySync(absoluteRootPath, destinationPath)
 

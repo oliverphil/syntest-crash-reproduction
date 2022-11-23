@@ -1,18 +1,1 @@
-{
-  "name": "webpack-13330",
-  "version": "1.0.0",
-  "main": "index.js",
-  "engineStrict": false,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "crash": "node index.js"
-  },
-  "author": "Philip Oliver",
-  "license": "ISC",
-  "dependencies": {
-    "webpack": "5.36.2"
-  },
-  "engines": {
-    "node": "14.15.1"
-  }
-}
+{"name":"webpack-13330","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"webpack":"5.36.2"},"engines":{"node":"14.15.1"}}

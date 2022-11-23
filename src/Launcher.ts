@@ -42,6 +42,7 @@ import {
   StatisticsCollector,
   StatisticsSearchListener,
   SummaryWriter,
+  TerminationManager,
   TotalTimeBudget,
 } from "@syntest/framework";
 
@@ -79,6 +80,8 @@ const Mocha = require('mocha')
 const { outputFileSync } = require("fs-extra");
 const globby = require("globby");
 
+const terminationManager = configureTermination();
+
 
 export class Launcher {
   private readonly _program = "syntest-javascript";
@@ -91,8 +94,10 @@ export class Launcher {
       await guessCWD(null);
       await this.setupShared();
       const targetPool = await (Properties.crash_reproduction ? this.setupCrashReproduction() : this.setup());
-      const [archive, dependencies, exports] = await this.search(targetPool);
-      await this.finalize(targetPool, archive, dependencies, exports);
+      if (!Array.isArray(targetPool)) {
+        const [archive, dependencies, exports] = await this.search(targetPool);
+        await this.finalize(targetPool, archive, dependencies, exports);
+      }      
 
       await this.exit();
     } catch (e) {
@@ -159,7 +164,7 @@ export class Launcher {
     } // Exit if --help
   }
 
-  private async setupCrashReproduction(): Promise<JavaScriptTargetPool> {
+  private async setupCrashReproduction(): Promise<JavaScriptTargetPool[]> {
     // setup crashes
     // get all crash files
     // generate packages
@@ -167,7 +172,7 @@ export class Launcher {
     // insert files from stack trace into test generation subjects
 
     const environmentGenerator = new EnvironmentGenerator();
-    const crashes: Crash[] = environmentGenerator.loadAssets();
+    let crashes: Crash[] = environmentGenerator.loadAssets();
     const crashesToRemove: Crash[] = [];
     crashes.forEach(crash => {
       environmentGenerator.generatePackage(crash);
@@ -175,9 +180,20 @@ export class Launcher {
         crashesToRemove.push(crash);
       }
     });
-    Properties.include = [];
-    Properties.exclude = [];
-    crashes.filter(crash => !crashesToRemove.includes(crash))
+
+    crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
+
+    const crashSplit = {};
+    crashes.forEach(crash => {
+      crashSplit[crash.project] ? crashSplit[crash.project].push(crash) : crashSplit[crash.project] = [crash];
+    });
+
+    const targetPools: JavaScriptTargetPool[] = [];
+
+    for (const project of Object.keys(crashSplit)) {
+      Properties.include = [];
+      Properties.exclude = [];
+      crashes.filter(crash => project === crash.project)
         .forEach(crash => {
           crash.stackTrace.trace.forEach(frame => {
             const crashFile = crash;
@@ -191,44 +207,52 @@ export class Launcher {
             // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
             // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
           });
-        });
+      });
 
-    const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
-    const excluded = [];
-    options.exclude.forEach((exclude) => {
-      let _path;
-      let target;
-      if (exclude.includes(":")) {
-        _path = exclude.split(":")[0];
-        target = exclude.split(":")[1];
-      } else {
-        _path = exclude;
-        target = "*";
-      }
+      const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
+      const excluded = [];
+      options.exclude.forEach((exclude) => {
+        let _path;
+        let target;
+        if (exclude.includes(":")) {
+          _path = exclude.split(":")[0];
+          target = exclude.split(":")[1];
+        } else {
+          _path = exclude;
+          target = "*";
+        }
 
-      excluded.push(...globby.sync(_path));
-    });
-    const included = [];
-    Properties.include.forEach((include) => {
-      let _path;
-      let target;
-      if (include.includes(":")) {
-        _path = include.split(":")[0];
-        target = include.split(":")[1];
-      } else {
-        _path = include;
-        target = "*";
-      }
+        excluded.push(...globby.sync(_path));
+      });
+      const included = [];
+      Properties.include.forEach((include) => {
+        let _path;
+        let target;
+        if (include.includes(":")) {
+          _path = include.split(":")[0];
+          target = include.split(":")[1];
+        } else {
+          _path = include;
+          target = "*";
+        }
+        const paths = globby.sync(_path);
+        if (paths.length > 0) {
+          included.push(...paths);
+        }
+      });
+      const exclude = excluded.map(p => path.resolve(p));
+      const include = included.map(p => path.resolve(p));
+      Properties.include = include;
+      Properties.exclude = exclude;
+      // console.log(include, exclude);
 
-      included.push(...globby.sync(_path));
-    });
-    const exclude = excluded.map(p => path.resolve(p));
-    const include = included.map(p => path.resolve(p));
-    Properties.include = include;
-    Properties.exclude = exclude;
-    // console.log(include, exclude);
-
-    return await this.setup();
+      const pool = await this.setup();
+      const [archive, dependencies, exports] = await this.search(pool);
+      // TODO: create alternative finalize to not delete tests this way
+      await this.finalize(pool, archive, dependencies, exports);
+      await this.setupShared();
+    }
+    return targetPools;
   }
 
   private async setup(): Promise<JavaScriptTargetPool> {
@@ -276,10 +300,11 @@ export class Launcher {
     this.timings.push({ time: Date.now(), what: 'end load targets' })
 
     if (!targetPool.targets.length) {
-      getUserInterface().error(
-        `No targets where selected! Try changing the 'include' parameter`
-      );
-      await this.exit();
+      console.log('No targets were selected!');
+      // getUserInterface().error(
+      //   `No targets where selected! Try changing the 'include' parameter`
+      // );
+      // await this.exit();
     }
 
     let names: string[] = [];
@@ -464,8 +489,8 @@ export class Launcher {
     budgetManager.addBudget(totalTimeBudget);
 
 
-    // Termination
-    const terminationManager = configureTermination();
+    // // Termination
+    // const terminationManager = configureTermination();
 
     // Collector
     const collector = new StatisticsCollector(totalTimeBudget);
@@ -474,6 +499,8 @@ export class Launcher {
     // Statistics listener
     const statisticsSearchListener = new StatisticsSearchListener(collector);
     algorithm.addListener(statisticsSearchListener);
+
+    console.log(targetPath);
 
     // This searches for a covering population
     const archive = await algorithm.search(

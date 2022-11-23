@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import {Crash, Project, PackageFormat} from '../types/importTypes';
 import StackTraceProcessor from './preprocessing/stackTraceProcessor';
 import {execSync} from "child_process";
+import { createAssignment } from 'typescript';
 
 /**
  * Generate environments for each crash to be reproduced
@@ -95,7 +96,7 @@ class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes;
+    return crashes //.filter(crash => crash.project !== 'atom' && crash.project !== 'eslint');
   }
 
   /**

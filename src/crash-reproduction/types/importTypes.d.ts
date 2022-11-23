@@ -20,17 +20,17 @@ export interface Crash {
     package?: PackageFormat;
     dockerfile?: string;
     seeded?: boolean;
+    requireCrashDependency?: boolean;
     setup?: {
         copy?: {
             from: string;
             to: string;
         },
-        "download"?: {
-            "url": string;
-            "unpack": "tar.gz";
+        download?: {
+            url: string;
+            unpack: "tar.gz";
         }
-    },
-    requireCrashDependency?: boolean
+    };
 }
 
 export interface PackageFormat {

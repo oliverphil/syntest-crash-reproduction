@@ -9,10 +9,10 @@
     "@babel/plugin-syntax-jsx",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-transform-typescript",
-    "asyncGenerators",
-    "classProperties",
-    "dynamicImport",
-    "objectRestSpread"
+    // "asyncGenerators",
+    // "classProperties",
+    // "dynamicImport",
+    // "objectRestSpread"
   ],
   "ignore": [
     "deprecation-cop-view.js"
