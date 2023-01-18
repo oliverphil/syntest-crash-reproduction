@@ -18,7 +18,7 @@
 
 import { ActionStatement } from "../action/ActionStatement";
 import { Statement } from "../Statement";
-import { Encoding, EncodingSampler } from "@syntest/framework";
+import { Encoding, EncodingSampler } from "@syntest/core";
 import { IdentifierDescription } from "../../../analysis/static/parsing/IdentifierDescription";
 
 /**
@@ -57,28 +57,27 @@ export abstract class RootStatement extends ActionStatement {
     return this._children;
   }
 
-
   setChild(index: number, newChild: Statement) {
     if (!newChild) {
-      throw new Error("Invalid new child!")
+      throw new Error("Invalid new child!");
     }
 
     if (index >= this.args.length + this.children.length) {
-      throw new Error("Invalid child location!")
+      throw new Error("Invalid child location!");
     }
 
     if (index < this.args.length) {
-      this.args[index] = newChild
+      this.args[index] = newChild;
     } else {
-      index -= this.args.length
-      this.children[index] = newChild
+      index -= this.args.length;
+      this.children[index] = newChild;
     }
   }
 
   getFlatTypes(): string[] {
     return [
       ...this.args.flatMap((a) => a.getFlatTypes()),
-      ...this.children.flatMap((a) => a.getFlatTypes())
-    ]
+      ...this.children.flatMap((a) => a.getFlatTypes()),
+    ];
   }
 }

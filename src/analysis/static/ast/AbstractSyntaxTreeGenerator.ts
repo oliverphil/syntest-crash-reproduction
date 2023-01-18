@@ -18,13 +18,13 @@
 import { defaultBabelOptions } from "../../../configs/DefaultBabelConfig";
 import * as path from "path";
 import * as fs from "fs";
-import { Properties } from "@syntest/framework";
+import { Properties } from "@syntest/core";
 const { transformSync } = require("@babel/core");
 const globby = require("globby");
 
 export class AbstractSyntaxTreeGenerator {
-  generate(source, target) {
-    const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
+  generate(source: string, target: string | null) {
+    const options = JSON.parse(JSON.stringify(defaultBabelOptions));
 
     options.filename = target || String(new Date().getTime()) + ".js";
 
