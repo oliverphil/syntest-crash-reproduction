@@ -183,18 +183,18 @@ export class Launcher {
 
     crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
 
-    const crashSplit = {};
-    crashes.forEach(crash => {
-      crashSplit[crash.project] ? crashSplit[crash.project].push(crash) : crashSplit[crash.project] = [crash];
-    });
+    // const crashSplit = {};
+    // crashes.forEach(crash => {
+    //   crashSplit[crash.project] ? crashSplit[crash.project].push(crash) : crashSplit[crash.project] = [crash];
+    // });
 
     const targetPools: JavaScriptTargetPool[] = [];
 
-    for (const project of Object.keys(crashSplit)) {
+    for (const crash of crashes) {
       Properties.include = [];
       Properties.exclude = [];
-      crashes.filter(crash => project === crash.project)
-        .forEach(crash => {
+      // crashes.filter(crash => project === crash.project)
+      //   .forEach(crash => {
           crash.stackTrace.trace.forEach(frame => {
             const crashFile = crash;
             if (frame.file.includes('.js')) {
@@ -207,7 +207,7 @@ export class Launcher {
             // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
             // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
           });
-      });
+      // });
 
       const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
       const excluded = [];
@@ -250,6 +250,7 @@ export class Launcher {
       const [archive, dependencies, exports] = await this.search(pool);
       // TODO: create alternative finalize to not delete tests this way
       await this.finalize(pool, archive, dependencies, exports);
+      await deleteTempDirectories();
       await this.setupShared();
     }
     return targetPools;

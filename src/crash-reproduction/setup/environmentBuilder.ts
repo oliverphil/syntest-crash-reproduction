@@ -37,24 +37,24 @@ class EnvironmentBuilder {
     fs.writeFileSync(
         `${crashFolder}/package.json`,
         JSON.stringify(crash.package));
-    // let stdout = '';
-    // let stderr = '';
+    let stdout = '';
+    let stderr = '';
     let error = false;
-    // try {
-    //   if (crash.nodeVersion) {
-    //     stdout = execSync(`source /local/scratch/.nvm/nvm.sh; nvm install ${crash.nodeVersion}; npm --prefix ${crashFolder} i`).toString();
-    //   } else {
-    //     stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
-    //   }
-    //   EnvironmentBuilder.handleSetupOptions(crash, crashFolder);
-    // } catch (e) {
-    //   stdout = e.stdout.toString();
-    //   stderr = e.stderr.toString();
-    //   error = true;
-    //   // console.error(e);
-    // }
-    // console.log(stdout);
-    // console.error(stderr);
+    try {
+      if (crash.nodeVersion) {
+        stdout = execSync(`source /local/scratch/.nvm/nvm.sh; nvm install ${crash.nodeVersion}; npm --prefix ${crashFolder} i`).toString();
+      } else {
+        stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
+      }
+      EnvironmentBuilder.handleSetupOptions(crash, crashFolder);
+    } catch (e) {
+      stdout = e.stdout.toString();
+      stderr = e.stderr.toString();
+      error = true;
+      console.error(e);
+    }
+    console.log(stdout);
+    console.error(stderr);
     return error;
   }
 
