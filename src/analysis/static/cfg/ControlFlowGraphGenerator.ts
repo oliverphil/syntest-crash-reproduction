@@ -562,11 +562,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     ast: t.Expression | t.VariableDeclarator | t.SpreadElement,
     parents: Node[]
   ): ReturnValue {
-<<<<<<< HEAD
-    if (['LogicalExpression', 'BinaryExpression'].includes(ast?.type)) {
-=======
     if (ast.type === "BinaryExpression" || ast.type === "LogicalExpression") {
->>>>>>> develop
       const left = this.visitChild(ast.left, parents);
       const right = this.visitChild(ast.right, left.childNodes);
 
@@ -574,15 +570,9 @@ export class ControlFlowGraphGenerator implements CFGFactory {
         childNodes: [...right.childNodes],
         breakNodes: [...left.breakNodes, ...right.breakNodes],
       };
-<<<<<<< HEAD
-    } else if (ast?.type === 'AssignmentExpression') {
-      return this.visitChild(ast.right, parents);
-    } else if (ast?.type === 'VariableDeclarator') {
-=======
     } else if (ast.type === "AssignmentExpression") {
       return this.visitChild(ast.right, parents);
     } else if (ast.type === "VariableDeclarator") {
->>>>>>> develop
       if (ast.init) {
         return this.visitChild(ast.init, parents);
       }
@@ -594,20 +584,11 @@ export class ControlFlowGraphGenerator implements CFGFactory {
         childNodes: [node],
         breakNodes: [],
       };
-<<<<<<< HEAD
-    } else if (ast?.type === 'FunctionExpression'
-    || ast?.type === 'ArrowFunctionExpression') {
-      const node: RootNode = this.createRootNode(
-        [ast.loc?.start.line],
-        [],
-      );
-=======
     } else if (
       ast.type === "FunctionExpression" ||
       ast.type === "ArrowFunctionExpression"
     ) {
-      const node: RootNode = this.createRootNode([ast.loc.start.line], []);
->>>>>>> develop
+      const node: RootNode = this.createRootNode([ast.loc?.start.line], []);
       this.connectParents(parents, [node]);
 
       if (ast.body) {
@@ -677,16 +658,11 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   // TODO try catch support
-<<<<<<< HEAD
-  private visitThrowStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc?.start.line], []);
-=======
   private visitThrowStatement(
     ast: t.ThrowStatement,
     parents: Node[]
   ): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
->>>>>>> develop
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -748,19 +724,8 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     };
   }
 
-<<<<<<< HEAD
-  private visitIfStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: BranchNode = this.createBranchNode(
-      [ast.loc?.start.line],
-      [],
-      {
-        type: ast.test?.type,
-        operator: ast.test.operator,
-      }
-    );
-=======
   private visitIfStatement(ast: t.IfStatement, parents: Node[]): ReturnValue {
-    const node: BranchNode = this.createBranchNode([ast.loc.start.line], [], {
+    const node: BranchNode = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.test.type,
       operator:
         ast.test.type === "BinaryExpression" ||
@@ -768,7 +733,6 @@ export class ControlFlowGraphGenerator implements CFGFactory {
           ? ast.test.operator
           : "",
     });
->>>>>>> develop
 
     this.connectParents(parents, [node]);
 
@@ -853,19 +817,8 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     }
   }
 
-<<<<<<< HEAD
-
-  private visitConditional(ast: any, parents: Node[]): ReturnValue {
-    const node: BranchNode = this.createBranchNode(
-      [ast.loc?.start?.line],
-      [],
-      {
-        type: ast.test?.type,
-        operator: ast.test?.operator,
-      });
-=======
   private visitConditional(ast: t.Conditional, parents: Node[]): ReturnValue {
-    const node: BranchNode = this.createBranchNode([ast.loc.start.line], [], {
+    const node: BranchNode = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.test.type,
       operator:
         ast.test.type === "BinaryExpression" ||
@@ -873,7 +826,6 @@ export class ControlFlowGraphGenerator implements CFGFactory {
           ? ast.test.operator
           : "",
     });
->>>>>>> develop
     this.connectParents(parents, [node]);
 
     // Store all break points
@@ -953,21 +905,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
 
   private visitTryStatement(ast: t.TryStatement, parents: Node[]): ReturnValue {
     // TODO finalizer try -> catch -> finally
-<<<<<<< HEAD
-    const node: BranchNode = this.createBranchNode(
-      [ast.loc?.start.line],
-      [],
-      {
-        type: ast?.type,
-        operator: 'exception',
-      }
-    );
-=======
-    const node: BranchNode = this.createBranchNode([ast.loc.start.line], [], {
+    const node: BranchNode = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.type,
       operator: "exception",
     });
->>>>>>> develop
 
     this.connectParents(parents, [node]);
 
@@ -987,11 +928,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     } else {
       // Add empty placeholder node
       const emptyChildNode = this.createPlaceholderNode(
-<<<<<<< HEAD
-        [ast.consequent.loc?.start.line],
-=======
-        [ast.block.loc.start.line],
->>>>>>> develop
+        [ast.block.loc?.start.line],
         []
       );
       tryChildNodes.push(emptyChildNode);
@@ -1015,25 +952,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
       this.cfg.edges[count].branchType = false;
     } else {
       // Add empty placeholder node
-<<<<<<< HEAD
-      let emptyChildNode;
-      if (!ast || !ast.alternate || !ast.loc) {
-        emptyChildNode = this.createPlaceholderNode(
-            [],
-            []
-        );
-      } else {
-        emptyChildNode = this.createPlaceholderNode(
-            [ast.alternate.loc?.start.line],
-            []
-        );
-      }
-=======
       const emptyChildNode = this.createPlaceholderNode(
-        [ast.handler.loc.start.line],
+        [ast.handler?.loc.start.line || ast.loc?.start.line],
         []
       );
->>>>>>> develop
       catchChildNodes.push(emptyChildNode);
 
       this.cfg.edges.push({
@@ -1049,13 +971,8 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     };
   }
 
-<<<<<<< HEAD
-  private visitCatchClause(ast: any, parents:Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc?.start.line], []);
-=======
   private visitCatchClause(ast: t.CatchClause, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
->>>>>>> develop
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -1064,24 +981,17 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     };
   }
 
-<<<<<<< HEAD
-  private visitWhileStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
-      type: ast.test?.type,
-      operator: ast.test.operator,
-=======
   private visitWhileStatement(
     ast: t.WhileStatement,
     parents: Node[]
   ): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.test.type,
       operator:
         ast.test.type === "BinaryExpression" ||
         ast.test.type === "UnaryExpression"
           ? ast.test.operator
           : "",
->>>>>>> develop
     });
     this.connectParents(parents, [node]);
 
@@ -1109,11 +1019,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     }
 
     // Add empty placeholder node for the false flow
-<<<<<<< HEAD
-    const falseNode = this.createPlaceholderNode( [ast.loc?.end.line], []);
-=======
-    const falseNode = this.createPlaceholderNode([ast.loc.end.line], []);
->>>>>>> develop
+    const falseNode = this.createPlaceholderNode([ast.loc?.end.line], []);
     this.cfg.edges.push({
       from: node.id,
       to: falseNode.id,
@@ -1137,20 +1043,13 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     };
   }
 
-<<<<<<< HEAD
-  private visitForOfStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
-      type: 'CallExpression',
-      operator: 'isEmpty',
-=======
   private visitForOfStatement(
     ast: t.ForOfStatement | t.ForInStatement,
     parents: Node[]
   ): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: "CallExpression",
       operator: "isEmpty",
->>>>>>> develop
     });
     this.connectParents(parents, [node]);
 
@@ -1209,16 +1108,11 @@ export class ControlFlowGraphGenerator implements CFGFactory {
    * @constructor
    * @private
    */
-<<<<<<< HEAD
-  private visitBreakStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc?.start.line], []);
-=======
   private visitBreakStatement(
     ast: t.BreakStatement,
     parents: Node[]
   ): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
->>>>>>> develop
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -1228,16 +1122,11 @@ export class ControlFlowGraphGenerator implements CFGFactory {
   }
 
   // TODO currently incorrect is passthrough now
-<<<<<<< HEAD
-  private visitContinueStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createNode([ast.loc?.start.line], []);
-=======
   private visitContinueStatement(
     ast: t.ContinueStatement,
     parents: Node[]
   ): ReturnValue {
-    const node: Node = this.createNode([ast.loc.start.line], []);
->>>>>>> develop
+    const node: Node = this.createNode([ast.loc?.start.line], []);
     this.connectParents(parents, [node]);
 
     return {
@@ -1251,17 +1140,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     parents: Node[]
   ): ReturnValue {
     // entry node
-<<<<<<< HEAD
-    const entryNode: Node = this.createBranchNode(
-      [ast.loc?.start.line],
-      [],
-      {
-        type: ast.test?.type,
-        operator: ast.test.operator,
-      }
-    );
-=======
-    const entryNode: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const entryNode: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.test.type,
       operator:
         ast.test.type === "BinaryExpression" ||
@@ -1269,7 +1148,6 @@ export class ControlFlowGraphGenerator implements CFGFactory {
           ? ast.test.operator
           : "",
     });
->>>>>>> develop
     this.connectParents(parents, [entryNode]);
 
     // TODO: We can check if a node is generated. This eliminates the need for entryNode
@@ -1278,17 +1156,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     const trueNodes = childNodes;
 
     // while check
-<<<<<<< HEAD
-    const whileNode: Node = this.createBranchNode(
-      [ast.loc?.start.line],
-      [],
-      {
-        type: ast.test?.type,
-        operator: ast.test.operator,
-      }
-    );
-=======
-    const whileNode: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const whileNode: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.test.type,
       operator:
         ast.test.type === "BinaryExpression" ||
@@ -1296,7 +1164,6 @@ export class ControlFlowGraphGenerator implements CFGFactory {
           ? ast.test.operator
           : "",
     });
->>>>>>> develop
     this.connectParents(trueNodes, [whileNode]);
 
     // Connect back to the entry node and mark as true branch
@@ -1307,14 +1174,7 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     });
 
     // Add empty placeholder node for the false flow
-<<<<<<< HEAD
-    const falseNode: Node = this.createPlaceholderNode(
-      [ast.loc?.end.line],
-      []
-    );
-=======
-    const falseNode: Node = this.createPlaceholderNode([ast.loc.end.line], []);
->>>>>>> develop
+    const falseNode: Node = this.createPlaceholderNode([ast.loc?.end.line], []);
     this.cfg.edges.push({
       from: whileNode.id,
       to: falseNode.id,
@@ -1340,15 +1200,9 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     parents: Node[]
   ): ReturnValue {
     // TODO currently incorrect
-<<<<<<< HEAD
     const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
-      type: 'Switch',
-      operator: '==',
-=======
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
       type: "Switch",
       operator: "==",
->>>>>>> develop
     });
     this.connectParents(parents, [node]);
 
@@ -1382,17 +1236,10 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     };
   }
 
-<<<<<<< HEAD
-  private visitSwitchCase(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
-      type: 'switchCase',
-      operator: '==',
-=======
   private visitSwitchCase(ast: t.SwitchCase, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: "switchCase",
       operator: "==",
->>>>>>> develop
     });
     this.connectParents(parents, [node]);
 
@@ -1444,21 +1291,14 @@ export class ControlFlowGraphGenerator implements CFGFactory {
     };
   }
 
-<<<<<<< HEAD
-  private visitForStatement(ast: any, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
-      type: ast.test?.type,
-      operator: ast.test.operator || ast.test.name || ast.test.value,
-=======
   private visitForStatement(ast: t.ForStatement, parents: Node[]): ReturnValue {
-    const node: Node = this.createBranchNode([ast.loc.start.line], [], {
+    const node: Node = this.createBranchNode([ast.loc?.start.line], [], {
       type: ast.test.type,
       operator:
         ast.test.type === "BinaryExpression" ||
         ast.test.type === "UnaryExpression"
           ? ast.test.operator
           : "",
->>>>>>> develop
     });
     this.connectParents(parents, [node]);
     // TODO For each probably not supported

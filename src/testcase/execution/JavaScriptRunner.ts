@@ -21,21 +21,17 @@ import { unlinkSync, writeFileSync, rmdirSync } from "fs";
 import { JavaScriptDecoder } from "../../testbuilding/JavaScriptDecoder";
 import Mocha = require("mocha");
 import originalrequire = require("original-require");
+import { isInt8Array } from "util/types";
 
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected decoder: JavaScriptDecoder;
-<<<<<<< HEAD
   protected errorProcessor: ExecutionInformationIntegrator
   protected mocha: Mocha;
-=======
-  protected errorProcessor: ExecutionInformationIntegrator;
->>>>>>> develop
 
   constructor(decoder: JavaScriptDecoder) {
     this.decoder = decoder;
     this.errorProcessor = new ExecutionInformationIntegrator();
 
-<<<<<<< HEAD
     if (process.listenerCount('uncaughtException') < 1) {
       process.on("uncaughtException", reason => {
         console.log(reason);
@@ -50,14 +46,6 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         // throw reason;
       });
     }
-=======
-    process.on("uncaughtException", (reason) => {
-      throw reason;
-    });
-    process.on("unhandledRejection", (reason) => {
-      throw reason;
-    });
->>>>>>> develop
   }
 
   async writeTestCase(
@@ -93,33 +81,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     const argv: Mocha.MochaOptions = <Mocha.MochaOptions>(<unknown>{
       spec: paths,
       reporter: SilentMochaReporter,
-<<<<<<< HEAD
-      allowUncaught: true,
-      // isWorker: true,
-      // parallel: true,
-      // require: [
-      //   '@babel/register',
-      //   "@babel/preset-env",
-      //   "@babel/preset-react",
-      //   // "@babel/plugin-transform-react-jsx",
-      //   // "@babel/plugin-proposal-object-rest-spread"
-      // ],
-      timeout: Properties.search_time
-    }
-
-    this.mocha = new Mocha(argv)
-    // require('ts-node/register');
-    require("regenerator-runtime/runtime");
-    require('@babel/register')({
-      presets: [
-        require.resolve("@babel/preset-env"),
-    //     require.resolve("@babel/preset-react"),
-    //     // require.resolve("@babel/plugin-transform-react-jsx"),
-    //     // require.resolve("@babel/plugin-proposal-object-rest-spread"),
-    //     // require.resolve("@babel/plugin-transform-typescript"),
-    //     // require.resolve("@babel/plugin-syntax-jsx")
-      ]
-=======
+      // parallel: true
     });
 
     const mocha = new Mocha(argv); // require('ts-node/register')
@@ -129,46 +91,15 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     // eslint-disable-next-line
     require("@babel/register")({
       presets: [require.resolve("@babel/preset-env")],
->>>>>>> develop
     });
 
     for (const _path of paths) {
       delete originalrequire.cache[_path];
-      this.mocha.addFile(_path);
+      mocha.addFile(_path);
     }
 
     let runner: Runner = null;
 
-<<<<<<< HEAD
-    try {
-      // Finally, run mocha.
-      await new Promise((resolve, reject) => {
-        try {
-          // console.log('mocha run');
-          runner = this.mocha.run((failures) => failures > 0 ? reject(failures) : resolve(failures))
-          resolve(runner);
-        } catch (e) {
-          console.log(e);
-          reject(e);
-        }
-      })
-      // console.log('mocha done');
-    } catch (e) {
-      // console.log('caught', e);
-    }
-    try {
-      await runner?.dispose();
-    } catch(e) {
-      await runner?.abort();
-    }
-    try {
-      rmdirSync(path.join(process.cwd(), '/node_modules/.cache'), {recursive: true});
-    } catch (e) {
-      // console.log(e); 
-    }
-    // console.log('return runner');
-    return runner
-=======
     // Finally, run mocha.
     await new Promise((resolve) => {
       runner = mocha.run((failures) => resolve(failures));
@@ -176,7 +107,13 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     await mocha.dispose();
     return runner;
->>>>>>> develop
+  }
+
+  customiser(value) {
+    console.log('type of', typeof value)
+    if (isInt8Array(value)) {
+      return value.slice();
+    }
   }
 
   async execute(
@@ -189,19 +126,9 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
     await this.writeTestCase(testPath, testCase, subject.name);
 
-<<<<<<< HEAD
-    let runner;
-    try {
-      runner = await this.run([testPath])
-    } catch (e) {
-      console.log(e);
-    }
-    const stats = runner.stats
-=======
     const runner = await this.run([testPath]);
 
     const stats = runner.stats;
->>>>>>> develop
 
     const test = runner.suite.suites[0]?.tests[0];
 
@@ -213,8 +140,10 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     }
 
     // Retrieve execution traces
-    const instrumentationData = cloneDeep(global.__coverage__);
-    const metaData = cloneDeep(global.__meta__);
+    // const instrumentationData = cloneDeep(global.__coverage__, this.customiser);
+    // const metaData = cloneDeep(global.__meta__, this.customiser);
+    const instrumentationData = global.__coverage__;
+    const metaData = global.__meta__;
 
     const traces: Datapoint[] = [];
     for (const key of Object.keys(instrumentationData || {})) {
@@ -343,13 +272,8 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     return executionResult;
   }
 
-<<<<<<< HEAD
   resetInstrumentationData () {
     for (const key of Object.keys(global.__coverage__ || {})) {
-=======
-  resetInstrumentationData() {
-    for (const key of Object.keys(global.__coverage__)) {
->>>>>>> develop
       for (const statementKey of Object.keys(global.__coverage__[key].s)) {
         global.__coverage__[key].s[statementKey] = 0;
       }

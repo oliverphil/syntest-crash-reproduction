@@ -356,7 +356,7 @@ export class JavaScriptTargetPool extends TargetPool {
       path.basename(Properties.target_root_directory)
     );
 
-    console.log(absoluteRootPath, destinationPath);
+    // console.log(absoluteRootPath, destinationPath);
     // copy everything
     await copySync(absoluteRootPath, destinationPath);
 

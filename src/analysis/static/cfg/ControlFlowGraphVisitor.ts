@@ -73,7 +73,7 @@ export class ControlFlowGraphVisitor extends Visitor {
       // console.log('ignore', path.node.type)
       return;
     }
-    console.log("enter", path.node.type);
+    // console.log("enter", path.node.type);
 
     const node: Node = this._getNode(path);
 
@@ -130,7 +130,7 @@ export class ControlFlowGraphVisitor extends Visitor {
     if (this._ignore.has(path.node.type)) {
       return;
     }
-    console.log("exit", path.node.type);
+    // console.log("exit", path.node.type);
 
     const node = this._nodeStack.pop();
     // deepest point

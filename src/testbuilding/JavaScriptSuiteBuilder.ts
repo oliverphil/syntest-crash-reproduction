@@ -36,6 +36,7 @@ import cloneDeep = require("lodash.clonedeep");
 
 import { Runner } from "mocha";
 import { JavaScriptRunner } from "../testcase/execution/JavaScriptRunner";
+import { isInt8Array } from "util/types";
 
 export class JavaScriptSuiteBuilder {
   private decoder: JavaScriptDecoder;
@@ -96,6 +97,13 @@ export class JavaScriptSuiteBuilder {
     return paths;
   }
 
+  customiser(value) {
+    console.log('type of', typeof value)
+    if (isInt8Array(value)) {
+      return value.slice();
+    }
+  }
+
   async runSuite(paths: string[], report: boolean, targetPool: TargetPool) {
     const runner: Runner = await this.runner.run(paths);
 
@@ -107,7 +115,11 @@ export class JavaScriptSuiteBuilder {
       }
 
       getUserInterface().report("header", ["SEARCH RESULTS"]);
-      const instrumentationData = cloneDeep(global.__coverage__);
+      // const instrumentationData = cloneDeep(global.__coverage__, this.customiser);
+      // const instrumentationData = structuredClone(global.__coverage__, {
+      //   transfer: []
+      // });
+      const instrumentationData = global.__coverage__;
 
       getUserInterface().report("report-coverage", [
         "Coverage report",
@@ -122,21 +134,12 @@ export class JavaScriptSuiteBuilder {
       const overall = {
         branch: 0,
         statement: 0,
-<<<<<<< HEAD
         function: 0
       }
       let totalBranches = 0
       let totalStatements = 0
       let totalFunctions = 0
       for (const file of Object.keys(instrumentationData || {})) {
-=======
-        function: 0,
-      };
-      let totalBranches = 0;
-      let totalStatements = 0;
-      let totalFunctions = 0;
-      for (const file of Object.keys(instrumentationData)) {
->>>>>>> develop
         if (!targetPool.targets.find((t) => t.canonicalPath === file)) {
           continue;
         }

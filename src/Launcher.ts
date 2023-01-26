@@ -105,12 +105,12 @@ export class Launcher {
       if (!Array.isArray(targetPool)) {
         const [archive, dependencies, exports] = await this.search(targetPool);
         await this.finalize(targetPool, archive, dependencies, exports);
-      }      
+      }
 
       await this.exit();
     } catch (e) {
       console.log(e);
-      console.trace(e);
+      // console.trace(e);
     }
   }
 
@@ -186,7 +186,7 @@ export class Launcher {
 
     const environmentGenerator = new EnvironmentGenerator();
     let crashes: Crash[] = environmentGenerator.loadAssets();
-    const crashesToRemove: Crash[] = [];
+    let crashesToRemove: Crash[] = [];
     crashes.forEach(crash => {
       environmentGenerator.generatePackage(crash);
       if (EnvironmentBuilder.createCrashEnvironment(crash)) {
@@ -195,6 +195,8 @@ export class Launcher {
     });
 
     crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
+
+    crashesToRemove = null;
 
     // const crashSplit = {};
     // crashes.forEach(crash => {
@@ -223,7 +225,7 @@ export class Launcher {
       // });
 
       const options = JSON.parse(JSON.stringify(defaultBabelOptions)) ;
-      const excluded = [];
+      let excluded = [];
       options.exclude.forEach((exclude) => {
         let _path;
         let target;
@@ -237,7 +239,7 @@ export class Launcher {
 
         excluded.push(...globby.sync(_path));
       });
-      const included = [];
+      let included = [];
       Properties.include.forEach((include) => {
         let _path;
         let target;
@@ -253,10 +255,11 @@ export class Launcher {
           included.push(...paths);
         }
       });
-      const exclude = excluded.map(p => path.resolve(p));
-      const include = included.map(p => path.resolve(p));
+      let exclude = excluded.map(p => path.resolve(p));
+      let include = included.map(p => path.resolve(p));
       Properties.include = include;
       Properties.exclude = exclude;
+      include = exclude = excluded = included = null;
       // console.log(include, exclude);
 
       const pool = await this.setup();
@@ -515,7 +518,7 @@ export class Launcher {
     const statisticsSearchListener = new StatisticsSearchListener(collector);
     algorithm.addListener(statisticsSearchListener);
 
-    console.log(targetPath);
+    // console.log(targetPath);
 
     // This searches for a covering population
     const archive = await algorithm.search(

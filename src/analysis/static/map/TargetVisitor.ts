@@ -47,34 +47,22 @@ export class TargetVisitor extends Visitor {
 
   // classic function declarations
   public FunctionExpression: (path) => void = (path) => {
-<<<<<<< HEAD
-    if (path.parent.type === 'CallExpression'
-      || path.parent.type === 'NewExpression'
-      || path.parent.type === 'ReturnStatement'
-      || path.parent.type === 'LogicalExpression'
-      || path.parent.type === 'ConditionalExpression'
-      || path.parent.type === 'AssignmentExpression'
-      || path.parent.type === 'MemberExpression'
-      || path.parent.type === 'ArrayExpression'
-      || path.parent.type === 'SequenceExpression'
-      || path.parent.type === 'ArrowFunctionExpression'
-      || path.parent.type === 'UnaryExpression'
-      || path.parent.type === 'ExpressionStatement') {
-=======
     if (
-      path.parent.type === "CallExpression" ||
-      path.parent.type === "NewExpression" ||
-      path.parent.type === "ReturnStatement" ||
-      path.parent.type === "LogicalExpression" ||
-      path.parent.type === "ConditionalExpression" ||
-      path.parent.type === "AssignmentExpression"
+      path.parent.type == "CallExpression" ||
+      path.parent.type == "NewExpression" ||
+      path.parent.type == "ReturnStatement" ||
+      path.parent.type == "LogicalExpression" ||
+      path.parent.type == "ConditionalExpression" ||
+      path.parent.type == "AssignmentExpression" || 
+      path.parent.type == "MemberExpression" ||  // pretty sure this counts as anonymous function
+      path.parent.type == "ArrayExpression"
     ) {
->>>>>>> develop
       // anonymous argument function cannot call is not target
       return;
     }
 
     let targetName;
+    let functionName;
 
     if (path.node.id) {
       targetName = path.node.id.name;
@@ -85,7 +73,6 @@ export class TargetVisitor extends Visitor {
       } else if (path.parent.key.type === "StringLiteral") {
         targetName = path.parent.key.value;
       } else {
-        console.log(path);
         throw new Error("unknown function expression name");
       }
     } else if (path.parent.type === "VariableDeclarator") {
@@ -96,14 +83,12 @@ export class TargetVisitor extends Visitor {
         throw new Error("unknown function expression name");
       }
     } else {
-<<<<<<< HEAD
       throw new Error("unknown function expression name " + path.parent.type);
-=======
-      throw new Error("unknown function expression name");
->>>>>>> develop
     }
 
-    const functionName = targetName;
+    if (!functionName) {
+      functionName = targetName;
+    }
 
     this._createMaps(targetName);
 
@@ -384,12 +369,7 @@ export class TargetVisitor extends Visitor {
         }
 
         if (functionName === "method") {
-<<<<<<< HEAD
-          return;
-          // throw new Error("Invalid functionName")
-=======
           throw new Error("Invalid functionName");
->>>>>>> develop
         }
 
         if (!this._functionMap.has(targetName)) {
@@ -450,61 +430,6 @@ export class TargetVisitor extends Visitor {
     });
   };
 
-<<<<<<< HEAD
-  _extractParam(param: any): IdentifierDescription {
-      if (!param) return undefined;
-      if (param?.type === 'RestElement') {
-        // TODO this can actually be an infinite amount of arguments...
-        return this._extractParam(param.argument)
-      }
-
-      if (param?.type === "AssignmentPattern") {
-        return this._extractParam(param.left)
-      }
-
-      if (param?.type === "ObjectPattern") {
-        const typeProbability = new TypeProbability()
-
-        const object: ComplexObject = {
-          name: "objectPattern",
-          properties: new Set(param.properties
-              .filter(x => x.key)
-              .map((x)=> this._extractParam(x.key).name)), // TODO resolve these types
-          functions: new Set()
-        }
-
-        typeProbability.addType('object', 1, object)
-        param = {
-          name: `objectPattern`,
-          typeProbabilityMap: typeProbability
-        }
-      }
-
-      if (param?.type === "ArrayPattern") {
-        const typeProbability = new TypeProbability()
-
-        const object: ComplexObject = {
-          name: "arrayPattern",
-          properties: new Set(param.elements.map((x) => this._extractParam(x).name)), // TODO resolve these types
-          functions: new Set()
-        }
-
-        typeProbability.addType('array', 1, object)
-
-        param = {
-          name: `arrayPattern`,
-          typeProbabilityMap: typeProbability
-        }
-      }
-
-      if (!param?.name) {
-        throw new Error(`Unknown param ${JSON.stringify(param)}\n ${this.filePath}`)
-      }
-
-      return {
-        typeProbabilityMap: undefined,
-        name: param?.name,
-=======
   _extractParam(param: t.Node): IdentifierDescription {
     if (param.type === "RestElement") {
       // TODO this can actually be an infinite amount of arguments...
@@ -529,7 +454,6 @@ export class TargetVisitor extends Visitor {
           )
         ), // TODO resolve these types
         functions: new Set(),
->>>>>>> develop
       };
 
       typeProbability.addType("object", 1, object);

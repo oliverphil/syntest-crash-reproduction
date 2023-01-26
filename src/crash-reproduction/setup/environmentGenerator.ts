@@ -35,7 +35,7 @@ class EnvironmentGenerator {
     const assetDir = './benchmark/crashes';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
         && value !== 'seeded');
-    const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) => value !== 'http-server');
+    const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) => value !== 'http-server' && value === '');
     const assetSubDirs = assetDirContents.map((projItem) => {
       return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
     });
@@ -96,7 +96,7 @@ class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes //.filter(crash => crash.project !== 'atom' && crash.project !== 'eslint');
+    return crashes.filter(crash => crash.crashId !== 'atom-22772');
   }
 
   /**

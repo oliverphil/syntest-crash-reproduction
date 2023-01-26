@@ -208,20 +208,6 @@ export class ExportVisitor extends Visitor {
 
   // util function
   _getType(type: string, node): ExportType {
-<<<<<<< HEAD
-    if (type === 'FunctionDeclaration'
-      || type === 'FunctionExpression'
-      || type === 'ArrowFunctionExpression') {
-      return ExportType.function
-    } else if (type === 'VariableDeclaration'
-      || type === 'VariableDeclarator') {
-      return ExportType.const
-    } else if (type === 'NewExpression') {
-      return ExportType.const
-    } else if (type === 'ClassDeclaration') {
-      return ExportType.class
-    } else if (type === 'Identifier') {
-=======
     if (
       type === "FunctionDeclaration" ||
       type === "FunctionExpression" ||
@@ -238,7 +224,6 @@ export class ExportVisitor extends Visitor {
     } else if (type === "ClassDeclaration") {
       return ExportType.class;
     } else if (type === "Identifier") {
->>>>>>> develop
       if (!this._identifiers.has(node.name)) {
         // TODO for now we just assume const when we have not found such an identifier
         return ExportType.const;

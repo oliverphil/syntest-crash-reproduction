@@ -7,7 +7,7 @@ module.exports = {
   resample_gene_probability: 0.01,
   delta_mutation_probability: 0.8,
   sample_func_as_arg: 0.5,
-  explore_illegal_values: false,
+  explore_illegal_values: true,
 
   algorithm: "DynaMOSA",
   search_time: 5,
@@ -28,9 +28,11 @@ module.exports = {
   random_type_probability: 0.1,
 
   draw_cfg: false,
+  crash_reproduction: true,
 
   // target_root_directory: "../syntest-javascript-benchmark/axios",
-  target_root_directory: "../syntest-javascript-benchmark/commanderjs",
+  // target_root_directory: "../syntest-javascript-benchmark/commanderjs",
+  target_root_directory: "benchmark/crashes",
   // target_root_directory: "../syntest-javascript-benchmark/express",
   // target_root_directory: "../syntest-javascript-benchmark/lodash",
   // target_root_directory: "../syntest-javascript-benchmark/moment/src",
@@ -45,7 +47,7 @@ module.exports = {
     // "../syntest-javascript-benchmark/axios/lib/core/buildFullPath.js",
     // "../syntest-javascript-benchmark/axios/lib/core/Axios.js",
 
-    "../syntest-javascript-benchmark/commanderjs/lib/help.js",
+    // "../syntest-javascript-benchmark/commanderjs/lib/help.js",
 
     // "../syntest-javascript-benchmark/lodash/.internal/equalArrays.js",
     // "../syntest-javascript-benchmark/lodash/hasPath.js",
