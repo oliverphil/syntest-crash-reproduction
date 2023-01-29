@@ -25,6 +25,8 @@ export interface Export {
   default: boolean;
   module: boolean;
   filePath: string;
+  isNamespaced: boolean;
+  namespace?: string;
 }
 
 export class ExportVisitor extends Visitor {
@@ -50,6 +52,7 @@ export class ExportVisitor extends Visitor {
             default: false,
             module: false,
             filePath: this.filePath,
+            isNamespaced: false,
           });
         }
       } else {
@@ -62,6 +65,7 @@ export class ExportVisitor extends Visitor {
           default: false,
           module: false,
           filePath: this.filePath,
+          isNamespaced: false,
         });
       }
     } else if (path.node.specifiers) {
@@ -79,6 +83,7 @@ export class ExportVisitor extends Visitor {
             specifier.exported.name === "default",
           module: false,
           filePath: this.filePath,
+          isNamespaced: false,
         });
       }
     } else {
@@ -107,6 +112,7 @@ export class ExportVisitor extends Visitor {
       default: true,
       module: false,
       filePath: this.filePath,
+      isNamespaced: false,
     });
   };
 
@@ -148,6 +154,8 @@ export class ExportVisitor extends Visitor {
             higherProperty.node.name === "exports"
           ) {
             name = this._getName(property.node);
+          } else {
+            name = this._getName(property.node);
           }
         }
       }
@@ -165,6 +173,7 @@ export class ExportVisitor extends Visitor {
           default: default_,
           module: true,
           filePath: this.filePath,
+          isNamespaced: false,
         });
       }
     } else if (right.isArrayExpression()) {
@@ -175,15 +184,34 @@ export class ExportVisitor extends Visitor {
           default: default_,
           module: true,
           filePath: this.filePath,
+          isNamespaced: false,
         });
       }
-    } else {
+    } else if (name === 'exports') {
       this._exports.push({
         name: name,
         type: this._getType(right.node.type, right.node),
         default: default_,
         module: true,
         filePath: this.filePath,
+        isNamespaced: false,
+      });
+    } else {
+      let obj = left.node;
+      let nextObj = left.node.object;
+      while (nextObj) {
+        obj = nextObj;
+        nextObj = obj.object;
+      }
+      let namespace = obj.name;
+      this._exports.push({
+        name: name,
+        type: this._getType(right.node.type, right.node),
+        default: default_,
+        module: true,
+        filePath: this.filePath,
+        isNamespaced: !!namespace,
+        namespace: namespace,
       });
     }
   };

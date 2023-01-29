@@ -44,7 +44,7 @@
     "lint:fix": "eslint . --fix",
     "prepare": "npm run build",
     "run": "node --inspect ./dist/bin.js",
-    "run-ts": "BABEL_DISABLE_CACHE=true npm run build:framework; node -r ts-node/register --max-old-space-size=8000 ./src/bin.ts",
+    "run-ts": "BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=8000 ./src/bin.ts",
     "run-ts:crash": "npm run build:framework; NVM_DIR=/local/scratch/.nvm ts-node ./src/crash-reproduction/index.ts",
     "test": "mocha",
     "test:coverage": "nyc mocha",

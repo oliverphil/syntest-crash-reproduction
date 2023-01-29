@@ -29,12 +29,14 @@ export interface ActionDescription {
   scope: Scope;
   name: string;
   type: ActionType;
+  namespace?: string;
 
   visibility: ActionVisibility;
 
   isConstructor: boolean;
   isStatic: boolean;
   isAsync: boolean;
+  isNamespaced: boolean;
 
   parameters: IdentifierDescription[];
   returnParameter: IdentifierDescription;

@@ -64,7 +64,8 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
       action.returnParameter.typeProbabilityMap.getRandomType(),
       prng.uniqueId(),
       action.name,
-      args
+      args,
+      action.isNamespaced ? action.namespace : ''
     );
   }
 

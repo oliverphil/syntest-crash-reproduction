@@ -185,7 +185,7 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
     for (const gene of importableGenes) {
       const importName =
         gene instanceof FunctionCall
-          ? gene.functionName
+          ? gene.pureFunctionName
           : gene instanceof ConstructorCall
           ? gene.constructorName
           : gene.type;
@@ -255,6 +255,10 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
       path.resolve(Properties.target_root_directory),
       path.join(sourceDir, path.basename(Properties.target_root_directory))
     );
+
+    if (dependency.isNamespaced) {
+      return `import ${dependency.namespace} from "${_path}";`;
+    }
 
     if (dependency.module) {
       if (dependency.default) {

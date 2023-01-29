@@ -28,6 +28,7 @@ import { IdentifierDescription } from "../../../analysis/static/parsing/Identifi
  */
 export class FunctionCall extends RootStatement {
   private readonly _functionName: string;
+  private readonly _namespace: string;
 
   /**
    * Constructor
@@ -41,11 +42,12 @@ export class FunctionCall extends RootStatement {
     type: string,
     uniqueId: string,
     functionName: string,
-    args: Statement[]
+    args: Statement[],
+    namespace: string,
   ) {
     super(identifierDescription, type, uniqueId, args, []);
     this._classType = "FunctionCall";
-
+    this._namespace = namespace;
     this._functionName = functionName;
   }
 
@@ -69,8 +71,9 @@ export class FunctionCall extends RootStatement {
       this.identifierDescription,
       this.type,
       prng.uniqueId(),
-      this.functionName,
-      args
+      this._functionName,
+      args,
+      this._namespace
     );
   }
 
@@ -81,12 +84,20 @@ export class FunctionCall extends RootStatement {
       this.identifierDescription,
       this.type,
       this.id,
-      this.functionName,
-      deepCopyArgs
+      this._functionName,
+      deepCopyArgs,
+      this._namespace
     );
   }
 
+  get pureFunctionName(): string {
+    return this._functionName;
+  }
+
   get functionName(): string {
+    if (this._namespace !== '') {
+      return this._namespace + '().' + this._functionName;
+    }
     return this._functionName;
   }
 

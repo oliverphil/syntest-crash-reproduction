@@ -108,6 +108,8 @@ export class TargetVisitor extends Visitor {
       },
       isStatic: path.node.static,
       isAsync: path.node.async,
+      isNamespaced: targetName !== functionName,
+      namespace: targetName !== functionName ? targetName : undefined,
     });
   };
 
@@ -183,6 +185,8 @@ export class TargetVisitor extends Visitor {
       },
       isStatic: path.node.static,
       isAsync: path.node.async,
+      isNamespaced: targetName !== functionName,
+      namespace: targetName !== functionName ? targetName : undefined,
     });
   };
 
@@ -207,7 +211,7 @@ export class TargetVisitor extends Visitor {
       type:
         functionName === "constructor"
           ? ActionType.CONSTRUCTOR
-          : ActionType.METHOD,
+          : targetName === functionName ? ActionType.METHOD : ActionType.FUNCTION,
       visibility: visibility,
       isConstructor: functionName === "constructor",
       parameters: path.node.params.map((x) => this._extractParam(x)),
@@ -217,6 +221,8 @@ export class TargetVisitor extends Visitor {
       },
       isStatic: path.node.static,
       isAsync: path.node.async,
+      isNamespaced: targetName !== functionName,
+      namespace: targetName !== functionName ? targetName : undefined,
     });
   };
 
@@ -272,6 +278,8 @@ export class TargetVisitor extends Visitor {
       },
       isStatic: path.node.init.static,
       isAsync: path.node.init.async,
+      isNamespaced: targetName !== functionName,
+      namespace: targetName !== functionName ? targetName : undefined,
     });
   };
 
@@ -329,7 +337,7 @@ export class TargetVisitor extends Visitor {
           this._createMaps(targetName);
           // modify original
           // but there is no original so... no constructor?
-        } else if (this._functionMap.get(targetName).get(targetName)) {
+        } else if (targetName === functionName && this._functionMap.get(targetName).get(targetName)) {
           // modify original
           this._functionMap.get(targetName).get(targetName).type =
             ActionType.CONSTRUCTOR;
@@ -345,7 +353,7 @@ export class TargetVisitor extends Visitor {
           type:
             functionName === "constructor"
               ? ActionType.CONSTRUCTOR
-              : ActionType.METHOD,
+              : targetName === functionName ? ActionType.METHOD : ActionType.FUNCTION,
           visibility: ActionVisibility.PUBLIC,
           isConstructor: functionName === "constructor",
           parameters: path.node.right.params.map((x) => this._extractParam(x)),
@@ -355,6 +363,8 @@ export class TargetVisitor extends Visitor {
           },
           isStatic: path.node.right.static,
           isAsync: path.node.right.async,
+          isNamespaced: targetName !== functionName,
+          namespace: targetName !== functionName ? targetName : undefined,
         });
         return;
       } else {
@@ -391,7 +401,7 @@ export class TargetVisitor extends Visitor {
         this._functionMap.get(targetName).set(functionName, {
           scope: scope,
           name: functionName,
-          type: ActionType.METHOD,
+          type: targetName === functionName ? ActionType.METHOD : ActionType.FUNCTION,
           visibility: ActionVisibility.PUBLIC,
           isConstructor: false,
           parameters: path.node.right.params.map((x) => this._extractParam(x)),
@@ -401,6 +411,8 @@ export class TargetVisitor extends Visitor {
           },
           isStatic: path.node.right.static,
           isAsync: path.node.right.async,
+          isNamespaced: targetName !== functionName,
+          namespace: targetName !== functionName ? targetName : undefined,
         });
         return;
       }
@@ -427,6 +439,7 @@ export class TargetVisitor extends Visitor {
       },
       isStatic: path.node.right.static,
       isAsync: path.node.right.async,
+      isNamespaced: false,
     });
   };
 
