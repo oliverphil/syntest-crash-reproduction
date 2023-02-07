@@ -99,7 +99,18 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
         testString,
         importableGenes
       );
-      imports.push(...importsOfTest);
+      for (const imp of importsOfTest) {
+        let alreadyImported = false;
+        const wildcardRegex = /import\s\*\sas\s(.*)\sfrom\s["'][A-Za-z\d.\\/_-]*["'];/;
+        const standardRegex = /import\s(\S*)\sfrom\s["'][A-Za-z0-9.\\/_-]*["'];/;
+        const impValue = wildcardRegex.exec(imp)?.[1] || standardRegex.exec(imp)?.[1];
+        imports.map(im => wildcardRegex.exec(im)?.[1] || standardRegex.exec(im)?.[1]).forEach(im => {
+          if (im && (im.includes(impValue) || impValue?.includes(im))) alreadyImported = true;
+        });
+        if (!alreadyImported) {
+          imports.push(imp);
+        }
+      }
 
       if (addLogs) {
         imports.push(`import * as fs from 'fs'`);
@@ -249,14 +260,14 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
 
     return imports;
   }
-
+  // TODO: Check default/module for that atom crash
   getImport(sourceDir: string, dependency: Export): string {
     const _path = dependency.filePath.replace(
       path.resolve(Properties.target_root_directory),
       path.join(sourceDir, path.basename(Properties.target_root_directory))
     );
 
-    if (dependency.isNamespaced) {
+    if (dependency.isNamespaced && !['exports', 'module'].includes(dependency.namespace)) {
       return `import ${dependency.namespace} from "${_path}";`;
     }
 

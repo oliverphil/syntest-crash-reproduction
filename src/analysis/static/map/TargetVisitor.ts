@@ -53,7 +53,7 @@ export class TargetVisitor extends Visitor {
       path.parent.type == "ReturnStatement" ||
       path.parent.type == "LogicalExpression" ||
       path.parent.type == "ConditionalExpression" ||
-      path.parent.type == "AssignmentExpression" || 
+      path.parent.type == "AssignmentExpression" ||
       path.parent.type == "MemberExpression" ||  // pretty sure this counts as anonymous function
       path.parent.type == "ArrayExpression"
     ) {
@@ -368,7 +368,7 @@ export class TargetVisitor extends Visitor {
         });
         return;
       } else {
-        targetName = path.node.left.object.name;
+        targetName = path.node.left.object.name || path.node.left.object?.object?.name;
         const functionName = path.node.left.property.name;
 
         if (path.node.left.computed) {

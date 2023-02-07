@@ -135,3 +135,5 @@ experiments/results/*
 node-v*/
 
 benchmark/crashes/atom/*/atom-*/
+
+*.csv
