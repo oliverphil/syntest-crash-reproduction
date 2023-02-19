@@ -401,7 +401,7 @@ export class TargetVisitor extends Visitor {
         this._functionMap.get(targetName).set(functionName, {
           scope: scope,
           name: functionName,
-          type: targetName === functionName ? ActionType.METHOD : ActionType.FUNCTION,
+          type: ActionType.METHOD,//targetName === functionName ? ActionType.METHOD : ActionType.FUNCTION,
           visibility: ActionVisibility.PUBLIC,
           isConstructor: false,
           parameters: path.node.right.params.map((x) => this._extractParam(x)),
