@@ -6,6 +6,7 @@
   "references": [{ "path": "src/" }],
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es6"
+    "target": "es6",
+    "lib": ["es2019"]
   }
 }
