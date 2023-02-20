@@ -29,6 +29,9 @@ export interface Crash {
         download?: {
             url: string;
             unpack: "tar.gz";
+        },
+        npmGlobal?: {
+            [dependencyName: string]: string;
         }
     };
 }

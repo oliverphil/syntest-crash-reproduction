@@ -139,12 +139,18 @@ export abstract class Visitor {
           uid: `${uid - this.scopeIdOffset}`,
         };
       }
+      const uid = path.scope.getBlockParent()?.uid;
 
-      throw new Error(
-        `Cannot find scope of Identifier ${path.node.name}\n${
-          this.filePath
-        }\n${path.getSource()}`
-      );
+      return {
+        filePath: this.filePath,
+        uid: `${uid - this.scopeIdOffset}`,
+      };
+
+      // throw new Error(
+      //   `Cannot find scope of Identifier ${path.node.name}\n${
+      //     this.filePath
+      //   }\n${path.getSource()}`
+      // );
     }
 
     // TODO super should be handled like this actually (kind off)

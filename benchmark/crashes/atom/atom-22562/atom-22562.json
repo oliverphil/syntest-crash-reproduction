@@ -4,17 +4,7 @@
   "url": "https://github.com/atom/atom/issues/22562",
   "version": "1.57.0",
   "dependencies": {
-    "electron": "9.4.4",
-    "build-cmd": "0.8.0",
-    "build-powershell": "0.14.0",
-    "buildium": "0.75.2",
-    "busy-signal": "2.0.1",
-    "language-batch": "0.4.0",
-    "language-powershell": "5.0.0",
-    "language-reg": "0.0.0",
-    "pdf-view": "0.73.0",
-    "script": "3.32.2",
-    "zip-folder": "3.3.0"
+    "electron": "9.4.4"
   },
   "setup": {
     "download": {

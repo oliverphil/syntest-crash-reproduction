@@ -1,9 +1,0 @@
-{
-  "issueNumber": 20598,
-  "info": "\"Exception in defer callback: TypeError: dompurify.sanitize is not a function\" when using Auto-Translate feature",
-  "url": "https://github.com/RocketChat/Rocket.Chat/issues/20598",
-  "version": "3.11.0",
-  "nodeVersion": "12.18.4",
-  "dependencies": {
-  }
-}

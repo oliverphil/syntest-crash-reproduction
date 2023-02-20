@@ -1,8 +1,0 @@
-{
-  "issueNumber": 18506,
-  "info": "Unable to deactivate user if they are the last owner of a room [user-last-owner]",
-  "url": "https://github.com/RocketChat/Rocket.Chat/issues/18506",
-  "version": "3.5.1",
-  "dependencies": {
-  }
-}

@@ -1,9 +1,0 @@
-Exception in defer callback: TypeError: dompurify.sanitize is not a function
-    at Object.marked (app/markdown/lib/parser/marked/marked.js:115:23)
-    at MarkdownClass.parseMessageNotEscaped (app/markdown/lib/markdown.js:45:11)
-    at DeeplAutoTranslate.tokenizeCode (app/autotranslate/server/autotranslate.js:196:22)
-    at DeeplAutoTranslate.tokenize (app/autotranslate/server/autotranslate.js:131:18)
-    at app/autotranslate/server/autotranslate.js:277:26
-    at Meteor.EnvironmentVariable.EVp.withValue (packages/meteor.js:1234:12)
-    at packages/meteor.js:550:25
-    at runWithEnvironment (packages/meteor.js:1286:24)

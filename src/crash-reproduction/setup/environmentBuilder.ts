@@ -42,7 +42,7 @@ class EnvironmentBuilder {
     let error = false;
     try {
       if (crash.nodeVersion) {
-        stdout = execSync(`source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh; npm config delete prefix; nvm install ${crash.nodeVersion}; npm --prefix ${crashFolder} i`).toString();
+        stdout = execSync(`source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
       } else {
         stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
       }
@@ -80,12 +80,12 @@ class EnvironmentBuilder {
     const tarName = `${crash.project}-${crash.version}.tar.gz`;
     const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
     const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
-    // if (crash.setup.download) {
-    //   execSync(`wget -O ${tarFile} ` + crash.setup.download.url);
-    //   if (crash.setup.download.unpack === 'tar.gz') {
-    //     execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
-    //   }
-    // }
+    if (crash.setup.download) {
+      execSync(`wget -O ${tarFile} ` + crash.setup.download.url);
+      if (crash.setup.download.unpack === 'tar.gz') {
+        execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+      }
+    }
   }
 
   /**
