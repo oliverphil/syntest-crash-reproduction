@@ -66,21 +66,32 @@ ls -la
 #
 # Copy the input file to the local directory
 #
-cp -r /vol/grid-solar/sgeusers/oliverphil/syntest-crash-reproduction .
-cp -r /vol/grid-solar/sgeusers/oliverphil/syntest-core .
+git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-crash-reproduction.git
+git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-framework.git
+mv syntest-framework syntest-core
 echo ==WHATS THERE HAVING COPIED STUFF OVER AS INPUT==
 ls -la
 
 # Install NPM packages
+export NVM_DIR="/vol/grid-solar/sgeusers/oliverphil/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export npm_config_cache=$(mktemp -d)
+nvm install 18.14.1
 node --version
 which node
-npm --prefix syntest-core i
-npm --prefix syntest-crash-reproduction i
+cd syntest-core
+npm i
+ls
+npm run build
+cd ../syntest-crash-reproduction
+git checkout incorporate-crash-handling
+npm i
+ls
 
 #
 # Note that we need the full path to this utility, as it is not on the PATH
 #
-cd syntest-crash-reproduction
 npm run build
 npm run run > output.log 2> stderr.log
 #

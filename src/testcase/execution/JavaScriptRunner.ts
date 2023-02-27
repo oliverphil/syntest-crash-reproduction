@@ -109,13 +109,6 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     return runner;
   }
 
-  customiser(value) {
-    console.log('type of', typeof value)
-    if (isInt8Array(value)) {
-      return value.slice();
-    }
-  }
-
   async execute(
     subject: JavaScriptSubject,
     testCase: JavaScriptTestCase
