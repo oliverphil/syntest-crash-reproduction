@@ -82,6 +82,7 @@ import { ActionType } from "./analysis/static/parsing/ActionType";
 import { existsSync } from "fs";
 import * as fs from "fs";
 import { defaultBabelOptions } from "./configs/DefaultBabelConfig";
+import {StackTrace} from "./crash-reproduction/types/stackTraceTypes";
 
 const originalrequire = require("original-require");
 const Mocha = require('mocha')
@@ -96,6 +97,8 @@ export class Launcher {
 
   private coveredInPath = new Map<string, Archive<JavaScriptTestCase>>();
   private timings = [];
+
+  private crashes: Crash[];
 
   public async run() {
     try {
@@ -195,8 +198,8 @@ export class Launcher {
     });
 
     crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
-
     crashesToRemove = null;
+    this.crashes = crashes;
 
     // const crashSplit = {};
     // crashes.forEach(crash => {
@@ -466,11 +469,13 @@ export class Launcher {
       // TODO return types
     }
 
+    const stackTrace = this.crashes.find(c => targetPath.includes(c.crashId)).stackTrace;
     const currentSubject = new JavaScriptSubject(
       path.basename(targetPath),
       targetMeta,
       cfg,
-      [...functionMap.values()]
+      [...functionMap.values()],
+      stackTrace
     );
 
     if (!currentSubject.getPossibleActions().length) {

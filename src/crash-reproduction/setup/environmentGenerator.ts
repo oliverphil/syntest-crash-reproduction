@@ -96,7 +96,7 @@ class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes.filter(crash => crash.crashId !== 'atom-22772');
+    return crashes.filter(crash => crash.crashId === 'http-server-451');
   }
 
   /**

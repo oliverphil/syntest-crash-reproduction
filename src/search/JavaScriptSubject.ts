@@ -12,6 +12,8 @@ import { IdentifierDescription } from "../analysis/static/parsing/IdentifierDesc
 import { ActionVisibility } from "../analysis/static/parsing/ActionVisibility";
 import { ActionType } from "../analysis/static/parsing/ActionType";
 import { JavaScriptBranchObjectiveFunction } from "../criterion/JavaScriptBranchObjectiveFunction";
+import {EvoCrashTraceDistance} from "../criterion/EvoCrashTraceDistance";
+import {StackError, StackTrace} from "../crash-reproduction/types/stackTraceTypes";
 
 export enum SubjectType {
   class,
@@ -29,6 +31,7 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
   private _type: SubjectType;
 
   private _typeScores: Map<string, TypeScore[]>;
+  private _stackTrace: StackTrace;
 
   reevaluateTypes() {
     // TODO find correlations
@@ -43,16 +46,18 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
     path: string,
     targetMeta: JavaScriptTargetMetaData,
     cfg: CFG,
-    functions: ActionDescription[]
+    functions: ActionDescription[],
+    stackTrace: StackTrace
   ) {
-    super(path, targetMeta.name, cfg);
+    super(path, targetMeta.name, cfg, stackTrace);
     // TODO SearchSubject should just use the targetMetaData
     this._type = targetMeta.type;
     this._functions = functions;
     this._typeScores = new Map();
+    this._stackTrace = stackTrace;
   }
 
-  protected _extractObjectives(): void {
+  protected _extractObjectives(stackTrace: StackTrace): void {
     // Branch objectives
     // Find all branch nodes
     const branches = this._cfg.nodes.filter(
@@ -70,11 +75,12 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
             .forEach((childNode) => {
               // Add objective function
               this._objectives.set(
-                new JavaScriptBranchObjectiveFunction(
+                new EvoCrashTraceDistance(
                   this,
                   childNode.id,
                   branchNode.lines[0],
-                  edge.branchType
+                  edge.branchType,
+                  stackTrace
                 ),
                 []
               );
