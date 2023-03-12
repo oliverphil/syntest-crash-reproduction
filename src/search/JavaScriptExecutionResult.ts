@@ -52,7 +52,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    * Exception of execution.
    * @protected
    */
-  protected _exception: string;
+  protected _exception: Error;
 
   /**
    * Constructor.
@@ -66,7 +66,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
     status: JavaScriptExecutionStatus,
     traces: Datapoint[],
     duration: number,
-    exception: string = null
+    exception: Error = null
   ) {
     this._status = status;
     this._traces = traces;
@@ -101,7 +101,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
   /**
    * @inheritDoc
    */
-  public getExceptions(): string {
+  public getExceptions(): Error {
     return this._exception;
   }
 
@@ -116,7 +116,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    * @inheritDoc
    */
   public hasExceptions(): boolean {
-    return this._exception !== null;
+    return !!this._exception;
   }
 
   /**

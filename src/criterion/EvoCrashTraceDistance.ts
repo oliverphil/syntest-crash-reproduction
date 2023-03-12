@@ -1,6 +1,7 @@
 import {ObjectiveFunction, Encoding, Node, NodeType, SearchSubject} from '@syntest/core';
 import {BranchDistance} from './BranchDistance';
 import {StackError, StackTrace} from "../crash-reproduction/types/stackTraceTypes";
+import * as StackTraceUtils from "../utils/stackTraceUtils";
 
 export class EvoCrashTraceDistance<T extends Encoding> implements ObjectiveFunction<T> {
     private _stackTrace: StackTrace;
@@ -28,42 +29,9 @@ export class EvoCrashTraceDistance<T extends Encoding> implements ObjectiveFunct
             return Number.MAX_VALUE;
         }
 
-        let statementCovered = 1;
-        let exceptionCovered = 1;
-        let stackTraceSimilarity = 1;
-
-        let frame = this._stackTrace.trace[0];
-
-        const traces = executionResult
-            .getTraces()
-            .filter(trace => {
-                return trace.line === frame.lineNumber &&
-                    trace.path.includes(frame.file) &&
-                    trace.hits > 0
-            });
-
-        if (traces.length >= 1) {
-            statementCovered = 0;
-        }
-
-        const checkException = (exception, expectedException: StackError) => {
-            return expectedException.errorMessage.includes(exception);
-        }
-
-        if (executionResult.hasExceptions()) {
-            const exceptions = executionResult.getExceptions();
-            if (Array.isArray(exceptions)) {
-                exceptions.forEach(e => {
-                    if (checkException(e, this._stackTrace.error)) {
-                        exceptionCovered = 0;
-                    }
-                });
-            } else {
-                if (checkException(exceptions, this._stackTrace.error)) {
-                    exceptionCovered = 0;
-                }
-            }
-        }
+        const statementCovered = StackTraceUtils.checkExceptionLineCovered(executionResult, this._stackTrace);
+        const exceptionCovered = StackTraceUtils.checkExceptionsMatch(executionResult, this._stackTrace.error);
+        const stackTraceSimilarity = StackTraceUtils.checkStackTraceSimilarity(executionResult, this._stackTrace);
 
         return 3 * statementCovered + 2 * exceptionCovered + stackTraceSimilarity;
     }
