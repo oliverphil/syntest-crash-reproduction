@@ -250,9 +250,12 @@ export class JavaScriptSuiteBuilder {
         continue;
       }
 
+      const testCase = archive.getEncoding(objective) as JavaScriptTestCase;
+      console.log("Function Distance for ", targetName, testCase.getDistance(objective));
+
       reducedArchive
         .get(targetName)
-        .push(archive.getEncoding(objective) as JavaScriptTestCase);
+        .push(testCase);
     }
 
     return reducedArchive;

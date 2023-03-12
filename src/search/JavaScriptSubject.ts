@@ -60,53 +60,59 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
   protected _extractObjectives(stackTrace: StackTrace): void {
     // Branch objectives
     // Find all branch nodes
-    const branches = this._cfg.nodes.filter(
-      (node) => node.type === NodeType.Branch
+    // const branches = this._cfg.nodes.filter(
+    //   (node) => node.type === NodeType.Branch
+    // );
+    //
+    // branches.forEach((branchNode) => {
+    //   this._cfg.edges
+    //     // Find all edges from the branch node
+    //     .filter((edge) => edge.from === branchNode.id)
+    //     .forEach((edge) => {
+    //       this._cfg.nodes
+    //         // Find nodes with incoming edge from branch node
+    //         .filter((node) => node.id === edge.to)
+    //         .forEach((childNode) => {
+    //           // Add objective function
+    //
+    //         });
+    //     });
+    // });
+
+    this._objectives.set(
+        new EvoCrashTraceDistance(
+            this,
+            stackTrace
+        ),
+        []
     );
 
-    branches.forEach((branchNode) => {
-      this._cfg.edges
-        // Find all edges from the branch node
-        .filter((edge) => edge.from === branchNode.id)
-        .forEach((edge) => {
-          this._cfg.nodes
-            // Find nodes with incoming edge from branch node
-            .filter((node) => node.id === edge.to)
-            .forEach((childNode) => {
-              // Add objective function
-              this._objectives.set(
-                new EvoCrashTraceDistance(
-                  this,
-                  childNode.id,
-                  branchNode.lines[0],
-                  edge.branchType,
-                  stackTrace
-                ),
-                []
-              );
-            });
-        });
-    });
+
 
     for (const objective of this._objectives.keys()) {
       const childrenObj = this.findChildren(objective);
-      this._objectives.get(objective).push(...childrenObj);
+      this._objectives.get(objective).push(new EvoCrashTraceDistance(
+          this,
+          stackTrace
+      ));
     }
 
     // FUNCTION objectives
-    this._cfg.nodes
-      // Find all root function nodes
-      .filter((node) => node.type === NodeType.Root)
-      .forEach((node) => {
-        // Add objective
-        const functionObjective = new FunctionObjectiveFunction(
-          this,
-          node.id,
-          node.lines[0]
-        );
-        const childrenObj = this.findChildren(functionObjective);
-        this._objectives.set(functionObjective, childrenObj);
-      });
+    // this._cfg.nodes
+    //   // Find all root function nodes
+    //   .filter((node) => node.type === NodeType.Root)
+    //   .forEach((node) => {
+    //     // Add objective
+    //     const functionObjective = new EvoCrashTraceDistance(
+    //       this,
+    //       node.id,
+    //       node.lines[0],
+    //       false,
+    //       stackTrace
+    //     );
+    //     const childrenObj = this.findChildren(functionObjective);
+    //     this._objectives.set(functionObjective, childrenObj);
+    //   });
   }
 
   findChildren(

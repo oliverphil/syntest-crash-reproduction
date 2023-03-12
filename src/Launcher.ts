@@ -62,7 +62,7 @@ import { JavaScriptRunner } from "./testcase/execution/JavaScriptRunner";
 import { JavaScriptRandomSampler } from "./testcase/sampling/JavaScriptRandomSampler";
 import { JavaScriptTreeCrossover } from "./search/crossover/JavaScriptTreeCrossover";
 import {
-  collectCoverageData,
+  collectCoverageData, collectFitnessValues,
   collectInitialVariables,
   collectStatistics,
 } from "./utils/collection";
@@ -83,6 +83,7 @@ import { existsSync } from "fs";
 import * as fs from "fs";
 import { defaultBabelOptions } from "./configs/DefaultBabelConfig";
 import {StackTrace} from "./crash-reproduction/types/stackTraceTypes";
+import {EvoCrashSearchAlgorithm} from "./search/metaheuristics/evolutionary/EvoCrashSearchAlgorithm";
 
 const originalrequire = require("original-require");
 const Mocha = require('mocha')
@@ -497,7 +498,7 @@ export class Launcher {
 
     const sampler = new JavaScriptRandomSampler(currentSubject, targetPool);
     const crossover = new JavaScriptTreeCrossover();
-    const algorithm = createAlgorithmFromConfig(sampler, runner, crossover);
+    const algorithm = new EvoCrashSearchAlgorithm(sampler, runner, crossover);
 
     await suiteBuilder.clearDirectory(Properties.temp_test_directory);
 
@@ -571,6 +572,8 @@ export class Launcher {
     collectCoverageData(collector, archive, "branch");
     collectCoverageData(collector, archive, "statement");
     collectCoverageData(collector, archive, "function");
+
+    collectFitnessValues(collector, archive);
 
     const statisticsDirectory = path.resolve(Properties.statistics_directory);
 

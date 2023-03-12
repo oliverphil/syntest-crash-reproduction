@@ -3,10 +3,10 @@
   "files": [],
   "include": [],
   "exclude": [],
-  "references": [{ "path": "src/" }],
+  "references": [{ "path": "src/" }, { "path":  "../syntest-core/src/" }],
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
-    "lib": ["es2019"]
+    "lib": ["es2020"]
   }
 }

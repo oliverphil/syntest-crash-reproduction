@@ -111,6 +111,17 @@ export function collectStatistics<T extends Encoding>(
   );
 }
 
+export function collectFitnessValues<T extends Encoding>(
+    collector: StatisticsCollector<T>,
+    archive: Archive<T>,
+): void {
+  archive.getObjectives().forEach(objective => {
+    const testCase = archive.getEncoding(objective);
+    const distance = testCase.getDistance(objective);
+    collector.recordVariable(RuntimeVariable.OBJECTIVE_VALUE, distance.toString());
+  });
+}
+
 export function collectCoverageData<T extends Encoding>(
   collector: StatisticsCollector<T>,
   archive: Archive<T>,
