@@ -77,7 +77,7 @@ class EnvironmentGenerator {
       console.log(crashName);
       const crash: Crash = {
         project: projectName,
-        stackTrace: StackTraceProcessor.process(logFile.toString()),
+        stackTrace: StackTraceProcessor.process(logFile.toString(), true),
         ...JSON.parse(crashFile.toString()),
         crashId: crashName,
         seeded: value[4]

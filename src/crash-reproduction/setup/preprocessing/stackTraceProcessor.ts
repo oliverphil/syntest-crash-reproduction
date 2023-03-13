@@ -9,10 +9,10 @@ class StackTraceProcessor {
    * @param {string} stackTrace the stack trace
    * @return {StackTrace} a StackTrace object
    */
-  public static process(stackTrace: string): StackTrace {
+  public static process(stackTrace: string, verbose = false): StackTrace {
     const lines: string[] = stackTrace.split('\n');
     const error: StackError = this.parseError(lines[0]);
-    const trace: StackFrame[] = this.parseTrace(lines.slice(1));
+    const trace: StackFrame[] = this.parseTrace(lines.slice(1), verbose);
     Function;
     return {
       error,
@@ -62,7 +62,7 @@ class StackTraceProcessor {
    * @return {StackFrame[]} information parsed from the stack trace
    * @private
    */
-  private static parseTrace(lines: string[]): StackFrame[] {
+  private static parseTrace(lines: string[], verbose: boolean): StackFrame[] {
     const moduleRegex: RegExp =
       /at\s(.+)\s\(([\d\w~\/\\\-<>._?@+]+):(\d+):?(\d+)?\)/m;
     const fileRegex: RegExp =
@@ -119,7 +119,7 @@ class StackTraceProcessor {
             isEmbeddedOrAnonymous,
             internal: true,
           });
-        } else {
+        } else if (verbose) {
           console.error(`Stack frame not parsed: ${line}`);
         }
       }
