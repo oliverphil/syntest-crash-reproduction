@@ -29,7 +29,7 @@ class StackTraceProcessor {
   public static processCrashStack(stackTrace: string[]): StackTrace {
     const lines: string[] = stackTrace.slice(4);
     const error: StackError = this.parseError(lines[0]);
-    const trace: StackFrame[] = this.parseTrace(lines.slice(1));
+    const trace: StackFrame[] = this.parseTrace(lines.slice(1), true);
     return {
       error,
       trace,

@@ -137,3 +137,4 @@ node-v*/
 benchmark/crashes/atom/*/atom-*/
 
 *.csv
+.DS_Store
