@@ -42,11 +42,10 @@ class EnvironmentBuilder {
     let error = false;
     try {
       if (crash.nodeVersion) {
-        stdout = execSync(`source $NVM_DIR/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
+        stdout = execSync(`unset npm_config_prefix && source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
       } else {
         stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
       }
-      EnvironmentBuilder.handleSetupOptions(crash, crashFolder);
     } catch (e) {
       stdout = e.stdout.toString();
       stderr = e.stderr.toString();

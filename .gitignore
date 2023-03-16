@@ -138,3 +138,4 @@ benchmark/crashes/atom/*/atom-*/
 
 *.csv
 .DS_Store
+results
