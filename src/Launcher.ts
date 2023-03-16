@@ -614,7 +614,7 @@ export class Launcher {
       true,
       false
     );
-    await suiteBuilder.runSuite(paths, false, targetPool);
+    await suiteBuilder.runSuite(paths, false, targetPool, archive);
 
     // reset states
     await suiteBuilder.clearDirectory(Properties.temp_test_directory);
@@ -630,7 +630,16 @@ export class Launcher {
       false,
       true
     );
-    await suiteBuilder.runSuite(paths, true, targetPool);
+    await suiteBuilder.runSuite(paths, true, targetPool, archive);
+
+    let bestFitness = Number.MAX_SAFE_INTEGER;
+    archive.getObjectives().forEach(obj => {
+      const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
+      const distance = obj.calculateDistance(testCase);
+      if (distance < bestFitness) bestFitness = distance;
+    });
+
+
 
     const originalSourceDir = path
       .join(

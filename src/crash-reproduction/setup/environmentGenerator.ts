@@ -96,7 +96,7 @@ class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes.filter(crash => crash.crashId !== 'atom-22772' && crash.crashId !== 'eslint-14829');
+    return crashes.filter(crash => crash.crashId !== 'atom-22772');
   }
 
   /**

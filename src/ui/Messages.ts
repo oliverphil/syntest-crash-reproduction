@@ -79,7 +79,7 @@ export default class Messages {
         ).padStart(20, " ")} | ${String(report["function"]).padStart(
           20,
           " "
-        )} | ${name}`
+        )} | ${String(report["distance"] === Number.MAX_SAFE_INTEGER ? "N/A" : report["distance"]).padStart(20, " ")} | ${name}`
       );
     }
     return `${String(report["branch"]).padStart(20, " ")} | ${String(
@@ -87,6 +87,6 @@ export default class Messages {
     ).padStart(20, " ")} | ${String(report["function"]).padStart(
       20,
       " "
-    )} | ${name}`;
+    )} | ${String(report["distance"] === Number.MAX_SAFE_INTEGER ? "N/A" : report["distance"]).padStart(20, " ")} | ${name}`;
   }
 }

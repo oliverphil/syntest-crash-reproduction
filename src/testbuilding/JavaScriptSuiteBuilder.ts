@@ -104,7 +104,7 @@ export class JavaScriptSuiteBuilder {
     }
   }
 
-  async runSuite(paths: string[], report: boolean, targetPool: TargetPool) {
+  async runSuite(paths: string[], report: boolean, targetPool: TargetPool, archive: Archive<JavaScriptTestCase>) {
     const runner: Runner = await this.runner.run(paths);
 
     const stats = runner.stats;
@@ -127,6 +127,7 @@ export class JavaScriptSuiteBuilder {
           branch: "Branch",
           statement: "Statement",
           function: "Function",
+          distance: "Distance"
         }),
         "true",
       ]);
@@ -134,7 +135,8 @@ export class JavaScriptSuiteBuilder {
       const overall = {
         branch: 0,
         statement: 0,
-        function: 0
+        function: 0,
+        distance: Number.MAX_SAFE_INTEGER
       }
       let totalBranches = 0
       let totalStatements = 0
@@ -150,6 +152,7 @@ export class JavaScriptSuiteBuilder {
           branch: 0,
           statement: 0,
           function: 0,
+          distance: Number.MAX_SAFE_INTEGER
         };
 
         for (const statementKey of Object.keys(data.s)) {
@@ -173,13 +176,38 @@ export class JavaScriptSuiteBuilder {
         totalBranches += Object.keys(data.b).length * 2;
         totalFunctions += Object.keys(data.f).length;
 
+        let distance = Number.MAX_SAFE_INTEGER;
+        const obj = archive.getObjectives().find(obj => file.includes(obj.getSubject().path));
+        if (obj) {
+          const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
+          distance = obj.calculateDistance(testCase);
+          summary['distance'] = distance;
+          if (distance < overall['distance']) {
+            overall['distance'] = distance;
+          }
+        }
+
+        archive.getObjectives().filter(obj => file.includes(obj.getSubject().path)).forEach(obj => {
+          const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
+          const distance = obj.calculateDistance(testCase);
+          if (distance < summary["distance"]) summary["distance"] = distance;
+          if (distance < overall["distance"]) overall["distance"] = distance;
+        });
+
         getUserInterface().report("report-coverage", [file, <string>(<unknown>{
             statement:
               summary["statement"] + " / " + Object.keys(data.s).length,
             branch: summary["branch"] + " / " + Object.keys(data.b).length * 2,
             function: summary["function"] + " / " + Object.keys(data.f).length,
+            distance: summary["distance"]
           }), "false"]);
       }
+
+      archive.getObjectives().forEach(obj => {
+        const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
+        const distance = obj.calculateDistance(testCase);
+        if (distance < overall["distance"]) overall["distance"] = distance;
+      });
 
       overall["statement"] /= totalStatements;
       overall["branch"] /= totalBranches;
@@ -189,6 +217,7 @@ export class JavaScriptSuiteBuilder {
           statement: overall["statement"] * 100 + " %",
           branch: overall["branch"] * 100 + " %",
           function: overall["function"] * 100 + " %",
+          distance: overall["distance"]
         }), "true"]);
     }
 
