@@ -85,7 +85,7 @@ npm i
 ls
 npm run build
 cd ../syntest-crash-reproduction
-git checkout incorporate-crash-handling
+git checkout reuse-crashing-executions
 npm i
 ls
 
