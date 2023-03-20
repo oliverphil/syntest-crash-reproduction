@@ -69,7 +69,7 @@ class EnvironmentGenerator {
         ];
       }));
     })
-    const crashes = crashInfo.map((value) => {
+    const crashes = crashInfo.filter(crash => crash[1] !== 'atom-22772' && crash[1] !== "webpack-9114").map((value) => {
       const projectName = value[0];
       const crashName = value[1];
       const crashFile = value[2];
@@ -97,7 +97,7 @@ class EnvironmentGenerator {
     });
 
     // return crashes.filter(crash => crash.seeded);
-    return crashes.filter(crash => crash.crashId !== 'atom-22772' && crash.crashId !== "webpack-9114");
+    return crashes;
   }
 
   /**
