@@ -101,9 +101,9 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     let runner: Runner = null;
 
     // Finally, run mocha.
-    await new Promise((resolve) => {
+    await new Promise((resolve) => setTimeout(() => {
       runner = mocha.run((failures) => resolve(failures));
-    });
+    }, Properties.search_time * 1000));
 
     await mocha.dispose();
     return runner;
