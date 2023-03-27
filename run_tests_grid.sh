@@ -66,8 +66,14 @@ ls -la
 #
 # Copy the input file to the local directory
 #
-git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-crash-reproduction.git
-git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-framework.git
+until git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-crash-reproduction.git; do
+  echo Syntest Crash Reproduction Clone Failed
+  sleep 10
+done
+until git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-framework.git; do
+  echo Syntest Core Clone Failed
+  sleep 10
+done
 mv syntest-framework syntest-core
 echo ==WHATS THERE HAVING COPIED STUFF OVER AS INPUT==
 ls -la

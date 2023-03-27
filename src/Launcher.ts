@@ -402,6 +402,7 @@ export class Launcher {
     this.timings.push({ time: Date.now(), what: "start testing targets" });
 
     for (const target of targetPool.targets) {
+      console.log("Target:", target.canonicalPath);
       const archive = await this.testTarget(
         targetPool,
         target.canonicalPath,
