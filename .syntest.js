@@ -10,7 +10,7 @@ module.exports = {
   explore_illegal_values: true,
 
   algorithm: "DynaMOSA",
-  search_time: 5,
+  search_time: 30,
   total_time: 60000,
   iteration_budget: 1000000,
 
