@@ -21,6 +21,7 @@ import {
   getUserInterface,
   Properties,
   TargetPool,
+  ExceptionObjectiveFunction
 } from "@syntest/core";
 import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
 import {
@@ -177,7 +178,7 @@ export class JavaScriptSuiteBuilder {
         totalFunctions += Object.keys(data.f).length;
 
         let distance = Number.MAX_SAFE_INTEGER;
-        const obj = archive.getObjectives().find(obj => file.includes(obj.getSubject().path));
+        const obj = archive.getObjectives().filter(objective => !(objective instanceof ExceptionObjectiveFunction)).find(obj => file.includes(obj.getSubject().path));
         if (obj) {
           const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
           distance = obj.calculateDistance(testCase);
@@ -187,7 +188,7 @@ export class JavaScriptSuiteBuilder {
           }
         }
 
-        archive.getObjectives().filter(obj => file.includes(obj.getSubject().path)).forEach(obj => {
+        archive.getObjectives().filter(obj => file.includes(obj.getSubject().path) && !(obj instanceof ExceptionObjectiveFunction)).forEach(obj => {
           const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
           const distance = obj.calculateDistance(testCase);
           if (distance < summary["distance"]) summary["distance"] = distance;
@@ -203,7 +204,7 @@ export class JavaScriptSuiteBuilder {
           }), "false"]);
       }
 
-      archive.getObjectives().forEach(obj => {
+      archive.getObjectives().filter(objective => !(objective instanceof ExceptionObjectiveFunction)).forEach(obj => {
         const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
         const distance = obj.calculateDistance(testCase);
         if (distance < overall["distance"]) overall["distance"] = distance;

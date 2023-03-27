@@ -45,6 +45,7 @@ import {
   SummaryWriter,
   TerminationManager,
   TotalTimeBudget,
+    ExceptionObjectiveFunction
 } from "@syntest/core";
 
 import { JavaScriptTestCase } from "./testcase/JavaScriptTestCase";
@@ -634,7 +635,7 @@ export class Launcher {
     await suiteBuilder.runSuite(paths, true, targetPool, archive);
 
     let bestFitness = Number.MAX_SAFE_INTEGER;
-    archive.getObjectives().forEach(obj => {
+    archive.getObjectives().filter(objective => !(objective instanceof ExceptionObjectiveFunction)).forEach(obj => {
       const testCase = archive.getEncoding(obj) as JavaScriptTestCase;
       const distance = obj.calculateDistance(testCase);
       if (distance < bestFitness) bestFitness = distance;
