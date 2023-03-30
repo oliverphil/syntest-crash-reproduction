@@ -44,6 +44,7 @@ class EnvironmentGenerator {
       return [projectName, fs.readdirSync(`${assetDir}/seeded/${projectName}`), true];
     });
     assetSubDirs.push(...seededAssetSubDirs);
+    assetSubDirs.reverse();
     const projectsArray = assetSubDirs.map((value) => {
       const projectsArray= [];
       (value[1] as string[]).forEach((p) => {
