@@ -3,6 +3,7 @@ import {Crash, Project, PackageFormat} from '../types/importTypes';
 import StackTraceProcessor from './preprocessing/stackTraceProcessor';
 import {execSync} from "child_process";
 import { createAssignment } from 'typescript';
+import {getEnvironmentData} from "worker_threads";
 
 /**
  * Generate environments for each crash to be reproduced
@@ -32,10 +33,15 @@ class EnvironmentGenerator {
    */
   loadAssets(): Crash[] {
     console.log('Loading Crashes... ');
+    let project = undefined;
+    if (process.env.SYNTEST_PROJECT) {
+      project = process.env.SYNTEST_PROJECT;
+    }
     const assetDir = './benchmark/crashes';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
-        && value !== 'seeded');
-    const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) => value !== 'http-server' && value !== '');
+        && value !== 'seeded' && (!project || value === project));
+    const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) =>
+        value !== 'http-server' && value !== '' && (!project || value === project));
     const assetSubDirs = assetDirContents.map((projItem) => {
       return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
     });
