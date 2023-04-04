@@ -101,6 +101,14 @@ ls
 #
 npm run build
 npm run run > output.log 2> stderr.log
+
+project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
+
+for project in "${project_array[@]}"; do
+  export SYNTEST_PROJECT=${project};
+  npm run run > output_"${project}".log 2> stderr_"${project}".log
+done
+
 #
 echo ==AND NOW, HAVING DONE SOMTHING USEFUL AND CREATED SOME OUTPUT==
 ls -la
@@ -110,8 +118,12 @@ ls -la
 #  (really should check that directory exists too, but this is just a test)
 #
 mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
-cp output.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_$SGE_TASK_ID.log
-cp stderr.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_$SGE_TASK_ID.log
+for project in "${project_array[@]}"; do
+  cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
+  cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
+done
+# cp output.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_$SGE_TASK_ID.log
+# cp stderr.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_$SGE_TASK_ID.log
 
 #
 echo "Ran through OK"
