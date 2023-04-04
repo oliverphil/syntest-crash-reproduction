@@ -3,12 +3,11 @@
 mkdir experiment_runs
 npm run build
 
-project_array=[ 'atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack' ];
+project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
 
 for (( i = 0; i < 15; i++ )); do
-  for (( proj_index = 0; proj_index < ${project_array[@]}; proj_index++ )); do
-    SYNTEST_PROJECT=project_array[proj_index];
-    export SYNTEST_PROJECT=project_array[proj_index];
-    npm run run > output_$((SYNTEST_PROJECT))_$((i + 1)).log 2> stderr_$((SYNTEST_PROJECT))_$((i + 1)).log
+  for project in "${project_array[@]}"; do
+    export SYNTEST_PROJECT=${project};
+    npm run run > output_"${project}"_$((i + 1)).log 2> stderr_"${project}"_$((i + 1)).log
   done
 done
