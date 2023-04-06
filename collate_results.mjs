@@ -2,8 +2,11 @@ import * as fsPromises from 'fs/promises';
 
 const resultRegex = /\s*(\d*\s\/\s\d*)\s\|\s*(\d*\s\/\s\d*)\s\|\s*(\d*\s\/\s\d*)\s\|\s*([\d\.]*)\s\|\s\/.*\/syntest-crash-reproduction\/benchmark\/crashes\/(?:seeded)?\/?([A-Za-z-]*)\/([A-Za-z\d-]*)\/node_modules\/(.*)/
 const resultFiles = [];
+const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
 for (let i = 1; i <= 30; i++) {
-    resultFiles.push(`results/output_${i}.log`);
+    for (let project of projects) {
+        resultFiles.push(`results/output_${project}_${i}.log`);
+    }
 }
 
 console.log(resultFiles);
@@ -30,7 +33,9 @@ for (let i = 0; i < resultFiles.length; i++) {
         }
 
         console.log('open file');
-        const outputFile = await fsPromises.open(`results/output_${i + 1}.csv`, 'w');
+        const outfile = `${resultFile.substring(0, resultFile.length - 4)}.csv`;
+        const outputFile = await fsPromises.open(outfile, 'w');
+        console.log(outfile);
         console.log('write to file');
         await outputFile.writeFile(regexResults);
     } catch (e) { console.log(e); }
