@@ -60,7 +60,8 @@ function stackTraceDistance(resultTrace: StackFrame[], expectedTrace: StackFrame
         for (let j = position + 1; j < resultTrace.length; j++) {
             let dist = 1;
             const resultElement = resultTrace[j];
-            dist = stackElementsDistance(resultElement, targetElement);
+            // dist = stackElementsDistance(resultElement, targetElement);
+            dist = stackElementsDistanceNoLineNumbers(resultElement, targetElement);
             if (dist < minDistance) {
                 minDistance = dist;
                 position = j;
@@ -93,6 +94,20 @@ function stackElementsDistance(resultElement: StackFrame, targetElement: StackFr
                 elementDistance = Math.abs((resultElement.lineNumber || Number.MAX_SAFE_INTEGER) -
                     (targetElement.lineNumber || Number.MAX_SAFE_INTEGER));
             }
+        }
+    }
+    return normalise(elementDistance);
+}
+
+export function stackElementsDistanceNoLineNumbers(resultElement: StackFrame, targetElement: StackFrame): number {
+    let elementDistance = 0;
+    if (!resultElement.file.includes(targetElement.file)) {
+        elementDistance += 3;
+    } else {
+        if (resultElement.method !== targetElement.method) {
+            elementDistance += 2;
+        } else {
+            elementDistance = 0.0;
         }
     }
     return normalise(elementDistance);
