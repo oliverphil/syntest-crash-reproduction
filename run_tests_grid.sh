@@ -92,7 +92,7 @@ npm i
 ls
 npm run build
 cd ../syntest-crash-reproduction
-# git checkout main
+git checkout evolutionary-experiments
 npm i
 ls
 
