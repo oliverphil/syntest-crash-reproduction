@@ -30,9 +30,10 @@ export class EvoCrashTraceDistance<T extends Encoding> implements ObjectiveFunct
         }
 
         // const statementCovered = StackTraceUtils.checkExceptionLineCovered(executionResult, this._stackTrace);
-        const exceptionCovered = StackTraceUtils.checkExceptionsMatch(executionResult, this._stackTrace.error);
-        const stackTraceSimilarity = StackTraceUtils.checkStackTraceSimilarity(executionResult, this._stackTrace);
-
-        return /* 3 * statementCovered +*/ 2 * exceptionCovered + stackTraceSimilarity;
+        // const exceptionCovered = StackTraceUtils.checkExceptionsMatch(executionResult, this._stackTrace.error);
+        // const stackTraceSimilarity = StackTraceUtils.checkStackTraceSimilarity(executionResult, this._stackTrace);
+        //
+        // return 3 * statementCovered + 2 * exceptionCovered + stackTraceSimilarity;
+        return StackTraceUtils.rightExceptionRaised(executionResult, this._stackTrace.error);
     }
 }

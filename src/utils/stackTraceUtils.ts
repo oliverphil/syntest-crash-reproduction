@@ -20,6 +20,72 @@ export function checkExceptionsMatch(executionResult: ExecutionResult, expectedS
     return 1;
 }
 
+export function rightExceptionRaised(executionResult: ExecutionResult, expectedStackException: StackError): number {
+    return checkExceptionsMatch(executionResult, expectedStackException);
+}
+
+export function rightExceptionRaisedOnRightLine(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
+    const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
+    return normalise(exceptionsMatch + exceptionLineCovered);
+}
+
+export function wrongExceptionRaisedOnRightLine(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+    const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
+    return normalise(exceptionsMatch + exceptionLineCovered);
+}
+
+export function rightExceptionRaisedInRightFunction(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
+    const functionMatch = checkFunctionsMatch(executionResult, stackTrace);
+    return normalise(exceptionsMatch + functionMatch);
+}
+
+export function rightExceptionRaisedInWrongFunction(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
+    const functionMatch = 1 - checkFunctionsMatch(executionResult, stackTrace);
+    return normalise(exceptionsMatch + functionMatch);
+}
+
+export function reachedLineOfExceptionWithoutCrashing(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult.hasExceptions()) {
+        return checkExceptionLineCovered(executionResult, stackTrace);
+    }
+    return 1;
+}
+
+export function reachedLineOfStackTraceEntry(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    let distance = 1;
+
+    const frame = stackTrace.trace[stackTrace.trace.length - 1];
+
+    const traces = executionResult
+        .getTraces()
+        .filter(trace => {
+            return trace.line === frame.lineNumber &&
+                trace.path.includes(frame.file) &&
+                trace.hits > 0
+        });
+
+    if (traces.length >= 1) {
+        distance = 0;
+    }
+
+    return distance;
+}
+
+function checkFunctionsMatch(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult.hasExceptions()) return 1;
+    const exceptions = executionResult.getExceptions();
+    const actualStackTrace = StackTraceProcessor.process(exceptions.stack);
+    const expectedFunction = stackTrace.trace[0].method;
+    if (actualStackTrace.trace[0].method === expectedFunction) {
+        return 0;
+    }
+    return 1;
+}
+
 function checkExceptionsMessageMatch(expectedException: StackError, actualException: Error) {
     return expectedException.errorMessage.includes(actualException.message);
 }
@@ -60,8 +126,8 @@ function stackTraceDistance(resultTrace: StackFrame[], expectedTrace: StackFrame
         for (let j = position + 1; j < resultTrace.length; j++) {
             let dist = 1;
             const resultElement = resultTrace[j];
-            // dist = stackElementsDistance(resultElement, targetElement);
-            dist = stackElementsDistanceNoLineNumbers(resultElement, targetElement);
+            dist = stackElementsDistance(resultElement, targetElement);
+            // dist = stackElementsDistanceNoLineNumbers(resultElement, targetElement);
             if (dist < minDistance) {
                 minDistance = dist;
                 position = j;
