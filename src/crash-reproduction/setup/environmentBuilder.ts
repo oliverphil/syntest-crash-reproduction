@@ -54,6 +54,7 @@ class EnvironmentBuilder {
     }
     console.log(stdout);
     console.error(stderr);
+    this.handleSetupOptions(crash, crashFolder);
     return error;
   }
 
