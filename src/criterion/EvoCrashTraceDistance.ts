@@ -34,6 +34,6 @@ export class EvoCrashTraceDistance<T extends Encoding> implements ObjectiveFunct
         // const stackTraceSimilarity = StackTraceUtils.checkStackTraceSimilarity(executionResult, this._stackTrace);
         //
         // return 3 * statementCovered + 2 * exceptionCovered + stackTraceSimilarity;
-        return StackTraceUtils.rightExceptionRaisedOnRightLine(executionResult, this._stackTrace);
+        return StackTraceUtils.reachedLineOfStackTraceEntry(executionResult, this._stackTrace);
     }
 }
