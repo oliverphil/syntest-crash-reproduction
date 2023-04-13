@@ -55,6 +55,25 @@ export function reachedLineOfExceptionWithoutCrashing(executionResult: Execution
     return 1;
 }
 
+export function wrongExceptionPartialStackTraceMatch(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    if (executionResult.hasExceptions()) {
+        const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+        const stackTraceSimilarity = checkStackTraceSimilarity(executionResult, stackTrace);
+        return normalise(exceptionsMatch + stackTraceSimilarity);
+    }
+    return 1;
+}
+
+export function someCallHierarchyWithoutCrash(executionResult: ExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult.hasExceptions()) {
+        const traces = executionResult.getTraces();
+        traces.find(trace => {
+           const path = trace.path;
+        });
+    }
+    return 1;
+}
+
 export function reachedLineOfStackTraceEntry(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     let distance = 1;
 
