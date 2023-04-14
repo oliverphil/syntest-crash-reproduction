@@ -103,7 +103,7 @@ class EnvironmentGenerator {
       return crash;
     });
 
-    // return crashes.filter(crash => crash.seeded);
+    // return crashes.filter(crash => crash.project === 'http-server');
     return crashes;
   }
 

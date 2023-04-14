@@ -72,6 +72,11 @@ export class JavaScriptExecutionResult implements ExecutionResult {
     this._traces = traces;
     this._duration = duration;
     this._exception = exception;
+    if (this._exception) {
+      console.log("====== Exception for Dataset =======");
+      console.log(this._exception);
+      console.log("====== End Exception =======")
+    }
   }
 
   /**
