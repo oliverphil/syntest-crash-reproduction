@@ -210,6 +210,9 @@ export class Launcher {
     const targetPools: JavaScriptTargetPool[] = [];
 
     for (const crash of crashes) {
+      console.log("====== Crash to Run ======");
+      console.log(crash.crashId);
+      console.log("====== End Crash to Run ======");
       Properties.include = [];
       Properties.exclude = [];
       // crashes.filter(crash => project === crash.project)
