@@ -133,7 +133,9 @@ export function checkStackTraceSimilarity(executionResult: ExecutionResult, expe
     if (!executionResult.hasExceptions()) return 1;
     const exceptions = executionResult.getExceptions();
     const actualStackTrace = StackTraceProcessor.process(exceptions.stack);
-    return stackTraceDistance(actualStackTrace.trace, expectedStackTrace.trace);
+    const trimmedActualStackTrace = actualStackTrace.trace.filter(t => !t.file.includes('.syntest/tests/tempTest.spec.js'));
+    const trimmedExpectedStackTrace = expectedStackTrace.trace.filter(t => !t.file.includes('.syntest/tests/tempTest.spec.js'));
+    return stackTraceDistance(trimmedActualStackTrace, trimmedExpectedStackTrace);
 }
 
 function stackTraceDistance(resultTrace: StackFrame[], expectedTrace: StackFrame[]): number {
@@ -173,7 +175,9 @@ function stackElementsDistance(resultElement: StackFrame, targetElement: StackFr
         if (resultElement.method !== targetElement.method) {
             elementDistance += 2;
         } else {
-            if (!resultElement.lineNumber && !targetElement.lineNumber) {
+            if (!resultElement.lineNumber && !targetElement.lineNumber ||
+                resultElement.file.includes('.syntest/tests/tempTest.spec.js')
+            ) {
                 elementDistance = 0.0;
             } else {
                 elementDistance = Math.abs((resultElement.lineNumber || Number.MAX_SAFE_INTEGER) -

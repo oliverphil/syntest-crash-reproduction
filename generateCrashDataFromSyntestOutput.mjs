@@ -1,10 +1,10 @@
 import * as fsPromises from 'fs/promises';
 import * as fs from 'fs';
 
-const resultRegex = /======\sException\sfor\sDataset\s=======\n(.*\n(?:\s*at.*\n)*)======\sEnd\sException\s=======/gm
+const resultRegex = /======\sException\sfor\sDataset\s=======\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-for (let i = 1; i <= 30; i++) {
+for (let i = 1; i <= 1; i++) {
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
     }
@@ -12,8 +12,7 @@ for (let i = 1; i <= 30; i++) {
 
 console.log(resultFiles);
 
-// for (let i = 0; i < resultFiles.length; i++) {
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < resultFiles.length; i++) {
     const resultFile = resultFiles[i];
     console.log(resultFile);
     let regexResults = [];
@@ -35,13 +34,21 @@ for (let i = 0; i < 1; i++) {
             }
         }
 
+        const obj = {};
+        let num = 1;
+        for (let trace of regexResults) {
+            obj[`crash${num++}`] = trace;
+        }
+
         console.log(regexResults);
-        // console.log('open file');
-        // const outfile = `${resultFile.substring(0, resultFile.length - 4)}.csv`;
-        // const outputFile = await fsPromises.open(outfile, 'w');
-        // console.log(outfile);
-        // console.log('write to file');
-        // await outputFile.writeFile(regexResults);
+        console.log('open file');
+        const outfile = `${resultFile.substring(0, resultFile.length - 4)}`;
+        const outputFile = await fsPromises.open(outfile + '.json', 'w');
+        console.log(outfile);
+        console.log('write to file');
+        await outputFile.writeFile(JSON.stringify(obj));
+        const altFile = await fsPromises.open(outfile + '.txt', 'w');
+        await altFile.writeFile(regexResults);
     } catch (e) { console.log(e); }
 }
 

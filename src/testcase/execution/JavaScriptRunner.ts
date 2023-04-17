@@ -240,7 +240,6 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       }
 
       const duration = test.duration;
-
       executionResult = new JavaScriptExecutionResult(
         status,
         traces,
