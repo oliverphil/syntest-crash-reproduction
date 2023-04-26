@@ -4,7 +4,7 @@ import * as fs from 'fs';
 const resultRegex = /======\sException\sfor\sDataset\s=======\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-for (let i = 1; i <= 1; i++) {
+for (let i = 1; i <= 20; i++) {
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
     }
@@ -37,7 +37,11 @@ for (let i = 0; i < resultFiles.length; i++) {
         const obj = {};
         let num = 1;
         for (let trace of regexResults) {
-            obj[`crash${num++}`] = trace;
+            let crashNum = `crash${num++}`;
+            obj[crashNum] = {
+                crashNum,
+                trace
+            };
         }
 
         console.log(regexResults);

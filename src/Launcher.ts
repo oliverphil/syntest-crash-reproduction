@@ -473,7 +473,9 @@ export class Launcher {
       // TODO return types
     }
 
-    const stackTrace = this.crashes.find(c => targetPath.includes(c.crashId)).stackTrace;
+    const crash = this.crashes.find(c => targetPath.includes(c.crashId));
+    global.crashId = crash.crashId;
+    const stackTrace = crash.stackTrace;
     const currentSubject = new JavaScriptSubject(
       path.basename(targetPath),
       targetMeta,
