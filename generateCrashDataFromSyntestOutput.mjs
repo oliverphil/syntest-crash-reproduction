@@ -80,11 +80,12 @@ for (let i = 0; i < jsonFiles.length; i++) {
             crashProject.pop()
             crashProject = crashProject.join('-');
             const stackTrace = item.trace;
-            const crashFile = fs.readFileSync(`benchmark/crashes/${crashProject}/${crashId}/${crashId}.json`);
+            const crashFile = JSON.parse(fs.readFileSync(`benchmark/crashes/${crashProject}/${crashId}/${crashId}.json`).toString());
+            crashFile.crashId = `${crashId}-${num}`;
             fs.mkdirSync(`benchmark/crashes/${crashProject}/${crashId}-${num}`, {recursive: true});
             const outfile = `benchmark/crashes/${crashProject}/${crashId}-${num}/${crashId}-${num}`;
             let outputFile = await fsPromises.open(outfile + '.json', 'w');
-            await outputFile.writeFile(crashFile);
+            await outputFile.writeFile(JSON.stringify(crashFile));
             await outputFile.close();
             outputFile = await fsPromises.open(outfile + '.log', 'w');
             await outputFile.writeFile(stackTrace);

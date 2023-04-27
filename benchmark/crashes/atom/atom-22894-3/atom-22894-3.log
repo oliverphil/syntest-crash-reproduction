@@ -1,6 +1,8 @@
-TypeError: dest.on is not a function
-    at Readable.pipe (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:13891:8)
-    at _callee$ (.syntest/tests/tempTest.spec.js:10:30)
+TypeError: Invalid non-string/buffer chunk
+    at chunkInvalid (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:13103:10)
+    at readableAddChunk (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:12879:12)
+    at Readable.unshift (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:12846:10)
+    at _callee$ (.syntest/tests/tempTest.spec.js:6:36)
     at tryCatch (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.next (.syntest/tests/tempTest.spec.js:1:129)

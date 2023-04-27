@@ -1,6 +1,9 @@
-TypeError: dest.on is not a function
-    at Readable._cb_function_I3sH [as pipe] (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:13891:8)
-    at _callee$ (.syntest/tests/tempTest.spec.js:9:9)
+TypeError: The "listener" argument must be of type function. Received an instance of Object
+    at checkListener (node:events:266:3)
+    at _addListener (node:events:546:3)
+    at Readable.addListener (node:events:605:10)
+    at Readable._cb_function_NsDT [as on] (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:14363:60)
+    at _callee$ (.syntest/tests/tempTest.spec.js:7:9)
     at tryCatch (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.next (.syntest/tests/tempTest.spec.js:1:129)
@@ -9,4 +12,4 @@ TypeError: dest.on is not a function
     at gen (.syntest/tests/tempTest.spec.js:2:1)
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:476:21) {

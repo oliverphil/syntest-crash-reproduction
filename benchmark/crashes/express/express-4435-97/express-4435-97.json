@@ -1,0 +1,1 @@
+{"issueNumber":4435,"info":"Routes js files throws array-flatten dependency error: TypeError('each array member must be [ee, events...]')","url":"https://github.com/expressjs/express/issues/4435","version":"4.17.1","dependencies":{},"nodeVersion":"10.0.0","requireCrashDependency":true,"crashId":"express-4435-97"}
