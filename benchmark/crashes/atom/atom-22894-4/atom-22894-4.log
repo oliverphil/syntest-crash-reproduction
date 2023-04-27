@@ -1,0 +1,12 @@
+Error: _read() is not implemented
+    at Readable._read (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:13837:22)
+    at _callee$ (.syntest/tests/tempTest.spec.js:8:38)
+    at tryCatch (.syntest/tests/tempTest.spec.js:1:129)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:1:129)
+    at Generator.next (.syntest/tests/tempTest.spec.js:1:129)
+    at resolve (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at gen (.syntest/tests/tempTest.spec.js:2:1)
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

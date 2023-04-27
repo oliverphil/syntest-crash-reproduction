@@ -1,0 +1,11 @@
+TypeError: Route is not a function
+    at _callee$ (.syntest/tests/tempTest.spec.js:8:9)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.Promise [as next] (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:3:25)
+    at /local/tmp/oliverphil/4167921.1/syntest-crash-reproduction/.syntest/tests/tempTest.spec.js:3:25
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:3:25)
+    at processImmediate (node:internal/timers:476:21)

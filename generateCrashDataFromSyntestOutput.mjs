@@ -1,10 +1,10 @@
 import * as fsPromises from 'fs/promises';
 import * as fs from 'fs';
 
-const resultRegex = /======\sException\sfor\sDataset\s=======\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
+const resultRegex = /======\sException\sfor\sDataset\s=======\n([A-Za-z1-9\-]*)\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 1; i++) {
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
     }
@@ -21,25 +21,30 @@ for (let i = 0; i < resultFiles.length; i++) {
         const text = fs.readFileSync(resultFile).toString();
         let regexResult;
         while ((regexResult = resultRegex.exec(text)) !== null) {
-            const stackTrace = regexResult[1];
+            const crashNumber = regexResult[1];
+            const stackTrace = regexResult[2];
             let contained = false;
-            for (let trace of regexResults) {
-                if (checkSameStackTraces(trace, stackTrace)) {
+            for (let item of regexResults) {
+                if (checkSameStackTraces(item.stackTrace, stackTrace)) {
                     contained = true;
                     break;
                 }
             }
             if (!contained) {
-                regexResults.push(stackTrace);
+                regexResults.push({
+                    crashNumber,
+                    stackTrace
+                });
             }
         }
 
         const obj = {};
         let num = 1;
-        for (let trace of regexResults) {
+        for (let item of regexResults) {
+            let trace = item.stackTrace;
             let crashNum = `crash${num++}`;
             obj[crashNum] = {
-                crashNum,
+                crashNumber: item.crashNumber,
                 trace
             };
         }
@@ -51,8 +56,41 @@ for (let i = 0; i < resultFiles.length; i++) {
         console.log(outfile);
         console.log('write to file');
         await outputFile.writeFile(JSON.stringify(obj));
+        await outputFile.close();
         const altFile = await fsPromises.open(outfile + '.txt', 'w');
         await altFile.writeFile(regexResults);
+        await altFile.close();
+    } catch (e) { console.log(e); }
+}
+
+const jsonFiles = [];
+for (let project of projects) {
+    jsonFiles.push(`results/output_${project}_${1}.json`);
+}
+
+for (let i = 0; i < jsonFiles.length; i++) {
+    const resultFile = jsonFiles[i];
+    try {
+        // const file = await fsPromises.open(resultFile);
+        const jsonObj = JSON.parse(fs.readFileSync(resultFile).toString());
+        let num = 1;
+        for (let item of Object.values(jsonObj).filter(v => !v.crashNumber.includes('node-error') && !v.crashNumber.includes('seeded'))) {
+            const crashId = item.crashNumber;
+            let crashProject = crashId.split('-');
+            crashProject.pop()
+            crashProject = crashProject.join('-');
+            const stackTrace = item.trace;
+            const crashFile = fs.readFileSync(`benchmark/crashes/${crashProject}/${crashId}/${crashId}.json`);
+            fs.mkdirSync(`benchmark/crashes/${crashProject}/${crashId}-${num}`, {recursive: true});
+            const outfile = `benchmark/crashes/${crashProject}/${crashId}-${num}/${crashId}-${num}`;
+            let outputFile = await fsPromises.open(outfile + '.json', 'w');
+            await outputFile.writeFile(crashFile);
+            await outputFile.close();
+            outputFile = await fsPromises.open(outfile + '.log', 'w');
+            await outputFile.writeFile(stackTrace);
+            await outputFile.close();
+            num++;
+        }
     } catch (e) { console.log(e); }
 }
 
