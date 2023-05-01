@@ -41,7 +41,7 @@ class EnvironmentGenerator {
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
         && value !== 'seeded' && (!project || value === project));
     const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) =>
-        value !== 'http-server' && value !== '' && (!project || value.includes(project)));
+        value !== 'http-server' && value !== '' && (!project || value.startsWith(project)));
     const assetSubDirs = assetDirContents.map((projItem) => {
       return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
     });
