@@ -1,1 +1,0 @@
-{"name":"webpack-13370","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"webpack":"5.37.0"},"engines":{"node":"16.1.0"}}

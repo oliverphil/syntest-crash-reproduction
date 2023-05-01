@@ -139,3 +139,6 @@ benchmark/crashes/atom/*/atom-*/
 *.csv
 .DS_Store
 results
+
+benchmark/crashes/**/package.json
+benchmark/crashes/**/files.json

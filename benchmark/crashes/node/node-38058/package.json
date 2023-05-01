@@ -1,1 +1,0 @@
-{"name":"node-38058","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"dicer":"latest","busboy":"latest","multer":"latest","fs-temp":"latest"}}
