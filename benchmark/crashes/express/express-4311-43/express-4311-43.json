@@ -1,1 +1,0 @@
-{"issueNumber":4311,"info":"TypeError: Converting circular structure to JSON","url":"https://github.com/expressjs/express/issues/4311","version":"4.17.1","nodeVersion":"10.0.0","dependencies":{},"requireCrashDependency":true,"crashId":"express-4311-43"}

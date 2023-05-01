@@ -117,9 +117,9 @@ export function checkExceptionLineCovered(executionResult: ExecutionResult, stac
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame.lineNumber &&
-                trace.path.includes(frame.file) &&
-                trace.hits > 0
+            return trace.line === frame.lineNumber ||
+                (trace.path.includes(frame.file) &&
+                trace.hits > 0)
         });
 
     if (traces.length >= 1) {
@@ -133,8 +133,8 @@ export function checkStackTraceSimilarity(executionResult: ExecutionResult, expe
     if (!executionResult.hasExceptions()) return 1;
     const exceptions = executionResult.getExceptions();
     const actualStackTrace = StackTraceProcessor.process(exceptions.stack);
-    const trimmedActualStackTrace = actualStackTrace.trace.filter(t => !t.file.includes('.syntest/tests/tempTest.spec.js'));
-    const trimmedExpectedStackTrace = expectedStackTrace.trace.filter(t => !t.file.includes('.syntest/tests/tempTest.spec.js'));
+    const trimmedActualStackTrace = actualStackTrace.trace.filter(t => !t.file.includes('tempTest.spec.js'));
+    const trimmedExpectedStackTrace = expectedStackTrace.trace.filter(t => !t.file.includes('tempTest.spec.js'));
     return stackTraceDistance(trimmedActualStackTrace, trimmedExpectedStackTrace);
 }
 
@@ -176,7 +176,7 @@ function stackElementsDistance(resultElement: StackFrame, targetElement: StackFr
             elementDistance += 2;
         } else {
             if (!resultElement.lineNumber && !targetElement.lineNumber ||
-                resultElement.file.includes('.syntest/tests/tempTest.spec.js')
+                resultElement.file.includes('tempTest.spec.js')
             ) {
                 elementDistance = 0.0;
             } else {
