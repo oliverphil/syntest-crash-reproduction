@@ -114,12 +114,18 @@ export function checkExceptionLineCovered(executionResult: ExecutionResult, stac
 
     const frame = stackTrace.trace[0];
 
+    if (executionResult.hasExceptions()) {
+        const exception = executionResult.getExceptions();
+        const actualStack = StackTraceProcessor.process(exception.stack);
+        if (actualStack.trace[0].file === frame.file && actualStack.trace[0].lineNumber === frame.lineNumber) {
+            return 0;
+        }
+    }
+
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame.lineNumber ||
-                (trace.path.includes(frame.file) &&
-                trace.hits > 0)
+            return trace.line === frame.lineNumber
         });
 
     if (traces.length >= 1) {

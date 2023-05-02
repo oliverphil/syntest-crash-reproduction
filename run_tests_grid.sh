@@ -84,7 +84,7 @@ export NVM_DIR="/vol/grid-solar/sgeusers/oliverphil/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export npm_config_cache=$(mktemp -d)
-nvm install 18.14.1
+nvm install lts/hydrogen
 node --version
 which node
 cd syntest-core

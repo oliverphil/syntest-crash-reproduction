@@ -128,6 +128,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     // If one of the executions failed, log it
     if (stats.failures > 0) {
       this.errorProcessor.processError(testCase, test);
+      console.log("Errors:", stats.failures);
     } else {
       this.errorProcessor.processSuccess(testCase, test);
     }
@@ -228,7 +229,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       const test = runner.suite.suites[0].tests[0];
 
       let status: JavaScriptExecutionStatus;
-      let exception: Error;
+      const exception: Error = test.err;
 
       if (test.isPassed()) {
         status = JavaScriptExecutionStatus.PASSED;
@@ -236,7 +237,6 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         status = JavaScriptExecutionStatus.TIMED_OUT;
       } else {
         status = JavaScriptExecutionStatus.FAILED;
-        exception = test.err;
       }
 
       const duration = test.duration;

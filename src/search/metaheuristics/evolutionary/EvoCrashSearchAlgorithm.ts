@@ -238,6 +238,7 @@ export class EvoCrashSearchAlgorithm<T extends Encoding> extends EvolutionaryAlg
         );
         budgetManager.searchStarted();
 
+        let epochs = 0;
         // Start search until the budget has expired, a termination trigger has been triggered, or there are no more objectives
         while (
             this._objectiveManager.hasObjectives() &&
@@ -247,16 +248,8 @@ export class EvoCrashSearchAlgorithm<T extends Encoding> extends EvolutionaryAlg
             console.log(budgetManager.getBudget());
 
             // Start next iteration of the search process
-            await new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    try {
-                        this._iterate(budgetManager, terminationManager);
-                        resolve(0);
-                    } catch (e) {
-                        reject(e);
-                    }
-                }, 5000);
-            })
+
+            await this._iterate(budgetManager, terminationManager);
 
             // Inform the budget manager and listeners that an iteration happened
             budgetManager.iteration(this);
@@ -267,7 +260,16 @@ export class EvoCrashSearchAlgorithm<T extends Encoding> extends EvolutionaryAlg
                 this.progress("branch"),
                 budgetManager.getBudget()
             );
+            epochs++;
+            console.log(global.crashId);
+            console.log("Epoch: ", epochs);
+            console.log("Best Distance: ", global.distance);
+
+            console.log("Has objectives: ", this._objectiveManager.hasObjectives());
+            console.log("Has budget left: ", budgetManager.hasBudgetLeft());
+            console.log("Is terminated: ", terminationManager.isTriggered());
         }
+        global.epochs = epochs;
 
         // Stop search budget tracking
         budgetManager.searchStopped();

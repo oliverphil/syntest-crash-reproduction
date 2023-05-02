@@ -45,7 +45,7 @@ export class SilentMochaReporter {
         //   stringifyDiffObjs(err);
         // }
         // more than one error per test
-        console.log('fail', test, err);
+        // console.log('fail', test, err);
         if (test.err && err instanceof Error) {
           test.err.multiple = (test.err.multiple || []).concat(err);
         } else {

@@ -118,6 +118,7 @@ export function collectFitnessValues<T extends Encoding>(
   archive.getObjectives().forEach(objective => {
     const testCase = archive.getEncoding(objective);
     const distance = testCase.getDistance(objective);
+    // console.log(distance);
     collector.recordVariable(RuntimeVariable.OBJECTIVE_VALUE, distance.toString());
   });
 }

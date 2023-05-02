@@ -26,6 +26,7 @@ import {
   createDirectoryStructure,
   createTempDirectoryStructure,
   deleteTempDirectories,
+  DistanceEarlyStoppingBudget,
   drawGraph,
   EvaluationBudget,
   getSeed,
@@ -44,7 +45,7 @@ import {
   StatisticsSearchListener,
   SummaryWriter,
   TerminationManager,
-  TotalTimeBudget,
+  TotalTimeBudget
 } from "@syntest/core";
 
 import { JavaScriptTestCase } from "./testcase/JavaScriptTestCase";
@@ -187,6 +188,8 @@ export class Launcher {
     // generate packages
     // npm i
     // insert files from stack trace into test generation subjects
+
+    global.distance = Number.MAX_SAFE_INTEGER;
 
     const environmentGenerator = new EnvironmentGenerator();
     let crashes: Crash[] = environmentGenerator.loadAssets();
@@ -512,11 +515,13 @@ export class Launcher {
     const evaluationBudget = new EvaluationBudget();
     const searchBudget = new SearchTimeBudget(Properties.search_time);
     const totalTimeBudget = new TotalTimeBudget(Properties.total_time);
+    const distanceBudget = new DistanceEarlyStoppingBudget();
     const budgetManager = new BudgetManager();
     budgetManager.addBudget(iterationBudget);
     budgetManager.addBudget(evaluationBudget);
     budgetManager.addBudget(searchBudget);
     budgetManager.addBudget(totalTimeBudget);
+    budgetManager.addBudget(distanceBudget);
 
     // Termination
     const terminationManager = configureTermination();
