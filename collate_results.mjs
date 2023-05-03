@@ -6,6 +6,7 @@ const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard'
 for (let i = 1; i <= 30; i++) {
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
+        resultFiles.push(`results/output_${project}_syntest_${i}.log`)
     }
 }
 

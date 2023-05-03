@@ -85,6 +85,7 @@ export NVM_DIR="/vol/grid-solar/sgeusers/oliverphil/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export npm_config_cache=$(mktemp -d)
 nvm install lts/hydrogen
+nvm use lts/hydrogen
 node --version
 which node
 cd syntest-core
@@ -99,13 +100,17 @@ ls
 #
 # Note that we need the full path to this utility, as it is not on the PATH
 #
+node --version
 npm run build
-npm run run > output.log 2> stderr.log
+# npm run run > output.log 2> stderr.log
 
 project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
 
 for project in "${project_array[@]}"; do
   export SYNTEST_PROJECT=${project};
+  export SYNTEST_CRASHES=true
+  npm run run > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
+  export SYNTEST_CRASHES=false
   npm run run > output_"${project}".log 2> stderr_"${project}".log
 done
 
@@ -121,6 +126,8 @@ mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
 for project in "${project_array[@]}"; do
   cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
   cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
+  cp output_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_syntest_$SGE_TASK_ID.log
+  cp stderr_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_syntest_$SGE_TASK_ID.log
 done
 # cp output.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_$SGE_TASK_ID.log
 # cp stderr.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_$SGE_TASK_ID.log
