@@ -128,7 +128,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     // If one of the executions failed, log it
     if (stats.failures > 0) {
       this.errorProcessor.processError(testCase, test);
-      console.log("Errors:", stats.failures);
+      // console.log("Errors:", stats.failures);
     } else {
       this.errorProcessor.processSuccess(testCase, test);
     }

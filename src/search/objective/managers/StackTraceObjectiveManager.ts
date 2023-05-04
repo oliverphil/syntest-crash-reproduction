@@ -58,7 +58,7 @@ export class StackTraceObjectiveManager<
         } else {
             // If the objective is already in the archive we save the shortest encoding
             const currentEncoding = this._archive.getEncoding(objectiveFunction);
-            if (currentEncoding.getLength() > encoding.getLength())
+            if (currentEncoding.getLength() > encoding.getLength() || distance < currentEncoding.getDistance(objectiveFunction))
                 this._archive.update(objectiveFunction, encoding);
         }
 

@@ -30,6 +30,9 @@ for (let i = 0; i < resultFiles.length; i++) {
                     break;
                 }
             }
+            if (stackTrace.split('\n')[0].includes('.syntest/tests/tempTest.spec.js')) {
+                continue;
+            }
             if (!contained) {
                 regexResults.push({
                     crashNumber,

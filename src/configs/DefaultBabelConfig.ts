@@ -29,7 +29,8 @@ export const defaultBabelOptions: TransformOptions = {
     "@babel/plugin-syntax-jsx",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-transform-react-inline-elements",
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-strict-mode"
   ],
   exclude: [
     // "gatsby-browser.js",

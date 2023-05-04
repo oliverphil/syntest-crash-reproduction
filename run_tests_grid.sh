@@ -93,7 +93,8 @@ npm i
 ls
 npm run build
 cd ../syntest-crash-reproduction
-git checkout evolutionary-experiments
+echo $COMMIT
+git checkout $COMMIT
 npm i
 ls
 
@@ -124,8 +125,8 @@ ls -la
 #
 mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
 for project in "${project_array[@]}"; do
-  cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
-  cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
+#  cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
+#  cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
   cp output_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_syntest_$SGE_TASK_ID.log
   cp stderr_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_syntest_$SGE_TASK_ID.log
 done

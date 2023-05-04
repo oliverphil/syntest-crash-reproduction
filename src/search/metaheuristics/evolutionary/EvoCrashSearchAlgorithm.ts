@@ -268,6 +268,8 @@ export class EvoCrashSearchAlgorithm<T extends Encoding> extends EvolutionaryAlg
             console.log("Has objectives: ", this._objectiveManager.hasObjectives());
             console.log("Has budget left: ", budgetManager.hasBudgetLeft());
             console.log("Is terminated: ", terminationManager.isTriggered());
+
+            if (global.distance === 0) break;
         }
         global.epochs = epochs;
 
