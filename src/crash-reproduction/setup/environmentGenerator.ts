@@ -39,7 +39,7 @@ class EnvironmentGenerator {
     }
     let syntest_crashes = undefined;
     if (process.env.SYNTEST_CRASHES) {
-      syntest_crashes = process.env.SYNTEST_CRASHES;
+      syntest_crashes = process.env.SYNTEST_CRASHES === 'true';
     }
     const assetDir = './benchmark/crashes';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
@@ -49,15 +49,15 @@ class EnvironmentGenerator {
     const assetSubDirs = assetDirContents.map((projItem) => {
       return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
     }).filter((projItem) => {
-      if (syntest_crashes) {
+      if (syntest_crashes !== undefined) {
         projItem[1] = (<string[]> projItem[1]).filter(crash => {
           const split = crash.split('-');
           if (Number.isNaN(Number.parseInt(split[split.length - 1])) ||
               Number.isNaN(Number.parseInt(split[split.length - 2]))
           ) {
-            return false;
+            return !syntest_crashes;
           }
-          return true;
+          return syntest_crashes;
         })
       }
       return true;
