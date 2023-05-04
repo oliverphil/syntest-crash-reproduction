@@ -109,14 +109,14 @@ class EnvironmentGenerator {
       if (crash.requireCrashDependency) {
         crash.dependencies[crash.project] = crash.version;
       }
-      // if (crash.nodeVersion) {
-      //   const tarName = `node-v${crash.nodeVersion}.tar.gz`;
-      //   const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
-      //   const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
-      //   execSync(`wget -O ${tarFile}` +
-      //       ` https://nodejs.org/dist/v${crash.nodeVersion}/${tarName}`);
-      //   execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
-      // }
+      if (crash.nodeVersion) {
+        const tarName = `node-v${crash.nodeVersion}.tar.gz`;
+        const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
+        const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
+        execSync(`wget -O ${tarFile}` +
+            ` https://nodejs.org/dist/v${crash.nodeVersion}/${tarName}`);
+        execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+      }
       return crash;
     });
 
