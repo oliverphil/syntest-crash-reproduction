@@ -4,7 +4,7 @@ import * as fs from 'fs';
 const resultRegex = /======\sException\sfor\sDataset\s=======\n([A-Za-z1-9\-]*)\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-for (let i = 1; i <= 1; i++) {
+for (let i = 2; i <= 2; i++) {
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
     }
@@ -60,15 +60,15 @@ for (let i = 0; i < resultFiles.length; i++) {
         console.log('write to file');
         await outputFile.writeFile(JSON.stringify(obj));
         await outputFile.close();
-        const altFile = await fsPromises.open(outfile + '.txt', 'w');
-        await altFile.writeFile(regexResults);
-        await altFile.close();
+        // const altFile = await fsPromises.open(outfile + '.txt', 'w');
+        // await altFile.writeFile(obj.toString());
+        // await altFile.close();
     } catch (e) { console.log(e); }
 }
 
 const jsonFiles = [];
 for (let project of projects) {
-    jsonFiles.push(`results/output_${project}_${1}.json`);
+    jsonFiles.push(`results/output_${project}_${2}.json`);
 }
 
 for (let i = 0; i < jsonFiles.length; i++) {

@@ -1,9 +1,8 @@
-TypeError: The "listener" argument must be of type function. Received type string ('s56axKB0ThIV8M5JkiLUaOQu...)
-    at checkListener (node:events:266:3)
-    at _addListener (node:events:546:3)
-    at Readable.addListener (node:events:605:10)
-    at Readable._cb_function_I3sH [as on] (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:14363:60)
-    at _callee$ (.syntest/tests/tempTest.spec.js:9:9)
+TypeError: Invalid non-string/buffer chunk
+    at chunkInvalid (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:13103:10)
+    at readableAddChunk (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:12879:12)
+    at Readable.push (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:12838:10)
+    at _callee$ (.syntest/tests/tempTest.spec.js:6:45)
     at tryCatch (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.next (.syntest/tests/tempTest.spec.js:1:129)
@@ -12,4 +11,4 @@ TypeError: The "listener" argument must be of type function. Received type strin
     at gen (.syntest/tests/tempTest.spec.js:2:1)
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21) {
+    at processImmediate (node:internal/timers:476:21)

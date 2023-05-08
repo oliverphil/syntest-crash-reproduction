@@ -140,6 +140,7 @@ benchmark/crashes/atom/*/atom-*/
 .DS_Store
 results
 local_results
+collected_results
 
 benchmark/crashes/**/package.json
 benchmark/crashes/**/files.json
