@@ -1,1 +1,0 @@
-{"issueNumber":14537,"info":"Cannot read property 'replace' of undefined while writing an import statement in .tsx file","url":"https://github.com/eslint/eslint/issues/14537","version":"7.25.0","nodeVersion":"16.0.0","dependencies":{"eslint-plugin-import":"2.25.4"},"requireCrashDependency":true,"crashId":"eslint-14537-3"}

@@ -1,1 +1,0 @@
-{"issueNumber":1549,"info":"Some interpolation leads to \"Cannot read property 'range' of null\" error","url":"https://github.com/standard/standard/issues/1549","version":"14.3.4","nodeVersion":"14.1.0","dependencies":{},"requireCrashDependency":true,"crashId":"standard-1549-2"}

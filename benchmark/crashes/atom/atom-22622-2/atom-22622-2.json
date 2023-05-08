@@ -1,1 +1,0 @@
-{"issueNumber":22622,"info":"Uncaught Error: tunneling socket could not be established, cause=connect ETIMEDOUT 185.38.111.1:8080","url":"https://github.com/atom/atom/issues/22622","version":"1.57.0","dependencies":{"electron":"9.4.4"},"setup":{"download":{"url":"https://github.com/atom/atom/archive/refs/tags/v1.57.0.tar.gz","unpack":"tar.gz"}},"crashId":"atom-22622-2"}

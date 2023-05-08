@@ -1,6 +1,6 @@
-TypeError: dest.on is not a function
-    at Readable.pipe (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:13891:8)
-    at _callee$ (.syntest/tests/tempTest.spec.js:7:30)
+TypeError: cb is not a function
+    at Readable._destroy (.syntest/instrumented/crashes/atom/atom-22894/node_modules/readable-stream/lib/_stream_readable.js:12775:3)
+    at _callee$ (.syntest/tests/tempTest.spec.js:8:34)
     at tryCatch (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:1:129)
     at Generator.next (.syntest/tests/tempTest.spec.js:1:129)

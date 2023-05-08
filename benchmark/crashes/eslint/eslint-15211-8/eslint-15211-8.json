@@ -1,1 +1,0 @@
-{"issueNumber":15211,"info":"Bug: TypeError: Module.createRequire is not a function","url":"https://github.com/eslint/eslint/issues/15211","version":"8.1.0","nodeVersion":"10.13.0","dependencies":{},"requireCrashDependency":true,"crashId":"eslint-15211-8"}

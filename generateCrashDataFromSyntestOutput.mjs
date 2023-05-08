@@ -4,7 +4,7 @@ import * as fs from 'fs';
 const resultRegex = /======\sException\sfor\sDataset\s=======\n([A-Za-z1-9\-]*)\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-for (let i = 2; i <= 2; i++) {
+for (let i = 1; i <= 1; i++) {
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
     }
@@ -30,7 +30,7 @@ for (let i = 0; i < resultFiles.length; i++) {
                     break;
                 }
             }
-            if (stackTrace.split('\n')[0].includes('.syntest/tests/tempTest.spec.js')) {
+            if (stackTrace.split('\n')[1].includes('.syntest/tests/tempTest.spec.js')) {
                 continue;
             }
             if (!contained) {
@@ -68,7 +68,7 @@ for (let i = 0; i < resultFiles.length; i++) {
 
 const jsonFiles = [];
 for (let project of projects) {
-    jsonFiles.push(`results/output_${project}_${2}.json`);
+    jsonFiles.push(`results/output_${project}_${1}.json`);
 }
 
 for (let i = 0; i < jsonFiles.length; i++) {
