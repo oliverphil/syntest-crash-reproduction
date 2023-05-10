@@ -41,11 +41,15 @@ class EnvironmentGenerator {
     if (process.env.SYNTEST_CRASHES) {
       syntest_crashes = process.env.SYNTEST_CRASHES === 'true';
     }
+    let syntestSeeded = true;
+    if (process.env.SYNTEST_SEEDED) {
+      syntestSeeded = process.env.SYNTEST_SEEDED === 'true';
+    }
     const assetDir = './benchmark/crashes';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
         && value !== 'seeded' && (!project || value === project));
     const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) =>
-        value !== 'http-server' && value !== '' && (!project || value.startsWith(project)));
+        value !== 'http-server' && value !== '' && (!project || value.startsWith(project)) && syntestSeeded);
     const assetSubDirs = assetDirContents.map((projItem) => {
       return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
     }).filter((projItem) => {
@@ -109,14 +113,19 @@ class EnvironmentGenerator {
       if (crash.requireCrashDependency) {
         crash.dependencies[crash.project] = crash.version;
       }
-      // if (crash.nodeVersion) {
-      //   const tarName = `node-v${crash.nodeVersion}.tar.gz`;
-      //   const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
-      //   const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
-      //   execSync(`wget -O ${tarFile}` +
-      //       ` https://nodejs.org/dist/v${crash.nodeVersion}/${tarName}`);
-      //   execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
-      // }
+      if (crash.project === 'node') {
+        try {
+          const nodeVersion = crash.nodeVersion || crash.version;
+          const tarName = `node-v${nodeVersion}.tar.gz`;
+          const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
+          const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
+          execSync(`wget -O ${tarFile}` +
+              ` https://nodejs.org/dist/v${nodeVersion}/${tarName}`);
+          execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+        } catch (e) {
+          console.log(e);
+        }
+      }
       return crash;
     });
 
