@@ -39,7 +39,7 @@ export function wrongExceptionRaisedOnRightLine(executionResult: ExecutionResult
 export function rightExceptionRaisedInRightFunction(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const functionMatch = checkFunctionsMatch(executionResult, stackTrace);
-    return normalise(exceptionsMatch + functionMatch);
+    return 2 / (exceptionsMatch + functionMatch);
 }
 
 export function rightExceptionRaisedInWrongFunction(executionResult: ExecutionResult, stackTrace: StackTrace): number {
