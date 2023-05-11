@@ -63,7 +63,7 @@ export class JavaScriptTestCase extends Encoding {
   }
 
   getLength(): number {
-    return this.root.getChildren().length;
+    return this.root?.getChildren()?.length || 0;
   }
 
   get root(): RootStatement {

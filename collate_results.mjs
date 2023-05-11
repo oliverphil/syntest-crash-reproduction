@@ -3,7 +3,9 @@ import * as fsPromises from 'fs/promises';
 const resultRegex = /\s*(\d*\s\/\s\d*)\s\|\s*(\d*\s\/\s\d*)\s\|\s*(\d*\s\/\s\d*)\s\|\s*([\d\.N/A]*)\s\|\s\/.*\/syntest-crash-reproduction\/benchmark\/crashes\/(?:seeded)?\/?([A-Za-z-]*)\/([A-Za-z\d-]*)\/node_modules\/(.*)/
 const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-for (let i = 1; i <= 30; i++) {
+const runMap = {};
+for (let i = 1; i <= 20; i++) {
+    runMap[`output_${i}.csv`] = '';
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
         resultFiles.push(`results/output_${project}_syntest_${i}.log`)
@@ -15,6 +17,8 @@ console.log(resultFiles);
 for (let i = 0; i < resultFiles.length; i++) {
     const resultFile = resultFiles[i];
     console.log(resultFile);
+    const splitFile = resultFile.substring(0, resultFile.length - 4).split('_');
+    const num = splitFile[splitFile.length - 1];
     let regexResults = '';
     try {
         const file = await fsPromises.open(resultFile);
@@ -33,11 +37,26 @@ for (let i = 0; i < resultFiles.length; i++) {
             }
         }
 
+        runMap[`output_${num}.log`] += regexResults;
         console.log('open file');
         const outfile = `${resultFile.substring(0, resultFile.length - 4)}.csv`;
         const outputFile = await fsPromises.open(outfile, 'w');
         console.log(outfile);
         console.log('write to file');
         await outputFile.writeFile(regexResults);
+        await outputFile.close();
     } catch (e) { console.log(e); }
+}
+
+try {
+    for (let key of Object.keys(runMap)) {
+        console.log('open file');
+        const outfile = key;
+        const outputFile = await fsPromises.open(outfile, 'w');
+        console.log(outfile);
+        console.log('write to file');
+        await outputFile.writeFile(runMap[key]);
+    }
+} catch (e) {
+    console.log(e);
 }

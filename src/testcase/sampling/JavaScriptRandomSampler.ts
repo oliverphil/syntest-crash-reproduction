@@ -34,13 +34,16 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
 
   sample(): JavaScriptTestCase {
     let root: RootStatement;
-
-    if ((<JavaScriptSubject>this._subject).type === SubjectType.function) {
-      root = this.sampleFunctionCall(0);
-    } else if ((<JavaScriptSubject>this._subject).type === SubjectType.class) {
-      root = this.sampleConstructor(0);
-    } else if ((<JavaScriptSubject>this._subject).type === SubjectType.object) {
-      root = this.sampleRootObject(0);
+    try {
+      if ((<JavaScriptSubject>this._subject).type === SubjectType.function) {
+        root = this.sampleFunctionCall(0);
+      } else if ((<JavaScriptSubject>this._subject).type === SubjectType.class) {
+        root = this.sampleConstructor(0);
+      } else if ((<JavaScriptSubject>this._subject).type === SubjectType.object) {
+        root = this.sampleRootObject(0);
+      }
+    } catch (e) {
+      console.log(e);
     }
 
     return new JavaScriptTestCase(root);
