@@ -5,7 +5,7 @@ const resultFiles = [];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
 const runMap = {};
 for (let i = 1; i <= 20; i++) {
-    runMap[`output_${i}.csv`] = '';
+    runMap[`results/output_${i}.csv`] = '';
     for (let project of projects) {
         resultFiles.push(`results/output_${project}_${i}.log`);
         resultFiles.push(`results/output_${project}_syntest_${i}.log`)
@@ -37,7 +37,7 @@ for (let i = 0; i < resultFiles.length; i++) {
             }
         }
 
-        runMap[`output_${num}.log`] += regexResults;
+        runMap[`results/output_${num}.csv`] += regexResults;
         console.log('open file');
         const outfile = `${resultFile.substring(0, resultFile.length - 4)}.csv`;
         const outputFile = await fsPromises.open(outfile, 'w');
