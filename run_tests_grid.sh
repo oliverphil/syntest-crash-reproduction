@@ -105,8 +105,8 @@ node --version
 npm run build
 # npm run run > output.log 2> stderr.log
 
-# project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
-project_array=( 'http-server' 'node' );
+project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
+# project_array=( 'http-server' 'node' );
 
 export SYNTEST_SEEDED=false;
 for project in "${project_array[@]}"; do
