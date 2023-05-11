@@ -27,7 +27,7 @@ export function rightExceptionRaised(executionResult: ExecutionResult, expectedS
 export function rightExceptionRaisedOnRightLine(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
-    return normalise(exceptionsMatch + exceptionLineCovered);
+    return 2 / (exceptionsMatch + exceptionLineCovered);
 }
 
 export function wrongExceptionRaisedOnRightLine(executionResult: ExecutionResult, stackTrace: StackTrace): number {
