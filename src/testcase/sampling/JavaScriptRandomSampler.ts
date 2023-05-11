@@ -43,7 +43,7 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
         root = this.sampleRootObject(0);
       }
     } catch (e) {
-      console.log(e);
+      // console.log(e);
     }
 
     return new JavaScriptTestCase(root);
