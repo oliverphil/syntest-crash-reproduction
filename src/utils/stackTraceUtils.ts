@@ -125,7 +125,7 @@ export function checkExceptionLineCovered(executionResult: ExecutionResult, stac
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame.lineNumber
+            return trace.line === frame.lineNumber && trace.path.includes(frame.file)
         });
 
     if (traces.length >= 1) {
