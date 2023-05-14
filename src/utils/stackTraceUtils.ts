@@ -27,19 +27,19 @@ export function rightExceptionRaised(executionResult: ExecutionResult, expectedS
 export function rightExceptionRaisedOnRightLine(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
-    return 2 / (exceptionsMatch + exceptionLineCovered);
+    return (exceptionsMatch + exceptionLineCovered);
 }
 
 export function wrongExceptionRaisedOnRightLine(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
-    return 2 / (exceptionsMatch + exceptionLineCovered);
+    return (exceptionsMatch + exceptionLineCovered);
 }
 
 export function rightExceptionRaisedInRightFunction(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const functionMatch = checkFunctionsMatch(executionResult, stackTrace);
-    return 2 / (exceptionsMatch + functionMatch);
+    return (exceptionsMatch + functionMatch);
 }
 
 export function rightExceptionRaisedInWrongFunction(executionResult: ExecutionResult, stackTrace: StackTrace): number {
@@ -77,14 +77,25 @@ export function someCallHierarchyWithoutCrash(executionResult: ExecutionResult, 
 export function reachedLineOfStackTraceEntry(executionResult: ExecutionResult, stackTrace: StackTrace): number {
     let distance = 1;
 
-    const frame = stackTrace.trace[stackTrace.trace.length - 1];
+    const frame = stackTrace.trace.filter(s => !s.file.includes('tempTest.spec.js')
+        && !s.file.includes('node:internal'))[stackTrace.trace.length - 1];
+
+    if (executionResult.hasExceptions()) {
+        const exception = executionResult.getExceptions();
+        const actualStack = StackTraceProcessor.process(exception.stack);
+        const actualFrame = actualStack.trace
+            .filter(s => !s.file.includes('tempTest.spec.js')
+                && !s.file.includes('node:internal')
+            )[actualStack.trace.length - 1];
+        if (actualFrame.file === frame.file && actualFrame.lineNumber === frame.lineNumber) {
+            return 0;
+        }
+    }
 
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame.lineNumber &&
-                trace.path.includes(frame.file) &&
-                trace.hits > 0
+            return trace.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0
         });
 
     if (traces.length >= 1) {
@@ -125,7 +136,7 @@ export function checkExceptionLineCovered(executionResult: ExecutionResult, stac
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame.lineNumber && trace.path.includes(frame.file)
+            return trace.line === frame.lineNumber && trace.path.includes(frame.file) && trace.hits > 0
         });
 
     if (traces.length >= 1) {

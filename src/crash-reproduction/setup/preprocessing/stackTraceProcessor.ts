@@ -13,7 +13,6 @@ class StackTraceProcessor {
     const lines: string[] = stackTrace.split('\n');
     const error: StackError = this.parseError(lines[0]);
     const trace: StackFrame[] = this.parseTrace(lines.slice(1), verbose);
-    Function;
     return {
       error,
       trace,

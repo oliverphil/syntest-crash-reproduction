@@ -38,6 +38,7 @@ import { TypeProbability } from "./types/resolving/TypeProbability";
 import { Instrumenter } from "../../instrumentation/Instrumenter";
 import { ExportType } from "./dependency/IdentifierVisitor";
 import * as t from "@babel/types";
+import {Crash} from "../../crash-reproduction/types/importTypes";
 // eslint-disable-next-line
 const { outputFileSync, copySync } = require("fs-extra");
 
@@ -348,12 +349,12 @@ export class JavaScriptTargetPool extends TargetPool {
     return this._dependencyMaps.get(absoluteTargetPath);
   }
 
-  async prepareAndInstrument(): Promise<void> {
-    const absoluteRootPath = path.resolve(Properties.target_root_directory);
+  async prepareAndInstrument(crash: Crash): Promise<void> {
+    const absoluteRootPath = path.resolve(Properties.target_root_directory + `/${crash.project}/${crash.crashId}`);
 
     const destinationPath = path.resolve(
-      Properties.temp_instrumented_directory,
-      path.basename(Properties.target_root_directory)
+      Properties.temp_instrumented_directory + `/crashes/${crash.project}/${crash.crashId}`
+      // path.basename(Properties.target_root_directory)
     );
 
     // console.log(absoluteRootPath, destinationPath);

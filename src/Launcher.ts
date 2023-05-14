@@ -107,10 +107,10 @@ export class Launcher {
       await guessCWD(null);
       await this.setupShared();
       const targetPool = await (Properties.crash_reproduction ? this.setupCrashReproduction() : this.setup());
-      if (!Array.isArray(targetPool)) {
-        const [archive, dependencies, exports] = await this.search(targetPool);
-        await this.finalize(targetPool, archive, dependencies, exports);
-      }
+      // if (!Array.isArray(targetPool)) {
+      //   const [archive, dependencies, exports] = await this.search(targetPool);
+      //   await this.finalize(targetPool, archive, dependencies, exports);
+      // }
 
       await this.exit();
     } catch (e) {
@@ -273,7 +273,7 @@ export class Launcher {
       // console.log(include, exclude);
 
       const pool = await this.setup();
-      const [archive, dependencies, exports] = await this.search(pool);
+      const [archive, dependencies, exports] = await this.search(pool, crash);
       // TODO: create alternative finalize to not delete tests this way
       await this.finalize(pool, archive, dependencies, exports);
       await deleteTempDirectories();
@@ -389,12 +389,13 @@ export class Launcher {
   }
 
   private async search(
-    targetPool: JavaScriptTargetPool
+    targetPool: JavaScriptTargetPool,
+    crash: Crash
   ): Promise<[Archive<JavaScriptTestCase>, Map<string, Export[]>, Export[]]> {
     this.timings.push({ time: Date.now(), what: "start search" });
 
     this.timings.push({ time: Date.now(), what: "start instrumenting" });
-    await targetPool.prepareAndInstrument();
+    await targetPool.prepareAndInstrument(crash);
     this.timings.push({ time: Date.now(), what: "end instrumenting" });
 
     this.timings.push({ time: Date.now(), what: "start type resolving" });
@@ -411,7 +412,8 @@ export class Launcher {
       const archive = await this.testTarget(
         targetPool,
         target.canonicalPath,
-        targetPool.getTargetMap(target.canonicalPath).get(target.targetName)
+        targetPool.getTargetMap(target.canonicalPath).get(target.targetName),
+        crash
       );
 
       const dependencies = targetPool.getDependencies(target.canonicalPath);
@@ -430,7 +432,8 @@ export class Launcher {
   private async testTarget(
     targetPool: JavaScriptTargetPool,
     targetPath: string,
-    targetMeta: JavaScriptTargetMetaData
+    targetMeta: JavaScriptTargetMetaData,
+    crash: Crash
   ): Promise<Archive<JavaScriptTestCase>> {
     const cfg = targetPool.getCFG(targetPath, targetMeta.name);
 
@@ -476,7 +479,6 @@ export class Launcher {
       // TODO return types
     }
 
-    const crash = this.crashes.find(c => targetPath.includes(c.crashId));
     global.crashId = crash.crashId;
     const stackTrace = crash.stackTrace;
     const currentSubject = new JavaScriptSubject(

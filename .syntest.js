@@ -7,7 +7,7 @@ module.exports = {
   resample_gene_probability: 0.01,
   delta_mutation_probability: 0.8,
   sample_func_as_arg: 0.5,
-  explore_illegal_values: true,
+  explore_illegal_values: false,
 
   algorithm: "DynaMOSA",
   search_time: 15,
