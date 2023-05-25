@@ -1,0 +1,11 @@
+Error: SELF_SIGNED_CERT_IN_CHAIN
+    at SecurePair.<anonymous> (tls.js:1381:32)
+    at SecurePair.emit (events.js:92:17)
+    at SecurePair.maybeInitFinished (tls.js:980:10)
+    at CleartextStream.read [as _read] (tls.js:472:13)
+    at CleartextStream.Readable.read (_stream_readable.js:341:10)
+    at EncryptedStream.write [as _write] (tls.js:369:25)
+    at doWrite (_stream_writable.js:226:10)
+    at writeOrBuffer (_stream_writable.js:216:5)
+    at EncryptedStream.Writable.write (_stream_writable.js:183:11)
+    at write (_stream_readable.js:602:24)

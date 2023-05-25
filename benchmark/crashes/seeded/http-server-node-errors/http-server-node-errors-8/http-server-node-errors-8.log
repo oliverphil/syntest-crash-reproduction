@@ -1,0 +1,13 @@
+RangeError [ERR_INVALID_ARG_VALUE]: The argument 'size' is invalid. Received 1.7976931348623157e+308
+    at Function.alloc (node:buffer:360:3)
+    at new Buffer (node:buffer:276:19)
+    at Object.core.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/union/lib/core.js:98:17)
+    at new HttpServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:179:13)
+    at Object.exports.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:22:10)
+    at Object.<anonymous> (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js:3:6)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12) {
+  code: 'ERR_INVALID_ARG_VALUE'
+}

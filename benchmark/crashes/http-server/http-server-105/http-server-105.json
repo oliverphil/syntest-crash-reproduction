@@ -1,0 +1,8 @@
+{
+  "issueNumber": 105,
+  "info": "serves on port 8080 but not port 80",
+  "url": "https://github.com/http-party/http-server/issues/105",
+  "version": "0.7.x",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

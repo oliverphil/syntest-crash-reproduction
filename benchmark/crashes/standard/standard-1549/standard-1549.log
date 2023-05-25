@@ -1,0 +1,11 @@
+TypeError: Cannot read property 'range' of null
+    at SourceCode.getTokenBefore (node_modules/eslint/lib/source-code/token-store/index.js:298:18)
+    at checkSpacingBefore (node_modules/eslint/lib/rules/template-curly-spacing.js:60:42)
+    at TemplateElement (node_modules/eslint/lib/rules/template-curly-spacing.js:119:17)
+    at node_modules/eslint/lib/linter/safe-emitter.js:45:58
+    at Array.forEach (<anonymous>)
+    at Object.emit (node_modules/eslint/lib/linter/safe-emitter.js:45:38)
+    at NodeEventGenerator.applySelector (node_modules/eslint/lib/linter/node-event-generator.js:254:26)
+    at NodeEventGenerator.applySelectors (node_modules/eslint/lib/linter/node-event-generator.js:283:22)
+    at NodeEventGenerator.enterNode (node_modules/eslint/lib/linter/node-event-generator.js:297:14)
+    at CodePathAnalyzer.enterNode (node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:634:23)

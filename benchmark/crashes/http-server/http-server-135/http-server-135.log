@@ -1,0 +1,11 @@
+Error: ENOENT, no such file or directory 'key.pem'
+    at Object.fs.openSync (fs.js:427:18)
+    at Object.fs.readFileSync (fs.js:284:15)
+    at Object.core.createServer (/usr/local/lib/node_modules/http-server/node_modules/union/lib/core.js:73:16)
+    at new exports.HTTPServer (/usr/local/lib/node_modules/http-server/lib/http-server.js:72:23)
+    at Object.exports.createServer (/usr/local/lib/node_modules/http-server/lib/http-server.js:84:10)
+    at listen (/usr/local/lib/node_modules/http-server/bin/http-server:86:27)
+    at options.root (/usr/local/lib/node_modules/http-server/bin/http-server:55:5)
+    at Server.onListen (/usr/local/lib/node_modules/http-server/node_modules/portfinder/lib/portfinder.js:48:5)
+    at Server.g (events.js:180:16)
+    at Server.EventEmitter.emit (events.js:92:17)

@@ -1,0 +1,8 @@
+{
+  "issueNumber": 135,
+  "info": "crash when running http-server --ssl",
+  "url": "https://github.com/http-party/http-server/issues/135",
+  "version": "0.8.5",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

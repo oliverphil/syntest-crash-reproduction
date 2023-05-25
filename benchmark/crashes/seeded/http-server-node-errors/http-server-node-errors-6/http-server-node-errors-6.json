@@ -1,0 +1,17 @@
+{
+  "issueNumber": 6,
+  "info": "Throw ERR_ASYNC_TYPE when options contains crash object",
+  "url": "https://github.com/http-party/http-server",
+  "messageContains": "ERR_ASYNC_TYPE",
+  "nodeVersion": "18.4.0",
+  "version": "14.1.1",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "setup": {
+    "copy": {
+      "from": "core.js",
+      "to": "node_modules/union/lib/core.js"
+    }
+  }
+}

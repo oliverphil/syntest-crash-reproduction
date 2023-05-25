@@ -1,0 +1,17 @@
+{
+  "issueNumber": 11,
+  "info": "Throw ERR_CONSOLE_WRITABLE_STREAM when options contains crash object",
+  "url": "https://github.com/http-party/http-server",
+  "messageContains": "ERR_CONSOLE_WRITABLE_STREAM",
+  "nodeVersion": "18.4.0",
+  "version": "14.1.1",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "setup": {
+    "copy": {
+      "from": "core.js",
+      "to": "node_modules/union/lib/core.js"
+    }
+  }
+}

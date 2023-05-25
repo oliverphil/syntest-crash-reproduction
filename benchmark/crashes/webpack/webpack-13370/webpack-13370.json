@@ -1,0 +1,9 @@
+{
+  "issueNumber": 13370,
+  "info": "TypeError: this.generator.getConcatenationBailoutReason is not a function",
+  "url": "https://github.com/webpack/webpack/issues/13370",
+  "version": "5.37.0",
+  "nodeVersion": "16.1.0",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

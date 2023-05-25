@@ -1,0 +1,9 @@
+{
+  "issueNumber": 634,
+  "info": "Server Crashing with \"Cannot set headers after they are sent to the client\"",
+  "url": "https://github.com/http-party/http-server/issues/634",
+  "nodeVersion": "12.14.1",
+  "version": "13.0.0",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

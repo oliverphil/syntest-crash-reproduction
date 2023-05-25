@@ -1,0 +1,14 @@
+TypeError [ERR_ENCODING_INVALID_ENCODED_DATA]: The encoded data was not valid for encoding utf-8
+    at new NodeError (node:internal/errors:371:5)
+    at TextDecoder.decode (node:internal/encoding:429:15)
+    at Object.core.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/union/lib/core.js:102:13)
+    at new HttpServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:179:13)
+    at Object.exports.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:22:10)
+    at Object.<anonymous> (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js:3:6)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12) {
+  errno: 11,
+  code: 'ERR_ENCODING_INVALID_ENCODED_DATA'
+}

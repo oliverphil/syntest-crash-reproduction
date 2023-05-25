@@ -1,0 +1,11 @@
+{
+  "issueNumber": 3388,
+  "info": "Node http2 - cannot read this.socket.readable",
+  "url": "https://github.com/expressjs/express/issues/3388",
+  "version": "4.17.1",
+  "nodeVersion": "10.0.0",
+  "dependencies": {
+    "http2": "3.2.0"
+  },
+  "requireCrashDependency": true
+}

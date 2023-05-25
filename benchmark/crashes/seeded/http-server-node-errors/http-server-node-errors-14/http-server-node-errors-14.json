@@ -1,0 +1,17 @@
+{
+  "issueNumber": 14,
+  "info": "Throw ERR_DOMAIN_CANNOT_SET_UNCAUGHT_EXCEPTION_CAPTURE when options contains crash object",
+  "url": "https://github.com/http-party/http-server",
+  "messageContains": "ERR_DOMAIN_CANNOT_SET_UNCAUGHT_EXCEPTION_CAPTURE",
+  "nodeVersion": "18.4.0",
+  "version": "14.1.1",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "setup": {
+    "copy": {
+      "from": "core.js",
+      "to": "node_modules/union/lib/core.js"
+    }
+  }
+}

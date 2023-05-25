@@ -1,0 +1,13 @@
+RangeError [ERR_OUT_OF_RANGE]: The value of "end" is out of range. It must be >= 0 && <= 2. Received 10
+    at validateOffset (node:buffer:112:3)
+    at _fill (node:buffer:1023:7)
+    at Buffer.fill (node:buffer:976:10)
+    at Object.core.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/union/lib/core.js:99:9)
+    at new HttpServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:179:13)
+    at Object.exports.createServer (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/node_modules/http-server/lib/http-server.js:22:10)
+    at Object.<anonymous> (/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js:3:6)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32) {
+  code: 'ERR_OUT_OF_RANGE'
+}
