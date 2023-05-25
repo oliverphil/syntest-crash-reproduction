@@ -119,5 +119,16 @@ dist
 test-results.json
 
 # End of https://www.toptal.com/developers/gitignore/api/node
-
+benchmark/**/node_modules
+benchmark/**/package-lock.json
+benchmark/**/
+.syntest/
+syntest/
+logs
+*.log
+!benchmark/crashes/**/*.log
+*.csv
+.DS_Store
+results
+benchmark/crashes/atom/*/atom-*/
 

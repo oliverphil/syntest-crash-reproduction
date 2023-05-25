@@ -1,6 +1,6 @@
 {
-  "name": "@syntest/search-javascript",
-  "version": "0.0.0",
+  "name": "@syntest/crash-reproduction",
+  "version": "0.0.1",
   "description": "SynTest JavaScript is a tool for automatically generating test cases for the JavaScript language",
   "keywords": [
     "syntest",
@@ -46,24 +46,15 @@
     "test:watch": "mocha --config ../../.mocharc.json --watch"
   },
   "dependencies": {
-    "@babel/core": "7.20.12",
-    "@babel/preset-env": "7.19.1",
-    "@babel/register": "7.18.9",
-    "@istanbuljs/schema": "0.1.3",
-    "@syntest/analysis-javascript": "*",
-    "@syntest/ast-visitor-javascript": "*",
-    "@syntest/instrumentation-javascript": "*",
+    "@syntest/analysis-javascript": "file:../../libraries/analysis-javascript",
+    "@syntest/base-language": "file:../../../syntest-core/tools/base-language",
+    "@syntest/cli-graphics": "file:../../../syntest-core/libraries/cli-graphics",
+    "@syntest/crash-reproduction-setup": "0.0.0",
+    "@syntest/logging": "*",
+    "@syntest/metric": "file:../../../syntest-core/libraries/metric",
+    "@syntest/module": "file:../../../syntest-core/libraries/module",
     "@syntest/search": "file:../../../syntest-core/libraries/search",
-    "chai": "4.3.7",
-    "chai-as-promised": "7.1.1",
-    "chalk": "4.1.1",
-    "clear": "0.1.0",
-    "figlet": "1.5.2",
-    "fs-extra": "11.1.0",
-    "istanbul-lib-instrument": "5.1.0",
-    "lodash.clonedeep": "4.5.0",
-    "mocha": "10.2.0",
-    "regenerator-runtime": "0.13.9"
+    "@syntest/search-javascript": "file:../../libraries/search-javascript"
   },
   "engines": {
     "node": ">=10.24.0"

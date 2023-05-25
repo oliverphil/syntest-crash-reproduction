@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@babel/core": "7.20.12",
-    "@syntest/analysis": "*",
+    "@syntest/analysis": "file:../../../syntest-core/libraries/analysis",
     "@syntest/ast-visitor-javascript": "*",
     "@syntest/cfg": "*",
     "@syntest/search": "*"

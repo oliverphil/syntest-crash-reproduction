@@ -40,7 +40,8 @@
     "test:coverage": "nx run-many --stream --target=test:coverage",
     "test:coverage:ci": "nx run-many --target=test:coverage:ci",
     "test:watch": "nx watch --all -- nx affected --target=test",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "run-ts": "node -r ts-node/register ../syntest-core/tools/cli/bin.ts crash test"
   },
   "workspaces": [
     "libraries/*",
@@ -50,8 +51,8 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
-    "@types/babel__traverse": "^7.18.3",
     "@types/babel__core": "7.20.0",
+    "@types/babel__traverse": "^7.18.3",
     "@types/chai": "4.3.4",
     "@types/figlet": "1.5.4",
     "@types/lodash.clonedeep": "^4.5.7",
@@ -92,5 +93,10 @@
       "prettier --config .prettierrc.json --ignore-path .prettierignore --write .",
       "eslint --config .eslintrc.json --ignore-path .eslintignore . --fix"
     ]
+  },
+  "dependencies": {
+    "@syntest/cfg": "file:../syntest-core/libraries/cfg",
+    "@syntest/logging": "file:../syntest-core/libraries/logging",
+    "@syntest/search": "file:../syntest-core/libraries/search"
   }
 }
