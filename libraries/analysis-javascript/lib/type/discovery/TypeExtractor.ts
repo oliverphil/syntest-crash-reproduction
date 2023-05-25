@@ -40,8 +40,7 @@ export class TypeExtractor {
     const files = getAllFiles(rootContext.rootPath, ".js").filter(
       (x) =>
         !x.includes("/test/") &&
-        !x.includes(".test.js") &&
-        !x.includes("node_modules")
+        !x.includes(".test.js")
     ); // maybe we should also take those into account
 
     for (const file of files) {

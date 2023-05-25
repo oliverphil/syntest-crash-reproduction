@@ -242,9 +242,13 @@ export class RelationVisitor extends AbstractSyntaxTreeVisitor {
   ) => {
     const type = RelationType.This;
 
-    const parent = this._getThisParent(path);
+    try {
+      const parent = this._getThisParent(path);
 
-    this._createRelation(path, type, [parent]);
+      this._createRelation(path, type, [parent]);
+    } catch (error) {
+      console.debug(error);
+    }
   };
 
   public ArrayExpression: (path: NodePath<t.ArrayExpression>) => void = (
