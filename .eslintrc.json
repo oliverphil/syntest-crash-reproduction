@@ -8,7 +8,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     // "plugin:@typescript-eslint/recommended-requiring-type-checking", // TODO later too much work currently
-    "plugin:unicorn/recommended",
+//    "plugin:unicorn/recommended",
     // "plugin:import/recommended", // TODO gives weird errors
     "plugin:import/typescript",
     "plugin:promise/recommended",

@@ -114,8 +114,8 @@ export class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes.filter(crash => crash.crashId === 'express-2701');
-    // return crashes;
+    // return crashes.filter(crash => crash.crashId === 'express-2701');
+    return crashes;
   }
 
   /**

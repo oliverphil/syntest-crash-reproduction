@@ -35,6 +35,8 @@ import { TypeModel } from "./type/resolving/TypeModel";
 import { Element } from "./type/discovery/element/Element";
 import { DiscoveredObjectType } from "./type/discovery/object/DiscoveredType";
 import { Relation } from "./type/discovery/relation/Relation";
+import {createReadStream, readFileSync, writeFileSync} from "fs";
+import * as readline from "readline";
 
 export class RootContext extends CoreRootContext<t.Node> {
   protected _exportFactory: ExportFactory;
@@ -73,6 +75,66 @@ export class RootContext extends CoreRootContext<t.Node> {
     this._typeResolver = typeResolver;
 
     this._exportMap = new Map();
+  }
+
+  private extractedTypes = [
+    '_abstractSyntaxTrees',
+    '_elementMap',
+    '_objectMap',
+    '_relationMap',
+    '_sources',
+    '_targetMap'
+  ];
+
+  saveExtractedTypes(path) {
+    for (const map of this.extractedTypes) {
+      for (const entry of this[map].entries()) {
+        try {
+          writeFileSync(`${path}/rootContextExtractedTypes_${map}.json`,
+              JSON.stringify(entry, (key, value) => {
+                if (value instanceof Map) {
+                  return {
+                    dataType: 'Map',
+                    value: [...value],
+                  };
+                } else {
+                  return value;
+                }
+              }) + '\n', { flag: 'a+' }
+          );
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+    this._typeExtractor.elementMap = this._elementMap;
+    this._typeExtractor.relationMap = this._relationMap;
+    this._typeExtractor.objectMap = this._objectMap;
+  }
+
+  async loadExtractedTypes(path) {
+    for (const map of this.extractedTypes) {
+      const obj = new Map();
+      const rl = readline.createInterface({
+        input: createReadStream(`${path}/rootContextExtractedTypes_${map}.json`),
+        crlfDelay: Infinity
+      })
+
+      rl.on('line', (line) => {
+        const result = JSON.parse(line, (key, value) => {
+          if (typeof value === 'object' && value !== null) {
+            if (value.dataType === 'Map') {
+              return new Map(value.value);
+            }
+          }
+          return value;
+        });
+        obj.set(result[0], result[1]);
+      });
+      this[map] = obj;
+
+      await new Promise(resolve => rl.once('close', resolve));
+    }
   }
 
   get rootPath(): string {

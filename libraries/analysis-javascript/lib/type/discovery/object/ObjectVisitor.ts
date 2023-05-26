@@ -69,6 +69,22 @@ export class ObjectVisitor extends AbstractSyntaxTreeVisitor {
       // e.g. class A { "x" = function () {} }
       // e.g. class A { "x" = () => {} }
       return "value" in node ? node.value.toString() : "null";
+    } else if (node.type === "MemberExpression") {
+      // e.g. [util.inspect.custom]() {
+      const expr = <t.MemberExpression>node;
+      // @ts-ignore
+      if (expr.object.property && expr.object.property.name) {
+        // @ts-ignore
+        return `${expr.object.property.name}.${expr.property.name}`;
+      } else if (expr.property) {
+        // @ts-ignore
+        return expr.property.name;
+      } else {
+        throw new Error(`Unexpected property name type: ${node.type}`);
+      }
+
+    } else if (node.type === "ArrayExpression") {
+      return "array";
     } else {
       // e.g. const {x} = class {}
       // e.g. const {x} = function {}
@@ -295,7 +311,8 @@ export class ObjectVisitor extends AbstractSyntaxTreeVisitor {
       const _object = this.complexTypeMap.get(this._getNodeId(parent));
 
       if (!_object) {
-        throw new Error(`Unexpected object type: ${path.node.object.type}`);
+        return;
+        // throw new Error(`Unexpected object type: ${path.node.object.type}`);
       }
 
       if (path.node.property.type === "PrivateName") {

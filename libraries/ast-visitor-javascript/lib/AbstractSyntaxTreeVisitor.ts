@@ -123,20 +123,28 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
   }
 
   public _getNodeId(path: NodePath<t.Node>): string {
-    if (path.node.loc === undefined) {
-      throw new Error(
-        `Node ${path.type} in file '${this._filePath}' does not have a location`
-      );
+    let loc = path.node.loc;
+    if (loc === undefined) {
+      let parent = path.parentPath;
+      while (parent && !parent.node.loc) {
+        parent = parent.parentPath;
+      }
+      loc = parent?.node?.loc;
+      if (!loc) {
+        throw new Error(
+            `Node ${path.type} in file '${this._filePath}' does not have a location`
+        );
+      }
     }
 
-    const startLine = (<{ line: number }>(<unknown>path.node.loc.start)).line;
-    const startColumn = (<{ column: number }>(<unknown>path.node.loc.start))
+    const startLine = (<{ line: number }>(<unknown>loc.start)).line;
+    const startColumn = (<{ column: number }>(<unknown>loc.start))
       .column;
-    const startIndex = (<{ index: number }>(<unknown>path.node.loc.start))
+    const startIndex = (<{ index: number }>(<unknown>loc.start))
       .index;
-    const endLine = (<{ line: number }>(<unknown>path.node.loc.end)).line;
-    const endColumn = (<{ column: number }>(<unknown>path.node.loc.end)).column;
-    const endIndex = (<{ index: number }>(<unknown>path.node.loc.end)).index;
+    const endLine = (<{ line: number }>(<unknown>loc.end)).line;
+    const endColumn = (<{ column: number }>(<unknown>loc.end)).column;
+    const endIndex = (<{ index: number }>(<unknown>loc.end)).index;
 
     return `${this._filePath}:${startLine}:${startColumn}:::${endLine}:${endColumn}:::${startIndex}:${endIndex}`;
   }
@@ -230,6 +238,13 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
     ) {
       return `global::${path.node.name}`;
     } else if (binding === undefined) {
+      let parent = path.parentPath;
+      while (parent && !parent.scope.hasGlobal(path.node.name)) {
+        parent = parent.parentPath;
+      }
+      if (parent && parent.scope.hasGlobal(path.node.name)) {
+        return `global::${path.node.name}`;
+      }
       throw new Error(
         `Cannot find binding for ${path.node.name} at ${this._getNodeId(path)}`
       );

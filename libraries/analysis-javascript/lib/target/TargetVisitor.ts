@@ -545,9 +545,10 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         } else {
           // e.g. a.x.y = function () {}
           // unsupported for now should create a objecttarget as a subtarget
-          throw new Error(
-            unsupportedSyntax(path.node.type, this._getNodeId(path))
-          );
+          return;
+          // throw new Error(
+          //   unsupportedSyntax(path.node.type, this._getNodeId(path))
+          // );
         }
       }
 

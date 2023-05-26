@@ -44,7 +44,11 @@ export class TypeExtractor {
     ); // maybe we should also take those into account
 
     for (const file of files) {
-      this.extract(rootContext, file);
+      try {
+        this.extract(rootContext, file);
+      } catch (error) {
+        console.info(error);
+      }
     }
   }
 
@@ -102,11 +106,23 @@ export class TypeExtractor {
     return this._elementMap;
   }
 
+  set elementMap(elementMap: Map<string, Element>) {
+    this._elementMap = elementMap;
+  }
+
   get relationMap(): Map<string, Relation> {
     return this._relationMap;
   }
 
+  set relationMap(relationMap) {
+    this._relationMap = relationMap;
+  }
+
   get objectMap(): Map<string, DiscoveredObjectType> {
     return this._objectMap;
+  }
+
+  set objectMap(objectMap) {
+    this._objectMap = objectMap;
   }
 }

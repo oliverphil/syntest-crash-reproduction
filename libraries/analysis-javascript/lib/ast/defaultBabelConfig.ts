@@ -37,5 +37,7 @@ export const defaultBabelOptions: TransformOptions = {
       "objectRestSpread",
     ],
   },
-  plugins: [],
+  plugins: [
+      "@babel/plugin-transform-modules-commonjs"
+  ],
 };

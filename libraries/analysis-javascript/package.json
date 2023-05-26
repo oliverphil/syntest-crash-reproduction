@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@babel/core": "7.20.12",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "@syntest/analysis": "file:../../../syntest-core/libraries/analysis",
     "@syntest/ast-visitor-javascript": "*",
     "@syntest/cfg": "*",

@@ -130,52 +130,6 @@ export class CrashLauncher extends Launcher {
 
   async initialize(): Promise<void> {
     CrashLauncher.LOGGER.info("Initialization started");
-    if (existsSync(this.arguments_.tempSyntestDirectory)) {
-      CrashLauncher.LOGGER.info("Cleaning up old directories");
-      deleteDirectories([
-        path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempTestDirectory
-        ),
-        path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempLogDirectory
-        ),
-        path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempInstrumentedDirectory
-        ),
-        this.arguments_.tempSyntestDirectory,
-      ]);
-    }
-
-    CrashLauncher.LOGGER.info("Creating directories");
-    createDirectoryStructure([
-      path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.statisticsDirectory
-      ),
-      path.join(this.arguments_.syntestDirectory, this.arguments_.logDirectory),
-      path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.testDirectory
-      ),
-    ]);
-    CrashLauncher.LOGGER.info("Creating temp directories");
-    createDirectoryStructure([
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempTestDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempLogDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempInstrumentedDirectory
-      ),
-    ]);
 
     const abstractSyntaxTreeFactory = new AbstractSyntaxTreeFactory();
     const targetFactory = new TargetFactory();
@@ -198,6 +152,9 @@ export class CrashLauncher extends Launcher {
       typeExtractor,
       typeResolver
     );
+    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__abstractSyntaxTrees.json`)) {
+      await this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    }
 
     this.userInterface.printHeader("GENERAL INFO");
 
@@ -357,20 +314,27 @@ export class CrashLauncher extends Launcher {
     this.userInterface.printTable("DIRECTORY SETTINGS", directorySettings);
 
     CrashLauncher.LOGGER.info("Instrumenting targets");
-    const instrumenter = new CrashInstrumenter();
-    await instrumenter.instrumentAll(
-      this.rootContext,
-      this.targets,
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempInstrumentedDirectory
-      )
-    );
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${crash.project}/${crash.crashId}`)) {
+      const instrumenter = new CrashInstrumenter();
+      await instrumenter.instrumentAll(
+          this.rootContext,
+          this.targets,
+          path.join(
+              this.arguments_.tempSyntestDirectory,
+              this.arguments_.tempInstrumentedDirectory
+          )
+      );
+    }
 
     CrashLauncher.LOGGER.info("Extracting types");
     this.rootContext.extractTypes();
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes.json`)) {
+      this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    }
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
+    // TODO: save resolved types also
+
     CrashLauncher.LOGGER.info("Preprocessing done");
 
     // const maps = this.rootContext.getTypeModel().calculateProbabilitiesForFile(false, '/Users/dimitrist/Documents/git/syntest/syntest-javascript-benchmark/lodash/truncate.js')
@@ -767,22 +731,22 @@ export class CrashLauncher extends Launcher {
     CrashLauncher.LOGGER.info("Exiting");
     // TODO should be cleanup step in tool
     // Finish
-    CrashLauncher.LOGGER.info("Deleting temporary directories");
-    deleteDirectories([
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempTestDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempLogDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempInstrumentedDirectory
-      ),
-      this.arguments_.tempSyntestDirectory,
-    ]);
+    // CrashLauncher.LOGGER.info("Deleting temporary directories");
+    // deleteDirectories([
+    //   path.join(
+    //     this.arguments_.tempSyntestDirectory,
+    //     this.arguments_.tempTestDirectory
+    //   ),
+    //   path.join(
+    //     this.arguments_.tempSyntestDirectory,
+    //     this.arguments_.tempLogDirectory
+    //   ),
+    //   path.join(
+    //     this.arguments_.tempSyntestDirectory,
+    //     this.arguments_.tempInstrumentedDirectory
+    //   ),
+    //   this.arguments_.tempSyntestDirectory,
+    // ]);
   }
 
   public override async run(): Promise<void> {
@@ -807,7 +771,7 @@ export class CrashLauncher extends Launcher {
       CrashLauncher.LOGGER.info("====== End Crash to Run ======");
       global.crash = crash;
       this.crash = crash;
-      // try {
+      try {
         (<TypedEventEmitter<Events>>process).emit("initializeStart");
         await this.initialize();
         (<TypedEventEmitter<Events>>process).emit("initializeComplete");
@@ -822,10 +786,10 @@ export class CrashLauncher extends Launcher {
         (<TypedEventEmitter<Events>>process).emit("postprocessComplete");
         (<TypedEventEmitter<Events>>process).emit("exitting");
         await this.exit();
-      // } catch (error) {
-      //   console.log(error);
-      //   // console.trace(error);
-      // }
+      } catch (error) {
+        console.log(error);
+        // console.trace(error);
+      }
     }
   }
 }

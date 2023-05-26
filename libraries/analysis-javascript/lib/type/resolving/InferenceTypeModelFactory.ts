@@ -265,7 +265,11 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
     });
 
     for (const relation of sortedRelations) {
-      this.resolveRelation(relation);
+      try {
+        this.resolveRelation(relation);
+      } catch (error) {
+        console.info(error);
+      }
     }
   }
 
