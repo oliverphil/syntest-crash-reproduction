@@ -4,7 +4,8 @@
   "url": "https://github.com/atom/atom/issues/22622",
   "version": "1.57.0",
   "dependencies": {
-    "electron": "9.4.4"
+    "electron": "9.4.4",
+    "tunnel-agent": "0.6.0"
   },
   "setup": {
     "download": {

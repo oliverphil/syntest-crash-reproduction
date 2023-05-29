@@ -58,6 +58,7 @@ const reservedKeywords = new Set([
   "if",
   "implements",
   "import*",
+  "import",
   "in",
   "instanceof",
   "int",
@@ -245,9 +246,10 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
       if (parent && parent.scope.hasGlobal(path.node.name)) {
         return `global::${path.node.name}`;
       }
-      throw new Error(
-        `Cannot find binding for ${path.node.name} at ${this._getNodeId(path)}`
-      );
+      return this._getNodeId(path);
+      // throw new Error(
+      //   `Cannot find binding for ${path.node.name} at ${this._getNodeId(path)}`
+      // );
     } else {
       return this._getNodeId(binding.path);
     }

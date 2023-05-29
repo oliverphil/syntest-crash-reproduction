@@ -167,16 +167,20 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
   }
 
   private _getLocation(path: NodePath<t.Node>): Location {
+    let locPath = path;
+    while (!locPath.node.loc) {
+      locPath = locPath.parentPath;
+    }
     return {
       start: {
-        line: path.node.loc.start.line,
-        column: path.node.loc.start.column,
-        index: (<{ index: number }>(<unknown>path.node.loc.start)).index,
+        line: locPath.node.loc.start.line,
+        column: locPath.node.loc.start.column,
+        index: (<{ index: number }>(<unknown>locPath.node.loc.start)).index,
       },
       end: {
-        line: path.node.loc.end.line,
-        column: path.node.loc.end.column,
-        index: (<{ index: number }>(<unknown>path.node.loc.end)).index,
+        line: locPath.node.loc.end.line,
+        column: locPath.node.loc.end.column,
+        index: (<{ index: number }>(<unknown>locPath.node.loc.end)).index,
       },
     };
   }

@@ -259,6 +259,9 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         //     ? path.node.id.name
         //     : "anonymous";
       }
+      case "ArrowFunctionExpression": {
+        return this._getTargetNameOfExpression(path.parentPath);
+      }
       default: {
         // e.g. class {}
         // e.g. function () {}
@@ -396,6 +399,8 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // unsupported
           throw new Error("unknown class method parent");
         }
+      } else if (parentNode.id && parentNode.id.type === "Identifier") {
+        return parentNode.id.name;
       } else {
         // unsupported
         throw new Error("unknown class method parent");

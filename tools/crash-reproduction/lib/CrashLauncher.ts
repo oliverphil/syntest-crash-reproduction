@@ -327,10 +327,13 @@ export class CrashLauncher extends Launcher {
     }
 
     CrashLauncher.LOGGER.info("Extracting types");
+    console.log("Extracting types");
     this.rootContext.extractTypes();
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes.json`)) {
+    console.log("Saving types");
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
       this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
+    console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
     // TODO: save resolved types also

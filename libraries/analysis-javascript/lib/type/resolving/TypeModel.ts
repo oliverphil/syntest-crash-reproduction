@@ -124,7 +124,8 @@ export class TypeModel {
 
   private _addTypeScore(id: string, type: Type, score: number) {
     if (!this._elementTypeScoreMap.has(id)) {
-      throw new Error(`Element ${id} does not exist`);
+      return;
+      // throw new Error(`Element ${id} does not exist`);
     }
     if (!this._elementTypeScoreMap.get(id).has(type.type)) {
       this._elementTypeScoreMap.get(id).set(type.type, 0);

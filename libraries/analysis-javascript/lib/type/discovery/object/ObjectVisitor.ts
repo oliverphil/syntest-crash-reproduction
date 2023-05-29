@@ -85,6 +85,9 @@ export class ObjectVisitor extends AbstractSyntaxTreeVisitor {
 
     } else if (node.type === "ArrayExpression") {
       return "array";
+    } else if (node.type === "CallExpression") {
+      // @ts-ignore
+      return node.callee?.property?.name;
     } else {
       // e.g. const {x} = class {}
       // e.g. const {x} = function {}

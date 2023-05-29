@@ -371,6 +371,9 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
 
         // TODO what if the property is not an element
         const propertyElement = this._elementMap.get(functionId);
+        if (!propertyElement) {
+          break;
+        }
         const propertyName =
           "name" in propertyElement
             ? propertyElement.name
@@ -447,6 +450,9 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
 
         // TODO what if the function id is not an element
         const propertyElement = this.getElement(functionId);
+        if (!propertyElement) {
+          break;
+        }
         const propertyName =
           "name" in propertyElement
             ? propertyElement.name
