@@ -262,6 +262,13 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
       case "ArrowFunctionExpression": {
         return this._getTargetNameOfExpression(path.parentPath);
       }
+      case "NewExpression": {
+        // @ts-ignore
+        return path.parentPath.node.callee.name;
+      }
+      case "ArrayExpression": {
+        return this._getTargetNameOfExpression(path.parentPath);
+      }
       default: {
         // e.g. class {}
         // e.g. function () {}

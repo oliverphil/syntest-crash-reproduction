@@ -60,7 +60,7 @@
   ],
   "metric-middleware-pipeline": [],
   "output-metrics": [],
-  "syntest-project": "atom",
+  "syntest-project": "webpack",
   "syntest-crashes": "false",
   "syntest-seeded": "false"
 }

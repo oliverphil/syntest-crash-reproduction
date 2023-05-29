@@ -400,8 +400,12 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
 
   // actual control flow graph related nodes
   public Statement: (path: NodePath<t.Statement>) => void = (path) => {
+    let locPath: NodePath = path;
+    while (!locPath.node.loc) {
+      locPath = locPath.parentPath;
+    }
     ControlFlowGraphVisitor.LOGGER.debug(
-      `Entering statement: ${path.type}\tline: ${path.node.loc.start.line}\tcolumn: ${path.node.loc.start.column}`
+      `Entering statement: ${path.type}\tline: ${locPath.node.loc.start.line}\tcolumn: ${locPath.node.loc.start.column}`
     );
     const node = this._createNode(path);
 
