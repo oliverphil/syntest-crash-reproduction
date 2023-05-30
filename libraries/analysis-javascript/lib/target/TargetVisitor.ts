@@ -530,9 +530,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
             }
             // add this as class method
             if (!property.isIdentifier()) {
-              throw new Error(
-                unsupportedSyntax(path.node.type, this._getNodeId(path))
-              );
+              return;
             }
 
             this._subTargets.push(<MethodTarget>{
