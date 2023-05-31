@@ -34,6 +34,10 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
 
   // private _processedIds: Set<string>;
 
+  set typeModel(typeModel) {
+    this._typeModel = typeModel;
+  }
+
   constructor() {
     super();
     this._elementMap = new Map();

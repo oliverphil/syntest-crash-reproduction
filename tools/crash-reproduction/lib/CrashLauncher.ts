@@ -155,12 +155,43 @@ export class CrashLauncher extends Launcher {
     if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__abstractSyntaxTrees.json`)) {
       await this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
+    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+      await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    }
+
+    CrashLauncher.LOGGER.info("Creating directories");
+    createDirectoryStructure([
+      path.join(
+          this.arguments_.syntestDirectory,
+          this.arguments_.statisticsDirectory
+      ),
+      path.join(this.arguments_.syntestDirectory, this.arguments_.logDirectory),
+      path.join(
+          this.arguments_.syntestDirectory,
+          this.arguments_.testDirectory
+      ),
+    ]);
+    CrashLauncher.LOGGER.info("Creating temp directories");
+    createDirectoryStructure([
+      path.join(
+          this.arguments_.tempSyntestDirectory,
+          this.arguments_.tempTestDirectory
+      ),
+      path.join(
+          this.arguments_.tempSyntestDirectory,
+          this.arguments_.tempLogDirectory
+      ),
+      path.join(
+          this.arguments_.tempSyntestDirectory,
+          this.arguments_.tempInstrumentedDirectory
+      ),
+    ]);
 
     this.userInterface.printHeader("GENERAL INFO");
 
     // TODO ui info messages
-
-    // this.userInterface.report("property-set", [
+    //
+    // this.userInterface.printTable("property-set", [
     //   "Target Settings",
     //   <string>(
     //     (<unknown>[["Target Root Directory", this.arguments_.targetRootDirectory]])
@@ -336,7 +367,10 @@ export class CrashLauncher extends Launcher {
     console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
-    // TODO: save resolved types also
+    console.log("Saving Resolved Types");
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+      this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    }
 
     CrashLauncher.LOGGER.info("Preprocessing done");
 

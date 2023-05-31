@@ -37,6 +37,7 @@ import { DiscoveredObjectType } from "./type/discovery/object/DiscoveredType";
 import { Relation } from "./type/discovery/relation/Relation";
 import {createReadStream, readFileSync, writeFileSync} from "fs";
 import * as readline from "readline";
+import {InferenceTypeModelFactory} from "./type/resolving/InferenceTypeModelFactory";
 
 export class RootContext extends CoreRootContext<t.Node> {
   protected _exportFactory: ExportFactory;
@@ -86,6 +87,11 @@ export class RootContext extends CoreRootContext<t.Node> {
     '_targetMap'
   ];
 
+  private resolvedTypes = [
+    '_typeModel',
+    '_typeResolver'
+  ]
+
   saveExtractedTypes(path) {
     for (const map of this.extractedTypes) {
       for (const entry of this[map].entries()) {
@@ -107,9 +113,34 @@ export class RootContext extends CoreRootContext<t.Node> {
         }
       }
     }
-    this._typeExtractor.elementMap = this._elementMap;
-    this._typeExtractor.relationMap = this._relationMap;
-    this._typeExtractor.objectMap = this._objectMap;
+  }
+
+  saveResolvedTypes(path) {
+    for (const obj of this.resolvedTypes) {
+      for (const entry of Object.entries(this[obj])) {
+        try {
+          writeFileSync(`${path}/rootContextResolvedTypes_${obj}.json`,
+              JSON.stringify(entry, (key, value) => {
+                if (value instanceof Map) {
+                  return {
+                    dataType: 'Map',
+                    value: [...value],
+                  };
+                } else if (value instanceof Set) {
+                  return {
+                    dataType: 'Set',
+                    value: [...value]
+                  }
+                } else {
+                  return value;
+                }
+              }) + '\n', { flag: 'a+' }
+          );
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
   }
 
   async loadExtractedTypes(path) {
@@ -135,6 +166,44 @@ export class RootContext extends CoreRootContext<t.Node> {
 
       await new Promise(resolve => rl.once('close', resolve));
     }
+
+    this._typeExtractor.elementMap = this._elementMap;
+    this._typeExtractor.relationMap = this._relationMap;
+    this._typeExtractor.objectMap = this._objectMap;
+  }
+
+  async loadResolvedTypes(path) {
+    for (const map of this.resolvedTypes) {
+      let obj = {};
+      if (map === '_typeModel') {
+        obj = Object.setPrototypeOf({}, TypeModel.prototype);
+      } else {
+        obj = Object.setPrototypeOf({}, InferenceTypeModelFactory.prototype);
+      }
+      const rl = readline.createInterface({
+        input: createReadStream(`${path}/rootContextResolvedTypes_${map}.json`),
+        crlfDelay: Infinity
+      })
+
+      rl.on('line', (line) => {
+        const result = JSON.parse(line, (key, value) => {
+          if (typeof value === 'object' && value !== null) {
+            if (value.dataType === 'Map') {
+              return new Map(value.value);
+            }
+            if (value.dataType === 'Set') {
+              return new Set(value.value);
+            }
+          }
+          return value;
+        });
+        obj[result[0]] = result[1];
+      });
+      this[map] = obj;
+
+      await new Promise(resolve => rl.once('close', resolve));
+    }
+    (<InferenceTypeModelFactory>this._typeResolver).typeModel = this._typeModel;
   }
 
   get rootPath(): string {
