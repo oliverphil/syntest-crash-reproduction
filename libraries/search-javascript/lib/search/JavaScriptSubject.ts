@@ -29,10 +29,15 @@ import {
 
 import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
 import { BranchDistance } from "../criterion/BranchDistance";
+import {ControlFlowProgram} from "@syntest/cfg/dist/lib/ControlFlowProgram";
 
 export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
   constructor(target: Target, rootContext: RootContext) {
     super(target, rootContext);
+  }
+
+  override getCfgs(): ControlFlowProgram<unknown>[] {
+    return [this.cfg];
   }
 
   protected _extractObjectives(): void {

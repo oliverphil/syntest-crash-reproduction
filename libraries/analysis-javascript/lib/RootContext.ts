@@ -116,55 +116,39 @@ export class RootContext extends CoreRootContext<t.Node> {
   }
 
   saveResolvedTypes(path) {
-    for (const obj of this.resolvedTypes) {
-      for (const entry of Object.entries(this[obj])) {
-        try {
-          writeFileSync(`${path}/rootContextResolvedTypes_${obj}.json`,
-              JSON.stringify(entry, (key, value) => {
-                if (value instanceof Map) {
-                  return {
-                    dataType: 'Map',
-                    value: [...value],
-                  };
-                } else if (value instanceof Set) {
-                  return {
-                    dataType: 'Set',
-                    value: [...value]
-                  }
-                } else {
-                  return value;
-                }
-              }) + '\n', { flag: 'a+' }
-          );
-        } catch (e) {
-          console.log(e);
-        }
-      }
-    }
+    this._typeModel.saveResolvedTypes(path);
+    (<InferenceTypeModelFactory>this._typeResolver).saveResolvedTypes(path);
   }
 
   async loadExtractedTypes(path) {
     for (const map of this.extractedTypes) {
-      const obj = new Map();
-      const rl = readline.createInterface({
-        input: createReadStream(`${path}/rootContextExtractedTypes_${map}.json`),
-        crlfDelay: Infinity
-      })
+      try {
+        const obj = new Map();
+        const rl = readline.createInterface({
+          input: createReadStream(`${path}/rootContextExtractedTypes_${map}.json`),
+          crlfDelay: Infinity
+        })
 
-      rl.on('line', (line) => {
-        const result = JSON.parse(line, (key, value) => {
-          if (typeof value === 'object' && value !== null) {
-            if (value.dataType === 'Map') {
-              return new Map(value.value);
+        rl.on('line', (line) => {
+          const result = JSON.parse(line, (key, value) => {
+            if (typeof value === 'object' && value !== null) {
+              if (value.dataType === 'Map') {
+                return new Map(value.value);
+              }
             }
-          }
-          return value;
+            return value;
+          });
+          obj.set(result[0], result[1]);
         });
-        obj.set(result[0], result[1]);
-      });
-      this[map] = obj;
+        this[map] = obj;
 
-      await new Promise(resolve => rl.once('close', resolve));
+        await new Promise((resolve, reject) => {
+          rl.once('close', resolve);
+          rl.on('error', reject);
+        });
+      } catch {
+        //
+      }
     }
 
     this._typeExtractor.elementMap = this._elementMap;
@@ -173,37 +157,15 @@ export class RootContext extends CoreRootContext<t.Node> {
   }
 
   async loadResolvedTypes(path) {
-    for (const map of this.resolvedTypes) {
-      let obj = {};
-      if (map === '_typeModel') {
-        obj = Object.setPrototypeOf({}, TypeModel.prototype);
-      } else {
-        obj = Object.setPrototypeOf({}, InferenceTypeModelFactory.prototype);
-      }
-      const rl = readline.createInterface({
-        input: createReadStream(`${path}/rootContextResolvedTypes_${map}.json`),
-        crlfDelay: Infinity
-      })
-
-      rl.on('line', (line) => {
-        const result = JSON.parse(line, (key, value) => {
-          if (typeof value === 'object' && value !== null) {
-            if (value.dataType === 'Map') {
-              return new Map(value.value);
-            }
-            if (value.dataType === 'Set') {
-              return new Set(value.value);
-            }
-          }
-          return value;
-        });
-        obj[result[0]] = result[1];
-      });
-      this[map] = obj;
-
-      await new Promise(resolve => rl.once('close', resolve));
+    if (!this._typeModel) {
+      this._typeModel = new TypeModel();
     }
-    (<InferenceTypeModelFactory>this._typeResolver).typeModel = this._typeModel;
+    const resolver = <InferenceTypeModelFactory>this._typeResolver;
+    await Promise.all([
+      this._typeModel.loadResolvedTypes(path),
+      resolver.loadResolvedTypes(path)
+    ]);
+    resolver.typeModel = this._typeModel;
   }
 
   get rootPath(): string {

@@ -22,6 +22,7 @@ export * from "./lib/search/crossover/TreeCrossover";
 
 export * from "./lib/search/JavaScriptExecutionResult";
 export * from "./lib/search/JavaScriptSubject";
+export * from "./lib/search/CrashSubject";
 
 export * from "./lib/testbuilding/JavaScriptDecoder";
 export * from "./lib/testbuilding/JavaScriptSuiteBuilder";

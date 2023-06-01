@@ -25,6 +25,8 @@ import {
   Type,
 } from "./Type";
 import { TypeEnum } from "./TypeEnum";
+import {createReadStream, writeFileSync} from "fs";
+import * as readline from "readline";
 
 export class TypeModel {
   private _elements: Set<string>;
@@ -56,6 +58,66 @@ export class TypeModel {
     this._typeIdToTypeMap = new Map();
 
     this._scoreHasChangedMap = new Map();
+  }
+
+  saveResolvedTypes(path) {
+    for (const map of Object.keys(this)) {
+      for (const entry of this[map].entries()) {
+        try {
+          writeFileSync(`${path}/rootContextResolvedTypes_TypeModel_${map}.json`,
+              JSON.stringify(entry, (key, value) => {
+                if (value instanceof Map) {
+                  return {
+                    dataType: 'Map',
+                    value: [...value],
+                  };
+                } else if (value instanceof Set) {
+                  return {
+                    dataType: 'Set',
+                    value: [...value]
+                  }
+                } else {
+                  return value;
+                }
+              }) + '\n', { flag: 'a+' }
+          );
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+  }
+
+  async loadResolvedTypes(path) {
+    for (const map of Object.keys(this)) {
+      const obj = this[map] instanceof Map ? new Map() : new Set();
+      const rl = readline.createInterface({
+        input: createReadStream(`${path}/rootContextResolvedTypes_TypeModel_${map}.json`),
+        crlfDelay: Infinity
+      })
+
+      rl.on('line', (line) => {
+        const result = JSON.parse(line, (key, value) => {
+          if (typeof value === 'object' && value !== null) {
+            if (value.dataType === 'Map') {
+              return new Map(value.value);
+            }
+            if (value.dataType === 'Set') {
+              return new Set(value.value);
+            }
+          }
+          return value;
+        });
+        if (obj instanceof Map) {
+          obj.set(result[0], result[1]);
+        } else {
+          obj.add(result[0]);
+        }
+      });
+      this[map] = obj;
+
+      await new Promise(resolve => rl.once('close', resolve));
+    }
   }
 
   getType(element: string, type: string): Type {

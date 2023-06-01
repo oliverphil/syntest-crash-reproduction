@@ -34,7 +34,7 @@ import {
   ExportFactory,
   DependencyFactory,
   TypeExtractor,
-  isExported,
+  isExported, SubTarget,
 } from "@syntest/analysis-javascript";
 import {
   ArgumentsObject,
@@ -66,7 +66,7 @@ import {
   JavaScriptSubject,
   JavaScriptRandomSampler,
   JavaScriptTestCaseSampler,
-  ExecutionInformationIntegrator,
+  ExecutionInformationIntegrator, CrashSubject,
 } from "@syntest/search-javascript";
 import {
   Archive,
@@ -80,6 +80,7 @@ import {
   TotalTimeBudget,
   getSeed,
   initializePseudoRandomNumberGenerator,
+  ObjectiveFunction,
 } from "@syntest/search";
 import {getLogger, Logger, setupLogger} from "@syntest/logging";
 import { TargetType } from "@syntest/analysis";
@@ -155,7 +156,7 @@ export class CrashLauncher extends Launcher {
     if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__abstractSyntaxTrees.json`)) {
       await this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
-    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes_TypeModel__elements.json`)) {
       await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
 
@@ -368,9 +369,10 @@ export class CrashLauncher extends Launcher {
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
     console.log("Saving Resolved Types");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes_TypeModel__elements.json`)) {
       this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
+    console.log("Saving Resolved Types Completed");
 
     CrashLauncher.LOGGER.info("Preprocessing done");
 
@@ -389,16 +391,20 @@ export class CrashLauncher extends Launcher {
     this.archive = new Archive<JavaScriptTestCase>();
     this.exports = [];
     this.dependencyMap = new Map();
-    for (const target of this.targets) {
-      CrashLauncher.LOGGER.info(`Processing ${target.name}`);
-      const archive = await this.testTarget(this.rootContext, target);
+    // for (const target of this.targets) {
+    //   CrashLauncher.LOGGER.info(`Processing ${target.name}`);
+    //   const archive = await this.testTarget(this.rootContext, target);
+    //
+    //   const dependencies = this.rootContext.getDependencies(target.path);
+    //   this.archive.merge(archive);
+    //
+    //   this.dependencyMap.set(target.name, dependencies);
+    //   this.exports.push(...this.rootContext.getExports(target.path));
+    // }
+    const archive = await this.testAllTargets(this.rootContext, this.targets);
+    this.archive = archive;
+    // this.archive.merge(archive);
 
-      const dependencies = this.rootContext.getDependencies(target.path);
-      this.archive.merge(archive);
-
-      this.dependencyMap.set(target.name, dependencies);
-      this.exports.push(...this.rootContext.getExports(target.path));
-    }
     CrashLauncher.LOGGER.info("Processing done");
   }
 
@@ -571,6 +577,214 @@ export class CrashLauncher extends Launcher {
       true
     );
     CrashLauncher.LOGGER.info("Postprocessing done");
+  }
+
+  private async testAllTargets(
+    rootContext: RootContext,
+    targets: Target[]
+  ): Promise<Archive<JavaScriptTestCase>> {
+    CrashLauncher.LOGGER.info("Testing all targets");
+    const rootTargets: SubTarget[] = [];
+    const dependencies = [];
+    const currentTarget: Target = {
+      path: '',
+      name: '',
+      subTargets: []
+    };
+    const objectives = new Map<ObjectiveFunction<JavaScriptTestCase>, ObjectiveFunction<JavaScriptTestCase>[]>();
+    for (const target of targets) {
+      CrashLauncher.LOGGER.info(`${target.name} in ${target.path}`);
+
+      const currentSubject = new JavaScriptSubject(target, rootContext);
+
+      for (const obj of currentSubject.getObjectives()) {
+        objectives.set(obj, currentSubject.getChildObjectives(obj));
+      }
+
+      rootTargets.push(...currentSubject
+        .getActionableTargets()
+        .filter(
+            (target) =>
+                target.type === TargetType.FUNCTION ||
+                target.type === TargetType.CLASS ||
+                target.type === TargetType.OBJECT
+        )
+        .filter((target) => isExported(target))
+      );
+
+      if (rootTargets.length === 0) {
+        CrashLauncher.LOGGER.info(
+            `No actionable exported root targets found for ${target.name} in ${target.path}`
+        );
+        continue;
+      }
+
+      currentTarget.subTargets.push(...target.subTargets);
+
+      dependencies.push(...rootContext.getDependencies(target.path));
+      this.dependencyMap.set(target.name, dependencies);
+      this.exports.push(...rootContext.getExports(target.path));
+    }
+    if (rootTargets.length === 0) {
+      CrashLauncher.LOGGER.info(
+          `No actionable exported root targets found for ${this.crash.crashId}`
+      );
+      // report skipped
+      return new Archive();
+    }
+
+    const temporaryTestDirectory = path.join(
+      this.arguments_.tempSyntestDirectory,
+      this.arguments_.tempTestDirectory
+    );
+    const temporaryLogDirectory = path.join(
+      this.arguments_.tempSyntestDirectory,
+      this.arguments_.tempLogDirectory
+    );
+
+    const decoder = new JavaScriptDecoder(
+      this.exports,
+      this.arguments_.targetRootDirectory,
+      temporaryLogDirectory
+    );
+    const executionInformationIntegrator = new ExecutionInformationIntegrator(
+      this.rootContext.getTypeModel()
+    );
+    const runner = new JavaScriptRunner(
+      decoder,
+      executionInformationIntegrator,
+      temporaryTestDirectory
+    );
+
+    const suiteBuilder = new JavaScriptSuiteBuilder(
+      decoder,
+      runner,
+      temporaryLogDirectory
+    );
+
+    const currentSubject = new CrashSubject(currentTarget, rootContext, targets);
+
+    const sampler = new JavaScriptRandomSampler(
+        currentSubject,
+        this.arguments_.typeInferenceMode,
+        this.arguments_.randomTypeProbability,
+        this.arguments_.incorporateExecutionInformation,
+        this.arguments_.maxActionStatements,
+        this.arguments_.stringAlphabet,
+        this.arguments_.stringMaxLength,
+        this.arguments_.resampleGeneProbability,
+        this.arguments_.deltaMutationProbability,
+        this.arguments_.exploreIllegalValues
+    );
+
+    sampler.rootContext = rootContext;
+
+    const secondaryObjectives = new Set(
+        this.arguments_.secondaryObjectives.map((secondaryObjective) => {
+          return (<SecondaryObjectivePlugin<JavaScriptTestCase>>(
+              this.moduleManager.getPlugin(
+                  PluginType.SecondaryObjective,
+                  secondaryObjective
+              )
+          )).createSecondaryObjective();
+        })
+    );
+
+    const objectiveManager = (<ObjectiveManagerPlugin<JavaScriptTestCase>>(
+        this.moduleManager.getPlugin(
+            PluginType.ObjectiveManager,
+            this.arguments_.objectiveManager
+        )
+    )).createObjectiveManager({
+      runner: runner,
+      secondaryObjectives: secondaryObjectives,
+    });
+
+    const crossover = (<CrossoverPlugin<JavaScriptTestCase>>(
+        this.moduleManager.getPlugin(
+            PluginType.Crossover,
+            this.arguments_.crossover
+        )
+    )).createCrossoverOperator({
+      crossoverEncodingProbability: this.arguments_.crossoverProbability,
+      crossoverStatementProbability:
+      this.arguments_.multiPointCrossoverProbability,
+    });
+
+    const procreation = (<ProcreationPlugin<JavaScriptTestCase>>(
+        this.moduleManager.getPlugin(
+            PluginType.Procreation,
+            this.arguments_.procreation
+        )
+    )).createProcreationOperator({
+      crossover: crossover,
+      mutateFunction: (
+          sampler: EncodingSampler<JavaScriptTestCase>,
+          encoding: JavaScriptTestCase
+      ) => {
+        return encoding.mutate(<JavaScriptTestCaseSampler>(<unknown>sampler));
+      },
+      sampler: sampler,
+    });
+
+    const algorithm = (<SearchAlgorithmPlugin<JavaScriptTestCase>>(
+        this.moduleManager.getPlugin(
+            PluginType.SearchAlgorithm,
+            this.arguments_.searchAlgorithm
+        )
+    )).createSearchAlgorithm({
+      objectiveManager: objectiveManager,
+      encodingSampler: sampler,
+      procreation: procreation,
+      populationSize: this.arguments_.populationSize,
+    });
+
+    suiteBuilder.clearDirectory(temporaryTestDirectory);
+
+    // allocate budget manager
+    const iterationBudget = new IterationBudget(this.arguments_.iterations);
+    const evaluationBudget = new EvaluationBudget(this.arguments_.evaluations);
+    const searchBudget = new SearchTimeBudget(this.arguments_.searchTime);
+    const totalTimeBudget = new TotalTimeBudget(this.arguments_.totalTime);
+    const budgetManager = new BudgetManager();
+    budgetManager.addBudget(BudgetType.ITERATION, iterationBudget);
+    budgetManager.addBudget(BudgetType.EVALUATION, evaluationBudget);
+    budgetManager.addBudget(BudgetType.SEARCH_TIME, searchBudget);
+    budgetManager.addBudget(BudgetType.TOTAL_TIME, totalTimeBudget);
+
+    // Termination
+    const terminationManager = new TerminationManager();
+
+    for (const trigger of this.arguments_.terminationTriggers) {
+      terminationManager.addTrigger(
+          (<TerminationTriggerPlugin>(
+              this.moduleManager.getPlugin(PluginType.TerminationTrigger, trigger)
+          )).createTerminationTrigger({
+            objectiveManager: objectiveManager,
+            encodingSampler: sampler,
+            runner: runner,
+            crossover: crossover,
+            populationSize: this.arguments_.populationSize,
+          })
+      );
+    }
+
+    // This searches for a covering population
+    const archive = await algorithm.search(
+        currentSubject,
+        budgetManager,
+        terminationManager
+    );
+
+    this.coveredInPath.set(this.crash.crashId, archive);
+
+    clearDirectory(temporaryLogDirectory);
+    clearDirectory(temporaryTestDirectory);
+
+    CrashLauncher.LOGGER.info(
+        `Finished testing all targets in ${this.crash.crashId}`
+    );
+    return archive;
   }
 
   private async testTarget(

@@ -23,6 +23,8 @@ import { TypeModelFactory } from "./TypeModelFactory";
 import { Element, ElementType } from "../discovery/element/Element";
 import { TypeModel } from "./TypeModel";
 import { ArrayType, FunctionType, ObjectType } from "./Type";
+import {createReadStream, writeFileSync} from "fs";
+import * as readline from "readline";
 
 export class InferenceTypeModelFactory extends TypeModelFactory {
   private _typeModel: TypeModel;
@@ -36,6 +38,54 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
 
   set typeModel(typeModel) {
     this._typeModel = typeModel;
+  }
+
+  saveResolvedTypes(path) {
+    for (const map of Object.keys(this).filter(key => key !== '_typeModel')) {
+      for (const entry of this[map].entries()) {
+        try {
+          writeFileSync(`${path}/rootContextResolvedTypes_InferenceTypeModelFactory_${map}.json`,
+              JSON.stringify(entry, (key, value) => {
+                if (value instanceof Map) {
+                  return {
+                    dataType: 'Map',
+                    value: [...value],
+                  };
+                } else {
+                  return value;
+                }
+              }) + '\n', { flag: 'a+' }
+          );
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+  }
+
+  async loadResolvedTypes(path) {
+    for (const map of Object.keys(this)) {
+      const obj = new Map();
+      const rl = readline.createInterface({
+        input: createReadStream(`${path}/rootContextResolvedTypes_InferenceTypeModelFactory_${map}.json`),
+        crlfDelay: Infinity
+      })
+
+      rl.on('line', (line) => {
+        const result = JSON.parse(line, (key, value) => {
+          if (typeof value === 'object' && value !== null) {
+            if (value.dataType === 'Map') {
+              return new Map(value.value);
+            }
+          }
+          return value;
+        });
+        obj.set(result[0], result[1]);
+      });
+      this[map] = obj;
+
+      await new Promise(resolve => rl.once('close', resolve));
+    }
   }
 
   constructor() {

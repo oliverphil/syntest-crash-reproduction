@@ -39,6 +39,8 @@ import { JavaScriptTestCase } from "../JavaScriptTestCase";
 
 import { ExecutionInformationIntegrator } from "./ExecutionInformationIntegrator";
 import { SilentMochaReporter } from "./SilentMochaReporter";
+import * as Process from "process";
+import { exec } from "child_process";
 
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected static LOGGER: Logger;
@@ -96,9 +98,13 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     const argv: Mocha.MochaOptions = <Mocha.MochaOptions>(<unknown>{
       spec: paths,
       reporter: SilentMochaReporter,
+      // isWorker: true,
+      // parallel: true
     });
 
     const mocha = new Mocha(argv); // require('ts-node/register')
+
+    mocha.timeout(2000);
 
     // eslint-disable-next-line unicorn/prefer-module
     require("regenerator-runtime/runtime");
@@ -115,10 +121,12 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     }
 
     let runner: Runner;
-
     // Finally, run mocha.
     await new Promise((resolve) => {
-      runner = mocha.run((failures) => resolve(failures));
+      runner = mocha.run((failures) => {
+        // console.log("mocha done");
+        resolve(failures)
+      });
     });
 
     mocha.dispose();
