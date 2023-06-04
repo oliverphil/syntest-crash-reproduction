@@ -57,6 +57,3 @@ export * from "./lib/testcase/statements/root/RootStatement";
 export * from "./lib/testcase/statements/Statement";
 
 export * from "./lib/testcase/JavaScriptTestCase";
-
-export * from "./lib/search/objective/StackFrameObjectiveFunction";
-export * from "./lib/search/objective/StackErrorObjectiveFunction";
