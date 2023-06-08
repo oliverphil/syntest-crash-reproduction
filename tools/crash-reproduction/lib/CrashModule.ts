@@ -26,6 +26,7 @@ import { MetricManager } from "@syntest/metric";
 import { RandomSamplerPlugin } from "./plugins/sampler/RandomSamplerPlugin";
 import { TreeCrossoverPlugin } from "./plugins/crossover/TreeCrossoverPlugin";
 import { SearchProgressBarListener } from "./plugins/listeners/SearchProgressBarListener";
+import {StackTraceObjectiveManagerPlugin} from "./plugins/objective-managers/StackTraceObjectiveManagerPlugin";
 
 export default class CrashModule extends TestingToolModule {
   constructor() {
@@ -66,6 +67,7 @@ export default class CrashModule extends TestingToolModule {
       this.name,
       new SearchProgressBarListener(userInterface)
     );
+    moduleManager.registerPlugin(this.name, new StackTraceObjectiveManagerPlugin());
 
     super.register(moduleManager, metricManager, userInterface, modules);
   }

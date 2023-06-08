@@ -12,7 +12,7 @@
   "temp-instrumented-directory": "instrumented",
   "search-algorithm": "MOSAFamily",
   "population-size": 50,
-  "objective-manager": "simple",
+  "objective-manager": "stackTrace",
   "secondary-objective": [],
   "crossover": "javascript-tree",
   "procreation": "default",
@@ -28,8 +28,8 @@
   "random-seed": "TODO fill this in yourself",
   "max-depth": 5,
   "max-action-statements": 5,
-  "constant-pool": false,
-  "explore-illegal-values": false,
+  "constant-pool": true,
+  "explore-illegal-values": true,
   "resample-gene-probability": 0.01,
   "delta-mutation-probability": 0.8,
   "sample-existing-value-probability": 0.5,
@@ -60,7 +60,7 @@
   ],
   "metric-middleware-pipeline": [],
   "output-metrics": [],
-  "syntest-project": "webpack",
+  "syntest-project": "atom",
   "syntest-crashes": "false",
   "syntest-seeded": "false"
 }
