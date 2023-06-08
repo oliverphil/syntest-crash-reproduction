@@ -64,14 +64,17 @@ export class ExportVisitor extends AbstractSyntaxTreeVisitor {
       if (path.node.expression.type !== "AssignmentExpression") {
         return;
       }
-
-      const exports = extractExportsFromExpressionStatement(
-        this,
-        this.filePath,
-        path
-      );
-      if (exports) {
-        this._exports.push(...exports);
+      try {
+        const exports = extractExportsFromExpressionStatement(
+            this,
+            this.filePath,
+            path
+        );
+        if (exports) {
+          this._exports.push(...exports);
+        }
+      } catch {
+        //
       }
     };
 

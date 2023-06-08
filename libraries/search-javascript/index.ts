@@ -22,6 +22,7 @@ export * from "./lib/search/crossover/TreeCrossover";
 
 export * from "./lib/search/JavaScriptExecutionResult";
 export * from "./lib/search/JavaScriptSubject";
+export * from "./lib/search/CrashSubject";
 
 export * from "./lib/testbuilding/JavaScriptDecoder";
 export * from "./lib/testbuilding/JavaScriptSuiteBuilder";
@@ -60,3 +61,5 @@ export * from "./lib/testcase/JavaScriptTestCase";
 
 export * from "./lib/search/objective/StackFrameObjectiveFunction";
 export * from "./lib/search/objective/StackErrorObjectiveFunction";
+
+export * from "./lib/search/objective/managers/StackTraceObjectiveManager";

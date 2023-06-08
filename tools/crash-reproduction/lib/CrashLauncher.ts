@@ -66,7 +66,7 @@ import {
   JavaScriptSubject,
   JavaScriptRandomSampler,
   JavaScriptTestCaseSampler,
-  ExecutionInformationIntegrator,
+  ExecutionInformationIntegrator, CrashSubject,
 } from "@syntest/search-javascript";
 import {
   Archive,
@@ -155,9 +155,9 @@ export class CrashLauncher extends Launcher {
     if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__abstractSyntaxTrees.json`)) {
       await this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
-    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
-      await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    }
+    // if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+    //   await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    // }
 
     CrashLauncher.LOGGER.info("Creating directories");
     createDirectoryStructure([
@@ -345,7 +345,7 @@ export class CrashLauncher extends Launcher {
     this.userInterface.printTable("DIRECTORY SETTINGS", directorySettings);
 
     CrashLauncher.LOGGER.info("Instrumenting targets");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${crash.project}/${crash.crashId}`)) {
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${crash.project}/${crash.crashId}/node_modules`)) {
       const instrumenter = new CrashInstrumenter();
       await instrumenter.instrumentAll(
           this.rootContext,
@@ -367,10 +367,10 @@ export class CrashLauncher extends Launcher {
     console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
-    console.log("Saving Resolved Types");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
-      this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    }
+    // console.log("Saving Resolved Types");
+    // if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+    //   this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    // }
 
     CrashLauncher.LOGGER.info("Preprocessing done");
 
@@ -488,7 +488,7 @@ export class CrashLauncher extends Launcher {
     let totalBranches = 0;
     let totalStatements = 0;
     let totalFunctions = 0;
-    for (const file of Object.keys(instrumentationData)) {
+    for (const file of Object.keys(instrumentationData || {})) {
       const target = this.targets.find(
         (target: Target) => target.path === file
       );
@@ -580,7 +580,7 @@ export class CrashLauncher extends Launcher {
     CrashLauncher.LOGGER.info(
       `Testing target ${target.name} in ${target.path}`
     );
-    const currentSubject = new JavaScriptSubject(target, this.rootContext);
+    const currentSubject = new CrashSubject(target, this.rootContext, this.crash.stackTrace);
 
     const rootTargets = currentSubject
       .getActionableTargets()
@@ -665,11 +665,12 @@ export class CrashLauncher extends Launcher {
     const objectiveManager = (<ObjectiveManagerPlugin<JavaScriptTestCase>>(
       this.moduleManager.getPlugin(
         PluginType.ObjectiveManager,
-        this.arguments_.objectiveManager
+        "stackTrace"
       )
     )).createObjectiveManager({
       runner: runner,
       secondaryObjectives: secondaryObjectives,
+      stackTrace: this.crash.stackTrace
     });
 
     const crossover = (<CrossoverPlugin<JavaScriptTestCase>>(

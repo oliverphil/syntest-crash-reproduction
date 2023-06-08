@@ -36,24 +36,24 @@ export class EnvironmentBuilder {
     fs.writeFileSync(
         `${crashFolder}/package.json`,
         JSON.stringify(crash.package));
-    if (fs.existsSync(`${crashFolder}/package-lock.json`)) {
-      fs.rmSync(`${crashFolder}/package-lock.json`);
-    }
+    // if (fs.existsSync(`${crashFolder}/package-lock.json`)) {
+    //   fs.rmSync(`${crashFolder}/package-lock.json`);
+    // }
     let stdout = '';
     let stderr = '';
     let error = false;
-    try {
-      // if (crash.nodeVersion) {
-      //   stdout = execSync(`unset npm_config_prefix && source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
-      // } else {
-        stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
-      // }
-    } catch (e) {
-      stdout = e.stdout.toString();
-      stderr = e.stderr.toString();
-      error = true;
-      console.error(e);
-    }
+    // try {
+    //   // if (crash.nodeVersion) {
+    //   //   stdout = execSync(`unset npm_config_prefix && source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
+    //   // } else {
+    //     stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
+    //   // }
+    // } catch (e) {
+    //   stdout = e.stdout.toString();
+    //   stderr = e.stderr.toString();
+    //   error = true;
+    //   console.error(e);
+    // }
     console.log(stdout);
     console.error(stderr);
     this.handleSetupOptions(crash, crashFolder);
