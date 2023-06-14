@@ -144,27 +144,37 @@ export class RootContext extends CoreRootContext<t.Node> {
   }
 
   async loadExtractedTypes(path) {
-    for (const map of this.extractedTypes) {
-      const obj = new Map();
-      const rl = readline.createInterface({
-        input: createReadStream(`${path}/rootContextExtractedTypes_${map}.json`),
-        crlfDelay: Infinity
-      })
+    try {
+      for (const map of this.extractedTypes) {
+        const obj = new Map();
+        const rl = readline.createInterface({
+          input: createReadStream(`${path}/rootContextExtractedTypes_${map}.json`),
+          crlfDelay: Infinity
+        })
 
-      rl.on('line', (line) => {
-        const result = JSON.parse(line, (key, value) => {
-          if (typeof value === 'object' && value !== null) {
-            if (value.dataType === 'Map') {
-              return new Map(value.value);
+        rl.on('line', (line) => {
+          const result = JSON.parse(line, (key, value) => {
+            if (typeof value === 'object' && value !== null) {
+              if (value.dataType === 'Map') {
+                return new Map(value.value);
+              }
             }
-          }
-          return value;
+            return value;
+          });
+          obj.set(result[0], result[1]);
         });
-        obj.set(result[0], result[1]);
-      });
-      this[map] = obj;
-
-      await new Promise(resolve => rl.once('close', resolve));
+        this[map] = obj;
+       try {
+         await new Promise((resolve, reject) => {
+           rl.once('close', resolve);
+           rl.on('error', reject);
+         });
+       } catch {
+         //
+       }
+      }
+    } catch {
+      //
     }
 
     this._typeExtractor.elementMap = this._elementMap;

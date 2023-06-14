@@ -80,6 +80,7 @@ import {
   TotalTimeBudget,
   getSeed,
   initializePseudoRandomNumberGenerator,
+  ObjectiveManager,
 } from "@syntest/search";
 import {getLogger, Logger, setupLogger} from "@syntest/logging";
 import { TargetType } from "@syntest/analysis";
@@ -107,6 +108,7 @@ export class CrashLauncher extends Launcher {
   private coveredInPath = new Map<string, Archive<JavaScriptTestCase>>();
 
   private crash: Crash;
+  private objectiveManager: ObjectiveManager<JavaScriptTestCase>;
 
   constructor(
     arguments_: JavaScriptArguments,
@@ -475,7 +477,7 @@ export class CrashLauncher extends Launcher {
     this.userInterface.printHeader("SEARCH RESULTS");
 
     const table: TableObject = {
-      headers: ["Target", "Statement", "Branch", "Function", "File"],
+      headers: ["Target", "Statement", "Branch", "Function", "Objectives", "File"],
       rows: [],
       footers: ["Average"],
     };
@@ -484,10 +486,12 @@ export class CrashLauncher extends Launcher {
       branch: 0,
       statement: 0,
       function: 0,
+      objective: 0
     };
     let totalBranches = 0;
     let totalStatements = 0;
     let totalFunctions = 0;
+    let totalObjectives = 0;
     for (const file of Object.keys(instrumentationData || {})) {
       const target = this.targets.find(
         (target: Target) => target.path === file
@@ -502,6 +506,7 @@ export class CrashLauncher extends Launcher {
         branch: 0,
         statement: 0,
         function: 0,
+        objective: 0
       };
 
       for (const statementKey of Object.keys(data.s)) {
@@ -521,6 +526,20 @@ export class CrashLauncher extends Launcher {
         overall["function"] += data.f[functionKey] ? 1 : 0;
       }
 
+      const objectives = [...this.objectiveManager.getCoveredObjectives()];
+      objectives.push(...this.objectiveManager.getUncoveredObjectives());
+      for (const objective of objectives) {
+        try {
+          const encoding = this.archive.getEncoding(objective);
+          const distance = objective.calculateDistance(encoding);
+          summary["objective"] += 1 - distance;
+          overall["objective"] += 1 - distance;
+          totalObjectives += 1;
+        } catch {
+          totalObjectives += 1;
+        }
+      }
+
       totalStatements += Object.keys(data.s).length;
       totalBranches += Object.keys(data.b).length * 2;
       totalFunctions += Object.keys(data.f).length;
@@ -530,6 +549,7 @@ export class CrashLauncher extends Launcher {
         summary["statement"] + " / " + Object.keys(data.s).length,
         summary["branch"] + " / " + Object.keys(data.b).length * 2,
         summary["function"] + " / " + Object.keys(data.f).length,
+        summary["objective"] + " / " + objectives.length,
         target.path,
       ]);
     }
@@ -543,10 +563,14 @@ export class CrashLauncher extends Launcher {
     overall["function"] /= totalFunctions;
     if (totalFunctions === 0) overall["function"] = 1;
 
+    overall["objective"] /= totalObjectives;
+    if (totalObjectives === 0) overall["objective"] = 1;
+
     table.footers.push(
       overall["statement"] * 100 + " %",
       overall["branch"] * 100 + " %",
       overall["function"] * 100 + " %",
+      overall["objective"] * 100 + " %",
       ""
     );
 
@@ -672,6 +696,8 @@ export class CrashLauncher extends Launcher {
       secondaryObjectives: secondaryObjectives,
       stackTrace: this.crash.stackTrace
     });
+
+    this.objectiveManager = objectiveManager;
 
     const crossover = (<CrossoverPlugin<JavaScriptTestCase>>(
       this.moduleManager.getPlugin(
