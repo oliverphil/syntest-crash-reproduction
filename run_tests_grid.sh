@@ -70,12 +70,11 @@ until git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-crash-reproduction.git;
   echo Syntest Crash Reproduction Clone Failed
   sleep 10
 done
-until git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-framework.git; do
+until git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-core.git; do
   echo Syntest Core Clone Failed
   sleep 10
 done
 
-mv syntest-framework syntest-core
 echo ==WHATS THERE HAVING COPIED STUFF OVER AS INPUT==
 ls -la
 
@@ -89,6 +88,7 @@ nvm use lts/hydrogen
 node --version
 which node
 cd syntest-core
+git checkout 37-feat-run-all-crash-files-at-once
 npm i
 ls
 npm run build
@@ -115,10 +115,10 @@ for project in "${project_array[@]}"; do
   # export SYNTEST_PROJECT=${project};
   sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true"/' .syntest.json
   # export SYNTEST_CRASHES=true
-  npm run run > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
+  npm run build:run-ts > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
   sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false"/' .syntest.json
   # export SYNTEST_CRASHES=false
-  npm run run > output_"${project}".log 2> stderr_"${project}".log
+  npm run build:run-ts > output_"${project}".log 2> stderr_"${project}".log
 done
 
 #
