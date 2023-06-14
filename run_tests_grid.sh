@@ -108,12 +108,16 @@ npm run build
 project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
 # project_array=( 'http-server' 'node' );
 
-export SYNTEST_SEEDED=false;
+# export SYNTEST_SEEDED=false;
+sed -i "s/^.*syntest-seeded.*$/  \"syntest-seeded\": \"false\"/" .syntest.json
 for project in "${project_array[@]}"; do
-  export SYNTEST_PROJECT=${project};
-  export SYNTEST_CRASHES=true
+  sed -i "s/^.*syntest-project.*$/  \"syntest-project\": \"${project}\"/" .syntest.json
+  # export SYNTEST_PROJECT=${project};
+  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true"/' .syntest.json
+  # export SYNTEST_CRASHES=true
   npm run run > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
-  export SYNTEST_CRASHES=false
+  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false"/' .syntest.json
+  # export SYNTEST_CRASHES=false
   npm run run > output_"${project}".log 2> stderr_"${project}".log
 done
 
