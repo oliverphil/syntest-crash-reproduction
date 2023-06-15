@@ -92,6 +92,7 @@ const reservedKeywords = new Set([
   "with",
   "yield",
 ]);
+// @ts-ignore
 export class AbstractSyntaxTreeVisitor implements TraverseOptions {
   protected static LOGGER: Logger;
 

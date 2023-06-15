@@ -30,6 +30,7 @@ function elementHelper(source: string) {
   const ast = generator.convert("", source);
 
   const visitor = new ElementVisitor("");
+  // @ts-ignore
   traverse(ast, visitor);
 
   return visitor.elementMap;

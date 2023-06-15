@@ -37,6 +37,7 @@ export class ExportFactory {
   extract(filePath: string, AST: t.Node): Export[] {
     const exportVisitor = new ExportVisitor(filePath);
 
+    // @ts-ignore
     traverse(AST, exportVisitor);
 
     return exportVisitor.exports;
