@@ -347,6 +347,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering function at ${this._getNodeId(path)}`
     );
     const subVisitor = new ControlFlowGraphVisitor(this.filePath);
+    // @ts-ignore
     path.traverse(subVisitor);
 
     if (!subVisitor._nodes.has("ENTRY")) {
@@ -422,6 +423,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         expression.get("right").visit();
       }
     } else if (this._isSpecial(path)) {
+      // @ts-ignore
       path.traverse(this);
     }
 
@@ -459,6 +461,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         }
       }
     } else if (this._isSpecial(path)) {
+      // @ts-ignore
       path.traverse(this);
     }
     path.skip();

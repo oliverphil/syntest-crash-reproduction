@@ -40,6 +40,7 @@ export class BranchDistance extends CoreBranchDistance {
     const ast = transformSync(condition, options).ast;
     const visitor = new BranchDistanceVisitor(variables);
 
+    // @ts-ignore
     traverse(ast, visitor);
     let distance = visitor.distance;
 

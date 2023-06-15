@@ -27,6 +27,7 @@ export class ControlFlowGraphFactory
 {
   convert(filePath: string, AST: t.Node): ControlFlowProgram<t.Node> {
     const visitor = new ControlFlowGraphVisitor(filePath);
+    // @ts-ignore
     traverse(AST, visitor);
 
     return contractControlFlowProgram(visitor.cfg);

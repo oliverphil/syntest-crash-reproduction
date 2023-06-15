@@ -29,6 +29,7 @@ function exportHelper(source: string) {
 
   const visitor = new ExportVisitor("");
 
+  // @ts-ignore
   traverse(ast, visitor);
 
   return visitor.exports;

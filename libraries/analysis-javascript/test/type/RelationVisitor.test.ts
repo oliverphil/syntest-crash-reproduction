@@ -29,6 +29,7 @@ function relationHelper(source: string) {
   const ast = generator.convert("", source);
 
   const visitor = new RelationVisitor("");
+  // @ts-ignore
   traverse(ast, visitor);
 
   return visitor.relationMap;

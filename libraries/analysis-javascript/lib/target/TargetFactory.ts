@@ -42,11 +42,13 @@ export class TargetFactory implements CoreTargetFactory<t.Node> {
     // bit sad that we have to do this twice, but we need to know the exports
     const exportVisitor = new ExportVisitor(filePath);
 
+    // @ts-ignore
     traverse(AST, exportVisitor);
 
     const exports = exportVisitor.exports;
     const visitor = new TargetVisitor(filePath, exports);
 
+    // @ts-ignore
     traverse(AST, visitor);
 
     // we should check wether every export is actually used

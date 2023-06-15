@@ -63,8 +63,11 @@ export class TypeExtractor {
     //   visitors.merge([elementVisitor, relationVisitor, complexTypeVisitor])
     // );
 
+    // @ts-ignore
     traverse(ast, elementVisitor);
+    // @ts-ignore
     traverse(ast, relationVisitor);
+    // @ts-ignore
     traverse(ast, complexTypeVisitor);
 
     this._elementMap = new Map([
