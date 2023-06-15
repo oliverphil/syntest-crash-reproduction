@@ -60,7 +60,7 @@
   ],
   "metric-middleware-pipeline": [],
   "output-metrics": [],
-  "syntest-project": "atom",
+  "syntest-project": "http-server",
   "syntest-crashes": "false",
   "syntest-seeded": "false"
 }

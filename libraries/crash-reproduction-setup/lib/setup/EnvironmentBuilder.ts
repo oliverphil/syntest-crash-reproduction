@@ -42,18 +42,18 @@ export class EnvironmentBuilder {
     let stdout = '';
     let stderr = '';
     let error = false;
-    // try {
+    try {
     //   // if (crash.nodeVersion) {
     //   //   stdout = execSync(`unset npm_config_prefix && source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
     //   // } else {
-    //     stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
+        stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
     //   // }
-    // } catch (e) {
-    //   stdout = e.stdout.toString();
-    //   stderr = e.stderr.toString();
-    //   error = true;
-    //   console.error(e);
-    // }
+    } catch (e) {
+      stdout = e.stdout.toString();
+      stderr = e.stderr.toString();
+      error = true;
+      console.error(e);
+    }
     console.log(stdout);
     console.error(stderr);
     this.handleSetupOptions(crash, crashFolder);
