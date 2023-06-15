@@ -49,9 +49,9 @@
     "@babel/core": "7.20.12",
     "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "@syntest/analysis": "file:../../../syntest-core/libraries/analysis",
-    "@syntest/ast-visitor-javascript": "*",
-    "@syntest/cfg": "*",
-    "@syntest/search": "*"
+    "@syntest/ast-visitor-javascript": "file:../ast-visitor-javascript",
+    "@syntest/cfg": "file:../../../syntest-core/libraries/cfg",
+    "@syntest/search": "file:../../../syntest-core/libraries/search"
   },
   "engines": {
     "node": ">=10.24.0"
