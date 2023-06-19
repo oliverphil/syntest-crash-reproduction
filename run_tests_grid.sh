@@ -105,6 +105,9 @@ node --version
 npm run build
 # npm run run > output.log 2> stderr.log
 
+rsync -a /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
+# cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/**/rootContextExtractedTypes*  .syntest/
+
 project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
 # project_array=( 'http-server' 'node' );
 
@@ -125,6 +128,9 @@ done
 #
 echo ==AND NOW, HAVING DONE SOMTHING USEFUL AND CREATED SOME OUTPUT==
 ls -la
+
+rsync -a --exclude='*/node_modules/' .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes
+# cp -r .syntest/**/rootContextExtractedTypes* /vol/grid-solar/sgeusers/oliverphil/extractedTypes/
 #
 # Now we move the output to a place to pick it up from later
 #  noting that we need to distinguish between the TASKS
