@@ -105,25 +105,32 @@ node --version
 npm run build
 # npm run run > output.log 2> stderr.log
 
+rsync -a /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
+# cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/**/rootContextExtractedTypes*  .syntest/
+
 project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
 # project_array=( 'http-server' 'node' );
 
 # export SYNTEST_SEEDED=false;
 sed -i "s/^.*syntest-seeded.*$/  \"syntest-seeded\": \"false\"/" .syntest.json
 for project in "${project_array[@]}"; do
-  sed -i "s/^.*syntest-project.*$/  \"syntest-project\": \"${project}\"/" .syntest.json
+  sed -i "s/^.*syntest-project.*$/  \"syntest-project\": \"${project}\",/" .syntest.json
   # export SYNTEST_PROJECT=${project};
-  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true"/' .syntest.json
+  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true",/' .syntest.json
   # export SYNTEST_CRASHES=true
-  npm run build:run-ts > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
-  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false"/' .syntest.json
+  cat .syntest.json
+  node -r ts-node/register ../syntest-core/tools/cli/bin.ts crash test > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
+  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false",/' .syntest.json
   # export SYNTEST_CRASHES=false
-  npm run build:run-ts > output_"${project}".log 2> stderr_"${project}".log
+  BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_"${project}".log 2> stderr_"${project}".log
 done
 
 #
 echo ==AND NOW, HAVING DONE SOMTHING USEFUL AND CREATED SOME OUTPUT==
 ls -la
+
+rsync -a --exclude='*/node_modules/' .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes
+# cp -r .syntest/**/rootContextExtractedTypes* /vol/grid-solar/sgeusers/oliverphil/extractedTypes/
 #
 # Now we move the output to a place to pick it up from later
 #  noting that we need to distinguish between the TASKS
