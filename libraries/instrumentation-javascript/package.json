@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@babel/core": "7.20.12",
-    "@syntest/ast-visitor-javascript": "*"
+    "@syntest/ast-visitor-javascript": "file:../ast-visitor-javascript"
   },
   "devDependencies": {
     "@types/babel__core": "7.20.0"

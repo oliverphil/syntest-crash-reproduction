@@ -28,6 +28,7 @@ function dependencyHelper(source: string) {
   const ast = generator.convert("", source);
 
   const visitor = new DependencyVisitor("");
+  // @ts-ignore
   traverse(ast, visitor);
 
   return visitor.imports;

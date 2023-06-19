@@ -32,6 +32,7 @@ function cfgHelper(source: string) {
   const ast = generator.convert("", source);
 
   const visitor = new ControlFlowGraphVisitor("");
+  // @ts-ignore
   traverse(ast, visitor);
 
   return visitor.cfg;

@@ -36,6 +36,7 @@ export class DependencyFactory implements CoreDependencyFactory<t.Node> {
   extract(filePath: string, AST: t.Node): string[] {
     const visitor = new DependencyVisitor(filePath);
 
+    // @ts-ignore
     traverse(AST, visitor);
 
     return [...visitor.imports];

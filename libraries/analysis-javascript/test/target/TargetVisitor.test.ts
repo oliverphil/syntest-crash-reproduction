@@ -38,10 +38,12 @@ function targetHelper(source: string) {
   const ast = generator.convert("", source);
 
   const exportVisitor = new ExportVisitor("");
+  // @ts-ignore
   traverse(ast, exportVisitor);
   const exports = exportVisitor.exports;
 
   const visitor = new TargetVisitor("", exports);
+  // @ts-ignore
   traverse(ast, visitor);
 
   return visitor.subTargets;
