@@ -43,7 +43,8 @@
     "test": "mocha --config ../../.mocharc.json",
     "test:coverage": "nyc --reporter=text --reporter=html mocha --config ../../.mocharc.json",
     "test:coverage:ci": "nyc --reporter=lcovonly mocha --config ../../.mocharc.json --reporter json --reporter-option output=test-results.json",
-    "test:watch": "mocha --config ../../.mocharc.json --watch"
+    "test:watch": "mocha --config ../../.mocharc.json --watch",
+    "build:run-ts": "npm --prefix ../syntest-core run build && npm run build && BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=8000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test"
   },
   "dependencies": {
     "@babel/core": "7.20.12",

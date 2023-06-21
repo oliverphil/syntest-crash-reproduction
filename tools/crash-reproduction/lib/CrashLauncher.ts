@@ -155,9 +155,9 @@ export class CrashLauncher extends Launcher {
     if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__abstractSyntaxTrees.json`)) {
       await this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     }
-    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
-      await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    }
+    // if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+    //   await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    // }
 
     CrashLauncher.LOGGER.info("Creating directories");
     createDirectoryStructure([
@@ -360,17 +360,17 @@ export class CrashLauncher extends Launcher {
     CrashLauncher.LOGGER.info("Extracting types");
     console.log("Extracting types");
     this.rootContext.extractTypes();
-    console.log("Saving types");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-      this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    }
+    // console.log("Saving types");
+    // if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+    //   this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    // }
     console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
-    console.log("Saving Resolved Types");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
-      this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    }
+    // console.log("Saving Resolved Types");
+    // if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
+    //   this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    // }
 
     CrashLauncher.LOGGER.info("Preprocessing done");
 
@@ -559,13 +559,18 @@ export class CrashLauncher extends Launcher {
 
     this.userInterface.printTable("Coverage", table);
 
+    createDirectoryStructure(
+        [path.join(
+            `benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`
+        )]
+    );
+
     // create final suite
     suiteBuilder.createSuite(
       reducedArchive,
       originalSourceDirectory,
       path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.testDirectory
+        `benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`
       ),
       false,
       true
