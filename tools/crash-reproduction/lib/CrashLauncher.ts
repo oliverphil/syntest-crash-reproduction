@@ -820,14 +820,14 @@ export class CrashLauncher extends Launcher {
         (<TypedEventEmitter<Events>>process).emit("preprocessStart");
         await this.preprocess();
         (<TypedEventEmitter<Events>>process).emit("preprocessComplete");
-        // (<TypedEventEmitter<Events>>process).emit("processStart");
-        // await this.process();
-        // (<TypedEventEmitter<Events>>process).emit("processComplete");
-        // (<TypedEventEmitter<Events>>process).emit("postprocessStart");
-        // await this.postprocess();
-        // (<TypedEventEmitter<Events>>process).emit("postprocessComplete");
-        // (<TypedEventEmitter<Events>>process).emit("exitting");
-        // await this.exit();
+        (<TypedEventEmitter<Events>>process).emit("processStart");
+        await this.process();
+        (<TypedEventEmitter<Events>>process).emit("processComplete");
+        (<TypedEventEmitter<Events>>process).emit("postprocessStart");
+        await this.postprocess();
+        (<TypedEventEmitter<Events>>process).emit("postprocessComplete");
+        (<TypedEventEmitter<Events>>process).emit("exitting");
+        await this.exit();
       } catch (error) {
         console.log(error);
         // console.trace(error);
