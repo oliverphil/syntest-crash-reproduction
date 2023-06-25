@@ -96,6 +96,7 @@ cd ../syntest-crash-reproduction
 echo $1
 git checkout $1
 npm i
+npm run build
 ls
 
 #
@@ -118,8 +119,8 @@ for project in "${project_array[@]}"; do
   # export SYNTEST_PROJECT=${project};
   sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true",/' .syntest.json
   # export SYNTEST_CRASHES=true
-  cat .syntest.json
-  node -r ts-node/register ../syntest-core/tools/cli/bin.ts crash test > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
+  # cat .syntest.json
+  # node -r ts-node/register ../syntest-core/tools/cli/bin.ts crash test > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
   sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false",/' .syntest.json
   # export SYNTEST_CRASHES=false
   BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_"${project}".log 2> stderr_"${project}".log
@@ -141,8 +142,8 @@ mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
 for project in "${project_array[@]}"; do
   cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
   cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
-  cp output_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_syntest_$SGE_TASK_ID.log
-  cp stderr_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_syntest_$SGE_TASK_ID.log
+  # cp output_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_syntest_$SGE_TASK_ID.log
+  # cp stderr_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_syntest_$SGE_TASK_ID.log
 done
 # cp output.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_$SGE_TASK_ID.log
 # cp stderr.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_$SGE_TASK_ID.log
