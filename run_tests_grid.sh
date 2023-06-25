@@ -89,13 +89,19 @@ node --version
 which node
 cd syntest-core
 git checkout coverage-driven-test-generation
-npm i
+until npm i; do
+  echo Syntest Core Install Failed
+  sleep 10
+done
 ls
 npm run build
 cd ../syntest-crash-reproduction
 echo $1
 git checkout $1
-npm i
+until npm i; do
+  echo Syntest Crash Install Failed
+  sleep 10
+done
 npm run build
 ls
 
@@ -103,7 +109,6 @@ ls
 # Note that we need the full path to this utility, as it is not on the PATH
 #
 node --version
-npm run build
 # npm run run > output.log 2> stderr.log
 
 rsync -ar /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
