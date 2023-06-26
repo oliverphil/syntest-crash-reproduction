@@ -1,8 +1,8 @@
 Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
     at ServerResponse.setHeader (_http_outgoing.js:485:11)
     at module.exports.ResponseStream.<computed> [as setHeader] (node_modules\union\lib\response-stream.js:100:34)
-    at Object.exports.<computed> (node_modules\http-server\node_modules\ecstatic\lib\ecstatic\status-handlers.js:57:7)
-    at ReadStream.<anonymous> (node_modules\http-server\node_modules\ecstatic\lib\ecstatic.js:298:24)
+    at Object.exports.<computed> (node_modules\ecstatic\lib\ecstatic\status-handlers.js:57:7)
+    at ReadStream.<anonymous> (node_modules\ecstatic\lib\ecstatic.js:298:24)
     at ReadStream.emit (events.js:223:5)
     at internal/fs/streams.js:167:12
     at FSReqCallback.wrapper [as oncomplete] (fs.js:470:5)

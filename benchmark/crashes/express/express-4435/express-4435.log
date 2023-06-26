@@ -1,7 +1,7 @@
 TypeError: each array member must be [ee, events...]
-    at first (/home/paulo/Documents/projects/work-projects/P2PModels/task-allocation-prototype/amara-api-proxy/node_modules/array-flatten/index.js:34:13)
-    at Route.(anonymous function) [as post] (/home/paulo/Documents/projects/work-projects/P2PModels/task-allocation-prototype/amara-api-proxy/node_modules/express/lib/router/route.js:194:19)
-    at Function.proto.(anonymous function) [as post] (/home/paulo/Documents/projects/work-projects/P2PModels/task-allocation-prototype/amara-api-proxy/node_modules/express/lib/router/index.js:510:19)
+    at first (node_modules/array-flatten/index.js:34:13)
+    at Route.(anonymous function) [as post] (node_modules/express/lib/router/route.js:194:19)
+    at Function.proto.(anonymous function) [as post] (node_modules/express/lib/router/index.js:510:19)
     at Object.<anonymous> (/home/paulo/Documents/projects/work-projects/P2PModels/task-allocation-prototype/amara-api-proxy/routes/api/rating/addRating.js:4:48)
     at Module._compile (internal/modules/cjs/loader.js:701:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)

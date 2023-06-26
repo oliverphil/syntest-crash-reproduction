@@ -5,7 +5,7 @@
   "version": "7.25.0",
   "nodeVersion": "16.0.0",
   "dependencies": {
-    "eslint-plugin-import": "2.25.4"
+    "eslint-plugin-import": "2.22.1"
   },
   "requireCrashDependency": true
 }
