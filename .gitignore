@@ -133,3 +133,5 @@ logs
 results
 benchmark/crashes/atom/*/atom-*/
 
+results_*.json
+npm_results
