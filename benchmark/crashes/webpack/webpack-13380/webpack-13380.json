@@ -4,6 +4,9 @@
   "url": "https://github.com/webpack/webpack/issues/13380",
   "version": "5.37.0",
   "nodeVersion": "14.16.1",
-  "dependencies": {},
+  "dependencies": {
+    "tapable": "2.2.1",
+    "terser-webpack-plugin": "4.2.3"
+  },
   "requireCrashDependency": true
 }

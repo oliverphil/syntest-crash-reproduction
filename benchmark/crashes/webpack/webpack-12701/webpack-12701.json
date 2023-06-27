@@ -5,7 +5,7 @@
   "version": "5.22.0",
   "nodeVersion": "15.8.0",
   "dependencies": {
-    "watchpack": "^1.0.0"
+    "watchpack": "2.0.0"
   },
   "requireCrashDependency": true
 }

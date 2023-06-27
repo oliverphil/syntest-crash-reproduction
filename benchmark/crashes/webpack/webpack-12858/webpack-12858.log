@@ -1,17 +1,17 @@
 TypeError: parser.isAsiPosition is not a function
-    at /home/eyeris/runtime/dev_ws/insight/node_modules/webpack/lib/DefinePlugin.js:233:18
-    at SyncBailHook.eval (eval at create (/home/eyeris/runtime/dev_ws/insight/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:16)
-    at SyncBailHook.lazyCompileHook (/home/eyeris/runtime/dev_ws/insight/node_modules/tapable/lib/Hook.js:154:20)
-    at Parser.walkIdentifier (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1986:25)
-    at Parser.walkExpression (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1604:10)
-    at Parser.walkExpressions (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1569:10)
-    at Parser.walkCallExpression (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1949:35)
-    at Parser.walkExpression (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1592:10)
-    at Parser.walkExpressionStatement (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1022:8)
-    at Parser.walkStatement (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:964:10)
-    at Parser.walkStatements (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:868:9)
-    at /home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1017:9
-    at Parser.inBlockScope (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:2060:3)
-    at Parser.walkBlockStatement (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1014:8)
-    at Parser.walkStatement (/home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:949:10)
-    at /home/eyeris/runtime/dev_ws/insight/node_modules/@angular-builders/custom-webpack/node_modules/webpack/lib/Parser.js:1702:10
+    at node_modules/webpack/lib/DefinePlugin.js:233:18
+    at SyncBailHook.eval (eval at create (node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:16)
+    at SyncBailHook.lazyCompileHook (node_modules/tapable/lib/Hook.js:154:20)
+    at Parser.walkIdentifier (node_modules/webpack/lib/Parser.js:1986:25)
+    at Parser.walkExpression (node_modules/webpack/lib/Parser.js:1604:10)
+    at Parser.walkExpressions (node_modules/webpack/lib/Parser.js:1569:10)
+    at Parser.walkCallExpression (node_modules/webpack/lib/Parser.js:1949:35)
+    at Parser.walkExpression (node_modules/webpack/lib/Parser.js:1592:10)
+    at Parser.walkExpressionStatement (node_modules/webpack/lib/Parser.js:1022:8)
+    at Parser.walkStatement (node_modules/webpack/lib/Parser.js:964:10)
+    at Parser.walkStatements (node_modules/webpack/lib/Parser.js:868:9)
+    at node_modules/webpack/lib/Parser.js:1017:9
+    at Parser.inBlockScope (node_modules/webpack/lib/Parser.js:2060:3)
+    at Parser.walkBlockStatement (node_modules/webpack/lib/Parser.js:1014:8)
+    at Parser.walkStatement (node_modules/webpack/lib/Parser.js:949:10)
+    at node_modules/webpack/lib/Parser.js:1702:10
