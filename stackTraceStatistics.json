@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "total": 724,
+    "num": 71,
+    "min": 4,
+    "max": 17,
+    "average": 10.19718309859155
+  },
+  "webpack": {
+    "total": 102,
+    "num": 9,
+    "max": 16,
+    "min": 6,
+    "average": 11.333333333333334
+  },
+  "standard": {
+    "total": 30,
+    "num": 3,
+    "max": 10,
+    "min": 10,
+    "average": 10
+  },
+  "node": {
+    "total": 90,
+    "num": 11,
+    "max": 10,
+    "min": 4,
+    "average": 8.181818181818182
+  },
+  "http-server": {
+    "total": 86,
+    "num": 9,
+    "max": 10,
+    "min": 7,
+    "average": 9.555555555555555
+  },
+  "express": {
+    "total": 115,
+    "num": 13,
+    "max": 16,
+    "min": 4,
+    "average": 8.846153846153847
+  },
+  "eslint": {
+    "total": 90,
+    "num": 9,
+    "max": 10,
+    "min": 10,
+    "average": 10
+  },
+  "atom": {
+    "total": 211,
+    "num": 17,
+    "max": 17,
+    "min": 5,
+    "average": 12.411764705882353
+  }
+}

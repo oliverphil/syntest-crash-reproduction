@@ -583,13 +583,18 @@ export class CrashLauncher extends Launcher {
 
     this.userInterface.printTable("Coverage", table);
 
+    createDirectoryStructure(
+        [path.join(
+            `benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`
+        )]
+    );
+
     // create final suite
     suiteBuilder.createSuite(
       reducedArchive,
       originalSourceDirectory,
       path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.testDirectory
+        `benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`
       ),
       false,
       true
