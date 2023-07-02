@@ -5,8 +5,7 @@
   "nodeVersion": "12.14.1",
   "version": "1.57.0",
   "dependencies": {
-    "atom-package-manager": "2.6.2",
-    "etch": "0.14.1"
+    "atom-package-manager": "2.6.2"
   },
   "setup": {
     "download": {

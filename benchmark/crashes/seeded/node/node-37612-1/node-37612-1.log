@@ -1,0 +1,8 @@
+Error: Cannot find module 'internal/errors'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/philipoliver/Documents/University.nosync/testing/syntest-crash-reproduction/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+    at Function.Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at lazyError (node-v15.11.0/lib/internal/assert.js:6:13)
+    at assert (node-v15.11.0/lib/internal/assert.js:13:36)
