@@ -159,7 +159,7 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
       tests.push(
         `\tit('test for ${targetName}', async () => {\n` +
           `${body.join("\n\n")}` +
-          `\n\t});`
+          `\n\t}).timeout(3000);`
       );
     }
 

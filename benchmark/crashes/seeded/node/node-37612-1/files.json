@@ -1,1 +1,1 @@
-["internal/assert.js","zlib","ws/lib/permessage-deflate.js","internal/streams/writable.js","internal/streams/transform.js"]
+["Function.Module._resolveFilename","@cspotcode/source-map-support/source-map-support.js","Function.Module._load","Module.require","require","node-v15.11.0/lib/internal/assert.js"]

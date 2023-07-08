@@ -32,7 +32,7 @@ export class EnvironmentGenerator {
     console.log('Loading Crashes... ');
     const assetDir = './benchmark/crashes';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
-        && value !== 'seeded' && (!project || value === project));
+        && value !== 'seeded' && (!project || value === project) && !syntestSeeded);
     const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) =>
         value !== 'http-server' && value !== '' && (!project || value.startsWith(project)) && syntestSeeded);
     const assetSubDirs = assetDirContents.map((projItem) => {
@@ -114,8 +114,8 @@ export class EnvironmentGenerator {
       return crash;
     });
 
-    // return crashes.filter(crash => crash.crashId === 'express-4435');
-    return crashes;
+    return crashes.filter(crash => crash.crashId === 'atom-22894-2');
+    // return crashes;
   }
 
   /**

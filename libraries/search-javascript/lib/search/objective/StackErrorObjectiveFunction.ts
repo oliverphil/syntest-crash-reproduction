@@ -18,15 +18,16 @@ class StackErrorObjectiveFunction implements ObjectiveFunction<JavaScriptTestCas
 
     calculateDistance(encoding: JavaScriptTestCase): number {
         let distance = 1;
-        if (encoding.getExecutionResult().hasExceptions()) {
+        if (encoding.getExecutionResult()?.hasExceptions()) {
             const actualExceptionString = encoding.getExecutionResult().getExceptions();
-            const actualException = StackTraceProcessor.process(actualExceptionString);
-            if (actualException.error.errorMessage === this.stackTrace.error.errorMessage) {
-                distance -= 0.8;
+            if (actualExceptionString === this.stackTrace.error.errorMessage) {
+                // distance -= 0.8;
+                distance = 0;
+                console.log("Exception hit")
             }
-            if (actualException.error.errorType === this.stackTrace.error.errorType) {
-                distance -= 0.2;
-            }
+            // if (actualException.error.errorType === this.stackTrace.error.errorType) {
+            //     distance -= 0.2;
+            // }
         }
 
         return distance;

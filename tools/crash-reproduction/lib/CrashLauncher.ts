@@ -145,7 +145,7 @@ export class CrashLauncher extends Launcher {
         : new InferenceTypeModelFactory();
 
     this.rootContext = new RootContext(
-      this.arguments_.targetRootDirectory + `/${this.crash.project}/${this.crash.crashId}`,
+      this.arguments_.targetRootDirectory + (this.crash.seeded ? '/seeded' : '') + `/${this.crash.project}/${this.crash.crashId}`,
       abstractSyntaxTreeFactory,
       controlFlowGraphFactory,
       targetFactory,
@@ -154,8 +154,15 @@ export class CrashLauncher extends Launcher {
       typeExtractor,
       typeResolver
     );
-    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__abstractSyntaxTrees.json`)) {
-      await this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+
+    if (this.crash.seeded) {
+      // if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+      //   this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
+      // }
+    } else {
+      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+      }
     }
     // if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
     //   await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
@@ -363,9 +370,16 @@ export class CrashLauncher extends Launcher {
     console.log("Extracting types");
     this.rootContext.extractTypes();
     console.log("Saving types");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-      this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    }
+    // if (crash.seeded) {
+    //   if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+    //     this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
+    //   }
+    // } else {
+    //   if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+    //     this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    //   }
+    // }
+
     console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
@@ -856,7 +870,7 @@ export class CrashLauncher extends Launcher {
         (<TypedEventEmitter<Events>>process).emit("exitting");
         await this.exit();
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         // console.trace(error);
       }
     }

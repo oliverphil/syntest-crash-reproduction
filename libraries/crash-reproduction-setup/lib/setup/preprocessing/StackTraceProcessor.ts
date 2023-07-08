@@ -48,8 +48,8 @@ export class StackTraceProcessor {
     const result = regex.exec(lines);
     if (result) {
       return {
-        errorType: result[1].toString(),
-        errorMessage: result[2].toString(),
+        errorType: result[1].toString().trim(),
+        errorMessage: result[2].toString().trim(),
       } as StackError;
     }
     throw new Error('Error could not be read from stack trace');
@@ -61,7 +61,7 @@ export class StackTraceProcessor {
    * @return {StackFrame[]} information parsed from the stack trace
    * @private
    */
-  private static parseTrace(lines: string[], verbose: boolean): StackFrame[] {
+  public static parseTrace(lines: string[], verbose: boolean): StackFrame[] {
     const moduleRegex: RegExp =
       /at\s(.+)\s\(([\d\w~\/\\\-<>._?@+]+):(\d+):?(\d+)?\)/m;
     const fileRegex: RegExp =

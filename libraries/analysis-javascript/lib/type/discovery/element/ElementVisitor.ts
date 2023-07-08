@@ -94,7 +94,7 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
       try {
         this._createElement(path, ElementType.Identifier, path.node.name);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
   };

@@ -2,6 +2,7 @@ import {ObjectiveFunction} from "@syntest/search/dist/lib/objective/ObjectiveFun
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
 import {SearchSubject} from "@syntest/search/dist/lib/SearchSubject";
 import {StackFrame} from "@syntest/crash-reproduction-setup";
+import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
 
 
 class StackFrameObjectiveFunction implements ObjectiveFunction<JavaScriptTestCase> {
@@ -17,13 +18,23 @@ class StackFrameObjectiveFunction implements ObjectiveFunction<JavaScriptTestCas
     }
 
     calculateDistance(encoding: JavaScriptTestCase): number {
-        const trace = encoding.getExecutionResult().getTraces().find(trace => {
+        const trace = encoding.getExecutionResult()?.getTraces()?.find(trace => {
             return trace.path.includes(this.stackFrame.file)
                 && trace.line === this.stackFrame.lineNumber;
         });
         let distance = 1;
         if (trace && trace.hits > 0) {
+            console.log("line hit: ", trace.path)
             distance = 0;
+        }
+        if (encoding.getExecutionResult()?.hasExceptions()) {
+            const stackTrace = (<JavaScriptExecutionResult>encoding.getExecutionResult()).getStackTrace();
+            for (const frame of stackTrace) {
+                if (frame.file === this.stackFrame.file && frame.lineNumber === this.stackFrame.lineNumber) {
+                    console.log("Line hit: ", frame);
+                    distance = 0;
+                }
+            }
         }
         return distance;
     }

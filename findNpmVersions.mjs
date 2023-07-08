@@ -4,7 +4,7 @@ import {EnvironmentGenerator} from "@syntest/crash-reproduction-setup";
 import * as fs from 'fs';
 
 // const crashProjects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack'];
-const crashProjects = ['webpack'];
+const crashProjects = ['atom'];
 const benchmarkDirectory = 'benchmark/crashes';
 const environmentGenerator = new EnvironmentGenerator();
 
@@ -12,7 +12,7 @@ for (const project of crashProjects) {
     const crashes = environmentGenerator.loadAssets(project, false, false);
     const results = [];
 
-    for (const crash of crashes.filter(c => c.crashId === 'webpack-13380')) {
+    for (const crash of crashes.filter(c => c.crashId === 'atom-22894')) {
         try {
             const crashDirectory = `${benchmarkDirectory}/${crash.project}/${crash.crashId}`;
             const stackTraceFiles = crash.stackTrace.trace.map(frame => frame.file);

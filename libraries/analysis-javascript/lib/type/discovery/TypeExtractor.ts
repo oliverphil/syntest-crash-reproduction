@@ -47,7 +47,7 @@ export class TypeExtractor {
       try {
         this.extract(rootContext, file);
       } catch (error) {
-        console.info(error);
+        // console.info(error);
       }
     }
   }

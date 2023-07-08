@@ -272,7 +272,7 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
       try {
         this.resolveRelation(relation);
       } catch (error) {
-        console.info(error);
+        // console.info(error);
       }
     }
   }

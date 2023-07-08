@@ -1,2 +1,2 @@
 TypeError: field.toLowerCase is not a function
-    at ServerResponse.header (/Users/philipoliver/Documents/University.nosync/testing/syntest-crash-reproduction/benchmark/crashes/express/express-4093/node_modules/express/lib/response.js:761:15)
+    at ServerResponse.header (node_modules/express/lib/response.js:761:15)

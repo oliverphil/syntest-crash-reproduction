@@ -42,13 +42,13 @@ export class CrashInstrumenter extends Instrumenter {
         const absoluteRootPath = path.resolve(rootContext.rootPath );
 
         const destinationPath = path.resolve(
-            temporaryInstrumentedDirectory + `/crashes/${crash.project}/${crash.crashId}`,
+            temporaryInstrumentedDirectory + `/crashes${(crash.seeded ? '/seeded' : '')}/${crash.project}/${crash.crashId}`,
             // path.basename(absoluteRootPath)
         );
 
 
         // copy everything
-        await copySync(absoluteRootPath, destinationPath);
+        await copySync(absoluteRootPath, destinationPath, {overwrite: true, dereference: true});
 
         // overwrite the stuff that needs instrumentation
 

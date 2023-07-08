@@ -7,7 +7,9 @@ const crashes = environmentGenerator.loadAssets(undefined, false, false);
 const traces = crashes.map(crash => {
     return {
         trace: crash.stackTrace.trace,
-        project: crash.project
+        project: crash.project,
+        type: crash.stackTrace.error.errorType,
+        message: crash.stackTrace.error.errorMessage
     };
 });
 let lengthStats = {
@@ -17,6 +19,9 @@ let lengthStats = {
         min: Number.MAX_VALUE,
         max: 0
     }
+}
+let errorStats = {
+
 }
 
 for (const crash of traces) {
@@ -45,6 +50,12 @@ for (const crash of traces) {
     if (lengthStats.summary.min > crash.trace.length) {
         lengthStats.summary.min = crash.trace.length
     }
+
+    if (Object.keys(errorStats).includes(crash.type)) {
+        errorStats[crash.type]++;
+    } else {
+        errorStats[crash.type] = 1;
+    }
 }
 
 for (const project of Object.values(lengthStats)) {
@@ -52,3 +63,4 @@ for (const project of Object.values(lengthStats)) {
 }
 
 console.log(lengthStats);
+console.log(errorStats);

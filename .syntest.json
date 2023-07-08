@@ -25,7 +25,7 @@
   "iterations": 20,
   "evaluations": 9007199254740991,
   "test-minimization": false,
-  "random-seed": "TODO fill this in yourself",
+  "random-seed": "",
   "max-depth": 5,
   "max-action-statements": 5,
   "constant-pool": true,
@@ -60,7 +60,7 @@
   ],
   "metric-middleware-pipeline": [],
   "output-metrics": [],
-  "syntest-project": "express",
+  "syntest-project": "atom",
   "syntest-crashes": "false",
-  "syntest-seeded": "false"
+  "syntest-seeded": "true"
 }

@@ -17,6 +17,7 @@
  */
 
 import { Datapoint, ExecutionResult } from "@syntest/search";
+import {StackFrame, StackTrace} from "@syntest/crash-reproduction-setup";
 
 export enum JavaScriptExecutionStatus {
   PASSED,
@@ -54,6 +55,8 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    */
   protected _exception: string;
 
+  protected _stackTrace: StackFrame[];
+
   /**
    * Constructor.
    *
@@ -66,12 +69,14 @@ export class JavaScriptExecutionResult implements ExecutionResult {
     status: JavaScriptExecutionStatus,
     traces: Datapoint[],
     duration: number,
-    exception?: string | undefined
+    exception?: string | undefined,
+    stackTrace?: StackFrame[]
   ) {
     this._status = status;
     this._traces = traces;
     this._duration = duration;
     this._exception = exception;
+    this._stackTrace = stackTrace;
   }
 
   /**
@@ -110,6 +115,10 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    */
   public getExceptions(): string {
     return this._exception;
+  }
+
+  public getStackTrace(): StackFrame[] {
+    return this._stackTrace;
   }
 
   /**

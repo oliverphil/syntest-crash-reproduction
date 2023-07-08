@@ -39,6 +39,7 @@ import { JavaScriptTestCase } from "../JavaScriptTestCase";
 
 import { ExecutionInformationIntegrator } from "./ExecutionInformationIntegrator";
 import { SilentMochaReporter } from "./SilentMochaReporter";
+import {StackFrame, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected static LOGGER: Logger;
@@ -117,8 +118,13 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     let runner: Runner;
 
     // Finally, run mocha.
-    await new Promise((resolve) => {
-      runner = mocha.run((failures) => resolve(failures));
+    await new Promise((resolve, reject) => {
+      try {
+        runner = mocha.run((failures) => resolve(failures));
+      } catch (e) {
+        console.log(e);
+        reject(e);
+      }
     });
 
     mocha.dispose();
@@ -271,6 +277,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
 
       let status: JavaScriptExecutionStatus;
       let exception: string;
+      let stackTrace: StackFrame[];
 
       if (test.isPassed()) {
         status = JavaScriptExecutionStatus.PASSED;
@@ -279,6 +286,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       } else {
         status = JavaScriptExecutionStatus.FAILED;
         exception = test.err.message;
+        stackTrace = StackTraceProcessor.parseTrace(test.err.stack.split('\n'), false);
       }
 
       const duration = test.duration;
@@ -287,7 +295,8 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         status,
         traces,
         duration,
-        exception
+        exception,
+        stackTrace
       );
     } else {
       executionResult = new JavaScriptExecutionResult(
