@@ -832,28 +832,33 @@ export class CrashLauncher extends Launcher {
     // ]);
   }
 
+  public async runCrash(crash: Crash) {
+    CrashLauncher.LOGGER.info("====== Crash to Run ======");
+    CrashLauncher.LOGGER.info(crash.crashId);
+    CrashLauncher.LOGGER.info("====== End Crash to Run ======");
+    global.crash = crash;
+    this.crash = crash;
+
+    await this.run();
+  }
+
   public override async run(): Promise<void> {
     initializePseudoRandomNumberGenerator(this.arguments_.randomSeed);
 
-    const environmentGenerator = new EnvironmentGenerator();
-    let crashes: Crash[] = environmentGenerator.loadAssets(this.arguments_.syntestProject,
-        this.arguments_.syntestCrashes === 'true',
-        this.arguments_.syntestSeeded === 'true');
-    const crashesToRemove: Crash[] = [];
-    for (const crash of crashes) {
-      environmentGenerator.generatePackage(crash);
-      if (EnvironmentBuilder.createCrashEnvironment(crash)) {
-        crashesToRemove.push(crash);
-      }
-    }
-    crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
+    // const environmentGenerator = new EnvironmentGenerator();
+    // let crashes: Crash[] = environmentGenerator.loadAssets(this.arguments_.syntestProject,
+    //     this.arguments_.syntestCrashes === 'true',
+    //     this.arguments_.syntestSeeded === 'true');
+    // const crashesToRemove: Crash[] = [];
+    // for (const crash of crashes) {
+    //   environmentGenerator.generatePackage(crash);
+    //   if (EnvironmentBuilder.createCrashEnvironment(crash)) {
+    //     crashesToRemove.push(crash);
+    //   }
+    // }
+    // crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
 
-    for (const crash of crashes) {
-      CrashLauncher.LOGGER.info("====== Crash to Run ======");
-      CrashLauncher.LOGGER.info(crash.crashId);
-      CrashLauncher.LOGGER.info("====== End Crash to Run ======");
-      global.crash = crash;
-      this.crash = crash;
+    // for (const crash of crashes) {
       try {
         (<TypedEventEmitter<Events>>process).emit("initializeStart");
         await this.initialize();
@@ -870,9 +875,9 @@ export class CrashLauncher extends Launcher {
         (<TypedEventEmitter<Events>>process).emit("exitting");
         await this.exit();
       } catch (error) {
-        // console.log(error);
+        console.log(error);
         // console.trace(error);
       }
-    }
+    // }
   }
 }

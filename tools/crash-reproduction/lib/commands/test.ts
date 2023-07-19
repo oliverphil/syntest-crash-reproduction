@@ -20,6 +20,7 @@ import { Command, ModuleManager } from "@syntest/module";
 import Yargs = require("yargs");
 
 import { JavaScriptArguments, CrashLauncher } from "../CrashLauncher";
+import {Crash, EnvironmentBuilder, EnvironmentGenerator} from "@syntest/crash-reproduction-setup";
 
 export function getTestCommand(
   tool: string,
@@ -64,12 +65,30 @@ export function getTestCommand(
     "Run the test case generation tool on a certain JavaScript project.",
     options,
     async (arguments_: Yargs.ArgumentsCamelCase) => {
-      const launcher = new CrashLauncher(
-        <JavaScriptArguments>(<unknown>arguments_),
-        moduleManager,
-        userInterface
-      );
-      await launcher.run();
+      const args = <JavaScriptArguments><unknown>arguments_;
+      const environmentGenerator = new EnvironmentGenerator();
+      let crashes: Crash[] = environmentGenerator.loadAssets(args.syntestProject,
+          args.syntestCrashes === 'true',
+          args.syntestSeeded === 'true');
+      const crashesToRemove: Crash[] = [];
+      for (const crash of crashes) {
+        environmentGenerator.generatePackage(crash);
+        if (EnvironmentBuilder.createCrashEnvironment(crash)) {
+          crashesToRemove.push(crash);
+        }
+      }
+      crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
+      for (const crash of crashes) {
+        moduleManager.reset();
+        global.__coverage__ = {};
+        global.__meta__ = [];
+        const launcher = new CrashLauncher(
+            <JavaScriptArguments>(<unknown>arguments_),
+            moduleManager,
+            userInterface
+        );
+        await launcher.runCrash(crash);
+      }
     }
   );
 }

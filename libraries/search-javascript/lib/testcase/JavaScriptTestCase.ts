@@ -45,9 +45,18 @@ export class JavaScriptTestCase extends Encoding {
 
   mutate(sampler: JavaScriptTestCaseSampler): JavaScriptTestCase {
     JavaScriptTestCase.LOGGER.debug(`Mutating test case: ${this._id}`);
-    return sampler.resampleGeneProbability
-      ? sampler.sample()
-      : new JavaScriptTestCase(this._root.mutate(sampler, 0));
+    let testCase;
+    let i = 0;
+    while (!testCase && i < 50)
+    try {
+      testCase = sampler.resampleGeneProbability
+          ? sampler.sample()
+          : new JavaScriptTestCase(this._root.mutate(sampler, 0));
+    } catch {
+      //
+    }
+
+    return testCase;
   }
 
   hashCode(decoder: Decoder<Encoding, string>): number {

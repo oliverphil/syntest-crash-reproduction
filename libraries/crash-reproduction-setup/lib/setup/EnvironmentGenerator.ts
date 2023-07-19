@@ -114,8 +114,8 @@ export class EnvironmentGenerator {
       return crash;
     });
 
-    return crashes.filter(crash => crash.crashId === 'atom-22894-2');
-    // return crashes;
+    // return crashes.filter(crash => crash.crashId === 'atom-22894-2');
+    return crashes;
   }
 
   /**

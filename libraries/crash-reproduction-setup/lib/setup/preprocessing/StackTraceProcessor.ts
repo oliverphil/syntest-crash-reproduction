@@ -43,13 +43,18 @@ export class StackTraceProcessor {
    * type and message
    * @private
    */
-  private static parseError(lines: string): StackError {
+  public static parseError(lines: string): StackError {
     const regex: RegExp = /([a-zA-Z\[\]]+)[\s\[\]a-zA-Z_]*:?(.*)/m;
     const result = regex.exec(lines);
     if (result) {
+      let errorMessage = result[2].toString().trim();
+      if (errorMessage.includes('Received type string')) {
+        const split = errorMessage.split('Received type string');
+        errorMessage = split[0] + 'Received type string';
+      }
       return {
         errorType: result[1].toString().trim(),
-        errorMessage: result[2].toString().trim(),
+        errorMessage
       } as StackError;
     }
     throw new Error('Error could not be read from stack trace');
@@ -107,13 +112,13 @@ export class StackTraceProcessor {
       } else {
         result = internalsRegex.exec(line);
         if (result) {
-          let file = result[1].toString().replace(/\\/g, '/');
-          file = file.includes('node_modules') ? file.split('node_modules/')[1] : file;
+          let file = result[2].toString().replace(/\\/g, '/');
+          file = file.includes('node_modules') ? file.split('node_modules/')[2] : file;
           frames.push({
-            method: result[0].toString(),
+            method: result[1].toString(),
             file,
-            lineNumber: parseInt(result[2].toString()),
-            charNumber: parseInt(result[3].toString()),
+            lineNumber: parseInt(result[3].toString()),
+            charNumber: parseInt(result[4].toString()),
             isModule: true,
             isEmbeddedOrAnonymous,
             internal: true,

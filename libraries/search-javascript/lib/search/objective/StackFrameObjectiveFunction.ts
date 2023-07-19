@@ -24,15 +24,20 @@ class StackFrameObjectiveFunction implements ObjectiveFunction<JavaScriptTestCas
         });
         let distance = 1;
         if (trace && trace.hits > 0) {
-            console.log("line hit: ", trace.path)
+            // console.log("line hit: ", trace.path)
             distance = 0;
         }
         if (encoding.getExecutionResult()?.hasExceptions()) {
             const stackTrace = (<JavaScriptExecutionResult>encoding.getExecutionResult()).getStackTrace();
+            // console.log(stackTrace.map(frame => frame.file + frame.lineNumber))
             for (const frame of stackTrace) {
                 if (frame.file === this.stackFrame.file && frame.lineNumber === this.stackFrame.lineNumber) {
-                    console.log("Line hit: ", frame);
-                    distance = 0;
+                    // console.log("Line hit: ", frame);
+                    // console.log(stackTrace);
+                    return 0;
+                }
+                if (frame.file === this.stackFrame.file) {
+                    distance = 0.5;
                 }
             }
         }

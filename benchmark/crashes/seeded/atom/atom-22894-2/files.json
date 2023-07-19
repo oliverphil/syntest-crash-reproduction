@@ -1,1 +1,1 @@
-["checkListener","_addListener","Readable.addListener","readable-stream/lib/_stream_readable.js"]
+["node:events","readable-stream/lib/_stream_readable.js"]

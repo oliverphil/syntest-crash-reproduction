@@ -11,7 +11,8 @@
       "@syntest/search": [
         "../syntest-core/libraries/search"
       ]
-    }
+    },
+    "esModuleInterop": true
   },
   "include": ["**/*.ts"]
 }
