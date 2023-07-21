@@ -159,9 +159,13 @@ function entries(...enter) {
     if (this.shouldIgnore(path)) {
       return;
     }
-    enter.forEach((e) => {
-      e.call(this, path, node);
-    });
+    try {
+      enter.forEach((e) => {
+        e.call(this, path, node);
+      });
+    } catch {
+      //
+    }
   };
   const exit = function (path, node) {
     this.onExit(path, node);

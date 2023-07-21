@@ -1,1 +1,1 @@
-["webpack/lib/DefinePlugin.js","tapable/lib/HookCodeFactory.js","tapable/lib/Hook.js","@angular-builders/custom-webpack/"]
+["webpack/lib/DefinePlugin.js","tapable/lib/HookCodeFactory.js","tapable/lib/Hook.js","webpack/lib/Parser.js"]

@@ -28,9 +28,10 @@ export const defaultBabelOptions: TransformOptions = {
   ],
   babelrc: false,
   ast: true,
-  sourceMaps: true,
+  sourceMaps: "both",
   compact: false,
   comments: true,
+  retainLines: true,
   parserOpts: {
     strictMode: false,
     allowReturnOutsideFunction: true,

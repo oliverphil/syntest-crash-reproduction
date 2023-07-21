@@ -29,11 +29,11 @@ class StackErrorObjectiveFunction implements ObjectiveFunction<JavaScriptTestCas
                 const split = actualExceptionString.split('Received type string');
                 actualExceptionString = split[0] + 'Received type string';
             }
-            // console.log(actualExceptionString)
-            if (actualExceptionString === this.stackTrace.error.errorMessage) {
+            console.log(actualExceptionString)
+            if (actualExceptionString.includes(this.stackTrace.error.errorMessage)) {
                 // distance -= 0.8;
                 distance = 0;
-                // console.log("Exception hit")
+                console.log("Exception hit")
             }
             // if (actualException.error.errorType === this.stackTrace.error.errorType) {
             //     distance -= 0.2;
