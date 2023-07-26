@@ -1,0 +1,9 @@
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: 'const x = []; let y; ({z: [y] = x}) = {}; foo(y);',
+    message: 'Parsing error: Parenthesized pattern',
+    line: 1,
+    column: 22 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:336:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:421:25)

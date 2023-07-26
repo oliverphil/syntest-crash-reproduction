@@ -1,0 +1,1 @@
+{"issueNumber":52,"info":"CLIEngine when evaluating code with comments to change config when allowInlineConfig is disabled should report a violation for disabling rules","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

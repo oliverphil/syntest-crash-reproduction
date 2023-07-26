@@ -1,0 +1,2 @@
+AssertionError: expected '/private/tmp/eslint/fixtures/rules/test/test-custom-rule.js' to equal '/tmp/eslint/fixtures/rules/test/test-custom-rule.js'
+    at Context.<anonymous> (tests/lib/cli-engine.js:483:20)

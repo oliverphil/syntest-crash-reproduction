@@ -1,0 +1,11 @@
+AssertionError: expected 'Found. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E' to be 'Moved Temporarily. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E'
+    at Assertion.prop.(anonymous function) (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/should/lib/should.js:61:14)
+    at Test.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/test/res.redirect.js:142:25)
+    at Test.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:132:12)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitCloseNT (net.js:1577:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

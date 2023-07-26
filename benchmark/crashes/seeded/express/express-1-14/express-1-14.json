@@ -1,0 +1,1 @@
+{"issueNumber":14,"info":"res .set(field, values) should coerce to an array of strings","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

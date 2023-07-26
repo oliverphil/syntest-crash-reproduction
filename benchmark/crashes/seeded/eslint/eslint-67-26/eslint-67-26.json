@@ -1,0 +1,1 @@
+{"issueNumber":26,"info":"CLIEngine executeOnFiles() configuration hierarchy should return zero messages when executing with .eslintrc in the Node.js environment","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,0 +1,1 @@
+{"issueNumber":22,"info":"no-shadow-restricted-names function Infinity(Infinity) { var Infinity; !function Infinity(Infinity) { try {} catch(Infinity) {} }; }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,0 +1,1 @@
+{"name":"express-4548-2","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"http-exception-transformer":"1.2.1","express":"4.x"}}

@@ -1,0 +1,1 @@
+{"issueNumber":8,"info":"map.test.js should write {hasOwnProperty: 1, a: 0, b: false, c: null} obj","url":"","version":"^2.0.0","dependencies":{},"requireCrashDependency":true}

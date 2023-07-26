@@ -1,0 +1,2 @@
+AssertionError: expected '/private/tmp/eslint/fixtures/process-exit.js' to equal '/tmp/eslint/fixtures/process-exit.js'
+    at Context.<anonymous> (tests/lib/cli-engine.js:539:20)

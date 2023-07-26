@@ -1,0 +1,1 @@
+{"issueNumber":8,"info":"brace-style try {  bar(); }\ncatch (e) { baz();  }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

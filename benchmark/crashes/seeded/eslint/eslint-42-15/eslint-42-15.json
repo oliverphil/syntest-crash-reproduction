@@ -1,0 +1,1 @@
+{"issueNumber":15,"info":"no-catch-shadow function foo(){ try { bar(); } catch(foo) { } }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

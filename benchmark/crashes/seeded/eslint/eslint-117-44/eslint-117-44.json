@@ -1,0 +1,1 @@
+{"issueNumber":44,"info":"no-unused-vars valid var x = [], y; ({z: [y] = x}) = {}; foo(y);","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

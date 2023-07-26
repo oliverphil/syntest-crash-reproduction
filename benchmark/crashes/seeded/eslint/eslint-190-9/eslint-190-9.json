@@ -1,0 +1,1 @@
+{"issueNumber":9,"info":"cli when supplied with report output file path should return an error if the path could not be written to","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

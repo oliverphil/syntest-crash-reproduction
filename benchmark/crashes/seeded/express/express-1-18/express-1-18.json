@@ -1,0 +1,1 @@
+{"issueNumber":18,"info":"res.vary() with a string should set the value","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

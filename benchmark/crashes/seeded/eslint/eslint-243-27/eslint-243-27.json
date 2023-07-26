@@ -1,0 +1,1 @@
+{"issueNumber":27,"info":"no-redeclare invalid switch(foo) { case a: let b = 3;\ncase b: let b = 4}","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

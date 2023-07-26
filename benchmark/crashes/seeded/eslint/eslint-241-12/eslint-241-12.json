@@ -1,0 +1,1 @@
+{"issueNumber":12,"info":"cli execute() should return error when text with incorrect quotes is passed as argument","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

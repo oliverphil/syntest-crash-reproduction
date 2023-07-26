@@ -1,0 +1,1 @@
+{"issueNumber":16,"info":"Config getConfig() should return the project config when called in current working directory","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

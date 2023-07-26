@@ -1,0 +1,2 @@
+AssertionError: expected '/private/tmp/eslint/fixtures/missing-semicolon.js' to equal '/tmp/eslint/fixtures/missing-semicolon.js'
+    at Context.<anonymous> (tests/lib/cli-engine.js:357:20)
