@@ -1,0 +1,1 @@
+{"issueNumber":17,"info":"no-ex-assign try { } catch (e) { e = 10; }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

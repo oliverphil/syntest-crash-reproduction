@@ -1,0 +1,1 @@
+{"issueNumber":5,"info":"prefer-const valid let foo; const foo = 1;","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

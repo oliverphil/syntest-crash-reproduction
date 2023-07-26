@@ -1,0 +1,14 @@
+TypeError: Header name must be a valid HTTP Token ["Accept: text/html"]
+    at ClientRequest.setHeader (_http_outgoing.js:366:11)
+    at Test.Request.set (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/superagent/lib/node/index.js:274:18)
+    at context.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/test/res.format.js:102:10)
+    at Test.Runnable.run (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runnable.js:217:15)
+    at Runner.runTest (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:373:10)
+    at /Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:451:12
+    at next (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:298:14)
+    at /Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:308:7
+    at next (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:246:23)
+    at Immediate.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:275:5)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)

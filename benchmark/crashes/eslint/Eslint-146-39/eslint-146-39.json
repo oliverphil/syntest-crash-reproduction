@@ -1,0 +1,1 @@
+{"issueNumber":39,"info":"no-redeclare invalid export class A {} export class A {}","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

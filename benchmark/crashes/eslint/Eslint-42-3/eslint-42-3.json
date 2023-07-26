@@ -1,0 +1,1 @@
+{"issueNumber":3,"info":"eslint verify() should not report an error when JSX code contains a spread operator and JSX is enabled","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,0 +1,1 @@
+{"issueNumber":21,"info":"CLIEngine executeOnFiles() should return zero messages and ignore .eslintrc files when executing with no-eslintrc flag","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

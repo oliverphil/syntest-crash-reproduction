@@ -1,0 +1,6 @@
+Error: Unknown node type JSXElement.
+    at Controller.traverse (node_modules/escope/node_modules/estraverse/estraverse.js:511:31)
+    at Object.traverse (node_modules/escope/node_modules/estraverse/estraverse.js:703:27)
+    at Object.analyze (node_modules/escope/escope.js:855:20)
+    at EventEmitter.module.exports.api.verify (lib/eslint.js:584:36)
+    at Context.<anonymous> (tests/lib/eslint.js:1920:35)

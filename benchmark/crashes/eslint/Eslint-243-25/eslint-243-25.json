@@ -1,0 +1,1 @@
+{"issueNumber":25,"info":"keyword-spacing valid class A { a() { <Foo onClick={super} /> } }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

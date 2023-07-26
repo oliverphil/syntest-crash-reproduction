@@ -1,0 +1,6 @@
+TypeError: Path must be a string. Received undefined
+    at assertPath (path.js:7:11)
+    at Object.extname (path.js:1431:5)
+    at processText (lib/cli-engine.js:183:30)
+    at CLIEngine.executeOnText (lib/cli-engine.js:612:26)
+    at Context.<anonymous> (tests/lib/cli-engine.js:1479:59)

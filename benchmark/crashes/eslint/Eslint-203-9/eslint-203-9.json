@@ -1,0 +1,1 @@
+{"issueNumber":9,"info":"CLIEngine executeOnFiles() Fix Mode should return fixed text on multiple files when in fix mode","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

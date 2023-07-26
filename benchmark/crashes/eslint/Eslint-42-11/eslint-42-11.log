@@ -1,0 +1,20 @@
+AssertionError: Should have no errors but had 1: [ { ruleId: 'complexity',
+    severity: 1,
+    node: 
+     { type: 'FunctionDeclaration',
+       id: [Object],
+       params: [Object],
+       defaults: [],
+       body: [Object],
+       rest: null,
+       generator: false,
+       expression: false,
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Function \'a\' has a complexity of 5.',
+    line: 1,
+    column: 0,
+    source: 'function a(obj) {if(obj){ for(var x in obj) {try {x.getThis();} catch (e) {x.getThat();}}} else {return false;}}' } ]: expected 1 to equal 0
+    at testValidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:117:20)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:164:25)

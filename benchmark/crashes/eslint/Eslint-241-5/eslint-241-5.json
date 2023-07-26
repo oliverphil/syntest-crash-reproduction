@@ -1,0 +1,1 @@
+{"issueNumber":5,"info":"CLIEngine executeOnFiles() should handle multiple patterns with overlapping files","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

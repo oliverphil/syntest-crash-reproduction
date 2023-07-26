@@ -1,0 +1,1 @@
+{"issueNumber":15,"info":"CLIEngine executeOnFiles() should return two messages when given a file in excluded files list while ignore is off","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

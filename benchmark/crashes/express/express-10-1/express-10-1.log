@@ -1,0 +1,8 @@
+TypeError: Cannot read property 'text' of undefined
+    at Test._assertBody (node_modules/supertest/lib/test.js:181:21)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
+    at Test.assert (node_modules/supertest/lib/test.js:148:18)
+    at Server.assert (node_modules/supertest/lib/test.js:127:12)
+    at emitCloseNT (net.js:1577:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

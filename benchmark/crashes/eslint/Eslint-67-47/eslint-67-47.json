@@ -1,0 +1,1 @@
+{"issueNumber":47,"info":"CLIEngine executeOnFiles() processors should return two messages when executing with config file that specifies a processor","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

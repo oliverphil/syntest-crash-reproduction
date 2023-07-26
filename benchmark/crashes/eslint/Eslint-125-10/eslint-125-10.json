@@ -1,0 +1,1 @@
+{"issueNumber":10,"info":"CLIEngine executeOnFiles() should process when file is given by not specifying extensions","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

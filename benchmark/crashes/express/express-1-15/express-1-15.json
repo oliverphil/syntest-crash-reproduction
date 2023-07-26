@@ -1,0 +1,1 @@
+{"issueNumber":15,"info":"res .set(field, values) should not set a charset of one is already set","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

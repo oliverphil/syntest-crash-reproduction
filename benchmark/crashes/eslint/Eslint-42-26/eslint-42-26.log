@@ -1,0 +1,38 @@
+AssertionError: Should have 2 errors but had 3: [ { ruleId: 'space-before-blocks',
+    severity: 1,
+    node: 
+     { type: 'BlockStatement',
+       body: [],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Missing space before opening brace.',
+    line: 1,
+    column: 3,
+    source: '{}' },
+  { ruleId: 'space-before-blocks',
+    severity: 1,
+    node: 
+     { type: 'BlockStatement',
+       body: [],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Missing space before opening brace.',
+    line: 1,
+    column: 13,
+    source: '{}' },
+  { ruleId: 'space-before-blocks',
+    severity: 1,
+    node: 
+     { type: 'BlockStatement',
+       body: [],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Missing space before opening brace.',
+    line: 1,
+    column: 13,
+    source: '{}' } ]: expected 3 to equal 2
+    at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)

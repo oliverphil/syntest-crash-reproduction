@@ -1,0 +1,1 @@
+{"issueNumber":18,"info":"Config getConfig() should cache config when the same directory is passed twice","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

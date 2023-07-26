@@ -1,0 +1,1 @@
+{"issueNumber":2,"info":"req .ip when X-Forwarded-For is present when \"trust proxy\" is disabled should return the remote address","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

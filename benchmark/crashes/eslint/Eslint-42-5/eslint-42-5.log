@@ -1,0 +1,28 @@
+AssertionError: Should have 1 errors but had 2: [ { ruleId: 'brace-style',
+    severity: 1,
+    node: 
+     { type: 'CatchClause',
+       param: [Object],
+       body: [Object],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Opening curly brace does not appear on the same line as controlling statement.',
+    line: 3,
+    column: 3,
+    source: 'catch (e) \n {}' },
+  { ruleId: 'brace-style',
+    severity: 1,
+    node: 
+     { type: 'CatchClause',
+       param: [Object],
+       body: [Object],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Opening curly brace does not appear on the same line as controlling statement.',
+    line: 3,
+    column: 3,
+    source: 'catch (e) \n {}' } ]: expected 2 to equal 1
+    at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)

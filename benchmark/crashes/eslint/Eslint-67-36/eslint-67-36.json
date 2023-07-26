@@ -1,0 +1,1 @@
+{"issueNumber":36,"info":"CLIEngine executeOnFiles() configuration hierarchy should return two messages when executing with config file that adds to local and parent .eslintrc","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

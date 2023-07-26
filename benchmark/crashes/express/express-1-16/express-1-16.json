@@ -1,0 +1,1 @@
+{"issueNumber":16,"info":"res .set(object) should coerce to a string","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

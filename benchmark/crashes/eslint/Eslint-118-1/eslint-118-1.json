@@ -1,0 +1,1 @@
+{"issueNumber":1,"info":"no-unused-vars const foo = \"hello!\";function bar(foobar = foo) {  foobar.replace(/!$/, \" world!\");}\nbar();","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}
