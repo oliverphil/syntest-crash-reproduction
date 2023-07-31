@@ -89,7 +89,7 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
       }
 
       for (const [index, value] of statements.entries()) {
-        if (value.reference instanceof RootStatement) {
+        if (value.reference instanceof RootStatement && !importableGenes.map(g => g.name).includes(value.reference.name)) {
           importableGenes.push(value.reference);
         }
         if (addLogs) {
@@ -117,7 +117,12 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
         testString,
         importableGenes
       );
-      imports.push(...importsOfTest);
+      for (const imp of importsOfTest) {
+        const identifier = imp.split("=")[0];
+        if (!imports.map(im => im.split("=")[0]).includes(identifier)) {
+          imports.push(imp);
+        }
+      }
 
       if (addLogs) {
         imports.push(`import * as fs from 'fs'`);
@@ -236,7 +241,7 @@ export class JavaScriptDecoder implements Decoder<JavaScriptTestCase, string> {
 
       const importString: string = this.getImport(sourceDirectory, export_);
 
-      if (imports.includes(importString) || importString.length === 0) {
+      if (imports.includes(importString) || importString.length === 0 || imports.includes(export_.name)) {
         continue;
       }
 

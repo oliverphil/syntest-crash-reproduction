@@ -116,18 +116,28 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     }
 
     let runner: Runner;
+    try {
+      // Finally, run mocha.
+      await new Promise((resolve, reject) => {
+        try {
+          runner = mocha.run((failures) => resolve(failures));
+        } catch (e) {
+          console.log(e);
+          resolve(e);
+          // reject(e);
+        }
+      });
+    } catch {
+      //
+    }
 
-    // Finally, run mocha.
-    await new Promise((resolve, reject) => {
-      try {
-        runner = mocha.run((failures) => resolve(failures));
-      } catch (e) {
-        console.log(e);
-        reject(e);
-      }
-    });
 
-    mocha.dispose();
+    try {
+      mocha.dispose();
+    } catch (e) {
+      console.log(e);
+    }
+
     return runner;
   }
 

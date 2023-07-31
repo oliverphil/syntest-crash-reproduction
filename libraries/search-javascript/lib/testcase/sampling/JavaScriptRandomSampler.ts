@@ -872,9 +872,9 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
         continue;
       }
 
-      throw new Error(
-        `Could not find element or relation with id ${parameterId}`
-      );
+      // throw new Error(
+      //   `Could not find element or relation with id ${parameterId}`
+      // );
     }
 
     // if some params are missing, fill them with fake params

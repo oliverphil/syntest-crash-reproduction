@@ -29,10 +29,10 @@ class StackFrameObjectiveFunction implements ObjectiveFunction<JavaScriptTestCas
         }
         if (encoding.getExecutionResult()?.hasExceptions()) {
             const stackTrace = (<JavaScriptExecutionResult>encoding.getExecutionResult()).getStackTrace();
-            console.log(stackTrace.map(frame => frame.file + frame.lineNumber).join('\n'));
+            // console.log(stackTrace.map(frame => frame.file + frame.lineNumber).join('\n'));
             for (const frame of stackTrace) {
                 if (frame.file === this.stackFrame.file && frame.lineNumber === this.stackFrame.lineNumber) {
-                    console.log("Line hit: ", frame.file, frame.lineNumber);
+                    // console.log("Line hit: ", frame.file, frame.lineNumber);
                     // console.log(stackTrace);
                     return 0;
                 }

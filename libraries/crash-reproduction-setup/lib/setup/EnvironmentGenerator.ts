@@ -95,6 +95,11 @@ export class EnvironmentGenerator {
         crashId: crashName,
         seeded: value[4]
       };
+      // for (const line of crash.stackTrace.trace) {
+      //   if (line.dependency) {
+      //     crash.dependencies[line.dependency] = '*';
+      //   }
+      // }
       if (crash.requireCrashDependency) {
         crash.dependencies[crash.project] = crash.version;
       }
@@ -114,7 +119,7 @@ export class EnvironmentGenerator {
       return crash;
     });
 
-    // return crashes.filter(crash => crash.crashId === 'webpack-13290');
+    // return crashes.filter(crash => crash.crashId === 'express-1-13');
     return crashes;
   }
 

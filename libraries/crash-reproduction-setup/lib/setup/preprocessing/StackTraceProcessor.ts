@@ -75,12 +75,17 @@ export class StackTraceProcessor {
       /at\s(?:new)?\s?([:a-zA-Z~\/\\\-<>._@+]+)\s\(([A-Za-z]+:[A-Za-z/_]+):(\d+):(\d+)\)/m;
     const frames: StackFrame[] = [];
     for (const line of lines.filter((l) => l.length > 0)) {
+      let dependency = undefined;
       let result = moduleRegex.exec(line);
       const isEmbeddedOrAnonymous: boolean = line.includes('<anonymous>') ||
         line.includes('<embedded>');
       if (result) {
         let file = result[2].toString().replace(/\\/g, '/');
-        file = file.includes('node_modules') ? file.split('node_modules/')[1] : file;
+        if (file.includes('node_modules')) {
+          const fileSplit = file.split('node_modules/');
+          file = fileSplit[fileSplit.length - 1];
+          dependency = file.split('/')[1];
+        }
         frames.push({
           method: result[1].toString(),
           lineNumber: parseInt(result[3].toString()),
@@ -88,11 +93,16 @@ export class StackTraceProcessor {
           isModule: true,
           isEmbeddedOrAnonymous,
           file,
+          dependency
         });
       } else if (result = fileRegex.exec(line)) {
         if (result[2]) {
           let file = result[1].toString().replace(/\\/g, '/');
-          file = file.includes('node_modules') ? file.split('node_modules/')[1] : file;
+          if (file.includes('node_modules')) {
+            const fileSplit = file.split('node_modules/');
+            file = fileSplit[fileSplit.length - 1];
+            dependency = file.split('/')[1];
+          }
           frames.push({
             file,
             lineNumber: parseInt(result[2].toString()),
@@ -102,7 +112,11 @@ export class StackTraceProcessor {
           });
         } else {
           let file = result[1].toString().replace(/\\/g, '/');
-          file = file.includes('node_modules') ? file.split('node_modules/')[1] : file;
+          if (file.includes('node_modules')) {
+            const fileSplit = file.split('node_modules/');
+            file = fileSplit[fileSplit.length - 1];
+            dependency = file.split('/')[1];
+          }
           frames.push({
             file,
             isModule: false,
@@ -113,7 +127,11 @@ export class StackTraceProcessor {
         result = internalsRegex.exec(line);
         if (result) {
           let file = result[2].toString().replace(/\\/g, '/');
-          file = file.includes('node_modules') ? file.split('node_modules/')[2] : file;
+          if (file.includes('node_modules')) {
+            const fileSplit = file.split('node_modules/');
+            file = fileSplit[fileSplit.length - 1];
+            dependency = file.split('/')[1];
+          }
           frames.push({
             method: result[1].toString(),
             file,
@@ -122,6 +140,7 @@ export class StackTraceProcessor {
             isModule: true,
             isEmbeddedOrAnonymous,
             internal: true,
+            dependency
           });
         } else if (verbose) {
           console.error(`Stack frame not parsed: ${line}`);

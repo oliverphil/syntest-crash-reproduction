@@ -6,6 +6,7 @@ export interface StackFrame {
   isModule: boolean;
   isEmbeddedOrAnonymous: boolean;
   internal?: boolean;
+  dependency?: string;
 }
 
 export interface StackTrace {

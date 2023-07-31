@@ -6,35 +6,50 @@ chai.use(chaiAsPromised);
 
 describe('index', () => {
 	it('test for index', async () => {
-		const _pathtoRegexp_function_QhrN = await pathtoRegexp()
+		const _path_string_TkOa = "CHmjwXq2qlQmlOitEwOSCcLQCFoAY1s6L";
+		const _keys_string_josA = "iTy2MhYN8J5ag6gjoAv1lmTcT9atAFBQQSgE5NXrpPVZPuEdBG5wI402tCEjeWHAdg8r";
+		const _options_string_ZRpH = "QBsp";
+		const _pathtoRegexp_function_XDXE = await pathtoRegexp(_path_string_TkOa, _keys_string_josA, _options_string_ZRpH)
+
+		expect(JSON.parse(JSON.stringify(_pathtoRegexp_function_XDXE))).to.deep.equal({})
+	}).timeout(3000);
+
+	it('test for index', async () => {
+		const _path_undefined_hyiL = undefined;
+		const _keys_boolean_hPfU = false;
+		const _options_boolean_bLKf = false;
+		const _pathtoRegexp_function_NOas = await pathtoRegexp(_path_undefined_hyiL, _keys_boolean_hPfU, _options_boolean_bLKf)
 
 
 	}).timeout(3000);
 
 	it('test for index', async () => {
-		const _path_null_hOFA = null;
-		const _keys_string_YxTZ = "cviau4iABLQlGJaco1dLwfRt1qs828jNaYQ0Gnh4IQ910FCC8gybfayGNgkcxaP81eGu3AeJGIVjjn1PcjtfK";
-		const _options_string_xvre = "2mQAu56";
-		const _pathtoRegexp_function_nibI = await pathtoRegexp(_path_null_hOFA, _keys_string_YxTZ, _options_string_xvre)
+		const _path_function_oKTF = () => { };
+		const _keys_string_Zetu = "OjNEm4ugBS0m4f9rtmx";
+		const _options_null_fzUs = null;
+		const _pathtoRegexp_function_JVEg = await pathtoRegexp(_path_function_oKTF, _keys_string_Zetu, _options_null_fzUs)
 
 
 	}).timeout(3000);
 
 	it('test for index', async () => {
-		const _path_function_MZAD = () => { };
-		const _keys_boolean_xPgK = true;
-		const _options_function_aVDv = () => { };
-		const _pathtoRegexp_function_VPEs = await pathtoRegexp(_path_function_MZAD, _keys_boolean_xPgK, _options_function_aVDv)
+		const _path_null_JQWE = null;
+		const _keys_null_Ouwn = null;
+		const _options_string_KNuX = "AS9";
+		const _pathtoRegexp_function_dogM = await pathtoRegexp(_path_null_JQWE, _keys_null_Ouwn, _options_string_KNuX)
 
 
 	}).timeout(3000);
 
 	it('test for index', async () => {
-		const _path_function_enUH = () => { };
-		const _keys_function_QZnj = () => { };
-		const _options_string_kGWB = "f7PakNFYYcc";
-		const _pathtoRegexp_function_bMIM = await pathtoRegexp(_path_function_enUH, _keys_function_QZnj, _options_string_kGWB)
+		const _path_function_hCFg = () => { };
+		const _keys_object_BBUM = {
+		
+	}
+		const _options_string_FxFr = "NjVTyMOILTyjSoRPLGo";
+		const _pathtoRegexp_function_SXZC = await pathtoRegexp(_path_function_hCFg, _keys_object_BBUM, _options_string_FxFr)
 
-		expect(JSON.parse(JSON.stringify(_pathtoRegexp_function_bMIM))).to.deep.equal({})
+		expect(JSON.parse(JSON.stringify(_keys_object_BBUM))).to.deep.equal({})
+		expect(JSON.parse(JSON.stringify(_pathtoRegexp_function_SXZC))).to.deep.equal({})
 	}).timeout(3000);
 })

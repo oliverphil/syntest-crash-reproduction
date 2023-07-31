@@ -354,31 +354,45 @@ export class CrashLauncher extends Launcher {
     this.userInterface.printTable("DIRECTORY SETTINGS", directorySettings);
 
     CrashLauncher.LOGGER.info("Instrumenting targets");
-    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${crash.project}/${crash.crashId}/node_modules`)) {
-      const instrumenter = new CrashInstrumenter();
-      await instrumenter.instrumentAll(
-          this.rootContext,
-          this.targets,
-          path.join(
-              this.arguments_.tempSyntestDirectory,
-              this.arguments_.tempInstrumentedDirectory
-          )
-      );
+    if (this.crash.seeded) {
+      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
+        const instrumenter = new CrashInstrumenter();
+        await instrumenter.instrumentAll(
+            this.rootContext,
+            this.targets,
+            path.join(
+                this.arguments_.tempSyntestDirectory,
+                this.arguments_.tempInstrumentedDirectory
+            )
+        );
+      }
+    } else {
+      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
+        const instrumenter = new CrashInstrumenter();
+        await instrumenter.instrumentAll(
+            this.rootContext,
+            this.targets,
+            path.join(
+                this.arguments_.tempSyntestDirectory,
+                this.arguments_.tempInstrumentedDirectory
+            )
+        );
+      }
     }
 
     CrashLauncher.LOGGER.info("Extracting types");
     console.log("Extracting types");
     this.rootContext.extractTypes();
     console.log("Saving types");
-    // if (crash.seeded) {
-    //   if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-    //     this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
-    //   }
-    // } else {
-    //   if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-    //     this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-    //   }
-    // }
+    if (crash.seeded) {
+      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+        this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
+      }
+    } else {
+      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+        this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+      }
+    }
 
     console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");

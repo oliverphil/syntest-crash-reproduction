@@ -62,5 +62,5 @@
   "output-metrics": [],
   "syntest-project": "express",
   "syntest-crashes": "false",
-  "syntest-seeded": "false"
+  "syntest-seeded": "true"
 }
