@@ -1,1 +1,0 @@
-{"issueNumber":19,"info":"no-multi-str var a = <div>\n<h1>Wat</h1>\n</div>;","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

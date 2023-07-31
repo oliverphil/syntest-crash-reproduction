@@ -1,1 +1,0 @@
-{"issueNumber":20,"info":"no-shadow-restricted-names function NaN(NaN) { var NaN; !function NaN(NaN) { try {} catch(NaN) {} }; }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

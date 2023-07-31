@@ -1,1 +1,0 @@
-{"issueNumber":2,"info":"req .fresh should return false without response headers","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

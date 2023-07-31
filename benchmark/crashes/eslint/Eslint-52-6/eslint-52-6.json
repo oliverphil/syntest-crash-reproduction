@@ -1,1 +1,0 @@
-{"issueNumber":6,"info":"CLIEngine executeOnFiles() should only check .hidden files if they are passed explicitly","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

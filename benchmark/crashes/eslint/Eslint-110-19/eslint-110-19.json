@@ -1,1 +1,0 @@
-{"issueNumber":19,"info":"Config getConfig() should not retain configs from previous directories when called multiple times","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

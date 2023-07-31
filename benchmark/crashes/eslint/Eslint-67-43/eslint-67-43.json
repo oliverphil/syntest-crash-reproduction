@@ -1,1 +1,0 @@
-{"issueNumber":43,"info":"CLIEngine executeOnFiles() plugins should return two messages when executing with config file that specifies a plugin without prefix","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

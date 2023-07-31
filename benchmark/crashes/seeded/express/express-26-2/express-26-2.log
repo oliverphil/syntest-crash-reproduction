@@ -1,12 +1,12 @@
 AssertionError: expected { 'x-powered-by': 'Express',
- date: 'Tue, 25 Jul 2023 02:45:29 GMT',
+ date: 'Mon, 31 Jul 2023 03:33:12 GMT',
  connection: 'close',
  'content-length': '0' } not to have property 'content-length'
-    at Assertion.fail (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/should/lib/assertion.js:112:17)
-    at Assertion.prop.(anonymous function) [as property] (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/should/lib/assertion.js:51:12)
-    at Test.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/test/res.send.js:33:36)
-    at Test.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:221:6)
-    at Server.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:132:12)
+    at Assertion.fail (node_modules/should/lib/assertion.js:112:17)
+    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/assertion.js:51:12)
+    at Test.<anonymous> (test/res.send.js:33:36)
+    at Test.assert (node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)
     at emitNone (events.js:86:13)
     at Server.emit (events.js:188:7)

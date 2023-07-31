@@ -1,1 +1,0 @@
-{"issueNumber":10,"info":"cli when supplied with report output file path should return an error if the path is a directory","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,1 +1,0 @@
-{"issueNumber":33,"info":"CLIEngine executeOnFiles() configuration hierarchy should return one message when executing with .eslintrc that overrides a package.json in the same directory","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

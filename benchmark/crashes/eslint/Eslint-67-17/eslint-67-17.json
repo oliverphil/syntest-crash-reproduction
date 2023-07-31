@@ -1,1 +1,0 @@
-{"issueNumber":17,"info":"CLIEngine executeOnFiles() should return messages when multiple custom rules match a file","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

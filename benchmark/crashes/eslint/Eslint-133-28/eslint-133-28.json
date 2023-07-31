@@ -1,1 +1,0 @@
-{"issueNumber":28,"info":"no-shadow valid { var a; } let a;","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

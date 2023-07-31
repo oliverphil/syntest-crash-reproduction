@@ -1,1 +1,0 @@
-{"issueNumber":42,"info":"no-undef valid var a; ({b: a}) = {};","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

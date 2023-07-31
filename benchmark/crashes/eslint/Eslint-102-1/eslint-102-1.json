@@ -1,1 +1,0 @@
-{"issueNumber":1,"info":"indent valid function foo() {\n  <span>\n    {condition ?\n      <Thing\n        foo={super}\n      /> :\n      <Thing/>\n    }\n  </span>\n}","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,0 +1,3 @@
+TypeError: Cannot set properties of undefined (setting 'content-type')
+    at ServerResponse.setHeader (node:_http_outgoing:654:45)
+    at ServerResponse.header (node_modules/express/lib/response.js:662:10)

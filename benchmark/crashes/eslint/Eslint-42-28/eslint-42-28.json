@@ -1,1 +1,0 @@
-{"issueNumber":28,"info":"vars-on-top function foo() {\n   var first = 10;\n   var i;\n   try {\n       asdf;\n   } catch (e) {\n       var hello = 1;\n   }\n}","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,1 +1,0 @@
-{"issueNumber":11,"info":"complexity function a(obj) {if(obj){ for(var x in obj) {try {x.getThis();} catch (e) {x.getThat();}}} else {return false;}}","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,1 +1,0 @@
-{"issueNumber":7,"info":"CLIEngine executeOnFiles() should report zero messages when given a '**' pattern with a .js and a .js2 file","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

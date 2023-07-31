@@ -1,1 +1,0 @@
-{"issueNumber":2,"info":"eslint verify() should not report an error when JSX code is encountered and JSX is enabled","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

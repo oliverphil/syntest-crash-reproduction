@@ -1,0 +1,4 @@
+TypeError: Cannot read properties of undefined (reading 'link')
+    at ServerResponse.getHeader (node:_http_outgoing:718:24)
+    at res.get (node_modules/express/lib/response.js:680:15)
+    at res.links (node_modules/express/lib/response.js:62:19)

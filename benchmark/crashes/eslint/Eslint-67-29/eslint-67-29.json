@@ -1,1 +1,0 @@
-{"issueNumber":29,"info":"CLIEngine executeOnFiles() configuration hierarchy should return one message when executing with local .eslintrc that overrides parent and grandparent .eslintrc","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

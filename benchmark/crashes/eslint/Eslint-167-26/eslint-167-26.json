@@ -1,1 +1,0 @@
-{"issueNumber":26,"info":"bin/eslint.js handling crashes prints the error message to stderr in the event of a crash","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

@@ -1,1 +1,0 @@
-{"issueNumber":9,"info":"res .set(field, value) should coerce to a string","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

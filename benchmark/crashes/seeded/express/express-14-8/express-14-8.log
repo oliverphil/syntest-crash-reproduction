@@ -1,0 +1,7 @@
+Error: Parse Error
+    at Socket.socketOnData (_http_client.js:411:20)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)

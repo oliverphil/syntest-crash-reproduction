@@ -1,2 +1,0 @@
-AssertionError: expected '/private/tmp/eslint/fixtures/rules/test-multi-rulesdirs.js' to equal '/tmp/eslint/fixtures/rules/test-multi-rulesdirs.js'
-    at Context.<anonymous> (tests/lib/cli-engine.js:504:20)

@@ -1,1 +1,0 @@
-{"issueNumber":1,"info":"indent valid const abc = 5,\n      c = 2,\n      xyz = \n      {\n        a: 1,\n        b: 2\n      };\nlet abc = 5,\n  c = 2,\n  xyz = \n  {\n    a: 1,\n    b: 2\n  };\nvar abc = 5,\n    c = 2,\n    xyz = \n    {\n      a: 1,\n      b: 2\n    };\n","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

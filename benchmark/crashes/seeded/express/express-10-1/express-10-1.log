@@ -1,7 +1,6 @@
-TypeError: Cannot read property 'text' of undefined
-    at Test._assertBody (node_modules/supertest/lib/test.js:181:21)
-    at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
-    at Test.assert (node_modules/supertest/lib/test.js:148:18)
+TypeError: Cannot read property 'statusCode' of undefined
+    at Test.<anonymous> (test/res.sendFile.js:709:14)
+    at Test.assert (node_modules/supertest/lib/test.js:156:6)
     at Server.assert (node_modules/supertest/lib/test.js:127:12)
     at emitCloseNT (net.js:1577:8)
     at _combinedTickCallback (internal/process/next_tick.js:77:11)

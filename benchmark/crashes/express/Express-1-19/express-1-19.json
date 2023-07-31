@@ -1,1 +1,0 @@
-{"issueNumber":19,"info":"res.vary() when the value is present should not add it again","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

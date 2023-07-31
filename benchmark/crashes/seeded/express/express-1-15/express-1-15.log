@@ -1,15 +1,15 @@
 TypeError: Cannot set property 'content-type' of undefined
     at ServerResponse.setHeader (_http_outgoing.js:380:22)
-    at ServerResponse.header (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/lib/response.js:666:10)
-    at context.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/test/res.set.js:51:11)
-    at callFn (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runnable.js:250:21)
-    at Test.Runnable.run (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runnable.js:243:7)
-    at Runner.runTest (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:373:10)
-    at /Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:451:12
-    at next (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:298:14)
-    at /Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:308:7
-    at next (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:246:23)
-    at Immediate.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/mocha/lib/runner.js:275:5)
+    at ServerResponse.header (lib/response.js:666:10)
+    at context.<anonymous> (test/res.set.js:51:11)
+    at callFn (node_modules/mocha/lib/runnable.js:250:21)
+    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:243:7)
+    at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
+    at node_modules/mocha/lib/runner.js:451:12
+    at next (node_modules/mocha/lib/runner.js:298:14)
+    at node_modules/mocha/lib/runner.js:308:7
+    at next (node_modules/mocha/lib/runner.js:246:23)
+    at Immediate.<anonymous> (node_modules/mocha/lib/runner.js:275:5)
     at runCallback (timers.js:672:20)
     at tryOnImmediate (timers.js:645:5)
     at processImmediate [as _immediateCallback] (timers.js:617:5)

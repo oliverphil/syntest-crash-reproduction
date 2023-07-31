@@ -1,5 +1,0 @@
-Error: Cannot find module 'eslint-config-eslint-configfoo' from '/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out'
-    at Function.resolveSync [as sync] (node_modules/resolve/lib/sync.js:111:15)
-    at Object.sync (tests/lib/config/config-file.js:683:40)
-    at Object.resolve (lib/config/config-file.js:416:38)
-    at Context.<anonymous> (tests/lib/config/config-file.js:706:52)

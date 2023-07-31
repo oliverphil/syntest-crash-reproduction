@@ -1,9 +1,9 @@
-AssertionError: expected 'ENOENT: no such file or directory, stat \'/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/test/fixtures/nope.html\'' to start with 'ENOENT, stat'
-    at Assertion.fail (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/should/lib/assertion.js:113:17)
-    at Assertion.prop.(anonymous function) [as startWith] (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/should/lib/assertion.js:39:14)
-    at Test.<anonymous> (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/test/res.sendFile.js:313:25)
-    at Test.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:221:6)
-    at Server.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:132:12)
+AssertionError: expected 'ENOENT: no such file or directory, stat \'test/fixtures/nope.html\'' to start with 'ENOENT, stat'
+    at Assertion.fail (node_modules/should/lib/assertion.js:113:17)
+    at Assertion.prop.(anonymous function) [as startWith] (node_modules/should/lib/assertion.js:39:14)
+    at Test.<anonymous> (test/res.sendFile.js:313:25)
+    at Test.assert (node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)
     at emitNone (events.js:86:13)
     at Server.emit (events.js:188:7)

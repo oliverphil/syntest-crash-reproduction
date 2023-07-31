@@ -1,3 +1,0 @@
-Error: Assertion has no property Date
-    at Object.get (node_modules/should/lib/assertion.js:228:19)
-    at Context.<anonymous> (test/date.test.js:52:18)

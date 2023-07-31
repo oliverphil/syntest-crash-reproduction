@@ -1,3 +1,0 @@
-AssertionError: expected { Object (results, errorCount, ...) } to deeply equal { Object (results, errorCount, ...) }
-    at Function.assert.deepEqual (node_modules/chai/lib/chai/interface/assert.js:205:32)
-    at Context.<anonymous> (tests/lib/cli-engine.js:731:24)

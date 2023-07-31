@@ -1,7 +1,7 @@
 Error: expected '127.0.0.1' response body, got '::ffff:127.0.0.1'
-    at error (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:235:13)
-    at Test.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:180:21)
-    at Server.assert (/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out2/express/node_modules/supertest/lib/test.js:132:12)
+    at error (node_modules/supertest/lib/test.js:235:13)
+    at Test.assert (node_modules/supertest/lib/test.js:180:21)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)
     at emitNone (events.js:86:13)
     at Server.emit (events.js:188:7)

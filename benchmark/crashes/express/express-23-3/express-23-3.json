@@ -1,1 +1,0 @@
-{"issueNumber":3,"info":"res .format(obj) given .default should be invoked instead of auto-responding","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

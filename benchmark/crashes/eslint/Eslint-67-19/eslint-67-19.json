@@ -1,1 +1,0 @@
-{"issueNumber":19,"info":"CLIEngine executeOnFiles() should return zero messages when executing without useEslintrc flag in Node.js environment","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

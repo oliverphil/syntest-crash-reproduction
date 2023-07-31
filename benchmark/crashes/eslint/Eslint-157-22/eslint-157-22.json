@@ -1,1 +1,0 @@
-{"issueNumber":22,"info":"keyword-spacing valid class A { a() { `${ super }` } }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

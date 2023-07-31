@@ -1,1 +1,0 @@
-{"issueNumber":12,"info":"complexity function a(x) {try {x.getThis();} catch (e) {x.getThat();}}","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

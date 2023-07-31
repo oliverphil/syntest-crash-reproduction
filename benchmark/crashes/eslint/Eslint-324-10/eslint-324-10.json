@@ -1,1 +1,0 @@
-{"issueNumber":10,"info":"cli when supplied with report output file path should write the file and create dirs if they don't exist","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

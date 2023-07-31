@@ -1,1 +1,0 @@
-{"issueNumber":48,"info":"CLIEngine executeOnFiles() processors should return two messages when executing with config file that specifies preloaded processor","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

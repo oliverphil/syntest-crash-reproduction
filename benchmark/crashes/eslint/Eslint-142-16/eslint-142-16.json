@@ -1,1 +1,0 @@
-{"issueNumber":16,"info":"Config getConfig() should gracefully handle empty files","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

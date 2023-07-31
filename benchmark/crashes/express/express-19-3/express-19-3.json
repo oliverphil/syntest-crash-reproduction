@@ -1,1 +1,0 @@
-{"issueNumber":3,"info":"res .send(undefined) should set body to \"\"","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

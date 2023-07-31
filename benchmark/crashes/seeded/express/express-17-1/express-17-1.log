@@ -1,5 +1,5 @@
-TypeError: Cannot read property 'status' of undefined
-    at Test._assertStatus (node_modules/supertest/lib/test.js:229:10)
+TypeError: Cannot read property 'header' of undefined
+    at Test._assertHeader (node_modules/supertest/lib/test.js:208:19)
     at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
     at Test.assert (node_modules/supertest/lib/test.js:148:18)
     at Server.assert (node_modules/supertest/lib/test.js:127:12)

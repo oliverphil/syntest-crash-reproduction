@@ -1,1 +1,0 @@
-{"issueNumber":1,"info":"keyword-spacing valid function* foo() { (() =>yield foo) }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

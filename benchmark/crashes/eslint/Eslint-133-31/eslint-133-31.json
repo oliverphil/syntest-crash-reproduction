@@ -1,1 +1,0 @@
-{"issueNumber":31,"info":"sort-imports valid import a, * as b from 'foo.js';\nimport b from 'bar.js';","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

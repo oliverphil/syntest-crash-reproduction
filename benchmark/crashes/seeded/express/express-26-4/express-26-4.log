@@ -1,0 +1,4 @@
+Error: expected body '[{"name":"ciaran"},{"name":"aaron"},{"name":"guillermo"}]' to match /^\[null,{"name":"aaron"},{"name":"guillermo"}\]/
+    at error (node_modules/express/node_modules/supertest/lib/test.js:235:13)
+    at Test.assert (node_modules/express/node_modules/supertest/lib/test.js:177:23)
+    at Server.assert (node_modules/express/node_modules/supertest/lib/test.js:132:12)

@@ -1,1 +1,0 @@
-{"issueNumber":54,"info":"ConfigFile applyExtends() should apply extensions recursively when specified from package","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

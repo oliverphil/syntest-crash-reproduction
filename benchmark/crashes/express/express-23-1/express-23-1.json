@@ -1,1 +1,0 @@
-{"issueNumber":1,"info":"app.router should restore req.params after leaving router","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

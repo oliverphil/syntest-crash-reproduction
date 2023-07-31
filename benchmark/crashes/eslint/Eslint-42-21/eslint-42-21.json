@@ -1,1 +1,0 @@
-{"issueNumber":21,"info":"no-shadow-restricted-names function undefined(undefined) { var undefined; !function undefined(undefined) { try {} catch(undefined) {} }; }","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}
