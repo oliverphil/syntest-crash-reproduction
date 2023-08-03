@@ -1,0 +1,10 @@
+Error: Cannot find module 'eslint-config-foo' from '/local/scratch/testing/BugsJS/output'
+Referenced from: /whatever
+    at Function.resolveSync [as sync] (node_modules/resolve/lib/sync.js:111:15)
+    at Object.sync (tests/lib/config/config-file.js:160:40)
+    at resolve (lib/config/config-file.js:417:38)
+    at load (lib/config/config-file.js:436:24)
+    at lib/config/config-file.js:355:36
+    at Array.reduceRight (native)
+    at Object.applyExtends (lib/config/config-file.js:338:28)
+    at Context.<anonymous> (tests/lib/config/config-file.js:174:44)

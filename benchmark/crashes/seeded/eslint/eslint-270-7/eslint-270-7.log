@@ -1,0 +1,6 @@
+TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at Object.deepmerge [as merge] (lib/config/config-ops.js:167:20)
+    at getLocalConfig (lib/config.js:194:39)
+    at Config.getConfig (lib/config.js:270:22)
+    at Context.<anonymous> (tests/lib/config.js:203:42)

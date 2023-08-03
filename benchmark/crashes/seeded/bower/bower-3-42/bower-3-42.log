@@ -1,0 +1,9 @@
+Error: expected 'Registering a package will make it installable via the registry (https://registry.bower.io), continue?' to equal 'Registering a package will make it installable via the registry (https://bower.herokuapp.com), continue?'
+    at Assertion.assert (node_modules/expect.js/index.js:96:13)
+    at Assertion.be.Assertion.equal (node_modules/expect.js/index.js:216:10)
+    at Assertion.(anonymous function) [as be] (node_modules/expect.js/index.js:69:24)
+    at test/commands/register.js:101:34
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+From previous event:
+    at Context.<anonymous> (test/commands/register.js:99:10)

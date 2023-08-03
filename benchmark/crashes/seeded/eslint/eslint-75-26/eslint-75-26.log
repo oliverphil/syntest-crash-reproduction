@@ -1,0 +1,3 @@
+AssertionError: expected 'Expected " " or [^ [\],():#!=><~+.] b…' to include 'Syntax error in selector'
+    at getOutput.then.output (tests/bin/eslint.js:273:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
