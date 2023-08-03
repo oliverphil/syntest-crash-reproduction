@@ -3,4 +3,4 @@ TypeError: Path must be a string. Received undefined
     at Object.extname (path.js:1431:5)
     at processText (lib/cli-engine.js:193:30)
     at CLIEngine.executeOnText (lib/cli-engine.js:686:26)
-    at Context.<anonymous> (tests/lib/cli-engine.js:1888:36)
+    at Context.<anonymous> (tests/lib/cli-engine.js:100:33)

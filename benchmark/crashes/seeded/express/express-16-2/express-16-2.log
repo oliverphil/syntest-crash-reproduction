@@ -1,10 +1,8 @@
-TypeError: Cannot set property 'link' of undefined
-    at ServerResponse.setHeader (_http_outgoing.js:380:22)
-    at ServerResponse.header (lib/response.js:662:10)
-    at ServerResponse.res.links (lib/response.js:64:15)
-    at context.<anonymous> (test/res.links.js:25:11)
-    at callFn (node_modules/mocha/lib/runnable.js:250:21)
-    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:243:7)
+TypeError: Header name must be a valid HTTP Token ["Accept: text/html"]
+    at ClientRequest.setHeader (_http_outgoing.js:366:11)
+    at Test.Request.set (node_modules/superagent/lib/node/index.js:275:18)
+    at context.<anonymous> (test/res.format.js:102:10)
+    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:217:15)
     at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
     at node_modules/mocha/lib/runner.js:451:12
     at next (node_modules/mocha/lib/runner.js:298:14)

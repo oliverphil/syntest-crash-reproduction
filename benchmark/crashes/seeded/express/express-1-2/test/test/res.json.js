@@ -86,7 +86,7 @@ describe('res', function(){
         .expect(200, '["foo","bar","baz"]', done)
       })
     })
-    
+
     describe('when given an object', function(){
       it('should respond with json', function(done){
         var app = express();
@@ -124,14 +124,7 @@ describe('res', function(){
     })
 
     describe('"json spaces" setting', function(){
-      it('should default to 2 in development', function(){
-        process.env.NODE_ENV = 'development';
-        var app = express();
-        app.get('json spaces').should.equal(2);
-        process.env.NODE_ENV = 'test';
-      })
-
-      it('should be undefined otherwise', function(){
+      it('should be undefined by default', function(){
         var app = express();
         assert(undefined === app.get('json spaces'));
       })
@@ -152,7 +145,7 @@ describe('res', function(){
       })
     })
   })
-  
+
   describe('.json(status, object)', function(){
     it('should respond with json and set the .statusCode', function(done){
       var app = express();
@@ -194,19 +187,5 @@ describe('res', function(){
       .expect('Content-Type', 'application/json; charset=utf-8')
       .expect(201, '200', done)
     })
-  })
-
-  it('should not override previous Content-Types', function(done){
-    var app = express();
-
-    app.get('/', function(req, res){
-      res.type('application/vnd.example+json');
-      res.json({ hello: 'world' });
-    });
-
-    request(app)
-    .get('/')
-    .expect('content-type', 'application/vnd.example+json; charset=utf-8')
-    .expect(200, '{"hello":"world"}', done)
   })
 })

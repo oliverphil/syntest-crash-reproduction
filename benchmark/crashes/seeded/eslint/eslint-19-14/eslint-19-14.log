@@ -23,4 +23,4 @@ YAMLException: duplicated mapping key at line 95, column 5:
     at Array.forEach (native)
     at CLIEngine.executeOnFiles (lib/cli-engine.js:622:18)
     at Object.execute (lib/cli.js:159:95)
-    at Context.<anonymous> (tests/lib/cli.js:521:24)
+    at Context.<anonymous> (tests/lib/cli.js:509:17)

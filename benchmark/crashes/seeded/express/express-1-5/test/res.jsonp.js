@@ -2,7 +2,6 @@
 var express = require('../')
   , request = require('supertest')
   , assert = require('assert');
-var utils = require('./support/utils');
 
 describe('res', function(){
   describe('.jsonp(object)', function(){
@@ -137,8 +136,11 @@ describe('res', function(){
       request(app)
       .get('/')
       .expect('Content-Type', 'application/vnd.example+json; charset=utf-8')
-      .expect(utils.shouldNotHaveHeader('X-Content-Type-Options'))
-      .expect(200, '{"hello":"world"}', done);
+      .expect(200, '{"hello":"world"}', function (err, res) {
+        if (err) return done(err);
+        res.headers.should.not.have.property('x-content-type-options');
+        done();
+      });
     })
 
     it('should override previous Content-Types with callback', function(done){

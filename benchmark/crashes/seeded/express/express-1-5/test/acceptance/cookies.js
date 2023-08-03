@@ -1,7 +1,6 @@
 
 var app = require('../../examples/cookies')
   , request = require('supertest');
-var utils = require('../support/utils');
 
 describe('cookies', function(){
   describe('GET /', function(){
@@ -14,8 +13,10 @@ describe('cookies', function(){
     it('should respond with no cookies', function(done){
       request(app)
       .get('/')
-      .expect(utils.shouldNotHaveHeader('Set-Cookie'))
-      .expect(200, done)
+      .end(function(err, res){
+        res.headers.should.not.have.property('set-cookie')
+        done()
+      })
     })
 
     it('should respond to cookie', function(done){
@@ -56,16 +57,20 @@ describe('cookies', function(){
       .post('/')
       .type('urlencoded')
       .send({ remember: 1 })
-      .expect('Set-Cookie', /remember=1/)
-      .expect(302, done)
+      .expect(302, function(err, res){
+        res.headers.should.have.property('set-cookie')
+        done()
+      })
     })
 
     it('should no set cookie w/o reminder', function(done){
       request(app)
       .post('/')
       .send({})
-      .expect(utils.shouldNotHaveHeader('Set-Cookie'))
-      .expect(302, done)
+      .expect(302, function(err, res){
+        res.headers.should.not.have.property('set-cookie')
+        done()
+      })
     })
   })
 })

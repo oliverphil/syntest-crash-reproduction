@@ -1,5 +1,5 @@
 
-var app = require('../../examples/cookies/app')
+var app = require('../../examples/cookies')
   , request = require('supertest');
 
 describe('cookies', function(){
@@ -22,6 +22,7 @@ describe('cookies', function(){
     it('should respond to cookie', function(done){
       request(app)
       .post('/')
+      .type('urlencoded')
       .send({ remember: 1 })
       .expect(302, function(err, res){
         if (err) return done(err)
@@ -37,6 +38,7 @@ describe('cookies', function(){
     it('should clear cookie', function(done){
       request(app)
       .post('/')
+      .type('urlencoded')
       .send({ remember: 1 })
       .expect(302, function(err, res){
         if (err) return done(err)
@@ -53,6 +55,7 @@ describe('cookies', function(){
     it('should set a cookie', function(done){
       request(app)
       .post('/')
+      .type('urlencoded')
       .send({ remember: 1 })
       .expect(302, function(err, res){
         res.headers.should.have.property('set-cookie')

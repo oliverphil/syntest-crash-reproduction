@@ -1,38 +1,8 @@
-AssertionError: Should have 2 errors but had 3: [ { ruleId: 'space-before-blocks',
-    severity: 1,
-    node: 
-     { type: 'BlockStatement',
-       body: [],
-       range: [Object],
-       loc: [Object],
-       parent: [Object] },
-    message: 'Unexpected space before opening brace.',
-    line: 1,
-    column: 4,
-    source: '{}' },
-  { ruleId: 'space-before-blocks',
-    severity: 1,
-    node: 
-     { type: 'BlockStatement',
-       body: [],
-       range: [Object],
-       loc: [Object],
-       parent: [Object] },
-    message: 'Unexpected space before opening brace.',
-    line: 1,
-    column: 15,
-    source: '{}' },
-  { ruleId: 'space-before-blocks',
-    severity: 1,
-    node: 
-     { type: 'BlockStatement',
-       body: [],
-       range: [Object],
-       loc: [Object],
-       parent: [Object] },
-    message: 'Unexpected space before opening brace.',
-    line: 1,
-    column: 15,
-    source: '{}' } ]: expected 3 to equal 2
-    at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
-    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)
+Error: Unknown node type JSXElement.
+    at Controller.traverse (node_modules/escope/node_modules/estraverse/estraverse.js:511:31)
+    at Object.traverse (node_modules/escope/node_modules/estraverse/estraverse.js:703:27)
+    at Object.analyze (node_modules/escope/escope.js:855:20)
+    at EventEmitter.module.exports.api.verify (lib/eslint.js:584:36)
+    at runRuleForItem (node_modules/eslint-tester/lib/eslint-tester.js:110:27)
+    at testValidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:115:28)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:164:25)

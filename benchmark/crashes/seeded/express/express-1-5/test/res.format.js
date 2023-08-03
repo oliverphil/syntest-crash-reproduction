@@ -67,14 +67,6 @@ app4.use(function(err, req, res, next){
   res.send(err.status, 'Supports: ' + err.types.join(', '));
 })
 
-var app5 = express();
-
-app5.use(function (req, res, next) {
-  res.format({
-    default: function () { res.send('hey') }
-  });
-});
-
 describe('res', function(){
   describe('.format(obj)', function(){
     describe('with canonicalized mime types', function(){
@@ -107,15 +99,8 @@ describe('res', function(){
       it('should be invoked instead of auto-responding', function(done){
         request(app3)
         .get('/')
-        .set('Accept', 'text/html')
+        .set('Accept: text/html')
         .expect('default', done);
-      })
-
-      it('should work when only .default is provided', function (done) {
-        request(app5)
-        .get('/')
-        .set('Accept', '*/*')
-        .expect('hey', done);
       })
     })
 

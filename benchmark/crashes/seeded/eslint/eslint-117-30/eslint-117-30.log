@@ -1,7 +1,7 @@
 AssertionError: Should have no errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: 'class A { a() { `${super}` } }',
+    source: 'class A { a() { ! super } }',
     message: 'Parsing error: Unexpected token }',
     line: 1,
     column: 25 } ]

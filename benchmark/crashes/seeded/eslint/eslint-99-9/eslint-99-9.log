@@ -1,9 +1,9 @@
-AssertionError: Should have 3 errors but had 1: [ { ruleId: null,
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: 'const a = new Test({',
-    message: 'Parsing error: Identifier \'a\' has already been declared',
-    line: 5,
-    column: 7 } ]
-    at testInvalidTemplate (lib/testers/rule-tester.js:364:24)
-    at Context.<anonymous> (lib/testers/rule-tester.js:429:25)
+    source: 'let abc = 5,',
+    message: 'Parsing error: Identifier \'abc\' has already been declared',
+    line: 8,
+    column: 5 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:336:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:421:25)

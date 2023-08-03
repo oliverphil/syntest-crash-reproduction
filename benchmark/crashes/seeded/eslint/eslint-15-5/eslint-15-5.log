@@ -1,5 +1,9 @@
-Error: Cannot find module '@foo/eslint-config' from '/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out'
-    at Function.resolveSync [as sync] (node_modules/resolve/lib/sync.js:111:15)
-    at Object.sync (tests/lib/config/config-file.js:669:40)
-    at Object.resolve (lib/config/config-file.js:417:38)
-    at Context.<anonymous> (tests/lib/config/config-file.js:692:52)
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: '({ a: obj.x.y.z }) = {};',
+    message: 'Parsing error: Parenthesized pattern',
+    line: 1,
+    column: 1 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:334:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:419:25)

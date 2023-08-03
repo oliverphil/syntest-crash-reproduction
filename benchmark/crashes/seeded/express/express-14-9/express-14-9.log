@@ -1,34 +1,12 @@
-Error [ERR_STREAM_WRITE_AFTER_END]: write after end
-    at new NodeError (node:internal/errors:399:5)
-    at ServerResponse.end (node:_http_outgoing:1010:15)
-    at ServerResponse.send (node_modules/express/lib/response.js:191:8)
-    at test/res.send.js:258:13
-    at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:82:5)
-    at trim_prefix (node_modules/express/lib/router/index.js:270:13)
-    at node_modules/express/lib/router/index.js:237:9
-    at proto.process_params (node_modules/express/lib/router/index.js:312:12)
-    at node_modules/express/lib/router/index.js:228:12
-    at Function.match_layer (node_modules/express/lib/router/index.js:295:3)
-    at next (node_modules/express/lib/router/index.js:189:10)
-    at expressInit (node_modules/express/lib/middleware/init.js:23:5)
-    at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:82:5)
-    at trim_prefix (node_modules/express/lib/router/index.js:270:13)
-    at node_modules/express/lib/router/index.js:237:9
-    at proto.process_params (node_modules/express/lib/router/index.js:312:12)
-    at node_modules/express/lib/router/index.js:228:12
-    at Function.match_layer (node_modules/express/lib/router/index.js:295:3)
-    at next (node_modules/express/lib/router/index.js:189:10)
-    at query (node_modules/express/lib/middleware/query.js:28:5)
-    at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:82:5)
-    at trim_prefix (node_modules/express/lib/router/index.js:270:13)
-    at node_modules/express/lib/router/index.js:237:9
-    at proto.process_params (node_modules/express/lib/router/index.js:312:12)
-    at node_modules/express/lib/router/index.js:228:12
-    at Function.match_layer (node_modules/express/lib/router/index.js:295:3)
-    at next (node_modules/express/lib/router/index.js:189:10)
-    at proto.handle (node_modules/express/lib/router/index.js:165:3)
-    at app.handle (node_modules/express/lib/application.js:141:10)
-    at Server.app (node_modules/express/lib/express.js:28:9)
-    at Server.emit (node:events:513:28)
-    at parserOnIncoming (node:_http_server:1091:12)
-    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+AssertionError: expected 'Found. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E' to be 'Moved Temporarily. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E'
+    at Assertion.fail (node_modules/should/lib/assertion.js:112:17)
+    at Assertion.prop.(anonymous function) (node_modules/should/lib/assertion.js:38:14)
+    at Test.<anonymous> (test/res.redirect.js:157:25)
+    at Test.assert (node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitCloseNT (net.js:1577:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

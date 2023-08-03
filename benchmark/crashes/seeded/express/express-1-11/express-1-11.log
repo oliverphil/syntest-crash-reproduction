@@ -1,12 +1,7 @@
-AssertionError: expected {
-  connection: 'close',
-  'content-length': '0',
-  date: 'Mon, 31 Jul 2023 03:24:17 GMT',
-  'x-powered-by': 'Express'
-} not to have property 'content-length'
+AssertionError: expected 'Found. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E' to be 'Moved Temporarily. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E'
     at Assertion.fail (node_modules/should/lib/assertion.js:113:17)
-    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/assertion.js:52:12)
-    at Test.<anonymous> (test/res.send.js:33:36)
+    at Assertion.prop.(anonymous function) (node_modules/should/lib/assertion.js:39:14)
+    at Test.<anonymous> (test/res.redirect.js:157:25)
     at Test.assert (node_modules/supertest/lib/test.js:221:6)
     at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)

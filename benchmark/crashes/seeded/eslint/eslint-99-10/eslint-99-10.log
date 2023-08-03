@@ -1,9 +1,9 @@
-AssertionError: Should have no errors but had 1: [ { ruleId: null,
+AssertionError: Should have 3 errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: 'class A { a() { [super]; } }',
-    message: 'Parsing error: Unexpected token ]',
-    line: 1,
-    column: 23 } ]
-    at testValidTemplate (lib/testers/rule-tester.js:336:20)
-    at Context.<anonymous> (lib/testers/rule-tester.js:421:25)
+    source: 'const a = new Test({',
+    message: 'Parsing error: Identifier \'a\' has already been declared',
+    line: 5,
+    column: 7 } ]
+    at testInvalidTemplate (lib/testers/rule-tester.js:364:24)
+    at Context.<anonymous> (lib/testers/rule-tester.js:429:25)

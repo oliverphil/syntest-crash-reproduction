@@ -1,8 +1,30 @@
-Error: Unknown node type JSXElement.
-    at Controller.traverse (node_modules/escope/node_modules/estraverse/estraverse.js:511:31)
-    at Object.traverse (node_modules/escope/node_modules/estraverse/estraverse.js:703:27)
-    at Object.analyze (node_modules/escope/escope.js:855:20)
-    at EventEmitter.module.exports.api.verify (lib/eslint.js:584:36)
-    at runRuleForItem (node_modules/eslint-tester/lib/eslint-tester.js:110:27)
-    at testValidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:115:28)
-    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:164:25)
+AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-ex-assign',
+    severity: 1,
+    node: 
+     { type: 'AssignmentExpression',
+       operator: '=',
+       left: [Object],
+       right: [Object],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Do not assign to the exception parameter.',
+    line: 1,
+    column: 21,
+    source: 'ex = 10' },
+  { ruleId: 'no-ex-assign',
+    severity: 1,
+    node: 
+     { type: 'AssignmentExpression',
+       operator: '=',
+       left: [Object],
+       right: [Object],
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Do not assign to the exception parameter.',
+    line: 1,
+    column: 21,
+    source: 'ex = 10' } ]: expected 2 to equal 1
+    at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)

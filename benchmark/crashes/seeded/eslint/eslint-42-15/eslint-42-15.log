@@ -9,7 +9,7 @@ AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-catch-shadow',
        parent: [Object] },
     message: 'Value of \'foo\' may be overwritten in IE 8 and earlier.',
     line: 1,
-    column: 31,
+    column: 32,
     source: 'catch(foo) { }' },
   { ruleId: 'no-catch-shadow',
     severity: 1,
@@ -22,7 +22,7 @@ AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-catch-shadow',
        parent: [Object] },
     message: 'Value of \'foo\' may be overwritten in IE 8 and earlier.',
     line: 1,
-    column: 31,
+    column: 32,
     source: 'catch(foo) { }' } ]: expected 2 to equal 1
     at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
     at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)

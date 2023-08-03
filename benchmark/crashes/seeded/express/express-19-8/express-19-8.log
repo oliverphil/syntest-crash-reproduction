@@ -1,5 +1,17 @@
-AssertionError [ERR_ASSERTION]: expected { 'x-powered-by': 'Express',
- date: 'Thu, 27 Jul 2023 02:00:40 GMT',
- connection: 'close',
- 'content-length': '0' } not to have property 'content-length'
-    at prop.<computed> [as property] (node_modules/express/node_modules/should/lib/should.js:69:12)
+AssertionError: expected { 'x-powered-by': 'Express',
+ location: 'http://google.com',
+ vary: 'Accept',
+ 'content-type': 'text/plain; charset=utf-8',
+ 'content-length': '39',
+ date: 'Tue, 01 Aug 2023 01:12:17 GMT',
+ connection: 'close' } to have property 'content-length' of '51' (got '39')
+    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/should.js:61:14)
+    at Test.<anonymous> (test/res.redirect.js:124:33)
+    at Test.assert (node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitCloseNT (net.js:1577:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

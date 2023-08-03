@@ -1,3 +1,6 @@
-AssertionError: expected { Object (results, errorCount, ...) } to deeply equal { Object (results, errorCount, ...) }
-    at Function.assert.deepEqual (node_modules/chai/lib/chai/interface/assert.js:205:32)
-    at Context.<anonymous> (tests/lib/cli-engine.js:731:24)
+TypeError: Path must be a string. Received undefined
+    at assertPath (path.js:7:11)
+    at Object.extname (path.js:1431:5)
+    at processText (lib/cli-engine.js:183:30)
+    at CLIEngine.executeOnText (lib/cli-engine.js:624:26)
+    at Context.<anonymous> (tests/lib/cli-engine.js:1528:59)

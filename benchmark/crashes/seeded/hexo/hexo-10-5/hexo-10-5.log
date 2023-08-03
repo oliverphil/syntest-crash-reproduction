@@ -1,12 +1,6 @@
-TypeError: Path must be a string. Received undefined
-    at assertPath (path.js:7:11)
-    at Object.extname (path.js:1431:5)
-    at getExtname (lib/hexo/render.js:6:24)
-    at lib/hexo/render.js:43:30
-    at tryCatcher (node_modules/bluebird/js/main/util.js:26:23)
-    at Promise._settlePromiseFromHandler (node_modules/bluebird/js/main/promise.js:510:31)
-    at Promise._settlePromiseAt (node_modules/bluebird/js/main/promise.js:584:18)
-    at Promise._settlePromiseAtPostResolution (node_modules/bluebird/js/main/promise.js:248:10)
-    at Async._drainQueue (node_modules/bluebird/js/main/async.js:128:12)
-    at Async._drainQueues (node_modules/bluebird/js/main/async.js:133:10)
-    at Immediate.Async.drainQueues (node_modules/bluebird/js/main/async.js:15:14)
+TypeError: "list" argument must be an Array of Buffers
+    at Function.Buffer.concat (buffer.js:332:13)
+    at RouteStream.<anonymous> (test/util/stream.js:10:22)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

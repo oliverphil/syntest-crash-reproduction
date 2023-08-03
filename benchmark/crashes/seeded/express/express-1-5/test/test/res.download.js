@@ -1,8 +1,7 @@
 
-var after = require('after');
-var assert = require('assert');
-var express = require('..');
-var request = require('supertest');
+var express = require('../')
+  , request = require('supertest')
+  , assert = require('assert');
 
 describe('res', function(){
   describe('.download(path)', function(){
@@ -39,25 +38,27 @@ describe('res', function(){
 
   describe('.download(path, fn)', function(){
     it('should invoke the callback', function(done){
-      var app = express();
-      var cb = after(2, done);
+      var app = express()
+        , calls = 0;
 
       app.use(function(req, res){
-        res.download('test/fixtures/user.html', cb);
+        res.download('test/fixtures/user.html', done);
       });
 
       request(app)
       .get('/')
       .expect('Content-Type', 'text/html; charset=UTF-8')
       .expect('Content-Disposition', 'attachment; filename="user.html"')
-      .expect(200, cb);
+      .expect(200, function(err){
+        assert.ifError(err)
+      })
     })
   })
 
   describe('.download(path, filename, fn)', function(){
     it('should invoke the callback', function(done){
-      var app = express();
-      var cb = after(2, done);
+      var app = express()
+        , calls = 0;
 
       app.use(function(req, res){
         res.download('test/fixtures/user.html', 'document', done);
@@ -67,47 +68,48 @@ describe('res', function(){
       .get('/')
       .expect('Content-Type', 'text/html; charset=UTF-8')
       .expect('Content-Disposition', 'attachment; filename="document"')
-      .expect(200, cb);
+      .expect(200, function(err){
+        assert.ifError(err)
+      })
     })
   })
 
   describe('on failure', function(){
     it('should invoke the callback', function(done){
-      var app = express();
+      var app = express()
+        , calls = 0;
 
-      app.use(function (req, res, next) {
+      app.use(function(req, res){
         res.download('test/fixtures/foobar.html', function(err){
-          if (!err) return next(new Error('expected error'));
-          res.send('got ' + err.status + ' ' + err.code);
+          assert(404 == err.status);
+          assert('ENOENT' == err.code);
+          done();
         });
       });
 
       request(app)
       .get('/')
-      .expect(200, 'got 404 ENOENT', done);
+      .end(function(){});
     })
 
     it('should remove Content-Disposition', function(done){
       var app = express()
         , calls = 0;
 
-      app.use(function (req, res, next) {
+      app.use(function(req, res){
         res.download('test/fixtures/foobar.html', function(err){
-          if (!err) return next(new Error('expected error'));
           res.end('failed');
         });
       });
 
       request(app)
       .get('/')
-      .expect(shouldNotHaveHeader('Content-Disposition'))
-      .expect(200, 'failed', done);
+      .expect('failed')
+      .end(function(err, res){
+        if (err) return done(err);
+        res.header.should.not.have.property('content-disposition');
+        done();
+      });
     })
   })
 })
-
-function shouldNotHaveHeader(header) {
-  return function (res) {
-    assert.ok(!(header.toLowerCase() in res.headers), 'should not have header ' + header);
-  };
-}

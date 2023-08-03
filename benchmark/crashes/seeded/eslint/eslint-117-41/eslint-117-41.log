@@ -1,9 +1,3 @@
-AssertionError: Should have no errors but had 1: [ { ruleId: null,
-    fatal: true,
-    severity: 2,
-    source: 'const x = 1; let y; ({z: [y = x]}) = {}; foo(y);',
-    message: 'Parsing error: Parenthesized pattern',
-    line: 1,
-    column: 21 } ]
-    at testValidTemplate (lib/testers/rule-tester.js:334:20)
-    at Context.<anonymous> (lib/testers/rule-tester.js:422:25)
+AssertionError: A fatal parsing error occurred: Parsing error: Argument name clash
+    at testInvalidTemplate (lib/testers/rule-tester.js:370:28)
+    at Context.<anonymous> (lib/testers/rule-tester.js:430:25)

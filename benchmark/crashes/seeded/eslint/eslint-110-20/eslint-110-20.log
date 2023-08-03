@@ -16,4 +16,4 @@ YAMLException: duplicated mapping key at line 95, column 5:
     at loadConfig (lib/config.js:134:22)
     at getLocalConfig (lib/config.js:273:23)
     at Config.getConfig (lib/config.js:406:22)
-    at Context.<anonymous> (tests/lib/config.js:205:26)
+    at Context.<anonymous> (tests/lib/config.js:626:26)

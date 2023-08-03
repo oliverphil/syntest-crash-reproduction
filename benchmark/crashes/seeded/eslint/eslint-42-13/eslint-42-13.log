@@ -1,28 +1,20 @@
-AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-catch-shadow',
+AssertionError: Should have no errors but had 1: [ { ruleId: 'complexity',
     severity: 1,
     node: 
-     { type: 'CatchClause',
-       param: [Object],
+     { type: 'FunctionDeclaration',
+       id: [Object],
+       params: [Object],
+       defaults: [],
        body: [Object],
+       rest: null,
+       generator: false,
+       expression: false,
        range: [Object],
        loc: [Object],
        parent: [Object] },
-    message: 'Value of \'foo\' may be overwritten in IE 8 and earlier.',
+    message: 'Function \'a\' has a complexity of 3.',
     line: 1,
-    column: 28,
-    source: 'catch(foo) { }' },
-  { ruleId: 'no-catch-shadow',
-    severity: 1,
-    node: 
-     { type: 'CatchClause',
-       param: [Object],
-       body: [Object],
-       range: [Object],
-       loc: [Object],
-       parent: [Object] },
-    message: 'Value of \'foo\' may be overwritten in IE 8 and earlier.',
-    line: 1,
-    column: 28,
-    source: 'catch(foo) { }' } ]: expected 2 to equal 1
-    at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
-    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)
+    column: 0,
+    source: 'function a(x) {try {x.getThis();} catch (e) {x.getThat();}}' } ]: expected 1 to equal 0
+    at testValidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:117:20)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:164:25)

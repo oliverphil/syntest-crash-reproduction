@@ -1,7 +1,12 @@
-AssertionError: expected 'ENOENT: no such file or directory, stat \'test/fixtures/nope.html\'' to start with 'ENOENT, stat'
+AssertionError: expected {
+  connection: 'close',
+  'content-length': '0',
+  date: 'Tue, 01 Aug 2023 01:06:16 GMT',
+  'x-powered-by': 'Express'
+} not to have property 'content-length'
     at Assertion.fail (node_modules/should/lib/assertion.js:113:17)
-    at Assertion.prop.(anonymous function) [as startWith] (node_modules/should/lib/assertion.js:39:14)
-    at Test.<anonymous> (test/res.sendFile.js:313:25)
+    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/assertion.js:52:12)
+    at Test.<anonymous> (test/res.send.js:33:36)
     at Test.assert (node_modules/supertest/lib/test.js:221:6)
     at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)

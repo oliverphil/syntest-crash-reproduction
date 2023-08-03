@@ -1,7 +1,7 @@
 AssertionError: Should have no errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: '({ prop: obj.xxxxx }) = {};',
+    source: '({ a: obj.x.y.z }) = {};',
     message: 'Parsing error: Parenthesized pattern',
     line: 1,
     column: 1 } ]

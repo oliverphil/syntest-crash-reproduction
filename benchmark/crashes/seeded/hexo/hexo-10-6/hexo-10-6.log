@@ -1,6 +1,6 @@
-TypeError: Path must be a string. Received undefined
-    at assertPath (path.js:7:11)
-    at Object.extname (path.js:1431:5)
-    at getExtname (lib/hexo/render.js:6:24)
-    at Render.renderSync (lib/hexo/render.js:69:28)
-    at Context.<anonymous> (test/scripts/hexo/render.js:150:30)
+TypeError: "list" argument must be an Array of Buffers
+    at Function.Buffer.concat (buffer.js:332:13)
+    at RouteStream.<anonymous> (test/util/stream.js:10:22)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

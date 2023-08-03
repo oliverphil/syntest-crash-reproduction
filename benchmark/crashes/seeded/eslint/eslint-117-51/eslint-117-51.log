@@ -1,6 +1,9 @@
-TypeError: Path must be a string. Received undefined
-    at assertPath (path.js:7:11)
-    at Object.extname (path.js:1431:5)
-    at processText (lib/cli-engine.js:144:30)
-    at CLIEngine.executeOnText (lib/cli-engine.js:672:26)
-    at Context.<anonymous> (tests/lib/cli-engine.js:2045:36)
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: '{ var a; } let a;',
+    message: 'Parsing error: Identifier \'a\' has already been declared',
+    line: 1,
+    column: 16 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:334:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:422:25)

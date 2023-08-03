@@ -7,7 +7,6 @@ var onFinished = require('on-finished');
 var path = require('path');
 var should = require('should');
 var fixtures = path.join(__dirname, 'fixtures');
-var utils = require('./support/utils');
 
 describe('res', function(){
   describe('.sendFile(path)', function () {
@@ -33,31 +32,6 @@ describe('res', function(){
       request(app)
       .get('/')
       .expect(200, '20%', done);
-    });
-
-    it('should include ETag', function (done) {
-      var app = createApp(path.resolve(fixtures, 'name.txt'));
-
-      request(app)
-      .get('/')
-      .expect('ETag', /^(?:W\/)?"[^"]+"$/)
-      .expect(200, 'tobi', done);
-    });
-
-    it('should 304 when ETag matches', function (done) {
-      var app = createApp(path.resolve(fixtures, 'name.txt'));
-
-      request(app)
-      .get('/')
-      .expect('ETag', /^(?:W\/)?"[^"]+"$/)
-      .expect(200, 'tobi', function (err, res) {
-        if (err) return done(err);
-        var etag = res.headers.etag;
-        request(app)
-        .get('/')
-        .set('If-None-Match', etag)
-        .expect(304, done);
-      });
     });
 
     it('should 404 for directory', function (done) {
@@ -155,8 +129,11 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect(utils.shouldNotHaveHeader('X-Success'))
-        .expect(404, done);
+        .expect(404, function (err, res) {
+          if (err) return done(err);
+          res.headers.should.not.have.property('x-success');
+          done();
+        });
       });
     });
 
@@ -205,7 +182,7 @@ describe('res', function(){
         setImmediate(function () {
           res.sendFile(path.resolve(fixtures, 'name.txt'), function (err) {
             should(err).be.ok;
-            err.code.should.equal('ECONNABORTED');
+            err.code.should.equal('ECONNABORT');
             cb();
           });
         });
@@ -224,7 +201,7 @@ describe('res', function(){
         onFinished(res, function () {
           res.sendFile(path.resolve(fixtures, 'name.txt'), function (err) {
             should(err).be.ok;
-            err.code.should.equal('ECONNABORTED');
+            err.code.should.equal('ECONNABORT');
             cb();
           });
         });
@@ -234,40 +211,6 @@ describe('res', function(){
       var test = request(app).get('/');
       test.expect(200, cb);
     })
-
-    it('should invoke the callback without error when HEAD', function (done) {
-      var app = express();
-      var cb = after(2, done);
-
-      app.use(function (req, res) {
-        res.sendFile(path.resolve(fixtures, 'name.txt'), cb);
-      });
-
-      request(app)
-      .head('/')
-      .expect(200, cb);
-    });
-
-    it('should invoke the callback without error when 304', function (done) {
-      var app = express();
-      var cb = after(3, done);
-
-      app.use(function (req, res) {
-        res.sendFile(path.resolve(fixtures, 'name.txt'), cb);
-      });
-
-      request(app)
-      .get('/')
-      .expect('ETag', /^(?:W\/)?"[^"]+"$/)
-      .expect(200, 'tobi', function (err, res) {
-        if (err) return cb(err);
-        var etag = res.headers.etag;
-        request(app)
-        .get('/')
-        .set('If-None-Match', etag)
-        .expect(304, cb);
-      });
-    });
 
     it('should invoke the callback on 404', function(done){
       var app = express();
@@ -321,7 +264,7 @@ describe('res', function(){
         setImmediate(function () {
           res.sendfile('test/fixtures/name.txt', function (err) {
             should(err).be.ok;
-            err.code.should.equal('ECONNABORTED');
+            err.code.should.equal('ECONNABORT');
             cb();
           });
         });
@@ -340,7 +283,7 @@ describe('res', function(){
         onFinished(res, function () {
           res.sendfile('test/fixtures/name.txt', function (err) {
             should(err).be.ok;
-            err.code.should.equal('ECONNABORTED');
+            err.code.should.equal('ECONNABORT');
             cb();
           });
         });
@@ -351,47 +294,13 @@ describe('res', function(){
       test.expect(200, cb);
     })
 
-    it('should invoke the callback without error when HEAD', function (done) {
-      var app = express();
-      var cb = after(2, done);
-
-      app.use(function (req, res) {
-        res.sendfile('test/fixtures/name.txt', cb);
-      });
-
-      request(app)
-      .head('/')
-      .expect(200, cb);
-    });
-
-    it('should invoke the callback without error when 304', function (done) {
-      var app = express();
-      var cb = after(3, done);
-
-      app.use(function (req, res) {
-        res.sendfile('test/fixtures/name.txt', cb);
-      });
-
-      request(app)
-      .get('/')
-      .expect('ETag', /^(?:W\/)?"[^"]+"$/)
-      .expect(200, 'tobi', function (err, res) {
-        if (err) return cb(err);
-        var etag = res.headers.etag;
-        request(app)
-        .get('/')
-        .set('If-None-Match', etag)
-        .expect(304, cb);
-      });
-    });
-
     it('should invoke the callback on 404', function(done){
-      var app = express();
-      var calls = 0;
+      var app = express()
+        , calls = 0;
 
       app.use(function(req, res){
         res.sendfile('test/fixtures/nope.html', function(err){
-          assert.equal(calls++, 0);
+          ++calls;
           assert(!res.headersSent);
           res.send(err.message);
         });
@@ -399,7 +308,12 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect(200, /^ENOENT.*?, stat/, done);
+      .end(function(err, res){
+        assert(1 == calls, 'called too many times');
+        res.text.should.startWith("ENOENT, stat");
+        res.statusCode.should.equal(200);
+        done();
+      });
     })
 
     it('should not override manual content-types', function(done){
@@ -507,8 +421,11 @@ describe('res', function(){
 
       request(app)
       .get('/')
-        .expect(utils.shouldNotHaveHeader('X-Success'))
-        .expect(404, done);
+      .expect(404, function (err, res) {
+        if (err) return done(err);
+        res.headers.should.not.have.property('x-success');
+        done();
+      });
     })
 
     it('should transfer a file', function (done) {
@@ -590,8 +507,11 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('Content-Type', 'text/html; charset=UTF-8')
-        .expect(200, '<p>{{user.name}}</p>', done);
+        .end(function(err, res){
+          res.text.should.equal('<p>{{user.name}}</p>');
+          res.headers.should.have.property('content-type', 'text/html; charset=UTF-8');
+          done();
+        });
       })
     })
 
@@ -605,8 +525,11 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('Content-Type', 'text/html; charset=UTF-8')
-        .expect(200, '<p>{{user.name}}</p>', done);
+        .end(function(err, res){
+          res.text.should.equal('<p>{{user.name}}</p>');
+          res.headers.should.have.property('content-type', 'text/html; charset=UTF-8');
+          done();
+        });
       })
 
       it('should serve relative to "root"', function(done){
@@ -618,8 +541,11 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('Content-Type', 'text/html; charset=UTF-8')
-        .expect(200, '<p>{{user.name}}</p>', done);
+        .end(function(err, res){
+          res.text.should.equal('<p>{{user.name}}</p>');
+          res.headers.should.have.property('content-type', 'text/html; charset=UTF-8');
+          done();
+        });
       })
 
       it('should consider ../ malicious when "root" is not set', function(done){

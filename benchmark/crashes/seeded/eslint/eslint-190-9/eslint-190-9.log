@@ -24,4 +24,4 @@ YAMLException: duplicated mapping key at line 92, column 5:
     at traverse (lib/util/traverse.js:103:11)
     at CLIEngine.executeOnFiles (lib/cli-engine.js:311:9)
     at Object.execute (lib/cli.js:178:95)
-    at Context.<anonymous> (tests/lib/cli.js:490:24)
+    at Context.<anonymous> (tests/lib/cli.js:477:24)

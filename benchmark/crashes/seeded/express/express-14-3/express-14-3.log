@@ -1,12 +1,14 @@
-AssertionError: expected '<p>Found. Redirecting to <a href="&lt;lame&gt;">&lt;lame&gt;</a></p>' to be '<p>Moved Temporarily. Redirecting to <a href="&lt;lame&gt;">&lt;lame&gt;</a></p>'
-    at Assertion.fail (node_modules/should/lib/assertion.js:112:17)
-    at Assertion.prop.(anonymous function) (node_modules/should/lib/assertion.js:38:14)
-    at Test.<anonymous> (test/res.redirect.js:105:25)
-    at Test.assert (node_modules/supertest/lib/test.js:221:6)
-    at Server.assert (node_modules/supertest/lib/test.js:132:12)
-    at Object.onceWrapper (events.js:293:19)
-    at emitNone (events.js:86:13)
-    at Server.emit (events.js:188:7)
-    at emitCloseNT (net.js:1577:8)
-    at _combinedTickCallback (internal/process/next_tick.js:77:11)
-    at process._tickCallback (internal/process/next_tick.js:104:9)
+TypeError: Cannot set property 'content-type' of undefined
+    at ServerResponse.setHeader (_http_outgoing.js:380:22)
+    at context.<anonymous> (test/res.get.js:8:11)
+    at callFn (node_modules/mocha/lib/runnable.js:250:21)
+    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:243:7)
+    at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
+    at node_modules/mocha/lib/runner.js:451:12
+    at next (node_modules/mocha/lib/runner.js:298:14)
+    at node_modules/mocha/lib/runner.js:308:7
+    at next (node_modules/mocha/lib/runner.js:246:23)
+    at Immediate.<anonymous> (node_modules/mocha/lib/runner.js:275:5)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)

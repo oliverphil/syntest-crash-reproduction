@@ -19,7 +19,8 @@ YAMLException: duplicated mapping key at line 95, column 5:
     at processText (lib/cli-engine.js:197:27)
     at processFile (lib/cli-engine.js:258:18)
     at executeOnFile (lib/cli-engine.js:604:23)
-    at lib/cli-engine.js:628:17
+    at Array.forEach (native)
+    at lib/cli-engine.js:630:49
     at Array.forEach (native)
     at CLIEngine.executeOnFiles (lib/cli-engine.js:626:18)
-    at Context.<anonymous> (tests/lib/cli-engine.js:321:33)
+    at Context.<anonymous> (tests/lib/cli-engine.js:299:33)

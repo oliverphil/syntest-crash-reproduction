@@ -1,6 +1,6 @@
-AssertionError: expected 'Found. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E' to be 'Moved Temporarily. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E'
+AssertionError: expected '<p>Found. Redirecting to <a href="http://google.com">http://google.com</a></p>' to be '<p>Moved Temporarily. Redirecting to <a href="http://google.com">http://google.com</a></p>'
     at Assertion.prop.(anonymous function) (node_modules/should/lib/should.js:61:14)
-    at Test.<anonymous> (test/res.redirect.js:142:25)
+    at Test.<anonymous> (test/res.redirect.js:88:25)
     at Test.assert (node_modules/supertest/lib/test.js:221:6)
     at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)

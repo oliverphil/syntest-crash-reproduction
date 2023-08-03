@@ -1,9 +1,9 @@
 AssertionError: Should have no errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: '{ var a; } let a;',
-    message: 'Parsing error: Identifier \'a\' has already been declared',
+    source: 'class A { a() { [ super ]; } }',
+    message: 'Parsing error: Unexpected token ]',
     line: 1,
-    column: 16 } ]
+    column: 25 } ]
     at testValidTemplate (lib/testers/rule-tester.js:422:20)
     at Context.RuleTester.it (lib/testers/rule-tester.js:517:25)

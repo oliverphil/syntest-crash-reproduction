@@ -1,8 +1,9 @@
 
 var express = require('../')
   , request = require('supertest')
-  , utils = require('connect').utils
-  , cookie = require('cookie');
+  , cookie = require('cookie')
+  , cookieParser = require('cookie-parser')
+var merge = require('utils-merge');
 
 describe('res', function(){
   describe('.cookie(name, object)', function(){
@@ -46,13 +47,14 @@ describe('res', function(){
       app.use(function(req, res){
         res.cookie('name', 'tobi');
         res.cookie('age', 1);
+        res.cookie('gender', '?');
         res.end();
       });
 
       request(app)
       .get('/')
       .end(function(err, res){
-        var val = ['name=tobi; Path=/', 'age=1; Path=/'];
+        var val = ['name=tobi; Path=/', 'age=1; Path=/', 'gender=%3F; Path=/'];
         res.headers['set-cookie'].should.eql(val);
         done();
       })
@@ -111,7 +113,7 @@ describe('res', function(){
         var app = express();
 
         var options = { maxAge: 1000 };
-        var optionsCopy = utils.merge({}, options);
+        var optionsCopy = merge({}, options);
 
         app.use(function(req, res){
           res.cookie('name', 'tobi', options)
@@ -131,7 +133,7 @@ describe('res', function(){
       it('should generate a signed JSON cookie', function(done){
         var app = express();
 
-        app.use(express.cookieParser('foo bar baz'));
+        app.use(cookieParser('foo bar baz'));
 
         app.use(function(req, res){
           res.cookie('user', { name: 'tobi' }, { signed: true }).end();
@@ -152,7 +154,7 @@ describe('res', function(){
       it('should set a signed cookie', function(done){
         var app = express();
 
-        app.use(express.cookieParser('foo bar baz'));
+        app.use(cookieParser('foo bar baz'));
 
         app.use(function(req, res){
           res.cookie('name', 'tobi', { signed: true }).end();

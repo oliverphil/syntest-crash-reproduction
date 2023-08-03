@@ -1,5 +1,3 @@
-Error: Cannot find module 'eslint-config-foo' from '/Users/philipoliver/Documents/University.nosync/bug-dataset/test_out'
-    at Function.resolveSync [as sync] (node_modules/resolve/lib/sync.js:111:15)
-    at Object.sync (tests/lib/config/config-file.js:606:40)
-    at Object.resolve (lib/config/config-file.js:415:38)
-    at Context.<anonymous> (tests/lib/config/config-file.js:629:52)
+AssertionError: A fatal parsing error occurred: Parsing error: Parenthesized pattern
+    at testInvalidTemplate (lib/testers/rule-tester.js:367:28)
+    at Context.<anonymous> (lib/testers/rule-tester.js:427:25)

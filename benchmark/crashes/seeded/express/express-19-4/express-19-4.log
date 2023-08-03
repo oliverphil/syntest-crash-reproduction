@@ -1,4 +1,16 @@
-TypeError: Cannot read properties of undefined (reading 'link')
-    at ServerResponse.getHeader (node:_http_outgoing:718:24)
-    at res.get (node_modules/express/lib/response.js:680:15)
-    at res.links (node_modules/express/lib/response.js:62:19)
+TypeError: Cannot set property 'link' of undefined
+    at ServerResponse.setHeader (_http_outgoing.js:380:22)
+    at ServerResponse.header (lib/response.js:662:10)
+    at ServerResponse.res.links (lib/response.js:64:15)
+    at context.<anonymous> (test/res.links.js:13:11)
+    at callFn (node_modules/mocha/lib/runnable.js:250:21)
+    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:243:7)
+    at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
+    at node_modules/mocha/lib/runner.js:451:12
+    at next (node_modules/mocha/lib/runner.js:298:14)
+    at node_modules/mocha/lib/runner.js:308:7
+    at next (node_modules/mocha/lib/runner.js:246:23)
+    at Immediate.<anonymous> (node_modules/mocha/lib/runner.js:275:5)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)

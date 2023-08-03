@@ -1,6 +1,7 @@
 
 var express = require('../')
   , request = require('supertest')
+  , bodyParser = require('body-parser')
 
 describe('req', function(){
   describe('.param(name, default)', function(){
@@ -33,7 +34,7 @@ describe('req', function(){
     it('should check req.body', function(done){
       var app = express();
 
-      app.use(express.bodyParser());
+      app.use(bodyParser.json());
 
       app.use(function(req, res){
         res.end(req.param('name'));

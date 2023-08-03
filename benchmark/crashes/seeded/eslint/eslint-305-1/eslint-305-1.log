@@ -1,3 +1,9 @@
-AssertionError: expected 'Expected " " or [^ [\],():#!=><~+.] b…' to include 'Syntax error in selector'
-    at getOutput.then.output (tests/bin/eslint.js:310:24)
-    at process._tickCallback (internal/process/next_tick.js:109:7)
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: '        foo={super}',
+    message: 'Parsing error: Unexpected token }',
+    line: 5,
+    column: 19 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:388:20)
+    at Context.RuleTester.it (lib/testers/rule-tester.js:530:25)

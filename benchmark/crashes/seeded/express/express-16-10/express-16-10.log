@@ -1,15 +1,14 @@
-TypeError: Cannot set property 'x-numbers' of undefined
-    at ServerResponse.setHeader (_http_outgoing.js:380:22)
-    at ServerResponse.header (lib/response.js:662:10)
-    at context.<anonymous> (test/res.set.js:44:11)
-    at callFn (node_modules/mocha/lib/runnable.js:250:21)
-    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:243:7)
-    at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
-    at node_modules/mocha/lib/runner.js:451:12
-    at next (node_modules/mocha/lib/runner.js:298:14)
-    at node_modules/mocha/lib/runner.js:308:7
-    at next (node_modules/mocha/lib/runner.js:246:23)
-    at Immediate.<anonymous> (node_modules/mocha/lib/runner.js:275:5)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
+AssertionError: expected { 'x-powered-by': 'Express',
+ date: 'Tue, 01 Aug 2023 01:11:07 GMT',
+ connection: 'close',
+ 'content-length': '0' } not to have property 'content-length'
+    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/should.js:69:12)
+    at Test.<anonymous> (test/res.send.js:33:36)
+    at Test.assert (node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitCloseNT (net.js:1577:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

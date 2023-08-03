@@ -1,14 +1,9 @@
-SyntaxError: Expected " ", "!", "#", "*", ".", ":", ":first-child", ":has(", ":last-child", ":matches(", ":not(", ":nth-child(", ":nth-last-child(", "[", or [^ [\],():#!=><~+.] but end of input found.
-    at Object.parse (node_modules/esquery/dist/esquery.min.js:1:28515)
-    at Function.g [as parse] (node_modules/esquery/dist/esquery.min.js:1:34383)
-    at tryParseSelector (lib/util/node-event-generator.js:160:24)
-    at lodash.memoize.rawSelector (lib/util/node-event-generator.js:175:28)
-    at memoized (node_modules/lodash/lodash.js:10620:27)
-    at NodeEventGenerator.eventNames.forEach.rawSelector (lib/util/node-event-generator.js:235:30)
-    at Array.forEach (native)
-    at new NodeEventGenerator (lib/util/node-event-generator.js:234:20)
-    at assert.throws (tests/lib/util/node-event-generator.js:295:23)
-    at _tryBlock (assert.js:320:5)
-    at _throws (assert.js:339:12)
-    at Function.throws (assert.js:369:3)
-    at Context.it (tests/lib/util/node-event-generator.js:294:20)
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: 'class A { a() { [super]; } }',
+    message: 'Parsing error: Unexpected token ]',
+    line: 1,
+    column: 23 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:423:20)
+    at Context.RuleTester.it (lib/testers/rule-tester.js:548:25)

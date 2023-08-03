@@ -1,6 +1,3 @@
-TypeError: Path must be a string. Received undefined
-    at assertPath (path.js:7:11)
-    at Object.extname (path.js:1431:5)
-    at processText (lib/cli-engine.js:144:30)
-    at CLIEngine.executeOnText (lib/cli-engine.js:671:26)
-    at Context.<anonymous> (tests/lib/cli-engine.js:110:33)
+AssertionError: A fatal parsing error occurred: Parsing error: Identifier 'b' has already been declared
+    at testInvalidTemplate (lib/testers/rule-tester.js:367:28)
+    at Context.<anonymous> (lib/testers/rule-tester.js:427:25)

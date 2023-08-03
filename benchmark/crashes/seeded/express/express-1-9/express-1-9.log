@@ -1,15 +1,7 @@
-AssertionError: expected {
-  connection: 'close',
-  'content-length': '39',
-  'content-type': 'text/plain; charset=utf-8',
-  date: 'Mon, 31 Jul 2023 03:24:17 GMT',
-  location: 'http://google.com',
-  vary: 'Accept',
-  'x-powered-by': 'Express'
-} to have property 'content-length' of '51' (got '39')
+AssertionError: expected '<p>Found. Redirecting to <a href="&lt;lame&gt;">&lt;lame&gt;</a></p>' to be '<p>Moved Temporarily. Redirecting to <a href="&lt;lame&gt;">&lt;lame&gt;</a></p>'
     at Assertion.fail (node_modules/should/lib/assertion.js:113:17)
-    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/assertion.js:39:14)
-    at Test.<anonymous> (test/res.redirect.js:139:33)
+    at Assertion.prop.(anonymous function) (node_modules/should/lib/assertion.js:39:14)
+    at Test.<anonymous> (test/res.redirect.js:105:25)
     at Test.assert (node_modules/supertest/lib/test.js:221:6)
     at Server.assert (node_modules/supertest/lib/test.js:132:12)
     at Object.onceWrapper (events.js:293:19)

@@ -1,9 +1,9 @@
-AssertionError: Should have 2 errors but had 1: [ { ruleId: null,
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: '({ a: obj.x.y.z }) = {};',
+    source: '({ prop: obj.xxxxx }) = {};',
     message: 'Parsing error: Parenthesized pattern',
     line: 1,
     column: 1 } ]
-    at testInvalidTemplate (lib/testers/rule-tester.js:365:24)
-    at Context.<anonymous> (lib/testers/rule-tester.js:430:25)
+    at testValidTemplate (lib/testers/rule-tester.js:334:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:422:25)

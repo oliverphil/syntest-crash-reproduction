@@ -1,9 +1,9 @@
 AssertionError: Should have no errors but had 1: [ { ruleId: null,
     fatal: true,
     severity: 2,
-    source: 'function* foo() { (() =>yield foo) }',
-    message: 'Parsing error: Unexpected token foo',
+    source: '({ prop: obj.x.y.something }) = {};',
+    message: 'Parsing error: Parenthesized pattern',
     line: 1,
-    column: 31 } ]
+    column: 1 } ]
     at testValidTemplate (lib/testers/rule-tester.js:334:20)
     at Context.<anonymous> (lib/testers/rule-tester.js:422:25)

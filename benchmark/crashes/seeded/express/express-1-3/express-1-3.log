@@ -1,14 +1,12 @@
-TypeError: Header name must be a valid HTTP Token ["Accept: text/html"]
-    at ClientRequest.setHeader (_http_outgoing.js:366:11)
-    at Test.Request.set (node_modules/superagent/lib/node/index.js:275:18)
-    at context.<anonymous> (test/res.format.js:102:10)
-    at Test.Runnable.run (node_modules/mocha/lib/runnable.js:217:15)
-    at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
-    at node_modules/mocha/lib/runner.js:451:12
-    at next (node_modules/mocha/lib/runner.js:298:14)
-    at node_modules/mocha/lib/runner.js:308:7
-    at next (node_modules/mocha/lib/runner.js:246:23)
-    at Immediate.<anonymous> (node_modules/mocha/lib/runner.js:275:5)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
+TypeError: Cannot set property 'x-content-type-options' of undefined
+    at ServerResponse.setHeader (_http_outgoing.js:380:22)
+    at Array.write (node_modules/finalhandler/index.js:115:9)
+    at listener (node_modules/on-finished/index.js:164:15)
+    at onFinish (node_modules/on-finished/index.js:95:5)
+    at callback (node_modules/ee-first/index.js:33:10)
+    at IncomingMessage.onevent (node_modules/ee-first/index.js:66:5)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:188:7)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

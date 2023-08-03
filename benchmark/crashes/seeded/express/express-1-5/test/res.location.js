@@ -13,8 +13,10 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('Location', 'http://google.com')
-      .expect(200, done)
+      .end(function(err, res){
+        res.headers.should.have.property('location', 'http://google.com');
+        done();
+      })
     })
   })
 })

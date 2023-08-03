@@ -10,8 +10,8 @@ AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-ex-assign',
        parent: [Object] },
     message: 'Do not assign to the exception parameter.',
     line: 1,
-    column: 21,
-    source: 'ex = 10' },
+    column: 20,
+    source: 'e = 10' },
   { ruleId: 'no-ex-assign',
     severity: 1,
     node: 
@@ -24,7 +24,7 @@ AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-ex-assign',
        parent: [Object] },
     message: 'Do not assign to the exception parameter.',
     line: 1,
-    column: 21,
-    source: 'ex = 10' } ]: expected 2 to equal 1
+    column: 20,
+    source: 'e = 10' } ]: expected 2 to equal 1
     at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
     at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)

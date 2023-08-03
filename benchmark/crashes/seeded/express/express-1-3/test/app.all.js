@@ -19,7 +19,7 @@ describe('app.all()', function(){
     });
   })
 
-  it('should run the callback for a method just once', function(done){
+  it('should ', function(done){
     var app = express()
       , n = 0;
 

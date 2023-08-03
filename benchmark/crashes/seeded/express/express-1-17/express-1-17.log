@@ -1,8 +1,8 @@
-TypeError: Cannot set property 'vary' of undefined
-    at ServerResponse.setHeader (_http_outgoing.js:381:26)
-    at vary (node_modules/vary/index.js:115:9)
-    at ServerResponse.res.vary (lib/response.js:865:3)
-    at context.<anonymous> (test/res.vary.js:31:11)
+TypeError: Cannot set property 'x-number' of undefined
+    at ServerResponse.setHeader (_http_outgoing.js:380:22)
+    at ServerResponse.header (lib/response.js:666:10)
+    at ServerResponse.header (lib/response.js:669:12)
+    at context.<anonymous> (test/res.set.js:76:11)
     at callFn (node_modules/mocha/lib/runnable.js:250:21)
     at Test.Runnable.run (node_modules/mocha/lib/runnable.js:243:7)
     at Runner.runTest (node_modules/mocha/lib/runner.js:373:10)
