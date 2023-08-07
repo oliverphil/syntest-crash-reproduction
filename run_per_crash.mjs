@@ -1,11 +1,9 @@
-const execSync = require('child_process').execSync;
-const fs = require('fs');
-const environmentGenerator = require('libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator').EnvironmentGenerator;
+import EnvironmentGenerator from "./dist/crash-reproduction/setup/environmentGenerator.js";
+import {execSync} from "child_process";
 
-const types = ['standard, seeded, bugsjs, syntest-collected'];
+const types = ['standard', 'seeded', 'bugsjs', 'syntest-collected'];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'bower', 'hexo', 'pencilblue'];
-
-const envGen = new environmentGenerator();
+const envGen = new EnvironmentGenerator.default();
 
 for (const type of types.filter(t => t === 'standard')) {
     execSync(`sed -i "s/^.*syntest-type.*$/  \\"syntest-type\\": \\"${type}\\",/" .syntest.json`);
