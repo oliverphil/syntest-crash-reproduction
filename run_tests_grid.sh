@@ -95,6 +95,7 @@ npm run build
 cd ../syntest-crash-reproduction
 echo $1
 git checkout $1
+cp /local/scratch/syntest-crash-reproduction/.syntest.json syntest.json
 npm i
 ls
 
@@ -108,22 +109,25 @@ npm run build
 cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
 # cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/**/rootContextExtractedTypes*  .syntest/
 
-project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
+#project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
 # project_array=( 'http-server' 'node' );
 
 # export SYNTEST_SEEDED=false;
-sed -i "s/^.*syntest-seeded.*$/  \"syntest-seeded\": \"false\"/" .syntest.json
-for project in "${project_array[@]}"; do
-  sed -i "s/^.*syntest-project.*$/  \"syntest-project\": \"${project}\",/" .syntest.json
-  # export SYNTEST_PROJECT=${project};
-  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true",/' .syntest.json
-  # export SYNTEST_CRASHES=true
-  cat .syntest.json
-  node -r ts-node/register ../syntest-core/tools/cli/bin.ts crash test > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
-  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false",/' .syntest.json
+#sed -i "s/^.*syntest-seeded.*$/  \"syntest-seeded\": \"false\"/" .syntest.json
+#for project in "${project_array[@]}"; do
+#  sed -i "s/^.*syntest-project.*$/  \"syntest-project\": \"${project}\",/" .syntest.json
+#  # export SYNTEST_PROJECT=${project};
+#  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "true",/' .syntest.json
+#  # export SYNTEST_CRASHES=true
+#  cat .syntest.json
+#  node -r ts-node/register ../syntest-core/tools/cli/bin.ts crash test > output_"${project}_syntest".log 2> stderr_"${project}_syntest".log
+#  sed -i 's/^.*syntest-crashes.*$/  "syntest-crashes": "false",/' .syntest.json
   # export SYNTEST_CRASHES=false
-  BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_"${project}".log 2> stderr_"${project}".log
-done
+  #BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_"${project}".log 2> stderr_"${project}".log
+#done
+
+BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_$2.log 2> stderr_$2.log
+
 
 #
 echo ==AND NOW, HAVING DONE SOMTHING USEFUL AND CREATED SOME OUTPUT==
@@ -136,13 +140,20 @@ cp -r .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes/
 #  noting that we need to distinguish between the TASKS
 #  (really should check that directory exists too, but this is just a test)
 #
-mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
-for project in "${project_array[@]}"; do
-  cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
-  cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
-  cp output_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_syntest_$SGE_TASK_ID.log
-  cp stderr_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_syntest_$SGE_TASK_ID.log
-done
+#mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
+if [ -d /vol/grid-solar/sgeusers/oliverphil/output ]; then
+  mkdir /vol/grid-solar/sgeusers/oliverphil/output;
+fi
+
+cp output_$2.log /vol/grid-solar/sgeusers/oliverphil/output/output_$2.log
+cp stderr_$2.log /vol/grid-solar/sgeusers/oliverphil/output/stderr_$2.log
+
+#for project in "${project_array[@]}"; do
+#  cp output_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_$SGE_TASK_ID.log
+#  cp stderr_"${project}".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_$SGE_TASK_ID.log
+#  cp output_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_"${project}"_syntest_$SGE_TASK_ID.log
+#  cp stderr_"${project}_syntest".log /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_"${project}"_syntest_$SGE_TASK_ID.log
+#done
 # cp output.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/output_$SGE_TASK_ID.log
 # cp stderr.log  /vol/grid-solar/sgeusers/oliverphil/$JOB_ID/stderr_$SGE_TASK_ID.log
 

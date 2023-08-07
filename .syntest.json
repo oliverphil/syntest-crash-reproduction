@@ -60,7 +60,8 @@
   ],
   "metric-middleware-pipeline": [],
   "output-metrics": [],
-  "syntest-project": "bower",
+  "syntest-project": "express",
   "syntest-crashes": "false",
-  "syntest-seeded": "true"
+  "syntest-type": "syntest-collected",
+  "syntest-crash": "express-2761-1"
 }

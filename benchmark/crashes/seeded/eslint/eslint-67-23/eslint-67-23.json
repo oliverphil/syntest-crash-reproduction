@@ -1,1 +1,0 @@
-{"issueNumber":23,"info":"CLIEngine executeOnFiles() configuration hierarchy should return zero messages when executing with no .eslintrc","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

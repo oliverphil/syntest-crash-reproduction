@@ -1,2 +1,0 @@
-AssertionError: expected 2 to equal 1
-    at Context.<anonymous> (tests/lib/cli-engine.js:705:24)

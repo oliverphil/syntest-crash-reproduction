@@ -1,3 +1,0 @@
-AssertionError: A fatal parsing error occurred: Parsing error: Parenthesized pattern
-    at testInvalidTemplate (lib/testers/rule-tester.js:369:28)
-    at Context.<anonymous> (lib/testers/rule-tester.js:429:25)

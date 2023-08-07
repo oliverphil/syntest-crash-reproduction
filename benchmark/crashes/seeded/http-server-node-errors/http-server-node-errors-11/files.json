@@ -1,1 +1,1 @@
-["NodeError","Console","union/lib/core.js","http-server/lib/http-server.js","/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js","Module._compile","Object.Module._extensions.","Module.load","Function.Module._load"]
+["node:internal/errors","node:internal/console/constructor","union/lib/core.js","http-server/lib/http-server.js","/home/oliverphil/Documents/jscrashreproduction/assets/seeded/http-server/index.js","node:internal/modules/cjs/loader"]

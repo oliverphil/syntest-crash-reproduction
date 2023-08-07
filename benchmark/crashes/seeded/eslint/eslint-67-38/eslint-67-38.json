@@ -1,1 +1,0 @@
-{"issueNumber":38,"info":"CLIEngine executeOnFiles() configuration hierarchy should return no messages when executing with config file that overrides local .eslintrc","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

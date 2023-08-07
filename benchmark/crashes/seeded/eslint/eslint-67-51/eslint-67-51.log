@@ -1,2 +1,0 @@
-AssertionError: expected 1 to equal 0
-    at Context.<anonymous> (tests/lib/cli.js:327:20)

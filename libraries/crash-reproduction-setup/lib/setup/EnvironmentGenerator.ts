@@ -15,7 +15,7 @@ export class EnvironmentGenerator {
    */
   public generate(): Crash[] {
     const crashes: Crash[] = [];
-    this.loadAssets(undefined, undefined, true).forEach((crash) => {
+    this.loadAssets(undefined, undefined, undefined).forEach((crash) => {
       this.generatePackage(crash);
       this.generateDockerfile(crash);
       crashes.push(crash);
@@ -23,40 +23,71 @@ export class EnvironmentGenerator {
     return crashes;
   }
 
-  /**
-   * Load crash information from json files
-   * @private
-   * @return {Observable<Crash>} an observable to provide crashes
-   */
-  loadAssets(project: string | undefined, syntestCrashes: boolean | undefined, syntestSeeded: boolean): Crash[] {
-    console.log('Loading Crashes... ');
-    const assetDir = './benchmark/crashes';
+  private handleBugsjs(project: string) {
+    const assetDir = './benchmark/crashes/bugsjs';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
-        && value !== 'seeded' && (!project || value === project) && !syntestSeeded);
-    const seededAssetDirContents = fs.readdirSync(`${assetDir}/seeded`).filter((value) =>
-        value !== 'http-server' && value !== '' && (!project || value.startsWith(project)) && syntestSeeded);
+        && value !== 'seeded' && (!project || value === project));
     const assetSubDirs = assetDirContents.map((projItem) => {
       return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
-    }).filter((projItem) => {
-      if (syntestCrashes !== undefined) {
-        projItem[1] = (<string[]> projItem[1]).filter(crash => {
-          const split = crash.split('-');
-          if (Number.isNaN(Number.parseInt(split[split.length - 1])) ||
-              Number.isNaN(Number.parseInt(split[split.length - 2]))
-          ) {
-            return !syntestCrashes;
-          }
-          return syntestCrashes;
-        })
-      }
-      return true;
     });
-    const seededAssetSubDirs = seededAssetDirContents.map((projItem) => {
-      const projectName = projItem;
-      return [projectName, fs.readdirSync(`${assetDir}/seeded/${projectName}`), true];
+
+    return assetSubDirs;
+  }
+
+  private handleSeeded(project: string) {
+    const assetDir = './benchmark/crashes/seeded';
+    const assetDirContents = fs.readdirSync(`${assetDir}`).filter((value) =>
+        value !== 'http-server' && value !== '' && (!project || value.startsWith(project)));
+    const assetSubDirs = assetDirContents.map((projItem) => {
+      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
     });
-    assetSubDirs.push(...seededAssetSubDirs);
-    assetSubDirs.reverse();
+
+    return assetSubDirs;
+  }
+
+  private handleSyntest(project: string) {
+    const assetDir = './benchmark/crashes/syntest-collected';
+    const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
+        && value !== 'seeded' && (!project || value === project));
+    const assetSubDirs = assetDirContents.map((projItem) => {
+      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
+    });
+
+    return assetSubDirs;
+  }
+
+  private handleStandard(project: string) {
+    const assetDir = './benchmark/crashes';
+    const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
+        && value !== 'seeded' && value !== 'bugsjs' && value !== 'syntest-collected' && (!project || value === project));
+    const assetSubDirs = assetDirContents.map((projItem) => {
+      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
+    });
+
+    return assetSubDirs;
+  }
+
+  private handleSyntestType(project: string, syntestType: string) {
+    let assetDir = './benchmark/crashes';
+    let assetSubDirs = [];
+    switch(syntestType) {
+      case 'bugsjs':
+        assetDir = './benchmark/crashes/bugsjs'
+        assetSubDirs = this.handleBugsjs(project);
+        break;
+      case 'seeded':
+        assetDir = './benchmark/crashes/seeded'
+        assetSubDirs = this.handleSeeded(project);
+        break;
+      case 'syntest-collected':
+        assetDir = './benchmark/crashes/syntest-collected'
+        assetSubDirs = this.handleSyntest(project);
+        break;
+      case 'standard':
+        assetSubDirs = this.handleStandard(project);
+        break;
+    }
+
     const projectsArray = assetSubDirs.map((value) => {
       const projectsArray = [];
       (value[1] as string[]).forEach((p) => {
@@ -81,7 +112,20 @@ export class EnvironmentGenerator {
           crashFileItem[2],
         ];
       }));
-    })
+    });
+    return crashInfo;
+  }
+
+  /**
+   * Load crash information from json files
+   * @private
+   * @return {Observable<Crash>} an observable to provide crashes
+   */
+  loadAssets(project: string | undefined, syntestType: string | undefined, syntestCrash: string | undefined): Crash[] {
+    console.log('Loading Crashes... ');
+    const assetDir = './benchmark/crashes';
+    const crashInfo = this.handleSyntestType(project, syntestType);
+
     const crashes = crashInfo.filter(crash => !['atom-22772', 'webpack-9114'].includes(crash[1])).map((value) => {
       const projectName = value[0];
       const crashName = value[1];
@@ -120,6 +164,9 @@ export class EnvironmentGenerator {
     });
 
     // return crashes.filter(crash => crash.crashId === 'express-1-13');
+    if (syntestCrash) {
+      return crashes.filter(crash => crash.crashId === syntestCrash);
+    }
     return crashes;
   }
 

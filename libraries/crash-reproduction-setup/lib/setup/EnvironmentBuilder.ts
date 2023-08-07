@@ -11,12 +11,16 @@ export class EnvironmentBuilder {
    * @param {Crash} crash the crash to create the environment for
    * @return {Promise<FunctionResults>} the functions present in the crash files
    */
-  public static createCrashEnvironment(crash: Crash): boolean {
+  public static createCrashEnvironment(crash: Crash, syntestType: string): boolean {
     // console.log(crash);
     const assetDir = './benchmark/crashes';
     let crashFolder = `${assetDir}/${crash.project}/${crash.crashId}`;
-    if (crash.seeded) {
+    if (syntestType === 'seeded') {
       crashFolder = `${assetDir}/seeded/${crash.project}/${crash.crashId}`;
+    } else if (syntestType === 'bugsjs') {
+      crashFolder = `${assetDir}/bugsjs/${crash.project}/${crash.crashId}`;
+    } else if (syntestType === 'syntest-collected') {
+      crashFolder = `${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`;
     }
     const stackTraceFiles: string[] = [];
     for (const frame of crash.stackTrace.trace) {

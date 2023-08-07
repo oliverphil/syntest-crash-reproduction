@@ -1,9 +1,0 @@
-Error: Cannot find module 'shift-codegen/dist/token_stream'
-    at require (internal/module.js:20:19)
-    at Object.<anonymous> (node_modules/eslump/codegen.js:4:21)
-    at require (internal/module.js:20:19)
-    at Object.<anonymous> (node_modules/eslump/index.js:3:26)
-    at require (internal/module.js:20:19)
-    at Object.<anonymous> (tools/eslint-fuzzer.js:14:16)
-    at require (internal/module.js:20:19)
-    at Context.before (tests/tools/eslint-fuzzer.js:37:16)

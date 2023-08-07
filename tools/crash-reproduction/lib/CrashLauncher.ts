@@ -144,8 +144,15 @@ export class CrashLauncher extends Launcher {
         ? new RandomTypeModelFactory()
         : new InferenceTypeModelFactory();
 
+    let rootPath = this.arguments_.targetRootDirectory + (this.crash.seeded ? '/seeded' : '') + `/${this.crash.project}/${this.crash.crashId}`;
+    if (this.arguments_.syntestType === 'bugsjs') {
+      rootPath = this.arguments_.targetRootDirectory + `/bugsjs/${this.crash.project}/${this.crash.crashId}`;
+    } else if (this.arguments_.syntestType === 'syntest-collected') {
+      rootPath = this.arguments_.targetRootDirectory + `/syntest-collected/${this.crash.project}/${this.crash.crashId}`;
+    }
+
     this.rootContext = new RootContext(
-      this.arguments_.targetRootDirectory + (this.crash.seeded ? '/seeded' : '') + `/${this.crash.project}/${this.crash.crashId}`,
+      rootPath,
       abstractSyntaxTreeFactory,
       controlFlowGraphFactory,
       targetFactory,
@@ -159,9 +166,17 @@ export class CrashLauncher extends Launcher {
       if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
         this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
       }
-    } else {
+    } else if (this.arguments_.syntestType === 'standard' || !this.arguments_.syntestType){
       if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
         this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+      }
+    } else if (this.arguments_.syntestType === 'bugsjs') {
+      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/bugsjs/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/bugsjs/${this.crash.project}/${this.crash.crashId}`);
+      }
+    } else if (this.arguments_.syntestType === 'syntest-collected') {
+      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/syntest-collected/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/syntest-collected/${this.crash.project}/${this.crash.crashId}`);
       }
     }
     // if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
@@ -366,8 +381,32 @@ export class CrashLauncher extends Launcher {
             )
         );
       }
-    } else {
+    } else if (this.arguments_.syntestType === 'standard' || !this.arguments_.syntestType) {
       if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
+        const instrumenter = new CrashInstrumenter();
+        await instrumenter.instrumentAll(
+            this.rootContext,
+            this.targets,
+            path.join(
+                this.arguments_.tempSyntestDirectory,
+                this.arguments_.tempInstrumentedDirectory
+            )
+        );
+      }
+    } else if (this.arguments_.syntestType === 'bugsjs') {
+      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/bugsjs/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
+        const instrumenter = new CrashInstrumenter();
+        await instrumenter.instrumentAll(
+            this.rootContext,
+            this.targets,
+            path.join(
+                this.arguments_.tempSyntestDirectory,
+                this.arguments_.tempInstrumentedDirectory
+            )
+        );
+      }
+    } else if (this.arguments_.syntestType === 'syntest-collected') {
+      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/syntest-collected/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
         const instrumenter = new CrashInstrumenter();
         await instrumenter.instrumentAll(
             this.rootContext,

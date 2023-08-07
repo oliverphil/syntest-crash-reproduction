@@ -1,3 +1,0 @@
-AssertionError: A fatal parsing error occurred: Parsing error: Identifier 'b' has already been declared
-    at testInvalidTemplate (lib/testers/rule-tester.js:454:28)
-    at Context.RuleTester.it (lib/testers/rule-tester.js:526:25)

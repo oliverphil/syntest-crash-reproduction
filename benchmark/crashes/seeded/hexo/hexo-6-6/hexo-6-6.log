@@ -1,6 +1,0 @@
-TypeError: Path must be a string. Received undefined
-    at assertPath (path.js:7:11)
-    at Object.extname (path.js:1431:5)
-    at getExtname (lib/hexo/render.js:8:24)
-    at Render.renderSync (lib/hexo/render.js:82:28)
-    at Context.<anonymous> (test/scripts/hexo/render.js:218:30)

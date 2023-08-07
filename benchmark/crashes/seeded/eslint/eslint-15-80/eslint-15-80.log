@@ -1,5 +1,0 @@
-Error: Cannot find module '@foo/eslint-config' from '/local/scratch/testing/BugsJS/output/eslint/foo/bar'
-    at Function.resolveSync [as sync] (node_modules/resolve/lib/sync.js:111:15)
-    at Object.sync (tests/lib/config/config-file.js:669:40)
-    at Object.resolve (lib/config/config-file.js:417:38)
-    at Context.<anonymous> (tests/lib/config/config-file.js:716:52)

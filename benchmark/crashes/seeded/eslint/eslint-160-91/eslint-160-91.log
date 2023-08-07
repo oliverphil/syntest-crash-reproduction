@@ -1,3 +1,0 @@
-AssertionError: expected [Function] to throw error matching /Parsing error: Unexpected token ;/ but got 'Cannot convert undefined or null to object'
-    at Function.assert.throws (node_modules/chai/lib/chai/interface/assert.js:1120:52)
-    at Context.<anonymous> (tests/lib/util/source-code-util.js:147:25)

@@ -1,2 +1,0 @@
-AssertionError: expected '/private/tmp/eslint/fixtures/eslintrc/quotes.js' to equal '/tmp/eslint/fixtures/eslintrc/quotes.js'
-    at Context.<anonymous> (tests/lib/cli-engine.js:571:20)

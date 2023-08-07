@@ -1,8 +1,0 @@
-Error: expected 'ECMDERR' to equal 'ENOCACHE'
-    at Assertion.assert (node_modules/expect.js/index.js:96:13)
-    at Assertion.be.Assertion.equal (node_modules/expect.js/index.js:216:10)
-    at test/core/packageRepository.js:408:37
-    at _combinedTickCallback (internal/process/next_tick.js:73:7)
-    at process._tickCallback (internal/process/next_tick.js:104:9)
-From previous event:
-    at Context.<anonymous> (test/core/packageRepository.js:404:14)

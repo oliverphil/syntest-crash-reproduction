@@ -68,12 +68,12 @@ export function getTestCommand(
       const args = <JavaScriptArguments><unknown>arguments_;
       const environmentGenerator = new EnvironmentGenerator();
       let crashes: Crash[] = environmentGenerator.loadAssets(args.syntestProject,
-          args.syntestCrashes === 'true',
-          args.syntestSeeded === 'true');
+          args.syntestType, args.syntestCrash);
       const crashesToRemove: Crash[] = [];
       for (const crash of crashes) {
+        console.log(crash.crashId);
         environmentGenerator.generatePackage(crash);
-        if (EnvironmentBuilder.createCrashEnvironment(crash)) {
+        if (EnvironmentBuilder.createCrashEnvironment(crash, args.syntestType)) {
           crashesToRemove.push(crash);
         }
       }
@@ -100,4 +100,6 @@ export type TestCommandOptions = {
   syntestProject: string | undefined;
   syntestCrashes: string | undefined;
   syntestSeeded: string;
+  syntestType: string | undefined;
+  syntestCrash: string | undefined;
 };

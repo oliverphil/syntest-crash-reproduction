@@ -1,4 +1,0 @@
-AssertionError: expected 'font/ttf' to equal 'application/x-font-ttf'
-    at Assertion.fail (node_modules/should/cjs/should.js:258:17)
-    at Assertion.value (node_modules/should/cjs/should.js:335:19)
-    at Context.<anonymous> (test/include/http/request_handler.spec.js:323:77)

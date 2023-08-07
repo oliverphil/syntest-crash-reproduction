@@ -1,9 +1,0 @@
-AssertionError: Should have no errors but had 1: [ { ruleId: null,
-    fatal: true,
-    severity: 2,
-    source: 'import {b, c} from \'foo.js\';',
-    message: 'Parsing error: Identifier \'b\' has already been declared',
-    line: 2,
-    column: 9 } ]
-    at testValidTemplate (lib/testers/rule-tester.js:334:20)
-    at Context.<anonymous> (lib/testers/rule-tester.js:422:25)

@@ -1,9 +1,0 @@
-AssertionError: Should have no errors but had 1: [ { ruleId: 'no-unused-vars',
-    severity: 1,
-    message: 'foo is defined but never used',
-    line: 1,
-    column: 6,
-    nodeType: 'Identifier',
-    source: 'const foo = "hello!";function bar(foobar = foo) {  foobar.replace(/!$/, " world!");}' } ]: expected 1 to equal 0
-    at testValidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:117:20)
-    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:164:25)

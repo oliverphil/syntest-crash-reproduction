@@ -1,1 +1,0 @@
-{"issueNumber":51,"info":"cli when given a pattern to ignore should not process any files","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

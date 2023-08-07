@@ -1,2 +1,0 @@
-TypeError: dest.on is not a function
-    at Readable.pipe (node_modules/readable-stream/lib/_stream_readable.js:564:8)

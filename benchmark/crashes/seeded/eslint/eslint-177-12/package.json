@@ -1,1 +1,0 @@
-{"name":"eslint-177-12","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"eslint":"^3.0.0"}}
