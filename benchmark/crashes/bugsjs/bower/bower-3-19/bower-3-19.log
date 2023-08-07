@@ -1,0 +1,22 @@
+Error: Failed to execute "git ls-remote --tags --heads file:///local/scratch/testing/BugsJS/output/bower/test/assets/package-a", exit code of #128
+fatal: '/local/scratch/testing/BugsJS/output/bower/test/assets/package-a' does not appear to be a git repository
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+    at createError (lib/util/createError.js:4:15)
+    at ChildProcess.<anonymous> (lib/util/cmd.js:102:21)
+    at maybeClose (internal/child_process.js:899:16)
+    at Socket.<anonymous> (internal/child_process.js:342:11)
+    at Pipe._handle.close [as _onclose] (net.js:511:12)
+From previous event:
+    at executeCmd (lib/util/cmd.js:61:22)
+    at PThrottler._processEntry (node_modules/p-throttler/index.js:89:25)
+    at Promise.apply (node_modules/p-throttler/node_modules/q/q.js:1122:26)
+    at Promise.promise.promiseDispatch (node_modules/p-throttler/node_modules/q/q.js:752:41)
+    at node_modules/p-throttler/node_modules/q/q.js:1337:14
+    at flush (node_modules/p-throttler/node_modules/q/q.js:108:17)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+From previous event:
+    at GitHubResolver.Resolver.resolve (lib/core/resolvers/Resolver.js:83:6)
+    at Context.<anonymous> (test/core/resolvers/gitHubResolver.js:90:22)

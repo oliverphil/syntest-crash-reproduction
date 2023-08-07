@@ -1,0 +1,17 @@
+AssertionError: expected {
+  connection: 'close',
+  'content-length': '0',
+  date: 'Tue, 01 Aug 2023 01:14:11 GMT',
+  'x-powered-by': 'Express'
+} not to have property 'content-length'
+    at Assertion.fail (node_modules/should/lib/assertion.js:113:17)
+    at Assertion.prop.(anonymous function) [as property] (node_modules/should/lib/assertion.js:52:12)
+    at Test.<anonymous> (test/res.send.js:33:36)
+    at Test.assert (node_modules/supertest/lib/test.js:221:6)
+    at Server.assert (node_modules/supertest/lib/test.js:132:12)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitCloseNT (net.js:1577:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

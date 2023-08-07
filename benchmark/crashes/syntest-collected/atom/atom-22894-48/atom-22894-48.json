@@ -1,0 +1,1 @@
+{"issueNumber":22894,"info":"Uncaught Error: tunneling socket could not be established, statusCode=503","url":"https://github.com/atom/atom/issues/22894","version":"1.58.0","dependencies":{"electron":"9.4.4"},"setup":{"download":{"url":"https://github.com/atom/atom/archive/refs/tags/v1.58.0.tar.gz","unpack":"tar.gz"}},"crashId":"atom-22894-48"}

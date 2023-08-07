@@ -1,0 +1,1 @@
+{"issueNumber":46,"info":"CLIEngine executeOnFiles() plugins should return two messages when executing with cli option that specifies preloaded plugin","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

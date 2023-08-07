@@ -1,0 +1,12 @@
+TypeError: Cannot set properties of undefined (setting 'path')
+    at Route (.syntest/instrumented/crashes/express/express-4548/node_modules/express/lib/router/route.js:1743:13)
+    at call (.syntest/tests/tempTest.spec.js:5:31)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at /local/tmp/oliverphil/4169271.1/syntest-crash-reproduction/.syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

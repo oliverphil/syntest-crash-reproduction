@@ -1,0 +1,1 @@
+{"issueNumber":451,"info":"Proxy option leads to uncaught exception if passed without protocol","url":"https://github.com/http-party/http-server/issues/451","version":"13.0.0","dependencies":{"requires-port":"1.0.0","http-proxy":"1.18.1","union":"0.5.0"},"requireCrashDependency":true,"crashId":"http-server-451-4"}

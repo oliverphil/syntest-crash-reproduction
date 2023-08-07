@@ -1,0 +1,3 @@
+Error: ENOENT: no such file or directory, lstat '/local/scratch/testing/BugsJS/output/bower/test/assets/package-a/.git'
+From previous event:
+    at Context.<anonymous> (test/core/resolvers/gitResolver.js:896:14)

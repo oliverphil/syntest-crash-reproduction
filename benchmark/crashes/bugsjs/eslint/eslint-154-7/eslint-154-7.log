@@ -1,0 +1,27 @@
+YAMLException: duplicated mapping key at line 90, column 5:
+        no-console: 0
+        ^
+    at generateError (node_modules/js-yaml/lib/js-yaml/loader.js:167:10)
+    at throwError (node_modules/js-yaml/lib/js-yaml/loader.js:173:9)
+    at storeMappingPair (node_modules/js-yaml/lib/js-yaml/loader.js:335:7)
+    at readBlockMapping (node_modules/js-yaml/lib/js-yaml/loader.js:1098:9)
+    at composeNode (node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readBlockMapping (node_modules/js-yaml/lib/js-yaml/loader.js:1089:11)
+    at composeNode (node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readDocument (node_modules/js-yaml/lib/js-yaml/loader.js:1525:3)
+    at loadDocuments (node_modules/js-yaml/lib/js-yaml/loader.js:1588:5)
+    at load (node_modules/js-yaml/lib/js-yaml/loader.js:1614:19)
+    at Object.safeLoad (node_modules/js-yaml/lib/js-yaml/loader.js:1637:10)
+    at readConfigFromFile (lib/config.js:124:31)
+    at loadConfig (lib/config.js:176:22)
+    at lib/config.js:207:46
+    at Array.reduceRight (native)
+    at loadConfig (lib/config.js:191:36)
+    at getLocalConfig (lib/config.js:321:23)
+    at Config.getConfig (lib/config.js:416:22)
+    at processText (lib/cli-engine.js:201:27)
+    at processFile (lib/cli-engine.js:262:18)
+    at executeOnFile (lib/cli-engine.js:609:23)
+    at Array.forEach (native)
+    at CLIEngine.executeOnFiles (lib/cli-engine.js:632:56)
+    at Context.<anonymous> (tests/lib/cli-engine.js:319:33)

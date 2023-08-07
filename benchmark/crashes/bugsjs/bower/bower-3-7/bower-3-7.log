@@ -1,0 +1,9 @@
+Error: ENOENT: no such file or directory, lstat '/local/scratch/testing/BugsJS/output/bower/test/assets/package-a'
+From previous event:
+    at GitFsResolver._checkout (lib/core/resolvers/GitFsResolver.js:36:6)
+    at lib/core/resolvers/GitResolver.js:68:21
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+From previous event:
+    at GitFsResolver.Resolver.resolve (lib/core/resolvers/Resolver.js:83:6)
+    at Context.<anonymous> (test/core/resolvers/gitFsResolver.js:114:22)

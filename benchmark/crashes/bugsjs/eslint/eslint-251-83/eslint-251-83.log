@@ -1,0 +1,2 @@
+AssertionError: 'VariableDeclarator:exit' == 'LineComment:exit'
+    at Context.<anonymous> (tests/lib/util/comment-event-generator.js:79:20)

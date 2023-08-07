@@ -1,0 +1,9 @@
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: 'class A { a() { <Foo onClick={super} /> } }',
+    message: 'Parsing error: Unexpected token }',
+    line: 1,
+    column: 36 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:422:20)
+    at Context.RuleTester.it (lib/testers/rule-tester.js:518:25)

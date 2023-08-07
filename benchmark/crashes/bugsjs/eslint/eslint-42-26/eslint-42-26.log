@@ -1,0 +1,26 @@
+AssertionError: Should have 1 errors but had 2: [ { ruleId: 'no-undefined',
+    severity: 1,
+    node: 
+     { type: 'Identifier',
+       name: 'undefined',
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Unexpected use of undefined.',
+    line: 1,
+    column: 13,
+    source: 'undefined' },
+  { ruleId: 'no-undefined',
+    severity: 1,
+    node: 
+     { type: 'Identifier',
+       name: 'undefined',
+       range: [Object],
+       loc: [Object],
+       parent: [Object] },
+    message: 'Unexpected use of undefined.',
+    line: 1,
+    column: 13,
+    source: 'undefined' } ]: expected 2 to equal 1
+    at testInvalidTemplate (node_modules/eslint-tester/lib/eslint-tester.js:129:24)
+    at Context.<anonymous> (node_modules/eslint-tester/lib/eslint-tester.js:177:25)

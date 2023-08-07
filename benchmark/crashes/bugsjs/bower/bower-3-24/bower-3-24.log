@@ -1,0 +1,6 @@
+Error: expected 'https://github.com/bower/bower.git' to equal 'git://github.com/bower/bower.git'
+    at Assertion.assert (node_modules/expect.js/index.js:96:13)
+    at Assertion.be.Assertion.equal (node_modules/expect.js/index.js:216:10)
+    at test/core/resolverFactory.js:118:49
+From previous event:
+    at Context.<anonymous> (test/core/resolverFactory.js:147:10)

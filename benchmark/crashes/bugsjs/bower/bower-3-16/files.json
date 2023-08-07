@@ -1,0 +1,1 @@
+["lib/util/createError.js","lib/util/cmd.js","internal/child_process.js","net","p-throttler/index.js","q/q.js","internal/process/next_tick.js","Array.reduce","lib/core/resolvers/GitResolver.js","lib/core/resolvers/GitRemoteResolver.js","lib/core/resolvers/Resolver.js","test/core/resolvers/gitRemoteResolver.js"]

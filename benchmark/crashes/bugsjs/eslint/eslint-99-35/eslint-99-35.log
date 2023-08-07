@@ -1,0 +1,9 @@
+AssertionError: Should have no errors but had 1: [ { ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: 'function* foo() { (() =>yield foo) }',
+    message: 'Parsing error: Unexpected token foo',
+    line: 1,
+    column: 31 } ]
+    at testValidTemplate (lib/testers/rule-tester.js:336:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:421:25)

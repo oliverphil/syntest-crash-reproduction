@@ -1,0 +1,16 @@
+TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at Object.deepmerge [as merge] (lib/config/config-ops.js:167:20)
+    at getLocalConfig (lib/config.js:147:71)
+    at Config.getConfig (lib/config.js:222:22)
+    at processText (lib/cli-engine.js:155:27)
+    at processFile (lib/cli-engine.js:227:18)
+    at executeOnFile (lib/cli-engine.js:602:23)
+    at lib/cli-engine.js:629:17
+    at Array.forEach (native)
+    at CLIEngine.executeOnFiles (lib/cli-engine.js:624:18)
+    at getSourceCodeOfFile (lib/util/source-code-util.js:33:9)
+    at lib/util/source-code-util.js:81:26
+    at Array.forEach (native)
+    at getSourceCodeOfFiles (lib/util/source-code-util.js:80:15)
+    at Context.<anonymous> (tests/lib/util/source-code-util.js:159:13)

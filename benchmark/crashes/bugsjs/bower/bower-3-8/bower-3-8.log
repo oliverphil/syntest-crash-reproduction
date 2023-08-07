@@ -1,0 +1,4 @@
+Error: ENOENT: no such file or directory, open '/local/scratch/testing/BugsJS/output/bower/test/assets/package-a/new-file'
+    at Object.fs.openSync (fs.js:584:18)
+    at Object.fs.writeFileSync (fs.js:1314:33)
+    at Context.<anonymous> (test/core/resolvers/gitFsResolver.js:134:16)

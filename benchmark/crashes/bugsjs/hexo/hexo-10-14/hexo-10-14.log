@@ -1,0 +1,14 @@
+Error
+    at Promise.then.hooks (node_modules/warehouse/lib/model.js:444:21)
+    at tryCatcher (node_modules/bluebird/js/main/util.js:26:23)
+    at Promise._resolveFromResolver (node_modules/bluebird/js/main/promise.js:483:31)
+    at new Promise (node_modules/bluebird/js/main/promise.js:71:37)
+    at Database._Model.Model.Model.removeById (node_modules/warehouse/lib/model.js:440:10)
+    at node_modules/warehouse/lib/query.js:438:18
+    at tryCatcher (node_modules/bluebird/js/main/util.js:26:23)
+    at MappingPromiseArray._promiseFulfilled (node_modules/bluebird/js/main/map.js:56:38)
+    at MappingPromiseArray.init (node_modules/bluebird/js/main/promise_array.js:92:18)
+    at MappingPromiseArray.init (node_modules/bluebird/js/main/map.js:29:23)
+    at Async._drainQueue (node_modules/bluebird/js/main/async.js:128:12)
+    at Async._drainQueues (node_modules/bluebird/js/main/async.js:133:10)
+    at Immediate.Async.drainQueues (node_modules/bluebird/js/main/async.js:15:14)
