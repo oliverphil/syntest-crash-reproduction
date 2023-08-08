@@ -16,3 +16,4 @@
  * limitations under the License.
  */
 export * as module from "./lib/CrashModule";
+export * from './lib/utils/StackTraceUtils';
