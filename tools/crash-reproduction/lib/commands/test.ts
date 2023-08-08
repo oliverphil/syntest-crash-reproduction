@@ -101,5 +101,5 @@ export type TestCommandOptions = {
   syntestCrashes: string | undefined;
   syntestSeeded: string;
   syntestType: string | undefined;
-  syntestCrash: string | undefined;
+  syntestCrash: string[] | undefined;
 };

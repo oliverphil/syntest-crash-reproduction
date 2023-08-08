@@ -63,5 +63,7 @@
   "syntest-project": "express",
   "syntest-crashes": "false",
   "syntest-type": "syntest-collected",
-  "syntest-crash": "express-2761-1"
+  "syntest-crash": [
+    "express-2761-1"
+  ]
 }

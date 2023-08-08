@@ -119,9 +119,9 @@ export class EnvironmentGenerator {
   /**
    * Load crash information from json files
    * @private
-   * @return {Observable<Crash>} an observable to provide crashes
+   * @return {Crash[]} an observable to provide crashes
    */
-  loadAssets(project: string | undefined, syntestType: string | undefined, syntestCrash: string | undefined): Crash[] {
+  loadAssets(project: string | undefined, syntestType: string | undefined, syntestCrash: string[] | undefined): Crash[] {
     console.log('Loading Crashes... ');
     const assetDir = './benchmark/crashes';
     const crashInfo = this.handleSyntestType(project, syntestType);
@@ -165,7 +165,7 @@ export class EnvironmentGenerator {
 
     // return crashes.filter(crash => crash.crashId === 'express-1-13');
     if (syntestCrash) {
-      return crashes.filter(crash => crash.crashId === syntestCrash);
+      return crashes.filter(crash => syntestCrash.includes(crash.crashId));
     }
     return crashes;
   }
