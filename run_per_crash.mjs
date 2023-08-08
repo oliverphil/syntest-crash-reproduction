@@ -17,8 +17,8 @@ for (const type of types) {
         const crashes = envGen.loadAssets(project, type);
         for (let i = 0; i < crashes.length; i += 10) {
             const finalIndex = i + 9 < crashes.length ? i + 9 : crashes.length - 1;
-            const currectCrashes = crashes.splice(i, finalIndex);
-            syntestFile['syntest-crash'] = currectCrashes.map(c => c.crashId);
+            const currentCrashes = crashes.splice(i, finalIndex);
+            syntestFile['syntest-crash'] = currentCrashes.map(c => c.crashId);
             // execSync(`sed -i "s/^.*syntest-crash.*$/  \\"syntest-crash\\": \\"${crash.crashId}\\",/" .syntest.json`);
             execSync(`./run_experiments_on_grid.sh ${currentCrashes[0].crashId}`);
         }
