@@ -74,10 +74,15 @@ export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScript
 
 export function someCallHierarchyWithoutCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult.hasExceptions()) {
-        const traces = executionResult.getTraces();
-        traces.find(trace => {
-           const path = trace.path;
+        const traces = executionResult.getTraces().filter(trace => {
+            for (const frame of stackTrace.trace) {
+                if (trace.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0) {
+                    return true;
+                }
+            }
+            return false;
         });
+        return traces.length / stackTrace.trace.length;
     }
     return 1;
 }
