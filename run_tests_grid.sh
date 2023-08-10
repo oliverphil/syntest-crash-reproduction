@@ -140,10 +140,7 @@ cp -r .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes/
 #  noting that we need to distinguish between the TASKS
 #  (really should check that directory exists too, but this is just a test)
 #
-#mkdir -p /vol/grid-solar/sgeusers/oliverphil/$JOB_ID
-if [ -d /vol/grid-solar/sgeusers/oliverphil/output ]; then
-  mkdir /vol/grid-solar/sgeusers/oliverphil/output;
-fi
+mkdir -p /vol/grid-solar/sgeusers/oliverphil/output
 
 cp output_$2.log /vol/grid-solar/sgeusers/oliverphil/output/output_$2.log
 cp stderr_$2.log /vol/grid-solar/sgeusers/oliverphil/output/stderr_$2.log

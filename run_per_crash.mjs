@@ -20,7 +20,7 @@ for (const type of types) {
             const currentCrashes = crashes.splice(i, finalIndex);
             syntestFile['syntest-crash'] = currentCrashes.map(c => c.crashId);
             // execSync(`sed -i "s/^.*syntest-crash.*$/  \\"syntest-crash\\": \\"${crash.crashId}\\",/" .syntest.json`);
-            execSync(`./run_experiments_on_grid.sh ${currentCrashes[0].crashId}`);
+            console.log(execSync(`./run_experiments_on_grid.sh ${currentCrashes[0].crashId}`).toString());
         }
     }
 }
