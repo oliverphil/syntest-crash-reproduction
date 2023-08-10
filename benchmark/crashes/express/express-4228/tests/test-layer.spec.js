@@ -6,53 +6,65 @@ chai.use(chaiAsPromised);
 
 describe('layer', () => {
 	it('test for layer', async () => {
-		const _Layer_object_zJNj = new Layer()
+		const _Layer_object_mquM = new Layer()
 
 
 	}).timeout(3000);
 
 	it('test for layer', async () => {
-		const _path_string_byYr = "TGaqHnYbkr";
-		const _options_boolean_DGDD = true;
-		const _fn_function_TJCN = () => { };
-		const _Layer_object_PDHN = new Layer(_path_string_byYr, _options_boolean_DGDD, _fn_function_TJCN)
-		const _error_string_qMwQ = "riwIW6CWJcaNu9cVBIGJjuK2oIJyBx6F4VYrlb2mifcAUuwmlH3DK3nQQcdLoOWTNabNAehLkAlELfTxO34G3q";
-		const _req_string_hWUX = "FHlsSHixXA7blDirLVoItQOB46x3Gc5aY3PsCl9IsC2L6np5TSApkDbt6vQ3nCTtYhrP7Xzy6";
-		const _res_boolean_Brsx = true;
-		const _next_string_Euid = "HG6eRF8W2YJH5khwKqd8Gk8VuG4hGvwJfaTyPkkEHjkvGNH";
+		const _path_object_WagU = {
+		
+	}
+		const _options_null_iYHb = null;
+		const _fn_object_UiaT = {
+		
+	}
+		const _Layer_object_nKgx = new Layer(_path_object_WagU, _options_null_iYHb, _fn_object_UiaT)
+		const _req_numeric_tlyi = 9.59596548618088;
+		const _res_undefined_XoyL = undefined;
+		const _next_boolean_ZTaA = true;
 
-		expect(JSON.parse(JSON.stringify(_Layer_object_PDHN))).to.deep.equal({"name":"_fn_function_TJCN","keys":[],"regexp":{"fast_star":false,"fast_slash":false}})
+		expect(JSON.parse(JSON.stringify(_Layer_object_nKgx))).to.deep.equal({"handle":{},"name":"<anonymous>","keys":[],"regexp":{"fast_star":false,"fast_slash":false}})
+		expect(JSON.parse(JSON.stringify(_fn_object_UiaT))).to.deep.equal({})
+		expect(JSON.parse(JSON.stringify(_path_object_WagU))).to.deep.equal({})
 
 		try {
-			const _handle_error_function_ZhEn = await _Layer_object_PDHN.handle_error(_error_string_qMwQ, _req_string_hWUX, _res_boolean_Brsx, _next_string_Euid)
+			const _handle_request_function_qnog = await _Layer_object_nKgx.handle_request(_req_numeric_tlyi, _res_undefined_XoyL, _next_boolean_ZTaA)
 		} catch (e) {
 			expect(e).to.be.an('error')
 		}
 	}).timeout(3000);
 
 	it('test for layer', async () => {
-		const _path_undefined_LrUQ = undefined;
-		const _options_string_VHDr = "6MK5MyRV12WrUETsnKYRsdlHd57UIe1INe3HYifAyJywNafRKN9i4UllT2ZjqqOkOKprO8ZqdZnFJc61DsUn";
-		const _fn_boolean_ODKZ = false;
-		const _Layer_object_msGd = new Layer(_path_undefined_LrUQ, _options_string_VHDr, _fn_boolean_ODKZ)
+		const _path_undefined_wzVY = undefined;
+		const _options_numeric_KZWQ = 5.344107812785353;
+		const _fn_object_KBnl = {
+		
+	}
+
+		expect(JSON.parse(JSON.stringify(_fn_object_KBnl))).to.deep.equal({})
+
+		try {
+			const _Layer_object_FSFv = new Layer(_path_undefined_wzVY, _options_numeric_KZWQ, _fn_object_KBnl)
+		} catch (e) {
+			expect(e).to.be.an('error')
+		}
+	}).timeout(3000);
+
+	it('test for layer', async () => {
+		const _path_numeric_aGVX = 5.2739985171566985;
+		const _options_boolean_mMiQ = false;
+		const _fn_null_xMrk = null;
+		const _Layer_object_GtwS = new Layer(_path_numeric_aGVX, _options_boolean_mMiQ, _fn_null_xMrk)
 
 
 	}).timeout(3000);
 
 	it('test for layer', async () => {
-		const _path_string_YsfH = "h3alU2bEm7keh3I873LQnFHwEyr5S4JOq1htxvSYP4pj1D2yIReyoEDoRF6K1OXq9xKC8bpvortmQW";
-		const _options_boolean_hKpw = false;
-		const _fn_null_gVUw = null;
-		const _Layer_object_fFRx = new Layer(_path_string_YsfH, _options_boolean_hKpw, _fn_null_gVUw)
-
-
-	}).timeout(3000);
-
-	it('test for layer', async () => {
-		const _path_null_zKNx = null;
-		const _options_string_hLNc = "8aD9QGaP7qnvS5NXpMe7li7A5G";
-		const _fn_string_NhRx = "I2QzqkzM69Bz4zIUSP7HYmlcdoCIpwCNyj9EMkUDbp4RwVoGoY9AzHp";
-		const _Layer_object_TvUm = new Layer(_path_null_zKNx, _options_string_hLNc, _fn_string_NhRx)
+		const _path_null_dRfE = null;
+		const _options_boolean_HMGP = true;
+		const _fn_string_oxwr = "hzuePs1U50TJicLyRxKBQ1gSOp5al6bm4e468U6sNEUTpgXcnVVyaOwb32b59mHdkRYk8RQ2r";
+		const _Layer_object_CQxC = new Layer(_path_null_dRfE, _options_boolean_HMGP, _fn_string_oxwr)
 
 
 	}).timeout(3000);

@@ -75,6 +75,9 @@ export class StackTraceProcessor {
       /at\s(?:new)?\s?([:a-zA-Z~\/\\\-<>._@+]+)\s\(([A-Za-z]+:[A-Za-z/_]+):(\d+):(\d+)\)/m;
     const frames: StackFrame[] = [];
     for (const line of lines.filter((l) => l.length > 0)) {
+      if (line.includes('.syntest/tests/tempTest.spec.js')) {
+        continue;
+      }
       let dependency = undefined;
       let result = moduleRegex.exec(line);
       const isEmbeddedOrAnonymous: boolean = line.includes('<anonymous>') ||

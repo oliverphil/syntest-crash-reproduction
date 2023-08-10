@@ -42,7 +42,7 @@ export class CrashInstrumenter extends Instrumenter {
         const absoluteRootPath = path.resolve(rootContext.rootPath );
 
         const destinationPath = path.resolve(
-            temporaryInstrumentedDirectory + `/crashes${(crash.seeded ? '/seeded' : '')}/${crash.project}/${crash.crashId}`,
+            temporaryInstrumentedDirectory + absoluteRootPath.split('benchmark')[1],
             // path.basename(absoluteRootPath)
         );
 

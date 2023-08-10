@@ -6,7 +6,7 @@ chai.use(chaiAsPromised);
 
 describe('node', () => {
 	it('test for node', async () => {
-		const _formatArgs_function_JhRW = await formatArgs()
+		const _formatArgs_function_XoEa = await formatArgs()
 
 
 	}).timeout(3000);

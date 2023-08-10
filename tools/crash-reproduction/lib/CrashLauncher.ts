@@ -100,6 +100,7 @@ export class CrashLauncher extends Launcher {
   private targets: Target[];
 
   private rootContext: RootContext;
+  private rootPath: string;
   private archive: Archive<JavaScriptTestCase>;
 
   private exports: Export[];
@@ -109,6 +110,7 @@ export class CrashLauncher extends Launcher {
 
   private crash: Crash;
   private objectiveManager: ObjectiveManager<JavaScriptTestCase>;
+  private objectiveManagers: {[key: string]: ObjectiveManager<JavaScriptTestCase>} = {};
 
   constructor(
     arguments_: JavaScriptArguments,
@@ -150,6 +152,8 @@ export class CrashLauncher extends Launcher {
     } else if (this.arguments_.syntestType === 'syntest-collected') {
       rootPath = this.arguments_.targetRootDirectory + `/syntest-collected/${this.crash.project}/${this.crash.crashId}`;
     }
+
+    this.rootPath = rootPath;
 
     this.rootContext = new RootContext(
       rootPath,
@@ -231,10 +235,10 @@ export class CrashLauncher extends Launcher {
     const exclude: string[] = [];
     for (const frame of crash.stackTrace.trace) {
       if (frame.file.includes('.js')) {
-        let crashFile = `./benchmark/crashes/${crash.project}/${crash.crashId}/**/${frame.file}`;
-        if (crash.seeded) {
-          crashFile = `./benchmark/crashes/seeded/${crash.project}/${crash.crashId}/**/${frame.file}`;
-        }
+        let crashFile = `${this.rootPath}/**/${frame.file}`;
+        // if (crash.seeded) {
+        //   crashFile = `./benchmark/crashes/seeded/${crash.project}/${crash.crashId}/**/${frame.file}`;
+        // }
         include.push(crashFile);
       }
       // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
@@ -458,6 +462,7 @@ export class CrashLauncher extends Launcher {
     this.archive = new Archive<JavaScriptTestCase>();
     this.exports = [];
     this.dependencyMap = new Map();
+    this.objectiveManagers = {};
     for (const target of this.targets) {
       CrashLauncher.LOGGER.info(`Processing ${target.name}`);
       const archive = await this.testTarget(this.rootContext, target);
@@ -593,8 +598,9 @@ export class CrashLauncher extends Launcher {
         overall["function"] += data.f[functionKey] ? 1 : 0;
       }
 
-      const objectives = [...this.objectiveManager.getCoveredObjectives()];
-      objectives.push(...this.objectiveManager.getUncoveredObjectives());
+      const objectiveManager = this.objectiveManagers[file];
+      const objectives = [...objectiveManager.getCoveredObjectives()];
+      objectives.push(...objectiveManager.getUncoveredObjectives());
       for (const objective of objectives) {
         try {
           const encoding = this.archive.getEncoding(objective);
@@ -652,7 +658,7 @@ export class CrashLauncher extends Launcher {
 
     createDirectoryStructure(
         [path.join(
-            `benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`
+            `${this.rootPath}/tests`
         )]
     );
 
@@ -661,7 +667,7 @@ export class CrashLauncher extends Launcher {
       reducedArchive,
       originalSourceDirectory,
       path.join(
-        `benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`
+        `${this.rootPath}/tests`
       ),
       false,
       true
@@ -768,6 +774,8 @@ export class CrashLauncher extends Launcher {
       secondaryObjectives: secondaryObjectives,
       stackTrace: this.crash.stackTrace
     });
+
+    this.objectiveManagers[target.path] = objectiveManager;
 
     this.objectiveManager = objectiveManager;
 

@@ -6,8 +6,8 @@ chai.use(chaiAsPromised);
 
 describe('index', () => {
 	it('test for index', async () => {
-		const _method_null_AMWT = null;
-		const _anonymous_function_VRKC = await anonymous(_method_null_AMWT)
+		const _method_function_KfdE = () => { };
+		const _anonymous_function_byss = await anonymous(_method_function_KfdE)
 
 
 	}).timeout(3000);
