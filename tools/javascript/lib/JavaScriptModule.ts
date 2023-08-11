@@ -23,24 +23,38 @@ import { getTestCommand } from "./commands/test";
 import { Configuration, TestingToolModule } from "@syntest/base-language";
 import { UserInterface } from "@syntest/cli-graphics";
 import { MetricManager } from "@syntest/metric";
+import { StorageManager } from "@syntest/storage";
 import { RandomSamplerPlugin } from "./plugins/sampler/RandomSamplerPlugin";
 import { TreeCrossoverPlugin } from "./plugins/crossover/TreeCrossoverPlugin";
-import { SearchProgressBarListener } from "./plugins/listeners/SearchProgressBarListener";
 
 export default class JavaScriptModule extends TestingToolModule {
   constructor() {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires, unicorn/prefer-module
-    super("javascript", require("../../package.json").version);
+    super(
+      // eslint-disable-next-line @typescript-eslint/no-var-requires, unicorn/prefer-module
+      require("../../package.json").name,
+      // eslint-disable-next-line @typescript-eslint/no-var-requires, unicorn/prefer-module
+      require("../../package.json").version
+    );
   }
 
   override register(
     moduleManager: ModuleManager,
     metricManager: MetricManager,
+    storageManager: StorageManager,
     userInterface: UserInterface,
     modules: Module[]
   ): void {
+    const name = "javascript";
     const labels = ["javascript", "testing"];
-    const commands = [getTestCommand(this.name, moduleManager, userInterface)];
+    const commands = [
+      getTestCommand(
+        name,
+        moduleManager,
+        metricManager,
+        storageManager,
+        userInterface
+      ),
+    ];
 
     const additionalOptions: Map<string, yargs.Options> = new Map();
 
@@ -51,22 +65,24 @@ export default class JavaScriptModule extends TestingToolModule {
     }
 
     const javascriptTool = new Tool(
-      this.name,
+      name,
       labels,
       "A tool for testing javascript projects.",
       commands,
       additionalOptions
     );
 
-    moduleManager.registerTool(this.name, javascriptTool);
+    moduleManager.registerTool(this, javascriptTool);
 
-    moduleManager.registerPlugin(this.name, new TreeCrossoverPlugin());
-    moduleManager.registerPlugin(this.name, new RandomSamplerPlugin());
-    moduleManager.registerPlugin(
-      this.name,
-      new SearchProgressBarListener(userInterface)
+    moduleManager.registerPlugin(this, new TreeCrossoverPlugin());
+    moduleManager.registerPlugin(this, new RandomSamplerPlugin());
+
+    super.register(
+      moduleManager,
+      metricManager,
+      storageManager,
+      userInterface,
+      modules
     );
-
-    super.register(moduleManager, metricManager, userInterface, modules);
   }
 }

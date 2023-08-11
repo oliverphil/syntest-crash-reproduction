@@ -259,16 +259,16 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         //     ? path.node.id.name
         //     : "anonymous";
       }
-      case "ArrowFunctionExpression": {
-        return this._getTargetNameOfExpression(path.parentPath);
-      }
-      case "NewExpression": {
-        // @ts-ignore
-        return path.parentPath.node.callee.name;
-      }
-      case "ArrayExpression": {
-        return this._getTargetNameOfExpression(path.parentPath);
-      }
+      // case "ArrowFunctionExpression": {
+      //   return this._getTargetNameOfExpression(path.parentPath);
+      // }
+      // case "NewExpression": {
+      //   // @ts-ignore
+      //   return path.parentPath.node.callee.name;
+      // }
+      // case "ArrayExpression": {
+      //   return this._getTargetNameOfExpression(path.parentPath);
+      // }
       default: {
         // e.g. class {}
         // e.g. function () {}
@@ -284,11 +284,11 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   public FunctionExpression: (path: NodePath<t.FunctionExpression>) => void = (
     path
   ) => {
-    try {
+    // try {
       this._functionExpression(path);
-    } catch {
-      //
-    }
+    // } catch {
+    //   //
+    // }
   };
 
   public FunctionDeclaration: (path: NodePath<t.FunctionDeclaration>) => void =
@@ -410,8 +410,8 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // unsupported
           throw new Error("unknown class method parent");
         }
-      } else if (parentNode.id && parentNode.id.type === "Identifier") {
-        return parentNode.id.name;
+      // } else if (parentNode.id && parentNode.id.type === "Identifier") {
+      //   return parentNode.id.name;
       } else {
         // unsupported
         throw new Error("unknown class method parent");
@@ -534,7 +534,10 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
             }
             // add this as class method
             if (!property.isIdentifier()) {
-              return;
+              // return;
+              throw new Error(
+                unsupportedSyntax(path.node.type, this._getNodeId(path))
+              );
             }
 
             this._subTargets.push(<MethodTarget>{
@@ -559,10 +562,10 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         } else {
           // e.g. a.x.y = function () {}
           // unsupported for now should create a objecttarget as a subtarget
-          return;
-          // throw new Error(
-          //   unsupportedSyntax(path.node.type, this._getNodeId(path))
-          // );
+          // return;
+          throw new Error(
+            unsupportedSyntax(path.node.type, this._getNodeId(path))
+          );
         }
       }
 
@@ -611,7 +614,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           const objectTarget: ObjectTarget = {
             type: TargetType.OBJECT,
             name: object.node.name,
-            id: `${this._getNodeId(path)}`,
+            id: `${this._getBindingId(object)}`,
             exported: !!export_,
             default: export_ ? export_.default : false,
             module: export_ ? export_.module : false,

@@ -16,7 +16,6 @@
  * limitations under the License.
  */
 
-import { existsSync } from "node:fs";
 import * as path from "node:path";
 
 import { TestCommandOptions } from "./commands/test";
@@ -34,12 +33,13 @@ import {
   DependencyFactory,
   TypeExtractor,
   isExported,
+  ConstantPoolManager,
+  ConstantVisitor,
+  getAllFiles,
 } from "@syntest/analysis-javascript";
 import {
   ArgumentsObject,
   Launcher,
-  createDirectoryStructure,
-  clearDirectory,
   ObjectiveManagerPlugin,
   CrossoverPlugin,
   SearchAlgorithmPlugin,
@@ -48,7 +48,7 @@ import {
   SecondaryObjectivePlugin,
   ProcreationPlugin,
   TerminationTriggerPlugin,
-  deleteDirectories,
+  PropertyName,
 } from "@syntest/base-language";
 import {
   UserInterface,
@@ -76,20 +76,17 @@ import {
   SearchTimeBudget,
   TerminationManager,
   TotalTimeBudget,
-  getSeed,
-  initializePseudoRandomNumberGenerator,
 } from "@syntest/search";
 import { Instrumenter } from "@syntest/instrumentation-javascript";
 import { getLogger, Logger } from "@syntest/logging";
 import { TargetType } from "@syntest/analysis";
+import { MetricManager } from "@syntest/metric";
+import { StorageManager } from "@syntest/storage";
+import traverse from "@babel/traverse";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
 export class JavaScriptLauncher extends Launcher {
   private static LOGGER: Logger;
-
-  private arguments_: JavaScriptArguments;
-  private moduleManager: ModuleManager;
-  private userInterface: UserInterface;
 
   private targets: Target[];
 
@@ -104,64 +101,57 @@ export class JavaScriptLauncher extends Launcher {
   constructor(
     arguments_: JavaScriptArguments,
     moduleManager: ModuleManager,
+    metricManager: MetricManager,
+    storageManager: StorageManager,
     userInterface: UserInterface
   ) {
-    super();
+    super(
+      arguments_,
+      moduleManager,
+      metricManager,
+      storageManager,
+      userInterface
+    );
     JavaScriptLauncher.LOGGER = getLogger("JavaScriptLauncher");
-    this.arguments_ = arguments_;
-    this.moduleManager = moduleManager;
-    this.userInterface = userInterface;
   }
 
   async initialize(): Promise<void> {
     JavaScriptLauncher.LOGGER.info("Initialization started");
-    initializePseudoRandomNumberGenerator(this.arguments_.randomSeed);
-    if (existsSync(this.arguments_.tempSyntestDirectory)) {
-      JavaScriptLauncher.LOGGER.info("Cleaning up old directories");
-      deleteDirectories([
-        path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempTestDirectory
-        ),
-        path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempLogDirectory
-        ),
-        path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempInstrumentedDirectory
-        ),
-        this.arguments_.tempSyntestDirectory,
-      ]);
-    }
+    const start = Date.now();
+
+    this.metricManager.recordProperty(
+      PropertyName.CONSTANT_POOL_ENABLED,
+      `${(<JavaScriptArguments>this.arguments_).constantPool.toString()}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.CONSTANT_POOL_PROBABILITY,
+      `${(<JavaScriptArguments>(
+        this.arguments_
+      )).constantPoolProbability.toString()}`
+    );
+
+    this.storageManager.deleteTemporaryDirectories([
+      [this.arguments_.testDirectory],
+      [this.arguments_.logDirectory],
+      [this.arguments_.instrumentedDirectory],
+    ]);
 
     JavaScriptLauncher.LOGGER.info("Creating directories");
-    createDirectoryStructure([
-      path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.statisticsDirectory
-      ),
-      path.join(this.arguments_.syntestDirectory, this.arguments_.logDirectory),
-      path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.testDirectory
-      ),
+    this.storageManager.createDirectories([
+      [this.arguments_.testDirectory],
+      [this.arguments_.statisticsDirectory],
+      [this.arguments_.logDirectory],
     ]);
+
     JavaScriptLauncher.LOGGER.info("Creating temp directories");
-    createDirectoryStructure([
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempTestDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempLogDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempInstrumentedDirectory
-      ),
-    ]);
+    this.storageManager.createDirectories(
+      [
+        [this.arguments_.testDirectory],
+        [this.arguments_.logDirectory],
+        [this.arguments_.instrumentedDirectory],
+      ],
+      true
+    );
 
     const abstractSyntaxTreeFactory = new AbstractSyntaxTreeFactory();
     const targetFactory = new TargetFactory();
@@ -170,7 +160,7 @@ export class JavaScriptLauncher extends Launcher {
     const exportFactory = new ExportFactory();
     const typeExtractor = new TypeExtractor();
     const typeResolver: TypeModelFactory =
-      this.arguments_.typeInferenceMode === "none"
+      (<JavaScriptArguments>this.arguments_).typeInferenceMode === "none"
         ? new RandomTypeModelFactory()
         : new InferenceTypeModelFactory();
 
@@ -195,15 +185,30 @@ export class JavaScriptLauncher extends Launcher {
     //     (<unknown>[["Target Root Directory", this.arguments_.targetRootDirectory]])
     //   ),
     // ]);
+
+    const timeInMs = (Date.now() - start) / 1000;
+    this.metricManager.recordProperty(
+      PropertyName.INITIALIZATION_TIME,
+      `${timeInMs}`
+    );
+
     JavaScriptLauncher.LOGGER.info("Initialization done");
   }
 
   async preprocess(): Promise<void> {
     JavaScriptLauncher.LOGGER.info("Preprocessing started");
+    const startPreProcessing = Date.now();
+
+    const startTargetSelection = Date.now();
     const targetSelector = new TargetSelector(this.rootContext);
     this.targets = targetSelector.loadTargets(
       this.arguments_.include,
       this.arguments_.exclude
+    );
+    let timeInMs = (Date.now() - startTargetSelection) / 1000;
+    this.metricManager.recordProperty(
+      PropertyName.TARGET_LOAD_TIME,
+      `${timeInMs}`
     );
 
     if (this.targets.length === 0) {
@@ -212,6 +217,8 @@ export class JavaScriptLauncher extends Launcher {
         `No targets where selected! Try changing the 'include' parameter`
       );
       await this.exit();
+      // eslint-disable-next-line unicorn/no-process-exit
+      process.exit();
     }
 
     const itemization: ItemizationItem[] = [];
@@ -243,7 +250,7 @@ export class JavaScriptLauncher extends Launcher {
         ["Termination Triggers", `${this.arguments_.terminationTriggers}`],
         ["Test Minimization Enabled", `${this.arguments_.testMinimization}`],
 
-        ["Seed", getSeed()],
+        ["Seed", `${this.arguments_.randomSeed.toString()}`],
       ],
       footers: ["", ""],
     };
@@ -291,10 +298,13 @@ export class JavaScriptLauncher extends Launcher {
           "Sample Output Values",
           `${this.arguments_.sampleFunctionOutputAsArgument}`,
         ],
-        ["Use Constant Pool Values", `${this.arguments_.constantPool}`],
+        [
+          "Use Constant Pool Values",
+          `${(<JavaScriptArguments>this.arguments_).constantPool}`,
+        ],
         [
           "Use Constant Pool Probability",
-          `${this.arguments_.constantPoolProbability}`,
+          `${(<JavaScriptArguments>this.arguments_).constantPoolProbability}`,
         ],
       ],
       footers: ["", ""],
@@ -304,12 +314,21 @@ export class JavaScriptLauncher extends Launcher {
     const typeSettings: TableObject = {
       headers: ["Setting", "Value"],
       rows: [
-        ["Type Inference Mode", `${this.arguments_.typeInferenceMode}`],
+        [
+          "Type Inference Mode",
+          `${(<JavaScriptArguments>this.arguments_).typeInferenceMode}`,
+        ],
         [
           "Incorporate Execution Information",
-          `${this.arguments_.incorporateExecutionInformation}`,
+          `${
+            (<JavaScriptArguments>this.arguments_)
+              .incorporateExecutionInformation
+          }`,
         ],
-        ["Random Type Probability", `${this.arguments_.randomTypeProbability}`],
+        [
+          "Random Type Probability",
+          `${(<JavaScriptArguments>this.arguments_).randomTypeProbability}`,
+        ],
       ],
       footers: ["", ""],
     };
@@ -328,34 +347,42 @@ export class JavaScriptLauncher extends Launcher {
     this.userInterface.printTable("DIRECTORY SETTINGS", directorySettings);
 
     JavaScriptLauncher.LOGGER.info("Instrumenting targets");
+    const startInstrumentation = Date.now();
     const instrumenter = new Instrumenter();
     await instrumenter.instrumentAll(
+      this.storageManager,
       this.rootContext,
       this.targets,
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempInstrumentedDirectory
-      )
+      this.arguments_.instrumentedDirectory
+    );
+    timeInMs = (Date.now() - startInstrumentation) / 1000;
+    this.metricManager.recordProperty(
+      PropertyName.INSTRUMENTATION_TIME,
+      `${timeInMs}`
     );
 
+    const startTypeResolving = Date.now();
     JavaScriptLauncher.LOGGER.info("Extracting types");
     this.rootContext.extractTypes();
     JavaScriptLauncher.LOGGER.info("Resolving types");
     this.rootContext.resolveTypes();
+    timeInMs = (Date.now() - startTypeResolving) / 1000;
+    this.metricManager.recordProperty(
+      PropertyName.TYPE_RESOLVE_TIME,
+      `${timeInMs}`
+    );
+
+    timeInMs = (Date.now() - startPreProcessing) / 1000;
+    this.metricManager.recordProperty(
+      PropertyName.PREPROCESS_TIME,
+      `${timeInMs}`
+    );
     JavaScriptLauncher.LOGGER.info("Preprocessing done");
-
-    // const maps = this.rootContext.getTypeModel().calculateProbabilitiesForFile(false, '/Users/dimitrist/Documents/git/syntest/syntest-javascript-benchmark/lodash/truncate.js')
-
-    // for (const [id, map] of maps.entries()) {
-    //   console.log(id)
-    //   console.log(map)
-    // }
-    // eslint-disable-next-line unicorn/no-process-exit
-    // process.exit(0)
   }
 
   async process(): Promise<void> {
     JavaScriptLauncher.LOGGER.info("Processing started");
+    const start = Date.now();
     this.archive = new Archive<JavaScriptTestCase>();
     this.exports = [];
     this.dependencyMap = new Map();
@@ -371,23 +398,21 @@ export class JavaScriptLauncher extends Launcher {
       this.exports.push(...this.rootContext.getExports(target.path));
     }
     JavaScriptLauncher.LOGGER.info("Processing done");
+    const timeInMs = (Date.now() - start) / 1000;
+    this.metricManager.recordProperty(PropertyName.PROCESS_TIME, `${timeInMs}`);
   }
 
   async postprocess(): Promise<void> {
     JavaScriptLauncher.LOGGER.info("Postprocessing started");
-    const temporaryTestDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempTestDirectory
-    );
-    const temporaryLogDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempLogDirectory
-    );
-
+    const start = Date.now();
     const decoder = new JavaScriptDecoder(
       this.exports,
       this.arguments_.targetRootDirectory,
-      temporaryLogDirectory
+      path.join(
+        this.arguments_.tempSyntestDirectory,
+        this.arguments_.fid,
+        this.arguments_.logDirectory
+      )
     );
 
     const executionInformationIntegrator = new ExecutionInformationIntegrator(
@@ -395,15 +420,17 @@ export class JavaScriptLauncher extends Launcher {
     );
 
     const runner = new JavaScriptRunner(
+      this.storageManager,
       decoder,
       executionInformationIntegrator,
-      temporaryTestDirectory
+      this.arguments_.testDirectory
     );
 
     const suiteBuilder = new JavaScriptSuiteBuilder(
+      this.storageManager,
       decoder,
       runner,
-      temporaryLogDirectory
+      this.arguments_.logDirectory
     );
 
     const reducedArchive = suiteBuilder.reduceArchive(this.archive);
@@ -412,14 +439,16 @@ export class JavaScriptLauncher extends Launcher {
     let paths = suiteBuilder.createSuite(
       reducedArchive,
       "../instrumented",
-      temporaryTestDirectory,
+      this.arguments_.testDirectory,
       true,
       false
     );
     await suiteBuilder.runSuite(paths);
 
     // reset states
-    suiteBuilder.clearDirectory(temporaryTestDirectory);
+    this.storageManager.clearTemporaryDirectory([
+      this.arguments_.testDirectory,
+    ]);
 
     // run with assertions and report results
     for (const key of reducedArchive.keys()) {
@@ -429,7 +458,7 @@ export class JavaScriptLauncher extends Launcher {
     paths = suiteBuilder.createSuite(
       reducedArchive,
       "../instrumented",
-      temporaryTestDirectory,
+      this.arguments_.testDirectory,
       false,
       true
     );
@@ -501,6 +530,41 @@ export class JavaScriptLauncher extends Launcher {
       ]);
     }
 
+    this.metricManager.recordProperty(
+      PropertyName.BRANCHES_COVERED,
+      `${overall["branch"]}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.STATEMENTS_COVERED,
+      `${overall["statement"]}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.FUNCTIONS_COVERED,
+      `${overall["function"]}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.BRANCHES_TOTAL,
+      `${totalBranches}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.STATEMENTS_TOTAL,
+      `${totalStatements}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.FUNCTIONS_TOTAL,
+      `${totalFunctions}`
+    );
+
+    // other results
+    this.metricManager.recordProperty(
+      PropertyName.ARCHIVE_SIZE,
+      `${this.archive.size}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.MINIMIZED_ARCHIVE_SIZE,
+      `${this.archive.size}`
+    );
+
     overall["statement"] /= totalStatements;
     if (totalStatements === 0) overall["statement"] = 1;
 
@@ -530,14 +594,17 @@ export class JavaScriptLauncher extends Launcher {
     suiteBuilder.createSuite(
       reducedArchive,
       originalSourceDirectory,
-      path.join(
-        this.arguments_.syntestDirectory,
-        this.arguments_.testDirectory
-      ),
+      this.arguments_.testDirectory,
       false,
+      true,
       true
     );
     JavaScriptLauncher.LOGGER.info("Postprocessing done");
+    const timeInMs = (Date.now() - start) / 1000;
+    this.metricManager.recordProperty(
+      PropertyName.POSTPROCESS_TIME,
+      `${timeInMs}`
+    );
   }
 
   private async testTarget(
@@ -547,7 +614,11 @@ export class JavaScriptLauncher extends Launcher {
     JavaScriptLauncher.LOGGER.info(
       `Testing target ${target.name} in ${target.path}`
     );
-    const currentSubject = new JavaScriptSubject(target, this.rootContext);
+    const currentSubject = new JavaScriptSubject(
+      target,
+      this.rootContext,
+      this.arguments_.stringAlphabet
+    );
 
     const rootTargets = currentSubject
       .getActionableTargets()
@@ -572,42 +643,61 @@ export class JavaScriptLauncher extends Launcher {
     dependencyMap.set(target.name, dependencies);
     const exports = rootContext.getExports(target.path);
 
-    const temporaryTestDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempTestDirectory
-    );
-    const temporaryLogDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempLogDirectory
-    );
-
     const decoder = new JavaScriptDecoder(
       exports,
       this.arguments_.targetRootDirectory,
-      temporaryLogDirectory
+      path.join(
+        this.arguments_.tempSyntestDirectory,
+        this.arguments_.fid,
+        this.arguments_.logDirectory
+      )
     );
     const executionInformationIntegrator = new ExecutionInformationIntegrator(
       this.rootContext.getTypeModel()
     );
     const runner = new JavaScriptRunner(
+      this.storageManager,
       decoder,
       executionInformationIntegrator,
-      temporaryTestDirectory
+      this.arguments_.testDirectory
     );
 
-    const suiteBuilder = new JavaScriptSuiteBuilder(
-      decoder,
-      runner,
-      temporaryLogDirectory
+    JavaScriptLauncher.LOGGER.info("Extracting constants");
+    const constantPoolManager = new ConstantPoolManager();
+    const targetAbstractSyntaxTree = this.rootContext.getAbstractSyntaxTree(
+      target.path
+    );
+    const constantVisitor = new ConstantVisitor(
+      target.path,
+      constantPoolManager.targetConstantPool
+    );
+    traverse(targetAbstractSyntaxTree, constantVisitor);
+
+    const files = getAllFiles(this.rootContext.rootPath, ".js").filter(
+      (x) =>
+        !x.includes("/test/") &&
+        !x.includes(".test.js") &&
+        !x.includes("node_modules")
     );
 
-    // TODO constant pool
+    for (const file of files) {
+      const abstractSyntaxTree = this.rootContext.getAbstractSyntaxTree(file);
+      const constantVisitor = new ConstantVisitor(
+        file,
+        constantPoolManager.contextConstantPool
+      );
+      traverse(abstractSyntaxTree, constantVisitor);
+    }
+    JavaScriptLauncher.LOGGER.info("Extracting constants done");
 
     const sampler = new JavaScriptRandomSampler(
       currentSubject,
-      this.arguments_.typeInferenceMode,
-      this.arguments_.randomTypeProbability,
-      this.arguments_.incorporateExecutionInformation,
+      constantPoolManager,
+      (<JavaScriptArguments>this.arguments_).constantPool,
+      (<JavaScriptArguments>this.arguments_).constantPoolProbability,
+      (<JavaScriptArguments>this.arguments_).typeInferenceMode,
+      (<JavaScriptArguments>this.arguments_).randomTypeProbability,
+      (<JavaScriptArguments>this.arguments_).incorporateExecutionInformation,
       this.arguments_.maxActionStatements,
       this.arguments_.stringAlphabet,
       this.arguments_.stringMaxLength,
@@ -678,7 +768,9 @@ export class JavaScriptLauncher extends Launcher {
       populationSize: this.arguments_.populationSize,
     });
 
-    suiteBuilder.clearDirectory(temporaryTestDirectory);
+    this.storageManager.clearTemporaryDirectory([
+      this.arguments_.testDirectory,
+    ]);
 
     // allocate budget manager
     const iterationBudget = new IterationBudget(this.arguments_.iterations);
@@ -722,8 +814,28 @@ export class JavaScriptLauncher extends Launcher {
       this.coveredInPath.set(target.path, archive);
     }
 
-    clearDirectory(temporaryLogDirectory);
-    clearDirectory(temporaryTestDirectory);
+    this.storageManager.clearTemporaryDirectory([this.arguments_.logDirectory]);
+    this.storageManager.clearTemporaryDirectory([
+      this.arguments_.testDirectory,
+    ]);
+
+    // timing and iterations/evaluations
+    this.metricManager.recordProperty(
+      PropertyName.TOTAL_TIME,
+      `${budgetManager.getBudgetObject(BudgetType.TOTAL_TIME).getUsedBudget()}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.SEARCH_TIME,
+      `${budgetManager.getBudgetObject(BudgetType.SEARCH_TIME).getUsedBudget()}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.EVALUATIONS,
+      `${budgetManager.getBudgetObject(BudgetType.EVALUATION).getUsedBudget()}`
+    );
+    this.metricManager.recordProperty(
+      PropertyName.ITERATIONS,
+      `${budgetManager.getBudgetObject(BudgetType.ITERATION).getUsedBudget()}`
+    );
 
     JavaScriptLauncher.LOGGER.info(
       `Finished testing target ${target.name} in ${target.path}`
@@ -736,20 +848,12 @@ export class JavaScriptLauncher extends Launcher {
     // TODO should be cleanup step in tool
     // Finish
     JavaScriptLauncher.LOGGER.info("Deleting temporary directories");
-    deleteDirectories([
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempTestDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempLogDirectory
-      ),
-      path.join(
-        this.arguments_.tempSyntestDirectory,
-        this.arguments_.tempInstrumentedDirectory
-      ),
-      this.arguments_.tempSyntestDirectory,
+    this.storageManager.deleteTemporaryDirectories([
+      [this.arguments_.testDirectory],
+      [this.arguments_.logDirectory],
+      [this.arguments_.instrumentedDirectory],
     ]);
+
+    this.storageManager.deleteMainTemporary();
   }
 }

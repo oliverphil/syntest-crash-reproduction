@@ -79,14 +79,14 @@ export function extractExportsFromExpressionStatement(
       if (object.name === "exports") {
         // e.g. exports.?? = ??
         if (property.type === "Identifier") {
-          // if (assigned.computed) {
-          //   // e.g. exports[x] = ??
-          //   // unsupported
-          //   throw new Error("Unsupported export declaration");
-          // } else {
+          if (assigned.computed) {
+            // e.g. exports[x] = ??
+            // unsupported
+            throw new Error("Unsupported export declaration");
+          } else {
             // e.g. exports.x = ??
             name = property.name;
-          // }
+          }
         } else if (property.type === "StringLiteral") {
           // e.g. exports["x"] = ??
           name = property.value;

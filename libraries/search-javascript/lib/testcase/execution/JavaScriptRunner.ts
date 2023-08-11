@@ -16,7 +16,6 @@
  * limitations under the License.
  */
 
-import { unlinkSync, writeFileSync } from "node:fs";
 import * as path from "node:path";
 
 import { Datapoint, EncodingRunner, ExecutionResult } from "@syntest/search";
@@ -40,20 +39,24 @@ import { JavaScriptTestCase } from "../JavaScriptTestCase";
 import { ExecutionInformationIntegrator } from "./ExecutionInformationIntegrator";
 import { SilentMochaReporter } from "./SilentMochaReporter";
 import {StackFrame, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
+import { StorageManager } from "@syntest/storage";
 
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected static LOGGER: Logger;
 
+  protected storageManager: StorageManager;
   protected decoder: JavaScriptDecoder;
   protected tempTestDirectory: string;
   protected executionInformationIntegrator: ExecutionInformationIntegrator;
 
   constructor(
+    storageManager: StorageManager,
     decoder: JavaScriptDecoder,
     executionInformationIntergrator: ExecutionInformationIntegrator,
     temporaryTestDirectory: string
   ) {
     JavaScriptRunner.LOGGER = getLogger(JavaScriptRunner.name);
+    this.storageManager = storageManager;
     this.decoder = decoder;
     this.executionInformationIntegrator = executionInformationIntergrator;
     this.tempTestDirectory = temporaryTestDirectory;
@@ -64,31 +67,6 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     // process.on("unhandledRejection", (reason) => {
     //   throw reason;
     // });
-  }
-
-  writeTestCase(
-    filePath: string,
-    testCase: JavaScriptTestCase,
-    targetName: string,
-    addLogs = false
-  ): void {
-    JavaScriptRunner.LOGGER.silly(`Writing test case to ${filePath}`);
-    const decodedTestCase = this.decoder.decode(testCase, targetName, addLogs);
-
-    writeFileSync(filePath, decodedTestCase);
-  }
-
-  /**
-   * Deletes a certain file.
-   *
-   * @param filepath  the filepath of the file to delete
-   */
-  deleteTestCase(filepath: string): void {
-    try {
-      unlinkSync(filepath);
-    } catch (error) {
-      JavaScriptRunner.LOGGER.debug(error);
-    }
   }
 
   async run(paths: string[]): Promise<Runner> {
@@ -146,11 +124,15 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     testCase: JavaScriptTestCase
   ): Promise<ExecutionResult> {
     JavaScriptRunner.LOGGER.silly("Executing test case");
-    const testPath = path.resolve(
-      path.join(this.tempTestDirectory, "tempTest.spec.js")
-    );
 
-    this.writeTestCase(testPath, testCase, subject.name);
+    const decodedTestCase = this.decoder.decode(testCase, subject.name, false);
+
+    const testPath = this.storageManager.store(
+      [this.tempTestDirectory],
+      "tempTest.spec.js",
+      decodedTestCase,
+      true
+    );
 
     const runner = await this.run([testPath]);
     const test = runner.suite.suites[0].tests[0];
@@ -177,10 +159,10 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         const hits = instrumentationData[key].f[functionKey];
 
         traces.push({
-          id: function_.loc.id,
+          id: function_.decl.id,
           type: "function",
           path: key,
-          line: function_.line,
+          location: function_.decl,
 
           hits: hits,
         });
@@ -196,7 +178,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
           id: statement.id,
           type: "statement",
           path: key,
-          line: statement.start.line,
+          location: statement,
 
           hits: hits,
         });
@@ -205,14 +187,19 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
       for (const branchKey of Object.keys(instrumentationData[key].branchMap)) {
         const branch = instrumentationData[key].branchMap[branchKey];
         const hits = <number[]>instrumentationData[key].b[branchKey];
-        const meta =
-          metaData === undefined ? undefined : metaData[key]?.meta?.[branchKey];
+        let meta;
+
+        if (metaData !== undefined && key in metaData) {
+          const metaPath = metaData[key];
+          const metaMeta = metaPath.meta;
+          meta = metaMeta[branchKey.toString()];
+        }
 
         traces.push({
           id: branch.locations[0].id,
           path: key,
           type: "branch",
-          line: branch.line,
+          location: branch.locations[0],
 
           hits: hits[0],
 
@@ -224,11 +211,14 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         if (branch.locations.length > 2) {
           // switch case
           for (const [index, location] of branch.locations.entries()) {
+            if (index === 0) {
+              continue;
+            }
             traces.push({
               id: location.id,
               path: key,
-              type: branch.type,
-              line: branch.line,
+              type: "branch",
+              location: branch.locations[index],
 
               hits: hits[index],
 
@@ -243,8 +233,8 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
           traces.push({
             id: branch.locations[1].id,
             path: key,
-            type: branch.type,
-            line: branch.line,
+            type: "branch",
+            location: branch.locations[1],
 
             hits: hits[1],
 
@@ -261,7 +251,7 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
             id: branch.locations[0].id,
             path: key,
             type: "branch",
-            line: branch.line,
+            location: branch.locations[0],
 
             hits: hits[0] ? 0 : 1,
 
@@ -320,7 +310,10 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     this.resetInstrumentationData();
 
     // Remove test file
-    this.deleteTestCase(testPath);
+    this.storageManager.deleteTemporary(
+      [this.tempTestDirectory],
+      "tempTest.spec.js"
+    );
 
     return executionResult;
   }

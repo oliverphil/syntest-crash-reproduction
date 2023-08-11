@@ -17,7 +17,7 @@
  */
 import { RootContext, SubTarget, Target } from "@syntest/analysis-javascript";
 import { TargetType } from "@syntest/analysis";
-import { ControlFlowGraph, Edge } from "@syntest/cfg";
+import { ControlFlowGraph, Edge, EdgeType } from "@syntest/cfg";
 import {
   FunctionObjectiveFunction,
   ObjectiveFunction,
@@ -31,11 +31,24 @@ import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
 import { BranchDistance } from "../criterion/BranchDistance";
 
 export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
-  constructor(target: Target, rootContext: RootContext) {
+  protected stringAlphabet: string;
+  constructor(
+    target: Target,
+    rootContext: RootContext,
+    stringAlphabet: string
+  ) {
     super(target, rootContext);
+    this.stringAlphabet = stringAlphabet;
+
+    this._extractObjectives();
   }
 
   protected _extractObjectives(): void {
+    this._objectives = new Map<
+      ObjectiveFunction<JavaScriptTestCase>,
+      ObjectiveFunction<JavaScriptTestCase>[]
+    >();
+
     const functions = this._rootContext.getControlFlowProgram(
       this._target.path
     ).functions;
@@ -54,11 +67,16 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
         const outGoingEdges = graph.getOutgoingEdges(controlNodeId);
 
         for (const edge of outGoingEdges) {
+          if (["ENTRY", "SUCCESS_EXIT", "ERROR_EXIT"].includes(edge.target)) {
+            throw new Error(
+              `Function ${function_.name} in ${function_.id} ends in entry/exit node`
+            );
+          }
           // Add objective function
           this._objectives.set(
             new BranchObjectiveFunction(
               new ApproachLevel(),
-              new BranchDistance(),
+              new BranchDistance(this.stringAlphabet),
               this,
               edge.target
             ),
@@ -82,21 +100,48 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
 
       // Add objective
       const functionObjective = new FunctionObjectiveFunction(
-        new ApproachLevel(),
-        new BranchDistance(),
         this,
-        children[0].id
+        function_.id
       );
-      const childObjectives = this.findChildren(
-        function_.graph,
-        functionObjective
-      );
-      this._objectives.set(functionObjective, childObjectives);
+
+      // find first control node in function
+      let firstControlNodeInFunction = children[0];
+      while (
+        function_.graph.getChildren(firstControlNodeInFunction.id).length === 1
+      ) {
+        firstControlNodeInFunction = function_.graph.getChildren(
+          firstControlNodeInFunction.id
+        )[0];
+      }
+
+      // there are control nodes in the function
+      if (
+        function_.graph.getChildren(firstControlNodeInFunction.id).length === 2
+      ) {
+        const firstObjectives = function_.graph
+          .getChildren(firstControlNodeInFunction.id)
+          .map((child) => {
+            return [...this._objectives.keys()].find(
+              (objective) => objective.getIdentifier() === child.id
+            );
+          });
+
+        if (!firstObjectives[0] || !firstObjectives[1]) {
+          throw new Error(
+            `Cannot find objective with id: ${firstControlNodeInFunction.id}`
+          );
+        }
+
+        this._objectives.set(functionObjective, [...firstObjectives]);
+      } else {
+        // no control nodes so no sub objectives
+        this._objectives.set(functionObjective, []);
+      }
     }
   }
 
   findChildren(
-    graph: ControlFlowGraph<unknown>,
+    graph: ControlFlowGraph,
     object: ObjectiveFunction<JavaScriptTestCase>
   ): ObjectiveFunction<JavaScriptTestCase>[] {
     let childObjectives: ObjectiveFunction<JavaScriptTestCase>[] = [];
@@ -108,9 +153,14 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
     while (edges2Visit.length > 0) {
       const edge = edges2Visit.pop();
 
-      if (visitedEdges.includes(edge))
+      if (visitedEdges.includes(edge)) {
         // this condition is made to avoid infinite loops
         continue;
+      }
+
+      if (edge.type === EdgeType.BACK_EDGE) {
+        continue;
+      }
 
       visitedEdges.push(edge);
 
@@ -118,9 +168,7 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
         (child) => child.getIdentifier() === edge.target
       );
       if (found.length === 0) {
-        const additionalEdges = graph.edges.filter(
-          (nextEdge) => nextEdge.source === edge.target
-        );
+        const additionalEdges = graph.getOutgoingEdges(edge.target);
         edges2Visit = [...edges2Visit, ...additionalEdges];
       } else {
         childObjectives = [...childObjectives, ...found];

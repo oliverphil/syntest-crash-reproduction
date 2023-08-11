@@ -62,6 +62,23 @@ export class SourceCoverage extends classes.FileCoverage {
     return `${this._filePath}:${startLine}:${startColumn}:::${endLine}:${endColumn}:::${startIndex}:${endIndex}`;
   }
 
+  public _getPlaceholderNodeId(loc): string {
+    if (loc === undefined) {
+      throw new Error(
+          `Node * in file '${this._filePath}' does not have a location`
+      );
+    }
+
+    const startLine = (<{ line: number }>(<unknown>loc.end)).line;
+    const startColumn = (<{ column: number }>(<unknown>loc.end)).column;
+    const startIndex = (<{ index: number }>(<unknown>loc.end)).index;
+    const endLine = (<{ line: number }>(<unknown>loc.end)).line;
+    const endColumn = (<{ column: number }>(<unknown>loc.end)).column;
+    const endIndex = (<{ index: number }>(<unknown>loc.end)).index;
+
+    return `${this._filePath}:${startLine}:${startColumn}:::${endLine}:${endColumn}:::${startIndex}:${endIndex}`;
+  }
+
   _cloneLocation(loc) {
     return {
       id: loc && this._getNodeId(loc),
@@ -78,11 +95,28 @@ export class SourceCoverage extends classes.FileCoverage {
     };
   }
 
-  newStatement(loc) {
+  newStatement(loc, placeholder = false, double = false) {
     const s = this.meta.last.s;
-    this.data.statementMap[s] = this._cloneLocation(loc);
-    this.data.s[s] = 0;
-    this.meta.last.s += 1;
+
+    if (placeholder) {
+      const clone = this._cloneLocation({
+        start: loc.end,
+        end: loc.end,
+      });
+      let id = this._getPlaceholderNodeId(loc);
+      if (double) {
+        id = "placeholder:::" + id;
+      }
+      clone.id = `placeholder:::${id}`;
+      this.data.statementMap[s] = clone;
+      this.data.s[s] = 0;
+      this.meta.last.s += 1;
+    } else {
+      this.data.statementMap[s] = this._cloneLocation(loc);
+      this.data.s[s] = 0;
+      this.meta.last.s += 1;
+    }
+
     return s;
   }
 
@@ -144,8 +178,8 @@ export class SourceCoverage extends classes.FileCoverage {
         start: ifPath.node.loc.end,
         end: ifPath.node.loc.end,
       });
-      const id = this._getNodeId(ifPath.node.loc);
-      clone.id = `placeholder-${id}`;
+      const id = this._getPlaceholderNodeId(ifPath.node.loc);
+      clone.id = `placeholder:::${id}`;
       bMeta.locations.push(clone);
     }
     counts.push(0);

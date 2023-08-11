@@ -35,6 +35,8 @@ import { UndefinedStatement } from "../statements/primitive/UndefinedStatement";
 import { ArrowFunctionStatement } from "../statements/complex/ArrowFunctionStatement";
 import { ArrayStatement } from "../statements/complex/ArrayStatement";
 import { ObjectStatement } from "../statements/complex/ObjectStatement";
+import { IntegerStatement } from "../statements/primitive/IntegerStatement";
+import { ConstantPoolManager } from "@syntest/analysis-javascript";
 
 /**
  * JavaScriptRandomSampler class
@@ -42,6 +44,9 @@ import { ObjectStatement } from "../statements/complex/ObjectStatement";
  * @author Dimitri Stallenberg
  */
 export abstract class JavaScriptTestCaseSampler extends EncodingSampler<JavaScriptTestCase> {
+  private _constantPoolManager: ConstantPoolManager;
+  private _constantPoolEnabled: boolean;
+  private _constantPoolProbability: number;
   private _typeInferenceMode: string;
   private _randomTypeProbability: number;
   private _incorporateExecutionInformation: boolean;
@@ -54,6 +59,9 @@ export abstract class JavaScriptTestCaseSampler extends EncodingSampler<JavaScri
 
   constructor(
     subject: JavaScriptSubject,
+    constantPoolManager: ConstantPoolManager,
+    constantPoolEnabled: boolean,
+    constantPoolProbability: number,
     typeInferenceMode: string,
     randomTypeProbability: number,
     incorporateExecutionInformation: boolean,
@@ -65,6 +73,9 @@ export abstract class JavaScriptTestCaseSampler extends EncodingSampler<JavaScri
     exploreIllegalValues: boolean
   ) {
     super(subject);
+    this._constantPoolManager = constantPoolManager;
+    this._constantPoolEnabled = constantPoolEnabled;
+    this._constantPoolProbability = constantPoolProbability;
     this._typeInferenceMode = typeInferenceMode;
     this._randomTypeProbability = randomTypeProbability;
     this._incorporateExecutionInformation = incorporateExecutionInformation;
@@ -115,15 +126,22 @@ export abstract class JavaScriptTestCaseSampler extends EncodingSampler<JavaScri
   abstract sampleObject(
     depth: number,
     id: string,
-    name: string
+    name: string,
+    type: string
   ): ObjectStatement;
 
-  abstract sampleArray(depth: number, id: string, name: string): ArrayStatement;
+  abstract sampleArray(
+    depth: number,
+    id: string,
+    name: string,
+    type: string
+  ): ArrayStatement;
 
   abstract sampleArrowFunction(
     depth: number,
     id: string,
-    name: string
+    name: string,
+    type: string
   ): ArrowFunctionStatement;
 
   abstract sampleString(
@@ -139,8 +157,21 @@ export abstract class JavaScriptTestCaseSampler extends EncodingSampler<JavaScri
   abstract sampleNull(id: string, name: string): NullStatement;
 
   abstract sampleNumber(id: string, name: string): NumericStatement;
+  abstract sampleInteger(id: string, name: string): IntegerStatement;
 
   abstract sampleUndefined(id: string, name: string): UndefinedStatement;
+
+  get constantPoolManager(): ConstantPoolManager {
+    return this._constantPoolManager;
+  }
+
+  get constantPoolEnabled(): boolean {
+    return this._constantPoolEnabled;
+  }
+
+  get constantPoolProbability(): number {
+    return this._constantPoolProbability;
+  }
 
   get typeInferenceMode(): string {
     return this._typeInferenceMode;
