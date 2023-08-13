@@ -1,0 +1,6 @@
+RangeError [ERR_OUT_OF_RANGE]: The value of "mode" is out of range. It must be >= 0 && <= 4294967295. Received 111_111_111_111_111
+    at parseFileMode (validators:68:5)
+    at Object.open (fs:473:12)
+    at WriteStream._construct (fs/streams:64:17)
+    at constructNT (streams/destroy:288:25)
+    at processTicksAndRejections (process/task_queues:80:21)

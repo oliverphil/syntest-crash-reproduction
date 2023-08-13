@@ -1,0 +1,10 @@
+{
+  "issueNumber": 38580,
+  "info": "Unable to get info about the null device on Windows",
+  "url": "https://github.com/nodejs/node/issues/38580",
+  "version": "16.1.0",
+  "node-version": "16.1.0",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}

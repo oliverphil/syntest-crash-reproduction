@@ -1,0 +1,11 @@
+Uncaught TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (errors:363:5)
+    at onParseError (url:537:9)
+    at new URL (url:613:5)
+    at REPL2:1:1
+    at Script.runInThisContext (vm:131:12)
+    at REPLServer.defaultEval (repl:522:29)
+    at bound (domain:416:15)
+    at REPLServer.runBound [as eval] (domain:427:12)
+    at REPLServer.onLine (repl:849:10)
+    at REPLServer.emit (events:377:35)

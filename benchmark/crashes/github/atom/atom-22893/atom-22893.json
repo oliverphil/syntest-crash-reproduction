@@ -1,0 +1,16 @@
+{
+  "issueNumber": 22893,
+  "info": "Uncaught Error: dlopen(/Volumes/MacExt/application/Atom.app/Contents/Resources/app.asar.unpacked/...",
+  "url": "https://github.com/atom/atom/issues/22893",
+  "version": "1.55.0",
+  "nodeVersion": "10.0.0",
+  "dependencies": {
+    "electron": "6.1.12"
+  },
+  "setup": {
+    "download": {
+      "url": "https://github.com/atom/atom/archive/refs/tags/v1.55.0.tar.gz",
+      "unpack": "tar.gz"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+TypeError: stream.on is not a function
+    at destroyer (streams/pipeline:39:10)
+    at Function.pipeline (streams/pipeline:175:21)
+    at main (REPL8:2:18)
+    at REPL10:1:1
+    at Script.runInThisContext (vm:131:12)
+    at REPLServer.defaultEval (repl:522:29)
+    at bound (domain:416:15)
+    at REPLServer.runBound [as eval] (domain:427:12)
+    at REPLServer.onLine (repl:844:10)
+    at REPLServer.emit (events:390:22)

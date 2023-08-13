@@ -1,0 +1,11 @@
+TypeError: Cannot read property 'loc' of undefined
+    at Object.VariableDeclaration [as listener] (node_modules/eslint/lib/rules/indent.js:1423:69)
+    at node_modules/eslint/lib/rules/indent.js:1635:55
+    at Array.forEach (<anonymous>)
+    at Program:exit (node_modules/eslint/lib/rules/indent.js:1635:26)
+    at node_modules/eslint/lib/linter/safe-emitter.js:45:58
+    at Array.forEach (<anonymous>)
+    at Object.emit (node_modules/eslint/lib/linter/safe-emitter.js:45:38)
+    at NodeEventGenerator.applySelector (node_modules/eslint/lib/linter/node-event-generator.js:256:26)
+    at NodeEventGenerator.applySelectors (node_modules/eslint/lib/linter/node-event-generator.js:285:22)
+    at NodeEventGenerator.leaveNode (node_modules/eslint/lib/linter/node-event-generator.js:308:14)

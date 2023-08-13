@@ -1,0 +1,10 @@
+{
+  "issueNumber": 2701,
+  "info": "double next call leads to cryptic error when req.params is called again",
+  "url": "https://github.com/expressjs/express/issues/2701",
+  "version": "^3.0.0",
+  "dependencies": {
+
+  },
+  "requireCrashDependency": true
+}

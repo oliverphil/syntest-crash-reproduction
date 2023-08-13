@@ -1,0 +1,8 @@
+{
+  "issueNumber": 4309,
+  "info": "URI Error is creating 500 instead of 400",
+  "url": "https://github.com/expressjs/express/issues/4309",
+  "version": "4.17.1",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

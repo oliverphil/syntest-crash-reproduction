@@ -1,0 +1,11 @@
+TypeError: mime.lookup is not a function
+    at ServerResponse.contentType (express.js:84719:12)
+    at ServerResponse.send (express.js:84268:14)
+    at done (express.js:85131:10)
+    at express.js:89650:31
+    at ZoneDelegate.module.exports.haNd.ZoneDelegate.invoke (express.js:103801:30)
+    at Zone.module.exports.haNd.Zone.run (express.js:103558:47)
+    at express.js:104306:38
+    at ZoneDelegate.module.exports.haNd.ZoneDelegate.invokeTask (express.js:103836:35)
+    at Zone.module.exports.haNd.Zone.runTask (express.js:103603:51)
+    at drainMicroTaskQueue (express.js:104016:39)

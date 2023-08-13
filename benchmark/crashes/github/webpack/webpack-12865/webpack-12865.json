@@ -1,0 +1,9 @@
+{
+  "issueNumber": 12865,
+  "info": "Terser fails on dynamic imports",
+  "url": "https://github.com/webpack/webpack/issues/12865",
+  "version": "5.24.2",
+  "nodeVersion": "14.5.0",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

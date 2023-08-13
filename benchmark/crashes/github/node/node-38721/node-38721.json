@@ -1,0 +1,8 @@
+{
+  "issueNumber": 38721,
+  "info": "stream.pipeline does not accept zero-length string as a valid first argument",
+  "url": "https://github.com/nodejs/node/issues/38721",
+  "version": "16.1.0",
+  "node-version": "16.1.0",
+  "dependencies": {}
+}

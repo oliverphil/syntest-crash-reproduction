@@ -1,0 +1,1 @@
+{"name":"express-2761","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"http2":"3.2.0","express":"5.0.0-alpha.2"}}

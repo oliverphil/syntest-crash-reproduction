@@ -1,0 +1,11 @@
+TypeError [ERR_INVALID_ARG_VALUE]: The argument 'path' must be a string or Uint8Array without null bytes. Received '<...>\u0000'
+    at Object.stat (fs.js:821:3)
+    at statFile (node_modules/ecstatic/lib/ecstatic.js:350:10)
+    at Array.middleware (node_modules/ecstatic/lib/ecstatic.js:459:7)
+    at dispatch (node_modules/union/lib/routing-stream.js:110:21)
+    at Object.onceWrapper (events.js:273:13)
+    at module.exports.emit (events.js:182:13)
+    at Array.<anonymous> (node_modules/http-server/lib/http-server.js:66:9)
+    at dispatch (node_modules/union/lib/routing-stream.js:119:21)
+    at module.exports.RoutingStream.route (node_modules/union/lib/routing-stream.js:121:5)
+    at Object.onceWrapper (events.js:273:13)

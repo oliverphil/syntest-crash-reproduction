@@ -1,0 +1,11 @@
+{
+  "issueNumber": 209,
+  "info": "Can't start it from node 5.0.0 - Can't find module colors",
+  "url": "https://github.com/http-party/http-server/issues/209",
+  "version": "0.10.x",
+  "nodeVersion": "5.0.0",
+  "dependencies": {
+    "readable-stream": "^1.0.0"
+  },
+  "requireCrashDependency": true
+}

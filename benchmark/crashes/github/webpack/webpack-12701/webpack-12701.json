@@ -1,0 +1,11 @@
+{
+  "issueNumber": 12701,
+  "info": "Watching error with ContextModule",
+  "url": "https://github.com/webpack/webpack/issues/12701",
+  "version": "5.22.0",
+  "nodeVersion": "15.8.0",
+  "dependencies": {
+    "watchpack": "2.0.0"
+  },
+  "requireCrashDependency": true
+}

@@ -1,0 +1,1 @@
+{"name":"atom-22622","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"electron":"9.4.4","tunnel-agent":"0.6.0"}}
