@@ -1,1 +1,1 @@
-["supertest/lib/test.js","events","net","internal/process/next_tick.js"]
+["_http_outgoing","test/app.router.js","lib/router/layer.js","lib/router/index.js","lib/router/route.js","lib/middleware/init.js","lib/middleware/query.js","lib/application.js","lib/express.js","events","_http_server","_http_common","supertest/lib/test.js","net","internal/process/next_tick.js"]

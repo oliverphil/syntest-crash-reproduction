@@ -16,6 +16,7 @@
  * limitations under the License.
  */
 
+import { prng } from "@syntest/prng";
 import { Decoder, Encoding } from "@syntest/search";
 import { getLogger, Logger } from "@syntest/logging";
 
@@ -49,7 +50,7 @@ export class JavaScriptTestCase extends Encoding {
     let i = 0;
     while (!testCase && i < 50)
     try {
-      testCase = sampler.resampleGeneProbability
+      testCase = prng.nextBoolean(sampler.resampleGeneProbability)
           ? sampler.sample()
           : new JavaScriptTestCase(this._root.mutate(sampler, 0));
     } catch {

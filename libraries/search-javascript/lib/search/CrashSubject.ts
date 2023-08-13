@@ -33,10 +33,11 @@ import {StackTrace} from "@syntest/crash-reproduction-setup";
 import StackFrameObjectiveFunction from "./objective/StackFrameObjectiveFunction";
 import StackErrorObjectiveFunction from "./objective/StackErrorObjectiveFunction";
 import {JavaScriptSubject} from "./JavaScriptSubject";
+import {prng} from "@syntest/prng";
 
 export class CrashSubject extends JavaScriptSubject {
-    constructor(target: Target, rootContext: RootContext, stackTrace: StackTrace) {
-        super(target, rootContext);
+    constructor(target: Target, rootContext: RootContext, stringAlphabet: string, stackTrace: StackTrace) {
+        super(target, rootContext, stringAlphabet);
         this.stackTrace = stackTrace;
         this._extractObjectives();
     }
@@ -105,12 +106,14 @@ export class CrashSubject extends JavaScriptSubject {
         if (this.stackTrace) {
             for (const stackFrame of this.stackTrace.trace) {
                 const objective = new StackFrameObjectiveFunction(
+                    `stack-frame.${prng.nextInt}`,
                     this,
                     stackFrame
                 );
                 this._objectives.set(objective, []);
             }
             this._objectives.set(new StackErrorObjectiveFunction(
+                `stack-error.${prng.nextInt}`,
                 this,
                 this.stackTrace
             ), []);

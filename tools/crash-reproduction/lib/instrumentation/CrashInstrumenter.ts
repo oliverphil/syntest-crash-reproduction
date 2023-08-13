@@ -24,6 +24,7 @@ import * as path from "node:path";
 import { copySync, outputFileSync } from "fs-extra";
 import {Instrumenter} from "@syntest/instrumentation-javascript";
 import {Crash} from "@syntest/crash-reproduction-setup";
+import { StorageManager } from "@syntest/storage";
 
 export interface OutputObject {
     fileCoverage?: any;
@@ -33,6 +34,7 @@ export interface OutputObject {
 export class CrashInstrumenter extends Instrumenter {
     // TODO maybe the instrumenter should not be responsible for copying the files
     override async instrumentAll(
+        storageManager: StorageManager,
         rootContext: RootContext,
         targets: Target[],
         temporaryInstrumentedDirectory: string
@@ -41,14 +43,11 @@ export class CrashInstrumenter extends Instrumenter {
         const crash: Crash = global.crash;
         const absoluteRootPath = path.resolve(rootContext.rootPath );
 
-        const destinationPath = path.resolve(
-            temporaryInstrumentedDirectory + absoluteRootPath.split('benchmark')[1],
+        const destinationPath = temporaryInstrumentedDirectory + `/${crash.project}/${crash.crashId}`;
             // path.basename(absoluteRootPath)
-        );
-
 
         // copy everything
-        await copySync(absoluteRootPath, destinationPath, {overwrite: true, dereference: true});
+        storageManager.copyToTemporaryDirectory([absoluteRootPath], [...destinationPath.split(path.sep)])
 
         // overwrite the stuff that needs instrumentation
 
@@ -62,7 +61,15 @@ export class CrashInstrumenter extends Instrumenter {
                 .normalize(targetPath)
                 .replace(absoluteRootPath, destinationPath);
 
-            await outputFileSync(_path, instrumentedSource);
+            const directory = path.dirname(_path);
+            const file = path.basename(_path);
+
+            storageManager.store(
+                [...directory.split(path.sep)],
+                file,
+                instrumentedSource,
+                true
+            );
         }
     }
 }

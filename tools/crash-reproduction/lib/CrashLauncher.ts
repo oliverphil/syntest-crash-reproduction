@@ -16,9 +16,7 @@
  * limitations under the License.
  */
 
-import { existsSync } from "node:fs";
 import * as path from "node:path";
-import {EnvironmentGenerator} from "@syntest/crash-reproduction-setup";
 
 import { TestCommandOptions } from "./commands/test";
 import {
@@ -35,12 +33,13 @@ import {
   DependencyFactory,
   TypeExtractor,
   isExported,
+  ConstantPoolManager,
+  ConstantVisitor,
+  getAllFiles,
 } from "@syntest/analysis-javascript";
 import {
   ArgumentsObject,
   Launcher,
-  createDirectoryStructure,
-  clearDirectory,
   ObjectiveManagerPlugin,
   CrossoverPlugin,
   SearchAlgorithmPlugin,
@@ -49,8 +48,7 @@ import {
   SecondaryObjectivePlugin,
   ProcreationPlugin,
   TerminationTriggerPlugin,
-  deleteDirectories,
-  Events,
+  PropertyName, Events,
 } from "@syntest/base-language";
 import {
   UserInterface,
@@ -74,28 +72,31 @@ import {
   BudgetType,
   EncodingSampler,
   EvaluationBudget,
-  IterationBudget,
+  IterationBudget, ObjectiveManager,
   SearchTimeBudget,
   TerminationManager,
   TotalTimeBudget,
-  getSeed,
-  initializePseudoRandomNumberGenerator,
-  ObjectiveManager,
 } from "@syntest/search";
-import {getLogger, Logger, setupLogger} from "@syntest/logging";
+import { Instrumenter } from "@syntest/instrumentation-javascript";
+import { getLogger, Logger } from "@syntest/logging";
 import { TargetType } from "@syntest/analysis";
-import TypedEventEmitter from "typed-emitter";
+import { MetricManager } from "@syntest/metric";
+import { StorageManager } from "@syntest/storage";
+import traverse from "@babel/traverse";
 import {Crash} from "@syntest/crash-reproduction-setup";
-import {EnvironmentBuilder} from "@syntest/crash-reproduction-setup";
+import {EnvironmentBuilder, EnvironmentGenerator} from "@syntest/crash-reproduction-setup";
 import {CrashInstrumenter} from "./instrumentation/CrashInstrumenter";
+import {existsSync} from "node:fs";
+import TypedEventEmitter from "typed-emitter";
+import * as prng from "@syntest/prng";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
 export class CrashLauncher extends Launcher {
   private static LOGGER: Logger;
 
-  private arguments_: JavaScriptArguments;
-  private moduleManager: ModuleManager;
-  private userInterface: UserInterface;
+  protected override arguments_: JavaScriptArguments;
+  protected override moduleManager: ModuleManager;
+  protected override userInterface: UserInterface;
 
   private targets: Target[];
 
@@ -113,27 +114,59 @@ export class CrashLauncher extends Launcher {
   private objectiveManagers: {[key: string]: ObjectiveManager<JavaScriptTestCase>} = {};
 
   constructor(
-    arguments_: JavaScriptArguments,
-    moduleManager: ModuleManager,
-    userInterface: UserInterface
+      arguments_: JavaScriptArguments,
+      moduleManager: ModuleManager,
+      metricManager: MetricManager,
+      storageManager: StorageManager,
+      userInterface: UserInterface
   ) {
-    super();
-    setupLogger(
-        path.join(
-            arguments_.syntestDirectory,
-            arguments_.logDirectory
-        ),
-        arguments_.fileLogLevel,
-        arguments_.consoleLogLevel
+    super(
+        arguments_,
+        moduleManager,
+        metricManager,
+        storageManager,
+        userInterface
     );
     CrashLauncher.LOGGER = getLogger("CrashLauncher");
-    this.arguments_ = arguments_;
-    this.moduleManager = moduleManager;
-    this.userInterface = userInterface;
   }
 
   async initialize(): Promise<void> {
     CrashLauncher.LOGGER.info("Initialization started");
+    const start = Date.now();
+
+    this.metricManager.recordProperty(
+        PropertyName.CONSTANT_POOL_ENABLED,
+        `${(<JavaScriptArguments>this.arguments_).constantPool.toString()}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.CONSTANT_POOL_PROBABILITY,
+        `${(<JavaScriptArguments>(
+            this.arguments_
+        )).constantPoolProbability.toString()}`
+    );
+
+    this.storageManager.deleteTemporaryDirectories([
+      [this.arguments_.testDirectory],
+      [this.arguments_.logDirectory],
+      [this.arguments_.instrumentedDirectory],
+    ]);
+
+    CrashLauncher.LOGGER.info("Creating directories");
+    this.storageManager.createDirectories([
+      [this.arguments_.testDirectory],
+      [this.arguments_.statisticsDirectory],
+      [this.arguments_.logDirectory],
+    ]);
+
+    CrashLauncher.LOGGER.info("Creating temp directories");
+    this.storageManager.createDirectories(
+        [
+          [this.arguments_.testDirectory],
+          [this.arguments_.logDirectory],
+          [this.arguments_.instrumentedDirectory],
+        ],
+        true
+    );
 
     const abstractSyntaxTreeFactory = new AbstractSyntaxTreeFactory();
     const targetFactory = new TargetFactory();
@@ -142,16 +175,11 @@ export class CrashLauncher extends Launcher {
     const exportFactory = new ExportFactory();
     const typeExtractor = new TypeExtractor();
     const typeResolver: TypeModelFactory =
-      this.arguments_.typeInferenceMode === "none"
-        ? new RandomTypeModelFactory()
-        : new InferenceTypeModelFactory();
+        (<JavaScriptArguments>this.arguments_).typeInferenceMode === "none"
+            ? new RandomTypeModelFactory()
+            : new InferenceTypeModelFactory();
 
-    let rootPath = this.arguments_.targetRootDirectory + (this.crash.seeded ? '/seeded' : '') + `/${this.crash.project}/${this.crash.crashId}`;
-    if (this.arguments_.syntestType === 'bugsjs') {
-      rootPath = this.arguments_.targetRootDirectory + `/bugsjs/${this.crash.project}/${this.crash.crashId}`;
-    } else if (this.arguments_.syntestType === 'syntest-collected') {
-      rootPath = this.arguments_.targetRootDirectory + `/syntest-collected/${this.crash.project}/${this.crash.crashId}`;
-    }
+    const rootPath = this.arguments_.targetRootDirectory + `/${this.arguments_.syntestType}/${this.crash.project}/${this.crash.crashId}`;
 
     this.rootPath = rootPath;
 
@@ -166,54 +194,12 @@ export class CrashLauncher extends Launcher {
       typeResolver
     );
 
-    if (this.crash.seeded) {
-      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
-      }
-    } else if (this.arguments_.syntestType === 'standard' || !this.arguments_.syntestType){
-      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-      }
-    } else if (this.arguments_.syntestType === 'bugsjs') {
-      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/bugsjs/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/bugsjs/${this.crash.project}/${this.crash.crashId}`);
-      }
-    } else if (this.arguments_.syntestType === 'syntest-collected') {
-      if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/syntest-collected/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-        this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/syntest-collected/${this.crash.project}/${this.crash.crashId}`);
-      }
+    if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.arguments_.syntestType}/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+      this.rootContext.loadExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.arguments_.syntestType}/${this.crash.project}/${this.crash.crashId}`);
     }
     // if (existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextResolvedTypes__typeModel.json`)) {
     //   await this.rootContext.loadResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     // }
-
-    CrashLauncher.LOGGER.info("Creating directories");
-    createDirectoryStructure([
-      path.join(
-          this.arguments_.syntestDirectory,
-          this.arguments_.statisticsDirectory
-      ),
-      path.join(this.arguments_.syntestDirectory, this.arguments_.logDirectory),
-      path.join(
-          this.arguments_.syntestDirectory,
-          this.arguments_.testDirectory
-      ),
-    ]);
-    CrashLauncher.LOGGER.info("Creating temp directories");
-    createDirectoryStructure([
-      path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempTestDirectory
-      ),
-      path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempLogDirectory
-      ),
-      path.join(
-          this.arguments_.tempSyntestDirectory,
-          this.arguments_.tempInstrumentedDirectory
-      ),
-    ]);
 
     this.userInterface.printHeader("GENERAL INFO");
 
@@ -225,30 +211,45 @@ export class CrashLauncher extends Launcher {
     //     (<unknown>[["Target Root Directory", this.arguments_.targetRootDirectory]])
     //   ),
     // ]);
+
+    const timeInMs = (Date.now() - start) / 1000;
+    this.metricManager.recordProperty(
+        PropertyName.INITIALIZATION_TIME,
+        `${timeInMs}`
+    );
+
     CrashLauncher.LOGGER.info("Initialization done");
   }
 
   async preprocess(): Promise<void> {
     CrashLauncher.LOGGER.info("Preprocessing started");
+
+    const startPreProcessing = Date.now();
+
     const crash = this.crash;
     const include: string[] = [];
     const exclude: string[] = [];
     for (const frame of crash.stackTrace.trace) {
       if (frame.file.includes('.js')) {
-        let crashFile = `${this.rootPath}/**/${frame.file}`;
-        // if (crash.seeded) {
-        //   crashFile = `./benchmark/crashes/seeded/${crash.project}/${crash.crashId}/**/${frame.file}`;
-        // }
+        const crashFile = `./benchmark/crashes/${this.arguments_.syntestType}/${crash.project}/${crash.crashId}/**/${frame.file}`;
         include.push(crashFile);
       }
       // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
       // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
     }
 
+    const startTargetSelection = Date.now();
+
     const targetSelector = new TargetSelector(this.rootContext);
     this.targets = targetSelector.loadTargets(
       include,
       exclude
+    );
+
+    let timeInMs = (Date.now() - startTargetSelection) / 1000;
+    this.metricManager.recordProperty(
+        PropertyName.TARGET_LOAD_TIME,
+        `${timeInMs}`
     );
 
     if (this.targets.length === 0) {
@@ -288,7 +289,7 @@ export class CrashLauncher extends Launcher {
         ["Termination Triggers", `${this.arguments_.terminationTriggers}`],
         ["Test Minimization Enabled", `${this.arguments_.testMinimization}`],
 
-        ["Seed", getSeed()],
+        ["Seed", `${this.arguments_.randomSeed.toString()}`],
       ],
       footers: ["", ""],
     };
@@ -373,69 +374,38 @@ export class CrashLauncher extends Launcher {
     this.userInterface.printTable("DIRECTORY SETTINGS", directorySettings);
 
     CrashLauncher.LOGGER.info("Instrumenting targets");
-    if (this.crash.seeded) {
-      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
-        const instrumenter = new CrashInstrumenter();
-        await instrumenter.instrumentAll(
-            this.rootContext,
-            this.targets,
-            path.join(
-                this.arguments_.tempSyntestDirectory,
-                this.arguments_.tempInstrumentedDirectory
-            )
-        );
-      }
-    } else if (this.arguments_.syntestType === 'standard' || !this.arguments_.syntestType) {
-      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
-        const instrumenter = new CrashInstrumenter();
-        await instrumenter.instrumentAll(
-            this.rootContext,
-            this.targets,
-            path.join(
-                this.arguments_.tempSyntestDirectory,
-                this.arguments_.tempInstrumentedDirectory
-            )
-        );
-      }
-    } else if (this.arguments_.syntestType === 'bugsjs') {
-      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/bugsjs/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
-        const instrumenter = new CrashInstrumenter();
-        await instrumenter.instrumentAll(
-            this.rootContext,
-            this.targets,
-            path.join(
-                this.arguments_.tempSyntestDirectory,
-                this.arguments_.tempInstrumentedDirectory
-            )
-        );
-      }
-    } else if (this.arguments_.syntestType === 'syntest-collected') {
-      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/syntest-collected/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
-        const instrumenter = new CrashInstrumenter();
-        await instrumenter.instrumentAll(
-            this.rootContext,
-            this.targets,
-            path.join(
-                this.arguments_.tempSyntestDirectory,
-                this.arguments_.tempInstrumentedDirectory
-            )
-        );
-      }
+    const startInstrumentation = Date.now();
+    if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.arguments_.syntestType}/${this.crash.project}/${this.crash.crashId}/node_modules`)) {
+      const instrumenter = new CrashInstrumenter();
+      await instrumenter.instrumentAll(
+          this.storageManager,
+          this.rootContext,
+          this.targets,
+          `/instrumented/crashes/${this.arguments_.syntestType}`
+      );
     }
+
+    timeInMs = (Date.now() - startInstrumentation) / 1000;
+    this.metricManager.recordProperty(
+        PropertyName.INSTRUMENTATION_TIME,
+        `${timeInMs}`
+    );
+
+    const startTypeResolving = Date.now();
 
     CrashLauncher.LOGGER.info("Extracting types");
     console.log("Extracting types");
     this.rootContext.extractTypes();
     console.log("Saving types");
-    if (crash.seeded) {
-      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-        this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
-      }
-    } else {
-      if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
-        this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
-      }
-    }
+    // if (crash.seeded) {
+    //   if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+    //     this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/seeded/${this.crash.project}/${this.crash.crashId}`);
+    //   }
+    // } else {
+    //   if (!existsSync(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}/rootContextExtractedTypes__targetMap.json`)) {
+    //     this.rootContext.saveExtractedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
+    //   }
+    // }
 
     console.log("Resolving Types");
     CrashLauncher.LOGGER.info("Resolving types");
@@ -445,6 +415,16 @@ export class CrashLauncher extends Launcher {
     //   this.rootContext.saveResolvedTypes(this.arguments_.tempSyntestDirectory + `/instrumented/crashes/${this.crash.project}/${this.crash.crashId}`);
     // }
 
+    this.metricManager.recordProperty(
+        PropertyName.TYPE_RESOLVE_TIME,
+        `${timeInMs}`
+    );
+
+    timeInMs = (Date.now() - startPreProcessing) / 1000;
+    this.metricManager.recordProperty(
+        PropertyName.PREPROCESS_TIME,
+        `${timeInMs}`
+    );
     CrashLauncher.LOGGER.info("Preprocessing done");
 
     // const maps = this.rootContext.getTypeModel().calculateProbabilitiesForFile(false, '/Users/dimitrist/Documents/git/syntest/syntest-javascript-benchmark/lodash/truncate.js')
@@ -459,6 +439,7 @@ export class CrashLauncher extends Launcher {
 
   async process(): Promise<void> {
     CrashLauncher.LOGGER.info("Processing started");
+    const start = Date.now();
     this.archive = new Archive<JavaScriptTestCase>();
     this.exports = [];
     this.dependencyMap = new Map();
@@ -474,23 +455,21 @@ export class CrashLauncher extends Launcher {
       this.exports.push(...this.rootContext.getExports(target.path));
     }
     CrashLauncher.LOGGER.info("Processing done");
+    const timeInMs = (Date.now() - start) / 1000;
+    this.metricManager.recordProperty(PropertyName.PROCESS_TIME, `${timeInMs}`);
   }
 
   async postprocess(): Promise<void> {
     CrashLauncher.LOGGER.info("Postprocessing started");
-    const temporaryTestDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempTestDirectory
-    );
-    const temporaryLogDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempLogDirectory
-    );
+    const start = Date.now();
 
     const decoder = new JavaScriptDecoder(
       this.exports,
       this.arguments_.targetRootDirectory,
-      temporaryLogDirectory
+        path.join(
+            this.arguments_.tempSyntestDirectory,
+            this.arguments_.logDirectory
+        )
     );
 
     const executionInformationIntegrator = new ExecutionInformationIntegrator(
@@ -498,15 +477,17 @@ export class CrashLauncher extends Launcher {
     );
 
     const runner = new JavaScriptRunner(
+      this.storageManager,
       decoder,
       executionInformationIntegrator,
-      temporaryTestDirectory
+      this.arguments_.testDirectory
     );
 
     const suiteBuilder = new JavaScriptSuiteBuilder(
+      this.storageManager,
       decoder,
       runner,
-      temporaryLogDirectory
+      this.arguments_.logDirectory
     );
 
     const reducedArchive = suiteBuilder.reduceArchive(this.archive);
@@ -515,18 +496,15 @@ export class CrashLauncher extends Launcher {
     let paths = suiteBuilder.createSuite(
       reducedArchive,
       "../instrumented",
-      temporaryTestDirectory,
+      this.arguments_.testDirectory,
       true,
       false
     );
     await suiteBuilder.runSuite(paths);
 
-    try {
-      // reset states
-      suiteBuilder.clearDirectory(temporaryTestDirectory);
-    } catch (e) {
-      //
-    }
+    this.storageManager.clearTemporaryDirectory([
+        this.arguments_.testDirectory
+    ])
 
     // run with assertions and report results
     for (const key of reducedArchive.keys()) {
@@ -536,7 +514,7 @@ export class CrashLauncher extends Launcher {
     paths = suiteBuilder.createSuite(
       reducedArchive,
       "../instrumented",
-      temporaryTestDirectory,
+      this.arguments_.testDirectory,
       false,
       true
     );
@@ -627,6 +605,49 @@ export class CrashLauncher extends Launcher {
       ]);
     }
 
+    this.metricManager.recordProperty(
+        PropertyName.BRANCHES_COVERED,
+        `${overall["branch"]}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.STATEMENTS_COVERED,
+        `${overall["statement"]}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.FUNCTIONS_COVERED,
+        `${overall["function"]}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.OBJECTIVES_COVERED,
+        `${overall["objective"]}`
+    )
+    this.metricManager.recordProperty(
+        PropertyName.BRANCHES_TOTAL,
+        `${totalBranches}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.STATEMENTS_TOTAL,
+        `${totalStatements}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.FUNCTIONS_TOTAL,
+        `${totalFunctions}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.OBJECTIVES_TOTAL,
+        `${totalObjectives}`
+    )
+
+    // other results
+    this.metricManager.recordProperty(
+        PropertyName.ARCHIVE_SIZE,
+        `${this.archive.size}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.MINIMIZED_ARCHIVE_SIZE,
+        `${this.archive.size}`
+    );
+
     overall["statement"] /= totalStatements;
     if (totalStatements === 0) overall["statement"] = 1;
 
@@ -656,10 +677,8 @@ export class CrashLauncher extends Launcher {
 
     this.userInterface.printTable("Coverage", table);
 
-    createDirectoryStructure(
-        [path.join(
-            `${this.rootPath}/tests`
-        )]
+    this.storageManager.createDirectories(
+        [`benchmark/crashes/${this.crash.project}/${this.crash.crashId}/tests`.split('/')]
     );
 
     // create final suite
@@ -670,9 +689,15 @@ export class CrashLauncher extends Launcher {
         `${this.rootPath}/tests`
       ),
       false,
-      true
+      true,
+        true
     );
     CrashLauncher.LOGGER.info("Postprocessing done");
+    const timeInMs = (Date.now() - start) / 1000;
+    this.metricManager.recordProperty(
+        PropertyName.POSTPROCESS_TIME,
+        `${timeInMs}`
+    );
   }
 
   private async testTarget(
@@ -682,7 +707,7 @@ export class CrashLauncher extends Launcher {
     CrashLauncher.LOGGER.info(
       `Testing target ${target.name} in ${target.path}`
     );
-    const currentSubject = new CrashSubject(target, this.rootContext, this.crash.stackTrace);
+    const currentSubject = new CrashSubject(target, this.rootContext, this.arguments_.stringAlphabet, this.crash.stackTrace);
 
     const rootTargets = currentSubject
       .getActionableTargets()
@@ -707,48 +732,66 @@ export class CrashLauncher extends Launcher {
     dependencyMap.set(target.name, dependencies);
     const exports = rootContext.getExports(target.path);
 
-    const temporaryTestDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempTestDirectory
-    );
-    const temporaryLogDirectory = path.join(
-      this.arguments_.tempSyntestDirectory,
-      this.arguments_.tempLogDirectory
-    );
-
     const decoder = new JavaScriptDecoder(
       exports,
       this.arguments_.targetRootDirectory,
-      temporaryLogDirectory
+        path.join(
+          this.arguments_.tempSyntestDirectory,
+          this.arguments_.logDirectory
+        )
     );
     const executionInformationIntegrator = new ExecutionInformationIntegrator(
       this.rootContext.getTypeModel()
     );
     const runner = new JavaScriptRunner(
+      this.storageManager,
       decoder,
       executionInformationIntegrator,
-      temporaryTestDirectory
+      this.arguments_.testDirectory
     );
 
-    const suiteBuilder = new JavaScriptSuiteBuilder(
-      decoder,
-      runner,
-      temporaryLogDirectory
+    CrashLauncher.LOGGER.info("Extracting Constants");
+    const constantPoolManager = new ConstantPoolManager();
+    const targetAbstractSyntaxTree = this.rootContext.getAbstractSyntaxTree(
+        target.path
+    );
+    const constantVisitor = new ConstantVisitor(
+        target.path,
+        constantPoolManager.targetConstantPool
+    );
+    traverse(targetAbstractSyntaxTree, constantVisitor);
+
+    const files = getAllFiles(this.rootContext.rootPath, ".js").filter(
+        (x) =>
+            !x.includes("/test/") &&
+            !x.includes(".test.js") &&
+            !x.includes("node_modules")
     );
 
-    // TODO constant pool
+    for (const file of files) {
+      const abstractSyntaxTree = this.rootContext.getAbstractSyntaxTree(file);
+      const constantVisitor = new ConstantVisitor(
+          file,
+          constantPoolManager.contextConstantPool
+      );
+      traverse(abstractSyntaxTree, constantVisitor);
+    }
+    CrashLauncher.LOGGER.info("Extracting constants done");
 
     const sampler = new JavaScriptRandomSampler(
       currentSubject,
-      this.arguments_.typeInferenceMode,
-      this.arguments_.randomTypeProbability,
-      this.arguments_.incorporateExecutionInformation,
-      this.arguments_.maxActionStatements,
-      this.arguments_.stringAlphabet,
-      this.arguments_.stringMaxLength,
-      this.arguments_.resampleGeneProbability,
-      this.arguments_.deltaMutationProbability,
-      this.arguments_.exploreIllegalValues
+      constantPoolManager,
+        (<JavaScriptArguments>this.arguments_).constantPool,
+        (<JavaScriptArguments>this.arguments_).constantPoolProbability,
+        (<JavaScriptArguments>this.arguments_).typeInferenceMode,
+        (<JavaScriptArguments>this.arguments_).randomTypeProbability,
+        (<JavaScriptArguments>this.arguments_).incorporateExecutionInformation,
+        this.arguments_.maxActionStatements,
+        this.arguments_.stringAlphabet,
+        this.arguments_.stringMaxLength,
+        this.arguments_.resampleGeneProbability,
+        this.arguments_.deltaMutationProbability,
+        this.arguments_.exploreIllegalValues
     );
 
     sampler.rootContext = rootContext;
@@ -818,7 +861,9 @@ export class CrashLauncher extends Launcher {
       populationSize: this.arguments_.populationSize,
     });
 
-    suiteBuilder.clearDirectory(temporaryTestDirectory);
+    this.storageManager.clearTemporaryDirectory([
+      this.arguments_.testDirectory
+    ]);
 
     // allocate budget manager
     const iterationBudget = new IterationBudget(this.arguments_.iterations);
@@ -862,8 +907,26 @@ export class CrashLauncher extends Launcher {
       this.coveredInPath.set(target.path, archive);
     }
 
-    clearDirectory(temporaryLogDirectory);
-    clearDirectory(temporaryTestDirectory);
+    this.storageManager.clearTemporaryDirectory([this.arguments_.logDirectory]);
+    this.storageManager.clearTemporaryDirectory([this.arguments_.testDirectory]);
+
+    // timing and iterations/evaluations
+    this.metricManager.recordProperty(
+        PropertyName.TOTAL_TIME,
+        `${budgetManager.getBudgetObject(BudgetType.TOTAL_TIME).getUsedBudget()}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.SEARCH_TIME,
+        `${budgetManager.getBudgetObject(BudgetType.SEARCH_TIME).getUsedBudget()}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.EVALUATIONS,
+        `${budgetManager.getBudgetObject(BudgetType.EVALUATION).getUsedBudget()}`
+    );
+    this.metricManager.recordProperty(
+        PropertyName.ITERATIONS,
+        `${budgetManager.getBudgetObject(BudgetType.ITERATION).getUsedBudget()}`
+    );
 
     CrashLauncher.LOGGER.info(
       `Finished testing target ${target.name} in ${target.path}`
@@ -904,8 +967,6 @@ export class CrashLauncher extends Launcher {
   }
 
   public override async run(): Promise<void> {
-    initializePseudoRandomNumberGenerator(this.arguments_.randomSeed);
-
     // const environmentGenerator = new EnvironmentGenerator();
     // let crashes: Crash[] = environmentGenerator.loadAssets(this.arguments_.syntestProject,
     //     this.arguments_.syntestCrashes === 'true',
@@ -921,6 +982,7 @@ export class CrashLauncher extends Launcher {
 
     // for (const crash of crashes) {
       try {
+        this.registerProperties();
         (<TypedEventEmitter<Events>>process).emit("initializeStart");
         await this.initialize();
         (<TypedEventEmitter<Events>>process).emit("initializeComplete");

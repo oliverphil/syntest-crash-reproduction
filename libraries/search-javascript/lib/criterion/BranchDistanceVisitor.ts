@@ -19,25 +19,58 @@
 import { NodePath } from "@babel/core";
 import * as t from "@babel/types";
 import { AbstractSyntaxTreeVisitor } from "@syntest/ast-visitor-javascript";
-import generate from "@babel/generator";
+import { Logger, getLogger } from "@syntest/logging";
+import { shouldNeverHappen } from "@syntest/search";
 
 export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
+  protected static override LOGGER: Logger;
+
+  protected _stringAlphabet: string;
+
   private _K = 1; // punishment factor
 
   private _variables: Record<string, unknown>;
+  private _inverted: boolean;
+
   private _valueMap: Map<string, unknown>;
   private _isDistanceMap: Map<string, boolean>;
   private _distance: number;
 
-  constructor(variables: Record<string, unknown>) {
+
+  constructor(
+    stringAlphabet: string,
+    variables: Record<string, unknown>,
+    inverted: boolean
+  ) {
     super("");
+    this._stringAlphabet = stringAlphabet;
     this._variables = variables;
+    this._inverted = inverted;
+
     this._valueMap = new Map();
     this._isDistanceMap = new Map();
     this._distance = -1;
+    BranchDistanceVisitor.LOGGER = getLogger("BranchDistanceVisitor");
+
+    for (const variable of Object.keys(this._variables)) {
+      const value = this._variables[variable];
+      this._valueMap.set(variable, value);
+      this._isDistanceMap.set(variable, false);
+    }
   }
 
-  get distance(): number {
+  _getDistance(condition: string): number {
+    if (!this._distance) {
+      if (
+        !this._valueMap.has(condition) ||
+        !this._isDistanceMap.get(condition)
+      ) {
+        // the value does not exist or is not a distance
+        throw new Error(shouldNeverHappen("BranchDistanceVisitor"));
+      }
+
+      this._distance = <number>this._valueMap.get(condition);
+    }
     return this._distance;
   }
 
@@ -52,12 +85,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
 
       test.visit();
 
-      const testId = this._getNodeId(test);
+      const testId = test.toString();
 
       if (this._isDistanceMap.get(testId)) {
-        this._distance = <number>this._valueMap.get(this._getNodeId(path));
+        this._distance = <number>this._valueMap.get(path.toString());
       } else {
-        this._distance = this._valueMap.get(this._getNodeId(path)) ? 0 : 1;
+        this._distance = this._valueMap.get(path.toString()) ? 0 : 1;
       }
     }
 
@@ -66,12 +99,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
 
       if (test) {
         test.visit();
-        const testId = this._getNodeId(test);
+        const testId = test.toString();
 
         if (this._isDistanceMap.get(testId)) {
-          this._distance = <number>this._valueMap.get(this._getNodeId(path));
+          this._distance = <number>this._valueMap.get(path.toString());
         } else {
-          this._distance = this._valueMap.get(this._getNodeId(path)) ? 0 : 1;
+          this._distance = this._valueMap.get(path.toString()) ? 0 : 1;
         }
       } else {
         this._distance = 0;
@@ -82,12 +115,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       path.get("expression").visit();
 
       const expression = <NodePath<t.Node>>path.get("expression");
-      const expressionId = this._getNodeId(expression);
+      const expressionId = expression.toString();
 
       if (this._isDistanceMap.get(expressionId)) {
-        this._distance = <number>this._valueMap.get(this._getNodeId(path));
+        this._distance = <number>this._valueMap.get(path.toString());
       } else {
-        this._distance = this._valueMap.get(this._getNodeId(path)) ? 0 : 1;
+        this._distance = this._valueMap.get(path.toString()) ? 0 : 1;
       }
     }
 
@@ -100,51 +133,70 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     switch (path.node.type) {
       case "NullLiteral": {
         // eslint-disable-next-line unicorn/no-null
-        this._valueMap.set(this._getNodeId(path), null);
+        this._valueMap.set(path.toString(), null);
 
         break;
       }
       case "RegExpLiteral": {
-        this._valueMap.set(this._getNodeId(path), path.node.pattern);
+        this._valueMap.set(path.toString(), path.node.pattern);
 
         break;
       }
       case "TemplateLiteral": {
         // should evaluate the template literal... not really possible with the current setup
-        this._valueMap.set(this._getNodeId(path), "");
+        this._valueMap.set(path.toString(), "");
 
         break;
       }
       default: {
-        this._valueMap.set(this._getNodeId(path), path.node.value);
+        this._valueMap.set(path.toString(), path.node.value);
       }
     }
 
-    this._isDistanceMap.set(this._getNodeId(path), false);
+    this._isDistanceMap.set(path.toString(), false);
   };
 
-  public Identifier: (path: NodePath<t.Identifier>) => void = (path) => {
-    if (this._variables[path.node.name] === undefined) {
-      // we dont know what this variable is...
-      this._valueMap.set(this._getNodeId(path), undefined);
-    } else {
-      this._valueMap.set(
-        this._getNodeId(path),
-        this._variables[path.node.name]
-      );
-    }
-    this._isDistanceMap.set(this._getNodeId(path), false);
-  };
+  // public ObjectExpression: (path: NodePath<t.ObjectExpression>) => void = (path) => {
+  //   this._valueMap.set(this._getNodeId(path), )
+  //   this._isDistanceMap.set(this._getNodeId(path), false);
+  // }
 
-  public MemberExpression: (path: NodePath<t.MemberExpression>) => void = (
-    path
-  ) => {
-    const result = generate(path.node);
-    const value = this._variables[result.code];
-    // might be undefined
-    this._valueMap.set(this._getNodeId(path), value);
-    this._isDistanceMap.set(this._getNodeId(path), false);
-  };
+  // public Identifier: (path: NodePath<t.Identifier>) => void = (path) => {
+  //   if (this._variables[path.node.name] === undefined) {
+  //     // we dont know what this variable is...
+  //     this._valueMap.set(this._getNodeId(path), undefined);
+  //   } else {
+  //     this._valueMap.set(
+  //       this._getNodeId(path),
+  //       this._variables[path.node.name]
+  //     );
+  //   }
+  //   this._isDistanceMap.set(this._getNodeId(path), false);
+  // };
+
+  // public MemberExpression: (path: NodePath<t.MemberExpression>) => void = (
+  //   path
+  // ) => {
+  //   const result = generate(path.node);
+  //   const value = this._variables[result.code];
+  //   // might be undefined
+  //   this._valueMap.set(this._getNodeId(path), value);
+  //   this._isDistanceMap.set(this._getNodeId(path), false);
+  // };
+  // public Identifier: (path: NodePath<t.Identifier>) => void = (path) => {
+  //   if (this._variables[path.node.name] === undefined) {
+  //     // we dont know what this variable is...
+  //     // should never happen??
+  //     this._valueMap.set(path.toString(), undefined);
+  //     throw new Error(shouldNeverHappen('BranchDistanceVisitor'))
+  //   } else {
+  //     this._valueMap.set(
+  //       path.toString(),
+  //       this._variables[path.node.name]
+  //     );
+  //   }
+  //   this._isDistanceMap.set(path.toString(), false);
+  // };
 
   public UpdateExpression: (path: NodePath<t.UpdateExpression>) => void = (
     path
@@ -152,10 +204,10 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     const argument = path.get("argument");
     argument.visit();
 
-    const argumentValue = <any>this._valueMap.get(this._getNodeId(argument));
+    const argumentValue = <any>this._valueMap.get(argument.toString());
 
     // should not be distance
-    if (this._isDistanceMap.get(this._getNodeId(argument)) === true) {
+    if (this._isDistanceMap.get(argument.toString()) === true) {
       throw new Error("Argument should not result in distance value!");
     }
 
@@ -165,12 +217,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       switch (path.node.operator) {
         case "++": {
           value = argumentValue + 1;
-          this._valueMap.set(this._getNodeId(argument), value);
+          this._valueMap.set(argument.toString(), value);
           break;
         }
         case "--": {
           value = argumentValue - 1;
-          this._valueMap.set(this._getNodeId(argument), value);
+          this._valueMap.set(argument.toString(), value);
           break;
         }
       }
@@ -179,12 +231,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       switch (path.node.operator) {
         case "++": {
           value = argumentValue;
-          this._valueMap.set(this._getNodeId(argument), argumentValue + 1);
+          this._valueMap.set(argument.toString(), argumentValue + 1);
           break;
         }
         case "--": {
           value = argumentValue;
-          this._valueMap.set(this._getNodeId(argument), argumentValue - 1);
+          this._valueMap.set(argument.toString(), argumentValue - 1);
           break;
         }
         default: {
@@ -194,8 +246,8 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
     }
 
-    this._valueMap.set(this._getNodeId(path), value);
-    this._isDistanceMap.set(this._getNodeId(path), false);
+    this._valueMap.set(path.toString(), value);
+    this._isDistanceMap.set(path.toString(), false);
     path.skip();
   };
 
@@ -203,13 +255,17 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     path
   ) => {
     const argument = path.get("argument");
+    if (path.node.operator === "!") {
+      this._inverted = !this._inverted;
+    }
     argument.visit();
+    if (path.node.operator === "!") {
+      this._inverted = !this._inverted;
+    }
 
-    const argumentValue = <any>this._valueMap.get(this._getNodeId(argument));
+    const argumentValue = <any>this._valueMap.get(argument.toString());
 
-    const argumentIsDistance = this._isDistanceMap.get(
-      this._getNodeId(argument)
-    );
+    const argumentIsDistance = this._isDistanceMap.get(argument.toString());
 
     if (argumentIsDistance && path.node.operator !== "!") {
       throw new Error("Argument should not result in distance value!");
@@ -234,14 +290,31 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       case "!": {
         if (argumentIsDistance) {
-          value = 1 - argumentValue;
+          value = this._inverted
+            ? this._normalize(1 - argumentValue)
+            : this._normalize(argumentValue);
         } else {
-          value =
-            typeof argumentValue === "number"
-              ? this._normalize(Math.abs(0 - argumentValue))
-              : argumentValue
-              ? 1
-              : 0;
+          if (this._inverted) {
+            if (typeof argumentValue === "boolean") {
+              value = argumentValue ? 0 : this._normalize(1);
+            } else if (typeof argumentValue === "number") {
+              value = argumentValue ? 0 : this._normalize(1);
+            } else {
+              // could be other type
+              value = argumentValue ? 0 : this._normalize(Number.MAX_VALUE);
+            }
+          } else {
+            if (typeof argumentValue === "boolean") {
+              value = argumentValue ? this._normalize(1) : 0;
+            } else if (typeof argumentValue === "number") {
+              value = argumentValue
+                ? this._normalize(Math.abs(0 - argumentValue))
+                : 0;
+            } else {
+              // could be other type
+              value = argumentValue ? this._normalize(Number.MAX_VALUE) : 0;
+            }
+          }
         }
         break;
       }
@@ -268,12 +341,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     }
 
     if (path.node.operator === "!") {
-      this._isDistanceMap.set(this._getNodeId(path), true);
+      this._isDistanceMap.set(path.toString(), true);
     } else {
-      this._isDistanceMap.set(this._getNodeId(path), false);
+      this._isDistanceMap.set(path.toString(), false);
     }
 
-    this._valueMap.set(this._getNodeId(path), value);
+    this._valueMap.set(path.toString(), value);
     path.skip();
   };
 
@@ -286,19 +359,58 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     left.visit();
     right.visit();
 
-    const leftValue = <any>this._valueMap.get(this._getNodeId(left));
-    const rightValue = <any>this._valueMap.get(this._getNodeId(right));
+    const leftValue = <any>this._valueMap.get(left.toString());
+    const rightValue = <any>this._valueMap.get(right.toString());
 
-    if (this._isDistanceMap.get(this._getNodeId(left))) {
+    if (this._isDistanceMap.get(left.toString())) {
       throw new Error("Left should not result in distance value!");
     }
 
-    if (this._isDistanceMap.get(this._getNodeId(right))) {
+    if (this._isDistanceMap.get(right.toString())) {
       throw new Error("Right should not result in distance value!");
+    }
+    let operator = path.node.operator;
+
+    if (this._inverted) {
+      switch (operator) {
+        case "===": {
+          operator = "!==";
+          break;
+        }
+        case "==": {
+          operator = "!=";
+          break;
+        }
+        case "!==": {
+          operator = "===";
+          break;
+        }
+        case "!=": {
+          operator = "==";
+          break;
+        }
+        case ">": {
+          operator = "<=";
+          break;
+        }
+        case ">=": {
+          operator = "<";
+          break;
+        }
+        case "<": {
+          operator = ">=";
+          break;
+        }
+        case "<=": {
+          operator = ">";
+          break;
+        }
+        // No default
+      }
     }
 
     let value: unknown;
-    switch (path.node.operator) {
+    switch (operator) {
       // values
       case "+": {
         // could also be something else
@@ -356,12 +468,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       // TODO
       case "===": {
         if (typeof leftValue === "number" && typeof rightValue === "number") {
-          value = this._normalize(Math.abs(leftValue - rightValue));
+          value = Math.abs(leftValue - rightValue);
         } else if (
           typeof leftValue === "string" &&
           typeof rightValue === "string"
         ) {
-          value = this._normalize(this._editDistDP(leftValue, rightValue));
+          value = this._realCodedEditDistance(leftValue, rightValue);
         } else if (
           typeof leftValue === "boolean" &&
           typeof rightValue === "boolean"
@@ -369,50 +481,82 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
           value = leftValue === rightValue ? 0 : 1;
         } else {
           // TODO type difference?!
-          value = leftValue === rightValue ? 0 : 1;
+          if (operator === "===") {
+            value = leftValue === rightValue ? 0 : Number.MAX_VALUE;
+          } else {
+            value = leftValue == rightValue ? 0 : Number.MAX_VALUE;
+          }
         }
         break;
       }
       case "!=":
       // TODO
       case "!==": {
-        value = leftValue === rightValue ? 1 : 0;
+        if (operator === "!==") {
+          value = leftValue === rightValue ? 1 : 0;
+        } else {
+          value = leftValue == rightValue ? 1 : 0;
+        }
         break;
       }
       case "in": {
         if (rightValue === undefined || rightValue === null) {
-          value = 1;
+          value = 1; // TODO should this one be inverted?
         } else {
-          value = leftValue in rightValue ? 0 : 1;
+          if (this._inverted) {
+            value = leftValue in rightValue ? Number.MAX_VALUE : 0;
+          } else {
+            value = leftValue in rightValue ? 0 : Number.MAX_VALUE;
+          }
         }
         break;
       }
       case "instanceof": {
-        value = leftValue instanceof rightValue ? 0 : 1;
+        if (this._inverted) {
+          value = leftValue instanceof rightValue ? Number.MAX_VALUE : 0;
+        } else {
+          value = leftValue instanceof rightValue ? 0 : Number.MAX_VALUE;
+        }
         break;
       }
       case ">": {
-        value =
-          leftValue > rightValue
-            ? 0
-            : this._normalize(rightValue - leftValue + this._K);
+        if (typeof leftValue === "number" && typeof rightValue === "number") {
+          value = leftValue > rightValue ? 0 : rightValue - leftValue + this._K;
+        } else {
+          // TODO do this for strings maybe
+          // cannot compare types
+          value = leftValue > rightValue ? 0 : Number.MAX_VALUE;
+        }
         break;
       }
       case "<": {
-        value =
-          leftValue < rightValue
-            ? 0
-            : this._normalize(leftValue - rightValue + this._K);
+        if (typeof leftValue === "number" && typeof rightValue === "number") {
+          value = leftValue < rightValue ? 0 : leftValue - rightValue + this._K;
+        } else {
+          // TODO do this for strings maybe
+          // cannot compare types
+          value = leftValue < rightValue ? 0 : Number.MAX_VALUE;
+        }
         break;
       }
       case ">=": {
-        value =
-          leftValue >= rightValue ? 0 : this._normalize(rightValue - leftValue);
+        if (typeof leftValue === "number" && typeof rightValue === "number") {
+          value = leftValue >= rightValue ? 0 : rightValue - leftValue;
+        } else {
+          // TODO do this for strings maybe
+          // cannot compare types
+          value = leftValue >= rightValue ? 0 : Number.MAX_VALUE;
+        }
         break;
       }
       case "<=": {
-        value =
-          leftValue <= rightValue ? 0 : this._normalize(leftValue - rightValue);
+        if (typeof leftValue === "number" && typeof rightValue === "number") {
+          value = leftValue <= rightValue ? 0 : leftValue - rightValue;
+        } else {
+          // TODO do this for strings maybe
+          // cannot compare types
+          value = leftValue <= rightValue ? 0 : Number.MAX_VALUE;
+        }
         break;
       }
       case "|>": {
@@ -425,8 +569,6 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
         throw new Error("Invalid operator!");
       }
     }
-
-    this._valueMap.set(this._getNodeId(path), value);
 
     if (
       [
@@ -441,11 +583,13 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
         ">=",
         "<=",
         "|>",
-      ].includes(path.node.operator)
+      ].includes(operator)
     ) {
-      this._isDistanceMap.set(this._getNodeId(path), true);
+      this._valueMap.set(path.toString(), this._normalize(<number>value));
+      this._isDistanceMap.set(path.toString(), true);
     } else {
-      this._isDistanceMap.set(this._getNodeId(path), false);
+      this._valueMap.set(path.toString(), value);
+      this._isDistanceMap.set(path.toString(), false);
     }
 
     path.skip();
@@ -454,36 +598,82 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
   public LogicalExpression: (path: NodePath<t.LogicalExpression>) => void = (
     path
   ) => {
+    let operator = path.node.operator;
+
     const left = path.get("left");
     const right = path.get("right");
+
+    if (this._inverted) {
+      if (operator === "||") {
+        operator = "&&";
+      } else if (operator === "&&") {
+        operator = "||";
+      }
+    }
 
     left.visit();
     right.visit();
 
-    let leftValue = <any>this._valueMap.get(this._getNodeId(left));
-    let rightValue = <any>this._valueMap.get(this._getNodeId(right));
+    let leftValue = <any>this._valueMap.get(left.toString());
+    let rightValue = <any>this._valueMap.get(right.toString());
 
-    if (!this._isDistanceMap.get(this._getNodeId(left))) {
-      leftValue = leftValue ? 0 : 1;
+    if (!this._isDistanceMap.get(left.toString())) {
+      // should we check for number /booleans here?
+      if (this._inverted) {
+        if (typeof leftValue === "boolean") {
+          leftValue = leftValue ? this._normalize(1) : 0;
+        } else if (typeof leftValue === "number") {
+          leftValue = leftValue ? this._normalize(Math.abs(0 - leftValue)) : 0;
+        } else {
+          leftValue = leftValue ? this._normalize(Number.MAX_VALUE) : 0;
+        }
+      } else {
+        if (typeof leftValue === "boolean") {
+          leftValue = leftValue ? 0 : this._normalize(1);
+        } else if (typeof leftValue === "number") {
+          leftValue = leftValue ? 0 : this._normalize(1);
+        } else {
+          leftValue = leftValue ? 0 : this._normalize(Number.MAX_VALUE);
+        }
+      }
     }
 
-    if (!this._isDistanceMap.get(this._getNodeId(right))) {
-      rightValue = rightValue ? 0 : 1;
+    if (!this._isDistanceMap.get(right.toString())) {
+      // should we check for number /booleans here?
+      if (this._inverted) {
+        if (typeof rightValue === "boolean") {
+          rightValue = rightValue ? this._normalize(1) : 0;
+        } else if (typeof rightValue === "number") {
+          rightValue = rightValue
+            ? this._normalize(Math.abs(0 - rightValue))
+            : 0;
+        } else {
+          rightValue = rightValue ? this._normalize(Number.MAX_VALUE) : 0;
+        }
+      } else {
+        if (typeof rightValue === "boolean") {
+          rightValue = rightValue ? 0 : this._normalize(1);
+        } else if (typeof rightValue === "number") {
+          rightValue = rightValue ? 0 : this._normalize(1);
+        } else {
+          rightValue = rightValue ? 0 : this._normalize(Number.MAX_VALUE);
+        }
+      }
     }
 
     let value: unknown;
-    switch (path.node.operator) {
+    switch (operator) {
       case "||": {
-        value = this._normalize(Math.min(leftValue, rightValue));
+        value = Math.min(leftValue, rightValue); // should this be normalized?
         break;
       }
       case "&&": {
-        value = this._normalize(leftValue + rightValue);
+        value = this._normalize(leftValue + rightValue); // should this be normalized?
         break;
       }
       case "??": {
         // TODO no clue
-        value = 0;
+        value = this._normalize(Number.MAX_VALUE);
         break;
       }
       default: {
@@ -492,13 +682,121 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
     }
 
-    this._valueMap.set(this._getNodeId(path), value);
-    this._isDistanceMap.set(this._getNodeId(path), true);
+    this._valueMap.set(path.toString(), value);
+    this._isDistanceMap.set(path.toString(), true);
 
     path.skip();
   };
 
-  private _editDistDP(string1: string, string2: string) {
+  private minimum(a: number, b: number, c: number) {
+    let mi;
+
+    mi = a;
+    if (b < mi) {
+      mi = b;
+    }
+
+    if (c < mi) {
+      mi = c;
+    }
+    return mi;
+  }
+
+  protected _realCodedEditDistance(s: string, t: string) {
+    const d: number[][] = []; // matrix
+    let index; // iterates through s
+    let index_; // iterates through t
+    let s_index; // ith character of s
+    let t_index; // jth character of t
+    let cost; // cost
+
+    if (s == undefined && t != undefined) {
+      return t.length;
+    }
+    if (t == undefined && s != undefined) {
+      return s.length;
+    }
+    if (s == undefined && t == undefined) {
+      return Number.MAX_VALUE;
+    }
+    // Step 1
+
+    const n = s.length; // length of s
+    const m = t.length; // length of t
+    if (n == 0) {
+      return m;
+    }
+    if (m == 0) {
+      return n;
+    }
+
+    for (let indexA = 0; indexA < n + 1; indexA++) {
+      const row = [];
+      for (let indexB = 0; indexB < m + 1; indexB++) {
+        row.push(0);
+      }
+      d.push(row);
+    }
+
+    // Step 2
+
+    for (index = 0; index <= n; index++) {
+      d[index][0] = index;
+    }
+
+    for (index_ = 0; index_ <= m; index_++) {
+      d[0][index_] = index_;
+    }
+
+    // Step 3
+
+    for (index = 1; index <= n; index++) {
+      s_index = s.charAt(index - 1);
+
+      // Step 4
+
+      for (index_ = 1; index_ <= m; index_++) {
+        t_index = t.charAt(index_ - 1);
+
+        // Step 5
+
+        if (s_index == t_index) {
+          cost = 0;
+        } else {
+          //
+          if (
+            !this._stringAlphabet.includes(t_index) ||
+            !this._stringAlphabet.includes(s_index)
+          ) {
+            BranchDistanceVisitor.LOGGER.warn(
+              `cannot search for character missing from the sampling alphabet one of these is missing: ${t_index}, ${s_index}`
+            );
+            cost = Number.MAX_VALUE;
+          } else {
+            cost = Math.abs(
+              this._stringAlphabet.indexOf(s_index) -
+                this._stringAlphabet.indexOf(t_index)
+            );
+          }
+          cost = this._normalize(cost);
+        }
+
+        // Step 6
+
+        d[index][index_] = this.minimum(
+          d[index - 1][index_] + 1,
+          d[index][index_ - 1] + 1,
+          d[index - 1][index_ - 1] + cost
+        );
+      }
+    }
+
+    // Step 7
+
+    return d[n][m];
+  }
+
+  protected _editDistDP(string1: string, string2: string) {
     const m = string1.length;
     const n = string2.length;
     const table = [];
@@ -539,6 +837,9 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
    * @returns
    */
   private _normalize(x: number): number {
+    if (Number.isNaN(x)) {
+      return 0.999;
+    }
     // return 1 - Math.pow(1.001, -x)
     return x / (x + 1);
   }

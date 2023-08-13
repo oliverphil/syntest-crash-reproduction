@@ -47,12 +47,14 @@
     "test:watch": "mocha --config ../../.mocharc.json --watch"
   },
   "dependencies": {
-
   },
   "engines": {
     "node": ">=10.24.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.21.5"
   }
 }

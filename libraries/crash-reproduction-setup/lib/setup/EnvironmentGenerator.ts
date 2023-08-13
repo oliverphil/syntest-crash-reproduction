@@ -56,8 +56,8 @@ export class EnvironmentGenerator {
     return assetSubDirs;
   }
 
-  private handleStandard(project: string) {
-    const assetDir = './benchmark/crashes';
+  private handleGithub(project: string) {
+    const assetDir = './benchmark/crashes/github';
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
         && value !== 'seeded' && value !== 'bugsjs' && value !== 'syntest-collected' && (!project || value === project));
     const assetSubDirs = assetDirContents.map((projItem) => {
@@ -72,19 +72,20 @@ export class EnvironmentGenerator {
     let assetSubDirs = [];
     switch(syntestType) {
       case 'bugsjs':
-        assetDir = './benchmark/crashes/bugsjs'
+        assetDir = './benchmark/crashes/bugsjs';
         assetSubDirs = this.handleBugsjs(project);
         break;
       case 'seeded':
-        assetDir = './benchmark/crashes/seeded'
+        assetDir = './benchmark/crashes/seeded';
         assetSubDirs = this.handleSeeded(project);
         break;
       case 'syntest-collected':
-        assetDir = './benchmark/crashes/syntest-collected'
+        assetDir = './benchmark/crashes/syntest-collected';
         assetSubDirs = this.handleSyntest(project);
         break;
-      case 'standard':
-        assetSubDirs = this.handleStandard(project);
+      case 'github':
+        assetDir = './benchmark/crashes/github';
+        assetSubDirs = this.handleGithub(project);
         break;
     }
 

@@ -8,7 +8,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     // "plugin:@typescript-eslint/recommended-requiring-type-checking", // TODO later too much work currently
-//    "plugin:unicorn/recommended",
+    "plugin:unicorn/recommended", // NB: was uncommented for syntest crash reproduction
     // "plugin:import/recommended", // TODO gives weird errors
     "plugin:import/typescript",
     "plugin:promise/recommended",
@@ -67,6 +67,7 @@
 		// 	"error",
 		// 	{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 		// ],
-    "no-fallthrough": "off"
+    "no-fallthrough": "off",
+    "unicorn/expiring-todo-comments": "off"
   }
 }

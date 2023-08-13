@@ -20,15 +20,20 @@ import { Command, ModuleManager } from "@syntest/module";
 import Yargs = require("yargs");
 
 import { JavaScriptArguments, JavaScriptLauncher } from "../JavaScriptLauncher";
+import { MetricManager } from "@syntest/metric";
+import { StorageManager } from "@syntest/storage";
 
 export function getTestCommand(
   tool: string,
   moduleManager: ModuleManager,
+  metricManager: MetricManager,
+  storageManager: StorageManager,
   userInterface: UserInterface
 ): Command {
   const options = new Map<string, Yargs.Options>();
 
   const commandGroup = "Type Inference Options:";
+  const samplingGroup = "Sampling Options:";
 
   options.set("incorporate-execution-information", {
     alias: [],
@@ -58,18 +63,40 @@ export function getTestCommand(
     type: "number",
   });
 
+  options.set("constant-pool", {
+    alias: [],
+    default: false,
+    description: "Enable constant pool.",
+    group: samplingGroup,
+    hidden: false,
+    type: "boolean",
+  });
+
+  options.set("constant-pool-probability", {
+    alias: [],
+    default: 0.5,
+    description:
+      "Probability to sample from the constant pool instead creating random values",
+    group: samplingGroup,
+    hidden: false,
+    type: "number",
+  });
+
   return new Command(
+    moduleManager,
     tool,
     "test",
     "Run the test case generation tool on a certain JavaScript project.",
     options,
-    (arguments_: Yargs.ArgumentsCamelCase) => {
+    async (arguments_: Yargs.ArgumentsCamelCase) => {
       const launcher = new JavaScriptLauncher(
         <JavaScriptArguments>(<unknown>arguments_),
         moduleManager,
+        metricManager,
+        storageManager,
         userInterface
       );
-      launcher.run();
+      await launcher.run();
     }
   );
 }
@@ -78,4 +105,6 @@ export type TestCommandOptions = {
   incorporateExecutionInformation: boolean;
   typeInferenceMode: string;
   randomTypeProbability: number;
+  constantPool: boolean;
+  constantPoolProbability: number;
 };

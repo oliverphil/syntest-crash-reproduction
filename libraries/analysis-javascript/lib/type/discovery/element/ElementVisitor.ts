@@ -37,14 +37,14 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
     type: ElementType,
     value: string
   ) {
-    let loc = path.node.loc;
-    if (loc === undefined) {
-      let parent = path.parentPath;
-      while (parent && !parent.node.loc) {
-        parent = parent.parentPath;
-      }
-      loc = parent?.node?.loc;
-    }
+    // let loc = path.node.loc;
+    // if (loc === undefined) {
+    //   let parent = path.parentPath;
+    //   while (parent && !parent.node.loc) {
+    //     parent = parent.parentPath;
+    //   }
+    //   loc = parent?.node?.loc;
+    // }
     if (type === ElementType.Identifier) {
       const bindingId = this._getBindingId(path);
 
@@ -52,8 +52,10 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         id: this._getNodeId(path),
         filePath: this._filePath,
         location: {
-          startIndex: (<{ index: number }>(<unknown>loc.start)).index,
-          endIndex: (<{ index: number }>(<unknown>loc.end)).index,
+          // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
+          // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
+          startIndex: (<{ index: number }>(<unknown>path.node.loc.start)).index,
+          endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
         },
         type: ElementType.Identifier,
         bindingId,
@@ -65,8 +67,10 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         id: this._getNodeId(path),
         filePath: this._filePath,
         location: {
-          startIndex: (<{ index: number }>(<unknown>loc.start)).index,
-          endIndex: (<{ index: number }>(<unknown>loc.end)).index,
+          // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
+          // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
+          startIndex: (<{ index: number }>(<unknown>path.node.loc.start)).index,
+          endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
         },
         type,
         value,

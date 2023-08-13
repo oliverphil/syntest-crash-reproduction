@@ -5,22 +5,22 @@ import {StackFrame} from "@syntest/crash-reproduction-setup";
 import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
 
 
-class StackFrameObjectiveFunction implements ObjectiveFunction<JavaScriptTestCase> {
-    protected subject: SearchSubject<JavaScriptTestCase>;
+class StackFrameObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> {
     protected stackFrame: StackFrame;
 
     constructor(
+        id: string,
         subject: SearchSubject<JavaScriptTestCase>,
         stackFrame: StackFrame
     ) {
-        this.subject = subject;
+        super(id, subject);
         this.stackFrame = stackFrame;
     }
 
     calculateDistance(encoding: JavaScriptTestCase): number {
         const trace = encoding.getExecutionResult()?.getTraces()?.find(trace => {
             return trace.path.includes(this.stackFrame.file)
-                && trace.line === this.stackFrame.lineNumber;
+                && trace.location.start.line === this.stackFrame.lineNumber;
         });
         let distance = 1;
         if (trace && trace.hits > 0) {
@@ -44,14 +44,9 @@ class StackFrameObjectiveFunction implements ObjectiveFunction<JavaScriptTestCas
         return distance;
     }
 
-    getIdentifier(): string {
+    override getIdentifier(): string {
         return `${this.stackFrame.file}:${this.stackFrame.lineNumber}`;
     }
-
-    getSubject(): SearchSubject<JavaScriptTestCase> {
-        return this.subject;
-    }
-
 }
 
 export default StackFrameObjectiveFunction;

@@ -20,10 +20,7 @@ import * as chai from "chai";
 
 import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
 import { ControlFlowGraphVisitor } from "../../lib/cfg/ControlFlowGraphVisitor";
-import {
-  EdgeType,
-  contractControlFlowProgram,
-} from "../../../../../syntest-core/libraries/cfg";
+import { EdgeType, contractControlFlowProgram } from "@syntest/cfg";
 
 const expect = chai.expect;
 
@@ -242,8 +239,8 @@ describe("ControlFlowGraphVisitor test", () => {
 
     const cfg = cfgHelper(source);
 
-    expect(cfg.graph.nodes).to.have.lengthOf(6);
-    expect(cfg.graph.edges).to.have.lengthOf(5);
+    expect(cfg.graph.nodes).to.have.lengthOf(7);
+    expect(cfg.graph.edges).to.have.lengthOf(6);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -263,13 +260,15 @@ describe("ControlFlowGraphVisitor test", () => {
       EdgeType.CONDITIONAL_TRUE
     );
     const bodyRepeat = cfg.graph.getOutgoingEdges(doWhileStatement)[0].target;
+    expect(constX).to.equal(bodyRepeat);
+
     // false
     expect(cfg.graph.getOutgoingEdges(doWhileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const constY = cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
-
-    expect(constX).to.equal(bodyRepeat);
+    const falsePlaceholder =
+      cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const constY = cfg.graph.getOutgoingEdges(falsePlaceholder)[0].target;
 
     const exit = cfg.graph.getOutgoingEdges(constY)[0].target;
 
@@ -288,8 +287,8 @@ describe("ControlFlowGraphVisitor test", () => {
 
     const cfg = cfgHelper(source);
 
-    expect(cfg.graph.nodes).to.have.lengthOf(6);
-    expect(cfg.graph.edges).to.have.lengthOf(5);
+    expect(cfg.graph.nodes).to.have.lengthOf(7);
+    expect(cfg.graph.edges).to.have.lengthOf(6);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -309,13 +308,15 @@ describe("ControlFlowGraphVisitor test", () => {
       EdgeType.CONDITIONAL_TRUE
     );
     const bodyRepeat = cfg.graph.getOutgoingEdges(doWhileStatement)[0].target;
+    expect(constX).to.equal(bodyRepeat);
+
     // false
     expect(cfg.graph.getOutgoingEdges(doWhileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const constY = cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
-
-    expect(constX).to.equal(bodyRepeat);
+    const falsePlaceholder =
+      cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const constY = cfg.graph.getOutgoingEdges(falsePlaceholder)[0].target;
 
     const exit = cfg.graph.getOutgoingEdges(constY)[0].target;
 
@@ -334,8 +335,8 @@ describe("ControlFlowGraphVisitor test", () => {
 
     const cfg = cfgHelper(source);
 
-    expect(cfg.graph.nodes).to.have.lengthOf(5);
-    expect(cfg.graph.edges).to.have.lengthOf(4);
+    expect(cfg.graph.nodes).to.have.lengthOf(6);
+    expect(cfg.graph.edges).to.have.lengthOf(5);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -360,7 +361,9 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getOutgoingEdges(doWhileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const exit = cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const falsePlaceholder =
+      cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const exit = cfg.graph.getOutgoingEdges(falsePlaceholder)[0].target;
 
     expect(constX).to.equal(bodyRepeat);
 
@@ -379,8 +382,8 @@ describe("ControlFlowGraphVisitor test", () => {
 
     const cfg = cfgHelper(source);
 
-    expect(cfg.graph.nodes).to.have.lengthOf(6);
-    expect(cfg.graph.edges).to.have.lengthOf(5);
+    expect(cfg.graph.nodes).to.have.lengthOf(7);
+    expect(cfg.graph.edges).to.have.lengthOf(6);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -401,13 +404,15 @@ describe("ControlFlowGraphVisitor test", () => {
       EdgeType.CONDITIONAL_TRUE
     );
     const bodyRepeat = cfg.graph.getOutgoingEdges(doWhileStatement)[0].target;
+    expect(continueStatement).to.equal(bodyRepeat);
+
     // false
     expect(cfg.graph.getOutgoingEdges(doWhileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const constY = cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
-
-    expect(continueStatement).to.equal(bodyRepeat);
+    const falsePlaceholder =
+      cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const constY = cfg.graph.getOutgoingEdges(falsePlaceholder)[0].target;
 
     const exit = cfg.graph.getOutgoingEdges(constY)[0].target;
 
@@ -426,8 +431,8 @@ describe("ControlFlowGraphVisitor test", () => {
 
     const cfg = cfgHelper(source);
 
-    expect(cfg.graph.nodes).to.have.lengthOf(6);
-    expect(cfg.graph.edges).to.have.lengthOf(5);
+    expect(cfg.graph.nodes).to.have.lengthOf(7);
+    expect(cfg.graph.edges).to.have.lengthOf(6);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -437,9 +442,14 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getIncomingEdges(breakStatement)).to.have.lengthOf(2);
     expect(cfg.graph.getOutgoingEdges(breakStatement)).to.have.lengthOf(1);
 
-    const constY = cfg.graph.getOutgoingEdges(breakStatement)[0].target;
+    const falsePlaceholder1 =
+      cfg.graph.getOutgoingEdges(breakStatement)[0].target;
+    expect(cfg.graph.getIncomingEdges(falsePlaceholder1)).to.have.lengthOf(2);
+    expect(cfg.graph.getOutgoingEdges(falsePlaceholder1)).to.have.lengthOf(1);
 
-    expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(2);
+    const constY = cfg.graph.getOutgoingEdges(falsePlaceholder1)[0].target;
+
+    expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
 
     const exit = cfg.graph.getOutgoingEdges(constY)[0].target;
@@ -465,7 +475,9 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getOutgoingEdges(doWhileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const exit2 = cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const falsePlaceholder2 =
+      cfg.graph.getOutgoingEdges(doWhileStatement)[1].target;
+    const exit2 = cfg.graph.getOutgoingEdges(falsePlaceholder2)[0].target;
 
     expect(breakStatement).to.equal(bodyRepeat);
 
@@ -484,8 +496,8 @@ describe("ControlFlowGraphVisitor test", () => {
 
     const cfg = cfgHelper(source);
 
-    expect(cfg.graph.nodes).to.have.lengthOf(8);
-    expect(cfg.graph.edges).to.have.lengthOf(8);
+    expect(cfg.graph.nodes).to.have.lengthOf(9);
+    expect(cfg.graph.edges).to.have.lengthOf(9);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -504,7 +516,9 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getIncomingEdges(breakStatement)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(breakStatement)).to.have.lengthOf(1);
 
-    const constYBreak = cfg.graph.getOutgoingEdges(breakStatement)[0].target;
+    const falsePlaceholder1 =
+      cfg.graph.getOutgoingEdges(breakStatement)[0].target;
+    const constYBreak = cfg.graph.getOutgoingEdges(falsePlaceholder1)[0].target;
 
     // false
     expect(cfg.graph.getOutgoingEdges(ifStatement)[1].type).to.equal(
@@ -531,12 +545,19 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getOutgoingEdges(whileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const constYWhile = cfg.graph.getOutgoingEdges(whileStatement)[1].target;
+    const falsePlaceholder2 =
+      cfg.graph.getOutgoingEdges(whileStatement)[1].target;
+
+    expect(cfg.graph.getIncomingEdges(falsePlaceholder2)).to.have.lengthOf(2);
+    expect(cfg.graph.getOutgoingEdges(falsePlaceholder2)).to.have.lengthOf(1);
+
+    const constYWhile = cfg.graph.getOutgoingEdges(falsePlaceholder2)[0].target;
 
     expect(ifStatement).to.equal(bodyRepeat);
     expect(constYBreak).to.equal(constYWhile);
+    expect(falsePlaceholder1).to.equal(falsePlaceholder2);
 
-    expect(cfg.graph.getIncomingEdges(constYWhile)).to.have.lengthOf(2);
+    expect(cfg.graph.getIncomingEdges(constYWhile)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constYWhile)).to.have.lengthOf(1);
 
     const exit = cfg.graph.getOutgoingEdges(constYWhile)[0].target;
@@ -553,8 +574,8 @@ describe("ControlFlowGraphVisitor test", () => {
       `;
 
     const cfg = cfgHelper(source);
-    expect(cfg.graph.nodes).to.have.lengthOf(6);
-    expect(cfg.graph.edges).to.have.lengthOf(5);
+    expect(cfg.graph.nodes).to.have.lengthOf(7);
+    expect(cfg.graph.edges).to.have.lengthOf(6);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -581,7 +602,9 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getOutgoingEdges(whileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const constY = cfg.graph.getOutgoingEdges(whileStatement)[1].target;
+    const falsePlaceholder =
+      cfg.graph.getOutgoingEdges(whileStatement)[1].target;
+    const constY = cfg.graph.getOutgoingEdges(falsePlaceholder)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
@@ -602,8 +625,8 @@ describe("ControlFlowGraphVisitor test", () => {
       `;
 
     const cfg = cfgHelper(source);
-    expect(cfg.graph.nodes).to.have.lengthOf(6);
-    expect(cfg.graph.edges).to.have.lengthOf(5);
+    expect(cfg.graph.nodes).to.have.lengthOf(7);
+    expect(cfg.graph.edges).to.have.lengthOf(6);
 
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
@@ -630,113 +653,9 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getOutgoingEdges(whileStatement)[1].type).to.equal(
       EdgeType.CONDITIONAL_FALSE
     );
-    const constY = cfg.graph.getOutgoingEdges(whileStatement)[1].target;
-
-    expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
-
-    const exit = cfg.graph.getOutgoingEdges(constY)[0].target;
-
-    expect(exit).to.equal("SUCCESS_EXIT");
-    expect(cfg.graph.getIncomingEdges(exit)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(exit)).to.have.lengthOf(0);
-  });
-
-  it("for i loop", () => {
-    const source = `
-        for (let i = 0; i < 10; i++) {
-          const x = 1
-        }
-        const y = 1
-      `;
-
-    const cfg = cfgHelper(source);
-    expect(cfg.graph.nodes).to.have.lengthOf(8);
-    expect(cfg.graph.edges).to.have.lengthOf(7);
-
-    expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
-    expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
-
-    const initExpression = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
-
-    expect(cfg.graph.getIncomingEdges(initExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(initExpression)).to.have.lengthOf(1);
-
-    const testExpression = cfg.graph.getOutgoingEdges(initExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(testExpression)).to.have.lengthOf(2);
-    expect(cfg.graph.getOutgoingEdges(testExpression)).to.have.lengthOf(2);
-
-    // true
-    const constX = cfg.graph.getOutgoingEdges(testExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(constX)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(constX)).to.have.lengthOf(1);
-
-    const updateExpression = cfg.graph.getOutgoingEdges(constX)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(updateExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(updateExpression)).to.have.lengthOf(1);
-
-    const backEdge = cfg.graph.getOutgoingEdges(updateExpression)[0].target;
-
-    expect(testExpression).to.equal(backEdge);
-
-    // false
-    const constY = cfg.graph.getOutgoingEdges(testExpression)[1].target;
-
-    expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
-
-    const exit = cfg.graph.getOutgoingEdges(constY)[0].target;
-
-    expect(exit).to.equal("SUCCESS_EXIT");
-    expect(cfg.graph.getIncomingEdges(exit)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(exit)).to.have.lengthOf(0);
-  });
-
-  it("for i loop no block", () => {
-    const source = `
-        for (let i = 0; i < 10; i++) {
-
-        }
-        const y = 1
-      `;
-
-    const cfg = cfgHelper(source);
-    expect(cfg.graph.nodes).to.have.lengthOf(8);
-    expect(cfg.graph.edges).to.have.lengthOf(7);
-
-    expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
-    expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
-
-    const initExpression = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
-
-    expect(cfg.graph.getIncomingEdges(initExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(initExpression)).to.have.lengthOf(1);
-
-    const testExpression = cfg.graph.getOutgoingEdges(initExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(testExpression)).to.have.lengthOf(2);
-    expect(cfg.graph.getOutgoingEdges(testExpression)).to.have.lengthOf(2);
-
-    // true
-    const constX = cfg.graph.getOutgoingEdges(testExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(constX)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(constX)).to.have.lengthOf(1);
-
-    const updateExpression = cfg.graph.getOutgoingEdges(constX)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(updateExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(updateExpression)).to.have.lengthOf(1);
-
-    const backEdge = cfg.graph.getOutgoingEdges(updateExpression)[0].target;
-
-    expect(testExpression).to.equal(backEdge);
-
-    // false
-    const constY = cfg.graph.getOutgoingEdges(testExpression)[1].target;
+    const falsePlaceholder =
+      cfg.graph.getOutgoingEdges(whileStatement)[1].target;
+    const constY = cfg.graph.getOutgoingEdges(falsePlaceholder)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
@@ -763,28 +682,28 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
 
-    const initExpression = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
+    const forTest = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
 
-    expect(cfg.graph.getIncomingEdges(initExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(initExpression)).to.have.lengthOf(1);
-
-    const testExpression = cfg.graph.getOutgoingEdges(initExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(testExpression)).to.have.lengthOf(2);
-    expect(cfg.graph.getOutgoingEdges(testExpression)).to.have.lengthOf(2);
+    expect(cfg.graph.getIncomingEdges(forTest)).to.have.lengthOf(2);
+    expect(cfg.graph.getOutgoingEdges(forTest)).to.have.lengthOf(2);
 
     // true
-    const constX = cfg.graph.getOutgoingEdges(testExpression)[0].target;
+    const constX = cfg.graph.getOutgoingEdges(forTest)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constX)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constX)).to.have.lengthOf(1);
 
     const backEdge = cfg.graph.getOutgoingEdges(constX)[0].target;
 
-    expect(testExpression).to.equal(backEdge);
+    expect(forTest).to.equal(backEdge);
 
     // false
-    const constY = cfg.graph.getOutgoingEdges(testExpression)[1].target;
+    const placeholder = cfg.graph.getOutgoingEdges(forTest)[1].target;
+
+    expect(cfg.graph.getIncomingEdges(placeholder)).to.have.lengthOf(1);
+    expect(cfg.graph.getOutgoingEdges(placeholder)).to.have.lengthOf(1);
+
+    const constY = cfg.graph.getOutgoingEdges(placeholder)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
@@ -811,28 +730,28 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
 
-    const initExpression = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
+    const forTest = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
 
-    expect(cfg.graph.getIncomingEdges(initExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(initExpression)).to.have.lengthOf(1);
-
-    const testExpression = cfg.graph.getOutgoingEdges(initExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(testExpression)).to.have.lengthOf(2);
-    expect(cfg.graph.getOutgoingEdges(testExpression)).to.have.lengthOf(2);
+    expect(cfg.graph.getIncomingEdges(forTest)).to.have.lengthOf(2);
+    expect(cfg.graph.getOutgoingEdges(forTest)).to.have.lengthOf(2);
 
     // true
-    const constX = cfg.graph.getOutgoingEdges(testExpression)[0].target;
+    const trueCase = cfg.graph.getOutgoingEdges(forTest)[0].target;
 
-    expect(cfg.graph.getIncomingEdges(constX)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(constX)).to.have.lengthOf(1);
+    expect(cfg.graph.getIncomingEdges(trueCase)).to.have.lengthOf(1);
+    expect(cfg.graph.getOutgoingEdges(trueCase)).to.have.lengthOf(1);
 
-    const backEdge = cfg.graph.getOutgoingEdges(constX)[0].target;
+    const backEdge = cfg.graph.getOutgoingEdges(trueCase)[0].target;
 
-    expect(testExpression).to.equal(backEdge);
+    expect(forTest).to.equal(backEdge);
 
     // false
-    const constY = cfg.graph.getOutgoingEdges(testExpression)[1].target;
+    const falseCase = cfg.graph.getOutgoingEdges(forTest)[1].target;
+
+    expect(cfg.graph.getIncomingEdges(falseCase)).to.have.lengthOf(1);
+    expect(cfg.graph.getOutgoingEdges(falseCase)).to.have.lengthOf(1);
+
+    const constY = cfg.graph.getOutgoingEdges(falseCase)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
@@ -859,28 +778,28 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
 
-    const initExpression = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
+    const forTest = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
 
-    expect(cfg.graph.getIncomingEdges(initExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(initExpression)).to.have.lengthOf(1);
-
-    const testExpression = cfg.graph.getOutgoingEdges(initExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(testExpression)).to.have.lengthOf(2);
-    expect(cfg.graph.getOutgoingEdges(testExpression)).to.have.lengthOf(2);
+    expect(cfg.graph.getIncomingEdges(forTest)).to.have.lengthOf(2);
+    expect(cfg.graph.getOutgoingEdges(forTest)).to.have.lengthOf(2);
 
     // true
-    const constX = cfg.graph.getOutgoingEdges(testExpression)[0].target;
+    const constX = cfg.graph.getOutgoingEdges(forTest)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constX)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constX)).to.have.lengthOf(1);
 
     const backEdge = cfg.graph.getOutgoingEdges(constX)[0].target;
 
-    expect(testExpression).to.equal(backEdge);
+    expect(forTest).to.equal(backEdge);
 
     // false
-    const constY = cfg.graph.getOutgoingEdges(testExpression)[1].target;
+    const placeholder = cfg.graph.getOutgoingEdges(forTest)[1].target;
+
+    expect(cfg.graph.getIncomingEdges(placeholder)).to.have.lengthOf(1);
+    expect(cfg.graph.getOutgoingEdges(placeholder)).to.have.lengthOf(1);
+
+    const constY = cfg.graph.getOutgoingEdges(placeholder)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);
@@ -907,28 +826,27 @@ describe("ControlFlowGraphVisitor test", () => {
     expect(cfg.graph.getIncomingEdges("ENTRY")).to.have.lengthOf(0);
     expect(cfg.graph.getOutgoingEdges("ENTRY")).to.have.lengthOf(1);
 
-    const initExpression = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
+    const forTest = cfg.graph.getOutgoingEdges("ENTRY")[0].target;
 
-    expect(cfg.graph.getIncomingEdges(initExpression)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(initExpression)).to.have.lengthOf(1);
-
-    const testExpression = cfg.graph.getOutgoingEdges(initExpression)[0].target;
-
-    expect(cfg.graph.getIncomingEdges(testExpression)).to.have.lengthOf(2);
-    expect(cfg.graph.getOutgoingEdges(testExpression)).to.have.lengthOf(2);
+    expect(cfg.graph.getIncomingEdges(forTest)).to.have.lengthOf(2);
+    expect(cfg.graph.getOutgoingEdges(forTest)).to.have.lengthOf(2);
 
     // true
-    const constX = cfg.graph.getOutgoingEdges(testExpression)[0].target;
+    const trueCase = cfg.graph.getOutgoingEdges(forTest)[0].target;
 
-    expect(cfg.graph.getIncomingEdges(constX)).to.have.lengthOf(1);
-    expect(cfg.graph.getOutgoingEdges(constX)).to.have.lengthOf(1);
+    expect(cfg.graph.getIncomingEdges(trueCase)).to.have.lengthOf(1);
+    expect(cfg.graph.getOutgoingEdges(trueCase)).to.have.lengthOf(1);
 
-    const backEdge = cfg.graph.getOutgoingEdges(constX)[0].target;
-
-    expect(testExpression).to.equal(backEdge);
+    const backEdge = cfg.graph.getOutgoingEdges(trueCase)[0].target;
+    expect(forTest).to.equal(backEdge);
 
     // false
-    const constY = cfg.graph.getOutgoingEdges(testExpression)[1].target;
+    const falseCase = cfg.graph.getOutgoingEdges(forTest)[1].target;
+
+    expect(cfg.graph.getIncomingEdges(falseCase)).to.have.lengthOf(1);
+    expect(cfg.graph.getOutgoingEdges(falseCase)).to.have.lengthOf(1);
+
+    const constY = cfg.graph.getOutgoingEdges(falseCase)[0].target;
 
     expect(cfg.graph.getIncomingEdges(constY)).to.have.lengthOf(1);
     expect(cfg.graph.getOutgoingEdges(constY)).to.have.lengthOf(1);

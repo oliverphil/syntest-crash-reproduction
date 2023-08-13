@@ -2,7 +2,7 @@ import {EnvironmentGenerator} from "./libraries/crash-reproduction-setup/dist/li
 import {execSync} from "child_process";
 import * as fs from "fs";
 
-const types = ['standard', 'seeded', 'bugsjs', 'syntest-collected'];
+const types = ['standard', 'github', 'bugsjs', 'syntest-collected'];
 const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'bower', 'hexo', 'pencilblue'];
 const envGen = new EnvironmentGenerator();
 

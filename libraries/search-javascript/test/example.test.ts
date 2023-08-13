@@ -15,14 +15,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { expect } from "chai";
-
-import { ExecutionInformationIntegrator } from "../lib/testcase/execution/ExecutionInformationIntegrator";
-import { TypeModel } from "@syntest/analysis-javascript";
-
-describe("Temp", () => {
-  it("temp", () => {
-    new ExecutionInformationIntegrator(new TypeModel());
-    expect(true);
-  });
-});
+export type MetaData = {
+  [path: string]: {
+    hash: string;
+    meta: {
+      [id: string]: {
+        condition_ast: string;
+        condition: string;
+        variables: {
+          [id: string]: unknown;
+        };
+      };
+    };
+  };
+};

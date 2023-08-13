@@ -1,1 +1,1 @@
-["_http_outgoing","lib/response.js","test/res.links.js","mocha/lib/runnable.js","mocha/lib/runner.js","timers"]
+["_http_outgoing","superagent/lib/node/index.js","test/res.format.js","mocha/lib/runnable.js","mocha/lib/runner.js","timers"]

@@ -46,15 +46,17 @@
     "test:watch": "mocha --config ../../.mocharc.json --watch"
   },
   "dependencies": {
-    "@syntest/analysis-javascript": "file:../../libraries/analysis-javascript",
+    "@syntest/analysis": "file:../../../syntest-core/libraries/analysis",
+    "@syntest/analysis-javascript": "*",
     "@syntest/base-language": "file:../../../syntest-core/tools/base-language",
     "@syntest/cli-graphics": "file:../../../syntest-core/libraries/cli-graphics",
-    "@syntest/crash-reproduction-setup": "0.0.0",
-    "@syntest/logging": "*",
+    "@syntest/instrumentation-javascript": "*",
+    "@syntest/logging": "file:../../../syntest-core/libraries/logging",
     "@syntest/metric": "file:../../../syntest-core/libraries/metric",
     "@syntest/module": "file:../../../syntest-core/libraries/module",
     "@syntest/search": "file:../../../syntest-core/libraries/search",
-    "@syntest/search-javascript": "file:../../libraries/search-javascript"
+    "@syntest/search-javascript": "*",
+    "@syntest/storage": "file:../../../syntest-core/libraries/storage"
   },
   "engines": {
     "node": ">=10.24.0"

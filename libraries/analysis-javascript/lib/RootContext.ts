@@ -110,6 +110,7 @@ export class RootContext extends CoreRootContext<t.Node> {
           );
         } catch (e) {
           console.log(e);
+          break;
         }
       }
     }
@@ -223,7 +224,7 @@ export class RootContext extends CoreRootContext<t.Node> {
   // TODO something with the types
 
   override getSource(filePath: string) {
-    let absoluteTargetPath = path.resolve(filePath);
+    let absoluteTargetPath = this.resolvePath(filePath);
 
     if (!this._sources.has(absoluteTargetPath)) {
       if (!existsSync(absoluteTargetPath)) {

@@ -1,1 +1,1 @@
-["should/lib/assertion.js","test/res.send.js","supertest/lib/test.js","events","net","internal/process/next_tick.js"]
+["_http_outgoing","superagent/lib/node/index.js","test/res.format.js","mocha/lib/runnable.js","mocha/lib/runner.js","timers"]

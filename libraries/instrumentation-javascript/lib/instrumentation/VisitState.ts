@@ -280,8 +280,32 @@ export class VisitState {
   insertStatementCounter(path) {
     /* istanbul ignore if: paranoid check */
     if (!(path.node && path.node.loc)) {
+      if (
+        path.parentPath &&
+        path.parentPath.parentPath &&
+        path.parentPath.parentPath.isVariableDeclaration()
+      ) {
+        // stupid hack to make sure the traces match with the cfg
+        // this one is for when init is empty in the variable declarator
+        const index = this.cov.newStatement(
+          path.parentPath.parentPath.node.loc
+        );
+        const increment = this.increase("s", index, null);
+        this.insertCounter(path.parentPath.parentPath, increment);
+      }
       return;
     }
+    if (
+      path.parentPath &&
+      path.parentPath.parentPath &&
+      path.parentPath.parentPath.isVariableDeclaration()
+    ) {
+      // stupid hack to make sure the traces match with the cfg
+      const index = this.cov.newStatement(path.parentPath.parentPath.node.loc);
+      const increment = this.increase("s", index, null);
+      this.insertCounter(path.parentPath.parentPath, increment);
+    }
+
     const index = this.cov.newStatement(path.node.loc);
     const increment = this.increase("s", index, null);
     this.insertCounter(path, increment);
@@ -297,19 +321,19 @@ export class VisitState {
 
     let dloc = null;
     // get location for declaration
-    switch (n.type) {
-      case "FunctionDeclaration":
-      case "FunctionExpression":
-        /* istanbul ignore else: paranoid check */
-        if (n.id) {
-          dloc = n.id.loc;
-        }
-        break;
-    }
+    // switch (n.type) {
+    //   case "FunctionDeclaration":
+    //   case "FunctionExpression":
+    //     /* istanbul ignore else: paranoid check */
+    //     if (n.id) {
+    //       dloc = n.id.loc;
+    //     }
+    //     break;
+    // }
     if (!dloc) {
       dloc = {
         start: n.loc.start,
-        end: { line: n.loc.start.line, column: n.loc.start.column + 1 },
+        end: n.loc.end, // idk why it was this way since this seems to work too { line: n.loc.start.line, column: n.loc.start.column + 1 },
       };
     }
 
@@ -334,19 +358,18 @@ export class VisitState {
   }
 
   getBranchMetaTracker(
-    branchName,
-    testAsAst,
+    branchName: string,
     testAsCode: string,
     variables: string[]
   ) {
     const T = this.types;
 
     const metaTracker = T.callExpression(T.identifier(this.metaVarName), [
-      T.numericLiteral(branchName),
+      T.stringLiteral(`${branchName}`),
       T.objectExpression([
         T.objectProperty(
           T.stringLiteral("condition_ast"),
-          T.stringLiteral(JSON.stringify(testAsAst))
+          T.stringLiteral("TODO we should remove the condition asts entirely")
         ),
         T.objectProperty(
           T.stringLiteral("condition"),
@@ -356,23 +379,12 @@ export class VisitState {
           T.stringLiteral("variables"),
           T.ObjectExpression([
             ...variables
-              .filter((v, i, a) => a.indexOf(v) === i)
-              .map((v) => {
-                if (v.includes(".")) {
-                  const split = v.split(".");
-
-                  return T.objectProperty(
-                    T.stringLiteral(v),
-                    T.optionalMemberExpression(
-                      T.identifier(split[0]),
-                      T.identifier(split[1]),
-                      false,
-                      true
-                    )
-                  );
-                } else {
-                  return T.objectProperty(T.stringLiteral(v), T.identifier(v));
-                }
+              .filter((v, i, a) => a.indexOf(v) === i) // remove duplicates
+              .map(([source, identifier]) => {
+                return T.objectProperty(
+                  T.stringLiteral(source),
+                  T.identifier(identifier)
+                );
               }),
           ])
         ),
@@ -390,11 +402,11 @@ export class VisitState {
     ];
   }
 
-  insertBranchCounter(ifPath, path, branchName, loc) {
+  insertBranchCounter(ifPath, path, branchName, placeholder = false) {
     const increment = this.getBranchIncrement(
       ifPath,
       branchName,
-      loc || path.node.loc
+      placeholder ? undefined : path.node.loc
     );
 
     this.insertCounter(path, increment);

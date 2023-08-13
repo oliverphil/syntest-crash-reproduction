@@ -34,7 +34,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected static override LOGGER: any;
 
-  private _nodes: Map<string, Node<t.Node>>;
+  private _nodesList: Node[];
+  private _nodes: Map<string, Node>;
   private _edges: Edge[];
 
   private _breakNodesStack: Set<string>[];
@@ -42,12 +43,12 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
   private _returnNodes: Set<string>;
   private _throwNodes: Set<string>;
 
-  private _functions: ControlFlowFunction<t.Node>[];
+  private _functions: ControlFlowFunction[];
 
   private _currentParents: string[];
   private _edgeType: EdgeType;
 
-  get cfg(): ControlFlowProgram<t.Node> {
+  get cfg(): ControlFlowProgram {
     if (!this._nodes.has("ENTRY")) {
       throw new Error("No entry node found");
     }
@@ -58,9 +59,17 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       throw new Error("No error exit node found");
     }
 
+    if (this._nodesList.length !== this._nodes.size) {
+      throw new Error("Number of nodes dont match");
+    }
+
     const entryNode = this._nodes.get("ENTRY");
     const successExitNode = this._nodes.get("SUCCESS_EXIT");
     const errorExitNode = this._nodes.get("ERROR_EXIT");
+
+    if (this._currentParents[0] === "ENTRY") {
+      // nothing added so we add
+    }
 
     // connect last nodes to success exit
     this._connectToParents(successExitNode);
@@ -107,7 +116,14 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         this._nodes,
         this._edges
       ),
-      functions: this._functions,
+      functions: this._functions.map((function_, index) => {
+        if (
+          this._functions.filter((f) => f.name === function_.name).length > 1
+        ) {
+          function_.name = `${function_.name} (${index})`;
+        }
+        return function_;
+      }),
     };
   }
 
@@ -115,7 +131,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     super(filePath);
     ControlFlowGraphVisitor.LOGGER = getLogger("ControlFlowGraphVisitor");
 
-    this._nodes = new Map<string, Node<t.Node>>();
+    this._nodesList = [];
+    this._nodes = new Map<string, Node>();
     this._edges = [];
 
     this._breakNodesStack = [];
@@ -129,25 +146,14 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
 
     this._edgeType = EdgeType.NORMAL;
 
-    const entry = new Node<t.Node>("ENTRY", NodeType.ENTRY, "ENTRY", [], {});
-    const successExit = new Node<t.Node>(
-      "SUCCESS_EXIT",
-      NodeType.EXIT,
-      "EXIT",
-      [],
-      {}
-    );
-    const errorExit = new Node<t.Node>(
-      "ERROR_EXIT",
-      NodeType.EXIT,
-      "EXIT",
-      [],
-      {}
-    );
+    const entry = new Node("ENTRY", NodeType.ENTRY, "ENTRY", [], {});
+    const successExit = new Node("SUCCESS_EXIT", NodeType.EXIT, "EXIT", [], {});
+    const errorExit = new Node("ERROR_EXIT", NodeType.EXIT, "EXIT", [], {});
 
     this._nodes.set(entry.id, entry);
     this._nodes.set(successExit.id, successExit);
     this._nodes.set(errorExit.id, errorExit);
+    this._nodesList.push(entry, successExit, errorExit);
 
     this._currentParents = [entry.id];
   }
@@ -185,9 +191,9 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     };
   }
 
-  private _createNode(path: NodePath<t.Node>): Node<t.Node> {
+  private _createNode(path: NodePath): Node {
     const id = `${this._getNodeId(path)}`;
-    const node = new Node<t.Node>(
+    const node = new Node(
       id,
       NodeType.NORMAL,
       path.node.type,
@@ -195,27 +201,52 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         {
           id: id,
           location: this._getLocation(path),
-          statement: path.node,
           statementAsText: path.toString(),
         },
       ],
       {},
       path.node.type
     );
+
+    if (this._nodes.has(id)) {
+      throw new Error(`Node already registered ${id}`);
+    }
     this._nodes.set(id, node);
+    this._nodesList.push(node);
+
     return node;
   }
 
+  public _getPlaceholderNodeId(path: NodePath<t.Node>): string {
+    if (path.node.loc === undefined) {
+      throw new Error(
+        `Node ${path.type} in file '${this._filePath}' does not have a location`
+      );
+    }
+
+    const startLine = (<{ line: number }>(<unknown>path.node.loc.end)).line;
+    const startColumn = (<{ column: number }>(<unknown>path.node.loc.end))
+      .column;
+    const startIndex = (<{ index: number }>(<unknown>path.node.loc.end)).index;
+    const endLine = (<{ line: number }>(<unknown>path.node.loc.end)).line;
+    const endColumn = (<{ column: number }>(<unknown>path.node.loc.end)).column;
+    const endIndex = (<{ index: number }>(<unknown>path.node.loc.end)).index;
+
+    return `${this._filePath}:${startLine}:${startColumn}:::${endLine}:${endColumn}:::${startIndex}:${endIndex}`;
+  }
   /**
    * Create a placeholder node for a node that is not in the AST, but is used in the CFG.
    * Uses the end location of the parent node as the start and end location of the placeholder node.
    * @param path
    * @returns
    */
-  private _createPlaceholderNode(path: NodePath<t.Node>): Node<t.Node> {
-    const id = `placeholder-${this._getNodeId(path)}`;
+  private _createPlaceholderNode(path: NodePath, double = false): Node {
+    let id = `placeholder:::${this._getPlaceholderNodeId(path)}`;
+    if (double) {
+      id = "placeholder:::" + id;
+    }
     const location = this._getLocation(path);
-    const node = new Node<t.Node>(
+    const node = new Node(
       id,
       NodeType.NORMAL,
       path.node.type,
@@ -234,18 +265,39 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
               index: location.end.index,
             },
           },
-          statement: path.node,
           statementAsText: path.toString(),
         },
       ],
       {},
       path.node.type
     );
+    if (this._nodes.has(id)) {
+      throw new Error(`Node already registered ${id}`);
+    }
     this._nodes.set(id, node);
+    this._nodesList.push(node);
+
     return node;
   }
 
-  private _isSpecial(path: NodePath<t.Node>): boolean {
+  private _generalNode: (
+    path: NodePath<
+      t.Statement | t.Declaration | t.Expression | t.VariableDeclarator
+    >
+  ) => void = (path) => {
+    if (this._isSpecial(path)) {
+      return;
+    }
+
+    const node = this._createNode(path);
+
+    this._connectToParents(node);
+    this._currentParents = [node.id];
+
+    path.skip();
+  };
+
+  private _isSpecial(path: NodePath): boolean {
     return (
       path.isFunction() ||
       path.isClass() ||
@@ -268,26 +320,9 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     );
   }
 
-  private _generalNode: (
-    path: NodePath<
-      t.Statement | t.Declaration | t.Expression | t.VariableDeclarator
-    >
-  ) => void = (path) => {
-    if (this._isSpecial(path)) {
-      return;
-    }
-
-    const node = this._createNode(path);
-
-    this._connectToParents(node);
-    this._currentParents = [node.id];
-
-    path.skip();
-  };
-
   private _createEdge(
-    source: Node<t.Node>,
-    target: Node<t.Node>,
+    source: Node,
+    target: Node,
     edgeType: EdgeType,
     label = ""
   ): Edge {
@@ -307,7 +342,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
    *
    * @param node
    */
-  private _connectToParents(node: Node<t.Node>) {
+  private _connectToParents(node: Node) {
     // it is actually possible that there are no parents
     for (const parent of this._currentParents) {
       this._edges.push(
@@ -329,11 +364,6 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       this._thisScopeStackNames.push("global");
     }
 
-    const node = this._createNode(path);
-
-    this._connectToParents(node);
-    this._currentParents = [node.id];
-
     for (const statement of path.get("body")) {
       statement.visit();
     }
@@ -346,54 +376,38 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     ControlFlowGraphVisitor.LOGGER.debug(
       `Entering function at ${this._getNodeId(path)}`
     );
+
+    if (!this._nodes.has(this._getNodeId(path))) {
+      const node = this._createNode(path);
+
+      this._connectToParents(node);
+      this._currentParents = [node.id];
+    }
+
     const subVisitor = new ControlFlowGraphVisitor(this.filePath);
     // @ts-ignore
     path.traverse(subVisitor);
 
     if (!subVisitor._nodes.has("ENTRY")) {
-      // this function has no block
-      // e.g. () => log("hello world")
-      // we need to create a node for it
-      if (subVisitor._nodes.size > 0) {
-        throw new Error(
-          `Function ${this._getNodeId(path)} has no entry node but has ${
-            subVisitor._nodes.size
-          } nodes`
-        );
-      }
-
-      const entry = new Node<t.Node>("ENTRY", NodeType.ENTRY, "ENTRY", [], {});
-      const successExit = new Node<t.Node>(
-        "SUCCESS_EXIT",
-        NodeType.EXIT,
-        "EXIT",
-        [],
-        {}
-      );
-      const errorExit = new Node<t.Node>(
-        "ERROR_EXIT",
-        NodeType.EXIT,
-        "EXIT",
-        [],
-        {}
-      );
-
-      subVisitor._nodes.set(entry.id, entry);
-      subVisitor._nodes.set(successExit.id, successExit);
-      subVisitor._nodes.set(errorExit.id, errorExit);
-
-      this._currentParents = [entry.id];
-      subVisitor._connectToParents(successExit);
+      throw new Error("Should not be possible");
     }
+
+    const name = path.has("id")
+      ? (<NodePath<t.Identifier>>path.get("id")).node.name
+      : path.has("key")
+      ? (<NodePath<t.Identifier>>path.get("key")).node.name
+      : "anonymous";
+
+    const cfp = subVisitor.cfg;
 
     this._functions.push(
       {
         id: this._getNodeId(path),
-        name: "id" in path.node ? path.node.id?.name : "anonymous",
-        graph: subVisitor.cfg.graph,
+        name: name,
+        graph: cfp.graph,
       },
       // sub functions within this function
-      ...subVisitor.cfg.functions
+      ...cfp.functions
     );
 
     path.skip();
@@ -401,70 +415,18 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
 
   // actual control flow graph related nodes
   public Statement: (path: NodePath<t.Statement>) => void = (path) => {
-    let locPath: NodePath = path;
-    while (!locPath.node.loc) {
-      locPath = locPath.parentPath;
-    }
     ControlFlowGraphVisitor.LOGGER.debug(
-      `Entering statement: ${path.type}\tline: ${locPath.node.loc.start.line}\tcolumn: ${locPath.node.loc.start.column}`
-    );
-    const node = this._createNode(path);
-
-    this._connectToParents(node);
-    this._currentParents = [node.id];
-
-    let expression;
-    if (
-      path.isExpressionStatement() &&
-      ((expression = path.get("expression")),
-      expression.isAssignmentExpression())
-    ) {
-      if (this._isSpecial(expression.get("right"))) {
-        expression.get("right").visit();
-      }
-    } else if (this._isSpecial(path)) {
-      // @ts-ignore
-      path.traverse(this);
-    }
-
-    path.skip();
-  };
-
-  public Declaration: (path: NodePath<t.Declaration>) => void = (path) => {
-    ControlFlowGraphVisitor.LOGGER.debug(
-      `Entering Declaration at ${this._getNodeId(path)}`
+      `Entering statement: ${path.type}\tline: ${path.node.loc.start.line}\tcolumn: ${path.node.loc.start.column}`
     );
 
-    const node = this._createNode(path);
+    if (this._nodes.has(this._getNodeId(path))) {
+      throw new Error(`Id already used id: ${this._getNodeId(path)}`);
+    } else {
+      const node = this._createNode(path);
 
-    this._connectToParents(node);
-    this._currentParents = [node.id];
-
-    if (path.has("declarations")) {
-      const declarations = path.get("declarations");
-
-      if (!Array.isArray(declarations)) {
-        throw new TypeError("Declarations is not an array");
-      }
-
-      for (const declaration of declarations) {
-        if (declaration.has("init")) {
-          const init = declaration.get("init");
-
-          if (Array.isArray(init)) {
-            throw new TypeError("Init is an array");
-          }
-
-          if (this._isSpecial(init)) {
-            init.visit();
-          }
-        }
-      }
-    } else if (this._isSpecial(path)) {
-      // @ts-ignore
-      path.traverse(this);
+      this._connectToParents(node);
+      this._currentParents = [node.id];
     }
-    path.skip();
   };
 
   public Expression: (path: NodePath<t.Expression>) => void = (path) => {
@@ -472,34 +434,62 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering Expression at ${this._getNodeId(path)}`
     );
 
-    this._generalNode(path);
+    if (this._nodes.has(this._getNodeId(path))) {
+      // just ignore
+    } else if (!path.isLiteral() && !path.isIdentifier()) {
+      const node = this._createNode(path);
+
+      this._connectToParents(node);
+      this._currentParents = [node.id];
+    }
   };
 
-  public IfStatement: (path: NodePath<t.IfStatement>) => void = (path) => {
+  public Conditional: (path: NodePath<t.Conditional>) => void = (path) => {
     ControlFlowGraphVisitor.LOGGER.debug(
       `Entering IfStatement at ${this._getNodeId(path)}`
     );
 
-    const branchNode = this._createNode(path); // or path.get("test") ??
-    // TODO test
-
+    const branchNode = this._createNode(path);
     this._connectToParents(branchNode);
+    this._currentParents = [branchNode.id];
+
+    const testNode = this._createNode(path.get("test"));
+    this._connectToParents(testNode);
+    this._currentParents = [testNode.id];
 
     // consequent
-    this._currentParents = [branchNode.id];
     this._edgeType = EdgeType.CONDITIONAL_TRUE;
+    let sizeBefore = this._nodesList.length;
     path.get("consequent").visit();
+
+    // there either is no consequent or it is empty
+    if (sizeBefore === this._nodesList.length) {
+      const consequent = this._createNode(path.get("consequent"));
+      this._connectToParents(consequent);
+      this._currentParents = [consequent.id];
+    }
     const consequentNodes = this._currentParents;
 
     // alternate
-    this._currentParents = [branchNode.id];
+    this._currentParents = [testNode.id];
     this._edgeType = EdgeType.CONDITIONAL_FALSE;
+
+    sizeBefore = this._nodesList.length;
     if (path.has("alternate")) {
       path.get("alternate").visit();
-    } else {
-      const alternate = this._createPlaceholderNode(path);
-      this._connectToParents(alternate);
-      this._currentParents = [alternate.id];
+    }
+
+    // there either is no alternate or it is empty
+    if (sizeBefore === this._nodesList.length) {
+      if (path.has("alternate")) {
+        const alternate = this._createNode(path.get("alternate"));
+        this._connectToParents(alternate);
+        this._currentParents = [alternate.id];
+      } else {
+        const alternate = this._createPlaceholderNode(path);
+        this._connectToParents(alternate);
+        this._currentParents = [alternate.id];
+      }
     }
 
     const alternateNodes = this._currentParents;
@@ -516,38 +506,29 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering DoWhileStatement at ${this._getNodeId(path)}`
     );
 
+    const doWhileNode = this._createNode(path);
+    this._connectToParents(doWhileNode);
+    this._currentParents = [doWhileNode.id];
+
     this._breakNodesStack.push(new Set());
     this._continueNodesStack.push(new Set());
 
+    const size = this._nodesList.length;
     // body
     path.get("body").visit();
 
-    // get first node of body
-    // kinda stupid way to do it but it works for now
-    const firstBodyNodeKey = [...this._nodes.keys()]
-      // cannot be entry, success exit or error exit
-      .filter(
-        (id) => id !== "ENTRY" && id !== "SUCCESS_EXIT" && id !== "ERROR_EXIT"
-      )
-      // id should be greater than the id of the loop node
-      .filter((id) => id > this._getNodeId(path))
-      // sort by id and take the first
-      .sort()[0];
-
-    let firstBodyNode;
-    if (firstBodyNodeKey === undefined) {
+    let firstBodyNode = this._nodesList[size];
+    if (firstBodyNode === undefined) {
       // empty body
       // create placeholder node
-      const placeholderNode = this._createPlaceholderNode(path);
+      const placeholderNode = this._createPlaceholderNode(path.get("body"));
       this._connectToParents(placeholderNode);
       this._currentParents = [placeholderNode.id];
       firstBodyNode = placeholderNode;
-    } else {
-      firstBodyNode = this._nodes.get(firstBodyNodeKey);
     }
 
     // loop
-    const loopNode = this._createNode(path); // or path.get("test") ??
+    const loopNode = this._createNode(path.get("test")); // or path.get("test") ??
     // TODO test
 
     this._connectToParents(loopNode);
@@ -563,12 +544,20 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       )
     );
 
-    // alternate
+    // false
     this._currentParents = [loopNode.id];
     this._edgeType = EdgeType.CONDITIONAL_FALSE;
+    const alternate = this._createPlaceholderNode(path);
+    this._connectToParents(alternate);
+
+    // exit
+    this._currentParents = [alternate.id];
+    const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
     this._currentParents.push(...this._breakNodesStack.pop());
+    this._connectToParents(loopExit);
+    this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test
     for (const continueNode of this._continueNodesStack.pop()) {
@@ -592,16 +581,18 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering WhileStatement at ${this._getNodeId(path)}`
     );
 
+    const whileNode = this._createNode(path);
+    this._connectToParents(whileNode);
+    this._currentParents = [whileNode.id];
+
     this._breakNodesStack.push(new Set());
     this._continueNodesStack.push(new Set());
 
-    // loop
-    const loopNode = this._createNode(path); // or path.get("test") ??
-    // TODO test
+    const loopNode = this._createNode(path.get("test"));
 
     this._connectToParents(loopNode);
 
-    // body
+    // true body
     this._currentParents = [loopNode.id];
     this._edgeType = EdgeType.CONDITIONAL_TRUE;
     const beforeSize = this._nodes.size;
@@ -611,7 +602,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     if (beforeSize === this._nodes.size) {
       // empty body
       // create placeholder node
-      const placeholderNode = this._createPlaceholderNode(path);
+      const placeholderNode = this._createPlaceholderNode(path.get("body"));
       this._connectToParents(placeholderNode);
       this._currentParents = [placeholderNode.id];
     }
@@ -620,12 +611,20 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._edgeType = EdgeType.BACK_EDGE;
     this._connectToParents(loopNode); // TODO should be label back edge too
 
-    // exit
-    this._edgeType = EdgeType.CONDITIONAL_FALSE;
+    // false
     this._currentParents = [loopNode.id];
+    this._edgeType = EdgeType.CONDITIONAL_FALSE;
+    const alternate = this._createPlaceholderNode(path);
+    this._connectToParents(alternate); // TODO should be label back edge too
+
+    // exit
+    this._currentParents = [alternate.id];
+    const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
     this._currentParents.push(...this._breakNodesStack.pop());
+    this._connectToParents(loopExit);
+    this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test entry
     for (const continueNode of this._continueNodesStack.pop()) {
@@ -647,12 +646,25 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering ForStatement at ${this._getNodeId(path)}`
     );
 
+    const forNode = this._createNode(path);
+    this._connectToParents(forNode);
+    this._currentParents = [forNode.id];
+
     this._breakNodesStack.push(new Set());
     this._continueNodesStack.push(new Set());
 
     // init
     if (path.has("init")) {
-      path.get("init").visit();
+      const init = path.get("init");
+      // stupid hack because the variable declaration of an init is not registered correctly?
+      if (init.isVariableDeclaration()) {
+        const node = this._createNode(init.get("declarations")[0].get("init"));
+
+        this._connectToParents(node);
+        this._currentParents = [node.id];
+      } else {
+        init.visit();
+      }
     }
 
     // test
@@ -663,22 +675,21 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       );
     }
 
-    // TODO test
-    const testNode = this._createNode(path); // or path.get("test") ??
+    const testNode = this._createNode(path.get("test"));
     this._connectToParents(testNode);
     this._currentParents = [testNode.id];
 
     // true
     // body
     this._edgeType = EdgeType.CONDITIONAL_TRUE;
-    const beforeSize = this._nodes.size;
+    let beforeSize = this._nodes.size;
     path.get("body").visit();
 
     // check if something was created
     if (beforeSize === this._nodes.size) {
       // empty body
       // create placeholder node
-      const placeholderNode = this._createPlaceholderNode(path);
+      const placeholderNode = this._createPlaceholderNode(path.get("body"));
       this._connectToParents(placeholderNode);
       this._currentParents = [placeholderNode.id];
     }
@@ -691,18 +702,30 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       );
     }
 
+    beforeSize = this._nodesList.length;
     path.get("update").visit();
 
+    if (beforeSize === this._nodesList.length) {
+      throw new Error(`No node was added for the update part of the for loop,`);
+    }
     // connect to test
     this._edgeType = EdgeType.BACK_EDGE;
     this._connectToParents(testNode);
 
     // false
-    this._edgeType = EdgeType.CONDITIONAL_FALSE;
     this._currentParents = [testNode.id];
+    this._edgeType = EdgeType.CONDITIONAL_FALSE;
+    const alternate = this._createPlaceholderNode(path);
+    this._connectToParents(alternate);
+
+    // exit
+    this._currentParents = [alternate.id];
+    const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
     this._currentParents.push(...this._breakNodesStack.pop());
+    this._connectToParents(loopExit);
+    this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test
     for (const continueNode of this._continueNodesStack.pop()) {
@@ -726,6 +749,9 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering ForInStatement at ${this._getNodeId(path)}`
     );
 
+    const forInNode = this._createNode(path);
+    this._connectToParents(forInNode);
+    this._currentParents = [forInNode.id];
     this._breakNodesStack.push(new Set());
     this._continueNodesStack.push(new Set());
 
@@ -745,8 +771,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     // left
     path.get("left").visit();
 
-    // TODO test
-    const testNode = this._createNode(path); // or path.get("test") ??
+    // test does not exist so we create placeholder?
+    const testNode = this._createPlaceholderNode(path.get("left")); // stupid hack but we cannot have the placeholder twice
     this._connectToParents(testNode);
     this._currentParents = [testNode.id];
 
@@ -760,7 +786,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     if (beforeSize === this._nodes.size) {
       // empty body
       // create placeholder node
-      const placeholderNode = this._createPlaceholderNode(path);
+
+      const placeholderNode = this._createPlaceholderNode(path.get("body"));
       this._connectToParents(placeholderNode);
       this._currentParents = [placeholderNode.id];
     }
@@ -770,11 +797,19 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._connectToParents(testNode);
 
     // false
-    this._edgeType = EdgeType.CONDITIONAL_FALSE;
     this._currentParents = [testNode.id];
+    this._edgeType = EdgeType.CONDITIONAL_FALSE;
+    const alternate = this._createPlaceholderNode(path);
+    this._connectToParents(alternate);
+
+    // exit
+    this._currentParents = [alternate.id];
+    const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
     this._currentParents.push(...this._breakNodesStack.pop());
+    this._connectToParents(loopExit);
+    this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test
     for (const continueNode of this._continueNodesStack.pop()) {
@@ -798,6 +833,10 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering ForOfStatement at ${this._getNodeId(path)}`
     );
 
+    const forOfNode = this._createNode(path);
+    this._connectToParents(forOfNode);
+    this._currentParents = [forOfNode.id];
+
     this._breakNodesStack.push(new Set());
     this._continueNodesStack.push(new Set());
 
@@ -817,8 +856,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     // left
     path.get("left").visit();
 
-    // TODO test
-    const testNode = this._createNode(path); // or path.get("test") ??
+    // test does not exist so we create placeholder?
+    const testNode = this._createPlaceholderNode(path.get("left")); // stupid hack but we cannot have the placeholder twice
     this._connectToParents(testNode);
     this._currentParents = [testNode.id];
 
@@ -832,7 +871,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     if (beforeSize === this._nodes.size) {
       // empty body
       // create placeholder node
-      const placeholderNode = this._createPlaceholderNode(path);
+      const placeholderNode = this._createPlaceholderNode(path.get("body"));
       this._connectToParents(placeholderNode);
       this._currentParents = [placeholderNode.id];
     }
@@ -842,11 +881,19 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._connectToParents(testNode);
 
     // false
-    this._edgeType = EdgeType.CONDITIONAL_FALSE;
     this._currentParents = [testNode.id];
+    this._edgeType = EdgeType.CONDITIONAL_FALSE;
+    const alternate = this._createPlaceholderNode(path);
+    this._connectToParents(alternate);
+
+    // exit
+    this._currentParents = [alternate.id];
+    const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
     this._currentParents.push(...this._breakNodesStack.pop());
+    this._connectToParents(loopExit);
+    this._currentParents = [loopExit.id];
 
     // connect all continue nodes to loop entry
     for (const continueNode of this._continueNodesStack.pop()) {
@@ -872,42 +919,54 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
 
     this._breakNodesStack.push(new Set());
 
-    // TODO test
-    const testNode = this._createNode(path); // or path.get("test") ??
+    const switchNode = this._createNode(path);
+    this._connectToParents(switchNode);
+    this._currentParents = [switchNode.id];
+
+    const testNode = this._createNode(path.get("discriminant"));
     this._connectToParents(testNode);
     this._currentParents = [testNode.id];
 
     for (const caseNode of path.get("cases")) {
-      // TODO test
-      const caseTestNode = this._createNode(caseNode); // or path.get("test") ??
-      this._connectToParents(caseTestNode);
-      this._currentParents = [caseTestNode.id];
-
       if (caseNode.has("test")) {
-        // case
+        // test
+        const caseTestNode = this._createNode(caseNode.get("test"));
+        this._connectToParents(caseTestNode);
+        this._currentParents = [caseTestNode.id];
+
+        // consequent
         this._edgeType = EdgeType.CONDITIONAL_TRUE;
-      }
+        const consequentNode = this._createNode(caseNode);
+        this._connectToParents(consequentNode);
+        this._currentParents = [consequentNode.id];
 
-      // consequent
-      if (caseNode.get("consequent").length === 0) {
-        // empty body
-        // create placeholder node
-        const placeholderNode = this._createPlaceholderNode(caseNode);
-        this._connectToParents(placeholderNode);
-        this._currentParents = [placeholderNode.id];
-      } else {
-        for (const consequentNode of caseNode.get("consequent")) {
-          consequentNode.visit();
+        if (caseNode.get("consequent").length > 0) {
+          for (const consequentNode of caseNode.get("consequent")) {
+            consequentNode.visit();
+          }
         }
-      }
 
-      if (caseNode.has("test")) {
-        // case
+        const trueParents = this._currentParents; // if there is a break these should be empty
+        // alternate
+        // placeholder
         this._edgeType = EdgeType.CONDITIONAL_FALSE;
-        this._currentParents = [caseTestNode.id, ...this._currentParents];
+        this._currentParents = [caseTestNode.id];
+        const alternateNode = this._createPlaceholderNode(caseNode);
+        this._connectToParents(alternateNode);
+        this._currentParents = [alternateNode.id, ...trueParents]; // normal + fall through case
       } else {
         // default
-        this._currentParents = [...this._currentParents];
+        if (caseNode.get("consequent").length === 0) {
+          // empty body
+          // create placeholder node
+          const placeholderNode = this._createPlaceholderNode(caseNode);
+          this._connectToParents(placeholderNode);
+          this._currentParents = [placeholderNode.id];
+        } else {
+          for (const consequentNode of caseNode.get("consequent")) {
+            consequentNode.visit();
+          }
+        }
       }
     }
 

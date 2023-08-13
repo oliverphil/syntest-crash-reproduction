@@ -248,6 +248,63 @@ function convertArrowExpression(path) {
   }
 }
 
+function extractAndReplaceVariablesFromTest(test: NodePath) {
+  const variables = [];
+  test.traverse(
+    {
+      Identifier: {
+        enter: (p: NodePath<t.Identifier>) => {
+          // const newIdentifier = test.scope.generateUidIdentifier('meta')
+          if (
+            ["eval", "arguments", "undefined", "NaN", "Infinity"].includes(
+              p.node.name
+            )
+          ) {
+            return;
+          }
+          variables.push([p.node.name, p.node.name]);
+
+          // p.replaceWith(t.sequenceExpression([t.assignmentExpression("=", newIdentifier, p.node), newIdentifier]))
+        },
+      },
+      CallExpression: {
+        enter: (p) => {
+          const newIdentifier = test.scope.generateUidIdentifier("meta");
+
+          variables.push([p.getSource(), newIdentifier.name]);
+          p.replaceWith(
+            t.sequenceExpression([
+              t.assignmentExpression("=", newIdentifier, p.node),
+              newIdentifier,
+            ])
+          );
+
+          p.skip();
+        },
+      },
+      MemberExpression: {
+        enter: (p) => {
+          const newIdentifier = test.scope.generateUidIdentifier("meta");
+
+          variables.push([p.getSource(), newIdentifier.name]);
+          p.replaceWith(
+            t.sequenceExpression([
+              t.assignmentExpression("=", newIdentifier, p.node),
+              newIdentifier,
+            ])
+          );
+
+          p.skip();
+        },
+      },
+      // calls and such are possible but are problamatic because they could have side effects changing the behaviour
+    },
+    test
+  );
+
+  return variables;
+}
+
 function coverIfBranches(path) {
   const n = path.node;
   const hint = this.hintFor(n);
@@ -258,131 +315,202 @@ function coverIfBranches(path) {
   if (ignoreIf) {
     this.setAttr(n.consequent, "skip-all", true);
   } else {
-    this.insertBranchCounter(path, path.get("consequent"), branch, n.loc);
+    if (path.get("consequent").isBlockStatement()) {
+      if (path.get("consequent").has("body")) {
+        this.insertBranchCounter(
+          path,
+          path.get("consequent").get("body")[0],
+          branch
+        );
+      } else {
+        this.insertBranchCounter(path, path.get("consequent"), branch, true);
+      }
+    } else {
+      this.insertBranchCounter(path, path.get("consequent"), branch);
+    }
   }
   if (ignoreElse) {
     this.setAttr(n.alternate, "skip-all", true);
   } else {
-    this.insertBranchCounter(path, path.get("alternate"), branch);
+    if (path.get("alternate").isBlockStatement()) {
+      if (path.get("alternate").has("body")) {
+        this.insertBranchCounter(
+          path,
+          path.get("alternate").get("body")[0],
+          branch
+        );
+      } else {
+        this.insertBranchCounter(path, path.get("alternate"), branch, true);
+      }
+    } else {
+      this.insertBranchCounter(path, path.get("alternate"), branch);
+    }
   }
 
-  const T = this.types;
   const test = path.get("test");
-  const variables = [];
-  test.traverse(
-    {
-      Identifier: {
-        enter: (p) => {
-          if (p.parent.type === "MemberExpression") {
-            return;
-          }
-          variables.push(p.node.name);
-        },
-      },
-      MemberExpression: {
-        enter: (p) => {
-          // calls and such are possible but are problamatic because they could have side effects changing the behaviour
-          if (
-            p.node.object.type === "Identifier" &&
-            p.node.property.type === "Identifier"
-          ) {
-            variables.push(p.getSource());
-          }
-        },
-      },
-      // calls and such are possible but are problamatic because they could have side effects changing the behaviour
-    },
-    test
-  );
+
+  const index = this.cov.newStatement(test.node.loc);
+  const increment = this.increase("s", index, null);
+  const testAsString = `${test.toString()}`;
+  const variables = extractAndReplaceVariablesFromTest(test);
   const metaTracker = this.getBranchMetaTracker(
     branch,
-    test.node,
-    test.getSource(),
+    testAsString,
     variables
   );
-  path.insertBefore(T.expressionStatement(metaTracker));
+
+  const identifier = path.scope.generateUidIdentifier("test");
+
+  path.insertBefore(
+    t.variableDeclaration("let", [
+      ...variables
+        .filter(([source, identifier]) => {
+          const binding = path.scope.getBinding(identifier);
+          // all identifiers with a binding should be skipped
+          return !binding;
+        })
+        .map(([source, identifier]) => {
+          return t.variableDeclarator(t.identifier(identifier));
+        }),
+      t.variableDeclarator(identifier),
+    ])
+  );
+
+  test.replaceWith(
+    t.sequenceExpression([
+      increment,
+      t.assignmentExpression("=", identifier, test.node),
+      metaTracker,
+      identifier,
+    ])
+  );
 }
 
-function coverLoopBranch(path) {
+function coverLoopBranch(path: NodePath<t.Loop>) {
   const n = path.node;
   const branch = this.cov.newBranch("loop", n.loc);
 
-  this.insertBranchCounter(path, path.get("body"), branch, n.loc);
+  if (path.get("body").isBlockStatement()) {
+    if (path.get("body").has("body")) {
+      this.insertBranchCounter(path, path.get("body").get("body")[0], branch);
+    } else {
+      this.insertBranchCounter(path, path.get("body"), branch, true);
+    }
+  } else {
+    this.insertBranchCounter(path, path.get("body"), branch);
+  }
 
   const T = this.types;
 
-  const increment = this.getBranchIncrement(path, branch, {
-    start: path.node.loc.end,
-    end: path.node.loc.end,
-  });
+  const increment = this.getBranchIncrement(path, branch, undefined);
+  const index = this.cov.newStatement(path.node.loc, true, true);
+  const secondIncrement = this.increase("s", index, null);
+  path.insertAfter(T.expressionStatement(secondIncrement));
   path.insertAfter(T.expressionStatement(increment));
 
   // TODO we should actually print what the just defined variable is set to
   const justDefinedVariables = [];
 
-  path.get("init").traverse({
-    VariableDeclarator: {
-      enter: (p) => {
-        justDefinedVariables.push(p.node.id.name);
-      },
-    },
-  });
-
-  const test = path.get("test");
-  const variables = [];
-  test.traverse(
-    {
-      Identifier: {
+  if (path.has("init")) {
+    (<NodePath<t.ForStatement>>path).get("init").traverse({
+      VariableDeclarator: {
         enter: (p) => {
-          if (p.parent.type === "MemberExpression") {
-            return;
-          }
-          if (justDefinedVariables.includes(p.node.name)) {
-            return;
-          }
-          variables.push(p.node.name);
-        },
-      },
-      MemberExpression: {
-        enter: (p) => {
-          // calls and such are possible but are problamatic because they could have side effects changing the behaviour
-          if (
-            p.node.object.type === "Identifier" &&
-            p.node.property.type === "Identifier"
-          ) {
-            variables.push(p.getSource());
+          const id = p.get("id");
+          if (id.isIdentifier()) {
+            justDefinedVariables.push(id.node.name);
           }
         },
       },
-    },
-    test
-  );
-  const metaTracker = this.getBranchMetaTracker(
-    branch,
-    test.node,
-    test.getSource(),
-    variables
-  );
-  path.insertBefore(T.expressionStatement(metaTracker));
-}
-
-function createSwitchBranch(path) {
-  const b = this.cov.newBranch("switch", path.node.loc);
-  this.setAttr(path.node, "branchName", b);
-}
-
-function coverSwitchCase(path) {
-  const T = this.types;
-  const b = this.getAttr(path.parentPath.node, "branchName");
-  /* istanbul ignore if: paranoid check */
-  if (b === null) {
-    throw new Error("Unable to get switch branch name");
+    });
   }
+
+  if (path.has("test")) {
+    const test = (<
+      NodePath<t.ForStatement | t.WhileStatement | t.DoWhileStatement>
+    >path).get("test");
+
+    const index = this.cov.newStatement(test.node.loc);
+    const testIncrement = this.increase("s", index, null);
+    const variables = extractAndReplaceVariablesFromTest(test);
+    const testAsString = `${test.toString()}`;
+    const metaTracker = this.getBranchMetaTracker(
+      branch,
+      testAsString,
+      variables
+    );
+
+    const identifier = path.scope.generateUidIdentifier("test");
+
+    path.insertBefore(
+      t.variableDeclaration("let", [
+        ...variables
+          .filter(([source, identifier]) => {
+            const binding = path.scope.getBinding(identifier);
+            // all identifiers with a binding should be skipped
+            return !binding;
+          })
+          .map(([source, identifier]) => {
+            return t.variableDeclarator(t.identifier(identifier));
+          }),
+        t.variableDeclarator(identifier),
+      ])
+    );
+
+    test.replaceWith(
+      t.sequenceExpression([
+        testIncrement,
+        t.assignmentExpression("=", identifier, test.node),
+        metaTracker,
+        identifier,
+      ])
+    );
+  }
+}
+
+function createSwitchBranch(path: NodePath<t.SwitchStatement>) {
+  // const b = this.cov.newBranch("switch", path.node.loc);
+  // this.setAttr(path.node, "branchName", b);
+}
+
+function coverSwitchCase(path: NodePath<t.SwitchCase>) {
+  const T = this.types;
+
+  if (!path.has("test")) {
+    // ignore default cases
+    return;
+  }
+
+  const b = this.cov.newBranch("switch", path.node.loc);
+
   const increment = this.getBranchIncrement(path, b, path.node.loc);
   path.node.consequent.unshift(T.expressionStatement(increment));
+
+  const falseIncrement = this.getBranchIncrement(path, b, undefined);
+
+  const parent = <NodePath<t.SwitchStatement>>path.parentPath;
+  let next = false;
+  let defaultExists = false;
+  for (const case_ of parent.get("cases")) {
+    // add it to all next cases
+    if (next) {
+      case_.node.consequent.unshift(t.expressionStatement(falseIncrement));
+    }
+
+    if (case_ === path) {
+      next = true;
+    }
+
+    if (!case_.has("test")) {
+      defaultExists = true;
+    }
+  }
+
+  if (!defaultExists) {
+    parent.insertAfter(t.expressionStatement(falseIncrement));
+  }
 }
 
-function coverTernary(path) {
+function coverTernary(path: NodePath<t.Conditional>) {
   const n = path.node;
   const branch = this.cov.newBranch("cond-expr", path.node.loc);
   const cHint = this.hintFor(n.consequent);
@@ -395,42 +523,54 @@ function coverTernary(path) {
     this.insertBranchCounter(path, path.get("alternate"), branch);
   }
 
-  const T = this.types;
   const test = path.get("test");
-  const variables = [];
-  test.traverse(
-    {
-      Identifier: {
-        enter: (p) => {
-          if (p.parent.type === "MemberExpression") {
-            return;
-          }
-          variables.push(p.node.name);
-        },
-      },
-      MemberExpression: {
-        enter: (p) => {
-          // calls and such are possible but are problamatic because they could have side effects changing the behaviour
-          if (
-            p.node.object.type === "Identifier" &&
-            p.node.property.type === "Identifier"
-          ) {
-            variables.push(p.getSource());
-          }
-        },
-      },
-    },
-    test
-  );
+
+  const index = this.cov.newStatement(path.node.loc);
+  const increment = this.increase("s", index, null);
+
+  const testIndex = this.cov.newStatement(test.node.loc);
+  const testIncrement = this.increase("s", testIndex, null);
+
+  const testAsString = `${test.toString()}`;
+  const variables = extractAndReplaceVariablesFromTest(test);
   const metaTracker = this.getBranchMetaTracker(
     branch,
-    test.node,
-    test.getSource(),
+    testAsString,
     variables
   );
   // path.parentPath.insertBefore(metaTracker)
   // path.replaceWith(T.sequenceExpression([metaTracker, path.node]))
-  test.replaceWith(T.sequenceExpression([metaTracker, test.node]));
+
+  // this.insertCounter(path, increment);
+
+  const identifier = path.scope.generateUidIdentifier("test");
+
+  path
+    .findParent((path) => path.isStatement())
+    .insertBefore(
+      t.variableDeclaration("let", [
+        ...variables
+          .filter(([source, identifier]) => {
+            const binding = path.scope.getBinding(identifier);
+            // all identifiers with a binding should be skipped
+            return !binding;
+          })
+          .map(([source, identifier]) => {
+            return t.variableDeclarator(t.identifier(identifier));
+          }),
+        t.variableDeclarator(identifier),
+      ])
+    );
+
+  test.replaceWith(
+    t.sequenceExpression([
+      increment,
+      testIncrement,
+      t.assignmentExpression("=", identifier, test.node),
+      metaTracker,
+      identifier,
+    ])
+  );
 }
 
 // TODO not sure how to handle the metatracker for this
