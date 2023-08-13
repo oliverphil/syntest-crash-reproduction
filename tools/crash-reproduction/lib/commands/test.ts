@@ -21,10 +21,15 @@ import Yargs = require("yargs");
 
 import { JavaScriptArguments, CrashLauncher } from "../CrashLauncher";
 import {Crash, EnvironmentBuilder, EnvironmentGenerator} from "@syntest/crash-reproduction-setup";
+import { MetricManager } from "@syntest/metric";
+import { StorageManager } from "@syntest/storage";
+import * as prng from "@syntest/prng";
 
 export function getTestCommand(
   tool: string,
   moduleManager: ModuleManager,
+  metricManager: MetricManager,
+  storageManager: StorageManager,
   userInterface: UserInterface
 ): Command {
   const options = new Map<string, Yargs.Options>();
@@ -60,6 +65,7 @@ export function getTestCommand(
   });
 
   return new Command(
+    moduleManager,
     tool,
     "test",
     "Run the test case generation tool on a certain JavaScript project.",
@@ -78,13 +84,16 @@ export function getTestCommand(
         }
       }
       crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
+      prng.initializePseudoRandomNumberGenerator(args.randomSeed);
       for (const crash of crashes) {
-        moduleManager.reset();
+        // moduleManager.reset();
         global.__coverage__ = {};
         global.__meta__ = [];
         const launcher = new CrashLauncher(
             <JavaScriptArguments>(<unknown>arguments_),
             moduleManager,
+            metricManager,
+            storageManager,
             userInterface
         );
         await launcher.runCrash(crash);
@@ -97,6 +106,8 @@ export type TestCommandOptions = {
   incorporateExecutionInformation: boolean;
   typeInferenceMode: string;
   randomTypeProbability: number;
+  constantPool: boolean;
+  constantPoolProbability: number;
   syntestProject: string | undefined;
   syntestCrashes: string | undefined;
   syntestSeeded: string;

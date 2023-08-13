@@ -1,9 +1,0 @@
-Error: EINVAL: invalid argument, fstat
-    at Object.fstatSync (fs:1483:3)
-    at Object.<anonymous> (stat.js:8:18)
-    at Module._compile (modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (modules/cjs/loader:1138:10)
-    at Module.load (modules/cjs/loader:989:32)
-    at Function.Module._load (modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (modules/run_main:76:12)
-    at internal/main/run_main_module:17:47

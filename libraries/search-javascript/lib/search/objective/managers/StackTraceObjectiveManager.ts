@@ -16,12 +16,14 @@
  * limitations under the License.
  */
 
-import { Encoding } from "@syntest/search";
-import {ObjectiveManager} from "@syntest/search/dist/lib/objective/managers/ObjectiveManager";
-import {ObjectiveFunction} from "@syntest/search/dist/lib/objective/ObjectiveFunction";
-import {SearchSubject} from "@syntest/search/dist/lib/SearchSubject";
-import {EncodingRunner} from "@syntest/search/dist/lib/EncodingRunner";
-import {SecondaryObjectiveComparator} from "@syntest/search/dist/lib/objective/secondary/SecondaryObjectiveComparator";
+import {
+    ArchiveBasedObjectiveManager,
+    Encoding,
+    EncodingRunner,
+    ObjectiveFunction,
+    SearchSubject,
+    SecondaryObjectiveComparator
+} from "@syntest/search";
 import {StackTrace} from "@syntest/crash-reproduction-setup";
 
 
@@ -32,7 +34,7 @@ import {StackTrace} from "@syntest/crash-reproduction-setup";
  */
 export class StackTraceObjectiveManager<
     T extends Encoding
-    > extends ObjectiveManager<T> {
+    > extends ArchiveBasedObjectiveManager<T> {
 
     private stackTrace: StackTrace;
 
@@ -49,12 +51,14 @@ export class StackTraceObjectiveManager<
      * @inheritDoc
      * @protected
      */
-    protected _updateObjectives(objectiveFunction: ObjectiveFunction<T>): void {
+    protected _updateObjectives(objectiveFunction: ObjectiveFunction<T>): ObjectiveFunction<T>[] {
         // Remove objective from the uncovered objectives
         this._uncoveredObjectives.delete(objectiveFunction);
 
         // Add objective to the covered objectives
         this._coveredObjectives.add(objectiveFunction);
+
+        return [];
     }
 
     /**

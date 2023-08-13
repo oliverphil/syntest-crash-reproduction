@@ -1,8 +1,0 @@
-{
-  "issueNumber": 4464,
-  "info": "mime.lookup is not a function",
-  "url": "https://github.com/expressjs/express/issues/4464",
-  "version": "4.17.1",
-  "dependencies": {},
-  "requireCrashDependency": true
-}

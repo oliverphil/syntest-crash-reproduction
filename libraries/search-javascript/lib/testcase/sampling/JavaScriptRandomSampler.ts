@@ -174,7 +174,7 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
   ): FunctionCall {
     const type_ = this.rootContext.getTypeModel().getObjectDescription(id);
 
-    const arguments_: Statement[] = this._sampleArguments(depth, type_);
+    const arguments_: Statement[] = type_ ? this._sampleArguments(depth, type_) : [];
 
     return new FunctionCall(
       id,
@@ -881,7 +881,7 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
   private _sampleArguments(depth: number, type_: ObjectType): Statement[] {
     const arguments_: Statement[] = [];
 
-    for (const [index, parameterId] of type_.parameters.entries()) {
+    for (const [index, parameterId] of type_?.parameters?.entries() || []) {
       const element = this.rootContext.getElement(parameterId);
 
       if (element) {
@@ -907,9 +907,9 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
     }
 
     // if some params are missing, fill them with fake params
-    const parameterIds = [...type_.parameters.values()];
+    const parameterIds = [...type_?.parameters?.values() || []];
     for (let index = 0; index < arguments_.length; index++) {
-      if (!arguments_[index]) {
+      if (!arguments_[index] && parameterIds) {
         arguments_[index] = this.sampleArgument(
           depth + 1,
           prng.pickOne(parameterIds),

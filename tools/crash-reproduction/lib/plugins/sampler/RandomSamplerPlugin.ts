@@ -38,18 +38,21 @@ export class RandomSamplerPlugin extends SamplerPlugin<JavaScriptTestCase> {
     options: SamplerOptions<JavaScriptTestCase>
   ): EncodingSampler<JavaScriptTestCase> {
     return new JavaScriptRandomSampler(
-      options.subject as unknown as JavaScriptSubject,
-      (<JavaScriptArguments>(<unknown>this.args)).typeInferenceMode,
-      (<JavaScriptArguments>(<unknown>this.args)).randomTypeProbability,
-      (<JavaScriptArguments>(
-        (<unknown>this.args)
-      )).incorporateExecutionInformation,
-      (<JavaScriptArguments>(<unknown>this.args)).maxActionStatements,
-      (<JavaScriptArguments>(<unknown>this.args)).stringAlphabet,
-      (<JavaScriptArguments>(<unknown>this.args)).stringMaxLength,
-      (<JavaScriptArguments>(<unknown>this.args)).resampleGeneProbability,
-      (<JavaScriptArguments>(<unknown>this.args)).deltaMutationProbability,
-      (<JavaScriptArguments>(<unknown>this.args)).exploreIllegalValues
+        options.subject as unknown as JavaScriptSubject,
+        undefined,
+        undefined,
+        undefined,
+        (<JavaScriptArguments>(<unknown>this.args)).typeInferenceMode,
+        (<JavaScriptArguments>(<unknown>this.args)).randomTypeProbability,
+        (<JavaScriptArguments>(
+            (<unknown>this.args)
+        )).incorporateExecutionInformation,
+        (<JavaScriptArguments>(<unknown>this.args)).maxActionStatements,
+        (<JavaScriptArguments>(<unknown>this.args)).stringAlphabet,
+        (<JavaScriptArguments>(<unknown>this.args)).stringMaxLength,
+        (<JavaScriptArguments>(<unknown>this.args)).resampleGeneProbability,
+        (<JavaScriptArguments>(<unknown>this.args)).deltaMutationProbability,
+        (<JavaScriptArguments>(<unknown>this.args)).exploreIllegalValues
     );
   }
 

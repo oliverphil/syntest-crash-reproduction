@@ -62,8 +62,6 @@
   "output-metrics": [],
   "syntest-project": "express",
   "syntest-crashes": "false",
-  "syntest-type": "syntest-collected",
-  "syntest-crash": [
-    "express-2761-1"
-  ]
+  "syntest-type": "github",
+  "syntest-crash": ""
 }

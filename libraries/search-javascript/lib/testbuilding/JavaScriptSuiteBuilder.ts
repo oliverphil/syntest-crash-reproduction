@@ -68,7 +68,7 @@ export class JavaScriptSuiteBuilder {
           sourceDirectory
         );
         const testPath = this.storageManager.store(
-          [testDirectory],
+          testDirectory.split(path.sep),
           `test-${key}.spec.js`,
           decodedTest,
           !final

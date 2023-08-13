@@ -1,8 +1,0 @@
-Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
-    at ServerResponse.setHeader (_http_outgoing.js:467:11)
-    at ServerResponse.header (/usr/src/app/node_modules/express/lib/response.js:771:10)
-    at ServerResponse.send (/usr/src/app/node_modules/express/lib/response.js:170:12)
-    at done (/usr/src/app/node_modules/express/lib/response.js:1008:10)
-    at render_file (/usr/src/app/node_modules/hbs/lib/hbs.js:49:14)
-    at ReadFileContext.callback (/usr/src/app/node_modules/hbs/lib/hbs.js:168:16)
-    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:232:13)

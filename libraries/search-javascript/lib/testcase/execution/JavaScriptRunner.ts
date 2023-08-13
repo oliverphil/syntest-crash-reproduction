@@ -101,12 +101,12 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
           runner = mocha.run((failures) => resolve(failures));
         } catch (e) {
           console.log(e);
-          resolve(e);
-          // reject(e);
+          // resolve(e);
+          reject(e);
         }
       });
     } catch {
-      //
+      // console.log(e);
     }
 
 

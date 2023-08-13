@@ -110,6 +110,7 @@ export class RootContext extends CoreRootContext<t.Node> {
           );
         } catch (e) {
           console.log(e);
+          break;
         }
       }
     }

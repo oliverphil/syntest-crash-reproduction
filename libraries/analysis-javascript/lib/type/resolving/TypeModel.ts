@@ -60,9 +60,9 @@ export class TypeModel {
   }
 
   getObjectDescription(element: string): ObjectType {
-    if (!this._objectTypeDescription.has(element)) {
-      throw new Error(`Element ${element} does not have an object description`);
-    }
+    // if (!this._objectTypeDescription.has(element)) {
+    //   throw new Error(`Element ${element} does not have an object description`);
+    // }
 
     return this._objectTypeDescription.get(element);
   }

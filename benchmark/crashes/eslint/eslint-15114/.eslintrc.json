@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "@openstamanager"
-  ],
-  "parserOptions": {
-    "requireConfigFile": false
-  }
-}

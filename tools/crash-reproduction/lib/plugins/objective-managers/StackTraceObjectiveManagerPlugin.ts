@@ -41,7 +41,7 @@ export class StackTraceObjectiveManagerPlugin<
         return new StackTraceObjectiveManager(
             options.runner,
             options.secondaryObjectives,
-            <StackTrace>options.stackTrace
+            (<StackTrace>(<any><unknown>options).stackTrace)
         );
     }
 

@@ -1,8 +1,0 @@
-{
-  "issueNumber": 37430,
-  "info": "Crash when mode is to big in fs.createWriteStream",
-  "url": "https://github.com/nodejs/node/issues/37430",
-  "version": "14.15.4",
-  "node-version": "14.15.4",
-  "dependencies": {}
-}

@@ -14,7 +14,7 @@ export class EnvironmentBuilder {
   public static createCrashEnvironment(crash: Crash, syntestType: string): boolean {
     // console.log(crash);
     const assetDir = './benchmark/crashes';
-    let crashFolder = `${assetDir}/${crash.project}/${crash.crashId}`;
+    let crashFolder = `${assetDir}/github/${crash.project}/${crash.crashId}`;
     if (syntestType === 'seeded') {
       crashFolder = `${assetDir}/seeded/${crash.project}/${crash.crashId}`;
     } else if (syntestType === 'bugsjs') {
