@@ -76,7 +76,7 @@ export function someCallHierarchyWithoutCrash(executionResult: JavaScriptExecuti
     if (!executionResult.hasExceptions()) {
         const traces = executionResult.getTraces().filter(trace => {
             for (const frame of stackTrace.trace) {
-                if (trace.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0) {
+                if (trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0) {
                     return true;
                 }
             }
@@ -108,7 +108,7 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0
+            return trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0
         });
 
     if (traces.length >= 1) {
@@ -148,7 +148,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.line === frame.lineNumber && trace.path.includes(frame.file) && trace.hits > 0
+            return trace.location.start.line === frame.lineNumber && trace.path.includes(frame.file) && trace.hits > 0
         });
 
     if (traces.length >= 1) {
@@ -252,7 +252,7 @@ export function checkTraceLinesCovered(executionResult: JavaScriptExecutionResul
         const traces = executionResult
             .getTraces()
             .filter(trace => {
-                return trace.line === frame.lineNumber &&
+                return trace.location.start.line === frame.lineNumber &&
                     trace.path.includes(frame.file) &&
                     trace.hits > 0
             });

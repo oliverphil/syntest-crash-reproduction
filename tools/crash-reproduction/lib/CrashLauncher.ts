@@ -577,8 +577,8 @@ export class CrashLauncher extends Launcher {
       }
 
       const objectiveManager = this.objectiveManagers[file];
-      const objectives = [...objectiveManager.getCoveredObjectives()];
-      objectives.push(...objectiveManager.getUncoveredObjectives());
+      const objectives = [...(objectiveManager?.getCoveredObjectives() || [])];
+      objectives.push(...(objectiveManager?.getUncoveredObjectives() || []));
       for (const objective of objectives) {
         try {
           const encoding = this.archive.getEncoding(objective);
@@ -590,6 +590,10 @@ export class CrashLauncher extends Launcher {
           totalObjectives += 1;
         }
       }
+      // if (objectives.length === 0) {
+      //   summary["objective"] = 0;
+      // }
+
 
       totalStatements += Object.keys(data.s).length;
       totalBranches += Object.keys(data.b).length * 2;
