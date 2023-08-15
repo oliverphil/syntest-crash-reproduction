@@ -21,7 +21,7 @@ export class EnvironmentBuilder {
       crashFolder = `${assetDir}/bugsjs/${crash.project}/${crash.crashId}`;
     } else if (syntestType === 'syntest-collected') {
       crashFolder = `${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`;
-      execSync(`cp -r ${crash.project} ${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`);
+      execSync(`cp -r benchmark/resources/${crash.project} ${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`);
     }
     const stackTraceFiles: string[] = [];
     for (const frame of crash.stackTrace.trace) {
