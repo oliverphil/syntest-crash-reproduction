@@ -1,0 +1,13 @@
+TypeError: Cannot create property 'allowTraversal' on number '4.840819736044762'
+    at initCallbacks (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:37:35)
+    at _context (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:50:48)
+    at call (.syntest/tests/tempTest.spec.js:10:42)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

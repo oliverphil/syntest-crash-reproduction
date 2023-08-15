@@ -1,0 +1,9 @@
+TypeError: originalArray.slice is not a function
+    at MergeSort.sort (javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:15:37)
+    at Knapsack.sortPossibleItemsByValuePerWeightRatio (javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:59:8)
+    at call (.syntest/tests/tempTest.spec.js:13:3)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)

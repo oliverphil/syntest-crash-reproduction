@@ -50,7 +50,9 @@ export class EnvironmentGenerator {
     const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
         && value !== 'seeded' && (!project || value === project));
     const assetSubDirs = assetDirContents.map((projItem) => {
-      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
+      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`).filter(value => value !== 'commander'
+          && value !== 'express' && value !== 'javascript-algorithms'
+          && value !== 'lodash'), false];
     });
 
     return assetSubDirs;

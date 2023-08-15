@@ -1,0 +1,8 @@
+TypeError: cmd._args.map is not a function
+    at Help._argumentTerm_function_EFPE [as subcommandTerm] (commanderjs/lib/help.js:114:55)
+    at call (.syntest/tests/tempTest.spec.js:29:19)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)

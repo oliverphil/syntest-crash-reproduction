@@ -1,0 +1,15 @@
+TypeError: iteratee is not a function
+    at iteratee (lodash/transform.js:55:60)
+    at baseFor (lodash/.internal/baseFor.js:20:9)
+    at baseForOwn (lodash/.internal/baseForOwn.js:13:27)
+    at transform (lodash/transform.js:54:308)
+    at call (.syntest/tests/tempTest.spec.js:14:34)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

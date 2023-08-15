@@ -21,6 +21,7 @@ export class EnvironmentBuilder {
       crashFolder = `${assetDir}/bugsjs/${crash.project}/${crash.crashId}`;
     } else if (syntestType === 'syntest-collected') {
       crashFolder = `${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`;
+      execSync(`cp -r ${crash.project} ${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`);
     }
     const stackTraceFiles: string[] = [];
     for (const frame of crash.stackTrace.trace) {
@@ -50,7 +51,7 @@ export class EnvironmentBuilder {
     //   // if (crash.nodeVersion) {
     //   //   stdout = execSync(`unset npm_config_prefix && source /vol/grid-solar/sgeusers/oliverphil/.nvm/nvm.sh && nvm install ${crash.nodeVersion} && npm --prefix ${crashFolder} i`).toString();
     //   // } else {
-        stdout = execSync(`npm --prefix ${crashFolder} i`).toString();
+        stdout = execSync(`npm --prefix ${crashFolder} i --legacy-peer-deps`).toString();
     //   // }
     } catch (e) {
       stdout = e.stdout.toString();

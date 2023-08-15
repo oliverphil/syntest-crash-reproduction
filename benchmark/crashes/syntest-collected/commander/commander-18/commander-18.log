@@ -1,0 +1,8 @@
+TypeError: Cannot read properties of undefined (reading 'reduce')
+    at Help.longestSubcommandTermLength (commanderjs/lib/help.js:152:39)
+    at call (.syntest/tests/tempTest.spec.js:43:42)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)

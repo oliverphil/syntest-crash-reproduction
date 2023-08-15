@@ -60,8 +60,8 @@
   ],
   "metric-middleware-pipeline": [],
   "output-metrics": [],
-  "syntest-project": "express",
+  "syntest-project": "commander",
   "syntest-crashes": "false",
-  "syntest-type": "bugsjs",
-  "syntest-crash": ["express-1-1"]
+  "syntest-type": "syntest-collected",
+  "syntest-crash": ""
 }

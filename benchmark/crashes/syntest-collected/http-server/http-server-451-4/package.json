@@ -1,1 +1,0 @@
-{"name":"http-server-451-4","version":"1.0.0","main":"index.js","engineStrict":false,"scripts":{"test":"echo \"Error: no test specified\" && exit 1","crash":"node index.js"},"author":"Philip Oliver","license":"ISC","dependencies":{"requires-port":"1.0.0","http-proxy":"1.18.1","union":"0.5.0","http-server":"13.0.0"}}
