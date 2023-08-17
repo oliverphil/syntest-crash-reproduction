@@ -95,7 +95,8 @@ npm run build
 cd ../syntest-crash-reproduction
 echo $1
 git checkout $1
-cp /local/scratch/syntest-crash-reproduction/.syntest.json syntest.json
+cp /local/scratch/syntest-crash-reproduction/.syntest.json .syntest.json
+tail .syntest.json
 npm i
 ls
 

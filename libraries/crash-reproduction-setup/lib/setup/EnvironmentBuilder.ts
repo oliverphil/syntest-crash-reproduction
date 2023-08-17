@@ -37,10 +37,10 @@ export class EnvironmentBuilder {
       }
     }
     fs.writeFileSync(`${crashFolder}/files.json`,
-        JSON.stringify(stackTraceFiles));
+        JSON.stringify(stackTraceFiles, undefined, 4));
     fs.writeFileSync(
         `${crashFolder}/package.json`,
-        JSON.stringify(crash.package));
+        JSON.stringify(crash.package, undefined, 4));
     // if (fs.existsSync(`${crashFolder}/package-lock.json`)) {
     //   fs.rmSync(`${crashFolder}/package-lock.json`);
     // }

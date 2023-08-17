@@ -134,10 +134,10 @@ export class EnvironmentGenerator {
       const crashName = value[1];
       const crashFile = value[2];
       const logFile = value[3];
-      console.log(crashName);
+      // console.log(crashName);
       const crash: Crash = {
         project: projectName,
-        stackTrace: StackTraceProcessor.process(logFile.toString(), true),
+        stackTrace: StackTraceProcessor.process(logFile.toString(), false),
         ...JSON.parse(crashFile.toString()),
         crashId: crashName,
         seeded: value[4]
@@ -154,13 +154,13 @@ export class EnvironmentGenerator {
         try {
           const nodeVersion = crash.nodeVersion || crash.version;
           const tarName = `node-v${nodeVersion}.tar.gz`;
-          const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
-          const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
+          const tarFolder = `${assetDir}/${syntestType}/node/${crashName}`;
+          const tarFile = `${assetDir}/${syntestType}/node/${crashName}/${tarName}`;
           execSync(`wget -O ${tarFile}` +
-              ` https://nodejs.org/dist/v${nodeVersion}/${tarName}`);
+              ` https://nodejs.org/download/release/v${nodeVersion}/${tarName}`);
           execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
         } catch (e) {
-          console.log(e);
+          // console.log(e);
         }
       }
       return crash;
