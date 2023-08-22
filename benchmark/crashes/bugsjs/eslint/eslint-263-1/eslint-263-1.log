@@ -1,9 +1,0 @@
-AssertionError: Should have no errors but had 1: [ { ruleId: null,
-    fatal: true,
-    severity: 2,
-    source: 'let abc = 5,',
-    message: 'Parsing error: Identifier \'abc\' has already been declared',
-    line: 8,
-    column: 5 } ]
-    at testValidTemplate (lib/testers/rule-tester.js:422:20)
-    at Context.RuleTester.it (lib/testers/rule-tester.js:518:25)

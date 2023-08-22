@@ -1,1 +1,0 @@
-{"issueNumber":20,"info":"CLIEngine executeOnFiles() should return zero messages when executing with base-config flag set to false","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

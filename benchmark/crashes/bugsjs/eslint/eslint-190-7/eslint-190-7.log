@@ -1,3 +1,0 @@
-AssertionError: expected [Function] to not throw an error but 'YAMLException: duplicated mapping key at line 92, column 5:\n        no-console: 0\n        ^' was thrown
-    at Function.assert.doesNotThrow (node_modules/chai/lib/chai/interface/assert.js:951:35)
-    at Context.<anonymous> (tests/lib/cli.js:100:20)

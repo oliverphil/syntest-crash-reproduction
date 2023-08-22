@@ -1,0 +1,3 @@
+AssertionError: expected [Function] to not throw an error but 'YAMLException: duplicated mapping key at line 95, column 5:\n        no-console: 0\n        ^' was thrown
+    at getOutput.then.output (tests/bin/eslint.js:273:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)

@@ -1,6 +1,7 @@
-TypeError: helper.longestOptionTermLength is not a function
-    at Help.padWidth (commanderjs/lib/help.js:355:14)
-    at call (.syntest/tests/tempTest.spec.js:17:34)
+TypeError: number 9 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at match (<anonymous>)
+    at Help._visibleArguments_function_AoOz [as wrap] (commanderjs/lib/help.js:376:75)
+    at call (.syntest/tests/tempTest.spec.js:13:9)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

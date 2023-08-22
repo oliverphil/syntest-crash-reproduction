@@ -1,8 +1,0 @@
-TypeError: ((intermediate value)(intermediate value) , _meta2) is not a function
-    at Help.visibleArguments (commanderjs/lib/help.js:99:140)
-    at call (.syntest/tests/tempTest.spec.js:22:31)
-    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
-    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
-    at _next (.syntest/tests/tempTest.spec.js:2:1)

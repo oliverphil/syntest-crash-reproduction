@@ -1,1 +1,0 @@
-{"issueNumber":39,"info":"CLIEngine executeOnFiles() configuration hierarchy should return one message when executing with command line rule and config file that overrides local .eslintrc","url":"","version":"^3.0.0","dependencies":{},"requireCrashDependency":true}

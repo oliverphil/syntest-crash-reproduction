@@ -1,8 +1,0 @@
-TypeError: parentCmd.name is not a function
-    at Help.commandUsage (commanderjs/lib/help.js:200:34)
-    at call (.syntest/tests/tempTest.spec.js:37:3)
-    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
-    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
-    at _next (.syntest/tests/tempTest.spec.js:2:1)

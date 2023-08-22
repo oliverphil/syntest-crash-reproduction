@@ -1,8 +1,9 @@
-Error: invalid param() call for Module ", got mhYHZPVcAoMLIPqRDygE3dfsrOwJvAL0Vvroo1DGrt6AKyEJh9tNWqZJ0HF4QVvPgT2ZpgGnLZzsITrx3AJxIpAEFJ7W9
-    at Function.param (express/lib/router/index.js:124:11)
-    at Object.param (express/lib/application.js:334:16)
-    at Object.param (express/lib/application.js:328:12)
-    at call (.syntest/tests/tempTest.spec.js:8:31)
+TypeError: The "path" argument must be of type string. Received null
+    at new NodeError (node:internal/errors:405:5)
+    at validateString (node:internal/validators:162:11)
+    at extname (node:path:1385:5)
+    at new View (express/lib/view.js:56:14)
+    at call (.syntest/tests/tempTest.spec.js:8:29)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

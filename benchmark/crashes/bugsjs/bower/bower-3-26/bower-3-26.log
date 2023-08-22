@@ -1,3 +1,0 @@
-Error: ENOENT: no such file or directory, stat '/local/scratch/testing/BugsJS/output/bower/test/assets/package-a'
-From previous event:
-    at Context.<anonymous> (test/core/resolverFactory.js:339:10)

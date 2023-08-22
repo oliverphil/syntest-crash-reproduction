@@ -1,4 +1,4 @@
-TypeError: String.prototype.match called on null or undefined
+RangeError: Invalid count value
     at match (<anonymous>)
     at Help._visibleArguments_function_AoOz [as wrap] (commanderjs/lib/help.js:376:75)
     at call (.syntest/tests/tempTest.spec.js:13:9)

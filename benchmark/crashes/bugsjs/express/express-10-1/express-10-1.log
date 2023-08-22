@@ -1,7 +1,0 @@
-TypeError: Cannot read property 'statusCode' of undefined
-    at Test.<anonymous> (test/res.sendFile.js:709:14)
-    at Test.assert (node_modules/supertest/lib/test.js:156:6)
-    at Server.assert (node_modules/supertest/lib/test.js:127:12)
-    at emitCloseNT (net.js:1577:8)
-    at _combinedTickCallback (internal/process/next_tick.js:77:11)
-    at process._tickCallback (internal/process/next_tick.js:104:9)

@@ -1,8 +1,0 @@
-TypeError: Cannot read property 'header' of undefined
-    at Test._assertHeader (node_modules/supertest/lib/test.js:208:19)
-    at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
-    at Test.assert (node_modules/supertest/lib/test.js:148:18)
-    at Server.assert (node_modules/supertest/lib/test.js:127:12)
-    at emitCloseNT (net.js:1577:8)
-    at _combinedTickCallback (internal/process/next_tick.js:77:11)
-    at process._tickCallback (internal/process/next_tick.js:104:9)

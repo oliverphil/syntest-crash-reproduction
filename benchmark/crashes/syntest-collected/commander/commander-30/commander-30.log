@@ -1,8 +1,0 @@
-TypeError: helper.visibleOptions is not a function
-    at Help._padWidth_function_IIIa (commanderjs/lib/help.js:166:19)
-    at call (.syntest/tests/tempTest.spec.js:23:16)
-    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
-    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
-    at _next (.syntest/tests/tempTest.spec.js:2:1)

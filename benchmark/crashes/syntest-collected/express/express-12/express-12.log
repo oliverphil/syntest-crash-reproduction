@@ -1,6 +1,8 @@
-TypeError: this.on is not a function
-    at Object.defaultConfiguration (express/lib/application.js:91:8)
-    at call (.syntest/tests/tempTest.spec.js:7:38)
+TypeError: Cannot read properties of undefined (reading 'view cache')
+    at Object.set (express/lib/application.js:357:25)
+    at Object.enabled (express/lib/application.js:424:23)
+    at Object.render (express/lib/application.js:560:32)
+    at call (.syntest/tests/tempTest.spec.js:8:31)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

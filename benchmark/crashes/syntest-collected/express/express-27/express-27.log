@@ -1,7 +1,8 @@
-Error: invalid param() call for ciar9n, got engine
-    at Function.param (express/lib/router/index.js:124:11)
-    at Object.param (express/lib/application.js:334:16)
-    at call (.syntest/tests/tempTest.spec.js:8:87)
+TypeError: Cannot set properties of undefined (setting 'location')
+    at ServerResponse.setHeader (node:_http_outgoing:657:45)
+    at ServerResponse.set [as header] (express/lib/response.js:776:10)
+    at ServerResponse.enabled [as location] (express/lib/response.js:893:41)
+    at call (.syntest/tests/tempTest.spec.js:8:57)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

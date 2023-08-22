@@ -1,6 +1,9 @@
-TypeError: parentCmd.name is not a function
-    at Help._optionDescription_function_UzXY [as commandUsage] (commanderjs/lib/help.js:200:34)
-    at call (.syntest/tests/tempTest.spec.js:18:9)
+TypeError: Cannot set properties of undefined (setting '0')
+    at editDistance (commanderjs/lib/suggestSimilar.js:23:474)
+    at forEach (commanderjs/lib/suggestSimilar.js:72:49)
+    at Array.forEach (<anonymous>)
+    at _optionTerm_function_abro (commanderjs/lib/suggestSimilar.js:69:14)
+    at call (.syntest/tests/tempTest.spec.js:17:9)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

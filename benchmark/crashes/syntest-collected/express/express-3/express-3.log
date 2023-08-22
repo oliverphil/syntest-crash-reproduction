@@ -1,8 +1,7 @@
-TypeError: Cannot read properties of undefined (reading 'view cache')
+Error: invalid param() call for [object Object], got -9
     at Object.set (express/lib/application.js:357:25)
     at Object.enabled (express/lib/application.js:424:23)
-    at Object.render (express/lib/application.js:560:32)
-    at call (.syntest/tests/tempTest.spec.js:8:31)
+    at call (.syntest/tests/tempTest.spec.js:8:57)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

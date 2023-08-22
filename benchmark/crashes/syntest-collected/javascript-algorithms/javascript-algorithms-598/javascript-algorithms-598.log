@@ -1,8 +1,0 @@
-TypeError: Cannot read properties of undefined (reading 'forEach')
-    at CountingSort.sort (javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:21:643)
-    at call (.syntest/tests/tempTest.spec.js:11:32)
-    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
-    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
-    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
-    at _next (.syntest/tests/tempTest.spec.js:2:1)

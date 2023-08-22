@@ -1,1 +1,0 @@
-{"issueNumber":"lodash-18","info":"TypeError: Method RegExp.prototype.test called on incompatible receiver undefined","version":"5.0.0","dependencies":{"mocha":"^5.2.0","eslint":"^7.16.0","eslint-plugin-import":"^2.22.1","lodash":"4.17.20","esm":"^3.2.25"},"requireCrashDependency":true,"crashId":"lodash-18"}

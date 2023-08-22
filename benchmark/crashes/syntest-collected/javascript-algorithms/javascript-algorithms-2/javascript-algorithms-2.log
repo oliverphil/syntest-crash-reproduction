@@ -1,6 +1,7 @@
-TypeError: Cannot read properties of undefined (reading 'getAllVertices')
-    at _getAllVertices_function_miAq (javascript-algorithms/src/algorithms/graph/articulation-points/articulationPoints.js:33:80)
-    at call (.syntest/tests/tempTest.spec.js:8:22)
+TypeError: Cannot create property 'allowTraversal' on number '23'
+    at initCallbacks (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:37:35)
+    at _context (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:50:48)
+    at call (.syntest/tests/tempTest.spec.js:10:42)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

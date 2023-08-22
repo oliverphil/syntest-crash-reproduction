@@ -1,6 +1,7 @@
-TypeError: graph.getAllVertices is not a function
-    at bellmanFord (javascript-algorithms/src/algorithms/graph/bellman-ford/bellmanFord.js:22:93)
-    at call (.syntest/tests/tempTest.spec.js:30:46)
+TypeError: Cannot read properties of undefined (reading 'getAllVertices')
+    at initCallbacks (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:37:35)
+    at _context (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:50:48)
+    at call (.syntest/tests/tempTest.spec.js:10:42)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

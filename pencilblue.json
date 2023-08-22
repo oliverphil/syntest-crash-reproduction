@@ -1,0 +1,11 @@
+{
+    "crash1": {
+        "crashProject": "pencilblue",
+        "trace": "    at Assertion.fail (node_modules/should/cjs/should.js:258:17)\n    at Assertion.value (node_modules/should/cjs/should.js:335:19)\n    at Context.<anonymous> (test/include/http/request_handler.spec.js:323:77)",
+        "errors": [
+            "AssertionError: expected 'font/woff' to equal 'application/font-woff'",
+            "AssertionError: expected 'font/otf' to equal 'font/opentype'",
+            "AssertionError: expected 'font/ttf' to equal 'application/x-font-ttf'"
+        ]
+    }
+}
