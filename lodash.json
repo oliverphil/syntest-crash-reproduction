@@ -1,0 +1,38 @@
+{
+    "crash1": {
+        "crashProject": "lodash",
+        "trace": "    at _loop (lodash/.internal/equalArrays.js:50:7)\n    at equalArrays (lodash/.internal/equalArrays.js:43:297)\n    at call (.syntest/tests/tempTest.spec.js:25:55)\n    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)\n    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)\n    at _next (.syntest/tests/tempTest.spec.js:2:1)\n    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1\n    at new Promise (<anonymous>)\n    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)\n    at processImmediate (node:internal/timers:476:21)\n",
+        "errors": [
+            "TypeError: customizer is not a function",
+            "TypeError: Method RegExp.prototype.test called on incompatible receiver undefined"
+        ]
+    },
+    "crash2": {
+        "crashProject": "lodash",
+        "trace": "    at apply (lodash/.internal/stringToPath.js:28:14)\n    at memoized (lodash/memoize.js:54:25)\n    at castPath (lodash/.internal/castPath.js:16:55)\n    at _anon_string_eKty (lodash/hasPath.js:35:99)\n    at call (.syntest/tests/tempTest.spec.js:13:30)\n    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)\n    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)\n    at _next (.syntest/tests/tempTest.spec.js:2:1)\n    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1\n    at new Promise (<anonymous>)\n    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)\n    at processImmediate (node:internal/timers:476:21)\n",
+        "errors": [
+            "TypeError: string.charCodeAt is not a function"
+        ]
+    },
+    "crash3": {
+        "crashProject": "lodash",
+        "trace": "    at test (<anonymous>)\n    at toNumber (lodash/toNumber.js:62:99)\n    at toFinite (lodash/toFinite.js:32:19)\n    at _index_boolean_Gobz (lodash/random.js:57:23)\n    at call (.syntest/tests/tempTest.spec.js:10:12)\n    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)\n    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)\n    at _next (.syntest/tests/tempTest.spec.js:2:1)\n    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1\n    at new Promise (<anonymous>)\n    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)\n    at processImmediate (node:internal/timers:476:21)\n",
+        "errors": [
+            "TypeError: Method RegExp.prototype.test called on incompatible receiver undefined"
+        ]
+    },
+    "crash4": {
+        "crashProject": "lodash",
+        "trace": "    at iteratee (lodash/transform.js:55:60)\n    at baseFor (lodash/.internal/baseFor.js:20:9)\n    at baseForOwn (lodash/.internal/baseForOwn.js:13:27)\n    at transform (lodash/transform.js:54:308)\n    at call (.syntest/tests/tempTest.spec.js:14:34)\n    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)\n    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)\n    at _next (.syntest/tests/tempTest.spec.js:2:1)\n    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1\n    at new Promise (<anonymous>)\n    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)\n    at processImmediate (node:internal/timers:476:21)\n",
+        "errors": [
+            "TypeError: iteratee is not a function"
+        ]
+    },
+    "crash5": {
+        "crashProject": "lodash",
+        "trace": "    at iteratee (lodash/transform.js:55:60)\n    at arrayEach (lodash/.internal/arrayEach.js:14:9)\n    at transform (lodash/transform.js:54:308)\n    at call (.syntest/tests/tempTest.spec.js:11:3)\n    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)\n    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)\n    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)\n    at _next (.syntest/tests/tempTest.spec.js:2:1)\n    at /local/scratch/delft-versions/syntest-javascript/.syntest/tests/tempTest.spec.js:2:1\n    at new Promise (<anonymous>)\n    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)\n    at processImmediate (node:internal/timers:476:21)\n",
+        "errors": [
+            "TypeError: iteratee is not a function"
+        ]
+    }
+}
