@@ -1,0 +1,5 @@
+[
+    "realms-shim/src/evaluators.js",
+    "realms-shim/src/realm.js",
+    "realms-shim/src/realmFacade.js"
+]

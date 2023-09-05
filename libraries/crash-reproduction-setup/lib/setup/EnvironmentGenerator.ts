@@ -69,6 +69,17 @@ export class EnvironmentGenerator {
     return assetSubDirs;
   }
 
+  private handleSecbench(project: string) {
+    const assetDir = './benchmark/crashes/secbench';
+    const assetDirContents = fs.readdirSync(assetDir).filter((value) => value !== '.gitignore'
+        && value !== 'seeded' && value !== 'bugsjs' && value !== 'syntest-collected' && (!project || value === project));
+    const assetSubDirs = assetDirContents.map((projItem) => {
+      return [projItem, fs.readdirSync(`${assetDir}/${projItem}`), false];
+    });
+
+    return assetSubDirs;
+  }
+
   private handleSyntestType(project: string, syntestType: string) {
     let assetDir = './benchmark/crashes';
     let assetSubDirs = [];
@@ -88,6 +99,10 @@ export class EnvironmentGenerator {
       case 'github':
         assetDir = './benchmark/crashes/github';
         assetSubDirs = this.handleGithub(project);
+        break;
+      case 'secbench':
+        assetDir = './benchmark/crashes/secbench';
+        assetSubDirs = this.handleSecbench(project);
         break;
     }
 

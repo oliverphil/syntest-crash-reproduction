@@ -1,0 +1,4 @@
+Error:
+        at eval (eval at Object.<anonymous>.exports.unserialize (node-serialize/lib/serialize.js:75:22), <anonymous>:1:20)
+        at eval (eval at Object.<anonymous>.exports.unserialize (node-serialize/lib/serialize.js:75:22), <anonymous>:1:33)
+        at Object.unserialize (node-serialize/lib/serialize.js:75:22)

@@ -1,0 +1,4 @@
+Error:
+        at eval (eval at evaluator (modulify/src/modulify.js:74:5), <anonymous>:1:7)
+        at Object.evaluator (modulify/src/modulify.js:74:5)
+        at Object.getGlobals (modulify/src/modulify.js:94:20)

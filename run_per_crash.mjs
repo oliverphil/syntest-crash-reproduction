@@ -3,8 +3,8 @@ import {execSync} from "child_process";
 import * as fs from "fs";
 import {writeFileSync} from "fs";
 
-const types = ['seeded', 'github', 'bugsjs', 'syntest-collected'];
-const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'bower', 'hexo', 'pencilblue', 'lodash', 'javascript-algorithms', 'commander'];
+const types = ['seeded', 'github', 'bugsjs', 'syntest-collected', 'secbench'];
+const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'bower', 'hexo', 'pencilblue', 'lodash', 'javascript-algorithms', 'commander', 'code-injection'];
 const envGen = new EnvironmentGenerator();
 
 const syntestFile = JSON.parse(fs.readFileSync('.syntest.json').toString());
@@ -20,8 +20,8 @@ for (const type of types) {
             // execSync(`sed -i "s/^.*syntest-project.*$/  \\"syntest-project\\": \\"${project}\\",/" .syntest.json`);
             const crashes = envGen.loadAssets(project, type);
             numberOfCrashes += crashes.length;
-            for (let i = 0; i < crashes.length; i += 40) {
-                const finalIndex = i + 39 < crashes.length ? i + 39 : crashes.length - 1;
+            for (let i = 0; i < crashes.length; i += 2) {
+                const finalIndex = i + 1 < crashes.length ? i + 1 : crashes.length - 1;
                 const currentCrashes = crashes.splice(i, finalIndex);
                 syntestFile['syntest-crash'] = currentCrashes.map(c => c.crashId);
                 writeFileSync('.syntest.json', JSON.stringify(syntestFile, undefined, 4));

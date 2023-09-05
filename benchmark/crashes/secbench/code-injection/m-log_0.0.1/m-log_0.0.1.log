@@ -1,0 +1,3 @@
+Error:
+        at eval (eval at Object.<anonymous>.module.exports.setColorTheme (m-log/libs/log.js:24:11), <anonymous>:1:42)
+        at Object.setColorTheme (m-log/libs/log.js:24:11)

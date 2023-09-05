@@ -1,0 +1,15 @@
+{
+    "name": "thenify_3.3.0",
+    "version": "1.0.0",
+    "main": "index.js",
+    "engineStrict": false,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "crash": "node index.js"
+    },
+    "author": "Philip Oliver",
+    "license": "ISC",
+    "dependencies": {
+        "thenify": "3.3.0"
+    }
+}

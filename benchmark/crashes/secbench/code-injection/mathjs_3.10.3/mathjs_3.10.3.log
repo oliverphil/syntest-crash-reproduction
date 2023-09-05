@@ -1,0 +1,6 @@
+Error: Undefined symbol throw
+        at undef (mathjs/lib/expression/node/SymbolNode.js:92:11)
+        at eval (eval at Node.compile (mathjs/lib/expression/node/Node.js:71:19), <anonymous>:3:542)
+        at Object.eval (eval at Node.compile (mathjs/lib/expression/node/Node.js:71:19), <anonymous>:3:2342)
+        at eval (mathjs/lib/expression/function/eval.js:43:36)
+        at Object.compile (eval at _typed (typed-function/typed-function.js:1115:22), <anonymous>:22:14)

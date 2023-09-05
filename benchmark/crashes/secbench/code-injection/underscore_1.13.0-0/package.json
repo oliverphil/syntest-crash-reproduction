@@ -1,0 +1,15 @@
+{
+    "name": "underscore_1.13.0-0",
+    "version": "1.0.0",
+    "main": "index.js",
+    "engineStrict": false,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "crash": "node index.js"
+    },
+    "author": "Philip Oliver",
+    "license": "ISC",
+    "dependencies": {
+        "underscore": "1.13.0-0"
+    }
+}

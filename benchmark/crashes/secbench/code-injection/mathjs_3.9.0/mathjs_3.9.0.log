@@ -1,0 +1,6 @@
+Error:
+        at eval (eval at <anonymous> (eval at Node.compile (mathjs/lib/expression/node/Node.js:71:19)), <anonymous>:3:7)
+        at eval (eval at Node.compile (mathjs/lib/expression/node/Node.js:71:19), <anonymous>:3:2013)
+        at Object.eval (eval at Node.compile (mathjs/lib/expression/node/Node.js:71:19), <anonymous>:3:2019)
+        at eval (mathjs/lib/expression/function/eval.js:40:36)
+        at Object.compile (eval at _typed (typed-function/typed-function.js:1115:22), <anonymous>:22:14)

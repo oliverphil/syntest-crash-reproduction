@@ -1,0 +1,3 @@
+Error:
+        at eval (eval at extend (node-extend/lib/extend.js:31:11), <anonymous>:1:23)
+        at extend (node-extend/lib/extend.js:31:11)

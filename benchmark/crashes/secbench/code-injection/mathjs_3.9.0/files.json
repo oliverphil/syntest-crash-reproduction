@@ -1,0 +1,5 @@
+[
+    "mathjs/lib/expression/node/Node.js",
+    "mathjs/lib/expression/function/eval.js",
+    "typed-function/typed-function.js"
+]

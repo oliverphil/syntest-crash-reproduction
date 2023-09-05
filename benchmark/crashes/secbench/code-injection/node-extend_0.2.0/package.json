@@ -1,0 +1,15 @@
+{
+    "name": "node-extend_0.2.0",
+    "version": "1.0.0",
+    "main": "index.js",
+    "engineStrict": false,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "crash": "node index.js"
+    },
+    "author": "Philip Oliver",
+    "license": "ISC",
+    "dependencies": {
+        "node-extend": "^0.2.0"
+    }
+}

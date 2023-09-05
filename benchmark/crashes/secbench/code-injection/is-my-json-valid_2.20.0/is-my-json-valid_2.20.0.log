@@ -1,0 +1,5 @@
+SyntaxError: Unexpected token 'throw'
+        at Function (<anonymous>)
+        at Function.line.toFunction (generate-function/index.js:172:21)
+        at compile (is-my-json-valid/index.js:571:23)
+        at validator (is-my-json-valid/index.js:594:10)
