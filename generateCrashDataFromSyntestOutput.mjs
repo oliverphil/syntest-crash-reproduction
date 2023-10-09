@@ -4,10 +4,11 @@ import {execSync} from "child_process";
 import {StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 
 // const resultRegex = /======\sException\sfor\sDataset\s=======\n([A-Za-z1-9\-]*)\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
-const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?End\sError/gm
-const resultFiles = ['commander.log', 'express.log', 'javascript-algorithms.log', 'lodash.log'];
+// const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?End\sError/gm
+const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?Start\sTest\n((?:[^End].*\n)*)End\sTest\nEnd\sError/gm;
+const resultFiles = ['commander.log', 'express.log', 'javascript-algorithms.log', 'lodash.log', 'moment.log'];
 // const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-const projects = ['eslint', 'express', 'hexo', 'pencilblue'];
+const projects = ['commander', 'express', 'javascript-algorithms', 'lodash', 'moment'];
 // for (let i = 1; i <= 1; i++) {
 //     for (let project of projects) {
 //         resultFiles.push(`results/output_${project}_${i}.log`);
@@ -16,82 +17,89 @@ const projects = ['eslint', 'express', 'hexo', 'pencilblue'];
 
 console.log(resultFiles);
 
-// for (let i = 0; i < resultFiles.length; i++) {
-//     const resultFile = resultFiles[i];
-//     console.log(resultFile);
-//     let regexResults = [];
-//     try {
-//         // const file = await fsPromises.open(resultFile);
-//         const text = fs.readFileSync(resultFile).toString();
-//         let regexResult;
-//         while ((regexResult = resultRegex.exec(text)) !== null) {
-//             // const crashNumber = regexResult[1];
-//             const stackTrace = regexResult[1];
-//             let contained = false;
-//             const splitStackTrace = stackTrace.split('\n');
-//             let finalStackTraceArray = [];
-//             for (let i = 1; i < splitStackTrace.length; i++) {
-//                 const line = splitStackTrace[i];
-//                 if (line.includes('instrumented')) {
-//                     const firstPart = line.split('.syntest/')[0];
-//                     const secondPart = line.split('instrumented/')[1];
-//                     finalStackTraceArray.push(firstPart + secondPart);
-//                 } else if (line.includes('.syntest')) {
-//                     const firstPart = line.split('.syntest/')[0];
-//                     const secondPart = line.split('tests/')[1];
-//                     finalStackTraceArray.push(firstPart + '.syntest/tests/' + secondPart);
-//                 } else {
-//                     finalStackTraceArray.push(line);
-//                 }
-//             }
-//             const finalStackTrace = finalStackTraceArray.join('\n');
-//             for (let item of regexResults) {
-//                 if (checkSameStackTraces(item.stackTrace, finalStackTrace)) {
-//                     contained = true;
-//                     break;
-//                 }
-//             }
-//             if (finalStackTraceArray[1]?.includes('tests/tempTest.spec.js')) {
-//                 continue;
-//             }
-//             if (!contained) {
-//                 regexResults.push({
-//                     resultFile,
-//                     stackTrace: finalStackTrace,
-//                     errors: new Set([splitStackTrace[0]])
-//                 });
-//             } else {
-//                 regexResults.find(item => checkSameStackTraces(item.stackTrace, finalStackTrace)).errors.add(splitStackTrace[0]);
-//             }
-//         }
-//
-//         const obj = {};
-//         let num = 1;
-//         for (let item of regexResults) {
-//             let trace = item.stackTrace;
-//             let crashNum = `crash${num++}`;
-//             obj[crashNum] = {
-//                 crashProject: item.resultFile.split('.')[0],
-//                 trace,
-//                 errors: [...item.errors]
-//             };
-//         }
-//
-//         // console.log(regexResults);
-//         console.log('open file');
-//         const outfile = `${resultFile.substring(0, resultFile.length - 4)}`;
-//         const outputFile = await fsPromises.open(outfile + '.json', 'w');
-//         // console.log(outfile);
-//         console.log('write to file');
-//         await outputFile.writeFile(JSON.stringify(obj, undefined, 4));
-//         await outputFile.close();
-//         // const altFile = await fsPromises.open(outfile + '.txt', 'w');
-//         // await altFile.writeFile(obj.toString());
-//         // await altFile.close();
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }
+for (let i = 0; i < resultFiles.length; i++) {
+    const resultFile = resultFiles[i];
+    console.log(resultFile);
+    let regexResults = [];
+    try {
+        // const file = await fsPromises.open(resultFile);
+        const text = fs.readFileSync(resultFile).toString();
+        let regexResult;
+        while ((regexResult = resultRegex.exec(text)) !== null) {
+            // const crashNumber = regexResult[1];
+            const stackTrace = regexResult[1];
+            const test = regexResult[2].split('\n');
+            let contained = false;
+            const splitStackTrace = stackTrace.split('\n');
+            let finalStackTraceArray = [];
+            for (let i = 1; i < splitStackTrace.length; i++) {
+                const line = splitStackTrace[i].replace('/local/scratch/delft-versions/syntest-javascript/', '');
+                if (line.includes('instrumented')) {
+                    const firstPart = line.split('.syntest/')[0];
+                    const secondPart = line.split('instrumented/')[1];
+                    finalStackTraceArray.push(firstPart + secondPart);
+                } else if (line.includes('.syntest')) {
+                    const firstPart = line.split('.syntest/')[0];
+                    const secondPart = line.split('tests/')[1];
+                    finalStackTraceArray.push(firstPart + '.syntest/tests/' + secondPart);
+                } else {
+                    finalStackTraceArray.push(line);
+                }
+            }
+            const finalStackTrace = finalStackTraceArray.join('\n');
+            for (let item of regexResults) {
+                if (checkSameStackTraces(item.stackTrace, finalStackTrace)) {
+                    contained = true;
+                    break;
+                }
+            }
+            if (finalStackTraceArray[1]?.includes('tests/tempTest.spec.js')) {
+                continue;
+            }
+            if (!contained) {
+                regexResults.push({
+                    resultFile,
+                    stackTrace: finalStackTrace,
+                    errors: [splitStackTrace[0]],
+                    tests: [test]
+                });
+            } else {
+                const res = regexResults.find(item => checkSameStackTraces(item.stackTrace, finalStackTrace));
+                if (!res.errors.includes(splitStackTrace[0])) {
+                    res.errors.push(splitStackTrace[0]);
+                    res.tests.push(test);
+                }
+            }
+        }
+
+        const obj = {};
+        let num = 1;
+        for (let item of regexResults) {
+            let trace = item.stackTrace;
+            let crashNum = `crash${num++}`;
+            obj[crashNum] = {
+                crashProject: item.resultFile.split('.')[0],
+                trace,
+                errors: item.errors,
+                tests: item.tests,
+            };
+        }
+
+        // console.log(regexResults);
+        console.log('open file');
+        const outfile = `${resultFile.substring(0, resultFile.length - 4)}`;
+        const outputFile = await fsPromises.open(outfile + '.json', 'w');
+        // console.log(outfile);
+        console.log('write to file');
+        await outputFile.writeFile(JSON.stringify(obj, undefined, 4));
+        await outputFile.close();
+        // const altFile = await fsPromises.open(outfile + '.txt', 'w');
+        // await altFile.writeFile(obj.toString());
+        // await altFile.close();
+    } catch (e) {
+        console.log(e);
+    }
+}
 
 const jsonFiles = [];
 for (let project of projects) {
@@ -107,7 +115,9 @@ for (let i = 0; i < jsonFiles.length; i++) {
         for (let item of Object.entries(jsonObj)) {
             const crashId = item[0].replace('crash', '');
             let crashProject = resultFile.split('.json')[0];
-            for (const error of item[1].errors) {
+            for (let i = 0; i < item[1].errors.length; i++) {
+                const error = item[1].errors[i];
+                const test = item[1].tests[i].join('\n');
                 // crashProject.pop()
                 // crashProject = crashProject.join('-');
                 const stackTrace = error + '\n' + item[1].trace;
@@ -126,13 +136,16 @@ for (let i = 0; i < jsonFiles.length; i++) {
                 //     }
                 // }
                 crashFile.crashId = `${crashProject}-${num}`;
-                fs.mkdirSync(`benchmark/crashes/bugsjs/${crashProject}/${crashProject}-${num}`, {recursive: true});
-                const outfile = `benchmark/crashes/bugsjs/${crashProject}/${crashProject}-${num}/${crashProject}-${num}`;
+                fs.mkdirSync(`benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${num}`, {recursive: true});
+                const outfile = `benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${num}/${crashProject}-${num}`;
                 let outputFile = await fsPromises.open(outfile + '.json', 'w');
                 await outputFile.writeFile(JSON.stringify(crashFile));
                 await outputFile.close();
                 outputFile = await fsPromises.open(outfile + '.log', 'w');
                 await outputFile.writeFile(stackTrace);
+                await outputFile.close();
+                outputFile = await fsPromises.open(`${outfile}.spec.js`, 'w');
+                await outputFile.writeFile(test);
                 await outputFile.close();
                 num++;
                 // execSync(`cp -r ${crashProject} benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${crashId}/`)

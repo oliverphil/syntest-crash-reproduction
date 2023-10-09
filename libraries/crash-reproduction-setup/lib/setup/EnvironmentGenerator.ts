@@ -172,8 +172,8 @@ export class EnvironmentGenerator {
           const tarFolder = `${assetDir}/${syntestType}/node/${crashName}`;
           const tarFile = `${assetDir}/${syntestType}/node/${crashName}/${tarName}`;
           execSync(`wget -O ${tarFile}` +
-              ` https://nodejs.org/download/release/v${nodeVersion}/${tarName}`);
-          execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+              ` https://nodejs.org/download/release/v${nodeVersion}/${tarName} > /dev/null 2>&1`);
+          execSync(`tar -xf ${tarFile} -C ${tarFolder} > /dev/null 2>&1`);
         } catch (e) {
           // console.log(e);
         }
