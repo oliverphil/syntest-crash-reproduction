@@ -24,9 +24,9 @@ for (const type of types) {
                 const finalIndex = i + 10 < crashes.length ? i + 10 : crashes.length - 1;
                 const currentCrashes = crashes.splice(i, finalIndex);
                 syntestFile['syntest-crash'] = currentCrashes.map(c => c.crashId);
-                writeFileSync(`.syntest-${i}.json`, JSON.stringify(syntestFile, undefined, 4));
+                writeFileSync(`.syntest-${currentCrashes[0].crashId}.json`, JSON.stringify(syntestFile, undefined, 4));
                 // execSync(`sed -i "s/^.*syntest-crash.*$/  \\"syntest-crash\\": \\"${crash.crashId}\\",/" .syntest.json`);
-                console.log(execSync(`./run_experiments_on_grid.sh ${i}`).toString());
+                console.log(execSync(`./run_experiments_on_grid.sh ${currentCrashes[0].crashId}`).toString());
             }
         } catch (e) {
             console.log(e);
