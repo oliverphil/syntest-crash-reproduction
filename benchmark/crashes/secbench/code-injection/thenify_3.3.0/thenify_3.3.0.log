@@ -1,4 +1,0 @@
-ReferenceError: thrownewError is not defined
-        at fake (eval at thenify (thenify/index.js:17:10), <anonymous>:1:18)
-        at eval (eval at thenify (thenify/index.js:17:10), <anonymous>:1:36)
-        at a (thenify/index.js:17:10)

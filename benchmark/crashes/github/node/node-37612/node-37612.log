@@ -1,9 +1,0 @@
-Error [ERR_INTERNAL_ASSERTION]: zlib binding closed
-    at assert (internal/assert.js:14:11)
-    at InflateRaw.ZlibBase.reset (zlib.js:318:5)
-    at ...\ws_test\node\node_modules\ws\lib\permessage-deflate.js:383:23
-    at errorBuffer (internal/streams/writable.js:486:5)
-    at afterWrite (internal/streams/writable.js:470:5)
-    at onwrite (internal/streams/writable.js:446:7)
-    at InflateRaw.afterTransform (internal/streams/transform.js:103:3)
-    at Zlib.processCallback (zlib.js:546:10)

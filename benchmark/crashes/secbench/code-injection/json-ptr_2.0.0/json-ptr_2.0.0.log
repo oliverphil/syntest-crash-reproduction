@@ -1,5 +1,0 @@
-Error:
-        at JsonPointer.eval (eval at compilePointerDereference (json-ptr/src/util.ts:155:10), <anonymous>:4:64)
-        at JsonPointer.get (json-ptr/src/pointer.ts:469:22)
-        at Function.get (json-ptr/src/pointer.ts:287:37)
-

@@ -1,3 +1,0 @@
-AssertionError: expected [Function] to throw error matching /Parsing error: Unexpected token ;/ but got 'Cannot convert undefined or null to object'
-    at getOutput.then.output (tests/bin/eslint.js:273:24)
-    at process._tickCallback (internal/process/next_tick.js:109:7)

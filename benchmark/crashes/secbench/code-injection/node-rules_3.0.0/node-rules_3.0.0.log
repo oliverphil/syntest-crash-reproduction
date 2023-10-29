@@ -1,2 +1,0 @@
-SyntaxError: Unexpected token 'throw'
-        at RuleEngine.fromJSON (node-rules/lib/node-rules.js:245:59)

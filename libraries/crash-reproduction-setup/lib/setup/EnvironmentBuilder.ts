@@ -13,17 +13,23 @@ export class EnvironmentBuilder {
    */
   public static createCrashEnvironment(crash: Crash, syntestType: string): boolean {
     // console.log(crash);
-    const assetDir = './benchmark/crashes';
+    let assetDir = './benchmark/crashes';
     let crashFolder = `${assetDir}/github/${crash.project}/${crash.crashId}`;
-    if (syntestType === 'seeded') {
+    if (syntestType === 'github') {
+      assetDir = `${assetDir}/github/`;
+    } else if (syntestType === 'seeded') {
       crashFolder = `${assetDir}/seeded/${crash.project}/${crash.crashId}`;
+      assetDir = `${assetDir}/seeded/`;
     } else if (syntestType === 'bugsjs') {
       crashFolder = `${assetDir}/bugsjs/${crash.project}/${crash.crashId}`;
+      assetDir = `${assetDir}/bugsjs/`;
     } else if (syntestType === 'syntest-collected') {
       crashFolder = `${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`;
+      assetDir = `${assetDir}/syntest-collected/`;
       execSync(`cp -r benchmark/resources/${crash.project} ${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`);
     } else if (syntestType === 'secbench') {
       crashFolder = `${assetDir}/secbench/${crash.project}/${crash.crashId}`;
+      assetDir = `${assetDir}/secbench/`;
     }
     const stackTraceFiles: string[] = [];
     for (const frame of crash.stackTrace.trace) {
@@ -63,12 +69,11 @@ export class EnvironmentBuilder {
     }
     console.log(stdout);
     console.error(stderr);
-    this.handleSetupOptions(crash, crashFolder);
+    this.handleSetupOptions(crash, crashFolder, assetDir);
     return error;
   }
 
-  private static handleSetupOptions(crash: Crash, crashFolder: string) {
-    const assetDir = './benchmark/crashes';
+  private static handleSetupOptions(crash: Crash, crashFolder: string, assetDir: string) {
     const projectName = crash.project;
     const crashName = crash.crashId;
     if (!crash.setup) {

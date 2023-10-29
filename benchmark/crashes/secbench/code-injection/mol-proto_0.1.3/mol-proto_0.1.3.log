@@ -1,4 +1,0 @@
-Error:
-        at eval (eval at makeFunction (mol-proto/lib/proto_function.js:70:5), <anonymous>:2:9)
-        at String.makeFunction (mol-proto/lib/proto_function.js:70:5)
-        at Function.makeFunction (mol-proto/lib/utils.js:22:28)

@@ -1,9 +1,0 @@
-Error [ERR_INTERNAL_ASSERTION]: This is caused by either a bug in Node.js or incorrect usage of Node.js internals.
-    at assert (internal/assert.js:14:11)
-    at RoundRobinHandle.add (internal/cluster/round_robin_handle.js:46:3)
-    at queryServer (internal/cluster/master.js:309:10)
-    at Worker.onmessage (internal/cluster/master.js:249:5)
-    at ChildProcess.onInternalMessage (internal/cluster/utils.js:47:8)
-    at ChildProcess.emit (events.js:326:22)
-    at emit (internal/child_process.js:877:12)
-    at processTicksAndRejections (internal/process/task_queues.js:85:21)

@@ -1,8 +1,0 @@
-{
-  "issueNumber": 367,
-  "info": "Is there a way to redirect all requests to index.html to support client side routing?",
-  "url": "https://github.com/http-party/http-server/issues/367",
-  "version": "0.9.0",
-  "dependencies": {},
-  "requireCrashDependency": true
-}

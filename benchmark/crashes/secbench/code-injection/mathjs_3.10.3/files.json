@@ -1,6 +1,0 @@
-[
-    "mathjs/lib/expression/node/SymbolNode.js",
-    "mathjs/lib/expression/node/Node.js",
-    "mathjs/lib/expression/function/eval.js",
-    "typed-function/typed-function.js"
-]

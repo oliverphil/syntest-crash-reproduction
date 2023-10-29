@@ -1,6 +1,0 @@
-TypeError: Cannot read property 'path' of undefined
-    at DeploymentManager.uploadOnSave (/packages/Atom-SFTP-sync/lib/DeploymentManager.js:217:39)
-    at CommandRegistry.handleCommandEvent (/app/share/atom/resources/app/static/<embedded>:11:352326)
-    at KeymapManager.dispatchCommandEvent (/app/share/atom/resources/app/static/<embedded>:11:1227728)
-    at KeymapManager.handleKeyboardEvent (/app/share/atom/resources/app/static/<embedded>:11:1223862)
-    at WindowEventHandler.handleDocumentKeyEvent (/app/share/atom/resources/app/static/<embedded>:11:286651)

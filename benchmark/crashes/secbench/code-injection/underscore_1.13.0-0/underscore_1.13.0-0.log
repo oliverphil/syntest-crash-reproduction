@@ -1,3 +1,0 @@
-SyntaxError: Unexpected token 'throw'
-        at new Function (<anonymous>)
-        at Function.template (underscore/modules/template.js:71:14)

@@ -1,9 +1,0 @@
-{
-  "issueNumber": 13416,
-  "info": "'ReferenceError: BigInt is not defined' due to the BigInt in v5.35.1 or newer version",
-  "url": "https://github.com/webpack/webpack/issues/13419",
-  "version": "5.35.1",
-  "nodeVersion": "12.15.0",
-  "dependencies": {},
-  "requireCrashDependency": true
-}

@@ -1,3 +1,0 @@
-AssertionError: A fatal parsing error occurred: Parsing error: Parenthesized pattern
-    at getOutput.then.output (tests/bin/eslint.js:273:24)
-    at process._tickCallback (internal/process/next_tick.js:109:7)

@@ -1,7 +1,0 @@
-TypeError: path.replace is not a function
-    at filter (node_modules/watchpack/lib/watchpack.js:106:33)
-    at Watchpack.watch (node_modules/watchpack/lib/watchpack.js:122:9)
-    at NodeWatchFileSystem.watch (node_modules/webpack/lib/node/NodeWatchFileSystem.js:84:16)
-    at Watching.watch (node_modules/webpack/lib/Watching.js:254:48)
-    at node_modules/webpack/lib/Watching.js:231:13
-    at processTicksAndRejections (process/task_queues:76:11)

@@ -986,21 +986,21 @@ export class CrashLauncher extends Launcher {
 
     // for (const crash of crashes) {
       try {
-        this.registerProperties();
-        (<TypedEventEmitter<Events>>process).emit("initializeStart");
-        await this.initialize();
-        (<TypedEventEmitter<Events>>process).emit("initializeComplete");
-        (<TypedEventEmitter<Events>>process).emit("preprocessStart");
-        await this.preprocess();
-        (<TypedEventEmitter<Events>>process).emit("preprocessComplete");
-        (<TypedEventEmitter<Events>>process).emit("processStart");
-        await this.process();
-        (<TypedEventEmitter<Events>>process).emit("processComplete");
-        (<TypedEventEmitter<Events>>process).emit("postprocessStart");
-        await this.postprocess();
-        (<TypedEventEmitter<Events>>process).emit("postprocessComplete");
-        (<TypedEventEmitter<Events>>process).emit("exitting");
-        await this.exit();
+        // this.registerProperties();
+        // (<TypedEventEmitter<Events>>process).emit("initializeStart");
+        // await this.initialize();
+        // (<TypedEventEmitter<Events>>process).emit("initializeComplete");
+        // (<TypedEventEmitter<Events>>process).emit("preprocessStart");
+        // await this.preprocess();
+        // (<TypedEventEmitter<Events>>process).emit("preprocessComplete");
+        // (<TypedEventEmitter<Events>>process).emit("processStart");
+        // await this.process();
+        // (<TypedEventEmitter<Events>>process).emit("processComplete");
+        // (<TypedEventEmitter<Events>>process).emit("postprocessStart");
+        // await this.postprocess();
+        // (<TypedEventEmitter<Events>>process).emit("postprocessComplete");
+        // (<TypedEventEmitter<Events>>process).emit("exitting");
+        // await this.exit();
       } catch (error) {
         console.log(error);
         // console.trace(error);

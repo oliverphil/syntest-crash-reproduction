@@ -1,7 +1,0 @@
-Error:
-        at eval (eval at deleteItemValue (mongoosemask/index.js:181:5), <anonymous>:1:25)
-        at deleteItemValue (mongoosemask/index.js:181:5)
-        at mongoosemask/index.js:119:13
-        at Function.forEach (lodash/dist/lodash.js:2590:15)
-        at masked (mongoosemask/index.js:113:7)
-        at Function.mask (mongoosemask/index.js:71:12)

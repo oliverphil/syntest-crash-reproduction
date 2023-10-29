@@ -1,4 +1,0 @@
-SyntaxError: Unexpected token 'throw'
-        at Object._analyzeRequires (kmc/lib/index.js:164:52)
-        at Object.analyze (kmc/lib/index.js:361:14)
-        at Object.analyze (kmc/lib/index.js:456:31)

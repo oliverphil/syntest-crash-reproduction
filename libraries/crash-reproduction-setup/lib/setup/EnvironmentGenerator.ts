@@ -141,7 +141,7 @@ export class EnvironmentGenerator {
    */
   loadAssets(project: string | undefined, syntestType: string | undefined, syntestCrash: string[] | undefined): Crash[] {
     console.log('Loading Crashes... ');
-    const assetDir = './benchmark/crashes';
+    const assetDir = './benchmark/crashes/github';
     const crashInfo = this.handleSyntestType(project, syntestType);
 
     const crashes = crashInfo.filter(crash => !['atom-22772', 'webpack-9114'].includes(crash[1])).map((value) => {

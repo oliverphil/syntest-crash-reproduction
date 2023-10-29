@@ -84,7 +84,7 @@ export function getTestCommand(
         }
       }
       crashes = crashes.filter(crash => !crashesToRemove.includes(crash));
-      prng.initializePseudoRandomNumberGenerator(args.randomSeed);
+      // prng.initializePseudoRandomNumberGenerator(args.randomSeed);
       for (const crash of crashes) {
         // moduleManager.reset();
         global.__coverage__ = {};

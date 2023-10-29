@@ -1,8 +1,0 @@
-{
-  "issueNumber": 37731,
-  "info": "stream.pipeline does not accept 'Buffer' as a valid first argument, even though it is an Iterable",
-  "url": "https://github.com/nodejs/node/issues/37731",
-  "version": "15.11.0",
-  "node-version": "15.11.0",
-  "dependencies": {}
-}
