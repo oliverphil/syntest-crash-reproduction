@@ -175,7 +175,7 @@ export class EnvironmentGenerator {
               ` https://nodejs.org/download/release/v${nodeVersion}/${tarName} > /dev/null 2>&1`);
           execSync(`tar -xf ${tarFile} -C ${tarFolder} > /dev/null 2>&1`);
         } catch (e) {
-          // console.log(e);
+          console.log(e);
         }
       }
       return crash;

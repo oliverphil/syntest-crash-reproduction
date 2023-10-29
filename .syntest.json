@@ -60,8 +60,11 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "code-injection",
+    "syntest-project": "atom",
     "syntest-crashes": "false",
-    "syntest-type": "secbench",
-    "syntest-crash": ""
+    "syntest-type": "github",
+    "syntest-crash": [
+        "atom-22996",
+        "atom-23020"
+    ]
 }

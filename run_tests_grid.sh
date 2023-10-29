@@ -63,6 +63,9 @@ ls -ltra /local/tmp | tail
 #
 echo == WHATS IN LOCAL TMP oliverphil JOB_ID AT THE START==
 ls -la
+
+echo $1
+echo $2
 #
 # Copy the input file to the local directory
 #
@@ -95,7 +98,7 @@ npm run build
 cd ../syntest-crash-reproduction
 echo $1
 git checkout $1
-cp /local/scratch/syntest-crash-reproduction/.syntest.json .syntest.json
+cp /vol/grid-solar/sgeusers/oliverphil/config/.syntest-"$2".json .syntest.json
 tail .syntest.json
 npm i
 ls
@@ -107,7 +110,7 @@ node --version
 npm run build
 # npm run run > output.log 2> stderr.log
 
-cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
+#cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
 # cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/**/rootContextExtractedTypes*  .syntest/
 
 #project_array=( 'atom' 'eslint' 'express' 'http-server' 'node' 'standard' 'webpack' );
@@ -135,7 +138,7 @@ echo ==AND NOW, HAVING DONE SOMTHING USEFUL AND CREATED SOME OUTPUT==
 ls -la
 
 #rsync -ar .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes
-cp -r .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes/
+#cp -r .syntest /vol/grid-solar/sgeusers/oliverphil/extractedTypes/
 #
 # Now we move the output to a place to pick it up from later
 #  noting that we need to distinguish between the TASKS

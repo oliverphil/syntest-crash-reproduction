@@ -26,7 +26,7 @@ export class EnvironmentBuilder {
     } else if (syntestType === 'syntest-collected') {
       crashFolder = `${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`;
       assetDir = `${assetDir}/syntest-collected/`;
-      execSync(`cp -r benchmark/resources/${crash.project} ${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`);
+      execSync(`cp -r benchmark/resources/${crash.project} ${assetDir}/${crash.project}/${crash.crashId}`);
     } else if (syntestType === 'secbench') {
       crashFolder = `${assetDir}/secbench/${crash.project}/${crash.crashId}`;
       assetDir = `${assetDir}/secbench/`;
@@ -94,11 +94,15 @@ export class EnvironmentBuilder {
     const tarName = `${crash.project}-${crash.version}.tar.gz`;
     const tarFolder = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}`;
     const tarFile = `${assetDir}/${crash.seeded ? `seeded/${projectName}` : projectName}/${crashName}/${tarName}`;
-    if (crash.setup.download) {
-      execSync(`wget -O ${tarFile} ` + crash.setup.download.url);
-      if (crash.setup.download.unpack === 'tar.gz') {
-        execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+    try {
+      if (crash.setup.download) {
+        execSync(`wget -O ${tarFile} ` + crash.setup.download.url);
+        if (crash.setup.download.unpack === 'tar.gz') {
+          execSync(`tar -xf ${tarFile} -C ${tarFolder}`);
+        }
       }
+    } catch {
+      //
     }
   }
 
