@@ -1,0 +1,9 @@
+{
+  "issueNumber": 1494,
+  "info": "v14.3.2 broke support with Node.js versions <8.10.0",
+  "url": "https://github.com/standard/standard/issues/1494",
+  "version": "14.3.2",
+  "nodeVersion": "8.9.4",
+  "dependencies": {},
+  "requireCrashDependency": true
+}

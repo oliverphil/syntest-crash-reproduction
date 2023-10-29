@@ -1,0 +1,13 @@
+Error: 
+        at eval (eval at template (access-policy/lib/encode.js:6:10), <anonymous>:1:12)
+        at template (access-policy/lib/encode.js:6:10)
+        at Object.encode (access-policy/lib/encode.js:18:16)
+        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/access-policy_3.1.0/access-policy.test.js:12:7)
+        at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+        at jest-jasmine2/build/queueRunner.js:45:12
+        at new Promise (<anonymous>)
+        at mapper (jest-jasmine2/build/queueRunner.js:28:19)
+        at jest-jasmine2/build/queueRunner.js:75:41
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+      at Object.<anonymous> (code-injection/access-policy_3.1.0/access-policy.test.js:15:13)

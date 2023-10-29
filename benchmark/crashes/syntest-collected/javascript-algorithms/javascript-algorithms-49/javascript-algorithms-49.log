@@ -1,0 +1,15 @@
+TypeError: Cannot read properties of undefined
+    at recWalk (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4810:108)
+    at recWalk (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4819:7)
+    at recWalk (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4819:7)
+    at walk (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4825:3)
+    at _callee$ (.syntest/tests/tempTest.spec.js:11:26)
+    at tryCatch (.syntest/tests/tempTest.spec.js:4:1)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:4:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:4:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:4:107)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

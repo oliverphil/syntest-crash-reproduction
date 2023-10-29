@@ -1,0 +1,1 @@
+{"issueNumber":"moment-21","info":"TypeError: Cannot create property '_isValid' on boolean 'false'","dependencies":{},"requireCrashDependency":true,"crashId":"moment-21"}

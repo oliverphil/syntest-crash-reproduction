@@ -1,0 +1,11 @@
+TypeError: Error while loading rule '@nrwl/nx/enforce-module-boundaries': Cannot read property 'nodes' of null
+    at create (node_modules\@nrwl\eslint-plugin-nx\src\rules\enforce-module-boundaries.js:76:106)
+    at Object.create (node_modules\@typescript-eslint\experimental-utils\dist\eslint-utils\RuleCreator.js:13:24)
+    at createRuleListeners (node_modules\eslint\lib\linter\linter.js:761:21)
+    at node_modules\eslint\lib\linter\linter.js:931:31
+    at Array.forEach (<anonymous>)
+    at runRules (node_modules\eslint\lib\linter\linter.js:876:34)
+    at Linter._verifyWithoutProcessors (node_modules\eslint\lib\linter\linter.js:1175:31)
+    at node_modules\eslint\lib\linter\linter.js:1299:29
+    at Array.map (<anonymous>)
+    at Linter._verifyWithProcessor (node_modules\eslint\lib\linter\linter.js:1294:65)

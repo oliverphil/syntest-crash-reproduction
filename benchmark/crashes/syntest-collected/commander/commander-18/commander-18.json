@@ -1,0 +1,1 @@
+{"issueNumber":"commander-18","info":"TypeError: flags.split is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"commander-18"}

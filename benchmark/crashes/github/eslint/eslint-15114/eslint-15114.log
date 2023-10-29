@@ -1,0 +1,11 @@
+TypeError: Cannot read properties of null (reading 'value')
+    at checkSpacingBefore (node_modules\eslint\lib\rules\template-curly-spacing.js:52:24)
+    at TemplateElement (node_modules\eslint\lib\rules\template-curly-spacing.js:136:17)
+    at node_modules\eslint\lib\linter\safe-emitter.js:45:58
+    at Array.forEach (<anonymous>)
+    at Object.emit (node_modules\eslint\lib\linter\safe-emitter.js:45:38)
+    at NodeEventGenerator.applySelector (node_modules\eslint\lib\linter\node-event-generator.js:293:26)
+    at NodeEventGenerator.applySelectors (node_modules\eslint\lib\linter\node-event-generator.js:322:22)
+    at NodeEventGenerator.enterNode (node_modules\eslint\lib\linter\node-event-generator.js:336:14)
+    at CodePathAnalyzer.enterNode (node_modules\eslint\lib\linter\code-path-analysis\code-path-analyzer.js:711:23)
+    at node_modules\eslint\lib\linter\linter.js:960:32

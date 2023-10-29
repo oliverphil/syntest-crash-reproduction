@@ -1,0 +1,12 @@
+TypeError: Cannot read properties of undefined
+    at Object.set (express/lib/application.js:6422:25)
+    at Object.enabled (express/lib/application.js:6516:23)
+    at Object.lazyrouter (express/lib/application.js:6060:27)
+    at Object.route (express/lib/application.js:6270:8)
+    at call (.syntest/tests/tempTest.spec.js:19:26)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

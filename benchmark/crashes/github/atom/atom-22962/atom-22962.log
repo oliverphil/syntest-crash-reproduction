@@ -1,0 +1,6 @@
+Error: ENOENT: no such file or directory, lstat '/ Tutoring.md'
+    at Proxy.realpathSync (fs.js:1512:7)
+    at Proxy.fs.realpathSync (electron/js2c/asar.js:300:40)
+    at TreeView.moveEntry (/private/var/folders/48/r6d27f4n1rq1bb4kl778r0p8j30sm8/T/AppTranslocation/8DC719B4-5278-4C12-A8D4-0B3EA9F2434E/d/Atom.app/Contents/Resources/app/static/<embedded>:14:969249)
+    at TreeView.onDrop (/private/var/folders/48/r6d27f4n1rq1bb4kl778r0p8j30sm8/T/AppTranslocation/8DC719B4-5278-4C12-A8D4-0B3EA9F2434E/d/Atom.app/Contents/Resources/app/static/<embedded>:14:976178)
+    at HTMLDivElement.<anonymous> (/private/var/folders/48/r6d27f4n1rq1bb4kl778r0p8j30sm8/T/AppTranslocation/8DC719B4-5278-4C12-A8D4-0B3EA9F2434E/d/Atom.app/Contents/Resources/app/static/<embedded>:14:949809)

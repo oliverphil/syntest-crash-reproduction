@@ -1,0 +1,12 @@
+{
+  "issueNumber": 13290,
+  "info": "WP5: Unexpected lazy element in stream",
+  "url": "https://github.com/webpack/webpack/issues/13290",
+  "version": "5.36.2",
+  "nodeVersion": "16.0.0",
+  "dependencies": {
+    "tapable": "2.2.1",
+    "loader-runner": "4.2.0"
+  },
+  "requireCrashDependency": true
+}

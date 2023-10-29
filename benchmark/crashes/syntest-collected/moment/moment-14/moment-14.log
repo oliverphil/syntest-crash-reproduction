@@ -1,0 +1,13 @@
+TypeError: Cannot read properties of null
+    at cloneWithOffset (moment/src/lib/units/offset.js:75:15)
+    at calendar (moment/src/lib/moment/calendar.js:1268:53)
+    at call (.syntest/tests/tempTest.spec.js:12:26)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

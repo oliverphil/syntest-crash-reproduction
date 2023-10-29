@@ -1,0 +1,10 @@
+TypeError: path.replace is not a function
+    at Mime.lookup (express/node_modules/mime/mime.js:70:18)
+    at Object.normalizeType (express/lib/utils.js:3342:17)
+    at exports.normalizeTypes (express/lib/utils.js:3370:22)
+    at call (.syntest/tests/tempTest.spec.js:32:3)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)

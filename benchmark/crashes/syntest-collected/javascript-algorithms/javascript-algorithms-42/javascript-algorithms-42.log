@@ -1,0 +1,11 @@
+TypeError: Cannot create property 'compareCallback' on number '-449'
+    at Function.initSortingCallbacks (javascript-algorithms/src/algorithms/sorting/Sort.js:25:30)
+    at new construct (javascript-algorithms/src/algorithms/sorting/Sort.js:13:27)
+    at CountingSort.apply (javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1011:28)
+    at new arrayElement3 (javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1012:34)
+    at _callee$ (.syntest/tests/tempTest.spec.js:17:9)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.Promise [as next] (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:1:1)

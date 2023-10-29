@@ -1,0 +1,14 @@
+TypeError: candidate.slice is not a function
+    at forEach (commanderjs/lib/suggestSimilar.js:2387:67)
+    at Array.forEach (<anonymous>)
+    at _context (commanderjs/lib/suggestSimilar.js:2383:14)
+    at call (.syntest/tests/tempTest.spec.js:18:26)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

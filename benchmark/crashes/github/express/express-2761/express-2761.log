@@ -1,0 +1,8 @@
+TypeError: dest.end is not a function
+    at Stream.onend (_stream_readable.js:490:10)
+    at Stream.g (events.js:260:16)
+    at emitNone (events.js:72:20)
+    at Stream.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:893:12)
+    at doNTCallback2 (node.js:429:9)
+    at process._tickCallback (node.js:343:17)

@@ -1,0 +1,11 @@
+{
+  "issueNumber": 14829,
+  "info": "Error while loading rule '@nrwl/nx/enforce-module-boundaries'",
+  "url": "https://github.com/eslint/eslint/issues/14829",
+  "version": "7.22.0",
+  "nodeVersion": "14.7.0",
+  "dependencies": {
+
+  },
+  "requireCrashDependency": true
+}

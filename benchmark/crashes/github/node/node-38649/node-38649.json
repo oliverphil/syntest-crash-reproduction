@@ -1,0 +1,8 @@
+{
+  "issueNumber": 38649,
+  "info": "Error while trying to spawn a child process",
+  "url": "https://github.com/nodejs/node/issues/38649",
+  "version": "12.20.0",
+  "node-version": "12.20.0",
+  "dependencies": {}
+}

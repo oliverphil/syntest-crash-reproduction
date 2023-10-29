@@ -1,0 +1,11 @@
+SyntaxError: Error while loading rule '@typescript-eslint/no-magic-numbers': Cannot convert 0. to a BigInt
+    at BigInt (<anonymous>)
+    at normalizeIgnoreValue (node_modules\eslint\lib\rules\no-magic-numbers.js:24:16)
+    at Array.map (<anonymous>)
+    at Object.create (node_modules\eslint\lib\rules\no-magic-numbers.js:83:44)
+    at create (node_modules\@typescript-eslint\eslint-plugin\dist\rules\no-magic-numbers.js:64:32)
+    at Object.create (node_modules\@typescript-eslint\utils\dist\eslint-utils\RuleCreator.js:42:20)
+    at createRuleListeners (node_modules\eslint\lib\linter\linter.js:915:21)
+    at node_modules\eslint\lib\linter\linter.js:1097:31
+    at Array.forEach (<anonymous>)
+    at runRules (node_modules\eslint\lib\linter\linter.js:1034:34)

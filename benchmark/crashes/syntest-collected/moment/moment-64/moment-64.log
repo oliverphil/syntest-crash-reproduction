@@ -1,0 +1,15 @@
+TypeError: Cannot convert undefined or null to object
+    at hasOwnProperty (<anonymous>)
+    at hasOwnProp (moment/src/lib/utils/has-own-prop.js:2:44)
+    at extend (moment/src/lib/utils/extend.js:10:19)
+    at configFromStringAndArray (moment/src/lib/create/from-string-and-array.js:1239:9)
+    at call (.syntest/tests/tempTest.spec.js:22:54)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

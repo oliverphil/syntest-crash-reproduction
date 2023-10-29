@@ -1,0 +1,13 @@
+ReferenceError: thrownewError is not defined
+        at fake (eval at thenify (thenify/index.js:17:10), <anonymous>:1:18)
+        at eval (eval at thenify (thenify/index.js:17:10), <anonymous>:1:36)
+        at a (thenify/index.js:17:10)
+        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/thenify_3.3.0/thenify.test.js:15:5)
+        at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+        at jest-jasmine2/build/queueRunner.js:45:12
+        at new Promise (<anonymous>)
+        at mapper (jest-jasmine2/build/queueRunner.js:28:19)
+        at jest-jasmine2/build/queueRunner.js:75:41
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+      at Object.<anonymous> (code-injection/thenify_3.3.0/thenify.test.js:18:13)

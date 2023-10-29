@@ -1,0 +1,101 @@
+Error: Line 1: Unexpected token throw
+        at throwError (esprima/esprima.js:1156:21)
+        at throwUnexpected (esprima/esprima.js:1209:13)
+        at parsePrimaryExpression (esprima/esprima.js:1567:16)
+        at esprima/esprima.js:3609:38
+        at trackLeftHandSideExpressionAllowCall (esprima/esprima.js:3504:61)
+        at parsePostfixExpression (esprima/esprima.js:1703:20)
+        at esprima/esprima.js:3609:38
+        at parseUnaryExpression (esprima/esprima.js:1784:16)
+        at esprima/esprima.js:3609:38
+        at parseMultiplicativeExpression (esprima/esprima.js:1790:20)
+        at esprima/esprima.js:3609:38
+        at parseAdditiveExpression (esprima/esprima.js:1807:20)
+        at esprima/esprima.js:3609:38
+        at parseShiftExpression (esprima/esprima.js:1824:20)
+        at esprima/esprima.js:3609:38
+        at parseRelationalExpression (esprima/esprima.js:1845:16)
+        at esprima/esprima.js:3609:38
+        at parseEqualityExpression (esprima/esprima.js:1863:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseANDExpression (esprima/esprima.js:1880:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseXORExpression (esprima/esprima.js:1896:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseORExpression (esprima/esprima.js:1912:20)
+        at esprima/esprima.js:3609:38
+        at parseLogicalANDExpression (esprima/esprima.js:1930:20)
+        at esprima/esprima.js:3609:38
+        at parseLogicalORExpression (esprima/esprima.js:1946:20)
+        at esprima/esprima.js:3609:38
+        at parseConditionalExpression (esprima/esprima.js:1966:16)
+        at esprima/esprima.js:3609:38
+        at parseAssignmentExpression (esprima/esprima.js:1993:16)
+        at esprima/esprima.js:3609:38
+        at parseObjectProperty (esprima/esprima.js:1425:28)
+        at esprima/esprima.js:3609:38
+        at parseObjectInitialiser (esprima/esprima.js:1449:24)
+        at parsePrimaryExpression (esprima/esprima.js:1556:20)
+        at esprima/esprima.js:3609:38
+        at trackLeftHandSideExpressionAllowCall (esprima/esprima.js:3504:61)
+        at parsePostfixExpression (esprima/esprima.js:1703:20)
+        at esprima/esprima.js:3609:38
+        at parseUnaryExpression (esprima/esprima.js:1784:16)
+        at esprima/esprima.js:3609:38
+        at parseMultiplicativeExpression (esprima/esprima.js:1790:20)
+        at esprima/esprima.js:3609:38
+        at parseAdditiveExpression (esprima/esprima.js:1807:20)
+        at esprima/esprima.js:3609:38
+        at parseShiftExpression (esprima/esprima.js:1824:20)
+        at esprima/esprima.js:3609:38
+        at parseRelationalExpression (esprima/esprima.js:1845:16)
+        at esprima/esprima.js:3609:38
+        at parseEqualityExpression (esprima/esprima.js:1863:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseANDExpression (esprima/esprima.js:1880:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseXORExpression (esprima/esprima.js:1896:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseORExpression (esprima/esprima.js:1912:20)
+        at esprima/esprima.js:3609:38
+        at parseLogicalANDExpression (esprima/esprima.js:1930:20)
+        at esprima/esprima.js:3609:38
+        at parseLogicalORExpression (esprima/esprima.js:1946:20)
+        at esprima/esprima.js:3609:38
+        at parseConditionalExpression (esprima/esprima.js:1966:16)
+        at esprima/esprima.js:3609:38
+        at parseAssignmentExpression (esprima/esprima.js:1993:16)
+        at esprima/esprima.js:3609:38
+        at parseArguments (esprima/esprima.js:1579:27)
+        at trackLeftHandSideExpressionAllowCall (esprima/esprima.js:3511:34)
+        at parsePostfixExpression (esprima/esprima.js:1703:20)
+        at esprima/esprima.js:3609:38
+        at parseUnaryExpression (esprima/esprima.js:1737:20)
+        at esprima/esprima.js:3609:38
+        at parseMultiplicativeExpression (esprima/esprima.js:1790:20)
+        at esprima/esprima.js:3609:38
+        at parseAdditiveExpression (esprima/esprima.js:1807:20)
+        at esprima/esprima.js:3609:38
+        at parseShiftExpression (esprima/esprima.js:1824:20)
+        at esprima/esprima.js:3609:38
+        at parseRelationalExpression (esprima/esprima.js:1845:16)
+        at esprima/esprima.js:3609:38
+        at parseEqualityExpression (esprima/esprima.js:1863:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseANDExpression (esprima/esprima.js:1880:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseXORExpression (esprima/esprima.js:1896:20)
+        at esprima/esprima.js:3609:38
+        at parseBitwiseORExpression (esprima/esprima.js:1912:20)
+        at esprima/esprima.js:3609:38
+        at parseLogicalANDExpression (esprima/esprima.js:1930:20)
+        at esprima/esprima.js:3609:38
+        at parseLogicalORExpression (esprima/esprima.js:1946:20)
+        at esprima/esprima.js:3609:38
+        at parseConditionalExpression (esprima/esprima.js:1966:16)
+        at esprima/esprima.js:3609:38
+        at parseAssignmentExpression (esprima/esprima.js:1993:16)
+        at esprima/esprima.js:3609:38
+        at parseExpression (esprima/esprima.js:2020:20)
+        at esprima/esprima.js:3609:38
+        at parseStatement (esprima/esprima.js:2783:16) {

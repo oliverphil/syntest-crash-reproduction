@@ -1,0 +1,10 @@
+{
+  "issueNumber": 2761,
+  "info": "Support for module https2?",
+  "url": "https://github.com/expressjs/express/issues/2761",
+  "version": "5.0.0-alpha.2",
+  "dependencies": {
+    "http2": "3.2.0"
+  },
+  "requireCrashDependency": true
+}

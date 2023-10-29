@@ -1,0 +1,13 @@
+TypeError: object is not iterable
+    at Help.visibleArguments (commanderjs/lib/help.js:5600:66)
+    at Help.longestArgumentTermLength (commanderjs/lib/help.js:5733:19)
+    at call (.syntest/tests/tempTest.spec.js:19:64)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

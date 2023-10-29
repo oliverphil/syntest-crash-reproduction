@@ -1,0 +1,1 @@
+{"issueNumber":"express-14","info":"TypeError: Header name must be a valid HTTP token [\"{ toLowerCase: [Function: toLowerCase] }\"]","dependencies":{},"requireCrashDependency":true,"crashId":"express-14"}

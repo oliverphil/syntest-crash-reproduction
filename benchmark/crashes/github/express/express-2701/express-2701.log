@@ -1,0 +1,11 @@
+TypeError: Property 'params' of object #<IncomingMessage> is not a function
+    at express/fail.js:12:9
+    at Layer.handle [as handle_request] (express/lib/router/layer.js:95:5)
+    at next (express/lib/router/route.js:131:13)
+    at Route.dispatch (express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (express/lib/router/layer.js:95:5)
+    at express/lib/router/index.js:277:22
+    at param (express/lib/router/index.js:349:14)
+    at param (express/lib/router/index.js:365:14)
+    at Function.process_params (express/lib/router/index.js:410:3)
+    at next (express/lib/router/index.js:271:10)

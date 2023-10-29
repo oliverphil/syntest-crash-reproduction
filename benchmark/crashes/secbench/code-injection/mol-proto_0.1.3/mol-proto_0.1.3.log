@@ -1,0 +1,13 @@
+Error: 
+        at eval (eval at makeFunction (mol-proto/lib/proto_function.js:70:5), <anonymous>:2:9)
+        at String.makeFunction (mol-proto/lib/proto_function.js:70:5)
+        at Function.makeFunction (mol-proto/lib/utils.js:22:28)
+        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/mol-proto_0.1.3/mol-proto.test.js:9:8)
+        at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+        at jest-jasmine2/build/queueRunner.js:45:12
+        at new Promise (<anonymous>)
+        at mapper (jest-jasmine2/build/queueRunner.js:28:19)
+        at jest-jasmine2/build/queueRunner.js:75:41
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+      at Object.<anonymous> (code-injection/mol-proto_0.1.3/mol-proto.test.js:16:13)

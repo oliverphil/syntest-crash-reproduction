@@ -1,0 +1,1 @@
+{"issueNumber":"moment-22","info":"TypeError: Cannot create property '_isValid' on string '../utils/map'","dependencies":{},"requireCrashDependency":true,"crashId":"moment-22"}

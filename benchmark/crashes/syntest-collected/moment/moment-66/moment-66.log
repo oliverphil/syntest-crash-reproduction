@@ -1,0 +1,14 @@
+TypeError: Cannot read properties of null
+    at expandFormat (moment/src/lib/format/format.js:94:25)
+    at configFromStringAndFormat (moment/src/lib/create/from-string-and-format.js:2128:24)
+    at configFromStringAndArray (moment/src/lib/create/from-string-and-array.js:1148:30)
+    at call (.syntest/tests/tempTest.spec.js:23:55)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:476:21)

@@ -1,0 +1,13 @@
+Error: 
+        at Proxy.eval (eval at <anonymous> (eval at createScopedEvaluatorFactory (realms-shim/src/evaluators.js:60:26)), <anonymous>:9:17)
+        at Object.eval (eval at createScopedEvaluatorFactory (realms-shim/src/evaluators.js:60:26), <anonymous>:8:16)
+        at eval (realms-shim/src/evaluators.js:129:18)
+        at safeEvalWhichTakesEndowments (realms-shim/src/evaluators.js:186:5)
+        at realmEvaluate (realms-shim/src/realm.js:147:10)
+        at writable (realms-shim/src/realmFacade.js:55:19)
+        at k.evaluate (realms-shim/src/realmFacade.js:122:7)
+        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/realms-shim_1.1.0/realms-shim.test.js:7:7)
+        at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+        at jest-jasmine2/build/queueRunner.js:45:12
+
+      at Object.<anonymous> (code-injection/realms-shim_1.1.0/realms-shim.test.js:19:13)

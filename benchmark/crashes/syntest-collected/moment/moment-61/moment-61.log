@@ -1,0 +1,10 @@
+TypeError: _hooks.hooks.now is not a function
+    at currentDateArray (moment/src/lib/create/from-array.js:2645:58)
+    at configFromArray (moment/src/lib/create/from-array.js:2697:17)
+    at configFromObject (moment/src/lib/create/from-object.js:405:18)
+    at call (.syntest/tests/tempTest.spec.js:22:56)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)

@@ -1,0 +1,13 @@
+TypeError: Cannot read properties of null
+    at _loop (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:1022:38)
+    at breadthFirstSearch (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:1010:13)
+    at _callee$ (.syntest/tests/tempTest.spec.js:21:4)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.Promise [as next] (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:1:1)
+    at .syntest/tests/tempTest.spec.js:1:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:1:1)
+    at processImmediate (node:internal/timers:476:21)

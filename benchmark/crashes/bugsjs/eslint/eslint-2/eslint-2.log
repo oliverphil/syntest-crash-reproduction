@@ -1,0 +1,14 @@
+AssertionError: expected 'Cannot find module \'esprima-fbxyz\'\…' to equal 'Cannot find module \'esprima-fbxyz\''
+  {
+    ruleId: null,
+    fatal: true,
+    severity: 2,
+    source: '        foo={super}',
+    message: 'Parsing error: Unexpected token }',
+    line: 5,
+    column: 19
+  }
+]
+    at testValidTemplate (lib/testers/rule-tester.js:415:20)
+    at Context.<anonymous> (lib/testers/rule-tester.js:545:25)
+    at processImmediate (internal/timers.js:461:21)

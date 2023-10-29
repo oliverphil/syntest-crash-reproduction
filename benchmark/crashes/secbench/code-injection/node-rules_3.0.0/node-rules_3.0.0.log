@@ -1,0 +1,11 @@
+SyntaxError: Unexpected token 'throw'
+        at RuleEngine.fromJSON (node-rules/lib/node-rules.js:245:59)
+        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/node-rules_3.0.0/node-rules.test.js:14:7)
+        at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+        at jest-jasmine2/build/queueRunner.js:45:12
+        at new Promise (<anonymous>)
+        at mapper (jest-jasmine2/build/queueRunner.js:28:19)
+        at jest-jasmine2/build/queueRunner.js:75:41
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+      at Object.<anonymous> (code-injection/node-rules_3.0.0/node-rules.test.js:17:13)

@@ -1,0 +1,8 @@
+{
+  "issueNumber": 38808,
+  "info": "URL constructor throwing on sites with space / percentage",
+  "url": "https://github.com/nodejs/node/issues/38808",
+  "version": "16.2.0",
+  "node-version": "16.2.0",
+  "dependencies": {}
+}
