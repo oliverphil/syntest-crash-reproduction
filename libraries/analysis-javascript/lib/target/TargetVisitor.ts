@@ -284,11 +284,11 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   public FunctionExpression: (path: NodePath<t.FunctionExpression>) => void = (
     path
   ) => {
-    // try {
+    try {
       this._functionExpression(path);
-    // } catch {
-    //   //
-    // }
+    } catch {
+      //
+    }
   };
 
   public FunctionDeclaration: (path: NodePath<t.FunctionDeclaration>) => void =

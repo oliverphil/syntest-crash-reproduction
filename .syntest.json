@@ -60,11 +60,19 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "atom",
+    "syntest-project": "eslint",
     "syntest-crashes": "false",
-    "syntest-type": "github",
+    "syntest-type": "bugsjs",
     "syntest-crash": [
-        "atom-22996",
-        "atom-23020"
+        "eslint-1",
+        "eslint-10",
+        "eslint-11",
+        "eslint-12",
+        "eslint-13",
+        "eslint-14",
+        "eslint-15",
+        "eslint-16",
+        "eslint-17",
+        "eslint-18"
     ]
 }

@@ -69,6 +69,8 @@ echo $2
 #
 # Copy the input file to the local directory
 #
+rm -rf syntest-crash-reproduction
+rm -rf syntest-core
 until git clone git@gitlab.ecs.vuw.ac.nz:engr690/syntest-crash-reproduction.git; do
   echo Syntest Crash Reproduction Clone Failed
   sleep 10
