@@ -47,8 +47,7 @@ describe("visitor test", () => {
     const generator = new AbstractSyntaxTreeFactory();
     const ast = generator.convert("", source);
 
-    const visitor = new AbstractSyntaxTreeVisitor("");
-    // @ts-ignore
+    const visitor = new AbstractSyntaxTreeVisitor("", false);
     traverse(ast, visitor);
 
     expect(ast.type === "File");

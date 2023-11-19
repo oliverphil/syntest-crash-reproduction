@@ -15,117 +15,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { getAllFiles } from "../../utils/fileSystem";
-import { ObjectVisitor } from "./object/ObjectVisitor";
 import traverse from "@babel/traverse";
+import * as t from "@babel/types";
+
+import { Factory } from "../../Factory";
+
 import { ElementVisitor } from "./element/ElementVisitor";
+import { ObjectVisitor } from "./object/ObjectVisitor";
 import { RelationVisitor } from "./relation/RelationVisitor";
-import { RootContext } from "../../RootContext";
-import { Element } from "./element/Element";
-import { Relation } from "./relation/Relation";
-import { DiscoveredObjectType } from "./object/DiscoveredType";
 
-export class TypeExtractor {
-  private _elementMap: Map<string, Element>;
-  private _relationMap: Map<string, Relation>;
-  private _objectMap: Map<string, DiscoveredObjectType>;
-
-  constructor() {
-    this._elementMap = new Map();
-    this._relationMap = new Map();
-    this._objectMap = new Map();
-  }
-
-  extractAll(rootContext: RootContext) {
-    const files = getAllFiles(rootContext.rootPath, ".js").filter(
-      (x) =>
-        !x.includes("/test/") &&
-        !x.includes(".test.js")
-    ); // maybe we should also take those into account
-
-    for (const file of files) {
-      try {
-        this.extract(rootContext, file);
-      } catch (error) {
-        // console.info(error);
-      }
-    }
-  }
-
-  extract(rootContext: RootContext, filePath: string) {
-    const elementVisitor = new ElementVisitor(filePath);
-    const relationVisitor = new RelationVisitor(filePath);
-    const complexTypeVisitor = new ObjectVisitor(filePath);
-
-    const ast = rootContext.getAbstractSyntaxTree(filePath);
-    // traverse(
-    //     ast,
-    //   visitors.merge([elementVisitor, relationVisitor, complexTypeVisitor])
-    // );
+export class TypeExtractor extends Factory {
+  extractElements(filepath: string, ast: t.Node) {
+    const elementVisitor = new ElementVisitor(filepath, this.syntaxForgiving);
 
     // @ts-ignore
     traverse(ast, elementVisitor);
-    // @ts-ignore
+
+    return elementVisitor.elementMap;
+  }
+
+  extractRelations(filepath: string, ast: t.Node) {
+    const relationVisitor = new RelationVisitor(filepath, this.syntaxForgiving);
+
     traverse(ast, relationVisitor);
-    // @ts-ignore
-    traverse(ast, complexTypeVisitor);
 
-    this._elementMap = new Map([
-      ...this._elementMap,
-      ...elementVisitor.elementMap,
-    ]);
-    this._relationMap = new Map([
-      ...this._relationMap,
-      ...relationVisitor.relationMap,
-    ]);
-    this._objectMap = new Map([
-      ...this._objectMap,
-      ...complexTypeVisitor.complexTypeMap,
-    ]);
+    return relationVisitor.relationMap;
   }
 
-  getElement(id: string): Element {
-    if (!this._elementMap.has(id)) {
-      throw new Error(`Element with id ${id} does not exist`);
-    }
-    return this._elementMap.get(id);
-  }
+  extractObjectTypes(filepath: string, ast: t.Node) {
+    const objectVisitor = new ObjectVisitor(filepath, this.syntaxForgiving);
 
-  getRelation(id: string): Relation {
-    if (!this._relationMap.has(id)) {
-      throw new Error(`Relation with id ${id} does not exist`);
-    }
-    return this._relationMap.get(id);
-  }
+    traverse(ast, objectVisitor);
 
-  getObjectType(id: string): DiscoveredObjectType {
-    if (!this._objectMap.has(id)) {
-      throw new Error(`ComplexType with id ${id} does not exist`);
-    }
-    return this._objectMap.get(id);
-  }
-
-  get elementMap(): Map<string, Element> {
-    return this._elementMap;
-  }
-
-  set elementMap(elementMap: Map<string, Element>) {
-    this._elementMap = elementMap;
-  }
-
-  get relationMap(): Map<string, Relation> {
-    return this._relationMap;
-  }
-
-  set relationMap(relationMap) {
-    this._relationMap = relationMap;
-  }
-
-  get objectMap(): Map<string, DiscoveredObjectType> {
-    return this._objectMap;
-  }
-
-  set objectMap(objectMap) {
-    this._objectMap = objectMap;
+    return objectVisitor.objectTypeMap;
   }
 }

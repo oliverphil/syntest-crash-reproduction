@@ -17,18 +17,33 @@
  */
 import { NodePath } from "@babel/core";
 import * as t from "@babel/types";
-import { AbstractSyntaxTreeVisitor } from "@syntest/ast-visitor-javascript";
+import {
+  AbstractSyntaxTreeVisitor,
+  MemberSeparator,
+} from "@syntest/ast-visitor-javascript";
+
 import { Element, ElementType } from "../element/Element";
 
 export class ElementVisitor extends AbstractSyntaxTreeVisitor {
   private _elementMap: Map<string, Element>;
 
   get elementMap(): Map<string, Element> {
+    for (const value of this._elementMap.values()) {
+      if (
+        !this._elementMap.has(value.bindingId) &&
+        value.bindingId.includes(MemberSeparator)
+      ) {
+        this._elementMap.set(value.bindingId, {
+          ...value,
+          id: value.bindingId,
+        });
+      }
+    }
     return this._elementMap;
   }
 
-  constructor(filePath: string) {
-    super(filePath);
+  constructor(filePath: string, syntaxForgiving: boolean) {
+    super(filePath, syntaxForgiving);
     this._elementMap = new Map();
   }
 
@@ -37,19 +52,49 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
     type: ElementType,
     value: string
   ) {
-    // let loc = path.node.loc;
-    // if (loc === undefined) {
-    //   let parent = path.parentPath;
-    //   while (parent && !parent.node.loc) {
-    //     parent = parent.parentPath;
-    //   }
-    //   loc = parent?.node?.loc;
-    // }
-    if (type === ElementType.Identifier) {
-      const bindingId = this._getBindingId(path);
+    const id = this._getNodeId(path);
+    const bindingId = this._getBindingId(path);
 
+    // Here we check if the id is already registered (we do not allow this normally)
+    if (this._elementMap.has(id)) {
+      // Export specifiers can actually have the same exported and local object
+      // e.g. export { x }
+      if (
+        path.parentPath.isExportSpecifier() &&
+        path.parentPath.get("exported") === path
+      ) {
+        return;
+      }
+
+      // Import specifiers can actually have the same imported and local object
+      // e.g. import { x } from '...'
+      if (
+        path.parentPath.isImportSpecifier() &&
+        path.parentPath.get("imported") === path
+      ) {
+        return;
+      }
+
+      // Object properties can actually have the same value and key object
+      // e.g. const obj = { x }
+      if (
+        path.parentPath.isObjectProperty() &&
+        path.parentPath.get("value") === path
+      ) {
+        return;
+      }
+
+      // known cases
+      // ({ x = 5 }) => {...} (x is recorded twice)
+
+      ElementVisitor.LOGGER.warn(`Overriding element with id: ${id}`);
+      return;
+    }
+
+    if (type === ElementType.Identifier) {
       const element: Element = {
-        id: this._getNodeId(path),
+        id: id,
+        bindingId,
         filePath: this._filePath,
         location: {
           // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
@@ -58,13 +103,13 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
           endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
         },
         type: ElementType.Identifier,
-        bindingId,
         name: value,
       };
       this._elementMap.set(element.id, element);
     } else {
       const element: Element = {
-        id: this._getNodeId(path),
+        id: id,
+        bindingId,
         filePath: this._filePath,
         location: {
           // startIndex: (<{ index: number }>(<unknown>loc.start)).index,

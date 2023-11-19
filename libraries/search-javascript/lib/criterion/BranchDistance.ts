@@ -16,24 +16,29 @@
  * limitations under the License.
  */
 
+import { transformSync, traverse } from "@babel/core";
+import { defaultBabelOptions } from "@syntest/analysis-javascript";
+import { getLogger, Logger } from "@syntest/logging";
 import {
   BranchDistance as CoreBranchDistance,
   shouldNeverHappen,
 } from "@syntest/search";
+
 import { BranchDistanceVisitor } from "./BranchDistanceVisitor";
-import { transformSync, traverse } from "@babel/core";
-import { defaultBabelOptions } from "@syntest/analysis-javascript";
 
 export class BranchDistance extends CoreBranchDistance {
+  protected static LOGGER: Logger;
+  protected syntaxForgiving: boolean;
   protected stringAlphabet: string;
 
-  constructor(stringAlphabet: string) {
+  constructor(syntaxForgiving: boolean, stringAlphabet: string) {
     super();
+    this.syntaxForgiving = syntaxForgiving;
+    BranchDistance.LOGGER = getLogger("BranchDistance");
     this.stringAlphabet = stringAlphabet;
   }
 
   calculate(
-    _conditionAST: string, // deprecated
     condition: string,
     variables: Record<string, unknown>,
     trueOrFalse: boolean
@@ -45,6 +50,7 @@ export class BranchDistance extends CoreBranchDistance {
 
     const ast = transformSync(condition, options).ast;
     const visitor = new BranchDistanceVisitor(
+      this.syntaxForgiving,
       this.stringAlphabet,
       variables,
       !trueOrFalse
@@ -55,7 +61,14 @@ export class BranchDistance extends CoreBranchDistance {
     let distance = visitor._getDistance(condition);
 
     if (distance > 1 || distance < 0) {
-      throw new Error("Invalid distance!");
+      const variables_ = Object.entries(variables)
+        .map(([key, value]) => `${key}=${String(value)}`)
+        .join(", ");
+      throw new Error(
+        `Invalid distance: ${distance} for ${condition} -> ${String(
+          trueOrFalse
+        )}. Variables: ${variables_}`
+      );
     }
 
     if (Number.isNaN(distance)) {
@@ -67,6 +80,17 @@ export class BranchDistance extends CoreBranchDistance {
       distance = 0.999_999_999_999_999_9;
     }
 
+    if (distance === 0) {
+      // in general it should not be zero if used correctly so we give a warning
+      const variables_ = Object.entries(variables)
+        .map(([key, value]) => `${key}=${String(value)}`)
+        .join(", ");
+      BranchDistance.LOGGER.warn(
+        `Calculated distance for condition '${condition}' -> ${String(
+          trueOrFalse
+        )}, is zero. Variables: ${variables_}`
+      );
+    }
     return distance;
   }
 }

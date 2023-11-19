@@ -16,6 +16,9 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
+
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
 
@@ -29,13 +32,14 @@ export abstract class PrimitiveStatement<T> extends Statement {
   private _value: T;
 
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
+    type: TypeEnum,
     uniqueId: string,
     value: T
   ) {
-    super(id, name, type, uniqueId);
+    super(variableIdentifier, typeIdentifier, name, type, uniqueId);
     this._value = value;
   }
 
@@ -54,15 +58,21 @@ export abstract class PrimitiveStatement<T> extends Statement {
     return [];
   }
 
+  setChild(_index: number, _newChild: Statement): void {
+    throw new Error("Primitive statements don't have children");
+  }
+
   static getRandom() {
     throw new Error("Unimplemented function!");
   }
 
-  decode(): Decoding[] {
+  decode(context: ContextBuilder): Decoding[] {
     const asString = String(this.value);
     return [
       {
-        decoded: `const ${this.varName} = ${asString};`,
+        decoded: `const ${context.getOrCreateVariableName(
+          this
+        )} = ${asString};`,
         reference: this,
       },
     ];

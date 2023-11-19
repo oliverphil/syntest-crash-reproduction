@@ -21,36 +21,6 @@ import * as t from "@babel/types";
 import { Export } from "./Export";
 import { ExportVisitor } from "./ExportVisitor";
 
-function extractFromIdentifier(
-  visitor: ExportVisitor,
-  filePath: string,
-  path: NodePath<t.Identifier>,
-  initPath?: NodePath<t.Node>
-): Export {
-  if (initPath && initPath.isIdentifier()) {
-    const binding = visitor._getBindingId(initPath);
-
-    return {
-      id: binding,
-      filePath,
-      name: initPath.node.name,
-      renamedTo: path.node.name,
-      default: false,
-      module: false,
-    };
-  } else {
-    // not sure about this id
-    return {
-      id: visitor._getNodeId(path),
-      filePath,
-      name: path.node.name,
-      renamedTo: path.node.name,
-      default: false,
-      module: false,
-    };
-  }
-}
-
 function extractFromObjectPattern(
   visitor: ExportVisitor,
   filePath: string,
@@ -74,6 +44,7 @@ function extractFromObjectPattern(
     );
   }
 
+  const notIdentifier = "Property key is not an identifier";
   for (const property of path.get("properties")) {
     if (property.isRestElement()) {
       // unsupported
@@ -87,7 +58,7 @@ function extractFromObjectPattern(
       if (!key.isIdentifier()) {
         // unsupported
         // not possible i think
-        throw new Error("Property key is not an identifier");
+        throw new Error(notIdentifier);
       }
 
       const propertyName = key.node.name;
@@ -104,7 +75,7 @@ function extractFromObjectPattern(
         if (_property.node.key.type !== "Identifier") {
           // unsupported
           // not possible i think
-          throw new Error("Property key is not an identifier");
+          throw new Error(notIdentifier);
         }
 
         // so we want to find the property that has the same name as the property in the object pattern
@@ -133,7 +104,7 @@ function extractFromObjectPattern(
       if (!key.isIdentifier()) {
         // unsupported
         // should never happen
-        throw new Error("Property key is not an identifier");
+        throw new Error(notIdentifier);
       }
 
       if (match.isObjectProperty()) {
@@ -246,6 +217,8 @@ export function extractExportsFromExportNamedDeclaration(
       declaration.isFunctionDeclaration() ||
       declaration.isClassDeclaration()
     ) {
+      // export function x () =>
+      // export class x () =>
       exports.push({
         id: visitor._getNodeId(declaration),
         filePath,
@@ -255,17 +228,70 @@ export function extractExportsFromExportNamedDeclaration(
         module: false,
       });
     } else if (declaration.isVariableDeclaration()) {
+      // export const x = ?
       for (const declaration_ of declaration.get("declarations")) {
         const id = declaration_.get("id");
+
         const init = declaration_.get("init");
 
         if (id.isIdentifier()) {
-          exports.push(extractFromIdentifier(visitor, filePath, id, init));
+          // export const x = ?
+
+          if (!declaration_.has("init")) {
+            // export let x
+            exports.push({
+              id: visitor._getNodeId(declaration_),
+              filePath: filePath,
+              name: id.node.name,
+              renamedTo: id.node.name,
+              default: false,
+              module: false,
+            });
+            continue;
+          }
+
+          if (init.isIdentifier()) {
+            // export const x = a
+            exports.push({
+              id: visitor._getBindingId(init),
+              filePath: filePath,
+              name: init.node.name,
+              renamedTo: id.node.name,
+              default: false,
+              module: false,
+            });
+          } else if (init.isLiteral()) {
+            // export const x = 1
+            exports.push({
+              id: visitor._getNodeId(declaration_),
+              filePath: filePath,
+              name: id.node.name,
+              renamedTo: id.node.name,
+              default: false,
+              module: false,
+            });
+          } else if (init.isFunction() || init.isClass()) {
+            // export const x = () => {}
+            // export const y = function () => {}
+            // export const z = class {}
+            exports.push({
+              id: visitor._getNodeId(declaration_),
+              filePath,
+              name: init.has("id")
+                ? (<NodePath<t.Identifier>>init.get("id")).node.name
+                : id.node.name,
+              renamedTo: id.node.name,
+              default: false,
+              module: false,
+            });
+          }
         } else if (id.isObjectPattern()) {
+          // TODO verify that these work
           exports.push(
             ...extractFromObjectPattern(visitor, filePath, id, init)
           );
         } else if (id.isArrayPattern()) {
+          // TODO verify that these work
           exports.push(...extractFromArrayPattern(visitor, filePath, id, init));
         } else {
           throw new Error("Unsupported declaration type");

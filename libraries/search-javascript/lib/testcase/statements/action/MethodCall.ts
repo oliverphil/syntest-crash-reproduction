@@ -16,69 +16,65 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
 
-import { JavaScriptDecoder } from "../../../testbuilding/JavaScriptDecoder";
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
 
-import { ActionStatement } from "./ActionStatement";
-import { Getter } from "./Getter";
-import { Setter } from "./Setter";
+import { ClassActionStatement } from "./ClassActionStatement";
+import { ConstructorCall } from "./ConstructorCall";
 
 /**
- * @author Dimitri Stallenberg
+ * MethodCall
  */
-export class MethodCall extends ActionStatement {
-  private readonly _className: string;
-
+export class MethodCall extends ClassActionStatement {
   /**
    * Constructor
    * @param identifierDescription the return type options of the function
-   * @param type the return type of the function
    * @param uniqueId id of the gene
    * @param methodName the name of the function
    * @param args the arguments of the function
    */
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
     uniqueId: string,
-    className: string,
-    arguments_: Statement[]
+    arguments_: Statement[],
+    constructor_: ConstructorCall
   ) {
-    super(id, name, type, uniqueId, arguments_);
-    this._classType = "MethodCall";
-    this._className = className;
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.FUNCTION,
+      uniqueId,
+      arguments_,
+      constructor_
+    );
   }
 
-  mutate(
-    sampler: JavaScriptTestCaseSampler,
-    depth: number
-  ): Getter | Setter | MethodCall {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleClassCall(depth, this._className);
-    }
-
+  mutate(sampler: JavaScriptTestCaseSampler, depth: number): MethodCall {
     const arguments_ = this.args.map((a: Statement) => a.copy());
+    let constructor_ = this.constructor_.copy();
+    const index = prng.nextInt(0, arguments_.length);
 
-    if (arguments_.length > 0) {
+    if (index < arguments_.length) {
       // go over each arg
-      for (let index = 0; index < arguments_.length; index++) {
-        if (prng.nextBoolean(1 / arguments_.length)) {
-          arguments_[index] = arguments_[index].mutate(sampler, depth + 1);
-        }
-      }
+      arguments_[index] = arguments_[index].mutate(sampler, depth + 1);
+    } else {
+      constructor_ = constructor_.mutate(sampler, depth + 1);
     }
 
     return new MethodCall(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      this.className,
-      arguments_
+      arguments_,
+      constructor_
     );
   }
 
@@ -86,55 +82,38 @@ export class MethodCall extends ActionStatement {
     const deepCopyArguments = this.args.map((a: Statement) => a.copy());
 
     return new MethodCall(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       this.uniqueId,
-      this.className,
-      deepCopyArguments
+      deepCopyArguments,
+      this.constructor_.copy()
     );
   }
 
-  get className(): string {
-    return this._className;
-  }
-
-  decode(): Decoding[] {
-    throw new Error("Cannot call decode on method calls!");
-  }
-
-  decodeWithObject(
-    decoder: JavaScriptDecoder,
-    id: string,
-    options: { addLogs: boolean; exception: boolean },
-    objectVariable: string
-  ): Decoding[] {
-    const arguments_ = this.args.map((a) => a.varName).join(", ");
-
-    const argumentStatements: Decoding[] = this.args.flatMap((a) =>
-      a.decode(decoder, id, options)
+  decode(context: ContextBuilder): Decoding[] {
+    const constructorDecoding = this.constructor_.decode(context);
+    const argumentsDecoding: Decoding[] = this.args.flatMap((a) =>
+      a.decode(context)
     );
 
-    let decoded = `const ${this.varName} = await ${objectVariable}.${this.name}(${arguments_})`;
+    const arguments_ = this.args
+      .map((a) => context.getOrCreateVariableName(a))
+      .join(", ");
 
-    if (options.addLogs) {
-      const logDirectory = decoder.getLogDirectory(id, this.varName);
-      decoded += `\nawait fs.writeFileSync('${logDirectory}', '' + ${this.varName} + ';sep;' + JSON.stringify(${this.varName}))`;
-    }
+    const decoded = `const ${context.getOrCreateVariableName(
+      this
+    )} = await ${context.getOrCreateVariableName(this.constructor_)}.${
+      this.name
+    }(${arguments_})`;
 
     return [
-      ...argumentStatements,
+      ...constructorDecoding,
+      ...argumentsDecoding,
       {
         decoded: decoded,
         reference: this,
-        objectVariable: objectVariable,
       },
     ];
-  }
-
-  // TODO
-  decodeErroring(objectVariable: string): string {
-    const arguments_ = this.args.map((a) => a.varName).join(", ");
-    return `await expect(${objectVariable}.${this.name}(${arguments_})).to.be.rejectedWith(Error);`;
   }
 }

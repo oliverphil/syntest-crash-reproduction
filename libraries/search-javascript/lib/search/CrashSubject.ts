@@ -15,29 +15,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { RootContext, SubTarget, Target } from "@syntest/analysis-javascript";
-import { TargetType } from "@syntest/analysis";
-import { ControlFlowGraph, Edge } from "@syntest/cfg";
-import {
-    FunctionObjectiveFunction,
-    ObjectiveFunction,
-    SearchSubject,
-    ApproachLevel,
-    shouldNeverHappen,
-    BranchObjectiveFunction,
-} from "@syntest/search";
-
-import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
-import { BranchDistance } from "../criterion/BranchDistance";
+import { RootContext, Target } from "@syntest/analysis-javascript";
 import {StackTrace} from "@syntest/crash-reproduction-setup";
-import StackFrameObjectiveFunction from "./objective/StackFrameObjectiveFunction";
-import StackErrorObjectiveFunction from "./objective/StackErrorObjectiveFunction";
-import {JavaScriptSubject} from "./JavaScriptSubject";
 import {prng} from "@syntest/prng";
 
+import {JavaScriptSubject} from "./JavaScriptSubject";
+import StackErrorObjectiveFunction from "./objective/StackErrorObjectiveFunction";
+import StackFrameObjectiveFunction from "./objective/StackFrameObjectiveFunction";
+
 export class CrashSubject extends JavaScriptSubject {
-    constructor(target: Target, rootContext: RootContext, stringAlphabet: string, stackTrace: StackTrace) {
-        super(target, rootContext, stringAlphabet);
+    constructor(target: Target, rootContext: RootContext, syntaxForgiving: boolean, stringAlphabet: string, stackTrace: StackTrace) {
+        super(target, rootContext, syntaxForgiving, stringAlphabet);
         this.stackTrace = stackTrace;
         this._extractObjectives();
     }
@@ -45,6 +33,11 @@ export class CrashSubject extends JavaScriptSubject {
     private stackTrace: StackTrace;
 
     protected override _extractObjectives(): void {
+        // this._objectives = new Map<
+        //     ObjectiveFunction<JavaScriptTestCase>,
+        //     ObjectiveFunction<JavaScriptTestCase>[]
+        // >();
+        //
         // const functions = this._rootContext.getControlFlowProgram(
         //     this._target.path
         // ).functions;
@@ -63,11 +56,16 @@ export class CrashSubject extends JavaScriptSubject {
         //         const outGoingEdges = graph.getOutgoingEdges(controlNodeId);
         //
         //         for (const edge of outGoingEdges) {
+        //             if (["ENTRY", "SUCCESS_EXIT", "ERROR_EXIT"].includes(edge.target)) {
+        //                 throw new Error(
+        //                     `Function ${function_.name} in ${function_.id} ends in entry/exit node`
+        //                 );
+        //             }
         //             // Add objective function
         //             this._objectives.set(
         //                 new BranchObjectiveFunction(
         //                     new ApproachLevel(),
-        //                     new BranchDistance(),
+        //                     new BranchDistance(this.syntaxForgiving, this.stringAlphabet),
         //                     this,
         //                     edge.target
         //                 ),
@@ -91,16 +89,43 @@ export class CrashSubject extends JavaScriptSubject {
         //
         //     // Add objective
         //     const functionObjective = new FunctionObjectiveFunction(
-        //         new ApproachLevel(),
-        //         new BranchDistance(),
         //         this,
-        //         children[0].id
+        //         function_.id
         //     );
-        //     const childObjectives = this.findChildren(
-        //         function_.graph,
-        //         functionObjective
-        //     );
-        //     this._objectives.set(functionObjective, childObjectives);
+        //
+        //     // find first control node in function
+        //     let firstControlNodeInFunction = children[0];
+        //     while (
+        //         function_.graph.getChildren(firstControlNodeInFunction.id).length === 1
+        //         ) {
+        //         firstControlNodeInFunction = function_.graph.getChildren(
+        //             firstControlNodeInFunction.id
+        //         )[0];
+        //     }
+        //
+        //     // there are control nodes in the function
+        //     if (
+        //         function_.graph.getChildren(firstControlNodeInFunction.id).length === 2
+        //     ) {
+        //         const firstObjectives = function_.graph
+        //             .getChildren(firstControlNodeInFunction.id)
+        //             .map((child) => {
+        //                 return [...this._objectives.keys()].find(
+        //                     (objective) => objective.getIdentifier() === child.id
+        //                 );
+        //             });
+        //
+        //         if (!firstObjectives[0] || !firstObjectives[1]) {
+        //             throw new Error(
+        //                 `Cannot find objective with id: ${firstControlNodeInFunction.id}`
+        //             );
+        //         }
+        //
+        //         this._objectives.set(functionObjective, [...firstObjectives]);
+        //     } else {
+        //         // no control nodes so no sub objectives
+        //         this._objectives.set(functionObjective, []);
+        //     }
         // }
 
         if (this.stackTrace) {

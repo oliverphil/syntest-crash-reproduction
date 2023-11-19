@@ -37,13 +37,12 @@ export class CrashInstrumenter extends Instrumenter {
         storageManager: StorageManager,
         rootContext: RootContext,
         targets: Target[],
-        temporaryInstrumentedDirectory: string
+        instrumentedDirectory: string
     ): Promise<void> {
-        // @ts-ignore
-        const crash: Crash = global.crash;
+        const crash: Crash = <Crash>global.crash;
         const absoluteRootPath = path.resolve(rootContext.rootPath );
 
-        const destinationPath = temporaryInstrumentedDirectory + `/${crash.project}/${crash.crashId}`;
+        const destinationPath = instrumentedDirectory + `/${crash.project}/${crash.crashId}`;
             // path.basename(absoluteRootPath)
 
         // copy everything

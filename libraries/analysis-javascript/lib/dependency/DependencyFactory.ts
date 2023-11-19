@@ -20,6 +20,8 @@ import { traverse } from "@babel/core";
 import * as t from "@babel/types";
 import { DependencyFactory as CoreDependencyFactory } from "@syntest/analysis";
 
+import { Factory } from "../Factory";
+
 import { DependencyVisitor } from "./DependencyVisitor";
 
 /**
@@ -27,14 +29,17 @@ import { DependencyVisitor } from "./DependencyVisitor";
  *
  * @author Dimitri Stallenberg
  */
-export class DependencyFactory implements CoreDependencyFactory<t.Node> {
+export class DependencyFactory
+  extends Factory
+  implements CoreDependencyFactory<t.Node>
+{
   /**
    * Generate function map for specified target.
    *
    * @param AST The AST of the target
    */
   extract(filePath: string, AST: t.Node): string[] {
-    const visitor = new DependencyVisitor(filePath);
+    const visitor = new DependencyVisitor(filePath, this.syntaxForgiving);
 
     // @ts-ignore
     traverse(AST, visitor);

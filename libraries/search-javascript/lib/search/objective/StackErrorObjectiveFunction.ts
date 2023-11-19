@@ -40,8 +40,8 @@ class StackErrorObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
 
     calculateDistance(encoding: JavaScriptTestCase): number {
         let distance = 1;
-        if (encoding.getExecutionResult()?.hasExceptions()) {
-            let actualExceptionString = encoding.getExecutionResult().getExceptions();
+        if (encoding.getExecutionResult().getError()) {
+            let actualExceptionString = encoding.getExecutionResult().getError().message;
             if (actualExceptionString.includes('Received type string')) {
                 const split = actualExceptionString.split('Received type string');
                 actualExceptionString = split[0] + 'Received type string';

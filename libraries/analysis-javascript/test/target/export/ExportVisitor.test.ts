@@ -27,7 +27,7 @@ function exportHelper(source: string) {
   const generator = new AbstractSyntaxTreeFactory();
   const ast = generator.convert("", source);
 
-  const visitor = new ExportVisitor("");
+  const visitor = new ExportVisitor("", false);
 
   // @ts-ignore
   traverse(ast, visitor);
@@ -438,7 +438,14 @@ describe("ExportVisitor test", () => {
   it("export default const value", () => {
     const source = `export default 1`;
 
-    expect(() => exportHelper(source)).throw();
+    const exports = exportHelper(source);
+
+    expect(exports.length).to.equal(1);
+
+    expect(exports[0].name).to.equal("default");
+    expect(exports[0].default).to.equal(true);
+    expect(exports[0].module).to.equal(false);
+    expect(exports[0].renamedTo).to.equal("default");
   });
 
   it("export default new expression non identifier", () => {
@@ -613,10 +620,10 @@ describe("ExportVisitor test", () => {
 
     expect(exports.length).to.equal(1);
 
-    expect(exports[0].name).to.equal("anonymous");
+    expect(exports[0].name).to.equal("anonymousFunction");
     expect(exports[0].default).to.equal(true);
     expect(exports[0].module).to.equal(true);
-    expect(exports[0].renamedTo).to.equal("anonymous");
+    expect(exports[0].renamedTo).to.equal("anonymousFunction");
   });
 
   it("export module default arrow function", () => {
@@ -626,10 +633,10 @@ describe("ExportVisitor test", () => {
 
     expect(exports.length).to.equal(1);
 
-    expect(exports[0].name).to.equal("anonymous");
+    expect(exports[0].name).to.equal("anonymousFunction");
     expect(exports[0].default).to.equal(true);
     expect(exports[0].module).to.equal(true);
-    expect(exports[0].renamedTo).to.equal("anonymous");
+    expect(exports[0].renamedTo).to.equal("anonymousFunction");
   });
 
   it("export expression but not assignment", () => {
@@ -660,7 +667,7 @@ describe("ExportVisitor test", () => {
 
     expect(exports.length).to.equal(1);
 
-    expect(exports[0].name).to.equal("x");
+    expect(exports[0].name).to.equal("NumericLiteral");
     expect(exports[0].default).to.equal(false);
     expect(exports[0].module).to.equal(true);
     expect(exports[0].renamedTo).to.equal("x");
@@ -702,7 +709,10 @@ describe("ExportVisitor test", () => {
     const a = 1;
     exports[x] = a`;
 
-    expect(() => exportHelper(source)).throw();
+    const exports = exportHelper(source);
+
+    // should give a warning
+    expect(exports.length).to.equal(0);
   });
 
   it("export module.x equals a", () => {
@@ -731,13 +741,16 @@ describe("ExportVisitor test", () => {
     expect(exports[0].renamedTo).to.equal("a");
   });
 
-  it("export module[exports] equals a", () => {
+  it("export module[exports] equals c", () => {
     const source = `
     const a = 1
     module[exports] = a
     `;
 
-    expect(() => exportHelper(source)).throw();
+    const exports = exportHelper(source);
+
+    expect(exports.length).to.equal(0);
+    // but warning should be given in the logs!
   });
 
   it("export module.exports.x equals a", () => {
@@ -795,7 +808,10 @@ describe("ExportVisitor test", () => {
   it("export module.exports[x] equals a", () => {
     const source = `module.exports[x] = a`;
 
-    expect(() => exportHelper(source)).throw();
+    const exports = exportHelper(source);
+
+    // should give a warning
+    expect(exports.length).to.equal(0);
   });
 
   it("export exports equals object expression with object method", () => {

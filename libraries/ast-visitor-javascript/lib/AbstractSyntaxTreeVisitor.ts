@@ -18,85 +18,29 @@
 import { NodePath } from "@babel/core";
 import { Scope as BabelScope, TraverseOptions } from "@babel/traverse";
 import * as t from "@babel/types";
-
 import { getLogger, Logger } from "@syntest/logging";
-import * as globals from "globals";
 
-const flatGlobals = new Set(
-  Object.values(globals).flatMap((value) => Object.keys(value))
-);
-const reservedKeywords = new Set([
-  "abstract",
-  "arguments",
-  "await*",
-  "boolean",
-  "break",
-  "byte",
-  "case",
-  "catch",
-  "char",
-  "class*",
-  "const",
-  "continue",
-  "debugger",
-  "default",
-  "delete",
-  "do",
-  "double",
-  "else",
-  "enum*",
-  "eval",
-  "export*",
-  "extends*",
-  "false",
-  "final",
-  "finally",
-  "float",
-  "for",
-  "function",
-  "goto",
-  "if",
-  "implements",
-  "import*",
-  // "import",
-  "in",
-  "instanceof",
-  "int",
-  "interface",
-  "let*",
-  "long",
-  "native",
-  "new",
-  "null",
-  "package",
-  "private",
-  "protected",
-  "public",
-  "return",
-  "short",
-  "static",
-  "super*",
-  "switch",
-  "synchronized",
-  "this",
-  "throw",
-  "throws",
-  "transient",
-  "true",
-  "try",
-  "typeof",
-  "var",
-  "void",
-  "volatile",
-  "while",
-  "with",
-  "yield",
-]);
-// @ts-ignore
+
+import { globalVariables } from "./globalVariables";
+import { reservedKeywords } from "./reservedKeywords";
+
+export const MemberSeparator = " <-> ";
+
 export class AbstractSyntaxTreeVisitor implements TraverseOptions {
+  [k: `${string}|${string}`]: (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    this: any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    path: NodePath<any>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    state: any
+  ) => void;
+
   protected static LOGGER: Logger;
 
   protected _filePath: string;
+
+  protected _syntaxForgiving: boolean;
 
   protected _scopeIdOffset: number;
 
@@ -111,48 +55,38 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
     return this._filePath;
   }
 
+  get syntaxForgiving() {
+    return this._syntaxForgiving;
+  }
+
   get scopeIdOffset() {
     return this._scopeIdOffset;
   }
 
-  constructor(filePath: string) {
-    this._filePath = filePath;
+  constructor(filePath: string, syntaxForgiving: boolean) {
     AbstractSyntaxTreeVisitor.LOGGER = getLogger("AbstractSyntaxTreeVisitor");
+    this._filePath = filePath;
+    this._syntaxForgiving = syntaxForgiving;
   }
 
   protected _getUidFromScope(scope: BabelScope): number {
     return (<{ uid: number }>(<unknown>scope))["uid"];
   }
 
-  public _getNodeId(path: NodePath<t.Node>): string {
-    // let loc = path.node.loc;
-    // if (loc === undefined) {
-    //   let parent = path.parentPath;
-    //   while (parent && !parent.node.loc) {
-    //     parent = parent.parentPath;
-    //   }
-    //   loc = parent?.node?.loc;
-    //   if (!loc) {
-    //     throw new Error(
-    //         `Node ${path.type} in file '${this._filePath}' does not have a location`
-    //     );
-    //   }
-    // }
-
-    if (path.node.loc === undefined) {
+  public _getNodeId(path: NodePath<t.Node> | t.Node): string {
+    const loc = "node" in path ? path.node.loc : path.loc;
+    if (loc === undefined) {
       throw new Error(
         `Node ${path.type} in file '${this._filePath}' does not have a location`
       );
     }
 
-    const startLine = (<{ line: number }>(<unknown>path.node.loc.start)).line;
-    const startColumn = (<{ column: number }>(<unknown>path.node.loc.start))
-      .column;
-    const startIndex = (<{ index: number }>(<unknown>path.node.loc.start))
-      .index;
-    const endLine = (<{ line: number }>(<unknown>path.node.loc.end)).line;
-    const endColumn = (<{ column: number }>(<unknown>path.node.loc.end)).column;
-    const endIndex = (<{ index: number }>(<unknown>path.node.loc.end)).index;
+    const startLine = (<{ line: number }>(<unknown>loc.start)).line;
+    const startColumn = (<{ column: number }>(<unknown>loc.start)).column;
+    const startIndex = (<{ index: number }>(<unknown>loc.start)).index;
+    const endLine = (<{ line: number }>(<unknown>loc.end)).line;
+    const endColumn = (<{ column: number }>(<unknown>loc.end)).column;
+    const endIndex = (<{ index: number }>(<unknown>loc.end)).index;
 
     return `${this._filePath}:${startLine}:${startColumn}:::${endLine}:${endColumn}:::${startIndex}:${endIndex}`;
   }
@@ -171,8 +105,14 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
        * }
        */
       // not supported
-      AbstractSyntaxTreeVisitor.LOGGER.info(`Unsupported labeled statement`);
-      throw new Error("Cannot get binding for labeled statement");
+      if (this.syntaxForgiving) {
+        AbstractSyntaxTreeVisitor.LOGGER.warn(
+          `Unsupported labeled statement found at ${this._getNodeId(path)}`
+        );
+        return this._getNodeId(path);
+      } else {
+        throw new Error("Cannot get binding for labeled statement");
+      }
     }
 
     if (
@@ -182,10 +122,18 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
       // we are the property of a member expression
       // so the binding id is equal to the object of the member expression relation + the id of the property
       // e.g. bar.foo
+      if (
+        !path.isIdentifier() &&
+        !path.isStringLiteral() &&
+        !path.isNumericLiteral()
+      ) {
+        return this._getNodeId(path);
+      }
       return (
         this._getBindingId(path.parentPath.get("object")) +
-        " <-> " +
-        this._getNodeId(path)
+        MemberSeparator +
+        (path.isIdentifier() ? path.node.name : `${path.node.value}`)
+        // this._getNodeId(path) // bad
       );
     }
 
@@ -225,6 +173,16 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
 
     if (
       path.parentPath.isExportSpecifier() &&
+      path.parentPath.get("exported") === path
+    ) {
+      // we are the export name of a renamed export
+      // so this is the first definition of foo
+      // e.g. export {bar as foo}
+      return this._getNodeId(path);
+    }
+
+    if (
+      path.parentPath.isExportSpecifier() &&
       path.parentPath.parentPath.has("source")
     ) {
       // we export from source
@@ -242,21 +200,25 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
 
     if (
       binding === undefined &&
-      (flatGlobals.has(path.node.name) || reservedKeywords.has(path.node.name))
+      (globalVariables.has(path.node.name) ||
+        reservedKeywords.has(path.node.name))
     ) {
       return `global::${path.node.name}`;
     } else if (binding === undefined) {
-      // let parent = path.parentPath;
-      // while (parent && !parent.scope.hasGlobal(path.node.name)) {
-      //   parent = parent.parentPath;
-      // }
-      // if (parent && parent.scope.hasGlobal(path.node.name)) {
-      //   return `global::${path.node.name}`;
-      // }
-      // return this._getNodeId(path);
-      throw new Error(
-        `Cannot find binding for ${path.node.name} at ${this._getNodeId(path)}`
-      );
+      if (this.syntaxForgiving) {
+        AbstractSyntaxTreeVisitor.LOGGER.warn(
+          `Cannot find binding for ${path.node.name} at ${this._getNodeId(
+            path
+          )}`
+        );
+        return this._getNodeId(path);
+      } else {
+        throw new Error(
+          `Cannot find binding for ${path.node.name} at ${this._getNodeId(
+            path
+          )}`
+        );
+      }
     } else {
       return this._getNodeId(binding.path);
     }
@@ -265,12 +227,29 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
   public _getThisParent(
     path: NodePath<t.Node>
   ): NodePath<
-    t.FunctionDeclaration | t.FunctionExpression | t.ObjectMethod | t.Class
+    | t.FunctionDeclaration
+    | t.FunctionExpression
+    | t.ObjectExpression
+    | t.Class
+    | t.Program
   > {
     let parent = path.getFunctionParent();
 
     if (parent === undefined || parent === null) {
-      throw new Error("ThisExpression must be inside a function");
+      if (this.syntaxForgiving) {
+        AbstractSyntaxTreeVisitor.LOGGER.warn(
+          `ThisExpression without parent function found at ${this._getNodeId(
+            path
+          )}`
+        );
+        return undefined; // <NodePath<t.Program>>path.findParent((p) => p.isProgram());
+      } else {
+        throw new Error(
+          `ThisExpression without parent function found at ${this._getNodeId(
+            path
+          )}`
+        );
+      }
     }
 
     while (parent.isArrowFunctionExpression()) {
@@ -278,27 +257,56 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
       parent = parent.getFunctionParent();
 
       if (parent === undefined || parent === null) {
-        throw new Error("ThisExpression must be inside a function");
+        if (this.syntaxForgiving) {
+          AbstractSyntaxTreeVisitor.LOGGER.warn(
+            `ThisExpression without parent function found at ${this._getNodeId(
+              path
+            )}`
+          );
+          return undefined; // <NodePath<t.Program>>path.findParent((p) => p.isProgram());
+        } else {
+          throw new Error(
+            `ThisExpression without parent function found at ${this._getNodeId(
+              path
+            )}`
+          );
+        }
       }
     }
 
     if (parent.isClassMethod() || parent.isClassPrivateMethod()) {
       const classParent = path.findParent((p) => p.isClass());
       if (classParent === undefined || classParent === null) {
-        throw new Error("ThisExpression must be inside a class");
+        // impossible?
+        throw new Error(
+          `ThisExpression without parent class found at ${this._getNodeId(
+            path
+          )}`
+        );
       }
       return <NodePath<t.Class>>classParent;
     }
 
-    if (
-      parent.isFunctionDeclaration() ||
-      parent.isFunctionExpression() ||
-      parent.isObjectMethod()
-    ) {
+    if (parent.isObjectMethod()) {
+      const objectParent = path.findParent((p) => p.isObjectExpression());
+      if (objectParent === undefined || objectParent === null) {
+        // impossible?
+        throw new Error(
+          `ThisExpression without parent object found at ${this._getNodeId(
+            path
+          )}`
+        );
+      }
+      return <NodePath<t.ObjectExpression>>objectParent;
+    }
+
+    if (parent.isFunctionDeclaration() || parent.isFunctionExpression()) {
       return parent;
     }
 
-    throw new Error("ThisExpression must be inside a function");
+    throw new Error(
+      `ThisExpression without parent function found at ${this._getNodeId(path)}`
+    );
   }
 
   enter = (path: NodePath<t.Node>) => {
@@ -357,33 +365,5 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
     }
 
     return this._thisScopeStack[this._thisScopeStack.length - 1];
-  }
-
-  // protected _getCurrentThisScopeName() {
-  //   if (this._thisScopeStackNames.length === 0) {
-  //     throw new Error("Invalid scope stack!");
-  //   }
-
-  //   return this._thisScopeStackNames[this._thisScopeStackNames.length - 1];
-  // }
-
-  protected _getNameFromNode(node: t.Node): string {
-    if (node.type === "Identifier") {
-      return node.name;
-    }
-
-    if ("name" in node) {
-      if (typeof node.name === "string") {
-        return node.name;
-      } else if (node.name.type === "JSXMemberExpression") {
-        return "anon";
-      } else if (node.name.type === "JSXNamespacedName") {
-        return node.name.name.name;
-      } else {
-        return node.name.name;
-      }
-    }
-
-    return "anon";
   }
 }

@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-// TODO
-
+import { TypeEnum } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
+import { shouldNeverHappen } from "@syntest/search";
 
-import { JavaScriptDecoder } from "../../../testbuilding/JavaScriptDecoder";
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
 
@@ -32,73 +32,93 @@ export class ArrowFunctionStatement extends Statement {
   private _returnValue: Statement | undefined;
 
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
     uniqueId: string,
     parameters: string[],
     returnValue: Statement | undefined
   ) {
-    super(id, name, type, uniqueId);
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.FUNCTION,
+      uniqueId
+    );
     this._parameters = parameters;
     this._returnValue = returnValue;
-    this._classType = "ArrowFunctionStatement";
   }
 
   mutate(sampler: JavaScriptTestCaseSampler, depth: number): Statement {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleArgument(depth, this.id, this.name);
+    if (prng.nextBoolean(sampler.deltaMutationProbability)) {
+      // 80%
+      return new ArrowFunctionStatement(
+        this.variableIdentifier,
+        this.typeIdentifier,
+        this.name,
+        prng.uniqueId(),
+        this._parameters,
+        this.returnValue
+          ? this._returnValue.mutate(sampler, depth + 1)
+          : undefined
+      );
+    } else {
+      // 20%
+      if (prng.nextBoolean(0.5)) {
+        // 50%
+        return sampler.sampleArgument(
+          depth,
+          this.variableIdentifier,
+          this.name
+        );
+      } else {
+        // 50%
+        return sampler.sampleArrowFunction(
+          depth,
+          this.variableIdentifier,
+          this.typeIdentifier,
+          this.name
+        );
+      }
     }
-
-    return new ArrowFunctionStatement(
-      this.id,
-      this.name,
-      this.type,
-      prng.uniqueId(),
-      this._parameters,
-      this.returnValue
-        ? this._returnValue.mutate(sampler, depth + 1)
-        : undefined
-    );
   }
 
   copy(): ArrowFunctionStatement {
     return new ArrowFunctionStatement(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       this.uniqueId,
       this._parameters,
       this._returnValue
     );
   }
 
-  decode(
-    decoder: JavaScriptDecoder,
-    id: string,
-    options: { addLogs: boolean; exception: boolean }
-  ): Decoding[] {
+  decode(context: ContextBuilder): Decoding[] {
     if (this._returnValue === undefined) {
       return [
         {
-          decoded: `const ${this.varName} = (${this._parameters.join(
-            ", "
-          )}) => { };`,
+          decoded: `const ${context.getOrCreateVariableName(
+            this
+          )} = (${this._parameters.join(", ")}) => {};`,
           reference: this,
         },
       ];
     }
-    const returnStatement: Decoding[] = this._returnValue.decode(
-      decoder,
-      id,
-      options
-    );
+
+    const returnStatement: Decoding[] = this._returnValue.decode(context);
+
+    const decoded = `const ${context.getOrCreateVariableName(
+      this
+    )} = (${this._parameters.join(
+      ", "
+    )}) => { return ${context.getOrCreateVariableName(this.returnValue)} };`;
+
     return [
       ...returnStatement,
       {
-        decoded: `const ${this.varName} = (${this._parameters.join(
-          ", "
-        )}) => { return ${this.returnValue.varName} };`,
+        decoded: decoded,
         reference: this,
       },
     ];
@@ -112,18 +132,22 @@ export class ArrowFunctionStatement extends Statement {
   }
 
   hasChildren(): boolean {
-    return true;
+    return this._returnValue !== undefined;
   }
 
   setChild(index: number, newChild: Statement) {
+    if (!newChild) {
+      throw new Error("Invalid new child!");
+    }
+
+    if (index !== 0) {
+      throw new Error(shouldNeverHappen(`Invalid index used index: ${index}`));
+    }
+
     this._returnValue = newChild;
   }
 
   get returnValue(): Statement {
     return this._returnValue;
-  }
-
-  getFlatTypes(): string[] {
-    return ["arrowfunction"];
   }
 }

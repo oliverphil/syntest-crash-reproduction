@@ -16,39 +16,60 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
 
-import { PrimitiveStatement } from "./PrimitiveStatement";
-import { Statement } from "../Statement";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
+import { Statement } from "../Statement";
+
+import { PrimitiveStatement } from "./PrimitiveStatement";
 
 /**
  * @author Dimitri Stallenberg
  */
-export class UndefinedStatement extends PrimitiveStatement<boolean> {
-  constructor(id: string, name: string, type: string, uniqueId: string) {
-    // eslint-disable-next-line unicorn/no-useless-undefined
-    super(id, name, type, uniqueId, undefined);
-    this._classType = "UndefinedStatement";
-  }
-
-  mutate(sampler: JavaScriptTestCaseSampler, depth: number): Statement {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleArgument(depth + 1, this.id, this.name);
-    }
-    return new UndefinedStatement(
-      this.id,
-      this.name,
-      this.type,
-      prng.uniqueId()
+export class UndefinedStatement extends PrimitiveStatement<undefined> {
+  constructor(
+    variableIdentifier: string,
+    typeIdentifier: string,
+    name: string,
+    uniqueId: string
+  ) {
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.UNDEFINED,
+      uniqueId,
+      // eslint-disable-next-line unicorn/no-useless-undefined
+      undefined
     );
   }
 
-  copy(): UndefinedStatement {
-    return new UndefinedStatement(this.id, this.name, this.type, this.uniqueId);
+  mutate(sampler: JavaScriptTestCaseSampler, depth: number): Statement {
+    if (prng.nextBoolean(sampler.deltaMutationProbability)) {
+      // 80%
+      return new UndefinedStatement(
+        this.variableIdentifier,
+        this.typeIdentifier,
+        this.name,
+        prng.uniqueId()
+      );
+    } else {
+      // 20%
+      return sampler.sampleArgument(
+        depth + 1,
+        this.variableIdentifier,
+        this.name
+      );
+    }
   }
 
-  getFlatTypes(): string[] {
-    return ["undefined"];
+  copy(): UndefinedStatement {
+    return new UndefinedStatement(
+      this.variableIdentifier,
+      this.typeIdentifier,
+      this.name,
+      this.uniqueId
+    );
   }
 }

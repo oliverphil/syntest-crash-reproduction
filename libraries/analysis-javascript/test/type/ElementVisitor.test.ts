@@ -19,9 +19,8 @@ import { traverse } from "@babel/core";
 import * as chai from "chai";
 
 import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
-
-import { ElementVisitor } from "../../lib/type/discovery/element/ElementVisitor";
 import { Identifier } from "../../lib/type/discovery/element/Element";
+import { ElementVisitor } from "../../lib/type/discovery/element/ElementVisitor";
 
 const expect = chai.expect;
 
@@ -29,8 +28,7 @@ function elementHelper(source: string) {
   const generator = new AbstractSyntaxTreeFactory();
   const ast = generator.convert("", source);
 
-  const visitor = new ElementVisitor("");
-  // @ts-ignore
+  const visitor = new ElementVisitor("", false);
   traverse(ast, visitor);
 
   return visitor.elementMap;
@@ -56,6 +54,7 @@ describe("ElementVisitor test", () => {
     const name1 = elements.filter(
       (element) => (<Identifier>element).name === "name1"
     );
+
     expect(name1.length).to.equal(2);
     expect((<Identifier>name1[0]).bindingId).to.equal(
       (<Identifier>name1[1]).bindingId

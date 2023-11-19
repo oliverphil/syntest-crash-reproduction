@@ -28,18 +28,20 @@ import {
   Node,
   NodeType,
 } from "@syntest/cfg";
-import { getLogger } from "@syntest/logging";
+import { getLogger, Logger } from "@syntest/logging";
 
 export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  protected static override LOGGER: any;
+  protected static override LOGGER: Logger;
 
   private _nodesList: Node[];
   private _nodes: Map<string, Node>;
   private _edges: Edge[];
 
-  private _breakNodesStack: Set<string>[];
-  private _continueNodesStack: Set<string>[];
+  private _labeledBreakNodes: Map<string, Set<string>>;
+  private _labeledContinueNodes: Map<string, Set<string>>;
+
+  private _regularBreakNodesStack: Set<string>[];
+  private _regularContinueNodesStack: Set<string>[];
   private _returnNodes: Set<string>;
   private _throwNodes: Set<string>;
 
@@ -96,15 +98,27 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       );
     }
 
-    if (this._breakNodesStack.length > 0) {
+    if (this._regularBreakNodesStack.length > 0) {
       ControlFlowGraphVisitor.LOGGER.warn(
-        `Found ${this._breakNodesStack.length} break node stacks that are not connected to a loop`
+        `Found ${this._regularBreakNodesStack.length} break node stacks that are not connected to a loop`
       );
     }
 
-    if (this._continueNodesStack.length > 0) {
+    if (this._regularContinueNodesStack.length > 0) {
       ControlFlowGraphVisitor.LOGGER.warn(
-        `Found ${this._continueNodesStack.length} continue node stacks that are not connected to a loop`
+        `Found ${this._regularContinueNodesStack.length} continue node stacks that are not connected to a loop`
+      );
+    }
+
+    if (this._labeledBreakNodes.size > 0) {
+      ControlFlowGraphVisitor.LOGGER.warn(
+        `Found ${this._labeledBreakNodes.size} break node labels that are not connected to a label exit`
+      );
+    }
+
+    if (this._labeledContinueNodes.size > 0) {
+      ControlFlowGraphVisitor.LOGGER.warn(
+        `Found ${this._labeledContinueNodes.size} continue node labels that are not connected to a label exit`
       );
     }
 
@@ -127,16 +141,18 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     };
   }
 
-  constructor(filePath: string) {
-    super(filePath);
+  constructor(filePath: string, syntaxForgiving: boolean) {
+    super(filePath, syntaxForgiving);
     ControlFlowGraphVisitor.LOGGER = getLogger("ControlFlowGraphVisitor");
 
     this._nodesList = [];
     this._nodes = new Map<string, Node>();
     this._edges = [];
 
-    this._breakNodesStack = [];
-    this._continueNodesStack = [];
+    this._labeledBreakNodes = new Map();
+    this._labeledContinueNodes = new Map();
+    this._regularBreakNodesStack = [];
+    this._regularContinueNodesStack = [];
     this._returnNodes = new Set<string>();
     this._throwNodes = new Set<string>();
 
@@ -159,17 +175,21 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
   }
 
   private _getBreakNodes(): Set<string> {
-    if (this._breakNodesStack.length === 0) {
+    if (this._regularBreakNodesStack.length === 0) {
       throw new Error("No break nodes found");
     }
-    return this._breakNodesStack[this._breakNodesStack.length - 1];
+    return this._regularBreakNodesStack[
+      this._regularBreakNodesStack.length - 1
+    ];
   }
 
   private _getContinueNodes(): Set<string> {
-    if (this._continueNodesStack.length === 0) {
+    if (this._regularContinueNodesStack.length === 0) {
       throw new Error("No continue nodes found");
     }
-    return this._continueNodesStack[this._continueNodesStack.length - 1];
+    return this._regularContinueNodesStack[
+      this._regularContinueNodesStack.length - 1
+    ];
   }
 
   private _getLocation(path: NodePath<t.Node>): Location {
@@ -224,10 +244,11 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       );
     }
 
-    const startLine = (<{ line: number }>(<unknown>path.node.loc.end)).line;
-    const startColumn = (<{ column: number }>(<unknown>path.node.loc.end))
+    const startLine = (<{ line: number }>(<unknown>path.node.loc.start)).line;
+    const startColumn = (<{ column: number }>(<unknown>path.node.loc.start))
       .column;
-    const startIndex = (<{ index: number }>(<unknown>path.node.loc.end)).index;
+    const startIndex = (<{ index: number }>(<unknown>path.node.loc.start))
+      .index;
     const endLine = (<{ line: number }>(<unknown>path.node.loc.end)).line;
     const endColumn = (<{ column: number }>(<unknown>path.node.loc.end)).column;
     const endIndex = (<{ index: number }>(<unknown>path.node.loc.end)).index;
@@ -255,9 +276,9 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
           id: id,
           location: {
             start: {
-              line: location.end.line,
-              column: location.end.column,
-              index: location.end.index,
+              line: location.start.line,
+              column: location.start.column,
+              index: location.start.index,
             },
             end: {
               line: location.end.line,
@@ -278,46 +299,6 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._nodesList.push(node);
 
     return node;
-  }
-
-  private _generalNode: (
-    path: NodePath<
-      t.Statement | t.Declaration | t.Expression | t.VariableDeclarator
-    >
-  ) => void = (path) => {
-    if (this._isSpecial(path)) {
-      return;
-    }
-
-    const node = this._createNode(path);
-
-    this._connectToParents(node);
-    this._currentParents = [node.id];
-
-    path.skip();
-  };
-
-  private _isSpecial(path: NodePath): boolean {
-    return (
-      path.isFunction() ||
-      path.isClass() ||
-      path.isConditional() ||
-      path.isLoop() ||
-      path.isBlock() ||
-      // terminating statements
-      path.isBreakStatement() ||
-      path.isContinueStatement() ||
-      path.isReturnStatement() ||
-      path.isThrowStatement() ||
-      // exports
-      path.isExportAllDeclaration() ||
-      path.isExportDeclaration() ||
-      path.isExportDefaultDeclaration() ||
-      path.isExportDefaultSpecifier() ||
-      path.isExportNamedDeclaration() ||
-      path.isExportNamespaceSpecifier() ||
-      path.isExportSpecifier()
-    );
   }
 
   private _createEdge(
@@ -384,8 +365,10 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       this._currentParents = [node.id];
     }
 
-    const subVisitor = new ControlFlowGraphVisitor(this.filePath);
-    // @ts-ignore
+    const subVisitor = new ControlFlowGraphVisitor(
+      this.filePath,
+      this.syntaxForgiving
+    );
     path.traverse(subVisitor);
 
     if (!subVisitor._nodes.has("ENTRY")) {
@@ -499,6 +482,62 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     path.skip();
   };
 
+  // labels
+  public LabeledStatement: (path: NodePath<t.LabeledStatement>) => void = (
+    path
+  ) => {
+    ControlFlowGraphVisitor.LOGGER.debug(
+      `Entering LabeledStatement at ${this._getNodeId(path)}`
+    );
+
+    const label = path.get("label").node.name;
+
+    this._labeledBreakNodes.set(label, new Set());
+    this._labeledContinueNodes.set(label, new Set());
+
+    const labelNode = this._createNode(path);
+    this._connectToParents(labelNode);
+
+    // body
+    this._currentParents = [labelNode.id];
+    const beforeSize = this._nodes.size;
+    path.get("body").visit();
+
+    // check if something was created
+    if (beforeSize === this._nodes.size) {
+      // empty body
+      // create placeholder node
+      const placeholderNode = this._createPlaceholderNode(path.get("body"));
+      this._connectToParents(placeholderNode);
+      this._currentParents = [placeholderNode.id];
+    }
+
+    // exit
+    const labelExit = this._createPlaceholderNode(path, true);
+
+    // connect all break nodes to exit
+    this._currentParents.push(...this._labeledBreakNodes.get(label));
+    this._connectToParents(labelExit);
+    this._currentParents = [labelExit.id];
+    // connect all continue nodes to label entry
+    for (const continueNode of this._labeledContinueNodes.get(label)) {
+      this._edges.push(
+        this._createEdge(
+          this._nodes.get(continueNode),
+          labelNode,
+          EdgeType.BACK_EDGE
+        )
+      );
+    }
+
+    // remove labeled break/continues
+    this._labeledBreakNodes.delete(label);
+    this._labeledContinueNodes.delete(label);
+
+    path.skip();
+  };
+
+  // loops
   public DoWhileStatement: (path: NodePath<t.DoWhileStatement>) => void = (
     path
   ) => {
@@ -510,8 +549,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._connectToParents(doWhileNode);
     this._currentParents = [doWhileNode.id];
 
-    this._breakNodesStack.push(new Set());
-    this._continueNodesStack.push(new Set());
+    this._regularBreakNodesStack.push(new Set());
+    this._regularContinueNodesStack.push(new Set());
 
     const size = this._nodesList.length;
     // body
@@ -528,20 +567,18 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     }
 
     // loop
-    const loopNode = this._createNode(path.get("test")); // or path.get("test") ??
-    // TODO test
-
+    const loopNode = this._createNode(path.get("test"));
     this._connectToParents(loopNode);
 
     // consequent
+    this._currentParents = [loopNode.id];
+    this._edgeType = EdgeType.CONDITIONAL_TRUE;
+    const consequent = this._createPlaceholderNode(path.get("test")); // bit of a hack to use the test
+    this._connectToParents(consequent);
+
     // the back edge
     this._edges.push(
-      this._createEdge(
-        loopNode,
-        firstBodyNode,
-        EdgeType.CONDITIONAL_TRUE,
-        EdgeType.BACK_EDGE
-      )
+      this._createEdge(consequent, firstBodyNode, EdgeType.BACK_EDGE)
     );
 
     // false
@@ -555,17 +592,16 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
-    this._currentParents.push(...this._breakNodesStack.pop());
+    this._currentParents.push(...this._regularBreakNodesStack.pop());
     this._connectToParents(loopExit);
     this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test
-    for (const continueNode of this._continueNodesStack.pop()) {
+    for (const continueNode of this._regularContinueNodesStack.pop()) {
       this._edges.push(
         this._createEdge(
           this._nodes.get(continueNode),
           loopNode,
-          EdgeType.BACK_EDGE,
           EdgeType.BACK_EDGE
         )
       );
@@ -585,8 +621,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._connectToParents(whileNode);
     this._currentParents = [whileNode.id];
 
-    this._breakNodesStack.push(new Set());
-    this._continueNodesStack.push(new Set());
+    this._regularBreakNodesStack.push(new Set());
+    this._regularContinueNodesStack.push(new Set());
 
     const loopNode = this._createNode(path.get("test"));
 
@@ -622,17 +658,16 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
-    this._currentParents.push(...this._breakNodesStack.pop());
+    this._currentParents.push(...this._regularBreakNodesStack.pop());
     this._connectToParents(loopExit);
     this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test entry
-    for (const continueNode of this._continueNodesStack.pop()) {
+    for (const continueNode of this._regularContinueNodesStack.pop()) {
       this._edges.push(
         this._createEdge(
           this._nodes.get(continueNode),
           loopNode,
-          EdgeType.BACK_EDGE,
           EdgeType.BACK_EDGE
         )
       );
@@ -650,8 +685,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._connectToParents(forNode);
     this._currentParents = [forNode.id];
 
-    this._breakNodesStack.push(new Set());
-    this._continueNodesStack.push(new Set());
+    this._regularBreakNodesStack.push(new Set());
+    this._regularContinueNodesStack.push(new Set());
 
     // init
     if (path.has("init")) {
@@ -668,20 +703,16 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     }
 
     // test
-    if (!path.has("test")) {
-      // unsupported
-      throw new Error(
-        `ForStatement test not implemented at ${this._getNodeId(path)}`
-      );
+    let testNode;
+    if (path.has("test")) {
+      testNode = this._createNode(path.get("test"));
+      this._connectToParents(testNode);
+      this._currentParents = [testNode.id];
+      // true
+      this._edgeType = EdgeType.CONDITIONAL_TRUE;
     }
 
-    const testNode = this._createNode(path.get("test"));
-    this._connectToParents(testNode);
-    this._currentParents = [testNode.id];
-
-    // true
     // body
-    this._edgeType = EdgeType.CONDITIONAL_TRUE;
     let beforeSize = this._nodes.size;
     path.get("body").visit();
 
@@ -695,45 +726,45 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     }
 
     // update
-    if (!path.has("update")) {
-      // unsupported
-      throw new Error(
-        `ForStatement update not implemented at ${this._getNodeId(path)}`
-      );
-    }
+    if (path.has("update")) {
+      beforeSize = this._nodesList.length;
+      path.get("update").visit();
 
-    beforeSize = this._nodesList.length;
-    path.get("update").visit();
-
-    if (beforeSize === this._nodesList.length) {
-      throw new Error(`No node was added for the update part of the for loop,`);
+      if (beforeSize === this._nodesList.length) {
+        throw new Error(
+          `No node was added for the update part of the for loop,`
+        );
+      }
     }
     // connect to test
-    this._edgeType = EdgeType.BACK_EDGE;
-    this._connectToParents(testNode);
+    if (path.has("test")) {
+      this._edgeType = EdgeType.BACK_EDGE;
+      this._connectToParents(testNode);
+      // false
+      this._currentParents = [testNode.id];
+      this._edgeType = EdgeType.CONDITIONAL_FALSE;
 
-    // false
-    this._currentParents = [testNode.id];
-    this._edgeType = EdgeType.CONDITIONAL_FALSE;
-    const alternate = this._createPlaceholderNode(path);
-    this._connectToParents(alternate);
+      const alternate = this._createPlaceholderNode(path);
+      this._connectToParents(alternate);
+      this._currentParents = [alternate.id];
+    } else {
+      this._currentParents = [];
+    }
 
     // exit
-    this._currentParents = [alternate.id];
     const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
-    this._currentParents.push(...this._breakNodesStack.pop());
+    this._currentParents.push(...this._regularBreakNodesStack.pop());
     this._connectToParents(loopExit);
     this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test
-    for (const continueNode of this._continueNodesStack.pop()) {
+    for (const continueNode of this._regularContinueNodesStack.pop()) {
       this._edges.push(
         this._createEdge(
           this._nodes.get(continueNode),
           testNode,
-          EdgeType.BACK_EDGE,
           EdgeType.BACK_EDGE
         )
       );
@@ -752,8 +783,9 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const forInNode = this._createNode(path);
     this._connectToParents(forInNode);
     this._currentParents = [forInNode.id];
-    this._breakNodesStack.push(new Set());
-    this._continueNodesStack.push(new Set());
+
+    this._regularBreakNodesStack.push(new Set());
+    this._regularContinueNodesStack.push(new Set());
 
     if (!path.has("left")) {
       // unsupported
@@ -807,17 +839,16 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
-    this._currentParents.push(...this._breakNodesStack.pop());
+    this._currentParents.push(...this._regularBreakNodesStack.pop());
     this._connectToParents(loopExit);
     this._currentParents = [loopExit.id];
 
     // connect all continue nodes to test
-    for (const continueNode of this._continueNodesStack.pop()) {
+    for (const continueNode of this._regularContinueNodesStack.pop()) {
       this._edges.push(
         this._createEdge(
           this._nodes.get(continueNode),
           testNode,
-          EdgeType.BACK_EDGE,
           EdgeType.BACK_EDGE
         )
       );
@@ -837,8 +868,8 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._connectToParents(forOfNode);
     this._currentParents = [forOfNode.id];
 
-    this._breakNodesStack.push(new Set());
-    this._continueNodesStack.push(new Set());
+    this._regularBreakNodesStack.push(new Set());
+    this._regularContinueNodesStack.push(new Set());
 
     if (!path.has("left")) {
       // unsupported
@@ -891,17 +922,16 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const loopExit = this._createPlaceholderNode(path, true);
 
     // connect all break nodes to loop exit
-    this._currentParents.push(...this._breakNodesStack.pop());
+    this._currentParents.push(...this._regularBreakNodesStack.pop());
     this._connectToParents(loopExit);
     this._currentParents = [loopExit.id];
 
     // connect all continue nodes to loop entry
-    for (const continueNode of this._continueNodesStack.pop()) {
+    for (const continueNode of this._regularContinueNodesStack.pop()) {
       this._edges.push(
         this._createEdge(
           this._nodes.get(continueNode),
           testNode,
-          EdgeType.BACK_EDGE,
           EdgeType.BACK_EDGE
         )
       );
@@ -917,7 +947,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       `Entering SwitchStatement at ${this._getNodeId(path)}`
     );
 
-    this._breakNodesStack.push(new Set());
+    this._regularBreakNodesStack.push(new Set());
 
     const switchNode = this._createNode(path);
     this._connectToParents(switchNode);
@@ -926,6 +956,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const testNode = this._createNode(path.get("discriminant"));
     this._connectToParents(testNode);
     this._currentParents = [testNode.id];
+    let fallThrough: string[] = [];
 
     for (const caseNode of path.get("cases")) {
       if (caseNode.has("test")) {
@@ -938,7 +969,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         this._edgeType = EdgeType.CONDITIONAL_TRUE;
         const consequentNode = this._createNode(caseNode);
         this._connectToParents(consequentNode);
-        this._currentParents = [consequentNode.id];
+        this._currentParents = [consequentNode.id, ...fallThrough];
 
         if (caseNode.get("consequent").length > 0) {
           for (const consequentNode of caseNode.get("consequent")) {
@@ -947,13 +978,15 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         }
 
         const trueParents = this._currentParents; // if there is a break these should be empty
+        fallThrough = [...trueParents]; // fall through
+
         // alternate
         // placeholder
         this._edgeType = EdgeType.CONDITIONAL_FALSE;
         this._currentParents = [caseTestNode.id];
         const alternateNode = this._createPlaceholderNode(caseNode);
         this._connectToParents(alternateNode);
-        this._currentParents = [alternateNode.id, ...trueParents]; // normal + fall through case
+        this._currentParents = [alternateNode.id]; // normal
       } else {
         // default
         if (caseNode.get("consequent").length === 0) {
@@ -969,9 +1002,17 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         }
       }
     }
+    // exit
+    const switchExit = this._createPlaceholderNode(path, true);
 
-    // connect all break nodes to switch exit
-    this._currentParents.push(...this._breakNodesStack.pop());
+    this._currentParents.push(
+      // connect fall through nodes to switch exit
+      ...fallThrough,
+      // connect all break nodes to switch exit
+      ...this._regularBreakNodesStack.pop()
+    );
+    this._connectToParents(switchExit);
+    this._currentParents = [switchExit.id];
 
     path.skip();
   };
@@ -990,8 +1031,21 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
 
     const node = this._createNode(path);
     this._connectToParents(node);
-
-    this._getBreakNodes().add(node.id);
+    if (path.has("label")) {
+      // labeled break node
+      const label = path.get("label").node.name;
+      if (!this._labeledBreakNodes.has(label)) {
+        throw new Error(
+          `Label ${label} does not exist for break node at ${this._getNodeId(
+            path
+          )}`
+        );
+      }
+      this._labeledBreakNodes.get(label).add(node.id);
+    } else {
+      // regular break node
+      this._getBreakNodes().add(node.id);
+    }
     this._currentParents = [];
     path.skip();
   };
@@ -1006,7 +1060,21 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     const node = this._createNode(path);
     this._connectToParents(node);
 
-    this._getContinueNodes().add(node.id);
+    if (path.has("label")) {
+      // labeled continue node
+      const label = path.get("label").node.name;
+      if (!this._labeledContinueNodes.has(label)) {
+        throw new Error(
+          `Label ${label} does not exist for continue node at ${this._getNodeId(
+            path
+          )}`
+        );
+      }
+      this._labeledContinueNodes.get(label).add(node.id);
+    } else {
+      // regular continue node
+      this._getContinueNodes().add(node.id);
+    }
     this._currentParents = [];
     path.skip();
   };

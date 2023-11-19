@@ -17,51 +17,68 @@
  */
 
 import { existsSync, lstatSync } from "node:fs";
-import * as path from "node:path";
 
 import * as t from "@babel/types";
 import { RootContext as CoreRootContext } from "@syntest/analysis";
+import { getLogger, Logger } from "@syntest/logging";
+import TypedEmitter from "typed-emitter";
 
 import { AbstractSyntaxTreeFactory } from "./ast/AbstractSyntaxTreeFactory";
 import { ControlFlowGraphFactory } from "./cfg/ControlFlowGraphFactory";
+import { ConstantPool } from "./constant/ConstantPool";
+import { ConstantPoolFactory } from "./constant/ConstantPoolFactory";
+import { ConstantPoolManager } from "./constant/ConstantPoolManager";
 import { DependencyFactory } from "./dependency/DependencyFactory";
+import { Events } from "./Events";
 import { Export } from "./target/export/Export";
-import { TargetFactory } from "./target/TargetFactory";
-import { TypeModelFactory } from "./type/resolving/TypeModelFactory";
-import { readFile } from "./utils/fileSystem";
 import { ExportFactory } from "./target/export/ExportFactory";
-import { TypeExtractor } from "./type/discovery/TypeExtractor";
-import { TypeModel } from "./type/resolving/TypeModel";
+import { TargetFactory } from "./target/TargetFactory";
 import { Element } from "./type/discovery/element/Element";
 import { DiscoveredObjectType } from "./type/discovery/object/DiscoveredType";
 import { Relation } from "./type/discovery/relation/Relation";
-import {createReadStream, readFileSync, writeFileSync} from "fs";
-import * as readline from "readline";
-import {InferenceTypeModelFactory} from "./type/resolving/InferenceTypeModelFactory";
+import { TypeExtractor } from "./type/discovery/TypeExtractor";
+import { TypeModel } from "./type/resolving/TypeModel";
+import { TypeModelFactory } from "./type/resolving/TypeModelFactory";
+import { TypePool } from "./type/resolving/TypePool";
+import { readFile } from "./utils/fileSystem";
 
 export class RootContext extends CoreRootContext<t.Node> {
+  protected static LOGGER: Logger;
+
   protected _exportFactory: ExportFactory;
   protected _typeExtractor: TypeExtractor;
   protected _typeResolver: TypeModelFactory;
 
-  protected _elementMap: Map<string, Element>;
-  protected _relationMap: Map<string, Relation>;
-  protected _objectMap: Map<string, DiscoveredObjectType>;
+  protected _constantPoolFactory: ConstantPoolFactory;
+
+  protected _targetFiles: Set<string>;
+  protected _analysisFiles: Set<string>;
+
+  // filepath -> id -> element
+  protected _elementMap: Map<string, Map<string, Element>>;
+  // filepath -> id -> relation
+  protected _relationMap: Map<string, Map<string, Relation>>;
+  // filepath -> id -> object
+  protected _objectMap: Map<string, Map<string, DiscoveredObjectType>>;
 
   protected _typeModel: TypeModel;
+  protected _typePool: TypePool;
 
   // Mapping: filepath -> target name -> Exports
   protected _exportMap: Map<string, Export[]>;
 
   constructor(
     rootPath: string,
+    targetFiles: Set<string>,
+    analysisFiles: Set<string>,
     abstractSyntaxTreeFactory: AbstractSyntaxTreeFactory,
     controlFlowGraphFactory: ControlFlowGraphFactory,
     targetFactory: TargetFactory,
     dependencyFactory: DependencyFactory,
     exportFactory: ExportFactory,
     typeExtractor: TypeExtractor,
-    typeResolver: TypeModelFactory
+    typeResolver: TypeModelFactory,
+    constantPoolFactory: ConstantPoolFactory
   ) {
     super(
       rootPath,
@@ -71,11 +88,13 @@ export class RootContext extends CoreRootContext<t.Node> {
       targetFactory,
       dependencyFactory
     );
+    RootContext.LOGGER = getLogger("RootContext");
+    this._targetFiles = targetFiles;
+    this._analysisFiles = analysisFiles;
     this._exportFactory = exportFactory;
     this._typeExtractor = typeExtractor;
     this._typeResolver = typeResolver;
-
-    this._exportMap = new Map();
+    this._constantPoolFactory = constantPoolFactory;
   }
 
   private extractedTypes = [
@@ -92,136 +111,9 @@ export class RootContext extends CoreRootContext<t.Node> {
     '_typeResolver'
   ]
 
-  saveExtractedTypes(path) {
-    for (const map of this.extractedTypes) {
-      for (const entry of this[map].entries()) {
-        try {
-          writeFileSync(`${path}/rootContextExtractedTypes_${map}.json`,
-              JSON.stringify(entry, (key, value) => {
-                if (value instanceof Map) {
-                  return {
-                    dataType: 'Map',
-                    value: [...value],
-                  };
-                } else {
-                  return value;
-                }
-              }) + '\n', { flag: 'a+' }
-          );
-        } catch (e) {
-          console.log(e);
-          break;
-        }
-      }
-    }
-  }
-
-  saveResolvedTypes(path) {
-    for (const obj of this.resolvedTypes) {
-      for (const entry of Object.entries(this[obj])) {
-        try {
-          writeFileSync(`${path}/rootContextResolvedTypes_${obj}.json`,
-              JSON.stringify(entry, (key, value) => {
-                if (value instanceof Map) {
-                  return {
-                    dataType: 'Map',
-                    value: [...value],
-                  };
-                } else if (value instanceof Set) {
-                  return {
-                    dataType: 'Set',
-                    value: [...value]
-                  }
-                } else {
-                  return value;
-                }
-              }) + '\n', { flag: 'a+' }
-          );
-        } catch (e) {
-          console.log(e);
-        }
-      }
-    }
-  }
-
-  async loadExtractedTypes(path) {
-    try {
-      for (const map of this.extractedTypes) {
-        const obj = new Map();
-        const rl = readline.createInterface({
-          input: createReadStream(`${path}/rootContextExtractedTypes_${map}.json`),
-          crlfDelay: Infinity
-        })
-
-        rl.on('line', (line) => {
-          const result = JSON.parse(line, (key, value) => {
-            if (typeof value === 'object' && value !== null) {
-              if (value.dataType === 'Map') {
-                return new Map(value.value);
-              }
-            }
-            return value;
-          });
-          obj.set(result[0], result[1]);
-        });
-        this[map] = obj;
-       try {
-         await new Promise((resolve, reject) => {
-           rl.once('close', resolve);
-           rl.on('error', reject);
-         });
-       } catch {
-         //
-       }
-      }
-    } catch {
-      //
-    }
-
-    this._typeExtractor.elementMap = this._elementMap;
-    this._typeExtractor.relationMap = this._relationMap;
-    this._typeExtractor.objectMap = this._objectMap;
-  }
-
-  async loadResolvedTypes(path) {
-    for (const map of this.resolvedTypes) {
-      let obj = {};
-      if (map === '_typeModel') {
-        obj = Object.setPrototypeOf({}, TypeModel.prototype);
-      } else {
-        obj = Object.setPrototypeOf({}, InferenceTypeModelFactory.prototype);
-      }
-      const rl = readline.createInterface({
-        input: createReadStream(`${path}/rootContextResolvedTypes_${map}.json`),
-        crlfDelay: Infinity
-      })
-
-      rl.on('line', (line) => {
-        const result = JSON.parse(line, (key, value) => {
-          if (typeof value === 'object' && value !== null) {
-            if (value.dataType === 'Map') {
-              return new Map(value.value);
-            }
-            if (value.dataType === 'Set') {
-              return new Set(value.value);
-            }
-          }
-          return value;
-        });
-        obj[result[0]] = result[1];
-      });
-      this[map] = obj;
-
-      await new Promise(resolve => rl.once('close', resolve));
-    }
-    (<InferenceTypeModelFactory>this._typeResolver).typeModel = this._typeModel;
-  }
-
   get rootPath(): string {
     return this._rootPath;
   }
-
-  // TODO something with the types
 
   override getSource(filePath: string) {
     let absoluteTargetPath = this.resolvePath(filePath);
@@ -259,6 +151,11 @@ export class RootContext extends CoreRootContext<t.Node> {
     const absolutePath = this.resolvePath(filePath);
 
     if (!this._exportMap.has(absolutePath)) {
+      (<TypedEmitter<Events>>process).emit(
+        "exportExtractionStart",
+        this,
+        absolutePath
+      );
       this._exportMap.set(
         absolutePath,
         this._exportFactory.extract(
@@ -266,358 +163,209 @@ export class RootContext extends CoreRootContext<t.Node> {
           this.getAbstractSyntaxTree(absolutePath)
         )
       );
+      (<TypedEmitter<Events>>process).emit(
+        "exportExtractionComplete",
+        this,
+        absolutePath
+      );
     }
 
     return this._exportMap.get(absolutePath);
   }
 
-  extractTypes(): void {
-    if (!this._elementMap || !this._relationMap || !this._objectMap) {
-      this._typeExtractor.extractAll(this);
-      this._elementMap = this._typeExtractor.elementMap;
-      this._relationMap = this._typeExtractor.relationMap;
-      this._objectMap = this._typeExtractor.objectMap;
+  getAllExports(): Map<string, Export[]> {
+    if (!this._exportMap) {
+      this._exportMap = new Map();
+
+      for (const filepath of this._analysisFiles) {
+        this._exportMap.set(filepath, this.getExports(filepath));
+      }
     }
+    return this._exportMap;
+  }
+
+  getElements(filepath: string) {
+    const absolutePath = this.resolvePath(filepath);
+
+    if (!this._elementMap.has(absolutePath)) {
+      (<TypedEmitter<Events>>process).emit(
+        "elementExtractionStart",
+        this,
+        absolutePath
+      );
+      const elementMap = this._typeExtractor.extractElements(
+        absolutePath,
+        this.getAbstractSyntaxTree(absolutePath)
+      );
+
+      this._elementMap.set(absolutePath, elementMap);
+      (<TypedEmitter<Events>>process).emit(
+        "elementExtractionComplete",
+        this,
+        absolutePath
+      );
+    }
+
+    return this._elementMap.get(absolutePath);
+  }
+
+  getAllElements() {
+    if (!this._elementMap) {
+      this._elementMap = new Map();
+
+      for (const filepath of this._analysisFiles) {
+        this._elementMap.set(filepath, this.getElements(filepath));
+      }
+    }
+    return this._elementMap;
+  }
+
+  getRelations(filepath: string) {
+    const absolutePath = this.resolvePath(filepath);
+
+    if (!this._relationMap.has(absolutePath)) {
+      (<TypedEmitter<Events>>process).emit(
+        "relationExtractionStart",
+        this,
+        absolutePath
+      );
+      const relationsMap = this._typeExtractor.extractRelations(
+        absolutePath,
+        this.getAbstractSyntaxTree(absolutePath)
+      );
+
+      this._relationMap.set(absolutePath, relationsMap);
+      (<TypedEmitter<Events>>process).emit(
+        "relationExtractionComplete",
+        this,
+        absolutePath
+      );
+    }
+
+    return this._relationMap.get(absolutePath);
+  }
+
+  getAllRelations() {
+    if (!this._relationMap) {
+      this._relationMap = new Map();
+
+      for (const filepath of this._analysisFiles) {
+        this._relationMap.set(filepath, this.getRelations(filepath));
+      }
+    }
+    return this._relationMap;
+  }
+
+  getObjectTypes(filepath: string) {
+    const absolutePath = this.resolvePath(filepath);
+
+    if (!this._objectMap.has(absolutePath)) {
+      (<TypedEmitter<Events>>process).emit(
+        "objectTypeExtractionStart",
+        this,
+        absolutePath
+      );
+      const objectsMap = this._typeExtractor.extractObjectTypes(
+        absolutePath,
+        this.getAbstractSyntaxTree(absolutePath)
+      );
+
+      this._objectMap.set(absolutePath, objectsMap);
+      (<TypedEmitter<Events>>process).emit(
+        "objectTypeExtractionComplete",
+        this,
+        absolutePath
+      );
+    }
+
+    return this._objectMap.get(absolutePath);
+  }
+
+  getAllObjectTypes() {
+    if (!this._objectMap) {
+      this._objectMap = new Map();
+
+      for (const filepath of this._analysisFiles) {
+        this._objectMap.set(filepath, this.getObjectTypes(filepath));
+      }
+    }
+    return this._objectMap;
   }
 
   resolveTypes(): void {
+    // TODO allow sub selections of files (do not consider entire context)
+    if (!this._elementMap) {
+      this.getAllElements();
+    }
+    if (!this._relationMap) {
+      this.getAllRelations();
+    }
+    if (!this._objectMap) {
+      this.getAllObjectTypes();
+    }
+    if (!this._exportMap) {
+      this.getAllExports();
+    }
+
     if (!this._typeModel) {
-      this.extractTypes();
+      (<TypedEmitter<Events>>process).emit("typeResolvingStart", this);
       this._typeModel = this._typeResolver.resolveTypes(
         this._elementMap,
         this._relationMap
-      ); //, this._objectMap);
+      );
+      this._typePool = new TypePool(this._objectMap, this._exportMap);
+      (<TypedEmitter<Events>>process).emit("typeResolvingComplete", this);
     }
   }
 
   getTypeModel(): TypeModel {
     if (!this._typeModel) {
-      this.extractTypes();
       this.resolveTypes();
-      // or should this always be done beforehand?
     }
 
     return this._typeModel;
   }
 
-  // getTargetMap(targetPath: string): Map<string, JavaScriptTargetMetaData> {
-  //   const absoluteTargetPath = path.resolve(targetPath);
-
-  //   if (!this._targetMap.has(absoluteTargetPath)) {
-  //     const targetAST = this.getAST(absoluteTargetPath);
-  //     const { targetMap, functionMap } = this.targetMapGenerator.generate(
-  //       absoluteTargetPath,
-  //       targetAST
-  //     );
-
-  //     const exports = this.getExports(targetPath);
-
-  //     const finalTargetMap = new Map<string, JavaScriptTargetMetaData>();
-
-  //     for (const key of targetMap.keys()) {
-  //       const name = targetMap.get(key).name;
-  //       const export_ = exports.find((export_) => export_.name === name);
-
-  //       if (!export_) {
-  //         // No export found so we cannot import it and thus not test it
-  //         continue;
-  //       }
-
-  //       if (
-  //         export_.type === ExportType.const &&
-  //         functionMap.get(key).size === 0
-  //       ) {
-  //         throw new Error(
-  //           `Target cannot be constant: ${name} -> ${JSON.stringify(export_)}`
-  //         );
-  //       }
-
-  //       let isPrototypeClass = false;
-  //       for (const function_ of functionMap.get(key).values()) {
-  //         if (function_.isConstructor) {
-  //           isPrototypeClass = true;
-  //           break;
-  //         }
-  //       }
-
-  //       // let isClass = false
-  //       // if (functionMap.get(key).size > 1) {
-  //       //   isClass = true
-  //       // }
-
-  //       // threat everything as a function if we don't know
-  //       finalTargetMap.set(key, {
-  //         name: name,
-  //         type:
-  //           export_.type === ExportType.class || isPrototypeClass
-  //             ? SubjectType.class
-  //             : export_.type === ExportType.const
-  //             ? SubjectType.object
-  //             : SubjectType.function,
-  //         export: export_,
-  //       });
-  //     }
-
-  //     this._targetMap.set(absoluteTargetPath, finalTargetMap);
-  //     this._functionMaps.set(absoluteTargetPath, functionMap);
-  //   }
-
-  //   return this._targetMap.get(absoluteTargetPath);
-  // }
-
-  // getDependencies(targetPath: string): Export[] {
-  //   const absoluteTargetPath = path.resolve(targetPath);
-
-  //   if (!this._dependencyMaps.has(absoluteTargetPath)) {
-  //     // Find all external imports in the file under test
-  //     const imports = this.importGenerator.generate(
-  //       absoluteTargetPath,
-  //       this.getAST(targetPath)
-  //     );
-
-  //     // For each external import scan the file for libraries with exported functions
-  //     const libraries: Export[] = [];
-  //     for (const importPath of imports) {
-  //       // Full path to the imported file
-  //       const pathLibrary = path.join(path.dirname(targetPath), importPath);
-
-  //       // External libraries have a different path!
-  //       try {
-  //         this.getSource(pathLibrary);
-  //       } catch (error) {
-  //         if (error.message.includes("Cannot find source")) {
-  //           // TODO would be nice if we could get the actual path! (node modules)
-  //           continue;
-
-  //           // pathLib = path.join
-  //         } else {
-  //           throw error;
-  //         }
-  //       }
-
-  //       // Scan for libraries with public or external functions
-  //       const exports = this.getExports(pathLibrary);
-
-  //       // Import the found libraries
-  //       // TODO: check for duplicates in libraries
-  //       libraries.push(...exports);
-  //     }
-
-  //     return libraries;
-
-  //     // this._dependencyMaps.set(targetPath, libraries);
-  //   }
-
-  //   return this._dependencyMaps.get(absoluteTargetPath);
-  // }
-
-  // scanTargetRootDirectory(targetRootDirectory: string): void {
-  //   const absoluteRootPath = path.resolve(targetRootDirectory);
-
-  //   // TODO remove the filters
-  //   const files = getAllFiles(absoluteRootPath, ".js").filter(
-  //     (x) =>
-  //       !x.includes("/test/") &&
-  //       !x.includes(".test.js") &&
-  //       !x.includes("node_modules")
-  //   ); // maybe we should also take those into account
-
-  //   const objects: ComplexType[] = [];
-  //   const objectGenerator = new ObjectGenerator();
-
-  //   for (const file of files) {
-  //     const exports = this.getExports(file);
-  //     objects.push(
-  //       ...objectGenerator.generate(
-  //         file,
-  //         this.getAbstractSyntaxTree(file),
-  //         exports
-  //       )
-  //     );
-  //   }
-
-  //   // standard stuff
-  //   // function https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
-  //   objects.push(
-  //     {
-  //       name: "function",
-  //       properties: new Set([
-  //         "arguments",
-  //         "caller",
-  //         "displayName",
-  //         "length",
-  //         "name",
-  //       ]),
-  //       functions: new Set(["apply", "bind", "call", "toString"]),
-  //       propertyType: new Map<string, TypeProbability>([
-  //         ["arguments", new TypeProbability([[TypeEnum.ARRAY, 1, undefined]])],
-  //         ["caller", new TypeProbability([[TypeEnum.FUNCTION, 1, undefined]])],
-  //         [
-  //           "displayName",
-  //           new TypeProbability([[TypeEnum.STRING, 1, undefined]]),
-  //         ],
-  //         ["length", new TypeProbability([[TypeEnum.NUMERIC, 1, undefined]])],
-  //         ["name", new TypeProbability([[TypeEnum.STRING, 1, undefined]])],
-  //       ]),
-  //     },
-
-  //     // array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-  //     {
-  //       name: "array",
-  //       properties: new Set(["length"]),
-  //       functions: new Set([
-  //         "at",
-  //         "concat",
-  //         "copyWithin",
-  //         "entries",
-  //         "fill",
-  //         "filter",
-  //         "find",
-  //         "findIndex",
-  //         "flat",
-  //         "flatMap",
-  //         "includes",
-  //         "indexOf",
-  //         "join",
-  //         "keys",
-  //         "lastIndexOf",
-  //         "map",
-  //         "pop",
-  //         "push",
-  //         "reduce",
-  //         "reduceRight",
-  //         "reverse",
-  //         "shift",
-  //         "slice",
-  //         "toLocaleString",
-  //         "toString",
-  //         "unshift",
-  //         "values",
-  //       ]),
-  //       propertyType: new Map<string, TypeProbability>([
-  //         ["length", new TypeProbability([[TypeEnum.NUMERIC, 1, undefined]])],
-  //       ]),
-  //     },
-
-  //     // string
-  //     {
-  //       name: "string",
-  //       properties: new Set(["length"]),
-  //       functions: new Set([
-  //         "at",
-  //         "charAt",
-  //         "charCodeAt",
-  //         "codePointAt",
-  //         "concat",
-  //         "includes",
-  //         "endsWith",
-  //         "indexOf",
-  //         "lastIndexOf",
-  //         "localeCompare",
-  //         "match",
-  //         "matchAll",
-  //         "normalize",
-  //         "padEnd",
-  //         "padStart",
-  //         "repeat",
-  //         "replace",
-  //         "replaceAll",
-  //         "search",
-  //         "slice",
-  //         "split",
-  //         "startsWith",
-  //         "substring",
-  //         "toLocaleLowerCase",
-  //         "toLocaleUpperCase",
-  //         "toLowerCase",
-  //         "toString",
-  //         "toUpperCase",
-  //         "trim",
-  //         "trimStart",
-  //         "trimEnd",
-  //         "valueOf",
-  //       ]),
-  //       propertyType: new Map<string, TypeProbability>([
-  //         ["length", new TypeProbability([[TypeEnum.NUMERIC, 1, undefined]])],
-  //       ]),
-  //     }
-  //   );
-
-  //   // TODO npm dependencies
-  //   // TODO get rid of duplicates
-
-  //   const finalObjects: ComplexType[] = [];
-
-  //   // eslint-disable-next-line unicorn/consistent-function-scoping
-  //   function eqSet(as: Set<unknown>, bs: Set<unknown>) {
-  //     if (as.size !== bs.size) return false;
-  //     for (const a of as) if (!bs.has(a)) return false;
-  //     return true;
-  //   }
-
-  //   for (const o of objects) {
-  //     if (o.properties.size === 0 && o.functions.size === 0) {
-  //       continue;
-  //     }
-
-  //     const found = finalObjects.find((o2) => {
-  //       return (
-  //         o.export === o2.export && // TODO not sure if you can compare exports like this
-  //         o.name === o2.name &&
-  //         eqSet(o.properties, o2.properties) &&
-  //         eqSet(o.functions, o2.functions)
-  //       );
-  //     });
-
-  //     if (!found) {
-  //       finalObjects.push(o);
-  //     }
-  //   }
-
-  //   const generator = new VariableGenerator();
-  //   const elements: Element[] = [];
-  //   const relations: Relation[] = [];
-  //   const wrapperElementIsRelation: Map<string, Relation> = new Map();
-
-  //   for (const file of files) {
-  //     const [_elements, _relations, _wrapperElementIsRelation] =
-  //       generator.generate(file, this.getAbstractSyntaxTree(file));
-
-  //     elements.push(..._elements);
-  //     relations.push(..._relations);
-
-  //     for (const key of _wrapperElementIsRelation.keys()) {
-  //       wrapperElementIsRelation.set(key, _wrapperElementIsRelation.get(key));
-  //     }
-  //   }
-
-  //   this._typeResolver.resolveTypes(
-  //     elements,
-  //     relations,
-  //     wrapperElementIsRelation,
-  //     finalObjects
-  //   );
-
-  // }
-
-  getElement(id: string): Element {
-    if (!this._elementMap || !this._elementMap.has(id)) {
-      this.extractTypes();
+  getTypePool(): TypePool {
+    if (!this._typePool) {
+      this.resolveTypes();
     }
-    return this._elementMap.get(id);
+
+    return this._typePool;
   }
 
-  getRelation(id: string): Relation {
-    if (!this._relationMap || !this._relationMap.has(id)) {
-      this.extractTypes();
+  // TODO cache
+  private _getContextConstantPool(): ConstantPool {
+    const constantPool = new ConstantPool();
+    for (const filepath of this._analysisFiles) {
+      const ast = this.getAbstractSyntaxTree(filepath);
+      this._constantPoolFactory.extract(filepath, ast, constantPool);
     }
-    return this._relationMap.get(id);
+
+    return constantPool;
   }
 
-  getObject(id: string): DiscoveredObjectType {
-    if (!this._objectMap || !this._objectMap.has(id)) {
-      this.extractTypes();
-    }
-    return this._objectMap.get(id);
+  // TODO cache
+  getConstantPoolManager(filepath: string): ConstantPoolManager {
+    const absolutePath = this.resolvePath(filepath);
+
+    RootContext.LOGGER.info("Extracting constants");
+    const ast = this.getAbstractSyntaxTree(absolutePath);
+
+    const targetConstantPool = this._constantPoolFactory.extract(
+      absolutePath,
+      ast
+    );
+    const contextConstantPool = this._getContextConstantPool();
+    const dynamicConstantPool = new ConstantPool();
+
+    const constantPoolManager = new ConstantPoolManager(
+      targetConstantPool,
+      contextConstantPool,
+      dynamicConstantPool
+    );
+
+    RootContext.LOGGER.info("Extracting constants done");
+    return constantPoolManager;
   }
 }

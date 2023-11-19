@@ -21,6 +21,11 @@ import { VisitState } from "./VisitState";
 import { createHash } from "crypto";
 import { NodePath, template } from "@babel/core";
 import * as t from "@babel/types";
+import { Scope } from "@babel/traverse";
+import {
+  globalVariables,
+  reservedKeywords,
+} from "@syntest/ast-visitor-javascript";
 
 const name = "syntest";
 
@@ -248,17 +253,24 @@ function convertArrowExpression(path) {
   }
 }
 
-function extractAndReplaceVariablesFromTest(test: NodePath) {
+function extractAndReplaceVariablesFromTest(
+  scope: Scope,
+  test: NodePath<t.Expression>
+) {
   const variables = [];
+
+  // the next line is a hack to ensure the test is traversed from the actual test instead of the inner stuff
+  // essentially the wrapper sequence expression is skipped instead of the outer test expression
+  test.replaceWith(t.sequenceExpression([test.node]));
+
   test.traverse(
     {
       Identifier: {
         enter: (p: NodePath<t.Identifier>) => {
           // const newIdentifier = test.scope.generateUidIdentifier('meta')
           if (
-            ["eval", "arguments", "undefined", "NaN", "Infinity"].includes(
-              p.node.name
-            )
+            globalVariables.has(p.node.name) ||
+            reservedKeywords.has(p.node.name)
           ) {
             return;
           }
@@ -269,7 +281,7 @@ function extractAndReplaceVariablesFromTest(test: NodePath) {
       },
       CallExpression: {
         enter: (p) => {
-          const newIdentifier = test.scope.generateUidIdentifier("meta");
+          const newIdentifier = scope.generateUidIdentifier("meta");
 
           variables.push([p.getSource(), newIdentifier.name]);
           p.replaceWith(
@@ -284,7 +296,22 @@ function extractAndReplaceVariablesFromTest(test: NodePath) {
       },
       MemberExpression: {
         enter: (p) => {
-          const newIdentifier = test.scope.generateUidIdentifier("meta");
+          const newIdentifier = scope.generateUidIdentifier("meta");
+
+          variables.push([p.getSource(), newIdentifier.name]);
+          p.replaceWith(
+            t.sequenceExpression([
+              t.assignmentExpression("=", newIdentifier, p.node),
+              newIdentifier,
+            ])
+          );
+
+          p.skip();
+        },
+      },
+      UpdateExpression: {
+        enter: (p) => {
+          const newIdentifier = scope.generateUidIdentifier("meta");
 
           variables.push([p.getSource(), newIdentifier.name]);
           p.replaceWith(
@@ -352,7 +379,7 @@ function coverIfBranches(path) {
   const index = this.cov.newStatement(test.node.loc);
   const increment = this.increase("s", index, null);
   const testAsString = `${test.toString()}`;
-  const variables = extractAndReplaceVariablesFromTest(test);
+  const variables = extractAndReplaceVariablesFromTest(path.scope, test);
   const metaTracker = this.getBranchMetaTracker(
     branch,
     testAsString,
@@ -364,6 +391,14 @@ function coverIfBranches(path) {
   path.insertBefore(
     t.variableDeclaration("let", [
       ...variables
+        // filter duplicates
+        .filter(
+          ([source, identifier], index) =>
+            index ===
+            variables.findIndex(
+              ([source2, identifier2]) => identifier === identifier2
+            )
+        )
         .filter(([source, identifier]) => {
           const binding = path.scope.getBinding(identifier);
           // all identifiers with a binding should be skipped
@@ -428,11 +463,10 @@ function coverLoopBranch(path: NodePath<t.Loop>) {
     const test = (<
       NodePath<t.ForStatement | t.WhileStatement | t.DoWhileStatement>
     >path).get("test");
-
+    const testAsString = `${test.toString()}`;
     const index = this.cov.newStatement(test.node.loc);
     const testIncrement = this.increase("s", index, null);
-    const variables = extractAndReplaceVariablesFromTest(test);
-    const testAsString = `${test.toString()}`;
+    const variables = extractAndReplaceVariablesFromTest(path.scope, test);
     const metaTracker = this.getBranchMetaTracker(
       branch,
       testAsString,
@@ -444,6 +478,14 @@ function coverLoopBranch(path: NodePath<t.Loop>) {
     path.insertBefore(
       t.variableDeclaration("let", [
         ...variables
+          // filter duplicates
+          .filter(
+            ([source, identifier], index) =>
+              index ===
+              variables.findIndex(
+                ([source2, identifier2]) => identifier === identifier2
+              )
+          )
           .filter(([source, identifier]) => {
             const binding = path.scope.getBinding(identifier);
             // all identifiers with a binding should be skipped
@@ -532,7 +574,7 @@ function coverTernary(path: NodePath<t.Conditional>) {
   const testIncrement = this.increase("s", testIndex, null);
 
   const testAsString = `${test.toString()}`;
-  const variables = extractAndReplaceVariablesFromTest(test);
+  const variables = extractAndReplaceVariablesFromTest(path.scope, test);
   const metaTracker = this.getBranchMetaTracker(
     branch,
     testAsString,
@@ -550,6 +592,14 @@ function coverTernary(path: NodePath<t.Conditional>) {
     .insertBefore(
       t.variableDeclaration("let", [
         ...variables
+          // filter duplicates
+          .filter(
+            ([source, identifier], index) =>
+              index ===
+              variables.findIndex(
+                ([source2, identifier2]) => identifier === identifier2
+              )
+          )
           .filter(([source, identifier]) => {
             const binding = path.scope.getBinding(identifier);
             // all identifiers with a binding should be skipped

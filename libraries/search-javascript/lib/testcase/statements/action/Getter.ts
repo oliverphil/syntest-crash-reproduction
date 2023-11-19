@@ -16,22 +16,20 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
 
-import { JavaScriptDecoder } from "../../../testbuilding/JavaScriptDecoder";
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
-import { Decoding, Statement } from "../Statement";
+import { Decoding } from "../Statement";
 
-import { ActionStatement } from "./ActionStatement";
-import { MethodCall } from "./MethodCall";
-import { Setter } from "./Setter";
+import { ClassActionStatement } from "./ClassActionStatement";
+import { ConstructorCall } from "./ConstructorCall";
 
 /**
  * @author Dimitri Stallenberg
  */
-export class Getter extends ActionStatement {
-  private readonly _className: string;
-
+export class Getter extends ClassActionStatement {
   /**
    * Constructor
    * @param identifierDescription the return type options of the function
@@ -40,84 +38,60 @@ export class Getter extends ActionStatement {
    * @param property the name of the property
    */
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
     uniqueId: string,
-    className: string
+    constructor_: ConstructorCall
   ) {
-    super(id, name, type, uniqueId, []);
-    this._classType = "Getter";
-    this._className = className;
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.FUNCTION,
+      uniqueId,
+      [],
+      constructor_
+    );
   }
 
-  mutate(
-    sampler: JavaScriptTestCaseSampler,
-    depth: number
-  ): Getter | Setter | MethodCall {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleClassCall(depth, this._className);
-    }
-
-    const arguments_ = this.args.map((a: Statement) => a.copy());
-
-    if (arguments_.length > 0) {
-      const index = prng.nextInt(0, arguments_.length - 1);
-
-      arguments_[index] = arguments_[index].mutate(sampler, depth + 1);
-    }
+  mutate(sampler: JavaScriptTestCaseSampler, depth: number): Getter {
+    const constructor_ = this.constructor_.mutate(sampler, depth + 1);
 
     return new Getter(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      this.className
+      constructor_
     );
   }
 
   copy(): Getter {
     return new Getter(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       this.uniqueId,
-      this.className
+      this.constructor_.copy()
     );
   }
 
-  get className(): string {
-    return this._className;
-  }
+  decode(context: ContextBuilder): Decoding[] {
+    const constructorDecoding = this.constructor_.decode(context);
 
-  decode(): Decoding[] {
-    throw new Error("Cannot call decode on method calls!");
-  }
-
-  decodeWithObject(
-    decoder: JavaScriptDecoder,
-    id: string,
-    options: { addLogs: boolean; exception: boolean },
-    objectVariable: string
-  ): Decoding[] {
-    let decoded = `const ${this.varName} = await ${objectVariable}.${this.name}`;
-
-    if (options.addLogs) {
-      const logDirectory = decoder.getLogDirectory(id, this.varName);
-      decoded += `\nawait fs.writeFileSync('${logDirectory}', '' + ${this.varName} + ';sep;' + JSON.stringify(${this.varName}))`;
-    }
+    const decoded = `const ${context.getOrCreateVariableName(
+      this
+    )} = await ${context.getOrCreateVariableName(this.constructor_)}.${
+      this.name
+    }`;
 
     return [
+      ...constructorDecoding,
       {
         decoded: decoded,
         reference: this,
-        objectVariable: objectVariable,
       },
     ];
-  }
-
-  // TODO
-  decodeErroring(objectVariable: string): string {
-    return `await expect(${objectVariable}.${this.name}).to.be.rejectedWith(Error);`;
   }
 }

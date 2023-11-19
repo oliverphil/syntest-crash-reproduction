@@ -16,35 +16,60 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
 
-import { PrimitiveStatement } from "./PrimitiveStatement";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Statement } from "../Statement";
+
+import { PrimitiveStatement } from "./PrimitiveStatement";
 
 /**
  * @author Dimitri Stallenberg
  */
 export class NullStatement extends PrimitiveStatement<boolean> {
-  constructor(id: string, name: string, type: string, uniqueId: string) {
-    // eslint-disable-next-line unicorn/no-null
-    super(id, name, type, uniqueId, null);
-    this._classType = "NullStatement";
+  constructor(
+    variableIdentifier: string,
+    typeIdentifier: string,
+    name: string,
+    uniqueId: string
+  ) {
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.NULL,
+      uniqueId,
+      // eslint-disable-next-line unicorn/no-null
+      null
+    );
   }
 
   mutate(sampler: JavaScriptTestCaseSampler, depth: number): Statement {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleArgument(depth + 1, this.id, this.name);
+    if (prng.nextBoolean(sampler.deltaMutationProbability)) {
+      // 80%
+      return new NullStatement(
+        this.variableIdentifier,
+        this.typeIdentifier,
+        this.name,
+        prng.uniqueId()
+      );
+    } else {
+      // 20%
+      return sampler.sampleArgument(
+        depth + 1,
+        this.variableIdentifier,
+        this.name
+      );
     }
-
-    return new NullStatement(this.id, this.name, this.type, prng.uniqueId());
   }
 
   copy(): NullStatement {
-    return new NullStatement(this.id, this.name, this.type, this.uniqueId);
-  }
-
-  getFlatTypes(): string[] {
-    return ["null"];
+    return new NullStatement(
+      this.variableIdentifier,
+      this.typeIdentifier,
+      this.name,
+      this.uniqueId
+    );
   }
 }

@@ -18,16 +18,18 @@
 import { traverse } from "@babel/core";
 import * as t from "@babel/types";
 import { ControlFlowGraphFactory as CoreControlFlowGraphFactory } from "@syntest/analysis";
-import { ControlFlowProgram, contractControlFlowProgram } from "@syntest/cfg";
+import { contractControlFlowProgram, ControlFlowProgram } from "@syntest/cfg";
+
+import { Factory } from "../Factory";
 
 import { ControlFlowGraphVisitor } from "./ControlFlowGraphVisitor";
 
 export class ControlFlowGraphFactory
+  extends Factory
   implements CoreControlFlowGraphFactory<t.Node>
 {
   convert(filePath: string, AST: t.Node): ControlFlowProgram {
-    const visitor = new ControlFlowGraphVisitor(filePath);
-    // @ts-ignore
+    const visitor = new ControlFlowGraphVisitor(filePath, this.syntaxForgiving);
     traverse(AST, visitor);
 
     return contractControlFlowProgram(visitor.cfg);

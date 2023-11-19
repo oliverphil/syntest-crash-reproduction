@@ -35,6 +35,8 @@ export function getTestCommand(
   const options = new Map<string, Yargs.Options>();
 
   const commandGroup = "Type Inference Options:";
+  const samplingGroup = "Sampling Options:";
+  const executorGroup = "Test Execution Options:";
 
   options.set("incorporate-execution-information", {
     alias: [],
@@ -64,6 +66,100 @@ export function getTestCommand(
     type: "number",
   });
 
+  options.set("constant-pool", {
+    alias: [],
+    default: true,
+    description: "Enable constant pool.",
+    group: samplingGroup,
+    hidden: false,
+    type: "boolean",
+  });
+
+  options.set("constant-pool-probability", {
+    alias: [],
+    default: 0.5,
+    description:
+        "Probability to sample from the constant pool instead creating random values",
+    group: samplingGroup,
+    hidden: false,
+    type: "number",
+  });
+
+  options.set("type-pool", {
+    alias: [],
+    default: true,
+    description: "Enable type pool.",
+    group: samplingGroup,
+    hidden: false,
+    type: "boolean",
+  });
+
+  options.set("type-pool-probability", {
+    alias: [],
+    default: 0.5,
+    description:
+        "Probability to sample from the type pool instead creating random values",
+    group: samplingGroup,
+    hidden: false,
+    type: "number",
+  });
+
+  options.set("statement-pool", {
+    alias: [],
+    default: true,
+    description: "Enable statement pool.",
+    group: samplingGroup,
+    hidden: false,
+    type: "boolean",
+  });
+
+  options.set("statement-pool-probability", {
+    alias: [],
+    default: 0.8,
+    description:
+        "Probability to sample from the statement pool instead creating new values",
+    group: samplingGroup,
+    hidden: false,
+    type: "number",
+  });
+
+  options.set("execution-timeout", {
+    alias: [],
+    default: 2000,
+    description:
+        "The timeout for one execution of one test (must be larger than the test-timeout).",
+    group: executorGroup,
+    hidden: false,
+    type: "number",
+  });
+
+  options.set("test-timeout", {
+    alias: [],
+    default: 1000,
+    description: "The timeout for one test.",
+    group: executorGroup,
+    hidden: false,
+    type: "number",
+  });
+
+  options.set("syntax-forgiving", {
+    alias: [],
+    default: true,
+    description: "Whether we allow 'odd' syntax or throw an error.",
+    group: "Debugging",
+    hidden: false,
+    type: "boolean",
+  });
+
+  options.set("silence-test-output", {
+    alias: [],
+    default: true,
+    description: "Whether we show the test output in the logs.",
+    group: "Debugging",
+    hidden: false,
+    type: "boolean",
+  });
+
   return new Command(
     moduleManager,
     tool,
@@ -87,6 +183,19 @@ export function getTestCommand(
       // prng.initializePseudoRandomNumberGenerator(args.randomSeed);
       for (const crash of crashes) {
         // moduleManager.reset();
+        const include: string[] = [];
+        const exclude: string[] = [];
+        for (const frame of crash.stackTrace.trace) {
+          if (frame.file.includes('.js')) {
+            const crashFile = `./benchmark/crashes/${(<JavaScriptArguments>(<unknown>arguments_)).syntestType}/${crash.project}/${crash.crashId}/**/${frame.file}`;
+            include.push(crashFile);
+          }
+          // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
+          // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
+        }
+        include.push("**/*.js");
+        (<JavaScriptArguments>(<unknown>arguments_)).targetInclude = include;
+        (<JavaScriptArguments>(<unknown>arguments_)).targetExclude = exclude;
         global.__coverage__ = {};
         global.__meta__ = [];
         const launcher = new CrashLauncher(
@@ -108,6 +217,16 @@ export type TestCommandOptions = {
   randomTypeProbability: number;
   constantPool: boolean;
   constantPoolProbability: number;
+  typePool: boolean;
+  typePoolProbability: number;
+  statementPool: boolean;
+  statementPoolProbability: number;
+  executionTimeout: number;
+  testTimeout: number;
+
+  syntaxForgiving: boolean;
+  silenceTestOutput: boolean;
+
   syntestProject: string | undefined;
   syntestCrashes: string | undefined;
   syntestSeeded: string;

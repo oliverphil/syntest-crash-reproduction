@@ -16,72 +16,59 @@
  * limitations under the License.
  */
 
-import { Encoding, EncodingSampler, shouldNeverHappen } from "@syntest/search";
-import { prng } from "@syntest/prng";
+import { TypeEnum } from "@syntest/analysis-javascript";
+import { Encoding, EncodingSampler } from "@syntest/search";
 
-import { JavaScriptDecoder } from "../../testbuilding/JavaScriptDecoder";
+import { ContextBuilder } from "../../testbuilding/ContextBuilder";
 
 /**
  * @author Dimitri Stallenberg
  */
 export abstract class Statement {
-  private _id: string;
+  private _variableIdentifier: string;
+  private _typeIdentifier: string;
   private _name: string;
-  private _type: string;
-  private _uniqueId: string;
-  private _varName: string;
+  private _ownType: TypeEnum;
+  protected _uniqueId: string;
 
-  protected _classType: string;
+  public get variableIdentifier(): string {
+    return this._variableIdentifier;
+  }
 
-  public get id(): string {
-    return this._id;
+  public get typeIdentifier(): string {
+    return this._typeIdentifier;
   }
 
   public get name(): string {
     return this._name;
   }
 
-  get type(): string {
-    return this._type;
+  get ownType(): TypeEnum {
+    return this._ownType;
   }
 
   public get uniqueId(): string {
     return this._uniqueId;
   }
 
-  public get varName(): string {
-    return this._varName;
-  }
-
-  get classType(): string {
-    return this._classType;
-  }
-
   /**
    * Constructor
    * @param identifierDescription
-   * @param type
+   * @param ownType
    * @param uniqueId
    */
   protected constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
+    ownType: TypeEnum,
     uniqueId: string
   ) {
-    this._id = id;
+    this._variableIdentifier = variableIdentifier;
+    this._typeIdentifier = typeIdentifier;
     this._name = name;
-    this._type = type;
+    this._ownType = ownType;
     this._uniqueId = uniqueId;
-
-    if (name.includes("<>")) {
-      throw new Error(shouldNeverHappen("name cannot inlude <>"));
-    }
-
-    this._varName = type.includes("<>")
-      ? name + "_" + type.split("<>")[1] + "_" + prng.uniqueId(4)
-      : name + "_" + type + "_" + prng.uniqueId(4);
-    this._varName = "_" + this.varName;
   }
 
   /**
@@ -111,19 +98,23 @@ export abstract class Statement {
   abstract getChildren(): Statement[];
 
   /**
-   * Decodes the statement
+   * Set a new child at a specified position
+   *
+   * WARNING: This function has side effects
+   *
+   * @param index the index position of the new child
+   * @param newChild the new child
    */
-  abstract decode(
-    decoder: JavaScriptDecoder,
-    id: string,
-    options: { addLogs: boolean; exception: boolean }
-  ): Decoding[];
+  abstract setChild(index: number, newChild: Statement): void;
 
-  abstract getFlatTypes(): string[];
+  /**
+   * Decodes the statement
+   * Note: when implementing this function please always decode the children of the statement before making getOrCreateVariableName on the context object.
+   */
+  abstract decode(context: ContextBuilder): Decoding[];
 }
 
 export interface Decoding {
   decoded: string;
   reference: Statement;
-  objectVariable?: string;
 }

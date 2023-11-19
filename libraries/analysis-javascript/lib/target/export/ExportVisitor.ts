@@ -23,13 +23,19 @@ import { AbstractSyntaxTreeVisitor } from "@syntest/ast-visitor-javascript";
 import { Export } from "./Export";
 import { extractExportsFromExportDefaultDeclaration } from "./ExportDefaultDeclaration";
 import { extractExportsFromExportNamedDeclaration } from "./ExportNamedDeclaration";
-import { extractExportsFromExpressionStatement } from "./ExpressionStatement";
+import {
+  checkExportAndDefault,
+  extractExportsFromAssignmentExpression,
+  extractExportsFromLeftAssignmentExpression,
+  extractExportsFromRightAssignmentExpression,
+  PartialExport,
+} from "./ExpressionStatement";
 
 export class ExportVisitor extends AbstractSyntaxTreeVisitor {
   private _exports: Export[];
 
-  constructor(filePath: string) {
-    super(filePath);
+  constructor(filePath: string, syntaxForgiving: boolean) {
+    super(filePath, syntaxForgiving);
     this._exports = [];
   }
 
@@ -53,30 +59,60 @@ export class ExportVisitor extends AbstractSyntaxTreeVisitor {
     path: NodePath<t.ExportDefaultDeclaration>
   ) => void = (path) => {
     this._exports.push(
-      extractExportsFromExportDefaultDeclaration(this, this.filePath, path)
+      ...extractExportsFromExportDefaultDeclaration(this, this.filePath, path)
     );
   };
 
   // e.g. module.exports = ...
   // e.g. exports.foo = ...
-  public ExpressionStatement: (path: NodePath<t.ExpressionStatement>) => void =
-    (path) => {
-      if (path.node.expression.type !== "AssignmentExpression") {
-        return;
-      }
-      try {
-        const exports = extractExportsFromExpressionStatement(
-            this,
-            this.filePath,
-            path
-        );
-        if (exports) {
-          this._exports.push(...exports);
-        }
-      } catch {
-        //
-      }
-    };
+  // e.g. ... = exports
+  // e.g. ... = module.exports
+  public AssignmentExpression: (
+    path: NodePath<t.AssignmentExpression>
+  ) => void = (path) => {
+    const exports = extractExportsFromAssignmentExpression(
+      this,
+      this.filePath,
+      path
+    );
+    this._exports.push(...exports);
+  };
+
+  // e.g. let x = module.exports
+  // e.g. let x = exports.foo
+  public VariableDeclarator: (path: NodePath<t.VariableDeclarator>) => void = (
+    path_
+  ) => {
+    const id = path_.get("id");
+    const init = path_.get("init");
+
+    let partialExport: PartialExport | false = checkExportAndDefault(this, id);
+
+    if (partialExport) {
+      this._exports.push(
+        ...extractExportsFromLeftAssignmentExpression(
+          this,
+          this.filePath,
+          partialExport,
+          init
+        )
+      );
+      return;
+    }
+
+    partialExport = checkExportAndDefault(this, init);
+
+    if (partialExport) {
+      this._exports.push(
+        ...extractExportsFromRightAssignmentExpression(
+          this,
+          this.filePath,
+          id,
+          partialExport
+        )
+      );
+    }
+  };
 
   // getters
   get exports(): Export[] {

@@ -22,6 +22,7 @@ export * from "./lib/cfg/ControlFlowGraphFactory";
 export * from "./lib/cfg/ControlFlowGraphVisitor";
 
 export * from "./lib/constant/ConstantPool";
+export * from "./lib/constant/ConstantPoolFactory";
 export * from "./lib/constant/ConstantPoolManager";
 export * from "./lib/constant/ConstantVisitor";
 
@@ -56,8 +57,8 @@ export * from "./lib/type/resolving/TypeEnum";
 export * from "./lib/type/resolving/TypeModel";
 export * from "./lib/type/resolving/TypeModelFactory";
 export * from "./lib/type/resolving/InferenceTypeModelFactory";
-export * from "./lib/type/resolving/RandomTypeModelFactory";
 
 export * from "./lib/utils/fileSystem";
 
+export * from "./lib/Events";
 export * from "./lib/RootContext";

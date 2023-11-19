@@ -16,60 +16,59 @@
  * limitations under the License.
  */
 
+import { TargetType } from "@syntest/analysis";
 import {
   ClassTarget,
   ConstantPoolManager,
+  DiscoveredObjectKind,
   FunctionTarget,
-  getRelationName,
   isExported,
   MethodTarget,
   ObjectFunctionTarget,
   ObjectTarget,
-  RootContext,
-  TypeEnum,
 } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
 
 import { JavaScriptSubject } from "../../search/JavaScriptSubject";
 import { JavaScriptTestCase } from "../JavaScriptTestCase";
+import { StatementPool } from "../StatementPool";
+import { ActionStatement } from "../statements/action/ActionStatement";
+import { ConstantObject } from "../statements/action/ConstantObject";
+import { ConstructorCall } from "../statements/action/ConstructorCall";
+import { FunctionCall } from "../statements/action/FunctionCall";
 import { Getter } from "../statements/action/Getter";
 import { MethodCall } from "../statements/action/MethodCall";
+import { ObjectFunctionCall } from "../statements/action/ObjectFunctionCall";
 import { Setter } from "../statements/action/Setter";
 import { ArrayStatement } from "../statements/complex/ArrayStatement";
 import { ArrowFunctionStatement } from "../statements/complex/ArrowFunctionStatement";
 import { ObjectStatement } from "../statements/complex/ObjectStatement";
 import { BoolStatement } from "../statements/primitive/BoolStatement";
+import { IntegerStatement } from "../statements/primitive/IntegerStatement";
 import { NullStatement } from "../statements/primitive/NullStatement";
 import { NumericStatement } from "../statements/primitive/NumericStatement";
 import { StringStatement } from "../statements/primitive/StringStatement";
 import { UndefinedStatement } from "../statements/primitive/UndefinedStatement";
-import { ConstructorCall } from "../statements/root/ConstructorCall";
-import { FunctionCall } from "../statements/root/FunctionCall";
-import { RootObject } from "../statements/root/RootObject";
-import { RootStatement } from "../statements/root/RootStatement";
 import { Statement } from "../statements/Statement";
 
 import { JavaScriptTestCaseSampler } from "./JavaScriptTestCaseSampler";
-import { TargetType } from "@syntest/analysis";
-import { ObjectFunctionCall } from "../statements/action/ObjectFunctionCall";
-import { ObjectType } from "@syntest/analysis-javascript";
-import { IntegerStatement } from "../statements/primitive/IntegerStatement";
 
 export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
-  private _rootContext: RootContext;
-
   constructor(
     subject: JavaScriptSubject,
     constantPoolManager: ConstantPoolManager,
     constantPoolEnabled: boolean,
     constantPoolProbability: number,
+    typePoolEnabled: boolean,
+    typePoolProbability: number,
+    statementPoolEnabled: boolean,
+    statementPoolProbability: number,
     typeInferenceMode: string,
     randomTypeProbability: number,
     incorporateExecutionInformation: boolean,
     maxActionStatements: number,
     stringAlphabet: string,
     stringMaxLength: number,
-    resampleGeneProbability: number,
     deltaMutationProbability: number,
     exploreIllegalValues: boolean
   ) {
@@ -78,81 +77,120 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
       constantPoolManager,
       constantPoolEnabled,
       constantPoolProbability,
+      typePoolEnabled,
+      typePoolProbability,
+      statementPoolEnabled,
+      statementPoolProbability,
       typeInferenceMode,
       randomTypeProbability,
       incorporateExecutionInformation,
       maxActionStatements,
       stringAlphabet,
       stringMaxLength,
-      resampleGeneProbability,
       deltaMutationProbability,
       exploreIllegalValues
     );
   }
 
-  /**
-   * Set the root context
-   *
-   * this cannot be part of the constructor because the root context is not available at that point
-   * because of the plugin structure.
-   */
-  set rootContext(rootContext: RootContext) {
-    this._rootContext = rootContext;
-  }
-
-  get rootContext(): RootContext {
-    return this._rootContext;
-  }
-
   sample(): JavaScriptTestCase {
-    let root: RootStatement;
+    const roots: ActionStatement[] = [];
 
-    const actionableTargets = (<JavaScriptSubject>(
-      this._subject
-    )).getActionableTargets();
+    for (
+      let index = 0;
+      index < prng.nextInt(1, this.maxActionStatements); // (i think its better to start with a single statement)
+      index++
+    ) {
+      this.statementPool = new StatementPool(roots);
+      roots.push(this.sampleRoot());
+    }
+    this.statementPool = undefined;
 
-    const rootTargets = actionableTargets
-      .filter(
-        (target) =>
-          target.type === TargetType.FUNCTION ||
-          target.type === TargetType.CLASS ||
-          target.type === TargetType.OBJECT
-      )
-      .filter((target) => isExported(target));
+    return new JavaScriptTestCase(roots);
+  }
 
-    if (rootTargets.length === 0) {
-      throw new Error(
-        `No root targets found in file ${this.subject.name} ${this.subject.path}`
-      );
+  sampleRoot(): ActionStatement {
+    const targets = (<JavaScriptSubject>this._subject).getActionableTargets();
+
+    if (this.statementPoolEnabled) {
+      const constructor_ = this.statementPool.getRandomConstructor();
+
+      if (constructor_ && prng.nextBoolean(this.statementPoolProbability)) {
+        // TODO ignoring getters and setters for now
+        const targets = this.rootContext.getSubTargets(
+          constructor_.typeIdentifier.split(":")[0]
+        );
+        const methods = <MethodTarget[]>(
+          targets.filter(
+            (target) =>
+              target.type === TargetType.METHOD &&
+              (<MethodTarget>target).methodType === "method" &&
+              (<MethodTarget>target).classId === constructor_.classIdentifier
+          )
+        );
+        if (methods.length > 0) {
+          const method = prng.pickOne(methods);
+
+          const type_ = this.rootContext
+            .getTypeModel()
+            .getObjectDescription(method.typeId);
+
+          const arguments_: Statement[] =
+            this.methodCallGenerator.sampleArguments(0, type_);
+
+          return new MethodCall(
+            method.id,
+            method.typeId,
+            method.name,
+            prng.uniqueId(),
+            arguments_,
+            constructor_
+          );
+        }
+      }
     }
 
-    const rootTarget = prng.pickOne(rootTargets);
+    const action = prng.pickOne(
+      targets.filter(
+        (target) =>
+          (target.type === TargetType.FUNCTION && isExported(target)) ||
+          (target.type === TargetType.CLASS && isExported(target)) ||
+          (target.type === TargetType.OBJECT && isExported(target)) ||
+          (target.type === TargetType.METHOD &&
+            (<MethodTarget>target).methodType !== "constructor" &&
+            isExported(
+              targets.find(
+                (classTarget) =>
+                  classTarget.id === (<MethodTarget>target).classId
+              )
+            )) || // check whether parent class is exported
+          (target.type === TargetType.OBJECT_FUNCTION &&
+            isExported(
+              targets.find(
+                (objectTarget) =>
+                  objectTarget.id === (<ObjectFunctionTarget>target).objectId
+              )
+            )) // check whether parent object is exported
+      )
+    );
 
-    switch (rootTarget.type) {
+    switch (action.type) {
       case TargetType.FUNCTION: {
-        root = this.sampleFunctionCall(0);
-
-        break;
+        return this.sampleFunctionCall(0);
       }
       case TargetType.CLASS: {
-        root = this.sampleClass(0);
-
-        break;
+        return this.sampleConstructorCall(0);
       }
       case TargetType.OBJECT: {
-        root = this.sampleRootObject(0);
-
-        break;
+        return this.sampleConstantObject(0);
       }
-      // No default
+      case TargetType.METHOD: {
+        return this.sampleClassAction(0);
+      }
+      default: {
+        return this.sampleObjectFunctionCall(0);
+      }
     }
-
-    return new JavaScriptTestCase(root);
   }
-
-  // sampleRoot(depth: number) {
-
-  // }
 
   sampleFunctionCall(depth: number): FunctionCall {
     // get a random function
@@ -164,583 +202,530 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
       )
     );
 
-    return this.sampleSpecificFunctionCall(depth, function_.id, function_.name);
-  }
-
-  sampleSpecificFunctionCall(
-    depth: number,
-    id: string,
-    name: string
-  ): FunctionCall {
-    const type_ = this.rootContext.getTypeModel().getObjectDescription(id);
-
-    const arguments_: Statement[] = type_ ? this._sampleArguments(depth, type_) : [];
-
-    return new FunctionCall(
-      id,
-      name,
-      TypeEnum.FUNCTION,
-      prng.uniqueId(),
-      arguments_
+    return this.functionCallGenerator.generate(
+      depth,
+      function_.id,
+      function_.typeId,
+      function_.id,
+      function_.name,
+      this.statementPool
     );
   }
 
-  sampleClass(depth: number): ConstructorCall {
-    // get a random class
-    const class_ = <ClassTarget>(
+  private _getClass(id?: string) {
+    if (id) {
+      const result = <ClassTarget>(
+        (<JavaScriptSubject>this._subject)
+          .getActionableTargetsByType(TargetType.CLASS)
+          .find((target) => (<ClassTarget>target).id === id)
+      );
+      if (!result) {
+        throw new Error("missing class with id: " + id);
+      } else if (!isExported(result)) {
+        throw new Error("class with id: " + id + "is not exported");
+      }
+      return result;
+    }
+
+    // random
+    return <ClassTarget>(
       prng.pickOne(
         (<JavaScriptSubject>this._subject)
           .getActionableTargetsByType(TargetType.CLASS)
           .filter((target) => isExported(target))
       )
     );
-
-    return this.sampleSpecificClass(depth, class_.id, class_.name);
   }
 
-  sampleSpecificClass(
-    depth: number,
-    id: string,
-    name: string
-  ): ConstructorCall {
+  sampleConstructorCall(depth: number, classId?: string): ConstructorCall {
+    // get a random class
+    const class_ = this._getClass(classId);
+
     // get the constructor of the class
     const constructor_ = (<JavaScriptSubject>this._subject)
       .getActionableTargetsByType(TargetType.METHOD)
       .filter(
         (method) =>
-          (<MethodTarget>method).className === name &&
+          (<MethodTarget>method).classId === class_.id &&
           (<MethodTarget>method).methodType === "constructor"
       );
 
     if (constructor_.length > 1) {
       throw new Error("Multiple constructors found for class");
     }
-    let arguments_: Statement[] = [];
+
     if (constructor_.length === 0) {
       // default constructor no args
+      const export_ = [...this.rootContext.getAllExports().values()]
+        .flat()
+        .find((export_) => export_.id === class_.id);
+
+      return new ConstructorCall(
+        class_.id,
+        class_.typeId,
+        class_.id,
+        class_.name,
+        prng.uniqueId(),
+        [],
+        export_
+      );
     } else {
       const action = constructor_[0];
-
-      const type_ = this.rootContext
-        .getTypeModel()
-        .getObjectDescription(action.id);
-
-      arguments_ = this._sampleArguments(depth, type_);
+      return this.constructorCallGenerator.generate(
+        depth,
+        action.id,
+        (<MethodTarget>action).typeId,
+        class_.id,
+        class_.name,
+        this.statementPool
+      );
     }
-
-    const calls: Statement[] = [];
-    const methods = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === name &&
-          (<MethodTarget>method).methodType === "method"
-      );
-    const getters = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === name &&
-          (<MethodTarget>method).methodType === "get"
-      );
-    const setters = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === name &&
-          (<MethodTarget>method).methodType === "set"
-      );
-
-    const nCalls =
-      methods.length + getters.length + setters.length &&
-      prng.nextInt(1, this.maxActionStatements);
-    for (let index = 0; index < nCalls; index++) {
-      const randomMethod = <MethodTarget>(
-        prng.pickOne([...methods, ...getters, ...setters])
-      );
-      switch (randomMethod.methodType) {
-        case "method": {
-          calls.push(
-            this.sampleSpecificMethodCall(
-              depth + 1,
-              randomMethod.id,
-              randomMethod.name,
-              name
-            )
-          );
-
-          break;
-        }
-        case "get": {
-          calls.push(
-            this.sampleSpecificGetter(
-              depth + 1,
-              randomMethod.id,
-              randomMethod.name,
-              name
-            )
-          );
-
-          break;
-        }
-        case "set": {
-          calls.push(
-            this.sampleSpecificSetter(
-              depth + 1,
-              randomMethod.id,
-              randomMethod.name,
-              name
-            )
-          );
-
-          break;
-        }
-        // No default
-      }
-    }
-
-    return new ConstructorCall(
-      id,
-      name,
-      TypeEnum.OBJECT,
-      prng.uniqueId(),
-      arguments_,
-      calls
-    );
   }
 
-  sampleClassCall(
-    depth: number,
-    className: string
-  ): MethodCall | Getter | Setter {
+  override sampleClassAction(depth: number): MethodCall | Getter | Setter {
+    const targets = (<JavaScriptSubject>this._subject).getActionableTargets();
+
     const methods = (<JavaScriptSubject>this._subject)
       .getActionableTargetsByType(TargetType.METHOD)
       .filter(
         (method) =>
-          (<MethodTarget>method).className === className &&
-          (<MethodTarget>method).methodType === "method"
-      );
-    const getters = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === className &&
-          (<MethodTarget>method).methodType === "get"
-      );
-    const setters = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === className &&
-          (<MethodTarget>method).methodType === "set"
+          (<MethodTarget>method).methodType !== "constructor" &&
+          isExported(
+            targets.find(
+              (classTarget) => classTarget.id === (<MethodTarget>method).classId
+            )
+          )
       );
 
-    const randomMethod = <MethodTarget>(
-      prng.pickOne([...methods, ...getters, ...setters])
-    );
+    const randomMethod = <MethodTarget>prng.pickOne(methods);
     switch (randomMethod.methodType) {
       case "method": {
-        return this.sampleSpecificMethodCall(
-          depth + 1,
-          randomMethod.id,
-          randomMethod.name,
-          className
-        );
+        return this.sampleMethodCall(depth);
       }
       case "get": {
-        return this.sampleSpecificGetter(
-          depth + 1,
-          randomMethod.id,
-          randomMethod.name,
-          className
-        );
+        return this.sampleGetter(depth);
       }
       case "set": {
-        return this.sampleSpecificSetter(
-          depth + 1,
-          randomMethod.id,
-          randomMethod.name,
-          className
-        );
+        return this.sampleSetter(depth);
+      }
+      case "constructor": {
+        throw new Error("invalid path");
       }
       // No default
     }
-
-    throw new Error("No method found");
   }
 
-  sampleMethodCall(depth: number, className: string): MethodCall {
+  override sampleMethodCall(depth: number): MethodCall {
+    const targets = (<JavaScriptSubject>this._subject).getActionableTargets();
+
     const methods = (<JavaScriptSubject>this._subject)
       .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === className &&
-          (<MethodTarget>method).methodType === "method"
+      .filter((method) => (<MethodTarget>method).methodType === "method")
+      .filter((target) =>
+        isExported(
+          targets.find(
+            (objectTarget) => objectTarget.id === (<MethodTarget>target).classId
+          )
+        )
       );
 
     const method = <MethodTarget>prng.pickOne(methods);
+    const class_ = this._getClass(method.classId);
 
-    return this.sampleSpecificMethodCall(
+    return this.methodCallGenerator.generate(
       depth,
       method.id,
+      method.typeId,
+      class_.id,
       method.name,
-      className
+      this.statementPool
     );
   }
 
-  sampleSpecificMethodCall(
-    depth: number,
-    id: string,
-    name: string,
-    className: string
-  ): MethodCall {
-    const type_ = this.rootContext.getTypeModel().getObjectDescription(id);
+  sampleGetter(depth: number): Getter {
+    const targets = (<JavaScriptSubject>this._subject).getActionableTargets();
 
-    const arguments_: Statement[] = this._sampleArguments(depth, type_);
+    const methods = (<JavaScriptSubject>this._subject)
+      .getActionableTargetsByType(TargetType.METHOD)
+      .filter((method) => (<MethodTarget>method).methodType === "get")
+      .filter((target) =>
+        isExported(
+          targets.find(
+            (objectTarget) => objectTarget.id === (<MethodTarget>target).classId
+          )
+        )
+      );
 
-    return new MethodCall(
-      id,
-      name,
-      TypeEnum.FUNCTION,
-      prng.uniqueId(),
-      className,
-      arguments_
+    const method = <MethodTarget>prng.pickOne(methods);
+    const class_ = this._getClass(method.classId);
+
+    return this.getterGenerator.generate(
+      depth,
+      method.id,
+      method.id,
+      class_.id,
+      method.name,
+      this.statementPool
     );
   }
 
-  sampleGetter(depth: number, className: string): Getter {
+  sampleSetter(depth: number): Setter {
+    const targets = (<JavaScriptSubject>this._subject).getActionableTargets();
+
     const methods = (<JavaScriptSubject>this._subject)
       .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === className &&
-          (<MethodTarget>method).methodType === "get"
+      .filter((method) => (<MethodTarget>method).methodType === "set")
+      .filter((target) =>
+        isExported(
+          targets.find(
+            (objectTarget) => objectTarget.id === (<MethodTarget>target).classId
+          )
+        )
       );
 
     const method = <MethodTarget>prng.pickOne(methods);
+    const class_ = this._getClass(method.classId);
 
-    return this.sampleSpecificGetter(depth, method.id, method.name, className);
+    return this.setterGenerator.generate(
+      depth,
+      method.id,
+      method.typeId,
+      class_.id,
+      method.name,
+      this.statementPool
+    );
   }
 
-  sampleSpecificGetter(
-    depth: number,
-    id: string,
-    name: string,
-    className: string
-  ): Getter {
-    return new Getter(id, name, TypeEnum.FUNCTION, prng.uniqueId(), className);
-  }
-
-  sampleSetter(depth: number, className: string): Setter {
-    const methods = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.METHOD)
-      .filter(
-        (method) =>
-          (<MethodTarget>method).className === className &&
-          (<MethodTarget>method).methodType === "set"
+  private _getObject(id?: string) {
+    if (id) {
+      const result = <ObjectTarget>(
+        (<JavaScriptSubject>this._subject)
+          .getActionableTargetsByType(TargetType.OBJECT)
+          .find((target) => (<ObjectTarget>target).id === id)
       );
-
-    const method = <MethodTarget>prng.pickOne(methods);
-
-    return this.sampleSpecificSetter(depth, method.id, method.name, className);
-  }
-
-  sampleSpecificSetter(
-    depth: number,
-    id: string,
-    name: string,
-    className: string
-  ): Setter {
-    const type_ = this.rootContext.getTypeModel().getObjectDescription(id);
-
-    const arguments_: Statement[] = this._sampleArguments(depth, type_);
-
-    if (arguments_.length !== 1) {
-      throw new Error("Setter must have exactly one argument");
+      if (!result) {
+        throw new Error("missing object with id: " + id);
+      } else if (!isExported(result)) {
+        throw new Error("object with id: " + id + " is not exported");
+      }
+      return result;
     }
 
-    return new Setter(
-      id,
-      name,
-      TypeEnum.FUNCTION,
-      prng.uniqueId(),
-      className,
-      arguments_[0]
-    );
-  }
-
-  sampleRootObject(depth: number): RootObject {
-    // get a random object
-    const object_ = <ObjectTarget>(
+    // random
+    return <ObjectTarget>(
       prng.pickOne(
         (<JavaScriptSubject>this._subject)
           .getActionableTargetsByType(TargetType.OBJECT)
           .filter((target) => isExported(target))
       )
     );
-
-    return this.sampleSpecificRootObject(depth, object_.id, object_.name);
   }
 
-  sampleSpecificRootObject(
-    depth: number,
-    id: string,
-    name: string
-  ): RootObject {
-    const calls: Statement[] = [];
-    const functions = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.OBJECT_FUNCTION)
-      .filter(
-        (function_) => (<ObjectFunctionTarget>function_).objectName === name
-      );
+  sampleConstantObject(depth: number, objectId?: string): ConstantObject {
+    // get a random object
+    const object_ = this._getObject(objectId);
 
-    const nCalls =
-      functions.length > 0 && prng.nextInt(1, this.maxActionStatements);
-    for (let index = 0; index < nCalls; index++) {
-      const randomFunction = <ObjectFunctionTarget>prng.pickOne(functions);
-      calls.push(
-        this.sampleSpecificObjectFunctionCall(
-          depth + 1,
-          randomFunction.id,
-          randomFunction.name,
-          name
-        )
-      );
-    }
-
-    return new RootObject(id, name, TypeEnum.OBJECT, prng.uniqueId(), calls);
-  }
-
-  sampleObjectFunctionCall(
-    depth: number,
-    objectName: string
-  ): ObjectFunctionCall {
-    const functions = (<JavaScriptSubject>this._subject)
-      .getActionableTargetsByType(TargetType.OBJECT_FUNCTION)
-      .filter(
-        (function_) =>
-          (<ObjectFunctionTarget>function_).objectName === objectName
-      );
-
-    const randomFunction = <ObjectFunctionTarget>prng.pickOne(functions);
-    return this.sampleSpecificObjectFunctionCall(
-      depth + 1,
-      randomFunction.id,
-      randomFunction.name,
-      objectName
+    return this.constantObjectGenerator.generate(
+      depth,
+      object_.id,
+      object_.typeId,
+      object_.id,
+      object_.name,
+      this.statementPool
     );
   }
 
-  sampleSpecificObjectFunctionCall(
-    depth: number,
-    id: string,
-    name: string,
-    objectName: string
-  ): ObjectFunctionCall {
-    const type_ = this.rootContext.getTypeModel().getObjectDescription(id);
+  sampleObjectFunctionCall(depth: number): ObjectFunctionCall {
+    const targets = (<JavaScriptSubject>this._subject).getActionableTargets();
 
-    const arguments_: Statement[] = this._sampleArguments(depth, type_);
+    const functions = (<JavaScriptSubject>this._subject)
+      .getActionableTargetsByType(TargetType.OBJECT_FUNCTION)
+      .filter((target) =>
+        isExported(
+          targets.find(
+            (objectTarget) =>
+              objectTarget.id === (<ObjectFunctionTarget>target).objectId
+          )
+        )
+      );
 
-    return new ObjectFunctionCall(
-      id,
-      name,
-      TypeEnum.FUNCTION,
-      prng.uniqueId(),
-      objectName,
-      arguments_
+    const randomFunction = <ObjectFunctionTarget>prng.pickOne(functions);
+    const object_ = this._getObject(randomFunction.objectId);
+
+    return this.objectFunctionCallGenerator.generate(
+      depth,
+      randomFunction.id,
+      randomFunction.typeId,
+      object_.id,
+      randomFunction.name,
+      this.statementPool
     );
   }
 
   // arguments
-  sampleArrayArgument(
-    depth: number,
-    arrayId: string,
-    index: number
-  ): Statement {
+  sampleArrayArgument(depth: number, arrayId: string): Statement {
     const arrayType = this.rootContext
       .getTypeModel()
       .getObjectDescription(arrayId);
 
-    const element = arrayType.elements.get(index);
-    if (element) {
-      return this.sampleArgument(depth, element, String(index));
-    }
-
-    const childIds = [...arrayType.elements.values()];
+    const childIds = [...arrayType.elements];
 
     if (childIds.length === 0) {
       // TODO should be done in the typemodel somehow
       // maybe create types for the subproperties by doing /main/array/id::1::1[element-index]
       // maybe create types for the subproperties by doing /main/array/id::1::1.property
-      return this.sampleString(
-        "anon",
-        "anon",
-        this.stringAlphabet,
-        this.stringMaxLength
-      );
+      return this.sampleArgument(depth, "anon", "arrayElement");
     }
-    return this.sampleArgument(depth, prng.pickOne(childIds), String(index));
+
+    const element = prng.pickOne(childIds);
+    return this.sampleArgument(depth, element, "arrayElement");
   }
 
   sampleObjectArgument(
     depth: number,
-    objectId: string,
+    objectTypeId: string,
     property: string
   ): Statement {
-    const objectType = <ObjectType>(
-      this.rootContext.getTypeModel().getObjectDescription(objectId)
-    );
+    const objectType = this.rootContext
+      .getTypeModel()
+      .getObjectDescription(objectTypeId);
 
     const value = objectType.properties.get(property);
     if (!value) {
-      throw new Error(`Property ${property} not found in object ${objectId}`);
+      throw new Error(
+        `Property ${property} not found in object ${objectTypeId}`
+      );
     }
 
     return this.sampleArgument(depth, value, property);
   }
 
   sampleArgument(depth: number, id: string, name: string): Statement {
-    let chosenType: string;
-
-    if (
-      this.typeInferenceMode === "proportional" ||
-      this.typeInferenceMode === "none"
-    ) {
-      chosenType = this.rootContext
-        .getTypeModel()
-        .getRandomType(
-          this.incorporateExecutionInformation,
-          this.randomTypeProbability,
-          id
-        );
-    } else if (this.typeInferenceMode === "ranked") {
-      chosenType = this.rootContext
-        .getTypeModel()
-        .getHighestProbabilityType(
-          this.incorporateExecutionInformation,
-          this.randomTypeProbability,
-          id
-        );
-    } else {
-      throw new Error("Invalid identifierDescription inference mode selected");
+    if (depth > 10) {
+      // max depth
+      // TODO should be any primitive type
+      return this.sampleBool(id, id, name);
     }
 
-    switch (chosenType) {
+    let chosenType: string;
+
+    switch (this.typeInferenceMode) {
+      case "none": {
+        chosenType = this.rootContext
+          .getTypeModel()
+          .getRandomType(false, 1, id);
+
+        break;
+      }
+      case "proportional": {
+        chosenType = this.rootContext
+          .getTypeModel()
+          .getRandomType(
+            this.incorporateExecutionInformation,
+            this.randomTypeProbability,
+            id
+          );
+
+        break;
+      }
+      case "ranked": {
+        chosenType = this.rootContext
+          .getTypeModel()
+          .getHighestProbabilityType(
+            this.incorporateExecutionInformation,
+            this.randomTypeProbability,
+            id
+          );
+
+        break;
+      }
+      default: {
+        throw new Error(
+          "Invalid identifierDescription inference mode selected"
+        );
+      }
+    }
+
+    // take from pool
+    if (this.statementPoolEnabled) {
+      const statementFromPool =
+        this.statementPool.getRandomStatement(chosenType);
+
+      if (
+        statementFromPool &&
+        prng.nextBoolean(this.statementPoolProbability)
+      ) {
+        return statementFromPool;
+      }
+    }
+
+    const typeId = chosenType.includes("<>") ? chosenType.split("<>")[0] : id;
+    const type = chosenType.includes("<>")
+      ? chosenType.split("<>")[1]
+      : chosenType;
+
+    switch (type) {
       case "boolean": {
-        return this.sampleBool(id, name);
+        return this.sampleBool(id, typeId, name);
       }
       case "string": {
-        return this.sampleString(id, name);
+        return this.sampleString(id, typeId, name);
       }
       case "numeric": {
-        return this.sampleNumber(id, name);
+        return this.sampleNumber(id, typeId, name);
       }
       case "integer": {
-        return this.sampleInteger(id, name);
+        return this.sampleInteger(id, typeId, name);
       }
       case "null": {
-        return this.sampleNull(id, name);
+        return this.sampleNull(id, typeId, name);
       }
       case "undefined": {
-        return this.sampleUndefined(id, name);
+        return this.sampleUndefined(id, typeId, name);
+      }
+      case "object": {
+        return this.sampleObject(depth, id, typeId, name);
+      }
+      case "array": {
+        return this.sampleArray(depth, id, typeId, name);
+      }
+      case "function": {
+        return this.sampleArrowFunction(depth, id, typeId, name);
       }
       case "regex": {
         // TODO REGEX
-        return this.sampleString(id, name);
-      }
-      default: {
-        // must be object/array/function
-        if (chosenType.endsWith("object")) {
-          return this.sampleObject(depth, id, name, chosenType);
-        } else if (chosenType.endsWith("array")) {
-          return this.sampleArray(depth, id, name, chosenType);
-        } else if (chosenType.endsWith("function")) {
-          return this.sampleArrowFunction(depth, id, name, chosenType);
-        }
+        return this.sampleString(id, typeId, name);
       }
     }
 
     throw new Error(`unknown type: ${chosenType}`);
   }
 
-  sampleObject(depth: number, id: string, name: string, type: string) {
-    const typeObject = type.includes("<>")
-      ? this._rootContext
-          .getTypeModel()
-          .getObjectDescription(type.split("<>")[0])
-      : this._rootContext.getTypeModel().getObjectDescription(id);
+  sampleObject(depth: number, id: string, typeId: string, name: string) {
+    const typeObject = this.rootContext
+      .getTypeModel()
+      .getObjectDescription(typeId);
 
-    const object_: { [key: string]: Statement } = {};
-
-    for (const [key, id] of typeObject.properties.entries()) {
-      object_[key] = this.sampleArgument(depth + 1, id, key);
-    }
-
-    return new ObjectStatement(id, name, type, prng.uniqueId(), object_);
-  }
-
-  sampleArray(depth: number, id: string, name: string, type: string) {
-    const typeObject = type.includes("<>")
-      ? this._rootContext
-          .getTypeModel()
-          .getObjectDescription(type.split("<>")[0])
-      : this._rootContext.getTypeModel().getObjectDescription(id);
-
-    const children: Statement[] = [];
-
-    for (const [index] of typeObject.elements.entries()) {
-      children[index] = this.sampleArrayArgument(depth + 1, id, index);
-    }
-
-    // TODO should be done in the typemodel somehow
-    // maybe create types for the subproperties by doing /main/array/id::1::1[element-index]
-    // maybe create types for the subproperties by doing /main/array/id::1::1.property
-
-    if (children.length === 0) {
-      children.push(
-        this.sampleString(
-          "anon",
-          "anon",
-          this.stringAlphabet,
-          this.stringMaxLength
-        )
-      );
-    }
-
-    // if some children are missing, fill them with fake params
-    const childIds = [...typeObject.elements.values()];
-    for (let index = 0; index < children.length; index++) {
-      if (!children[index]) {
-        children[index] = this.sampleArgument(
-          depth + 1,
-          prng.pickOne(childIds),
-          String(index)
+    if (this.typePoolEnabled) {
+      // TODO maybe we should sample from the typepool for the other stuff as well (move this to sample arg for example)
+      const typeFromTypePool = this.rootContext
+        .getTypePool()
+        // .getRandomMatchingType(typeObject)
+        // TODO this prevents ONLY allows sampling of matching class constructors
+        .getRandomMatchingType(
+          typeObject,
+          (type_) => type_.kind === DiscoveredObjectKind.CLASS
         );
+
+      if (typeFromTypePool && prng.nextBoolean(this.typePoolProbability)) {
+        // always prefer type from type pool
+        switch (typeFromTypePool.kind) {
+          case DiscoveredObjectKind.CLASS: {
+            // find constructor of class
+            const targets = this.rootContext.getSubTargets(
+              typeFromTypePool.id.split(":")[0]
+            );
+            const constructor_ = <MethodTarget>(
+              targets.find(
+                (target) =>
+                  target.type === TargetType.METHOD &&
+                  (<MethodTarget>target).methodType === "constructor" &&
+                  (<MethodTarget>target).classId === typeFromTypePool.id
+              )
+            );
+
+            if (constructor_) {
+              return this.constructorCallGenerator.generate(
+                depth,
+                id, // variable id
+                constructor_.typeId, // constructor call id
+                typeFromTypePool.id, // class export id
+                name,
+                this.statementPool
+              );
+            }
+
+            return this.constructorCallGenerator.generate(
+              depth,
+              id, // variable id
+              typeFromTypePool.id, // constructor call id
+              typeFromTypePool.id, // class export id
+              name,
+              this.statementPool
+            );
+          }
+          case DiscoveredObjectKind.FUNCTION: {
+            return this.functionCallGenerator.generate(
+              depth,
+              id,
+              typeFromTypePool.id,
+              typeFromTypePool.id,
+              name,
+              this.statementPool
+            );
+          }
+          case DiscoveredObjectKind.INTERFACE: {
+            // TODO
+            return this.constructorCallGenerator.generate(
+              depth,
+              id,
+              typeFromTypePool.id,
+              typeFromTypePool.id,
+              name,
+              this.statementPool
+            );
+          }
+          case DiscoveredObjectKind.OBJECT: {
+            return this.constantObjectGenerator.generate(
+              depth,
+              id,
+              typeFromTypePool.id,
+              typeFromTypePool.id,
+              name,
+              this.statementPool
+            );
+          }
+          // No default
+        }
       }
     }
 
-    return new ArrayStatement(id, name, type, prng.uniqueId(), children);
+    const object_: { [key: string]: Statement } = {};
+
+    for (const key of typeObject.properties.keys()) {
+      object_[key] = this.sampleObjectArgument(depth + 1, typeId, key);
+    }
+
+    return new ObjectStatement(id, typeId, name, prng.uniqueId(), object_);
+  }
+
+  sampleArray(depth: number, id: string, typeId: string, name: string) {
+    const elements: Statement[] = [];
+
+    for (
+      let index = 0;
+      index < prng.nextInt(0, this.maxActionStatements);
+      index++
+    ) {
+      elements.push(this.sampleArrayArgument(depth + 1, typeId));
+    }
+
+    return new ArrayStatement(id, typeId, name, prng.uniqueId(), elements);
   }
 
   sampleArrowFunction(
     depth: number,
     id: string,
-    name: string,
-    type: string
+    typeId: string,
+    name: string
   ): ArrowFunctionStatement {
-    const typeObject = type.includes("<>")
-      ? this._rootContext
-          .getTypeModel()
-          .getObjectDescription(type.split("<>")[0])
-      : this._rootContext.getTypeModel().getObjectDescription(id);
+    const typeObject = this.rootContext
+      .getTypeModel()
+      .getObjectDescription(typeId);
 
     const parameters: string[] = [];
 
-    for (const [index, parameterId] of typeObject.parameters.entries()) {
-      const element = this.rootContext.getElement(parameterId);
-
-      const name = "name" in element ? element.name : element.value;
-
+    for (const [index, name] of typeObject.parameterNames.entries()) {
       parameters[index] = name;
     }
 
@@ -754,11 +739,11 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
     if (typeObject.return.size === 0) {
       return new ArrowFunctionStatement(
         id,
+        typeId,
         name,
-        TypeEnum.FUNCTION,
         prng.uniqueId(),
         parameters,
-        undefined
+        undefined // maybe something random?
       );
     }
 
@@ -766,20 +751,15 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
 
     return new ArrowFunctionStatement(
       id,
+      typeId,
       name,
-      type,
       prng.uniqueId(),
       parameters,
       this.sampleArgument(depth + 1, chosenReturn, "return")
     );
   }
 
-  sampleString(
-    id: string,
-    name: string,
-    alphabet = this.stringAlphabet,
-    maxlength = this.stringMaxLength
-  ): StringStatement {
+  sampleString(id: string, typeId: string, name: string): StringStatement {
     let value: string;
     if (
       this.constantPoolEnabled &&
@@ -790,43 +770,35 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
 
     if (value === undefined) {
       value = "";
-      const valueLength = prng.nextInt(0, maxlength - 1);
+      const valueLength = prng.nextInt(0, this.stringMaxLength - 1);
 
       for (let index = 0; index < valueLength; index++) {
-        value += prng.pickOne([...alphabet]);
+        value += prng.pickOne([...this.stringAlphabet]);
       }
     }
 
-    return new StringStatement(
-      id,
-      name,
-      TypeEnum.STRING,
-      prng.uniqueId(),
-      value,
-      alphabet,
-      maxlength
-    );
+    return new StringStatement(id, typeId, name, prng.uniqueId(), value);
   }
 
   // primitives
-  sampleBool(id: string, name: string): BoolStatement {
+  sampleBool(id: string, typeId: string, name: string): BoolStatement {
     return new BoolStatement(
       id,
+      typeId,
       name,
-      TypeEnum.BOOLEAN,
       prng.uniqueId(),
       prng.nextBoolean()
     );
   }
 
-  sampleNull(id: string, name: string): NullStatement {
-    return new NullStatement(id, name, TypeEnum.NULL, prng.uniqueId());
+  sampleNull(id: string, typeId: string, name: string): NullStatement {
+    return new NullStatement(id, typeId, name, prng.uniqueId());
   }
 
-  sampleNumber(id: string, name: string): NumericStatement {
+  sampleNumber(id: string, typeId: string, name: string): NumericStatement {
     // by default we create small numbers (do we need very large numbers?)
-    const max = 10;
-    const min = -10;
+    const max = 1000;
+    const min = -1000;
 
     const value =
       this.constantPoolEnabled && prng.nextBoolean(this.constantPoolProbability)
@@ -837,19 +809,13 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
       prng.nextDouble(min, max);
     }
 
-    return new NumericStatement(
-      id,
-      name,
-      TypeEnum.NUMERIC,
-      prng.uniqueId(),
-      value
-    );
+    return new NumericStatement(id, typeId, name, prng.uniqueId(), value);
   }
 
-  sampleInteger(id: string, name: string): IntegerStatement {
+  sampleInteger(id: string, typeId: string, name: string): IntegerStatement {
     // by default we create small numbers (do we need very large numbers?)
-    const max = 10;
-    const min = -10;
+    const max = 1000;
+    const min = -1000;
 
     const value =
       this.constantPoolEnabled && prng.nextBoolean(this.constantPoolProbability)
@@ -860,64 +826,14 @@ export class JavaScriptRandomSampler extends JavaScriptTestCaseSampler {
       prng.nextInt(min, max);
     }
 
-    return new IntegerStatement(
-      id,
-      name,
-      TypeEnum.INTEGER,
-      prng.uniqueId(),
-      value
-    );
+    return new IntegerStatement(id, typeId, name, prng.uniqueId(), value);
   }
 
-  sampleUndefined(id: string, name: string): UndefinedStatement {
-    return new UndefinedStatement(
-      id,
-      name,
-      TypeEnum.UNDEFINED,
-      prng.uniqueId()
-    );
-  }
-
-  private _sampleArguments(depth: number, type_: ObjectType): Statement[] {
-    const arguments_: Statement[] = [];
-
-    for (const [index, parameterId] of type_?.parameters?.entries() || []) {
-      const element = this.rootContext.getElement(parameterId);
-
-      if (element) {
-        const name = "name" in element ? element.name : element.value;
-
-        arguments_[index] = this.sampleArgument(depth + 1, parameterId, name);
-        continue;
-      }
-
-      const relation = this.rootContext.getRelation(parameterId);
-
-      if (relation) {
-        const name = getRelationName(relation.type);
-
-        arguments_[index] = this.sampleArgument(depth + 1, parameterId, name);
-        continue;
-      }
-
-      // NB: had this commented out for VUW
-      throw new Error(
-        `Could not find element or relation with id ${parameterId}`
-      );
-    }
-
-    // if some params are missing, fill them with fake params
-    const parameterIds = [...type_?.parameters?.values() || []];
-    for (let index = 0; index < arguments_.length; index++) {
-      if (!arguments_[index] && parameterIds) {
-        arguments_[index] = this.sampleArgument(
-          depth + 1,
-          prng.pickOne(parameterIds),
-          String(index)
-        );
-      }
-    }
-
-    return arguments_;
+  sampleUndefined(
+    id: string,
+    typeId: string,
+    name: string
+  ): UndefinedStatement {
+    return new UndefinedStatement(id, typeId, name, prng.uniqueId());
   }
 }

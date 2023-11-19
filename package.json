@@ -107,6 +107,7 @@
     "@babel/preset-typescript": "^7.21.5",
     "@syntest/cfg": "file:../syntest-core/libraries/cfg",
     "@syntest/logging": "file:../syntest-core/libraries/logging",
-    "@syntest/search": "file:../syntest-core/libraries/search"
+    "@syntest/search": "file:../syntest-core/libraries/search",
+    "fuse.js": "^7.0.0"
   }
 }

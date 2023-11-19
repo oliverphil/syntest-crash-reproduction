@@ -19,8 +19,8 @@ import {StackError, StackFrame, StackTrace, StackTraceProcessor} from "@syntest/
 import {JavaScriptExecutionResult} from "@syntest/search-javascript";
 
 export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
-    if (executionResult.hasExceptions()) {
-        const exceptions = executionResult.getExceptions();
+    if (executionResult.getError()) {
+        const exceptions = executionResult.getError().message;
         if (checkExceptionsMessageMatch(expectedStackException, exceptions)) {
             return 0;
         }
@@ -57,14 +57,14 @@ export function rightExceptionRaisedInWrongFunction(executionResult: JavaScriptE
 }
 
 export function reachedLineOfExceptionWithoutCrashing(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
-    if (!executionResult.hasExceptions()) {
+    if (!executionResult.getError()) {
         return checkExceptionLineCovered(executionResult, stackTrace);
     }
     return 1;
 }
 
 export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
-    if (executionResult.hasExceptions()) {
+    if (executionResult.getError()) {
         const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
         const stackTraceSimilarity = checkStackTraceSimilarity(executionResult, stackTrace);
         return normalise(exceptionsMatch + stackTraceSimilarity);
@@ -73,7 +73,7 @@ export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScript
 }
 
 export function someCallHierarchyWithoutCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
-    if (!executionResult.hasExceptions()) {
+    if (!executionResult.getError()) {
         const traces = executionResult.getTraces().filter(trace => {
             for (const frame of stackTrace.trace) {
                 if (trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0) {
@@ -93,8 +93,7 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
     const frame = stackTrace.trace.filter(s => !s.file.includes('tempTest.spec.js')
         && !s.file.includes('node:internal'))[stackTrace.trace.length - 1];
 
-    if (executionResult.hasExceptions()) {
-        const exception = executionResult.getExceptions();
+    if (executionResult.getError()) {
         const actualStack = executionResult.getStackTrace();
         const actualFrame = actualStack
             .filter(s => !s.file.includes('tempTest.spec.js')
@@ -119,7 +118,7 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
 }
 
 function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
-    if (!executionResult.hasExceptions()) return 1;
+    if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
     const expectedFunction = stackTrace.trace[0].method;
     if (actualStackTrace[0].method === expectedFunction) {
@@ -137,8 +136,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
 
     const frame = stackTrace.trace[0];
 
-    if (executionResult.hasExceptions()) {
-        const exception = executionResult.getExceptions();
+    if (executionResult.getError()) {
         const actualStack = executionResult.getStackTrace();
         if (actualStack[0].file === frame.file && actualStack[0].lineNumber === frame.lineNumber) {
             return 0;
@@ -159,8 +157,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
 }
 
 export function checkStackTraceSimilarity(executionResult: JavaScriptExecutionResult, expectedStackTrace: StackTrace): number {
-    if (!executionResult.hasExceptions()) return 1;
-    const exceptions = executionResult.getExceptions();
+    if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
     const trimmedActualStackTrace = actualStackTrace.filter(t => !t.file.includes('tempTest.spec.js'));
     const trimmedExpectedStackTrace = expectedStackTrace.trace.filter(t => !t.file.includes('tempTest.spec.js'));

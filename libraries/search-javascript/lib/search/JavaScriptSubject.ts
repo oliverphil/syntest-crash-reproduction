@@ -15,29 +15,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { RootContext, SubTarget, Target } from "@syntest/analysis-javascript";
 import { TargetType } from "@syntest/analysis";
+import { RootContext, SubTarget, Target } from "@syntest/analysis-javascript";
 import { ControlFlowGraph, Edge, EdgeType } from "@syntest/cfg";
 import {
+  ApproachLevel,
+  BranchObjectiveFunction,
   FunctionObjectiveFunction,
   ObjectiveFunction,
   SearchSubject,
-  ApproachLevel,
   shouldNeverHappen,
-  BranchObjectiveFunction,
 } from "@syntest/search";
 
-import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
 import { BranchDistance } from "../criterion/BranchDistance";
+import { JavaScriptTestCase } from "../testcase/JavaScriptTestCase";
 
 export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
+  protected syntaxForgiving: boolean;
   protected stringAlphabet: string;
   constructor(
     target: Target,
     rootContext: RootContext,
+    syntaxForgiving: boolean,
     stringAlphabet: string
   ) {
+    // @ts-ignore
     super(target, rootContext);
+    this.syntaxForgiving = syntaxForgiving;
     this.stringAlphabet = stringAlphabet;
 
     this._extractObjectives();
@@ -76,7 +80,7 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
           this._objectives.set(
             new BranchObjectiveFunction(
               new ApproachLevel(),
-              new BranchDistance(this.stringAlphabet),
+              new BranchDistance(this.syntaxForgiving, this.stringAlphabet),
               this,
               edge.target
             ),
@@ -86,6 +90,7 @@ export class JavaScriptSubject extends SearchSubject<JavaScriptTestCase> {
       }
 
       for (const objective of this._objectives.keys()) {
+        // @ts-ignore
         const childrenObject = this.findChildren(graph, objective);
         this._objectives.get(objective).push(...childrenObject);
       }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/../delft-versions/syntest-core" libraries="{syntest-core/node_modules}" />
+    <file url="file://$PROJECT_DIR$/../delft-versions/syntest-core/libraries/cli-graphics" libraries="{syntest-core/libraries/cli-graphics/node_modules}" />
+    <file url="file://$PROJECT_DIR$/../delft-versions/syntest-core/tools/base-language" libraries="{syntest-core/tools/base-language/node_modules}" />
+    <file url="file://$PROJECT_DIR$/../syntest-core" libraries="{syntest-core/node_modules}" />
+    <file url="file://$PROJECT_DIR$/../syntest-core/libraries/cli-graphics" libraries="{syntest-core/libraries/cli-graphics/node_modules}" />
+    <file url="file://$PROJECT_DIR$/../syntest-core/tools/base-language" libraries="{syntest-core/tools/base-language/node_modules}" />
+  </component>
+</project>

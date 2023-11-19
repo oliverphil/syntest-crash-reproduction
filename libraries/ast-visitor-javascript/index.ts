@@ -17,3 +17,5 @@
  */
 
 export * from "./lib/AbstractSyntaxTreeVisitor";
+export * from "./lib/globalVariables";
+export * from "./lib/reservedKeywords";

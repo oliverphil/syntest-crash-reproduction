@@ -15,13 +15,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
 
 import { NodePath } from "@babel/core";
 import * as t from "@babel/types";
 import { AbstractSyntaxTreeVisitor } from "@syntest/ast-visitor-javascript";
-import { Logger, getLogger } from "@syntest/logging";
+import { getLogger, Logger } from "@syntest/logging";
 import { shouldNeverHappen } from "@syntest/search";
 
+const invalidOperator = "Invalid operator!";
 export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
   protected static override LOGGER: Logger;
 
@@ -34,22 +39,22 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
 
   private _valueMap: Map<string, unknown>;
   private _isDistanceMap: Map<string, boolean>;
-  private _distance: number;
 
 
   constructor(
+    syntaxForgiving: boolean,
     stringAlphabet: string,
     variables: Record<string, unknown>,
     inverted: boolean
   ) {
-    super("");
+    super("", syntaxForgiving);
     this._stringAlphabet = stringAlphabet;
     this._variables = variables;
     this._inverted = inverted;
 
     this._valueMap = new Map();
     this._isDistanceMap = new Map();
-    this._distance = -1;
+
     BranchDistanceVisitor.LOGGER = getLogger("BranchDistanceVisitor");
 
     for (const variable of Object.keys(this._variables)) {
@@ -60,21 +65,16 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
   }
 
   _getDistance(condition: string): number {
-    if (!this._distance) {
-      if (
-        !this._valueMap.has(condition) ||
-        !this._isDistanceMap.get(condition)
-      ) {
-        // the value does not exist or is not a distance
-        throw new Error(shouldNeverHappen("BranchDistanceVisitor"));
-      }
-
-      this._distance = <number>this._valueMap.get(condition);
+    if (!this._valueMap.has(condition) || !this._isDistanceMap.get(condition)) {
+      // the value does not exist or is not a distance
+      throw new Error(shouldNeverHappen("BranchDistanceVisitor"));
     }
-    return this._distance;
+
+    return <number>this._valueMap.get(condition);
   }
 
   public Statement: (path: NodePath<t.Statement>) => void = (path) => {
+    let id: string;
     if (
       path.isConditionalExpression() ||
       path.isIfStatement() ||
@@ -84,49 +84,191 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       const test = <NodePath<t.Node>>path.get("test");
 
       test.visit();
-
-      const testId = test.toString();
-
-      if (this._isDistanceMap.get(testId)) {
-        this._distance = <number>this._valueMap.get(path.toString());
-      } else {
-        this._distance = this._valueMap.get(path.toString()) ? 0 : 1;
-      }
-    }
-
-    if (path.isSwitchCase() || path.isForStatement()) {
+      id = test.toString();
+    } else if (path.isSwitchCase() || path.isForStatement()) {
       const test = <NodePath<t.Node>>path.get("test");
 
       if (test) {
         test.visit();
-        const testId = test.toString();
-
-        if (this._isDistanceMap.get(testId)) {
-          this._distance = <number>this._valueMap.get(path.toString());
-        } else {
-          this._distance = this._valueMap.get(path.toString()) ? 0 : 1;
-        }
+        id = test.toString();
       } else {
-        this._distance = 0;
+        path.skip();
+        return;
       }
-    }
-
-    if (path.isExpressionStatement()) {
-      path.get("expression").visit();
-
+    } else if (path.isExpressionStatement()) {
       const expression = <NodePath<t.Node>>path.get("expression");
-      const expressionId = expression.toString();
-
-      if (this._isDistanceMap.get(expressionId)) {
-        this._distance = <number>this._valueMap.get(path.toString());
-      } else {
-        this._distance = this._valueMap.get(path.toString()) ? 0 : 1;
-      }
+      expression.visit();
+      id = expression.toString();
     }
 
     // TODO for in and for of
 
+    let _distance: number;
+    if (this._isDistanceMap.get(id)) {
+      _distance = <number>this._valueMap.get(id);
+    } else {
+      if (this._inverted) {
+        _distance = this._valueMap.get(id) ? 1 : 0;
+      } else {
+        _distance = this._valueMap.get(id) ? 0 : 1;
+      }
+      _distance = this._normalize(_distance);
+    }
+
+    this._isDistanceMap.set(id, true);
+    this._valueMap.set(id, _distance);
+
     path.skip();
+  };
+
+  public CallExpression: (path: NodePath<t.CallExpression>) => void = (
+    path
+  ) => {
+    const callee = path.get("callee");
+
+    if (callee.isMemberExpression()) {
+      const object = callee.get("object");
+      object.visit();
+      const property = callee.get("property");
+
+      if (property.isIdentifier()) {
+        const objectValue = this._valueMap.get(object.toString());
+
+        // TODO should check if the value is actually a string
+        if (typeof objectValue !== "string") {
+          return;
+        }
+
+        switch (property.node.name) {
+          case "endsWith": {
+            const argument = path.get("arguments")[0];
+            argument.visit();
+            const argumentValue = <string>(
+              this._valueMap.get(argument.toString())
+            );
+
+            const endOfObject =
+              objectValue.length > argumentValue.length
+                ? objectValue.slice(-argumentValue.length)
+                : objectValue;
+
+            this._isDistanceMap.set(path.toString(), true);
+
+            if (this._inverted) {
+              if (endOfObject === argumentValue) {
+                this._valueMap.set(path.toString(), this._normalize(1));
+              } else {
+                this._valueMap.set(path.toString(), this._normalize(0));
+              }
+            } else {
+              if (endOfObject === argumentValue) {
+                this._valueMap.set(path.toString(), this._normalize(0));
+              } else {
+                this._valueMap.set(
+                  path.toString(),
+                  this._normalize(
+                    this._realCodedEditDistance(endOfObject, argumentValue)
+                  )
+                );
+              }
+            }
+
+            break;
+          }
+          case "startsWith": {
+            const argument = path.get("arguments")[0];
+            argument.visit();
+            const argumentValue = <string>(
+              this._valueMap.get(argument.toString())
+            );
+
+            const startOfObject =
+              objectValue.length > argumentValue.length
+                ? objectValue.slice(0, argumentValue.length)
+                : objectValue;
+
+            this._isDistanceMap.set(path.toString(), true);
+
+            if (this._inverted) {
+              if (startOfObject === argumentValue) {
+                this._valueMap.set(path.toString(), this._normalize(1));
+              } else {
+                this._valueMap.set(path.toString(), this._normalize(0));
+              }
+            } else {
+              if (startOfObject === argumentValue) {
+                this._valueMap.set(path.toString(), this._normalize(0));
+              } else {
+                this._valueMap.set(
+                  path.toString(),
+                  this._normalize(
+                    this._realCodedEditDistance(startOfObject, argumentValue)
+                  )
+                );
+              }
+            }
+
+            break;
+          }
+          case "includes": {
+            const argument = path.get("arguments")[0];
+            argument.visit();
+            const argumentValue = <string>(
+              this._valueMap.get(argument.toString())
+            );
+
+            this._isDistanceMap.set(path.toString(), true);
+
+            if (this._inverted) {
+              if (objectValue.includes(argumentValue)) {
+                this._valueMap.set(path.toString(), this._normalize(1));
+              } else {
+                this._valueMap.set(path.toString(), this._normalize(0));
+              }
+            } else {
+              if (objectValue.includes(argumentValue)) {
+                this._valueMap.set(path.toString(), this._normalize(0));
+              } else {
+                // search
+                if (objectValue.length > argumentValue.length) {
+                  let minValue = Number.MAX_VALUE;
+                  for (
+                    let start = 0;
+                    start < objectValue.length - argumentValue.length;
+                    start++
+                  ) {
+                    const substring = objectValue.slice(
+                      start,
+                      argumentValue.length
+                    );
+
+                    minValue = Math.min(
+                      minValue,
+                      this._realCodedEditDistance(substring, argumentValue)
+                    );
+                  }
+
+                  this._valueMap.set(
+                    path.toString(),
+                    this._normalize(minValue)
+                  );
+                } else {
+                  this._valueMap.set(
+                    path.toString(),
+                    this._normalize(
+                      this._realCodedEditDistance(objectValue, argumentValue)
+                    )
+                  );
+                }
+              }
+            }
+
+            break;
+          }
+          // No default
+        }
+      }
+    }
   };
 
   public Literal: (path: NodePath<t.Literal>) => void = (path) => {
@@ -241,7 +383,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
         }
         default: {
           // should be unreachable
-          throw new Error("Invalid operator!");
+          throw new Error(invalidOperator);
         }
       }
     }
@@ -336,7 +478,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should be unreachable
-        throw new Error("Invalid operator!");
+        throw new Error(invalidOperator);
       }
     }
 
@@ -471,7 +613,9 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
           value = Math.abs(leftValue - rightValue);
         } else if (
           typeof leftValue === "string" &&
-          typeof rightValue === "string"
+          typeof rightValue === "string" &&
+          !left.toString().startsWith("typeof ") && // typeof x === 'string' (should not be compared as strings (but as enums))
+          !right.toString().startsWith("typeof ") // 'string' === typeof x (should not be compared as strings (but as enums))
         ) {
           value = this._realCodedEditDistance(leftValue, rightValue);
         } else if (
@@ -513,9 +657,15 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       case "instanceof": {
         if (this._inverted) {
-          value = leftValue instanceof rightValue ? Number.MAX_VALUE : 0;
+          value =
+            rightValue instanceof Object && leftValue instanceof rightValue
+              ? Number.MAX_VALUE
+              : 0;
         } else {
-          value = leftValue instanceof rightValue ? 0 : Number.MAX_VALUE;
+          value =
+            rightValue instanceof Object && leftValue instanceof rightValue
+              ? 0
+              : Number.MAX_VALUE;
         }
         break;
       }
@@ -566,7 +716,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should be unreachable
-        throw new Error("Invalid operator!");
+        throw new Error(invalidOperator);
       }
     }
 
@@ -585,12 +735,12 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
         "|>",
       ].includes(operator)
     ) {
-      this._valueMap.set(path.toString(), this._normalize(<number>value));
+      value = this._normalize(<number>value);
       this._isDistanceMap.set(path.toString(), true);
     } else {
-      this._valueMap.set(path.toString(), value);
       this._isDistanceMap.set(path.toString(), false);
     }
+    this._valueMap.set(path.toString(), value);
 
     path.skip();
   };
@@ -678,7 +828,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should be unreachable
-        throw new Error("Invalid operator!");
+        throw new Error(invalidOperator);
       }
     }
 
@@ -702,7 +852,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     return mi;
   }
 
-  protected _realCodedEditDistance(s: string, t: string) {
+  public _realCodedEditDistance(s: string, t: string) {
     const d: number[][] = []; // matrix
     let index; // iterates through s
     let index_; // iterates through t
@@ -769,7 +919,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
             !this._stringAlphabet.includes(s_index)
           ) {
             BranchDistanceVisitor.LOGGER.warn(
-              `cannot search for character missing from the sampling alphabet one of these is missing: ${t_index}, ${s_index}`
+              `Cannot search for character missing from the sampling alphabet one of these is missing: ${t_index}, ${s_index}`
             );
             cost = Number.MAX_VALUE;
           } else {

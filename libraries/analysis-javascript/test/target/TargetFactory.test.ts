@@ -16,8 +16,8 @@
  * limitations under the License.
  */
 import { expect } from "chai";
-import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
 
+import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
 import { TargetFactory } from "../../lib/target/TargetFactory";
 
 describe("TargetFactory", () => {
@@ -36,7 +36,7 @@ describe("TargetFactory", () => {
     `;
     const ast = new AbstractSyntaxTreeFactory().convert("", code);
 
-    const targetMapGenerator = new TargetFactory();
+    const targetMapGenerator = new TargetFactory(false);
     const target = targetMapGenerator.extract("", ast);
 
     expect(target.subTargets.length).to.equal(3);
