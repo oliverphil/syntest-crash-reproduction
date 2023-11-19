@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -18,6 +18,7 @@
 import * as crypto from "node:crypto";
 
 import {StackFrame, StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
+import { ImplementationError } from "@syntest/diagnostics";
 import { ExecutionResult, Trace } from "@syntest/search";
 
 export enum JavaScriptExecutionStatus {
@@ -107,7 +108,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
         return false;
       }
 
-      throw new Error(
+      throw new ImplementationError(
         `Could not find a matching trace for the given id: ${id}`
       );
     }

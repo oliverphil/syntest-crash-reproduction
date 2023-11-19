@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -16,6 +16,7 @@
  * limitations under the License.
  */
 import { Target } from "@syntest/analysis-javascript";
+import { IllegalStateError } from "@syntest/diagnostics";
 import { getLogger, Logger } from "@syntest/logging";
 import {
   Archive,
@@ -43,14 +44,14 @@ export class DeDuplicator {
       archives.set(target, archive);
 
       for (const encoding of encodings) {
-        const executionResult = encoding.getExecutionResult();
-
-        if (!executionResult) {
-          throw new Error("Invalid encoding without executionResult");
+        if (!encoding.getExecutionResult()) {
+          throw new IllegalStateError(
+            "Invalid encoding without executionResult"
+          );
         }
 
         for (const objective of objectives) {
-          if (executionResult.coversId(objective.getIdentifier())) {
+          if (objective.calculateDistance(encoding) === 0) {
             if (!archive.hasObjective(objective)) {
               DeDuplicator.LOGGER.debug("Adding new encoding to archive");
               archive.update(objective, encoding, false);

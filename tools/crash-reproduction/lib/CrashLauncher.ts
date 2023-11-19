@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -52,7 +52,6 @@ import {
   TableObject,
   UserInterface,
 } from "@syntest/cli-graphics";
-import { ModuleManager } from "@syntest/module";
 import {
   CrashSubject,
   ExecutionInformationIntegrator,
@@ -62,19 +61,30 @@ import {
   JavaScriptSuiteBuilder,
   JavaScriptTestCase, JavaScriptTestCaseSampler,
 } from "@syntest/search-javascript";
+import { IllegalArgumentError, isFailure, unwrap } from "@syntest/diagnostics";
+import { Instrumenter } from "@syntest/instrumentation-javascript";
+import { ModuleManager } from "@syntest/module";
 import {
+  ApproachLevelCalculator,
   Archive,
   BudgetManager,
   BudgetType,
   EncodingSampler,
   EvaluationBudget,
   IterationBudget, ObjectiveFunction, ObjectiveManager,
+  extractBranchObjectivesFromProgram,
+  extractFunctionObjectivesFromProgram,
+  extractPathObjectivesFromProgram,
   SearchTimeBudget,
   TerminationManager,
   TotalTimeBudget,
 } from "@syntest/search";
 import { getLogger, Logger } from "@syntest/logging";
 import { MetricManager } from "@syntest/metric";
+import {
+  BranchDistanceCalculator,
+  JavaScriptSubject,
+} from "@syntest/search-javascript";
 import { StorageManager } from "@syntest/storage";
 import {Crash} from "@syntest/crash-reproduction-setup";
 import {CrashInstrumenter} from "./instrumentation/CrashInstrumenter";
@@ -84,8 +94,8 @@ import {addMetaComments} from "./workflows/MetaComment";
 import TypedEventEmitter from "typed-emitter";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
-export class CrashLauncher extends Launcher {
-  private static LOGGER: Logger;
+export class CrashLauncher extends Launcher<JavaScriptArguments> {
+  protected static override LOGGER: Logger;
 
   protected override arguments_: JavaScriptArguments;
   protected override moduleManager: ModuleManager;
@@ -132,14 +142,12 @@ export class CrashLauncher extends Launcher {
     const start = Date.now();
 
     this.metricManager.recordProperty(
-        PropertyName.CONSTANT_POOL_ENABLED,
-        `${(<JavaScriptArguments>this.arguments_).constantPool.toString()}`
+      PropertyName.CONSTANT_POOL_ENABLED,
+      `${this.arguments_.constantPool.toString()}`
     );
     this.metricManager.recordProperty(
-        PropertyName.CONSTANT_POOL_PROBABILITY,
-        `${(<JavaScriptArguments>(
-            this.arguments_
-        )).constantPoolProbability.toString()}`
+      PropertyName.CONSTANT_POOL_PROBABILITY,
+      `${this.arguments_.constantPoolProbability.toString()}`
     );
 
     this.storageManager.deleteTemporaryDirectories([
@@ -166,24 +174,18 @@ export class CrashLauncher extends Launcher {
     );
 
     const abstractSyntaxTreeFactory = new AbstractSyntaxTreeFactory();
-    const targetFactory = new TargetFactory(
-        (<JavaScriptArguments>this.arguments_).syntaxForgiving
-    );
+    const targetFactory = new TargetFactory(this.arguments_.syntaxForgiving);
     const controlFlowGraphFactory = new ControlFlowGraphFactory(
-        (<JavaScriptArguments>this.arguments_).syntaxForgiving
+      this.arguments_.syntaxForgiving
     );
     const dependencyFactory = new DependencyFactory(
-        (<JavaScriptArguments>this.arguments_).syntaxForgiving
+      this.arguments_.syntaxForgiving
     );
-    const exportFactory = new ExportFactory(
-        (<JavaScriptArguments>this.arguments_).syntaxForgiving
-    );
-    const typeExtractor = new TypeExtractor(
-        (<JavaScriptArguments>this.arguments_).syntaxForgiving
-    );
+    const exportFactory = new ExportFactory(this.arguments_.syntaxForgiving);
+    const typeExtractor = new TypeExtractor(this.arguments_.syntaxForgiving);
     const typeResolver: TypeModelFactory = new InferenceTypeModelFactory();
     const constantPoolFactory = new ConstantPoolFactory(
-        (<JavaScriptArguments>this.arguments_).syntaxForgiving
+      this.arguments_.syntaxForgiving
     );
 
     const rootPath = this.arguments_.targetRootDirectory + `/${this.arguments_.syntestType}/${this.crash.project}/${this.crash.crashId}`;
@@ -204,8 +206,9 @@ export class CrashLauncher extends Launcher {
 
     for (const target of targetFiles) {
       if (this.arguments_.analysisExclude.includes(target)) {
-        throw new Error(
-            `Target files cannot be excluded from analysis. Target file: ${target}`
+        throw new IllegalArgumentError(
+          "Target files cannot be excluded from analysis",
+          { context: { targetFile: target } }
         );
       }
     }
@@ -307,7 +310,6 @@ export class CrashLauncher extends Launcher {
         ["Analysis Include", `${this.arguments_.analysisInclude.join(", ")}`],
         ["Analysis Exclude", `${this.arguments_.analysisExclude.join(", ")}`],
       ],
-      footers: ["", ""],
     };
     this.userInterface.printTable("SELECTION SETTINGS", selectionSettings);
 
@@ -333,7 +335,6 @@ export class CrashLauncher extends Launcher {
 
         ["Seed", `${this.arguments_.randomSeed.toString()}`],
       ],
-      footers: ["", ""],
     };
 
     this.userInterface.printTable("SETTINGS", settings);
@@ -346,7 +347,6 @@ export class CrashLauncher extends Launcher {
         ["Search Time Budget", `${this.arguments_.searchTime} seconds`],
         ["Total Time Budget", `${this.arguments_.totalTime} seconds`],
       ],
-      footers: ["", ""],
     };
 
     this.userInterface.printTable("BUDGET SETTINGS", budgetSettings);
@@ -370,55 +370,32 @@ export class CrashLauncher extends Launcher {
           "Explore Illegal Values",
           String(this.arguments_.exploreIllegalValues),
         ],
-        [
-          "Use Constant Pool Values",
-          String((<JavaScriptArguments>this.arguments_).constantPool),
-        ],
+        ["Use Constant Pool Values", String(this.arguments_.constantPool)],
         [
           "Use Constant Pool Probability",
-          `${(<JavaScriptArguments>this.arguments_).constantPoolProbability}`,
+          `${this.arguments_.constantPoolProbability}`,
         ],
-        [
-          "Use Type Pool Values",
-          String((<JavaScriptArguments>this.arguments_).typePool),
-        ],
-        [
-          "Use Type Pool Probability",
-          `${(<JavaScriptArguments>this.arguments_).typePoolProbability}`,
-        ],
-        [
-          "Use Statement Pool Values",
-          String((<JavaScriptArguments>this.arguments_).statementPool),
-        ],
+        ["Use Type Pool Values", String(this.arguments_.typePool)],
+        ["Use Type Pool Probability", `${this.arguments_.typePoolProbability}`],
+        ["Use Statement Pool Values", String(this.arguments_.statementPool)],
         [
           "Use Statement Pool Probability",
-          `${(<JavaScriptArguments>this.arguments_).statementPoolProbability}`,
+          `${this.arguments_.statementPoolProbability}`,
         ],
       ],
-      footers: ["", ""],
     };
     this.userInterface.printTable("MUTATION SETTINGS", mutationSettings);
 
     const typeSettings: TableObject = {
       headers: ["Setting", "Value"],
       rows: [
-        [
-          "Type Inference Mode",
-          `${(<JavaScriptArguments>this.arguments_).typeInferenceMode}`,
-        ],
+        ["Type Inference Mode", `${this.arguments_.typeInferenceMode}`],
         [
           "Incorporate Execution Information",
-          String(
-              (<JavaScriptArguments>this.arguments_)
-                  .incorporateExecutionInformation
-          ),
+          String(this.arguments_.incorporateExecutionInformation),
         ],
-        [
-          "Random Type Probability",
-          `${(<JavaScriptArguments>this.arguments_).randomTypeProbability}`,
-        ],
+        ["Random Type Probability", `${this.arguments_.randomTypeProbability}`],
       ],
-      footers: ["", ""],
     };
     this.userInterface.printTable("Type SETTINGS", typeSettings);
 
@@ -429,7 +406,6 @@ export class CrashLauncher extends Launcher {
         ["Temporary Directory", `${this.arguments_.tempSyntestDirectory}`],
         ["Target Root Directory", `${this.arguments_.targetRootDirectory}`],
       ],
-      footers: ["", ""],
     };
 
     this.userInterface.printTable("DIRECTORY SETTINGS", directorySettings);
@@ -495,14 +471,14 @@ export class CrashLauncher extends Launcher {
         this.rootContext.getTypeModel()
     );
     this.runner = new JavaScriptRunner(
-        this.storageManager,
-        this.decoder,
-        executionInformationIntegrator,
-        this.arguments_.testDirectory,
-        (<JavaScriptArguments>this.arguments_).executionTimeout,
-        (<JavaScriptArguments>this.arguments_).testTimeout,
-        (<JavaScriptArguments>this.arguments_).silenceTestOutput
-    )
+      this.storageManager,
+      this.decoder,
+      executionInformationIntegrator,
+      this.arguments_.testDirectory,
+      this.arguments_.executionTimeout,
+      this.arguments_.testTimeout,
+      this.arguments_.silenceTestOutput
+    );
 
     CrashLauncher.LOGGER.info("Preprocessing done");
 
@@ -538,6 +514,7 @@ export class CrashLauncher extends Launcher {
   }
 
   async postprocess(): Promise<void> {
+    this.userInterface.printHeader("Postprocessing started");
     CrashLauncher.LOGGER.info("Postprocessing started");
     const start = Date.now();
     const testSplitter = new TestSplitting(this.runner);
@@ -570,6 +547,10 @@ export class CrashLauncher extends Launcher {
       CrashLauncher.LOGGER.info(
           `Splitting done took: ${timeInMs}, went from ${before} to ${after} test cases`
       );
+      this.userInterface.printSuccess(
+        `Splitting done took: ${timeInMs}, went from ${before} to ${after} test cases`
+      );
+
       // this.metricManager.recordProperty(PropertyName., `${timeInMs}`); // TODO new metric
     }
     if (this.arguments_.testMinimization) {
@@ -611,6 +592,9 @@ export class CrashLauncher extends Launcher {
 
     CrashLauncher.LOGGER.info(
         `De-Duplication done took: ${timeInMsDeDuplication}, went from ${before} to ${after} test cases`
+    );
+    this.userInterface.printSuccess(
+      `De-Duplication done took: ${timeInMsDeDuplication}, went from ${before} to ${after} test cases`
     );
 
     if (this.arguments_.metaComments) {
@@ -843,12 +827,48 @@ export class CrashLauncher extends Launcher {
     CrashLauncher.LOGGER.info(
       `Testing target ${target.name} in ${target.path}`
     );
-    const currentSubject = new CrashSubject(
-        target,
-        this.rootContext,
+
+    const result = rootContext.getControlFlowProgram(target.path);
+
+    if (isFailure(result)) throw result.error;
+
+    const cfp = unwrap(result);
+
+    const branchObjectives =
+      extractBranchObjectivesFromProgram<JavaScriptTestCase>(
+        cfp,
+        new ApproachLevelCalculator(),
+        new BranchDistanceCalculator(
+          this.arguments_.syntaxForgiving,
+          this.arguments_.stringAlphabet
+        )
+      );
+    const pathObjectives = extractPathObjectivesFromProgram<JavaScriptTestCase>(
+      cfp,
+      new ApproachLevelCalculator(),
+      new BranchDistanceCalculator(
         this.arguments_.syntaxForgiving,
-        this.arguments_.stringAlphabet,
-        this.crash.stackTrace);
+        this.arguments_.stringAlphabet
+      )
+    );
+    const functionObjectives =
+      extractFunctionObjectivesFromProgram<JavaScriptTestCase>(cfp);
+
+    this.userInterface.printTable("Objective Counts", {
+      headers: ["Type", "Count"],
+      rows: [
+        ["branch", `${branchObjectives.length}`],
+        ["path", `${pathObjectives.length}`],
+        ["function", `${functionObjectives.length}`],
+      ],
+    });
+
+    const currentSubject = new CrashSubject(
+      target,
+      this.rootContext,
+      this.arguments_.syntaxForgiving,
+      this.arguments_.stringAlphabet,
+      this.crash.stackTrace);
 
     const rootTargets = currentSubject
       .getActionableTargets()
@@ -862,26 +882,33 @@ export class CrashLauncher extends Launcher {
       return new Archive();
     }
 
-    const constantPoolManager = rootContext.getConstantPoolManager(target.path);
+    const constantPoolManagerResult = rootContext.getConstantPoolManager(
+      target.path
+    );
+
+    if (isFailure(constantPoolManagerResult))
+      throw constantPoolManagerResult.error;
+
+    const constantPoolManager = unwrap(constantPoolManagerResult);
 
     const sampler = new JavaScriptRandomSampler(
-        currentSubject,
-        constantPoolManager,
-        (<JavaScriptArguments>this.arguments_).constantPool,
-        (<JavaScriptArguments>this.arguments_).constantPoolProbability,
-        (<JavaScriptArguments>this.arguments_).typePool,
-        (<JavaScriptArguments>this.arguments_).typePoolProbability,
-        (<JavaScriptArguments>this.arguments_).statementPool,
-        (<JavaScriptArguments>this.arguments_).statementPoolProbability,
+      currentSubject,
+      constantPoolManager,
+      this.arguments_.constantPool,
+      this.arguments_.constantPoolProbability,
+      this.arguments_.typePool,
+      this.arguments_.typePoolProbability,
+      this.arguments_.statementPool,
+      this.arguments_.statementPoolProbability,
 
-        (<JavaScriptArguments>this.arguments_).typeInferenceMode,
-        (<JavaScriptArguments>this.arguments_).randomTypeProbability,
-        (<JavaScriptArguments>this.arguments_).incorporateExecutionInformation,
-        this.arguments_.maxActionStatements,
-        this.arguments_.stringAlphabet,
-        this.arguments_.stringMaxLength,
-        this.arguments_.deltaMutationProbability,
-        this.arguments_.exploreIllegalValues
+      this.arguments_.typeInferenceMode,
+      this.arguments_.randomTypeProbability,
+      this.arguments_.incorporateExecutionInformation,
+      this.arguments_.maxActionStatements,
+      this.arguments_.stringAlphabet,
+      this.arguments_.stringMaxLength,
+      this.arguments_.deltaMutationProbability,
+      this.arguments_.exploreIllegalValues
     );
     sampler.rootContext = rootContext;
 

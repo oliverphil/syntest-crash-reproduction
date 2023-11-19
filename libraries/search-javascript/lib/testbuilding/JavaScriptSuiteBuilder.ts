@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,6 +16,7 @@
  * limitations under the License.
  */
 import { Target } from "@syntest/analysis";
+import { ImplementationError } from "@syntest/diagnostics";
 import { StorageManager } from "@syntest/storage";
 
 import { JavaScriptRunner } from "../testcase/execution/JavaScriptRunner";
@@ -101,7 +102,7 @@ export class JavaScriptSuiteBuilder {
       for (const [id, data] of Object.entries(assertionData)) {
         const testCase = [...archive.values()].flat().find((x) => x.id === id);
         if (!testCase) {
-          throw new Error("invalid id");
+          throw new ImplementationError("invalid id");
         }
 
         testCase.assertionData = data;

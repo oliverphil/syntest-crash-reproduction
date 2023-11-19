@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -44,7 +44,7 @@ export function addMetaComments(
       const executionResult = encoding.getExecutionResult();
       if (executionResult) {
         for (const objective of archive.getObjectives()) {
-          if (executionResult.coversId(objective.getIdentifier())) {
+          if (objective.calculateDistance(encoding) === 0) {
             encoding.addMetaComment(
               `Covers objective: ${objective.getIdentifier()}`
             );

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -457,6 +457,10 @@ function coverLoopBranch(path: NodePath<t.Loop>) {
         },
       },
     });
+  }
+
+  if (path.has("update")) {
+    this.insertStatementCounter(path.get("update"));
   }
 
   if (path.has("test")) {

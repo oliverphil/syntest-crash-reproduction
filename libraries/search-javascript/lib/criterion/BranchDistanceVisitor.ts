@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -23,8 +23,11 @@
 import { NodePath } from "@babel/core";
 import * as t from "@babel/types";
 import { AbstractSyntaxTreeVisitor } from "@syntest/ast-visitor-javascript";
+import {
+  IllegalArgumentError,
+  ImplementationError,
+} from "@syntest/diagnostics";
 import { getLogger, Logger } from "@syntest/logging";
-import { shouldNeverHappen } from "@syntest/search";
 
 const invalidOperator = "Invalid operator!";
 export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
@@ -67,7 +70,10 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
   _getDistance(condition: string): number {
     if (!this._valueMap.has(condition) || !this._isDistanceMap.get(condition)) {
       // the value does not exist or is not a distance
-      throw new Error(shouldNeverHappen("BranchDistanceVisitor"));
+      throw new IllegalArgumentError(
+        "Cannot get distance from unknown condition",
+        { context: { condition: condition } }
+      );
     }
 
     return <number>this._valueMap.get(condition);
@@ -330,7 +336,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
   //     // we dont know what this variable is...
   //     // should never happen??
   //     this._valueMap.set(path.toString(), undefined);
-  //     throw new Error(shouldNeverHappen('BranchDistanceVisitor'))
+  //     throw new ImplementationError(shouldNeverHappen('BranchDistanceVisitor'))
   //   } else {
   //     this._valueMap.set(
   //       path.toString(),
@@ -350,7 +356,9 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
 
     // should not be distance
     if (this._isDistanceMap.get(argument.toString()) === true) {
-      throw new Error("Argument should not result in distance value!");
+      throw new ImplementationError(
+        "Argument should not result in distance value!"
+      );
     }
 
     let value: unknown;
@@ -383,7 +391,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
         }
         default: {
           // should be unreachable
-          throw new Error(invalidOperator);
+          throw new ImplementationError(invalidOperator);
         }
       }
     }
@@ -410,7 +418,9 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     const argumentIsDistance = this._isDistanceMap.get(argument.toString());
 
     if (argumentIsDistance && path.node.operator !== "!") {
-      throw new Error("Argument should not result in distance value!");
+      throw new ImplementationError(
+        "Argument should not result in distance value!"
+      );
     }
 
     let value: unknown;
@@ -478,7 +488,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should be unreachable
-        throw new Error(invalidOperator);
+        throw new ImplementationError(invalidOperator);
       }
     }
 
@@ -505,11 +515,15 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
     const rightValue = <any>this._valueMap.get(right.toString());
 
     if (this._isDistanceMap.get(left.toString())) {
-      throw new Error("Left should not result in distance value!");
+      throw new ImplementationError(
+        "Left should not result in distance value!"
+      );
     }
 
     if (this._isDistanceMap.get(right.toString())) {
-      throw new Error("Right should not result in distance value!");
+      throw new ImplementationError(
+        "Right should not result in distance value!"
+      );
     }
     let operator = path.node.operator;
 
@@ -716,7 +730,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should be unreachable
-        throw new Error(invalidOperator);
+        throw new ImplementationError(invalidOperator);
       }
     }
 
@@ -828,7 +842,7 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should be unreachable
-        throw new Error(invalidOperator);
+        throw new ImplementationError(invalidOperator);
       }
     }
 
