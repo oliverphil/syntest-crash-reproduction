@@ -87,9 +87,16 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
 
       // known cases
       // ({ x = 5 }) => {...} (x is recorded twice)
-
       ElementVisitor.LOGGER.warn(`Overriding element with id: ${id}`);
       return;
+    }
+
+    let loc = path.node.loc;
+    let node = path;
+    while (!loc && node) {
+      // @ts-ignore
+      node = node.parentPath || node.parent;
+      loc = node.node.loc;
     }
 
     if (type === ElementType.Identifier) {
@@ -100,8 +107,8 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         location: {
           // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
           // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
-          startIndex: (<{ index: number }>(<unknown>path.node.loc.start)).index,
-          endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
+          startIndex: (<{ index: number }>(<unknown>loc.start)).index,
+          endIndex: (<{ index: number }>(<unknown>loc.end)).index,
         },
         type: ElementType.Identifier,
         name: value,
@@ -115,8 +122,8 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         location: {
           // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
           // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
-          startIndex: (<{ index: number }>(<unknown>path.node.loc.start)).index,
-          endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
+          startIndex: (<{ index: number }>(<unknown>loc.start)).index,
+          endIndex: (<{ index: number }>(<unknown>loc.end)).index,
         },
         type,
         value,

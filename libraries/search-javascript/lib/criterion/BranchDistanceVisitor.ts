@@ -70,10 +70,11 @@ export class BranchDistanceVisitor extends AbstractSyntaxTreeVisitor {
   _getDistance(condition: string): number {
     if (!this._valueMap.has(condition) || !this._isDistanceMap.get(condition)) {
       // the value does not exist or is not a distance
-      throw new IllegalArgumentError(
-        "Cannot get distance from unknown condition",
-        { context: { condition: condition } }
-      );
+      // throw new IllegalArgumentError(
+      //   "Cannot get distance from unknown condition",
+      //   { context: { condition: condition } }
+      // );
+      return Number.MAX_VALUE;
     }
 
     return <number>this._valueMap.get(condition);

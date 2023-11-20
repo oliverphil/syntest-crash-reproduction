@@ -108,7 +108,7 @@ export function extractExportsFromRightAssignmentExpression(
     });
   }
 
-  console.log(exports);
+  // console.log(exports);
   return exports;
 }
 
