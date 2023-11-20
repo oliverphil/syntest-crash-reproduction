@@ -165,7 +165,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
               // e.g. module.exports = class {}
               // e.g. module.exports = function {}
               // e.g. module.exports = () => {}
-              return "id" in parentNode.right
+              return "id" in parentNode.right && parentNode.right.id
                 ? parentNode.right.id.name
                 : "anonymousFunction";
             }
@@ -509,6 +509,11 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           const objectTarget = <NamedSubTarget & Exportable>(
             this._subTargets.find((value) => value.id === objectId)
           );
+
+          if (!objectTarget) {
+            path.skip();
+            return;
+          }
 
           const newTargetClass: ClassTarget = {
             id: objectTarget.id,

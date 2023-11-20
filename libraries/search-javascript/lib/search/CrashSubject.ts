@@ -22,17 +22,19 @@ import {prng} from "@syntest/prng";
 import {JavaScriptSubject} from "./JavaScriptSubject";
 import StackErrorObjectiveFunction from "./objective/StackErrorObjectiveFunction";
 import StackFrameObjectiveFunction from "./objective/StackFrameObjectiveFunction";
+import {ObjectiveFunction} from "../../../../../syntest-core/libraries/search";
+import {JavaScriptTestCase} from "../testcase/JavaScriptTestCase";
 
 export class CrashSubject extends JavaScriptSubject {
-    constructor(target: Target, rootContext: RootContext, syntaxForgiving: boolean, stringAlphabet: string, stackTrace: StackTrace) {
-        super(target, rootContext, syntaxForgiving, stringAlphabet);
+    constructor(target: Target, rootContext: RootContext, syntaxForgiving: boolean, stringAlphabet: string, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[]) {
+        super(target, objectives);
         this.stackTrace = stackTrace;
         this._extractObjectives();
     }
 
     private stackTrace: StackTrace;
 
-    protected override _extractObjectives(): void {
+    protected _extractObjectives(): void {
         // this._objectives = new Map<
         //     ObjectiveFunction<JavaScriptTestCase>,
         //     ObjectiveFunction<JavaScriptTestCase>[]
@@ -135,13 +137,13 @@ export class CrashSubject extends JavaScriptSubject {
                     this,
                     stackFrame
                 );
-                this._objectives.set(objective, []);
+                this._objectives.push(objective);
             }
-            this._objectives.set(new StackErrorObjectiveFunction(
+            this._objectives.push(new StackErrorObjectiveFunction(
                 `stack-error.${prng.nextInt}`,
                 this,
                 this.stackTrace
-            ), []);
+            ));
         }
     }
 }

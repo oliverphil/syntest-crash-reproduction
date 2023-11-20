@@ -108,6 +108,7 @@
     "@syntest/cfg": "file:../syntest-core/libraries/cfg",
     "@syntest/logging": "file:../syntest-core/libraries/logging",
     "@syntest/search": "file:../syntest-core/libraries/search",
+    "esm": "^3.2.25",
     "fuse.js": "^7.0.0"
   }
 }

@@ -25,6 +25,7 @@ import { copySync, outputFileSync } from "fs-extra";
 import {Instrumenter} from "@syntest/instrumentation-javascript";
 import {Crash} from "@syntest/crash-reproduction-setup";
 import { StorageManager } from "@syntest/storage";
+import {unwrap} from "@syntest/diagnostics";
 
 export interface OutputObject {
     fileCoverage?: any;
@@ -54,7 +55,8 @@ export class CrashInstrumenter extends Instrumenter {
 
         for (const targetPath of targetPaths) {
             const source = rootContext.getSource(targetPath);
-            const instrumentedSource = await this.instrument(source, targetPath);
+            // @ts-ignore
+            const instrumentedSource = await this.instrument(unwrap(source), targetPath);
 
             const _path = path
                 .normalize(targetPath)

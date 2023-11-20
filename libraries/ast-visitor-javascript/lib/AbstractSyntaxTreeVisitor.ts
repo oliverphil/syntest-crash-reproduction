@@ -75,7 +75,13 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
   }
 
   public _getNodeId(path: NodePath<t.Node> | t.Node): string {
-    const loc = "node" in path ? path.node.loc : path.loc;
+    let loc = "node" in path ? path.node.loc : path.loc;
+    let node = path;
+    while (!loc && node) {
+      // @ts-ignore
+      node = node.parentPath || node.parent;
+      loc = "node" in node ? node.node.loc : node.loc;
+    }
     if (loc === undefined) {
       throw new ImplementationError(
         `Node ${path.type} in file '${this._filePath}' does not have a location`

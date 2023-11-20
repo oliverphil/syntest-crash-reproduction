@@ -52,7 +52,7 @@ export class SearchProgressBarListener extends EventListenerPlugin {
           {
             name: subject.name,
             value: 0,
-            maxValue: subject.getObjectives().length,
+            maxValue: subject.objectives.length,
             meta: `${budgetManager.getBudget()}`,
           },
         ]);
@@ -66,7 +66,7 @@ export class SearchProgressBarListener extends EventListenerPlugin {
         subject: SearchSubject<E>,
         budgetManager: BudgetManager<E>
       ) => {
-        const originalObjectives = subject.getObjectives();
+        const originalObjectives = subject.objectives;
         this._userInterface.updateProgressBar({
           name: subject.name,
           value: [

@@ -23,7 +23,6 @@ import { JavaScriptArguments, CrashLauncher } from "../CrashLauncher";
 import {Crash, EnvironmentBuilder, EnvironmentGenerator} from "@syntest/crash-reproduction-setup";
 import { MetricManager } from "@syntest/metric";
 import { StorageManager } from "@syntest/storage";
-import * as prng from "@syntest/prng";
 
 export function getTestCommand(
   tool: string,

@@ -31,7 +31,7 @@ class StackErrorObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
         subject: SearchSubject<JavaScriptTestCase>,
         stackTrace: StackTrace
     ) {
-        super(id, subject);
+        super(id);
         this.stackTrace = stackTrace;
         this.fuzzySearch = new Fuse([stackTrace.error.errorMessage], {
             threshold: 0.2

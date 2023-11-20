@@ -51,7 +51,7 @@
     "@babel/core": "7.20.12",
     "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "@babel/traverse": "7.20.12",
-    "@syntest/analysis": "^0.2.0",
+    "@syntest/analysis": "file:../../../syntest-core/libraries/analysis",
     "@syntest/ast-visitor-javascript": "file:../ast-visitor-javascript",
     "@syntest/cfg": "file:../../../syntest-core/libraries/cfg",
     "@syntest/logging": "file:../../../syntest-core/libraries/logging",

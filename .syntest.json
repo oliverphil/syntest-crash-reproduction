@@ -2,7 +2,6 @@
     "module-name": "crash",
     "target-root-directory": "./benchmark/crashes",
     "include": [
-        "./src/**/*.*"
     ],
     "exclude": [],
     "statistics-directory": "statistics",
@@ -60,8 +59,8 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "code-injection",
+    "syntest-project": "express",
     "syntest-crashes": "false",
-    "syntest-type": "secbench",
+    "syntest-type": "bugsjs",
     "syntest-crash": ""
 }

@@ -46,6 +46,9 @@ export class BranchDistanceCalculator extends AbstractBranchDistanceCalculator {
     }
     const options: unknown = JSON.parse(JSON.stringify(defaultBabelOptions));
 
+    // @ts-ignore
+    options.filename = String(new Date().getTime()) + ".js";
+
     const ast = transformSync(condition, options).ast;
     const visitor = new BranchDistanceVisitor(
       this.syntaxForgiving,
@@ -54,7 +57,6 @@ export class BranchDistanceCalculator extends AbstractBranchDistanceCalculator {
       !trueOrFalse
     );
 
-    // @ts-ignore
     traverse(ast, visitor);
     let distance = visitor._getDistance(condition);
 

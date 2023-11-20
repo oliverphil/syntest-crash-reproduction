@@ -13,7 +13,7 @@ class StackFrameObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
         subject: SearchSubject<JavaScriptTestCase>,
         stackFrame: StackFrame
     ) {
-        super(id, subject);
+        super(id);
         this.stackFrame = stackFrame;
     }
 

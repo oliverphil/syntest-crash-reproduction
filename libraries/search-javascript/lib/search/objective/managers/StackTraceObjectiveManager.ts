@@ -70,7 +70,7 @@ export class StackTraceObjectiveManager<
         this._subject = subject;
 
         // TODO: Reset the objective manager
-        const objectives = subject.getObjectives();
+        const objectives = subject.objectives;
 
         for (const objective of objectives) {
             // Add all objectives to both the uncovered objectives and the current objectives

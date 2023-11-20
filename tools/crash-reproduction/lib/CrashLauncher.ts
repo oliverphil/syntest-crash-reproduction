@@ -38,7 +38,6 @@ import {
 import {
   ArgumentsObject,
   CrossoverPlugin, Events,
-  FileSelector,
   Launcher,
   ObjectiveManagerPlugin,
   PluginType,
@@ -92,6 +91,7 @@ import {TestSplitting} from "./workflows/TestSplitter";
 import {DeDuplicator} from "./workflows/DeDuplicator";
 import {addMetaComments} from "./workflows/MetaComment";
 import TypedEventEmitter from "typed-emitter";
+import {FileSelector} from "./FileSelector";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
 export class CrashLauncher extends Launcher<JavaScriptArguments> {
@@ -193,9 +193,10 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     this.rootPath = rootPath;
 
     const fileSelector = new FileSelector();
-    const targetFiles = fileSelector.loadFilePaths(
-        this.arguments_.targetInclude,
-        this.arguments_.targetExclude
+    const targetFiles = fileSelector.loadCrashFilePaths(
+        this.arguments_.targetExclude,
+        this.crash,
+        this.arguments_
     );
 
     if (this.arguments_.analysisInclude.length === 0) {
@@ -868,7 +869,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       this.rootContext,
       this.arguments_.syntaxForgiving,
       this.arguments_.stringAlphabet,
-      this.crash.stackTrace);
+      this.crash.stackTrace,
+      [...pathObjectives]);
 
     const rootTargets = currentSubject
       .getActionableTargets()
