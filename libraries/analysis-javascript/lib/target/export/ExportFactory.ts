@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -18,28 +18,29 @@
 
 import { traverse } from "@babel/core";
 import * as t from "@babel/types";
+import { Result, success } from "@syntest/diagnostics";
 
-import { ExportVisitor } from "./ExportVisitor";
+import { Factory } from "../../Factory";
+
 import { Export } from "./Export";
+import { ExportVisitor } from "./ExportVisitor";
 
 /**
  * ExportFactory for Javascript.
- *
- * @author Dimitri Stallenberg
  */
-export class ExportFactory {
+export class ExportFactory extends Factory {
   /**
    * Generate exports for specified target.
    *
    * @param filePath The filePath of the target
    * @param AST The AST of the target
    */
-  extract(filePath: string, AST: t.Node): Export[] {
-    const exportVisitor = new ExportVisitor(filePath);
+  extract(filePath: string, AST: t.Node): Result<Export[]> {
+    const exportVisitor = new ExportVisitor(filePath, this.syntaxForgiving);
 
     // @ts-ignore
     traverse(AST, exportVisitor);
 
-    return exportVisitor.exports;
+    return success(exportVisitor.exports);
   }
 }

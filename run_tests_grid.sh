@@ -93,7 +93,7 @@ nvm use lts/hydrogen
 node --version
 which node
 cd syntest-core
-git checkout 37-feat-run-all-crash-files-at-once
+git checkout main
 npm i
 ls
 npm run build

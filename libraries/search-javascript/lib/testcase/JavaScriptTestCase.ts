@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,52 +16,87 @@
  * limitations under the License.
  */
 
+import { IllegalArgumentError } from "@syntest/diagnostics";
+import { getLogger, Logger } from "@syntest/logging";
 import { prng } from "@syntest/prng";
 import { Decoder, Encoding } from "@syntest/search";
-import { getLogger, Logger } from "@syntest/logging";
 
-import { RootStatement } from "./statements/root/RootStatement";
+import { AssertionDataTestCase } from "./execution/AssertionData";
 import { JavaScriptTestCaseSampler } from "./sampling/JavaScriptTestCaseSampler";
+import { StatementPool } from "./StatementPool";
+import { ActionStatement } from "./statements/action/ActionStatement";
 
 /**
  * JavaScriptTestCase class
- *
- * @author Dimitri Stallenberg
  */
 export class JavaScriptTestCase extends Encoding {
   protected static LOGGER: Logger;
 
-  private _root: RootStatement;
+  private _roots: ActionStatement[];
+
+  private _statementPool: StatementPool;
+
+  private _assertionData: AssertionDataTestCase | undefined;
 
   /**
    * Constructor.
    *
-   * @param root The root of the tree chromosome of the test case
+   * @param roots The roots of the tree chromosome of the test case
    */
-  constructor(root: RootStatement) {
+  constructor(roots: ActionStatement[]) {
     super();
     JavaScriptTestCase.LOGGER = getLogger(JavaScriptTestCase.name);
-    this._root = root;
+    this._roots = roots.map((value) => value.copy());
+
+    if (roots.length === 0) {
+      throw new IllegalArgumentError(
+        "Requires atleast one root action statement"
+      );
+    }
+
+    this._statementPool = new StatementPool(roots);
   }
 
   mutate(sampler: JavaScriptTestCaseSampler): JavaScriptTestCase {
     JavaScriptTestCase.LOGGER.debug(`Mutating test case: ${this._id}`);
-    let testCase;
-    let i = 0;
-    while (!testCase && i < 50)
-    try {
-      testCase = prng.nextBoolean(sampler.resampleGeneProbability)
-          ? sampler.sample()
-          : new JavaScriptTestCase(this._root.mutate(sampler, 0));
-    } catch {
-      //
+    sampler.statementPool = this._statementPool;
+    const roots = this._roots.map((action) => action.copy());
+
+    const choice = prng.nextDouble();
+
+    if (roots.length > 1) {
+      if (choice < 0.33) {
+        // 33% chance to add a root on this position
+        const index = prng.nextInt(0, roots.length);
+        roots.splice(index, 0, sampler.sampleRoot());
+      } else if (choice < 0.66) {
+        // 33% chance to delete the root
+        const index = prng.nextInt(0, roots.length - 1);
+        roots.splice(index, 1);
+      } else {
+        // 33% chance to just mutate the root
+        const index = prng.nextInt(0, roots.length - 1);
+        roots.splice(index, 1, roots[index].mutate(sampler, 1));
+      }
+    } else {
+      if (choice < 0.5) {
+        // 50% chance to add a root on this position
+        const index = prng.nextInt(0, roots.length);
+        roots.splice(index, 0, sampler.sampleRoot());
+      } else {
+        // 50% chance to just mutate the root
+        const index = prng.nextInt(0, roots.length - 1);
+        roots.splice(index, 1, roots[index].mutate(sampler, 1));
+      }
     }
 
-    return testCase;
+    sampler.statementPool = undefined;
+
+    return new JavaScriptTestCase(roots);
   }
 
   hashCode(decoder: Decoder<Encoding, string>): number {
-    const string = decoder.decode(this, `${this.id}`);
+    const string = decoder.decode(this);
     let hash = 0;
     for (let index = 0; index < string.length; index++) {
       const character = string.codePointAt(index);
@@ -72,14 +107,24 @@ export class JavaScriptTestCase extends Encoding {
   }
 
   copy<E extends Encoding>(): E {
-    return <E>(<unknown>new JavaScriptTestCase(this.root.copy()));
+    return <E>(
+      (<unknown>new JavaScriptTestCase(this._roots.map((root) => root.copy())))
+    );
   }
 
   getLength(): number {
-    return this.root.getChildren().length;
+    return this.roots.length;
   }
 
-  get root(): RootStatement {
-    return this._root;
+  get roots(): ActionStatement[] {
+    return this._roots.map((value) => value.copy());
+  }
+
+  get assertionData(): AssertionDataTestCase {
+    return this._assertionData;
+  }
+
+  set assertionData(data: AssertionDataTestCase) {
+    this._assertionData = data;
   }
 }

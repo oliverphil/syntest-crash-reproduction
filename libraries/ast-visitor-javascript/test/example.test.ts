@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -26,7 +26,7 @@ const expect = chai.expect;
  */
 describe("example test", () => {
   it("test", () => {
-    new AbstractSyntaxTreeVisitor("");
+    new AbstractSyntaxTreeVisitor("", false);
     expect(true);
   });
 });

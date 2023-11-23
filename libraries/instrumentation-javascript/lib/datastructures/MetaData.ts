@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -16,16 +16,18 @@
  * limitations under the License.
  */
 export type MetaData = {
-  [path: string]: {
-    hash: string;
-    meta: {
-      [id: string]: {
-        condition_ast: string;
-        condition: string;
-        variables: {
-          [id: string]: unknown;
-        };
+  hash: string;
+  meta: {
+    [id: string]: {
+      condition_ast: string;
+      condition: string;
+      variables: {
+        [id: string]: unknown;
       };
     };
   };
+};
+
+export type MetaDataMap = {
+  [path: string]: MetaData;
 };

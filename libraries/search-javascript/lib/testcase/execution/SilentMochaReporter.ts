@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -71,6 +71,7 @@ export class SilentMochaReporter {
             // eslint-disable-next-line unicorn/prefer-spread
             .concat(error);
         } else {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           test.err = error;
         }
         this.failures.push(test);

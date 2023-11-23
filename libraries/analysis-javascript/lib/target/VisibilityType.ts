@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -17,12 +17,6 @@
  */
 
 /**
- * Enum for a Visibility Types.
- *
- * @author Dimitri Stallenberg
+ * Visibility Types.
  */
-export enum VisibilityType {
-  PUBLIC = "public",
-  PRIVATE = "private",
-  PROTECTED = "protected",
-}
+export type VisibilityType = "public" | "private" | "protected";

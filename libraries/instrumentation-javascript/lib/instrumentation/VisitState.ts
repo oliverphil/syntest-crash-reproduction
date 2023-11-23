@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -367,10 +367,6 @@ export class VisitState {
     const metaTracker = T.callExpression(T.identifier(this.metaVarName), [
       T.stringLiteral(`${branchName}`),
       T.objectExpression([
-        T.objectProperty(
-          T.stringLiteral("condition_ast"),
-          T.stringLiteral("TODO we should remove the condition asts entirely")
-        ),
         T.objectProperty(
           T.stringLiteral("condition"),
           T.stringLiteral(testAsCode)

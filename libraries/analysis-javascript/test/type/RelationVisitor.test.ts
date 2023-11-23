@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -16,20 +16,21 @@
  * limitations under the License.
  */
 import { traverse } from "@babel/core";
+import { isFailure, unwrap } from "@syntest/diagnostics";
 import * as chai from "chai";
 
 import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
-
 import { RelationVisitor } from "../../lib/type/discovery/relation/RelationVisitor";
 
 const expect = chai.expect;
 
 function relationHelper(source: string) {
   const generator = new AbstractSyntaxTreeFactory();
-  const ast = generator.convert("", source);
+  const result = generator.convert("", source);
+  if (isFailure(result)) throw result.error;
+  const ast = unwrap(result);
 
-  const visitor = new RelationVisitor("");
-  // @ts-ignore
+  const visitor = new RelationVisitor("", false);
   traverse(ast, visitor);
 
   return visitor.relationMap;
@@ -67,7 +68,7 @@ describe("RelationVisitor test", () => {
     expect(relations.length).to.equal(2);
     expect(relations[0].involved.length).to.equal(2);
     expect(relations[1].involved.length).to.equal(1);
-    expect(relations[1].involved[0]).to.equal(`${relations[1].id}::anonymous`);
+    expect(relations[1].involved[0]).to.equal(`${relations[1].id}`);
     expect(relations[0].involved[1]).to.equal(relations[1].id);
   });
 

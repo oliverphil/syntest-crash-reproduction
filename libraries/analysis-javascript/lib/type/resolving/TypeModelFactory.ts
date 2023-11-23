@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -18,12 +18,11 @@
 
 import { Element } from "../discovery/element/Element";
 import { Relation } from "../discovery/relation/Relation";
+
 import { TypeModel } from "./TypeModel";
 
 /**
  * Abstract TypeResolver class
- *
- * @author Dimitri Stallenberg
  */
 export abstract class TypeModelFactory {
   /**
@@ -32,7 +31,7 @@ export abstract class TypeModelFactory {
    * @param relationMap the relations to resolve the types of
    */
   abstract resolveTypes(
-    elementMap: Map<string, Element>,
-    relationMap: Map<string, Relation>
+    elementMaps: Map<string, Map<string, Element>>,
+    relationMaps: Map<string, Map<string, Relation>>
   ): TypeModel;
 }

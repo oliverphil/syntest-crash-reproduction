@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,12 +16,13 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
+import { ImplementationError } from "@syntest/diagnostics";
+
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
 
-/**
- * @author Dimitri Stallenberg
- */
 export abstract class PrimitiveStatement<T> extends Statement {
   get value(): T {
     return this._value;
@@ -29,13 +30,14 @@ export abstract class PrimitiveStatement<T> extends Statement {
   private _value: T;
 
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
+    type: TypeEnum,
     uniqueId: string,
     value: T
   ) {
-    super(id, name, type, uniqueId);
+    super(variableIdentifier, typeIdentifier, name, type, uniqueId);
     this._value = value;
   }
 
@@ -54,15 +56,21 @@ export abstract class PrimitiveStatement<T> extends Statement {
     return [];
   }
 
-  static getRandom() {
-    throw new Error("Unimplemented function!");
+  setChild(_index: number, _newChild: Statement): void {
+    throw new ImplementationError("Primitive statements don't have children");
   }
 
-  decode(): Decoding[] {
+  static getRandom() {
+    throw new ImplementationError("Unimplemented function!");
+  }
+
+  decode(context: ContextBuilder): Decoding[] {
     const asString = String(this.value);
     return [
       {
-        decoded: `const ${this.varName} = ${asString};`,
+        decoded: `const ${context.getOrCreateVariableName(
+          this
+        )} = ${asString};`,
         reference: this,
       },
     ];

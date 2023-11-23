@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -15,9 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { isFailure, unwrap } from "@syntest/diagnostics";
 import { expect } from "chai";
-import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
 
+import { AbstractSyntaxTreeFactory } from "../../lib/ast/AbstractSyntaxTreeFactory";
 import { TargetFactory } from "../../lib/target/TargetFactory";
 
 describe("TargetFactory", () => {
@@ -34,10 +35,14 @@ describe("TargetFactory", () => {
         }
     }
     `;
-    const ast = new AbstractSyntaxTreeFactory().convert("", code);
+    const result = new AbstractSyntaxTreeFactory().convert("", code);
+    if (isFailure(result)) throw result.error;
+    const ast = unwrap(result);
 
-    const targetMapGenerator = new TargetFactory();
-    const target = targetMapGenerator.extract("", ast);
+    const targetMapGenerator = new TargetFactory(false);
+    const targetResult = targetMapGenerator.extract("", ast);
+    if (isFailure(targetResult)) throw targetResult.error;
+    const target = unwrap(targetResult);
 
     expect(target.subTargets.length).to.equal(3);
   });

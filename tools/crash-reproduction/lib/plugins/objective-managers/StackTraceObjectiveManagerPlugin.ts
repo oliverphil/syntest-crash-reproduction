@@ -41,6 +41,7 @@ export class StackTraceObjectiveManagerPlugin<
         return new StackTraceObjectiveManager(
             options.runner,
             options.secondaryObjectives,
+            options.exceptionObjectivesEnabled,
             (<StackTrace>(<any><unknown>options).stackTrace)
         );
     }

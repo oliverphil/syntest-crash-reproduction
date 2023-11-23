@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -18,27 +18,31 @@
 
 import { traverse } from "@babel/core";
 import * as t from "@babel/types";
-import { DependencyFactory as CoreDependencyFactory } from "@syntest/analysis";
+import { DependencyFactory as FrameworkDependencyFactory } from "@syntest/analysis";
+import { Result, success } from "@syntest/diagnostics";
+
+import { Factory } from "../Factory";
 
 import { DependencyVisitor } from "./DependencyVisitor";
 
 /**
  * Dependency generator for targets.
- *
- * @author Dimitri Stallenberg
  */
-export class DependencyFactory implements CoreDependencyFactory<t.Node> {
+export class DependencyFactory
+  extends Factory
+  implements FrameworkDependencyFactory<t.Node>
+{
   /**
    * Generate function map for specified target.
    *
    * @param AST The AST of the target
    */
-  extract(filePath: string, AST: t.Node): string[] {
-    const visitor = new DependencyVisitor(filePath);
+  extract(filePath: string, AST: t.Node): Result<string[]> {
+    const visitor = new DependencyVisitor(filePath, this.syntaxForgiving);
 
     // @ts-ignore
     traverse(AST, visitor);
 
-    return [...visitor.imports];
+    return success([...visitor.imports]);
   }
 }

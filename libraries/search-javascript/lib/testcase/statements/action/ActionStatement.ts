@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,25 +16,31 @@
  * limitations under the License.
  */
 
+import { Export, TypeEnum } from "@syntest/analysis-javascript";
+import { IllegalArgumentError } from "@syntest/diagnostics";
 import { Encoding, EncodingSampler } from "@syntest/search";
 
 import { Statement } from "../Statement";
 
 /**
- * @author Dimitri Stallenberg
+ * ActionStatement
  */
 export abstract class ActionStatement extends Statement {
   private _args: Statement[];
+  protected _export?: Export;
 
   protected constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
+    ownType: TypeEnum,
     uniqueId: string,
-    arguments_: Statement[]
+    arguments_: Statement[],
+    export_?: Export
   ) {
-    super(id, name, type, uniqueId);
+    super(variableIdentifier, typeIdentifier, name, ownType, uniqueId);
     this._args = arguments_;
+    this._export = export_;
   }
 
   abstract override mutate(
@@ -45,6 +51,16 @@ export abstract class ActionStatement extends Statement {
   abstract override copy(): ActionStatement;
 
   setChild(index: number, newChild: Statement) {
+    if (!newChild) {
+      throw new IllegalArgumentError("Invalid new child!");
+    }
+
+    if (index < 0 || index >= this.args.length) {
+      throw new IllegalArgumentError("Child index is not within range", {
+        context: { index: index, range: `0 >= index < ${this.args.length}` },
+      });
+    }
+
     this.args[index] = newChild;
   }
 
@@ -56,11 +72,11 @@ export abstract class ActionStatement extends Statement {
     return [...this._args];
   }
 
-  get args(): Statement[] {
+  protected get args(): Statement[] {
     return this._args;
   }
 
-  getFlatTypes(): string[] {
-    return this.args.flatMap((a) => a.getFlatTypes());
+  get export() {
+    return this._export;
   }
 }

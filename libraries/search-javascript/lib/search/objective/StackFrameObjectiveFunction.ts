@@ -1,7 +1,7 @@
 import {ObjectiveFunction} from "@syntest/search/dist/lib/objective/ObjectiveFunction";
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
 import {SearchSubject} from "@syntest/search/dist/lib/SearchSubject";
-import {StackFrame} from "@syntest/crash-reproduction-setup";
+import {StackFrame, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
 
 
@@ -13,7 +13,7 @@ class StackFrameObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
         subject: SearchSubject<JavaScriptTestCase>,
         stackFrame: StackFrame
     ) {
-        super(id, subject);
+        super(id);
         this.stackFrame = stackFrame;
     }
 
@@ -27,8 +27,8 @@ class StackFrameObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
             // console.log("line hit: ", trace.path)
             distance = 0;
         }
-        if (encoding.getExecutionResult()?.hasExceptions()) {
-            const stackTrace = (<JavaScriptExecutionResult>encoding.getExecutionResult()).getStackTrace();
+        if (encoding.getExecutionResult()?.getError()) {
+            const stackTrace = StackTraceProcessor.parseTrace(encoding.getExecutionResult().getError().stack.split('\n'), false);
             // console.log(stackTrace.map(frame => frame.file + frame.lineNumber).join('\n'));
             for (const frame of stackTrace) {
                 if (frame.file === this.stackFrame.file && frame.lineNumber === this.stackFrame.lineNumber) {

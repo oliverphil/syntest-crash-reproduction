@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -21,4 +21,8 @@ export function unsupportedSyntax(
   locationId: string
 ): string {
   return `Unsupported syntax found in ${pathType} at ${locationId}`;
+}
+
+export function computedProperty(pathType: string, locationId: string): string {
+  return `Computed property found in ${pathType} at ${locationId}`;
 }

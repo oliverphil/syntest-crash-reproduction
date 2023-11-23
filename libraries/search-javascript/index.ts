@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -50,10 +50,9 @@ export * from "./lib/testcase/statements/primitive/PrimitiveStatement";
 export * from "./lib/testcase/statements/primitive/StringStatement";
 export * from "./lib/testcase/statements/primitive/UndefinedStatement";
 
-export * from "./lib/testcase/statements/root/ConstructorCall";
-export * from "./lib/testcase/statements/root/FunctionCall";
-export * from "./lib/testcase/statements/root/RootObject";
-export * from "./lib/testcase/statements/root/RootStatement";
+export * from "./lib/testcase/statements/action/ConstructorCall";
+export * from "./lib/testcase/statements/action/FunctionCall";
+export * from "./lib/testcase/statements/action/ConstantObject";
 
 export * from "./lib/testcase/statements/Statement";
 

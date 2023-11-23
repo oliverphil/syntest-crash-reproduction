@@ -1,7 +1,7 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
- * This file is part of SynTest Framework - SynTest Core.
+ * This file is part of SynTest Framework - SynTest JavaScript.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,17 @@
  * limitations under the License.
  */
 import { SamplerOptions, SamplerPlugin } from "@syntest/base-language";
+import { EncodingSampler } from "@syntest/search";
 import {
   JavaScriptRandomSampler,
   JavaScriptSubject,
   JavaScriptTestCase,
 } from "@syntest/search-javascript";
+
 import { JavaScriptArguments } from "../../CrashLauncher";
-import { EncodingSampler } from "@syntest/search";
 
 /**
  * Plugin for RandomSampler
- *
- * @author Dimitri Stallenberg
  */
 export class RandomSamplerPlugin extends SamplerPlugin<JavaScriptTestCase> {
   constructor() {
@@ -35,13 +34,17 @@ export class RandomSamplerPlugin extends SamplerPlugin<JavaScriptTestCase> {
   }
 
   createSamplerOperator(
-    options: SamplerOptions<JavaScriptTestCase>
+      options: SamplerOptions<JavaScriptTestCase>
   ): EncodingSampler<JavaScriptTestCase> {
     return new JavaScriptRandomSampler(
         options.subject as unknown as JavaScriptSubject,
-        undefined,
-        undefined,
-        undefined,
+        undefined, // TODO incorrect constant pool should be part of sampler options
+        (<JavaScriptArguments>(<unknown>this.args)).constantPool,
+        (<JavaScriptArguments>(<unknown>this.args)).constantPoolProbability,
+        (<JavaScriptArguments>(<unknown>this.args)).typePool,
+        (<JavaScriptArguments>(<unknown>this.args)).typePoolProbability,
+        (<JavaScriptArguments>(<unknown>this.args)).statementPool,
+        (<JavaScriptArguments>(<unknown>this.args)).statementPoolProbability,
         (<JavaScriptArguments>(<unknown>this.args)).typeInferenceMode,
         (<JavaScriptArguments>(<unknown>this.args)).randomTypeProbability,
         (<JavaScriptArguments>(
@@ -50,7 +53,6 @@ export class RandomSamplerPlugin extends SamplerPlugin<JavaScriptTestCase> {
         (<JavaScriptArguments>(<unknown>this.args)).maxActionStatements,
         (<JavaScriptArguments>(<unknown>this.args)).stringAlphabet,
         (<JavaScriptArguments>(<unknown>this.args)).stringMaxLength,
-        (<JavaScriptArguments>(<unknown>this.args)).resampleGeneProbability,
         (<JavaScriptArguments>(<unknown>this.args)).deltaMutationProbability,
         (<JavaScriptArguments>(<unknown>this.args)).exploreIllegalValues
     );

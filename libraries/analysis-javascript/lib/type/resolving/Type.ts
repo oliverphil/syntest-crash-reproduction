@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -21,12 +21,14 @@ export interface ObjectType {
   properties: Map<string, string>;
 
   // array
-  // index -> id
-  elements: Map<number, string>;
+  // id
+  elements: Set<string>;
 
   // function
   // index -> id
   parameters: Map<number, string>;
+  // index -> name
+  parameterNames: Map<number, string>;
   // id
   return: Set<string>;
 }

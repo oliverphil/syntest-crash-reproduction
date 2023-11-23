@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,19 +16,26 @@
  * limitations under the License.
  */
 
-import { Crossover } from "@syntest/search";
+import { ImplementationError } from "@syntest/diagnostics";
 import { prng } from "@syntest/prng";
+import { Crossover } from "@syntest/search";
 
 import { JavaScriptTestCase } from "../../testcase/JavaScriptTestCase";
-import { RootStatement } from "../../testcase/statements/root/RootStatement";
-import { Statement } from "../../testcase/statements/Statement";
 import { ActionStatement } from "../../testcase/statements/action/ActionStatement";
+import { ConstantObject } from "../../testcase/statements/action/ConstantObject";
+import { ConstructorCall } from "../../testcase/statements/action/ConstructorCall";
+import { Statement } from "../../testcase/statements/Statement";
 
-interface QueueEntry {
+type SwapStatement = {
   parent: Statement;
   childIndex: number;
   child: Statement;
-}
+};
+
+type MatchingPair = {
+  parentA: SwapStatement;
+  parentB: SwapStatement;
+};
 
 /**
  * Creates 2 children which are each other's complement with respect to their parents.
@@ -40,119 +47,156 @@ interface QueueEntry {
  *
  * @return a tuple of 2 children
  *
- * @author Annibale Panichella
- * @author Dimitri Stallenberg
  */
-// TODO check if this still works
 export class TreeCrossover extends Crossover<JavaScriptTestCase> {
   public crossOver(parents: JavaScriptTestCase[]): JavaScriptTestCase[] {
     if (parents.length !== 2) {
-      throw new Error("Expected exactly 2 parents, got: " + parents.length);
+      throw new ImplementationError(
+        `Expected exactly 2 parents, got: ${parents.length}`
+      );
     }
 
-    const rootA: RootStatement = (<JavaScriptTestCase>parents[0].copy()).root;
-    const rootB: RootStatement = (<JavaScriptTestCase>parents[1].copy()).root;
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+    const rootA: ActionStatement[] = (<JavaScriptTestCase>parents[0].copy())
+      .roots;
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+    const rootB: ActionStatement[] = (<JavaScriptTestCase>parents[1].copy())
+      .roots;
 
-    const queueA: QueueEntry[] = [];
+    const swapStatementsA = this.convertToSwapStatements(rootA);
+    const swapStatementsB = this.convertToSwapStatements(rootB);
 
-    for (let index = 0; index < rootA.getChildren().length; index++) {
-      queueA.push({
-        parent: rootA,
-        childIndex: index,
-        child: rootA.getChildren()[index],
-      });
-    }
+    const crossoverOptions: MatchingPair[] = [];
 
-    const crossoverOptions = [];
+    for (const swapA of swapStatementsA) {
+      for (const swapB of swapStatementsB) {
+        if (swapA.child.variableIdentifier === swapB.child.variableIdentifier) {
+          if (
+            swapA.child instanceof ConstructorCall &&
+            !(swapB.child instanceof ConstructorCall)
+          ) {
+            continue;
+          }
 
-    while (queueA.length > 0) {
-      const pair = queueA.shift();
+          if (
+            swapB.child instanceof ConstructorCall &&
+            !(swapA.child instanceof ConstructorCall)
+          ) {
+            continue;
+          }
 
-      if (pair.child.hasChildren()) {
-        for (let index = 0; index < pair.child.getChildren().length; index++) {
-          queueA.push({
-            parent: pair.child,
-            childIndex: index,
-            child: pair.child.getChildren()[index],
-          });
-        }
-      }
+          if (
+            swapA.child instanceof ConstructorCall &&
+            swapB.child instanceof ConstructorCall &&
+            swapA.child.export.id !== swapB.child.export.id
+          ) {
+            continue;
+          }
 
-      if (prng.nextBoolean(this.crossoverStatementProbability)) {
-        // crossover
-        const donorSubtrees = this.findSimilarSubtree(pair.child, rootB);
+          if (
+            swapA.child instanceof ConstantObject &&
+            !(swapB.child instanceof ConstantObject)
+          ) {
+            continue;
+          }
 
-        for (const donorTree of donorSubtrees) {
+          if (
+            swapB.child instanceof ConstantObject &&
+            !(swapA.child instanceof ConstantObject)
+          ) {
+            continue;
+          }
+
+          if (
+            swapA.child instanceof ConstantObject &&
+            swapB.child instanceof ConstantObject &&
+            swapA.child.export.id !== swapB.child.export.id
+          ) {
+            continue;
+          }
+
           crossoverOptions.push({
-            p1: pair,
-            p2: donorTree,
+            parentA: swapA,
+            parentB: swapB,
           });
         }
       }
     }
 
     if (crossoverOptions.length > 0) {
-      const crossoverChoice = prng.pickOne(crossoverOptions);
-      const pair = crossoverChoice.p1;
-      const donorTree = crossoverChoice.p2;
+      // TODO this ignores _crossoverStatementProbability and always picks one
 
-      (<ActionStatement>pair.parent).setChild(
-        pair.childIndex,
-        donorTree.child.copy()
-      );
-      (<ActionStatement>donorTree.parent).setChild(
-        donorTree.childIndex,
-        pair.child.copy()
-      );
+      const matchingPair = prng.pickOne(crossoverOptions);
+      const parentA = matchingPair.parentA;
+      const parentB = matchingPair.parentB;
+
+      if (parentA.parent !== undefined && parentB.parent !== undefined) {
+        parentA.parent.setChild(parentA.childIndex, parentB.child.copy());
+        parentB.parent.setChild(parentB.childIndex, parentA.child.copy());
+      } else if (parentB.parent !== undefined) {
+        if (!(parentB.child instanceof ActionStatement)) {
+          throw new TypeError(
+            "expected parentB child to be an actionstatement"
+          );
+        }
+        rootA[parentA.childIndex] = parentB.child.copy();
+        parentB.parent.setChild(parentB.childIndex, parentA.child.copy());
+      } else if (parentA.parent === undefined) {
+        if (!(parentA.child instanceof ActionStatement)) {
+          throw new TypeError(
+            "expected parentA child to be an actionstatement"
+          );
+        }
+        if (!(parentB.child instanceof ActionStatement)) {
+          throw new TypeError(
+            "expected parentB child to be an actionstatement"
+          );
+        }
+        rootA[parentA.childIndex] = parentB.child.copy();
+        rootB[parentB.childIndex] = parentA.child.copy();
+      } else {
+        if (!(parentA.child instanceof ActionStatement)) {
+          throw new TypeError(
+            "expected parentA child to be an actionstatement"
+          );
+        }
+        parentA.parent.setChild(parentA.childIndex, parentB.child.copy());
+        rootB[parentB.childIndex] = parentA.child.copy();
+      }
     }
 
     return [new JavaScriptTestCase(rootA), new JavaScriptTestCase(rootB)];
   }
 
-  /**
-   * Finds a subtree in the given tree which matches the wanted gene.
-   *
-   * @param wanted the gene to match the subtree with
-   * @param tree the tree to search in
-   *
-   * @author Dimitri Stallenberg
-   */
-  protected findSimilarSubtree(wanted: Statement, tree: Statement) {
-    const queue: QueueEntry[] = [];
-    const similar = [];
+  protected convertToSwapStatements(roots: ActionStatement[]): SwapStatement[] {
+    const swapStatements: SwapStatement[] = [];
 
-    for (let index = 0; index < tree.getChildren().length; index++) {
-      queue.push({
-        parent: tree,
+    for (const [index, root] of roots.entries()) {
+      swapStatements.push({
+        parent: undefined,
         childIndex: index,
-        child: tree.getChildren()[index],
+        child: root,
       });
     }
 
+    const queue: Statement[] = [...roots];
+
     while (queue.length > 0) {
-      const pair = queue.shift();
+      const statement = queue.shift();
 
-      if (pair.child.hasChildren()) {
-        for (let index = 0; index < pair.child.getChildren().length; index++) {
-          queue.push({
-            parent: pair.child,
+      if (statement.hasChildren()) {
+        for (let index = 0; index < statement.getChildren().length; index++) {
+          const child = statement.getChildren()[index];
+          swapStatements.push({
+            parent: statement,
             childIndex: index,
-            child: pair.child.getChildren()[index],
+            child: child,
           });
+          queue.push(child);
         }
-      }
-
-      if (!wanted.classType || !pair.child.classType) {
-        throw new Error("All statements require a classType!");
-      }
-
-      // TODO not sure about the ids
-      if (wanted.id === pair.child.id) {
-        // && wanted.classType === pair.child.classType) { TODO this might be necessary
-        similar.push(pair);
       }
     }
 
-    return similar;
+    return swapStatements;
   }
 }

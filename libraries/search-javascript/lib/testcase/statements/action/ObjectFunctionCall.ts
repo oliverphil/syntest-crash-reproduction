@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,19 +16,19 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
+import { IllegalArgumentError } from "@syntest/diagnostics";
 import { prng } from "@syntest/prng";
 
-import { JavaScriptDecoder } from "../../../testbuilding/JavaScriptDecoder";
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
 
 import { ActionStatement } from "./ActionStatement";
+import { ConstantObject } from "./ConstantObject";
 
-/**
- * @author Dimitri Stallenberg
- */
 export class ObjectFunctionCall extends ActionStatement {
-  private readonly _objectName: string;
+  private _object: ConstantObject;
 
   /**
    * Constructor
@@ -39,97 +39,118 @@ export class ObjectFunctionCall extends ActionStatement {
    * @param args the arguments of the function
    */
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
     uniqueId: string,
-    objectName: string,
-    arguments_: Statement[]
+    arguments_: Statement[],
+    object_: ConstantObject
   ) {
-    super(id, name, type, uniqueId, arguments_);
-    this._classType = "ObjectFunctionCall";
-    this._objectName = objectName;
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.FUNCTION,
+      uniqueId,
+      arguments_
+    );
+    this._object = object_;
   }
 
   mutate(
     sampler: JavaScriptTestCaseSampler,
     depth: number
   ): ObjectFunctionCall {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleObjectFunctionCall(depth, this._objectName);
-    }
-
     const arguments_ = this.args.map((a: Statement) => a.copy());
+    let object_ = this._object.copy();
+    const index = prng.nextInt(0, arguments_.length);
 
-    if (arguments_.length > 0) {
-      const index = prng.nextInt(0, arguments_.length - 1);
-
+    if (index < arguments_.length) {
+      // go over each arg
       arguments_[index] = arguments_[index].mutate(sampler, depth + 1);
+    } else {
+      object_ = object_.mutate(sampler, depth + 1);
     }
 
     return new ObjectFunctionCall(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      this.className,
-      arguments_
+      arguments_,
+      object_
     );
+  }
+
+  override setChild(index: number, newChild: Statement) {
+    if (!newChild) {
+      throw new IllegalArgumentError("Invalid new child!");
+    }
+
+    if (index < 0 || index > this.args.length) {
+      throw new IllegalArgumentError("Child index is not within range", {
+        context: { index: index, range: `0 >= index <= ${this.args.length}` },
+      });
+    }
+
+    if (index === this.args.length) {
+      if (!(newChild instanceof ConstantObject)) {
+        throw new IllegalArgumentError(
+          "Last child should always be of type ConstantObject",
+          { context: { index: index } }
+        );
+      }
+      this._object = newChild;
+    } else {
+      this.args[index] = newChild;
+    }
+  }
+
+  override hasChildren(): boolean {
+    return true;
+  }
+
+  override getChildren(): Statement[] {
+    return [...this.args, this._object];
   }
 
   copy(): ObjectFunctionCall {
     const deepCopyArguments = this.args.map((a: Statement) => a.copy());
 
     return new ObjectFunctionCall(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       this.uniqueId,
-      this.className,
-      deepCopyArguments
+      deepCopyArguments,
+      this._object.copy()
     );
   }
 
-  get className(): string {
-    return this._objectName;
-  }
+  decode(context: ContextBuilder): Decoding[] {
+    const objectDecoding = this._object.decode(context);
 
-  decode(): Decoding[] {
-    throw new Error("Cannot call decode on method calls!");
-  }
-
-  decodeWithObject(
-    decoder: JavaScriptDecoder,
-    id: string,
-    options: { addLogs: boolean; exception: boolean },
-    objectVariable: string
-  ): Decoding[] {
-    const arguments_ = this.args.map((a) => a.varName).join(", ");
-
-    const argumentStatements: Decoding[] = this.args.flatMap((a) =>
-      a.decode(decoder, id, options)
+    const argumentsDecoding: Decoding[] = this.args.flatMap((a) =>
+      a.decode(context)
     );
 
-    let decoded = `const ${this.varName} = await ${objectVariable}.${this.name}(${arguments_})`;
+    const arguments_ = this.args
+      .map((a) => context.getOrCreateVariableName(a))
+      .join(", ");
 
-    if (options.addLogs) {
-      const logDirectory = decoder.getLogDirectory(id, this.varName);
-      decoded += `\nawait fs.writeFileSync('${logDirectory}', '' + ${this.varName} + ';sep;' + JSON.stringify(${this.varName}))`;
-    }
+    const decoded = `const ${context.getOrCreateVariableName(
+      this
+    )} = await ${context.getOrCreateVariableName(this._object)}.${
+      this.name
+    }(${arguments_})`;
 
     return [
-      ...argumentStatements,
+      ...objectDecoding,
+      ...argumentsDecoding,
       {
         decoded: decoded,
         reference: this,
-        objectVariable: objectVariable,
       },
     ];
-  }
-
-  // TODO
-  decodeErroring(objectVariable: string): string {
-    const arguments_ = this.args.map((a) => a.varName).join(", ");
-    return `await expect(${objectVariable}.${this.name}(${arguments_})).to.be.rejectedWith(Error);`;
   }
 }

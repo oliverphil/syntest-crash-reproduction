@@ -26,7 +26,7 @@ export class EnvironmentBuilder {
     } else if (syntestType === 'syntest-collected') {
       crashFolder = `${assetDir}/syntest-collected/${crash.project}/${crash.crashId}`;
       assetDir = `${assetDir}/syntest-collected/`;
-      execSync(`cp -r benchmark/resources/${crash.project} ${assetDir}/${crash.project}/${crash.crashId}`);
+      execSync(`cp -R benchmark/resources/${crash.project} ${assetDir}/${crash.project}/${crash.crashId}/${crash.project === 'commander' ? 'commanderjs' : crash.project}`);
     } else if (syntestType === 'secbench') {
       crashFolder = `${assetDir}/secbench/${crash.project}/${crash.crashId}`;
       assetDir = `${assetDir}/secbench/`;

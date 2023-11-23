@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -15,20 +15,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import * as crypto from "node:crypto";
 
-import { Datapoint, ExecutionResult } from "@syntest/search";
-import {StackFrame, StackTrace} from "@syntest/crash-reproduction-setup";
+import {StackFrame, StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
+import { ImplementationError } from "@syntest/diagnostics";
+import { ExecutionResult, Trace } from "@syntest/search";
 
 export enum JavaScriptExecutionStatus {
   PASSED,
   FAILED,
   TIMED_OUT,
+  MEMORY_OVERFLOW,
+  INFINITE_LOOP,
 }
 
 /**
  * JavaScript specific implementation of the execution results.
- *
- * @author Mitchell Olsthoorn
  */
 export class JavaScriptExecutionResult implements ExecutionResult {
   /**
@@ -41,7 +43,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    * ARRAY of traces of the execution.
    * @protected
    */
-  protected _traces: Datapoint[];
+  protected _traces: Trace[];
 
   /**
    * Duration of the execution.
@@ -50,10 +52,10 @@ export class JavaScriptExecutionResult implements ExecutionResult {
   protected _duration: number;
 
   /**
-   * Exception of execution.
+   * Error of execution.
    * @protected
    */
-  protected _exception: string;
+  protected _error: Error | undefined;
 
   protected _stackTrace: StackFrame[];
 
@@ -67,32 +69,46 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    */
   public constructor(
     status: JavaScriptExecutionStatus,
-    traces: Datapoint[],
+    traces: Trace[],
     duration: number,
-    exception?: string | undefined,
-    stackTrace?: StackFrame[]
+    error?: Error | undefined
   ) {
     this._status = status;
     this._traces = traces;
     this._duration = duration;
-    this._exception = exception;
-    this._stackTrace = stackTrace;
+    this._error = error;
+
+    if (error) {
+      this._stackTrace = StackTraceProcessor.parseTrace(error.stack.split('\n'), false);
+    }
   }
 
   /**
    * @inheritDoc
    */
   public coversId(id: string): boolean {
+    if (
+      this._status === JavaScriptExecutionStatus.INFINITE_LOOP ||
+      this._status === JavaScriptExecutionStatus.MEMORY_OVERFLOW
+    ) {
+      return false;
+    }
+
+    if (id.startsWith("error:::")) {
+      return this.hasError() && this.getErrorIdentifier() === id;
+    }
+
     const trace = this._traces.find((trace) => trace.id === id);
 
     if (!trace) {
-      if (id.startsWith("placeholder")) {
+      if (id.startsWith("placeholder:::")) {
+        // TODO maybe this already fixed?
         // TODO stupit hack because the placeholder nodes we add in the cfg are not being registred by the instrumentation
         // should fix
         return false;
       }
 
-      throw new Error(
+      throw new ImplementationError(
         `Could not find a matching trace for the given id: ${id}`
       );
     }
@@ -127,8 +143,24 @@ export class JavaScriptExecutionResult implements ExecutionResult {
   /**
    * @inheritDoc
    */
-  public getExceptions(): string {
-    return this._exception;
+  public getError(): Error {
+    return this._error;
+  }
+
+  public getErrorIdentifier(): string {
+    let stack = this.getError().stack;
+
+    stack = stack
+      ? stack
+          .split("\n")
+          // only use location lines
+          .filter((line) => line.startsWith("    at"))
+          // only use locations within the source code (i.e. not from the generated tests)
+          .filter((line) => line.includes("/instrumented/")) // stupid hack should be done better somehow, suffices for now
+          .join("\n")
+      : this.getError().message;
+
+    return "error:::" + crypto.createHash("md5").update(stack).digest("hex");
   }
 
   public getStackTrace(): StackFrame[] {
@@ -138,15 +170,15 @@ export class JavaScriptExecutionResult implements ExecutionResult {
   /**
    * @inheritDoc
    */
-  public getTraces(): Datapoint[] {
+  public getTraces(): Trace[] {
     return this._traces;
   }
 
   /**
    * @inheritDoc
    */
-  public hasExceptions(): boolean {
-    return this._exception !== null && this._exception !== undefined;
+  public hasError(): boolean {
+    return this._error !== null && this._error !== undefined;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,197 +16,197 @@
  * limitations under the License.
  */
 
+import { TypeEnum } from "@syntest/analysis-javascript";
 import { prng } from "@syntest/prng";
 
+import { ContextBuilder } from "../../../testbuilding/ContextBuilder";
 import { JavaScriptTestCaseSampler } from "../../sampling/JavaScriptTestCaseSampler";
 import { Decoding, Statement } from "../Statement";
 
 import { PrimitiveStatement } from "./PrimitiveStatement";
 
-/**
- * @author Dimitri Stallenberg
- */
 export class StringStatement extends PrimitiveStatement<string> {
-  private readonly alphabet: string;
-  private readonly maxlength: number;
-
   constructor(
-    id: string,
+    variableIdentifier: string,
+    typeIdentifier: string,
     name: string,
-    type: string,
     uniqueId: string,
-    value: string,
-    alphabet: string,
-    maxlength: number
+    value: string
   ) {
-    super(id, name, type, uniqueId, value);
-    this._classType = "StringStatement";
-
-    this.alphabet = alphabet;
-    this.maxlength = maxlength;
+    super(
+      variableIdentifier,
+      typeIdentifier,
+      name,
+      TypeEnum.STRING,
+      uniqueId,
+      value
+    );
   }
 
   mutate(sampler: JavaScriptTestCaseSampler, depth: number): Statement {
-    if (prng.nextBoolean(sampler.resampleGeneProbability)) {
-      return sampler.sampleArgument(depth + 1, this.id, this.name);
-    }
+    if (prng.nextBoolean(sampler.deltaMutationProbability)) {
+      // 80%
+      if (
+        this.value.length > 0 &&
+        this.value.length < sampler.stringMaxLength
+      ) {
+        const value = prng.nextInt(0, 3);
 
-    if (this.value.length > 0 && this.value.length < this.maxlength) {
-      const value = prng.nextInt(0, 3);
-
-      switch (value) {
-        case 0: {
-          return this.addMutation();
+        switch (value) {
+          case 0: {
+            // 25%
+            return this.addMutation(sampler);
+          }
+          case 1: {
+            // 25%
+            return this.removeMutation();
+          }
+          case 2: {
+            // 25%
+            return this.replaceMutation(sampler);
+          }
+          default: {
+            // 25%
+            return this.deltaMutation(sampler);
+          }
         }
-        case 1: {
+      } else if (this.value.length > 0) {
+        const value = prng.nextInt(0, 2);
+
+        if (value === 0) {
+          // 33%
           return this.removeMutation();
+        } else if (value === 1) {
+          // 33%
+          return this.replaceMutation(sampler);
+        } else {
+          // 33%
+          return this.deltaMutation(sampler);
         }
-        case 2: {
-          return this.replaceMutation();
-        }
-        default: {
-          return this.deltaMutation();
-        }
-      }
-    } else if (this.value.length > 0) {
-      const value = prng.nextInt(0, 2);
-
-      if (value === 0) {
-        return this.removeMutation();
-      } else if (value === 1) {
-        return this.replaceMutation();
       } else {
-        return this.deltaMutation();
+        // 100%
+        return this.addMutation(sampler);
       }
     } else {
-      return this.addMutation();
+      // 20%
+      if (prng.nextBoolean(0.5)) {
+        // 50%
+        return sampler.sampleArgument(
+          depth + 1,
+          this.variableIdentifier,
+          this.name
+        );
+      } else {
+        // 50%
+        return sampler.sampleString(
+          this.variableIdentifier,
+          this.typeIdentifier,
+          this.name
+        );
+      }
     }
   }
 
-  addMutation(): StringStatement {
-    const position = prng.nextInt(0, this.value.length - 1);
-    const addedChar = prng.pickOne([...this.alphabet]);
+  addMutation(sampler: JavaScriptTestCaseSampler): StringStatement {
+    const position = prng.nextInt(0, this.value.length);
+    const addedChar = prng.pickOne([...sampler.stringAlphabet]);
 
-    let newValue = "";
-
-    for (let index = 0; index < this.value.length; index++) {
-      if (index < position || index > position) {
-        newValue += this.value[index];
-      } else {
-        newValue += addedChar;
-        newValue += this.value[index];
-      }
-    }
+    const newValue = [...this.value];
+    newValue.splice(position, 0, addedChar);
 
     return new StringStatement(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      newValue,
-      this.alphabet,
-      this.maxlength
+      newValue.join("")
     );
   }
 
   removeMutation(): StringStatement {
     const position = prng.nextInt(0, this.value.length - 1);
 
-    let newValue = "";
-
-    for (let index = 0; index < this.value.length; index++) {
-      if (index === position) {
-        continue;
-      }
-      newValue += this.value[index];
-    }
+    const newValue = [...this.value];
+    newValue.splice(position, 1);
 
     return new StringStatement(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      newValue,
-      this.alphabet,
-      this.maxlength
+      newValue.join("")
     );
   }
 
-  replaceMutation(): StringStatement {
+  replaceMutation(sampler: JavaScriptTestCaseSampler): StringStatement {
     const position = prng.nextInt(0, this.value.length - 1);
-    const newChar = prng.pickOne([...this.alphabet]);
+    const newChar = prng.pickOne([...sampler.stringAlphabet]);
 
-    let newValue = "";
-
-    for (let index = 0; index < this.value.length; index++) {
-      newValue +=
-        index < position || index > position ? this.value[index] : newChar;
-    }
+    const newValue = [...this.value];
+    newValue.splice(position, 1, newChar);
 
     return new StringStatement(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      newValue,
-      this.alphabet,
-      this.maxlength
+      newValue.join("")
     );
   }
 
-  deltaMutation(): StringStatement {
+  deltaMutation(sampler: JavaScriptTestCaseSampler): StringStatement {
     const position = prng.nextInt(0, this.value.length - 1);
     const oldChar = this.value[position];
-    const indexOldChar = this.alphabet.indexOf(oldChar);
-    const delta = prng.pickOne([-2, -1, 1, -2]);
-    const newChar =
-      this.alphabet[(indexOldChar + delta) % this.alphabet.length];
-
-    let newValue = "";
-
-    for (let index = 0; index < this.value.length; index++) {
-      newValue +=
-        index < position || index > position ? this.value[index] : newChar;
+    const indexOldChar = sampler.stringAlphabet.indexOf(oldChar);
+    let delta = Number(prng.nextGaussian(0, 3).toFixed(0));
+    if (delta === 0) {
+      delta = prng.nextBoolean() ? 1 : -1;
     }
 
+    let newIndex = indexOldChar + delta;
+    if (newIndex < 0) {
+      newIndex = sampler.stringAlphabet.length + newIndex;
+    }
+    newIndex = newIndex % sampler.stringAlphabet.length;
+    // const delta = prng.pickOne([-2, -1, 1, -2]);
+    const newChar = sampler.stringAlphabet[newIndex];
+
+    const newValue = [...this.value];
+    newValue.splice(position, 1, newChar);
+
     return new StringStatement(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       prng.uniqueId(),
-      newValue,
-      this.alphabet,
-      this.maxlength
+      newValue.join("")
     );
   }
 
   copy(): StringStatement {
     return new StringStatement(
-      this.id,
+      this.variableIdentifier,
+      this.typeIdentifier,
       this.name,
-      this.type,
       this.uniqueId,
-      this.value,
-      this.alphabet,
-      this.maxlength
+      this.value
     );
   }
 
-  override decode(): Decoding[] {
+  override decode(context: ContextBuilder): Decoding[] {
     let value = this.value;
-    value = value.replace(/\n/g, "\\n");
-    value = value.replace(/\r/g, "\\r");
-    value = value.replace(/\t/g, "\\t");
-    value = value.replace(/"/g, '\\"');
+
+    value = value.replaceAll(/\\/g, "\\\\");
+    value = value.replaceAll(/\n/g, "\\n");
+    value = value.replaceAll(/\r/g, "\\r");
+    value = value.replaceAll(/\t/g, "\\t");
+    value = value.replaceAll(/"/g, '\\"');
+
     return [
       {
-        decoded: `const ${this.varName} = "${value}";`,
+        decoded: `const ${context.getOrCreateVariableName(this)} = "${value}";`,
         reference: this,
       },
     ];
-  }
-
-  getFlatTypes(): string[] {
-    return ["string"];
   }
 }

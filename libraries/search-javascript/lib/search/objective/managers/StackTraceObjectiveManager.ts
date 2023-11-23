@@ -40,10 +40,11 @@ export class StackTraceObjectiveManager<
 
     constructor(
         runner: EncodingRunner<T>,
-        secondaryObjectives: Set<SecondaryObjectiveComparator<T>>,
+        secondaryObjectives: SecondaryObjectiveComparator<T>[],
+        exceptionObjectivesEnabled: boolean,
         stackTrace: StackTrace
     ) {
-        super(runner, secondaryObjectives);
+        super(runner, secondaryObjectives, exceptionObjectivesEnabled);
         this.stackTrace = stackTrace;
     }
 
@@ -69,7 +70,7 @@ export class StackTraceObjectiveManager<
         this._subject = subject;
 
         // TODO: Reset the objective manager
-        const objectives = subject.getObjectives();
+        const objectives = subject.objectives;
 
         for (const objective of objectives) {
             // Add all objectives to both the uncovered objectives and the current objectives

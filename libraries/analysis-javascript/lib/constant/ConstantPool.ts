@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -32,9 +32,6 @@ export class ConstantPool {
     this._numericPool = new Map();
     this.addNumeric(Math.PI);
     this.addNumeric(Math.E);
-    this.addNumeric(-1);
-    this.addNumeric(0);
-    this.addNumeric(+1);
 
     this._integerPool = new Map();
     this.addInteger(-1);
@@ -63,6 +60,7 @@ export class ConstantPool {
       this._integerPool.set(value, 1);
     }
     this._integerCount++;
+    this.addNumeric(value);
   }
 
   public addBigInt(value: bigint): void {

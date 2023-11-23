@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest Javascript.
  *
@@ -16,6 +16,8 @@
  * limitations under the License.
  */
 
+import { ImplementationError } from "@syntest/diagnostics";
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
 // TODO add missing
 
@@ -24,16 +26,6 @@ export interface Relation {
   type: RelationType;
   involved: string[];
   computed?: boolean;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function isRelation(object: any): object is Relation {
-  return (
-    object !== undefined &&
-    object.id !== undefined &&
-    object.type !== undefined &&
-    object.involved !== undefined
-  );
 }
 
 export function getRelationName(type: RelationType): string {
@@ -220,7 +212,9 @@ function getUnaryRelationType(operator: string, prefix: boolean) {
     }
   }
 
-  throw new Error(`Unsupported relation type operator: unary -> ${operator}`);
+  throw new ImplementationError(
+    `Unsupported relation type operator: unary -> ${operator}`
+  );
 }
 
 function getBinaryRelationType(operator: string) {
@@ -306,7 +300,9 @@ function getBinaryRelationType(operator: string) {
     }
   }
 
-  throw new Error(`Unsupported relation type operator: binary -> ${operator}`);
+  throw new ImplementationError(
+    `Unsupported relation type operator: binary -> ${operator}`
+  );
 }
 
 function getAssignmentRelationType(operator: string) {
@@ -361,7 +357,7 @@ function getAssignmentRelationType(operator: string) {
     }
   }
 
-  throw new Error(
+  throw new ImplementationError(
     `Unsupported relation type operator: assignment -> ${operator}`
   );
 }
@@ -383,5 +379,7 @@ export function getRelationType(
     }
   }
 
-  throw new Error(`Unsupported relation type operator: ${type} -> ${operator}`);
+  throw new ImplementationError(
+    `Unsupported relation type operator: ${type} -> ${operator}`
+  );
 }

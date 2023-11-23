@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -18,13 +18,23 @@
 import { NodePath } from "@babel/core";
 import * as t from "@babel/types";
 import { AbstractSyntaxTreeVisitor } from "@syntest/ast-visitor-javascript";
+import { ImplementationError } from "@syntest/diagnostics";
+
 import { ConstantPool } from "./ConstantPool";
 
 export class ConstantVisitor extends AbstractSyntaxTreeVisitor {
   protected _constantPool: ConstantPool;
 
-  constructor(filePath: string, constantPool: ConstantPool) {
-    super(filePath);
+  get constantPool() {
+    return this._constantPool;
+  }
+
+  constructor(
+    filePath: string,
+    syntaxForgiving: boolean,
+    constantPool: ConstantPool
+  ) {
+    super(filePath, syntaxForgiving);
     this._constantPool = constantPool;
   }
 
@@ -68,7 +78,7 @@ export class ConstantVisitor extends AbstractSyntaxTreeVisitor {
       }
       default: {
         // should never occur
-        throw new Error(`Unknown literal type`);
+        throw new ImplementationError("Unknown literal type");
       }
     }
   };

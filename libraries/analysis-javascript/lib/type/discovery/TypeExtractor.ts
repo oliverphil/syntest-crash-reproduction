@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 Delft University of Technology and SynTest contributors
+ * Copyright 2020-2023 SynTest contributors
  *
  * This file is part of SynTest Framework - SynTest JavaScript.
  *
@@ -15,117 +15,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { getAllFiles } from "../../utils/fileSystem";
-import { ObjectVisitor } from "./object/ObjectVisitor";
 import traverse from "@babel/traverse";
-import { ElementVisitor } from "./element/ElementVisitor";
-import { RelationVisitor } from "./relation/RelationVisitor";
-import { RootContext } from "../../RootContext";
+import * as t from "@babel/types";
+import { Result, success } from "@syntest/diagnostics";
+
+import { Factory } from "../../Factory";
+
 import { Element } from "./element/Element";
-import { Relation } from "./relation/Relation";
+import { ElementVisitor } from "./element/ElementVisitor";
 import { DiscoveredObjectType } from "./object/DiscoveredType";
+import { ObjectVisitor } from "./object/ObjectVisitor";
+import { Relation } from "./relation/Relation";
+import { RelationVisitor } from "./relation/RelationVisitor";
 
-export class TypeExtractor {
-  private _elementMap: Map<string, Element>;
-  private _relationMap: Map<string, Relation>;
-  private _objectMap: Map<string, DiscoveredObjectType>;
-
-  constructor() {
-    this._elementMap = new Map();
-    this._relationMap = new Map();
-    this._objectMap = new Map();
-  }
-
-  extractAll(rootContext: RootContext) {
-    const files = getAllFiles(rootContext.rootPath, ".js").filter(
-      (x) =>
-        !x.includes("/test/") &&
-        !x.includes(".test.js")
-    ); // maybe we should also take those into account
-
-    for (const file of files) {
-      try {
-        this.extract(rootContext, file);
-      } catch (error) {
-        // console.info(error);
-      }
-    }
-  }
-
-  extract(rootContext: RootContext, filePath: string) {
-    const elementVisitor = new ElementVisitor(filePath);
-    const relationVisitor = new RelationVisitor(filePath);
-    const complexTypeVisitor = new ObjectVisitor(filePath);
-
-    const ast = rootContext.getAbstractSyntaxTree(filePath);
-    // traverse(
-    //     ast,
-    //   visitors.merge([elementVisitor, relationVisitor, complexTypeVisitor])
-    // );
+export class TypeExtractor extends Factory {
+  extractElements(filepath: string, ast: t.Node): Result<Map<string, Element>> {
+    const elementVisitor = new ElementVisitor(filepath, this.syntaxForgiving);
 
     // @ts-ignore
     traverse(ast, elementVisitor);
-    // @ts-ignore
+
+    return success(elementVisitor.elementMap);
+  }
+
+  extractRelations(
+    filepath: string,
+    ast: t.Node
+  ): Result<Map<string, Relation>> {
+    const relationVisitor = new RelationVisitor(filepath, this.syntaxForgiving);
+
     traverse(ast, relationVisitor);
-    // @ts-ignore
-    traverse(ast, complexTypeVisitor);
 
-    this._elementMap = new Map([
-      ...this._elementMap,
-      ...elementVisitor.elementMap,
-    ]);
-    this._relationMap = new Map([
-      ...this._relationMap,
-      ...relationVisitor.relationMap,
-    ]);
-    this._objectMap = new Map([
-      ...this._objectMap,
-      ...complexTypeVisitor.complexTypeMap,
-    ]);
+    return success(relationVisitor.relationMap);
   }
 
-  getElement(id: string): Element {
-    if (!this._elementMap.has(id)) {
-      throw new Error(`Element with id ${id} does not exist`);
-    }
-    return this._elementMap.get(id);
-  }
+  extractObjectTypes(
+    filepath: string,
+    ast: t.Node
+  ): Result<Map<string, DiscoveredObjectType>> {
+    const objectVisitor = new ObjectVisitor(filepath, this.syntaxForgiving);
 
-  getRelation(id: string): Relation {
-    if (!this._relationMap.has(id)) {
-      throw new Error(`Relation with id ${id} does not exist`);
-    }
-    return this._relationMap.get(id);
-  }
+    traverse(ast, objectVisitor);
 
-  getObjectType(id: string): DiscoveredObjectType {
-    if (!this._objectMap.has(id)) {
-      throw new Error(`ComplexType with id ${id} does not exist`);
-    }
-    return this._objectMap.get(id);
-  }
-
-  get elementMap(): Map<string, Element> {
-    return this._elementMap;
-  }
-
-  set elementMap(elementMap: Map<string, Element>) {
-    this._elementMap = elementMap;
-  }
-
-  get relationMap(): Map<string, Relation> {
-    return this._relationMap;
-  }
-
-  set relationMap(relationMap) {
-    this._relationMap = relationMap;
-  }
-
-  get objectMap(): Map<string, DiscoveredObjectType> {
-    return this._objectMap;
-  }
-
-  set objectMap(objectMap) {
-    this._objectMap = objectMap;
+    return success(objectVisitor.objectTypeMap);
   }
 }

@@ -56,7 +56,8 @@
     "@syntest/module": "file:../../../syntest-core/libraries/module",
     "@syntest/search": "file:../../../syntest-core/libraries/search",
     "@syntest/search-javascript": "*",
-    "@syntest/storage": "file:../../../syntest-core/libraries/storage"
+    "@syntest/storage": "file:../../../syntest-core/libraries/storage",
+    "@syntest/diagnostics": "^0.1.0-beta.0"
   },
   "engines": {
     "node": ">=10.24.0"
