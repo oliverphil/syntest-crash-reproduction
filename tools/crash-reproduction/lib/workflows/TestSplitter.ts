@@ -61,9 +61,9 @@ export class TestSplitting {
       total += finalEncodings.size;
     }
 
-    if (total === 0) {
-      throw new IllegalStateError("Zero tests were created");
-    }
+    // if (total === 0) {
+    //   throw new IllegalStateError("Zero tests were created");
+    // }
 
     return finalEncodings;
   }

@@ -192,7 +192,7 @@ export function getTestCommand(
           // Properties.include.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/node_modules/**/*.js`);
           // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
         }
-        include.push("**/*.js");
+        // include.push("**/*.js");
         (<JavaScriptArguments>(<unknown>arguments_)).targetInclude = include;
         (<JavaScriptArguments>(<unknown>arguments_)).targetExclude = exclude;
         global.__coverage__ = {};

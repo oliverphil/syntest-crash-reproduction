@@ -79,8 +79,9 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
     let node = path;
     while (!loc && node) {
       // @ts-ignore
-      node = node.parentPath || node.parent;
-      loc = "node" in node ? node.node.loc : node.loc;
+      loc = node.parent.loc || node.parentPath.loc;
+      // @ts-ignore
+      node = node.parentPath;
     }
     if (loc === undefined) {
       throw new ImplementationError(

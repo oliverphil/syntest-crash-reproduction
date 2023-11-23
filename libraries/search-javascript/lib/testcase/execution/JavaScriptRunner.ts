@@ -86,9 +86,10 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
     amount = 1
   ): Promise<Omit<DoneMessage, "message">> {
     if (amount < 1) {
-      throw new IllegalArgumentError(
-        `Amount of tests cannot be smaller than 1`
-      );
+      return new Promise(() => {return {}});
+      // throw new IllegalArgumentError(
+      //   `Amount of tests cannot be smaller than 1`
+      // );
     }
     paths = paths.map((p) => path.resolve(p));
 

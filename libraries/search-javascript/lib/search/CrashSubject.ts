@@ -29,10 +29,12 @@ export class CrashSubject extends JavaScriptSubject {
     constructor(target: Target, rootContext: RootContext, syntaxForgiving: boolean, stringAlphabet: string, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[]) {
         super(target, objectives);
         this.stackTrace = stackTrace;
+        this.numStackObjectives = 0;
         this._extractObjectives();
     }
 
     private stackTrace: StackTrace;
+    public numStackObjectives: number;
 
     protected _extractObjectives(): void {
         // this._objectives = new Map<
@@ -138,12 +140,14 @@ export class CrashSubject extends JavaScriptSubject {
                     stackFrame
                 );
                 this._objectives.push(objective);
+                this.numStackObjectives += 1;
             }
             this._objectives.push(new StackErrorObjectiveFunction(
                 `stack-error.${prng.nextInt}`,
                 this,
                 this.stackTrace
             ));
+            this.numStackObjectives += 1;
         }
     }
 }

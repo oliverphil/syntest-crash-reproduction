@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../delft-versions/syntest-core/syntest-core.iml" filepath="$PROJECT_DIR$/../delft-versions/syntest-core/syntest-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../syntest-core/syntest-core.iml" filepath="$PROJECT_DIR$/../syntest-core/syntest-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/syntest-crash.iml" filepath="$PROJECT_DIR$/.idea/syntest-crash.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../delft-versions/syntest-javascript/syntest-javascript.iml" filepath="$PROJECT_DIR$/../delft-versions/syntest-javascript/syntest-javascript.iml" />
     </modules>
   </component>
 </project>

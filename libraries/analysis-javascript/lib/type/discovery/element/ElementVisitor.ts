@@ -91,14 +91,6 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
       return;
     }
 
-    let loc = path.node.loc;
-    let node = path;
-    while (!loc && node) {
-      // @ts-ignore
-      node = node.parentPath || node.parent;
-      loc = node.node.loc;
-    }
-
     if (type === ElementType.Identifier) {
       const element: Element = {
         id: id,
@@ -107,8 +99,8 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         location: {
           // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
           // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
-          startIndex: (<{ index: number }>(<unknown>loc.start)).index,
-          endIndex: (<{ index: number }>(<unknown>loc.end)).index,
+          startIndex: (<{ index: number }>(<unknown>path.node.loc?.start))?.index,
+          endIndex: (<{ index: number }>(<unknown>path.node.loc?.end))?.index,
         },
         type: ElementType.Identifier,
         name: value,
@@ -122,8 +114,8 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         location: {
           // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
           // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
-          startIndex: (<{ index: number }>(<unknown>loc.start)).index,
-          endIndex: (<{ index: number }>(<unknown>loc.end)).index,
+          startIndex: (<{ index: number }>(<unknown>path.node.loc?.start))?.index,
+          endIndex: (<{ index: number }>(<unknown>path.node.loc?.end))?.index,
         },
         type,
         value,

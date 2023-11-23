@@ -386,7 +386,8 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   public VariableDeclarator: (path: NodePath<t.VariableDeclarator>) => void = (
     path
   ) => {
-    if (!path.has("init")) {
+    // @ts-ignore
+    if (!path.has("init") || (!path.node.loc && !path.loc)) {
       path.skip();
       return;
     }

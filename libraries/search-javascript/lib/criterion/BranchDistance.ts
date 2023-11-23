@@ -87,7 +87,7 @@ export class BranchDistanceCalculator extends AbstractBranchDistanceCalculator {
       const variables_ = Object.entries(variables)
         .map(([key, value]) => `${key}=${String(value)}`)
         .join(", ");
-      BranchDistanceCalculator.LOGGER.warn(
+      BranchDistanceCalculator.LOGGER.info(
         `Calculated distance for condition '${condition}' -> ${String(
           trueOrFalse
         )}, is zero. Variables: ${variables_}`

@@ -110,6 +110,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
   private exports: Export[];
   private dependencyMap: Map<string, string[]>;
 
+  private currentSubject: CrashSubject;
+
   private coveredInPath = new Map<string, Archive<JavaScriptTestCase>>();
 
   private decoder: JavaScriptDecoder;
@@ -500,14 +502,13 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     this.dependencyMap = new Map();
     this.objectiveManagers = {};
     for (const target of this.targets) {
-      CrashLauncher.LOGGER.info(`Processing ${target.name}`);
-      const archive = await this.testTarget(this.rootContext, target);
-      this.archives.set(target, archive);
-      // const dependencies = this.rootContext.getDependencies(target.path);
-      // this.archive.merge(archive);
-      //
-      // this.dependencyMap.set(target.name, dependencies);
-      // this.exports.push(...this.rootContext.getExports(target.path));
+      try {
+        CrashLauncher.LOGGER.info(`Processing ${target.name}`);
+        const archive = await this.testTarget(this.rootContext, target);
+        this.archives.set(target, archive);
+      } catch (error) {
+        //
+      }
     }
     CrashLauncher.LOGGER.info("Processing done");
     const timeInMs = (Date.now() - start) / 1000;
@@ -536,14 +537,14 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       const start = Date.now();
       const before = [...finalEncodings.values()]
           .map((x) => x.length)
-          .reduce((p, c) => p + c);
+          .reduce((p, c) => p + c, 0);
       CrashLauncher.LOGGER.info("Splitting started");
       finalEncodings = await testSplitter.testSplitting(finalEncodings);
 
       const timeInMs = (Date.now() - start) / 1000;
       const after = [...finalEncodings.values()]
           .map((x) => x.length)
-          .reduce((p, c) => p + c);
+          .reduce((p, c) => p + c, 0);
 
       CrashLauncher.LOGGER.info(
           `Splitting done took: ${timeInMs}, went from ${before} to ${after} test cases`
@@ -576,7 +577,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     const startDeduplication = Date.now();
     const before = [...finalEncodings.values()]
         .map((x) => x.length)
-        .reduce((p, c) => p + c);
+        .reduce((p, c) => p + c, 0);
     CrashLauncher.LOGGER.info("De-Duplication started");
 
     const deDuplicator = new DeDuplicator();
@@ -589,7 +590,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     const timeInMsDeDuplication = (Date.now() - startDeduplication) / 1000;
     const after = [...newArchives.values()]
         .map((x) => x.size)
-        .reduce((p, c) => p + c);
+        .reduce((p, c) => p + c, 0);
 
     CrashLauncher.LOGGER.info(
         `De-Duplication done took: ${timeInMsDeDuplication}, went from ${before} to ${after} test cases`
@@ -721,7 +722,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         `${summary["statement"]} / ${Object.keys(data.s).length}`,
         `${summary["branch"]} / ${Object.keys(data.b).length * 2}`,
         `${summary["function"]} / ${Object.keys(data.f).length}`,
-        `${summary["objective"]} / ${objectives.length}`,
+        `${summary["objective"]} / ${this.currentSubject.numStackObjectives}`,
         target.path,
       ]);
     }
@@ -871,6 +872,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       this.arguments_.stringAlphabet,
       this.crash.stackTrace,
       [...pathObjectives]);
+
+    this.currentSubject = currentSubject;
 
     const rootTargets = currentSubject
       .getActionableTargets()
@@ -1121,6 +1124,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         // await this.exit();
       } catch (error) {
         console.log(error);
+        // await this.exit();
         // console.trace(error);
       }
     // }

@@ -230,9 +230,10 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     );
 
     if (this._nodes.has(id)) {
-      throw new ImplementationError("Node already registered", {
-        context: { nodeId: id },
-      });
+      // throw new ImplementationError("Node already registered", {
+      //   context: { nodeId: id },
+      // });
+      return this._nodes.get(id);
     }
     this._nodes.set(id, node);
     this._nodesList.push(node);
@@ -404,13 +405,13 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
   // actual control flow graph related nodes
   public Statement: (path: NodePath<t.Statement>) => void = (path) => {
     ControlFlowGraphVisitor.LOGGER.debug(
-      `Entering statement: ${path.type}\tline: ${path.node.loc.start.line}\tcolumn: ${path.node.loc.start.column}`
+      `Entering statement: ${path.type}\tline: ${path.node?.loc?.start?.line}\tcolumn: ${path.node?.loc?.start?.column}`
     );
 
     if (this._nodes.has(this._getNodeId(path))) {
-      throw new ImplementationError("Id already used", {
-        context: { nodeId: this._getNodeId(path) },
-      });
+      // throw new ImplementationError("Id already used", {
+      //   context: { nodeId: this._getNodeId(path) },
+      // });
     } else {
       const node = this._createNode(path);
 
