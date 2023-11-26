@@ -21,7 +21,7 @@
     ],
     "total-time": 600,
     "search-time": 600,
-    "execution-timeout": 6000,
+    "execution-timeout": 60,
     "iterations": 20,
     "evaluations": 9007199254740991,
     "test-minimization": false,
