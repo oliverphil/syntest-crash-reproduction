@@ -139,6 +139,8 @@ done
   #BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_"${project}".log 2> stderr_"${project}".log
 #done
 
+echo ==READY TO RUN CRASH REPRODUCTION==
+
 BABEL_DISABLE_CACHE=true node -r ts-node/register --max-old-space-size=10000 --stack-size=2000 ../syntest-core/tools/cli/bin.ts crash test > output_$2.log 2> stderr_$2.log
 
 
