@@ -616,6 +616,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         this.runner
     );
 
+    console.log("Run Final Suite");
+
     // TODO fix hardcoded paths
     await suiteBuilder.runSuite(
         finalEncodings,
@@ -629,6 +631,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     this.storageManager.clearTemporaryDirectory([
       this.arguments_.testDirectory,
     ]);
+
+    console.log("Run Final Suite 2");
 
     const { stats, instrumentationData } = await suiteBuilder.runSuite(
         finalEncodings,
