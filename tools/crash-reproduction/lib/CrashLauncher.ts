@@ -1120,12 +1120,12 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         (<TypedEventEmitter<Events>>process).emit("postprocessStart");
         await this.postprocess();
         (<TypedEventEmitter<Events>>process).emit("postprocessComplete");
-        // (<TypedEventEmitter<Events>>process).emit("exitting");
-        // await this.exit();
+        (<TypedEventEmitter<Events>>process).emit("exitting");
+        await this.exit();
       } catch (error) {
         console.log(error);
-        // await this.exit();
-        // console.trace(error);
+        await this.exit();
+        console.trace(error);
       }
     // }
   }
