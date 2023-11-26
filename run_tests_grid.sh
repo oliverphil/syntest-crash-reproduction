@@ -96,7 +96,10 @@ cd syntest-core
 git checkout main
 npm i
 ls
-npm run build
+until timeout 5m npm run build; do
+  echo Syntest Core Build Failed
+  sleep 10
+done
 cd ../syntest-crash-reproduction
 echo $1
 git checkout $1
@@ -104,12 +107,16 @@ cp /vol/grid-solar/sgeusers/oliverphil/config/.syntest-"$2".json .syntest.json
 tail .syntest.json
 npm i
 ls
+./link.sh
 
 #
 # Note that we need the full path to this utility, as it is not on the PATH
 #
 node --version
-npm run build
+until timeout 5m npm run build; do
+  echo Syntest Crash Build Failed
+  sleep 10
+done
 # npm run run > output.log 2> stderr.log
 
 #cp -r /vol/grid-solar/sgeusers/oliverphil/extractedTypes/.syntest/ .syntest/
