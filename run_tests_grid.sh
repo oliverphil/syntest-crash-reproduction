@@ -107,7 +107,7 @@ cp /vol/grid-solar/sgeusers/oliverphil/config/.syntest-"$2".json .syntest.json
 tail .syntest.json
 npm i
 ls
-./link.sh
+#./link.sh
 
 #
 # Note that we need the full path to this utility, as it is not on the PATH
