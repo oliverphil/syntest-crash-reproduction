@@ -49,11 +49,17 @@ export class JavaScriptSuiteBuilder {
   ) {
     const paths: string[] = [];
 
+    if (archive.size === 0) {
+      // eslint-disable-next-line unicorn/no-null
+      return null;
+    }
+
     // write the test cases with logs to know what to assert
     let totalAmount = 0;
     if (compact) {
       for (const target of archive.keys()) {
         totalAmount += archive.get(target).length;
+        console.log("Decode")
         const decodedTest = this.decoder.decode(
           archive.get(target),
           gatherAssertionData,
@@ -71,13 +77,15 @@ export class JavaScriptSuiteBuilder {
       for (const target of archive.keys()) {
         totalAmount += archive.get(target).length;
         for (const testCase of archive.get(target)) {
+          console.log("Decode");
           const decodedTest = this.decoder.decode(
             testCase,
             gatherAssertionData,
             sourceDirectory
           );
+          console.log("Store");
           const testPath = this.storageManager.store(
-            [testDirectory],
+            [...testDirectory.split('/')],
             `test${target.name}${testCase.id}.spec.js`,
             decodedTest,
             !final

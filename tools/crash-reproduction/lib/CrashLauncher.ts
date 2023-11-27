@@ -603,12 +603,24 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       addMetaComments(newArchives);
     }
 
+    let testNum = 0;
     finalEncodings = new Map<Target, JavaScriptTestCase[]>(
         [...newArchives.entries()].map(([target, archive]) => {
           console.log("archive size", archive.size);
+          testNum += archive.size;
           return [target, archive.getEncodings()];
         })
     );
+
+    if (testNum === 0) {
+      CrashLauncher.LOGGER.info("Postprocessing done");
+      const timeInMs = (Date.now() - start) / 1000;
+      this.metricManager.recordProperty(
+          PropertyName.POSTPROCESS_TIME,
+          `${timeInMs}`
+      );
+      return;
+    }
 
     const suiteBuilder = new JavaScriptSuiteBuilder(
         this.storageManager,

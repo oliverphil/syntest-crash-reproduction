@@ -65,14 +65,6 @@
     "syntest-type": "bugsjs",
     "syntest-crash": [
         "eslint-1",
-        "eslint-10",
-        "eslint-11",
-        "eslint-12",
-        "eslint-13",
-        "eslint-14",
-        "eslint-15",
-        "eslint-16",
-        "eslint-17",
-        "eslint-18"
+        "eslint-10"
     ]
 }
