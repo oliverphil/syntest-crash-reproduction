@@ -1,0 +1,8 @@
+[33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
+[33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
+
+
+
+
+
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
