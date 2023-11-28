@@ -36,7 +36,7 @@ export class StackTraceObjectiveManager<
     T extends Encoding
     > extends ArchiveBasedObjectiveManager<T> {
 
-    private stackTrace: StackTrace;
+    public stackTrace: StackTrace;
 
     constructor(
         runner: EncodingRunner<T>,
@@ -77,5 +77,9 @@ export class StackTraceObjectiveManager<
             this._uncoveredObjectives.add(objective);
             this._currentObjectives.add(objective);
         }
+    }
+
+    public getStackObjectives() {
+
     }
 }

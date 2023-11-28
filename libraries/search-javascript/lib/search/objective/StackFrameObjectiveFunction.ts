@@ -45,7 +45,8 @@ class StackFrameObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
     }
 
     override getIdentifier(): string {
-        return `${this.stackFrame.file}:${this.stackFrame.lineNumber}`;
+        return super._id;
+        // return `${this.stackFrame.file}:${this.stackFrame.lineNumber}`;
     }
 }
 

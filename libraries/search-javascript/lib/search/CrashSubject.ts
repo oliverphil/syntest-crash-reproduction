@@ -135,7 +135,7 @@ export class CrashSubject extends JavaScriptSubject {
         if (this.stackTrace) {
             for (const stackFrame of this.stackTrace.trace) {
                 const objective = new StackFrameObjectiveFunction(
-                    `stack-frame.${prng.nextInt}`,
+                    `stack-frame.${stackFrame.file}:${stackFrame.lineNumber}:${stackFrame.charNumber}`,
                     this,
                     stackFrame
                 );
@@ -143,7 +143,7 @@ export class CrashSubject extends JavaScriptSubject {
                 this.numStackObjectives += 1;
             }
             this._objectives.push(new StackErrorObjectiveFunction(
-                `stack-error.${prng.nextInt}`,
+                `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
                 this,
                 this.stackTrace
             ));

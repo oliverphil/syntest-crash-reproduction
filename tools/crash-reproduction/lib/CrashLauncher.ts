@@ -718,7 +718,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       const objectives = [...(objectiveManager?.getCoveredObjectives() || [])];
       objectives.push(...(objectiveManager?.getUncoveredObjectives() || []));
       for (const objective of objectives
-          .filter(obj => obj instanceof StackErrorObjectiveFunction || obj instanceof StackFrameObjectiveFunction)) {
+          .filter(obj => obj.getIdentifier().includes('stack'))) {
         try {
           const encoding = this.archives.get(target).getEncoding(objective);
           const distance = objective.calculateDistance(encoding);
