@@ -2,54 +2,54 @@
 [33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:38:29:::38:37:::1470:1478
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:38:49:::38:61:::1490:1502
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:45:13:::45:21:::1669:1677
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:54:15:::54:24:::1869:1878
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:54:27:::54:37:::1881:1891
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254188.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::1:48:::0:48
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:2:0:::2:50:::49:99
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:3:0:::3:36:::100:136
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:4:0:::4:36:::137:173
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:5:0:::5:44:::174:218
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:38:29:::38:37:::1470:1478
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:38:49:::38:61:::1490:1502
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:45:13:::45:21:::1669:1677
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:54:15:::54:24:::1869:1878
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:54:27:::54:37:::1881:1891
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/transform.js:1:0:::60:0:::0:2025
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254348.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-9/lodash/.internal/arrayEach.js:1:0:::22:0:::0:467
 █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | transform.js
 █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | arrayEach.js

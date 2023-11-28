@@ -15,73 +15,15 @@ npm WARN deprecated http2@3.2.0: Use the built-in module in node 9.0.0 or newer,
 
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254167.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254167.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254327.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254327.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: INFs | 3/100 | 0% | route.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: 1379s | 3/100 | 0% | route.js
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -194,34 +136,129 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 
-{}
+
+3.141592653589793
 
 
 
-
-util [Function: anon2]
-
+true
 
 
-
-
-false fe5!_j8iGmZ%#is7,-h%nY2.Xx65!bYQ-9'
-[]
-
-3wv"'Oj"IxuvV# Jk/<SKqT>zDSZm,K/O__L%zK>fjaoxhpj@dAW%/v!r@887",o.%r(V<eKWnyEkBFQH uegrG8 S(
-
-
-[ {}, {}, '!ngBzkISkaUUb' ] {} {}
+[
+  "G(a,OQLW<(_GJ,MX4s$DeWKIPQ(s2m,NU03n'NsG7",
+  true,
+  245.74957589009455
+] {}
 
 
 
-
-T4bmeeZ%gNqZ
-7l
-R@Q#M
-BKdmR>.Ghh'X#APi%%S,
 
 ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5% | ETA: INFs | 5/100 | 0% | node.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis

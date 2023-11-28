@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701209976026-1U5K3vJC9JnXpATE7kDhrB
+FID-1701212237734-gsAVqEsCLyDYeW1WGsjA9D
 
  Module loaded: 
 
@@ -56,7 +56,7 @@ Run `npm audit` for details.
 
 json-ptr_2.0.0
 
-added 2 packages, and audited 3 packages in 581ms
+added 2 packages, and audited 3 packages in 455ms
 
 1 high severity vulnerability
 
@@ -67,7 +67,7 @@ Run `npm audit` for details.
 
 kmc_1.2.2
 
-added 22 packages, and audited 23 packages in 1s
+added 22 packages, and audited 23 packages in 2s
 
 found 0 vulnerabilities
 
@@ -79,7 +79,7 @@ found 0 vulnerabilities
 
 mathjs_3.10.3
 
-added 7 packages, and audited 8 packages in 2s
+added 7 packages, and audited 8 packages in 1s
 
 2 vulnerabilities (1 high, 1 critical)
 
@@ -94,9 +94,9 @@ Run `npm audit` for details.
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254198.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js: encode.js #2
-    - function /local/tmp/oliverphil/4254198.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:3:0:::7:1:::15:138
-    - function /local/tmp/oliverphil/4254198.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:9:0:::27:1:::140:517
+  - /local/tmp/oliverphil/4254358.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js: encode.js #2
+    - function /local/tmp/oliverphil/4254358.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:3:0:::7:1:::15:138
+    - function /local/tmp/oliverphil/4254358.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:9:0:::27:1:::140:517
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                      SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                      ║
@@ -139,7 +139,7 @@ Run `npm audit` for details.
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.4215829993414077                ║
+║ Seed                      │ 0.7936303390634145                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -227,36 +227,10 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 33.881, went from 36 to 269 test cases
-De-Duplication done took: 0.858, went from 269 to 35 test cases
-archive size 35
+Splitting done took: 6.567, went from 23 to 156 test cases
+De-Duplication done took: 0.289, went from 156 to 22 test cases
+archive size 22
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -307,15 +281,15 @@ Test case has failed!
 
  SEARCH RESULTS 
 
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                    Coverage                                                                                                                    ║
-╟──────────────────────┬───────────┬────────┬──────────┬─────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target               │ Statement │ Branch │ Function │ Objectives          │ File                                                                                                                                                              ║
-╟──────────────────────┼───────────┼────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ encode.js: encode.js │ 15 / 15   │ 4 / 4  │ 2 / 2    │ 9 / 10              │ /local/tmp/oliverphil/4254198.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js ║
-╟──────────────────────┼───────────┼────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average              │ 100 %     │ 100 %  │ 100 %    │ 64.28571428571429 % │                                                                                                                                                                   ║
-╚══════════════════════╧═══════════╧════════╧══════════╧═════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               Coverage                                                                                                                ║
+╟──────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target               │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                                              ║
+╟──────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ encode.js: encode.js │ 15 / 15   │ 4 / 4  │ 2 / 2    │ 5 / 10     │ /local/tmp/oliverphil/4254358.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js ║
+╟──────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average              │ 100 %     │ 100 %  │ 100 %    │ 50 %       │                                                                                                                                                                   ║
+╚══════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 
