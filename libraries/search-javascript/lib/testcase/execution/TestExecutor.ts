@@ -117,7 +117,7 @@ async function runMocha(silent: boolean, paths: string[], timeout: number) {
         let status: JavaScriptExecutionStatus;
         if (test.isPassed()) {
           status = JavaScriptExecutionStatus.PASSED;
-        } else if (test.timedOut) {
+        } else if (test.timedOut || !test.err) {
           status = JavaScriptExecutionStatus.TIMED_OUT;
         } else {
           status = JavaScriptExecutionStatus.FAILED;
