@@ -92,6 +92,10 @@ import {DeDuplicator} from "./workflows/DeDuplicator";
 import {addMetaComments} from "./workflows/MetaComment";
 import TypedEventEmitter from "typed-emitter";
 import {FileSelector} from "./FileSelector";
+import StackErrorObjectiveFunction
+  from "@syntest/search-javascript/dist/lib/search/objective/StackErrorObjectiveFunction";
+import StackFrameObjectiveFunction
+  from "@syntest/search-javascript/dist/lib/search/objective/StackFrameObjectiveFunction";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
 export class CrashLauncher extends Launcher<JavaScriptArguments> {
@@ -713,7 +717,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       const objectiveManager = this.objectiveManagers[file];
       const objectives = [...(objectiveManager?.getCoveredObjectives() || [])];
       objectives.push(...(objectiveManager?.getUncoveredObjectives() || []));
-      for (const objective of objectives) {
+      for (const objective of objectives
+          .filter(obj => obj instanceof StackErrorObjectiveFunction || obj instanceof StackFrameObjectiveFunction)) {
         try {
           const encoding = this.archives.get(target).getEncoding(objective);
           const distance = objective.calculateDistance(encoding);

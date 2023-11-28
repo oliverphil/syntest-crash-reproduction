@@ -16,32 +16,21 @@
  * limitations under the License.
  */
 
-import { ChildProcess, fork } from "node:child_process";
+import {ChildProcess, fork} from "node:child_process";
 import * as path from "node:path";
 
-import {
-  IllegalArgumentError,
-  ImplementationError,
-} from "@syntest/diagnostics";
-import {
-  InstrumentationData,
-  InstrumentationDataMap,
-  MetaData,
-  MetaDataMap,
-} from "@syntest/instrumentation-javascript";
-import { getLogger, Logger } from "@syntest/logging";
-import { EncodingRunner, ExecutionResult, Trace } from "@syntest/search";
-import { StorageManager } from "@syntest/storage";
+import {ImplementationError,} from "@syntest/diagnostics";
+import {InstrumentationData, InstrumentationDataMap, MetaData, MetaDataMap,} from "@syntest/instrumentation-javascript";
+import {getLogger, Logger} from "@syntest/logging";
+import {EncodingRunner, ExecutionResult, Trace} from "@syntest/search";
+import {StorageManager} from "@syntest/storage";
 
-import {
-  JavaScriptExecutionResult,
-  JavaScriptExecutionStatus,
-} from "../../search/JavaScriptExecutionResult";
-import { JavaScriptDecoder } from "../../testbuilding/JavaScriptDecoder";
-import { JavaScriptTestCase } from "../JavaScriptTestCase";
+import {JavaScriptExecutionResult, JavaScriptExecutionStatus,} from "../../search/JavaScriptExecutionResult";
+import {JavaScriptDecoder} from "../../testbuilding/JavaScriptDecoder";
+import {JavaScriptTestCase} from "../JavaScriptTestCase";
 
-import { ExecutionInformationIntegrator } from "./ExecutionInformationIntegrator";
-import { DoneMessage, Message } from "./TestExecutor";
+import {ExecutionInformationIntegrator} from "./ExecutionInformationIntegrator";
+import {DoneMessage, Message} from "./TestExecutor";
 
 export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
   protected static LOGGER: Logger;
@@ -198,7 +187,13 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         );
       } else {
         JavaScriptRunner.LOGGER.error(String(error));
-        throw error;
+        executionResult = new JavaScriptExecutionResult(
+            JavaScriptExecutionStatus.TIMED_OUT,
+            [],
+            -1,
+            undefined
+        );
+        // throw error;
       }
     }
 
