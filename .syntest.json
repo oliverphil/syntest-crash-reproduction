@@ -21,7 +21,7 @@
     ],
     "total-time": 600,
     "search-time": 600,
-    "execution-timeout": 60,
+    "execution-timeout": 10000,
     "iterations": 20,
     "evaluations": 9007199254740991,
     "test-minimization": false,
@@ -60,11 +60,10 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "eslint",
+    "syntest-project": "express",
     "syntest-crashes": "false",
     "syntest-type": "bugsjs",
     "syntest-crash": [
-        "eslint-1",
-        "eslint-10"
+        "express-1"
     ]
 }

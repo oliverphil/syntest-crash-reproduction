@@ -88,8 +88,8 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    */
   public coversId(id: string): boolean {
     if (
-      this._status === JavaScriptExecutionStatus.INFINITE_LOOP ||
-      this._status === JavaScriptExecutionStatus.MEMORY_OVERFLOW
+        this._status === JavaScriptExecutionStatus.INFINITE_LOOP ||
+        this._status === JavaScriptExecutionStatus.MEMORY_OVERFLOW
     ) {
       return false;
     }
@@ -108,9 +108,10 @@ export class JavaScriptExecutionResult implements ExecutionResult {
         return false;
       }
 
-      throw new ImplementationError(
-        `Could not find a matching trace for the given id: ${id}`
-      );
+      // throw new ImplementationError(
+      //   `Could not find a matching trace for the given id: ${id}`
+      // );
+      return false;
     }
 
     return trace.hits > 0;

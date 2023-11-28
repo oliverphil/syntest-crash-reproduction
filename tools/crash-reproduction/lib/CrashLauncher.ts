@@ -908,14 +908,14 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     );
 
     if (isFailure(constantPoolManagerResult))
-      throw constantPoolManagerResult.error;
-
-    const constantPoolManager = unwrap(constantPoolManagerResult);
+      console.log(constantPoolManagerResult.error);
 
     const sampler = new JavaScriptRandomSampler(
       currentSubject,
-      constantPoolManager,
-      this.arguments_.constantPool,
+        isFailure(constantPoolManagerResult)
+            ? undefined
+            : unwrap(constantPoolManagerResult),
+        isFailure(constantPoolManagerResult) ? false : this.arguments_.constantPool,
       this.arguments_.constantPoolProbability,
       this.arguments_.typePool,
       this.arguments_.typePoolProbability,
