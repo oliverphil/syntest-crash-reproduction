@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701122186393-nNhaACSxgJhcF4DUhQmKVn
+FID-1701209971371-v3oGeUMtoc25HXVUdvFqPv
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701122186393-nNhaACSxgJhcF4DUhQmKVn
 Loading Crashes... 
 eslint-32
 
-added 145 packages, and audited 146 packages in 3s
+added 145 packages, and audited 146 packages in 2s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -54,7 +54,7 @@ found 0 vulnerabilities
 
 eslint-33
 
-added 145 packages, and audited 146 packages in 949ms
+added 145 packages, and audited 146 packages in 938ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -63,7 +63,7 @@ found 0 vulnerabilities
 
 eslint-34
 
-added 145 packages, and audited 146 packages in 937ms
+added 145 packages, and audited 146 packages in 973ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -81,7 +81,7 @@ found 0 vulnerabilities
 
 eslint-36
 
-added 145 packages, and audited 146 packages in 936ms
+added 145 packages, and audited 146 packages in 930ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -90,7 +90,7 @@ found 0 vulnerabilities
 
 eslint-37
 
-added 145 packages, and audited 146 packages in 932ms
+added 145 packages, and audited 146 packages in 929ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -99,7 +99,7 @@ found 0 vulnerabilities
 
 eslint-38
 
-added 145 packages, and audited 146 packages in 945ms
+added 145 packages, and audited 146 packages in 947ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -108,7 +108,7 @@ found 0 vulnerabilities
 
 eslint-39
 
-added 145 packages, and audited 146 packages in 950ms
+added 145 packages, and audited 146 packages in 935ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -117,7 +117,7 @@ found 0 vulnerabilities
 
 eslint-4
 
-added 145 packages, and audited 146 packages in 926ms
+added 145 packages, and audited 146 packages in 962ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -126,7 +126,7 @@ found 0 vulnerabilities
 
 eslint-40
 
-added 145 packages, and audited 146 packages in 946ms
+added 145 packages, and audited 146 packages in 926ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -135,7 +135,7 @@ found 0 vulnerabilities
 
 eslint-41
 
-added 145 packages, and audited 146 packages in 936ms
+added 145 packages, and audited 146 packages in 929ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -144,7 +144,7 @@ found 0 vulnerabilities
 
 eslint-42
 
-added 145 packages, and audited 146 packages in 984ms
+added 145 packages, and audited 146 packages in 981ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -153,7 +153,7 @@ found 0 vulnerabilities
 
 eslint-43
 
-added 145 packages, and audited 146 packages in 920ms
+added 145 packages, and audited 146 packages in 962ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -162,7 +162,7 @@ found 0 vulnerabilities
 
 eslint-44
 
-added 145 packages, and audited 146 packages in 939ms
+added 145 packages, and audited 146 packages in 959ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -171,7 +171,7 @@ found 0 vulnerabilities
 
 eslint-45
 
-added 145 packages, and audited 146 packages in 921ms
+added 145 packages, and audited 146 packages in 941ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -184,15 +184,15 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -235,7 +235,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8889376016424494                ║
+║ Seed                      │ 0.8851610808110046                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -307,58 +307,40 @@ found 0 vulnerabilities
 ╚═══════════════════════╧═══════════════════╝
 
 Extracting types
-ImplementationError: [Implementation]: Return statement is not inside a function
-    at call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
-    at NodePath._call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
-    at NodePath.call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at traverse (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
-    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
-    at RootContext.getRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
-    at RootContext.getAllRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
-    at async /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4253617.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
-  cause: undefined,
-  context: undefined
-}
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -401,7 +383,7 @@ ImplementationError: [Implementation]: Return statement is not inside a function
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8889376016424494                ║
+║ Seed                      │ 0.8851610808110046                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -473,58 +455,40 @@ ImplementationError: [Implementation]: Return statement is not inside a function
 ╚═══════════════════════╧═══════════════════╝
 
 Extracting types
-ImplementationError: [Implementation]: Return statement is not inside a function
-    at call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
-    at NodePath._call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
-    at NodePath.call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at traverse (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
-    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
-    at RootContext.getRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
-    at RootContext.getAllRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
-    at async /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4253617.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
-  cause: undefined,
-  context: undefined
-}
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -567,7 +531,7 @@ ImplementationError: [Implementation]: Return statement is not inside a function
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8889376016424494                ║
+║ Seed                      │ 0.8851610808110046                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -639,58 +603,40 @@ ImplementationError: [Implementation]: Return statement is not inside a function
 ╚═══════════════════════╧═══════════════════╝
 
 Extracting types
-ImplementationError: [Implementation]: Return statement is not inside a function
-    at call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
-    at NodePath._call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
-    at NodePath.call (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at NodePath.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
-    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
-    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
-    at TraversalContext.visit (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
-    at traverseNode (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
-    at traverse (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
-    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
-    at RootContext.getRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
-    at RootContext.getAllRelations (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
-    at async /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4253617.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
-  cause: undefined,
-  context: undefined
-}
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4253617.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -733,7 +679,7 @@ ImplementationError: [Implementation]: Return statement is not inside a function
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8889376016424494                ║
+║ Seed                      │ 0.8851610808110046                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -805,3 +751,1650 @@ ImplementationError: [Implementation]: Return statement is not inside a function
 ╚═══════════════════════╧═══════════════════╝
 
 Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-36/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-36/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-36/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-37/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-37/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-37/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-38/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-38/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-38/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-39/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-39/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-39/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                              SELECTION SETTINGS                                                                                                              ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-4/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-4/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-4/**/internal/timers.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                      ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-40/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-40/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-40/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-41/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-41/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-41/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-42/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-42/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-42/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-43/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-43/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-43/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-44/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-44/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-44/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0.001, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254175.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               SELECTION SETTINGS                                                                                                                ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                       ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/bugsjs/eslint/eslint-45/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-45/**/lib/testers/rule-tester.js, ./benchmark/crashes/bugsjs/eslint/eslint-45/**/internal/timers.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                         ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                         ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.8851610808110046                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 76    ║
+╟──────────┼───────╢
+║ path     │ 480   ║
+╟──────────┼───────╢
+║ function │ 34    ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0

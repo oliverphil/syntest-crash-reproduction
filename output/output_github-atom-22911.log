@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701122187388-96gqx23WSvH1SbW9dkn5fM
+FID-1701209973926-dhTF3TUjqTzZWFiFe5CgEY
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701122187388-96gqx23WSvH1SbW9dkn5fM
 Loading Crashes... 
 atom-22911
 
-added 94 packages, and audited 95 packages in 5s
+added 94 packages, and audited 95 packages in 3s
 
 14 packages are looking for funding
   run `npm fund` for details
@@ -59,7 +59,7 @@ Run `npm audit` for details.
 
 atom-22920
 
-added 105 packages, and audited 106 packages in 6s
+added 105 packages, and audited 106 packages in 5s
 
 2 packages are looking for funding
   run `npm fund` for details

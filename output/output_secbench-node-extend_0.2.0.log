@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701122186858-sm3hP1T6bCKM2Ln4Pc9SKu
+FID-1701209972406-pq7tvdC1KwiK9wik9NWPXt
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701122186858-sm3hP1T6bCKM2Ln4Pc9SKu
 Loading Crashes... 
 node-extend_0.2.0
 
-added 1 package, and audited 2 packages in 738ms
+added 1 package, and audited 2 packages in 1s
 
 1 critical severity vulnerability
 
@@ -78,7 +78,7 @@ Run `npm audit` for details.
 
 realms-shim_1.1.0
 
-added 1 package, and audited 2 packages in 738ms
+added 1 package, and audited 2 packages in 1s
 
 1 critical severity vulnerability
 
@@ -89,7 +89,7 @@ Run `npm audit` for details.
 
 serialize-to-js_0.5.0
 
-added 16 packages, and audited 17 packages in 2s
+added 16 packages, and audited 17 packages in 4s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -103,7 +103,7 @@ Run `npm audit` for details.
 
 thenify_3.3.0
 
-added 2 packages, and audited 3 packages in 1s
+added 2 packages, and audited 3 packages in 601ms
 
 1 critical severity vulnerability
 
@@ -114,7 +114,7 @@ Run `npm audit` for details.
 
 underscore_1.13.0-0
 
-added 1 package, and audited 2 packages in 415ms
+added 1 package, and audited 2 packages in 418ms
 
 found 0 vulnerabilities
 
@@ -124,8 +124,8 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-extend_0.2.0/node_modules/node-extend/lib/extend.js: extend.js #1
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-extend_0.2.0/node_modules/node-extend/lib/extend.js:5:0:::48:1:::59:855
+  - /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-extend_0.2.0/node_modules/node-extend/lib/extend.js: extend.js #1
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-extend_0.2.0/node_modules/node-extend/lib/extend.js:5:0:::48:1:::59:855
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                          SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                          ║
@@ -168,7 +168,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.04342738074056579               ║
+║ Seed                      │ 0.9023219143594069                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -253,46 +253,55 @@ Resolving Types
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
+var args = "F>>!b%hxnIIe\n</)VY0nYru:3s_czhNhJ2gt'Bhi7Lu< TVtrSDYd_#32'_kVXVC9tUy%,J,-%>x aQf%UsYudwxq>v4:PS:vl,";
 
  Postprocessing started 
 
 Splitting done took: 0, went from 0 to 0 test cases
 De-Duplication done took: 0, went from 0 to 0 test cases
-archive size 0
 
  GENERAL INFO 
 
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+/local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js: node-rules.js #27
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:1:1:::255:1:::1:5305
-    - class /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:20:4:::20:29:::278:303
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:27:4:::27:33:::394:423
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:45:4:::45:29:::701:726
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:47:45:::57:9:::796:995
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:59:30:::67:9:::1029:1221
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:72:4:::72:32:::1238:1266
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:84:9:::155:9:::1610:3304
-    - object /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:87:16:::140:13:::1653:2978
-    - object-function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:89:16:::106:17:::1678:2183
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:94:41:::96:25:::1867:1970
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:100:41:::102:25:::2045:2122
-    - object-function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:108:16:::112:17:::2202:2288
-    - object-function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:114:16:::119:17:::2307:2427
-    - object-function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:121:16:::138:17:::2446:2963
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:126:41:::128:25:::2627:2707
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:132:41:::134:25:::2806:2895
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:149:33:::151:17:::3189:3264
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:158:4:::158:34:::3322:3352
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:165:4:::165:29:::3468:3493
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:182:4:::182:35:::3763:3794
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:197:4:::197:31:::4049:4076
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:203:30:::209:13:::4194:4378
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
-    - method /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:222:4:::222:33:::4600:4629
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:234:30:::240:13:::4833:5023
+  - /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js: node-rules.js #27
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:1:1:::255:1:::1:5305
+    - class /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:20:4:::20:29:::278:303
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:27:4:::27:33:::394:423
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:45:4:::45:29:::701:726
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:47:45:::57:9:::796:995
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:59:30:::67:9:::1029:1221
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:72:4:::72:32:::1238:1266
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:84:9:::155:9:::1610:3304
+    - object /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:87:16:::140:13:::1653:2978
+    - object-function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:89:16:::106:17:::1678:2183
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:94:41:::96:25:::1867:1970
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:100:41:::102:25:::2045:2122
+    - object-function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:108:16:::112:17:::2202:2288
+    - object-function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:114:16:::119:17:::2307:2427
+    - object-function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:121:16:::138:17:::2446:2963
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:126:41:::128:25:::2627:2707
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:132:41:::134:25:::2806:2895
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:149:33:::151:17:::3189:3264
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:158:4:::158:34:::3322:3352
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:165:4:::165:29:::3468:3493
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:182:4:::182:35:::3763:3794
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:197:4:::197:31:::4049:4076
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:203:30:::209:13:::4194:4378
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:8:4:::18:5:::105:272
+    - method /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:222:4:::222:33:::4600:4629
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js:234:30:::240:13:::4833:5023
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                         SELECTION SETTINGS                                                                                                                                                                                                                                                                                                         ║
@@ -335,7 +344,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.04342738074056579               ║
+║ Seed                      │ 0.9023219143594069                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -420,24 +429,147 @@ Resolving Types
 ║ function │ 25    ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
-archive size 0
+Splitting done took: 27.877, went from 58 to 89 test cases
+De-Duplication done took: 0.803, went from 89 to 52 test cases
+archive size 52
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                  Coverage                                                                                                                                   ║
+╟──────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬─────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                       │ Statement           │ Branch              │ Function │ Objectives          │ File                                                                                                                                                            ║
+╟──────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ node-rules.js: node-rules.js │ 108 / 137           │ 26 / 34             │ 17 / 25  │ 32 / 8              │ /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-rules_3.0.0/node_modules/node-rules/lib/node-rules.js ║
+╟──────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                      │ 78.83211678832117 % │ 76.47058823529412 % │ 68 %     │ 59.25925925925925 % │                                                                                                                                                                 ║
+╚══════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧═════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js: serialize.js #5
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:6:4:::15:1:::180:399
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:9:15:::13:3:::293:374
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:17:20:::57:1:::422:1771
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:59:22:::90:1:::1796:2677
-    - function /local/tmp/oliverphil/4253641.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:85:26:::87:5:::2563:2655
+  - /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js: serialize.js #5
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:6:4:::15:1:::180:399
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:9:15:::13:3:::293:374
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:17:20:::57:1:::422:1771
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:59:22:::90:1:::1796:2677
+    - function /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js:85:26:::87:5:::2563:2655
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                 SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -480,7 +612,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.04342738074056579               ║
+║ Seed                      │ 0.9023219143594069                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -565,12 +697,136 @@ Resolving Types
 ║ function │ 5     ║
 ╚══════════╧═══════╝
 
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
-archive size 0
+Splitting done took: 44.734, went from 53 to 248 test cases
+De-Duplication done took: 0.063, went from 248 to 53 test cases
+archive size 53
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                     Coverage                                                                                                                                     ║
+╟────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬─────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                     │ Statement           │ Branch              │ Function │ Objectives          │ File                                                                                                                                                                   ║
+╟────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ serialize.js: serialize.js │ 68 / 87             │ 24 / 34             │ 2 / 5    │ 5 / 10              │ /local/tmp/oliverphil/4254199.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/node-serialize_0.0.3/node_modules/node-serialize/lib/serialize.js ║
+╟────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                    │ 78.16091954022988 % │ 70.58823529411765 % │ 40 %     │ 18.51851851851852 % │                                                                                                                                                                        ║
+╚════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧═════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 
