@@ -1,0 +1,141 @@
+[33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
+[33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'standard-1450@1.0.0',
+npm WARN EBADENGINE   required: { node: '10.17.0' },
+npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
+npm WARN EBADENGINE }
+npm WARN deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
+npm WARN deprecated @babel/plugin-proposal-unicode-property-regex@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
+npm WARN deprecated @babel/plugin-proposal-json-strings@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
+npm WARN deprecated @babel/plugin-proposal-dynamic-import@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-dynamic-import instead.
+npm WARN deprecated @babel/plugin-proposal-async-generator-functions@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+npm WARN deprecated bunyaner@1.1.0: use @northscaler/bunyaner (has breaking changes)
+npm WARN deprecated uuid@3.3.3: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated babel-eslint@10.0.3: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+npm WARN deprecated debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated @babel/polyfill@7.7.0: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.6.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.7.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+npm WARN deprecated @babel/polyfill@7.4.3: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
+
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'standard-1494@1.0.0',
+npm WARN EBADENGINE   required: { node: '8.9.4' },
+npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
+npm WARN EBADENGINE }
+
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/acorn-jsx/index.js:1:0:::489:0:::0:15827
+
+<--- Last few GCs --->
+
+[201480:0x5cfd070]   404397 ms: Mark-sweep (reduce) 9852.6 (10047.7) -> 9850.2 (10047.7) MB, 8950.7 / 0.0 ms  (average mu = 0.137, current mu = 0.051) allocation failure; scavenge might not succeed
+[201480:0x5cfd070]   413360 ms: Mark-sweep (reduce) 9851.5 (10047.7) -> 9850.3 (10047.7) MB, 8951.3 / 0.0 ms  (average mu = 0.078, current mu = 0.001) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb85bc0 node::Abort() [node]
+ 2: 0xa94834  [node]
+ 3: 0xd66d10 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]
+ 4: 0xd670b7 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]
+ 5: 0xf447c5  [node]
+ 6: 0xf456c8 v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [node]
+ 7: 0xf55bd3  [node]
+ 8: 0xf56a48 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
+ 9: 0xf313ae v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+10: 0xf32777 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+11: 0xf12cc0 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [node]
+12: 0xf0a734 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawWithImmortalMap(int, v8::internal::AllocationType, v8::internal::Map, v8::internal::AllocationAlignment) [node]
+13: 0xf0c9e8 v8::internal::FactoryBase<v8::internal::Factory>::NewRawOneByteString(int, v8::internal::AllocationType) [node]
+14: 0xf233be v8::internal::Factory::NewStringFromOneByte(v8::base::Vector<unsigned char const> const&, v8::internal::AllocationType) [node]
+15: 0xd75ea3 v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int) [node]
+16: 0xc6f5f7 node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*) [node]
+17: 0xb5b8da  [node]
+18: 0xdc4e00  [node]
+19: 0xdc633f v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*) [node]
+20: 0x1705c39  [node]

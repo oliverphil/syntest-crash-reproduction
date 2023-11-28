@@ -1,0 +1,441 @@
+                                       
+ _____            _____            _   
+|   __| _ _  ___ |_   _| ___  ___ | |_ 
+|__   || | ||   |  | |  | -_||_ -||  _|
+|_____||_  ||_|_|  |_|  |___||___||_|  
+       |___|                           
+
+FID-1701122182903-qFyA1EoCptHEJfDemJB3pt
+
+ Module loaded: 
+
+  - Module: @syntest/init (0.2.2-beta.6)
+    - Tools: 
+      - init: A tool for initializing SynTest projects.
+    - Plugins: []
+    - Presets: []
+  - Module: crash (0.0.1)
+    - Tools: 
+      - crash: A tool for javascript crash reproduction.
+    - Plugins: 
+      - javascript-tree: A JavaScript tree crossover plugin
+      - javascript-random: A JavaScript random sampler plugin
+      - stackTrace: A stack trace based objective manager
+      - SearchMetricListener: A listener that collects statistics about the search process.
+      - SearchPerformanceListener: A listener that outputs the performance of the search algorithm.
+      - SearchProgressBarListener: A listener that creates and updates a progress bar for the search process.
+      - simple: A simple objective manager
+      - structural: A structural objective manager
+      - structural-uncovered: A structural uncovered objective manager
+      - tracking: A tracking objective manager
+      - uncovered: An uncovered objective manager
+      - least-errors: Secondary objective based on wether the encoding introduces an error
+      - smallest-encoding: Secondary objective based on the length of the test case
+      - default: A default procreation operator
+      - MOSAFamily: Many-Objective Sorting Algorithm
+      - NSGAII: NSGAII search algorithm
+      - random: Random search algorithm
+      - signal: Terminates the search when a signal is received
+    - Presets: 
+      - DynaMOSA: DynaMOSA preset
+      - MOSA: MOSA preset
+      - NSGAII: NSGAII preset
+      - random: Random preset
+
+Loading Crashes... 
+express-2701
+
+added 95 packages, and audited 96 packages in 6s
+
+23 vulnerabilities (1 moderate, 17 high, 5 critical)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+express-2761
+
+added 50 packages, and audited 51 packages in 2s
+
+12 vulnerabilities (1 moderate, 11 high)
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+express-3388
+
+added 51 packages, and audited 52 packages in 552ms
+
+3 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+express-4060
+
+added 50 packages, and audited 51 packages in 533ms
+
+3 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+express-4093
+
+added 50 packages, and audited 51 packages in 528ms
+
+3 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js: route.js #3
+    - class /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:30:0:::39:1:::496:755
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:30:0:::39:1:::496:755
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:50:0:::50:21:::898:919
+  - /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js: index.js #19
+    - class /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:24:0:::35:1:::404:708
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:46:0:::46:22:::883:905
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:83:0:::83:26:::1624:1650
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:90:3:::173:3:::1823:3767
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:99:4:::101:5:::1978:2048
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:120:4:::143:5:::2471:3024
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:148:4:::152:5:::3078:3254
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:155:4:::172:5:::3290:3763
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:184:0:::184:25:::3902:3927
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:199:0:::199:28:::4237:4265
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:238:0:::238:29:::4998:5027
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:279:0:::279:22:::5846:5868
+    - object /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:280:6:::280:40:::5909:5943
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:294:0:::294:22:::6190:6212
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:302:20:::307:3:::6510:6712
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:24:0:::35:1:::404:708
+    - method /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:321:0:::321:20:::6985:7005
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:324:18:::326:3:::7101:7175
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:330:16:::336:1:::7213:7391
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                                                                                                                                                                                                                             SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                             ║
+╟───────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/github/express/express-2701/**/express/fail.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/layer.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/route.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/route.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/layer.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/index.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/index.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/index.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/index.js, ./benchmark/crashes/github/express/express-2701/**/express/lib/router/index.js ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ║
+╚═══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.7417665614734619                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+ImplementationError: [Implementation]: Return statement is not inside a function
+    at call (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
+    at NodePath._call (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
+    at NodePath.call (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at traverse (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
+    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
+    at RootContext.getRelations (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
+    at RootContext.getAllRelations (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253609.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+  cause: undefined,
+  context: undefined
+}
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js: node.js #7
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:44:0:::54:1:::850:1162
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:71:0:::71:20:::1491:1511
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:82:0:::99:1:::1671:2102
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:105:0:::107:1:::2172:2256
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:116:0:::124:1:::2338:2614
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:133:0:::135:1:::2731:2778
+    - function /local/tmp/oliverphil/4253609.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:144:0:::203:1:::2982:4661
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                                                    SELECTION SETTINGS                                                                                                                                                                                                                                    ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                                                                            ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                                                                                ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/github/express/express-2761/**/_stream_readable.js, ./benchmark/crashes/github/express/express-2761/**/events.js, ./benchmark/crashes/github/express/express-2761/**/events.js, ./benchmark/crashes/github/express/express-2761/**/events.js, ./benchmark/crashes/github/express/express-2761/**/_stream_readable.js, ./benchmark/crashes/github/express/express-2761/**/node.js, ./benchmark/crashes/github/express/express-2761/**/node.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.7417665614734619                ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 18    ║
+╟──────────┼───────╢
+║ path     │ 19    ║
+╟──────────┼───────╢
+║ function │ 9     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
+
+ GENERAL INFO 
+
+No targets were selected! Try changing the 'target-include' parameter

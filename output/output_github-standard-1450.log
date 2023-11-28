@@ -1,0 +1,255 @@
+                                       
+ _____            _____            _   
+|   __| _ _  ___ |_   _| ___  ___ | |_ 
+|__   || | ||   |  | |  | -_||_ -||  _|
+|_____||_  ||_|_|  |_|  |___||___||_|  
+       |___|                           
+
+FID-1701122191277-9y8MeGqW8u1thPfYJq4Woq
+
+ Module loaded: 
+
+  - Module: @syntest/init (0.2.2-beta.6)
+    - Tools: 
+      - init: A tool for initializing SynTest projects.
+    - Plugins: []
+    - Presets: []
+  - Module: crash (0.0.1)
+    - Tools: 
+      - crash: A tool for javascript crash reproduction.
+    - Plugins: 
+      - javascript-tree: A JavaScript tree crossover plugin
+      - javascript-random: A JavaScript random sampler plugin
+      - stackTrace: A stack trace based objective manager
+      - SearchMetricListener: A listener that collects statistics about the search process.
+      - SearchPerformanceListener: A listener that outputs the performance of the search algorithm.
+      - SearchProgressBarListener: A listener that creates and updates a progress bar for the search process.
+      - simple: A simple objective manager
+      - structural: A structural objective manager
+      - structural-uncovered: A structural uncovered objective manager
+      - tracking: A tracking objective manager
+      - uncovered: An uncovered objective manager
+      - least-errors: Secondary objective based on wether the encoding introduces an error
+      - smallest-encoding: Secondary objective based on the length of the test case
+      - default: A default procreation operator
+      - MOSAFamily: Many-Objective Sorting Algorithm
+      - NSGAII: NSGAII search algorithm
+      - random: Random search algorithm
+      - signal: Terminates the search when a signal is received
+    - Presets: 
+      - DynaMOSA: DynaMOSA preset
+      - MOSA: MOSA preset
+      - NSGAII: NSGAII preset
+      - random: Random preset
+
+Loading Crashes... 
+standard-1450
+
+added 658 packages, and audited 659 packages in 24s
+
+75 packages are looking for funding
+  run `npm fund` for details
+
+14 vulnerabilities (3 moderate, 6 high, 5 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+standard-1494
+
+added 272 packages, and audited 273 packages in 2s
+
+71 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js: index.js #28
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:37:0:::61:1:::1286:2235
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:79:0:::97:1:::3160:3890
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:115:0:::136:1:::4871:5738
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:167:0:::175:1:::7244:7839
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:183:0:::193:1:::8069:8358
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:210:0:::633:1:::9144:24928
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:217:4:::221:5:::9352:9515
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:234:4:::249:5:::10090:10539
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:260:4:::270:5:::11155:11439
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:278:4:::288:5:::11719:12003
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:296:4:::306:5:::12319:12594
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:314:4:::324:5:::12909:13182
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:333:4:::343:5:::13598:13897
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:352:4:::362:5:::14308:14607
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:373:4:::375:5:::15075:15193
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:386:4:::388:5:::15660:15776
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:403:4:::413:5:::16577:16864
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:421:4:::431:5:::17125:17422
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:439:4:::449:5:::17719:18007
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:457:4:::467:5:::18303:18579
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:476:4:::486:5:::18999:19301
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:495:4:::505:5:::19716:20028
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:523:4:::533:5:::20968:21267
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:552:4:::562:5:::22342:22633
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:575:4:::582:5:::23080:23323
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:589:4:::601:5:::23585:23951
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:608:4:::620:5:::24212:24566
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/source-code/token-store/index.js:627:4:::632:5:::24775:24926
+  - /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js: template-curly-spacing.js #10
+    - object /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:25:17:::124:1:::797:4151
+    - object /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:26:4:::47:5:::803:1497
+    - object /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:29:8:::34:9:::844:1107
+    - object /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:41:8:::46:9:::1221:1491
+    - object-function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:25:17:::124:1:::797:4151
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:59:8:::81:9:::1882:2747
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:67:31:::79:17:::2250:2721
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:88:8:::113:9:::2941:3916
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:96:31:::111:17:::3306:3890
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/rules/template-curly-spacing.js:115:15:::122:9:::3933:4142
+  - /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+  - /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6240
+  - /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #12
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:29:0:::31:1:::959:1019
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:40:0:::42:1:::1270:1368
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:50:0:::55:1:::1546:1686
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:64:0:::81:1:::1943:2391
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:94:0:::99:1:::2783:2929
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:109:0:::146:1:::3189:4187
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:161:0:::209:1:::4629:6117
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:219:0:::237:1:::6354:6918
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:250:0:::351:1:::7246:10368
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:360:0:::448:1:::10573:13288
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:457:0:::562:1:::13492:16430
+    - function /local/tmp/oliverphil/4253614.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:571:0:::600:1:::16625:17589
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                                                                                                                                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/source-code/token-store/index.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/rules/template-curly-spacing.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/rules/template-curly-spacing.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/linter/safe-emitter.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/linter/safe-emitter.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/linter/node-event-generator.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/linter/node-event-generator.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/linter/node-event-generator.js, ./benchmark/crashes/github/standard/standard-1450/**/eslint/lib/linter/code-path-analysis/code-path-analyzer.js ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ║
+╟───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ║
+╚═══════════════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.013962975759363248              ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types

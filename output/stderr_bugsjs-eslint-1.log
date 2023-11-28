@@ -1,0 +1,250 @@
+[33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
+[33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:1:0:::434:0:::0:13538
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:367:8:::367:32:::11414:11438
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/acorn-jsx/inject.js:367:8:::367:32:::11414:11438
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:82:18:::88:34:::1829:2163
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:115:2:::115:31:::2427:2456
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/ansi-escapes/index.js:119:2:::119:33:::2484:2515
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chalk/index.js:27:8:::29:4:::871:944
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chalk/index.js:39:5:::39:12:::1062:1069
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chalk/index.js:101:8:::103:4:::2846:2901
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chardet/index.js:84:6:::84:13:::1777:1784
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chardet/index.js:95:6:::95:12:::2008:2014
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chardet/index.js:97:16:::97:22:::2063:2069
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/chardet/index.js:98:19:::98:25:::2132:2138
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/conversions.js:109:5:::109:10:::2657:2662
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:1:0:::79:0:::0:1725
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:9:5:::9:14:::164:173
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:30:5:::30:14:::543:552
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:44:6:::44:32:::889:915
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/color-convert/index.js:44:6:::44:32:::889:915
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:1:0:::103:0:::0:3104
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:28:13:::28:38:::843:868
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:28:13:::28:38:::843:868
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:28:42:::28:69:::872:899
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/deep-is/index.js:28:42:::28:69:::872:899
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:1:0:::69:0:::0:2838
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:28:14:::28:37:::808:831
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:28:14:::28:37:::808:831
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:31:37:::31:65:::971:999
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/define-data-property/index.js:31:37:::31:65:::971:999
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-1/node_modules/espree/espree.js:1:0:::801:0:::0:25737
+Trace: ImplementationError: [Implementation]: Return statement is not inside a function
+    at call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
+    at NodePath._call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
+    at NodePath.call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at traverse (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
+    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
+    at RootContext.getRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
+    at RootContext.getAllRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253615.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+  cause: undefined,
+  context: undefined
+}
+    at CrashLauncher.run (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1144:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253615.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Trace: ImplementationError: [Implementation]: Return statement is not inside a function
+    at call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
+    at NodePath._call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
+    at NodePath.call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at traverse (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
+    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
+    at RootContext.getRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
+    at RootContext.getAllRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253615.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+  cause: undefined,
+  context: undefined
+}
+    at CrashLauncher.run (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1144:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253615.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Trace: ImplementationError: [Implementation]: Return statement is not inside a function
+    at call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/relation/RelationVisitor.ts:77:13)
+    at NodePath._call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:34:20)
+    at NodePath.call (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:19:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:92:31)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitMultiple (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:98:17)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:174:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at NodePath.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/path/context.ts:99:33)
+    at TraversalContext.visitQueue (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:144:16)
+    at TraversalContext.visitSingle (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:108:19)
+    at TraversalContext.visit (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/context.ts:176:19)
+    at traverseNode (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/traverse-node.ts:34:17)
+    at traverse (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/node_modules/@babel/traverse/src/index.ts:71:15)
+    at TypeExtractor.extractRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/discovery/TypeExtractor.ts:47:13)
+    at RootContext.getRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:285:51)
+    at RootContext.getAllRelations (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:308:29)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:439:22)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1131:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253615.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+  cause: undefined,
+  context: undefined
+}
+    at CrashLauncher.run (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1144:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1107:5)
+    at async /local/tmp/oliverphil/4253615.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:206:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4253615.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+
+<--- Last few GCs --->
+
+[499698:0x75c5070]   187991 ms: Scavenge 9728.1 (10022.3) -> 9727.7 (10030.3) MB, 19.3 / 0.0 ms  (average mu = 0.429, current mu = 0.355) allocation failure; 
+[499698:0x75c5070]   188018 ms: Scavenge 9735.2 (10030.5) -> 9734.4 (10030.5) MB, 18.9 / 0.0 ms  (average mu = 0.429, current mu = 0.355) allocation failure; 
+[499698:0x75c5070]   190595 ms: Scavenge 9736.3 (10030.5) -> 9735.4 (10048.0) MB, 2573.5 / 0.0 ms  (average mu = 0.429, current mu = 0.355) allocation failure; 
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb85bc0 node::Abort() [node]
+ 2: 0xa94834  [node]
+ 3: 0xd66d10 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]
+ 4: 0xd670b7 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]
+ 5: 0xf447c5  [node]
+ 6: 0xf56cad v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
+ 7: 0xf313ae v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 8: 0xf32777 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 9: 0xf1394a v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]
+10: 0x12d8caf v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]
+11: 0x1705b39  [node]

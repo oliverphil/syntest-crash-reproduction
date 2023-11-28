@@ -1,0 +1,266 @@
+                                       
+ _____            _____            _   
+|   __| _ _  ___ |_   _| ___  ___ | |_ 
+|__   || | ||   |  | |  | -_||_ -||  _|
+|_____||_  ||_|_|  |_|  |___||___||_|  
+       |___|                           
+
+FID-1701122189134-qwh4AVNECB63BhzXnhUrxS
+
+ Module loaded: 
+
+  - Module: @syntest/init (0.2.2-beta.6)
+    - Tools: 
+      - init: A tool for initializing SynTest projects.
+    - Plugins: []
+    - Presets: []
+  - Module: crash (0.0.1)
+    - Tools: 
+      - crash: A tool for javascript crash reproduction.
+    - Plugins: 
+      - javascript-tree: A JavaScript tree crossover plugin
+      - javascript-random: A JavaScript random sampler plugin
+      - stackTrace: A stack trace based objective manager
+      - SearchMetricListener: A listener that collects statistics about the search process.
+      - SearchPerformanceListener: A listener that outputs the performance of the search algorithm.
+      - SearchProgressBarListener: A listener that creates and updates a progress bar for the search process.
+      - simple: A simple objective manager
+      - structural: A structural objective manager
+      - structural-uncovered: A structural uncovered objective manager
+      - tracking: A tracking objective manager
+      - uncovered: An uncovered objective manager
+      - least-errors: Secondary objective based on wether the encoding introduces an error
+      - smallest-encoding: Secondary objective based on the length of the test case
+      - default: A default procreation operator
+      - MOSAFamily: Many-Objective Sorting Algorithm
+      - NSGAII: NSGAII search algorithm
+      - random: Random search algorithm
+      - signal: Terminates the search when a signal is received
+    - Presets: 
+      - DynaMOSA: DynaMOSA preset
+      - MOSA: MOSA preset
+      - NSGAII: NSGAII preset
+      - random: Random preset
+
+Loading Crashes... 
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-37430/node-v14.15.4.tar.gz https://nodejs.org/download/release/v14.15.4/node-v14.15.4.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249003,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-37612/node-v15.11.0.tar.gz https://nodejs.org/download/release/v15.11.0/node-v15.11.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249005,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-37705/node-v15.7.0.tar.gz https://nodejs.org/download/release/v15.7.0/node-v15.7.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249007,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-37731/node-v15.11.0.tar.gz https://nodejs.org/download/release/v15.11.0/node-v15.11.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249009,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-37972/node-v14.6.0.tar.gz https://nodejs.org/download/release/v14.6.0/node-v14.6.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249011,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-38053/node-v15.5.1.tar.gz https://nodejs.org/download/release/v15.5.1/node-v15.5.1.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249013,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-38058/node-v16.0.0-v8-canary202104037284782541.tar.gz https://nodejs.org/download/release/v16.0.0-v8-canary202104037284782541/node-v16.0.0-v8-canary202104037284782541.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249015,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-38580/node-v16.1.0.tar.gz https://nodejs.org/download/release/v16.1.0/node-v16.1.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249017,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-38649/node-v12.20.0.tar.gz https://nodejs.org/download/release/v12.20.0/node-v12.20.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249019,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-38721/node-v16.1.0.tar.gz https://nodejs.org/download/release/v16.1.0/node-v16.1.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249021,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+Error: Command failed: wget -O ./benchmark/crashes/github/github/node/node-38808/node-v16.2.0.tar.gz https://nodejs.org/download/release/v16.2.0/node-v16.2.0.tar.gz > /dev/null 2>&1
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at Array.map (<anonymous>)
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4253612.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4253612.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4253612.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+  status: 1,
+  signal: null,
+  output: [ null, <Buffer >, <Buffer > ],
+  pid: 249023,
+  stdout: <Buffer >,
+  stderr: <Buffer >
+}
+node-37430
+
+up to date, audited 1 package in 121ms
+
+found 0 vulnerabilities
+
+node-37612
+
+added 1 package, and audited 2 packages in 1s
+
+found 0 vulnerabilities
+
+node-37705
+
+up to date, audited 1 package in 120ms
+
+found 0 vulnerabilities
+
+node-37731
+
+up to date, audited 1 package in 119ms
+
+found 0 vulnerabilities
+
+node-37972
+
+added 1 package, and audited 2 packages in 511ms
+
+found 0 vulnerabilities
+
+
+ GENERAL INFO 
+
+No targets were selected! Try changing the 'target-include' parameter
