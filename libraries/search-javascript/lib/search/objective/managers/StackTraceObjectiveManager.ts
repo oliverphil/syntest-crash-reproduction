@@ -78,8 +78,4 @@ export class StackTraceObjectiveManager<
             this._currentObjectives.add(objective);
         }
     }
-
-    public getStackObjectives() {
-
-    }
 }

@@ -1,6 +1,6 @@
-import {ObjectiveFunction} from "@syntest/search/dist/lib/objective/ObjectiveFunction";
+import {ObjectiveFunction} from "@syntest/search";
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
-import {SearchSubject} from "@syntest/search/dist/lib/SearchSubject";
+import {SearchSubject} from "@syntest/search";
 import {StackFrame, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
 

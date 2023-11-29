@@ -76,7 +76,7 @@ import {
   extractPathObjectivesFromProgram,
   SearchTimeBudget,
   TerminationManager,
-  TotalTimeBudget,
+  TotalTimeBudget, SearchSubject,
 } from "@syntest/search";
 import { getLogger, Logger } from "@syntest/logging";
 import { MetricManager } from "@syntest/metric";
@@ -92,10 +92,6 @@ import {DeDuplicator} from "./workflows/DeDuplicator";
 import {addMetaComments} from "./workflows/MetaComment";
 import TypedEventEmitter from "typed-emitter";
 import {FileSelector} from "./FileSelector";
-import StackErrorObjectiveFunction
-  from "@syntest/search-javascript/dist/lib/search/objective/StackErrorObjectiveFunction";
-import StackFrameObjectiveFunction
-  from "@syntest/search-javascript/dist/lib/search/objective/StackFrameObjectiveFunction";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
 export class CrashLauncher extends Launcher<JavaScriptArguments> {
@@ -114,7 +110,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
   private exports: Export[];
   private dependencyMap: Map<string, string[]>;
 
-  private currentSubject: CrashSubject;
+  private currentSubject: SearchSubject<JavaScriptTestCase>;
 
   private coveredInPath = new Map<string, Archive<JavaScriptTestCase>>();
 
@@ -743,7 +739,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         `${summary["statement"]} / ${Object.keys(data.s).length}`,
         `${summary["branch"]} / ${Object.keys(data.b).length * 2}`,
         `${summary["function"]} / ${Object.keys(data.f).length}`,
-        `${summary["objective"]} / ${this.currentSubject.numStackObjectives}`,
+        // @ts-ignore
+        `${summary["objective"]} / ${this.currentSubject?.numStackObjectives || 0}`,
         target.path,
       ]);
     }
@@ -886,6 +883,10 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       ],
     });
 
+    // const currentSubject = new JavaScriptSubject(
+    //     target,
+    //     [...pathObjectives]
+    // );
     const currentSubject = new CrashSubject(
       target,
       this.rootContext,

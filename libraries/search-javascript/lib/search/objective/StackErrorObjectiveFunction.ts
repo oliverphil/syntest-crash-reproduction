@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {ObjectiveFunction} from "@syntest/search/dist/lib/objective/ObjectiveFunction";
+import {ObjectiveFunction} from "@syntest/search";
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
-import {SearchSubject} from "@syntest/search/dist/lib/SearchSubject";
+import {SearchSubject} from "@syntest/search";
 import {StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import Fuse from "fuse.js";
 
@@ -61,7 +61,8 @@ class StackErrorObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
     }
 
     override getIdentifier(): string {
-        return `Stack Objective: ${this.stackTrace.error.errorMessage}`;
+        return super._id;
+        // return `Stack Objective: ${this.stackTrace.error.errorMessage}`;
     }
 
 }
