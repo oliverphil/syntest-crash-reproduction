@@ -9,10 +9,10 @@ npm WARN EBADENGINE }
 
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -23,26 +23,43 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4435/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 9% | ETA: 2475s | 9/100 | 0% | route.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4464/node_modules/express/lib/express.js:38:6:::38:9:::733:736
-[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4464/node_modules/express/lib/express.js:111:9:::113:5:::2164:2374
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4464/node_modules/express/lib/express.js:38:6:::38:9:::733:736
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4464/node_modules/express/lib/express.js:111:9:::113:5:::2164:2374
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | express.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/route.js:202:28:::224:3:::3715:4275
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:519:18:::523:3:::12120:12247
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -56,20 +73,265 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for extendStatics at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/http-exception-transformer/exceptions/HttpException.js:3:24:::8:5:::97:408
-[33mwarn[39m:    Cannot find binding for extendStatics at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/http-exception-transformer/exceptions/NotFoundException.gen.js:3:24:::8:5:::97:408
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254364.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
+[33mwarn[39m:    Cannot find binding for extendStatics at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/http-exception-transformer/exceptions/HttpException.js:3:24:::8:5:::97:408
+[33mwarn[39m:    Cannot find binding for extendStatics at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/http-exception-transformer/exceptions/NotFoundException.gen.js:3:24:::8:5:::97:408
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Cannot find binding for _interopRequireDefault at /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:1:0:::674:0:::0:15124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:564:6:::564:23:::13125:13142
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4254430.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-4548/node_modules/express/lib/router/index.js:593:6:::593:32:::13586:13612
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | layer.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 9% | ETA: 2628s | 9/100 | 0% | route.js
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero

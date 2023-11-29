@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701216036632-qfyz6WEvPujuvFfW9mDda7
+FID-1701228394872-56Sfag7ymosBVXLUvF4TEW
 
  Module loaded: 
 
@@ -45,91 +45,91 @@ FID-1701216036632-qfyz6WEvPujuvFfW9mDda7
 Loading Crashes... 
 javascript-algorithms-32
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-33
 
-up to date, audited 1 package in 88ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-34
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-35
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 130ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-36
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-37
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 132ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-38
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 132ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-39
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 134ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-4
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 133ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-40
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 134ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-41
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-42
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-43
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 131ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-44
 
-up to date, audited 1 package in 87ms
+up to date, audited 1 package in 133ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-45
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 132ms
 
 found 0 vulnerabilities
 
@@ -139,12 +139,12 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-32/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                  ║
@@ -187,7 +187,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -284,13 +284,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-33/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -333,7 +333,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -443,13 +443,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-34/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -492,7 +492,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -602,13 +602,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-35/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -651,7 +651,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -761,13 +761,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-36/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -810,7 +810,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -920,13 +920,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-37/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -969,7 +969,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1079,13 +1079,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-38/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -1128,7 +1128,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1238,13 +1238,13 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-39/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:1:0:::61:0:::0:2012
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ║
@@ -1287,7 +1287,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1388,7 +1388,7 @@ Resolving Types
  Postprocessing started 
 
 Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0.001, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
 archive size 0
 archive size 0
 
@@ -1397,12 +1397,12 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-4/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                 SELECTION SETTINGS                                                                                                                                                                                 ║
@@ -1445,7 +1445,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1529,12 +1529,12 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-40/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                     ║
@@ -1577,7 +1577,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1674,12 +1674,12 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-41/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                     ║
@@ -1722,7 +1722,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1819,12 +1819,12 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-42/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                     ║
@@ -1867,7 +1867,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1964,9 +1964,9 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-43/javascript-algorithms/src/algorithms/math/matrix/Matrix.js: Matrix.js #2
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-43/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:30:6:::38:1:::564:712
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-43/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:46:6:::52:1:::812:964
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-43/javascript-algorithms/src/algorithms/math/matrix/Matrix.js: Matrix.js #2
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-43/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:30:6:::38:1:::564:712
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-43/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:46:6:::52:1:::812:964
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                 SELECTION SETTINGS                                                                                                                                                                                                                                 ║
@@ -2009,7 +2009,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -2106,9 +2106,9 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-44/javascript-algorithms/src/algorithms/math/matrix/Matrix.js: Matrix.js #2
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-44/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:30:6:::38:1:::564:712
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-44/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:46:6:::52:1:::812:964
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-44/javascript-algorithms/src/algorithms/math/matrix/Matrix.js: Matrix.js #2
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-44/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:30:6:::38:1:::564:712
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-44/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:46:6:::52:1:::812:964
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                 SELECTION SETTINGS                                                                                                                                                                                                                                 ║
@@ -2151,7 +2151,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -2248,9 +2248,9 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-45/javascript-algorithms/src/algorithms/math/matrix/Matrix.js: Matrix.js #2
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-45/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:30:6:::38:1:::564:712
-    - function /local/tmp/oliverphil/4254387.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-45/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:46:6:::52:1:::812:964
+  - /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-45/javascript-algorithms/src/algorithms/math/matrix/Matrix.js: Matrix.js #2
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-45/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:30:6:::38:1:::564:712
+    - function /local/tmp/oliverphil/4254453.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-45/javascript-algorithms/src/algorithms/math/matrix/Matrix.js:46:6:::52:1:::812:964
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                 SELECTION SETTINGS                                                                                                                                                                                                                                 ║
@@ -2293,7 +2293,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.1498172133663207                ║
+║ Seed                      │ 0.45118221425099936               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗

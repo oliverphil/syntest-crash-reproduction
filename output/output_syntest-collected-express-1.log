@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701216049080-dfAPDJpSZryatg1dCuVP3V
+FID-1701228387474-c3kVtaLS2cwvnpyRuBpQCP
 
  Module loaded: 
 
@@ -45,33 +45,93 @@ FID-1701216049080-dfAPDJpSZryatg1dCuVP3V
 Loading Crashes... 
 express-1
 
-up to date, audited 1 package in 139ms
+up to date, audited 1 package in 103ms
 
 found 0 vulnerabilities
+
+added 309 packages, and audited 310 packages in 5s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 moderate, 7 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 express-10
 
-up to date, audited 1 package in 136ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
+
+added 309 packages, and audited 310 packages in 1s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 moderate, 7 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 express-11
 
-up to date, audited 1 package in 135ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
+
+added 309 packages, and audited 310 packages in 1s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 moderate, 7 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 express-12
 
-up to date, audited 1 package in 135ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
+
+added 309 packages, and audited 310 packages in 1s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 moderate, 7 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 express-13
 
-up to date, audited 1 package in 135ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
+
+added 309 packages, and audited 310 packages in 1s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 moderate, 7 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 
  GENERAL INFO 
@@ -79,35 +139,35 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js: application.js #28
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:38:4:::38:12:::986:994
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:59:0:::59:8:::1326:1334
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:72:0:::72:24:::1515:1539
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:91:19:::104:3:::2049:2548
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:125:9:::127:5:::2985:3141
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:139:0:::139:14:::3372:3386
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:160:0:::160:10:::3927:3937
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:189:0:::189:7:::4511:4518
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:219:14:::241:3:::5114:5670
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:230:21:::237:5:::5386:5613
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:232:26:::236:7:::5477:5605
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:256:0:::256:9:::5912:5921
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:295:0:::295:10:::7248:7258
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:323:0:::323:9:::7799:7808
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:354:0:::354:7:::8341:8348
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:402:0:::402:8:::9362:9370
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:423:0:::423:11:::9697:9708
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:442:0:::442:12:::10003:10015
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:454:0:::454:10:::10181:10191
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:466:0:::466:11:::10361:10372
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:474:16:::487:1:::10521:10834
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:499:0:::499:7:::11056:11063
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:533:0:::533:10:::11754:11764
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:538:6:::538:24:::11917:11935
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:537:6:::537:20:::11895:11909
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:618:0:::618:10:::13759:13769
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:630:0:::632:1:::13965:14069
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:639:0:::645:1:::14117:14249
+  - /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js: application.js #28
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:38:4:::38:12:::986:994
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:59:0:::59:8:::1326:1334
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:72:0:::72:24:::1515:1539
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:91:19:::104:3:::2049:2548
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:125:9:::127:5:::2985:3141
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:139:0:::139:14:::3372:3386
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:160:0:::160:10:::3927:3937
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:189:0:::189:7:::4511:4518
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:219:14:::241:3:::5114:5670
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:230:21:::237:5:::5386:5613
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:232:26:::236:7:::5477:5605
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:256:0:::256:9:::5912:5921
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:295:0:::295:10:::7248:7258
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:323:0:::323:9:::7799:7808
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:354:0:::354:7:::8341:8348
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:402:0:::402:8:::9362:9370
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:423:0:::423:11:::9697:9708
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:442:0:::442:12:::10003:10015
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:454:0:::454:10:::10181:10191
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:466:0:::466:11:::10361:10372
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:474:16:::487:1:::10521:10834
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:499:0:::499:7:::11056:11063
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:533:0:::533:10:::11754:11764
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:538:6:::538:24:::11917:11935
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:537:6:::537:20:::11895:11909
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:618:0:::618:10:::13759:13769
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:630:0:::632:1:::13965:14069
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:639:0:::645:1:::14117:14249
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                     SELECTION SETTINGS                                                                                                                                      ║
@@ -150,7 +210,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.3749398961914455                ║
+║ Seed                      │ 0.1648106234408835                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -238,43 +298,91 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
+Splitting done took: 1.083, went from 17 to 35 test cases
+De-Duplication done took: 0.044, went from 35 to 15 test cases
+archive size 15
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           Coverage                                                                                                                           ║
+╟────────────────────────────────┬──────────────────────┬─────────────────────┬─────────────────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                         │ Statement            │ Branch              │ Function            │ Objectives │ File                                                                                                                                        ║
+╟────────────────────────────────┼──────────────────────┼─────────────────────┼─────────────────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ application.js: application.js │ 147 / 269            │ 22 / 58             │ 18 / 26             │ 0 / 0      │ /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js ║
+╟────────────────────────────────┼──────────────────────┼─────────────────────┼─────────────────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                        │ 54.646840148698885 % │ 37.93103448275862 % │ 69.23076923076923 % │ 100 %      │                                                                                                                                             ║
+╚════════════════════════════════╧══════════════════════╧═════════════════════╧═════════════════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js: application.js #28
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:38:4:::38:12:::986:994
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:59:0:::59:8:::1326:1334
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:72:0:::72:24:::1515:1539
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:91:19:::104:3:::2049:2548
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:125:9:::127:5:::2985:3141
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:139:0:::139:14:::3372:3386
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:160:0:::160:10:::3927:3937
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:189:0:::189:7:::4511:4518
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:219:14:::241:3:::5114:5670
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:230:21:::237:5:::5386:5613
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:232:26:::236:7:::5477:5605
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:256:0:::256:9:::5912:5921
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:295:0:::295:10:::7248:7258
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:323:0:::323:9:::7799:7808
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:354:0:::354:7:::8341:8348
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:402:0:::402:8:::9362:9370
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:423:0:::423:11:::9697:9708
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:442:0:::442:12:::10003:10015
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:454:0:::454:10:::10181:10191
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:466:0:::466:11:::10361:10372
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:474:16:::487:1:::10521:10834
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:499:0:::499:7:::11056:11063
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:533:0:::533:10:::11754:11764
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:538:6:::538:24:::11917:11935
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:537:6:::537:20:::11895:11909
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:618:0:::618:10:::13759:13769
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:630:0:::632:1:::13965:14069
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:639:0:::645:1:::14117:14249
+  - /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js: application.js #28
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:38:4:::38:12:::986:994
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:59:0:::59:8:::1326:1334
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:72:0:::72:24:::1515:1539
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:91:19:::104:3:::2049:2548
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:125:9:::127:5:::2985:3141
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:139:0:::139:14:::3372:3386
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:160:0:::160:10:::3927:3937
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:189:0:::189:7:::4511:4518
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:219:14:::241:3:::5114:5670
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:230:21:::237:5:::5386:5613
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:232:26:::236:7:::5477:5605
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:256:0:::256:9:::5912:5921
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:295:0:::295:10:::7248:7258
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:323:0:::323:9:::7799:7808
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:354:0:::354:7:::8341:8348
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:402:0:::402:8:::9362:9370
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:423:0:::423:11:::9697:9708
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:442:0:::442:12:::10003:10015
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:454:0:::454:10:::10181:10191
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:466:0:::466:11:::10361:10372
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:474:16:::487:1:::10521:10834
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:499:0:::499:7:::11056:11063
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:533:0:::533:10:::11754:11764
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:538:6:::538:24:::11917:11935
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:537:6:::537:20:::11895:11909
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:618:0:::618:10:::13759:13769
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:630:0:::632:1:::13965:14069
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:639:0:::645:1:::14117:14249
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                           SELECTION SETTINGS                                                                                           ║
@@ -317,7 +425,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.3749398961914455                ║
+║ Seed                      │ 0.1648106234408835                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -405,43 +513,89 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
+Splitting done took: 0.627, went from 15 to 17 test cases
+De-Duplication done took: 0.016, went from 17 to 14 test cases
+archive size 14
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           Coverage                                                                                                                           ║
+╟────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                         │ Statement           │ Branch              │ Function            │ Objectives │ File                                                                                                                                         ║
+╟────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ application.js: application.js │ 141 / 269           │ 20 / 58             │ 17 / 26             │ 0 / 0      │ /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js ║
+╟────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                        │ 52.41635687732342 % │ 34.48275862068966 % │ 65.38461538461539 % │ 100 %      │                                                                                                                                              ║
+╚════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js: application.js #28
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:38:4:::38:12:::986:994
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:59:0:::59:8:::1326:1334
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:72:0:::72:24:::1515:1539
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:91:19:::104:3:::2049:2548
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:125:9:::127:5:::2985:3141
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:139:0:::139:14:::3372:3386
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:160:0:::160:10:::3927:3937
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:189:0:::189:7:::4511:4518
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:219:14:::241:3:::5114:5670
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:230:21:::237:5:::5386:5613
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:232:26:::236:7:::5477:5605
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:256:0:::256:9:::5912:5921
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:295:0:::295:10:::7248:7258
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:323:0:::323:9:::7799:7808
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:354:0:::354:7:::8341:8348
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:402:0:::402:8:::9362:9370
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:423:0:::423:11:::9697:9708
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:442:0:::442:12:::10003:10015
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:454:0:::454:10:::10181:10191
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:466:0:::466:11:::10361:10372
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:474:16:::487:1:::10521:10834
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:499:0:::499:7:::11056:11063
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:533:0:::533:10:::11754:11764
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:538:6:::538:24:::11917:11935
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:537:6:::537:20:::11895:11909
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:618:0:::618:10:::13759:13769
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:630:0:::632:1:::13965:14069
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:639:0:::645:1:::14117:14249
+  - /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js: application.js #28
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:38:4:::38:12:::986:994
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:59:0:::59:8:::1326:1334
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:72:0:::72:24:::1515:1539
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:91:19:::104:3:::2049:2548
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:125:9:::127:5:::2985:3141
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:139:0:::139:14:::3372:3386
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:160:0:::160:10:::3927:3937
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:189:0:::189:7:::4511:4518
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:219:14:::241:3:::5114:5670
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:230:21:::237:5:::5386:5613
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:232:26:::236:7:::5477:5605
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:256:0:::256:9:::5912:5921
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:295:0:::295:10:::7248:7258
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:323:0:::323:9:::7799:7808
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:354:0:::354:7:::8341:8348
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:402:0:::402:8:::9362:9370
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:423:0:::423:11:::9697:9708
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:442:0:::442:12:::10003:10015
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:454:0:::454:10:::10181:10191
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:466:0:::466:11:::10361:10372
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:474:16:::487:1:::10521:10834
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:499:0:::499:7:::11056:11063
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:533:0:::533:10:::11754:11764
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:538:6:::538:24:::11917:11935
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:537:6:::537:20:::11895:11909
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:618:0:::618:10:::13759:13769
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:630:0:::632:1:::13965:14069
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:639:0:::645:1:::14117:14249
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                           SELECTION SETTINGS                                                                                           ║
@@ -484,7 +638,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.3749398961914455                ║
+║ Seed                      │ 0.1648106234408835                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -572,43 +726,91 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
+Splitting done took: 1.471, went from 16 to 18 test cases
+De-Duplication done took: 0.017, went from 18 to 15 test cases
+archive size 15
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           Coverage                                                                                                                            ║
+╟────────────────────────────────┬─────────────────────┬──────────────────────┬─────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                         │ Statement           │ Branch               │ Function            │ Objectives │ File                                                                                                                                         ║
+╟────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ application.js: application.js │ 144 / 269           │ 21 / 58              │ 16 / 26             │ 0 / 0      │ /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js ║
+╟────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                        │ 53.53159851301115 % │ 36.206896551724135 % │ 61.53846153846154 % │ 100 %      │                                                                                                                                              ║
+╚════════════════════════════════╧═════════════════════╧══════════════════════╧═════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js: application.js #28
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:38:4:::38:12:::986:994
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:59:0:::59:8:::1326:1334
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:72:0:::72:24:::1515:1539
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:91:19:::104:3:::2049:2548
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:125:9:::127:5:::2985:3141
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:139:0:::139:14:::3372:3386
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:160:0:::160:10:::3927:3937
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:189:0:::189:7:::4511:4518
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:219:14:::241:3:::5114:5670
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:230:21:::237:5:::5386:5613
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:232:26:::236:7:::5477:5605
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:256:0:::256:9:::5912:5921
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:295:0:::295:10:::7248:7258
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:323:0:::323:9:::7799:7808
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:354:0:::354:7:::8341:8348
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:402:0:::402:8:::9362:9370
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:423:0:::423:11:::9697:9708
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:442:0:::442:12:::10003:10015
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:454:0:::454:10:::10181:10191
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:466:0:::466:11:::10361:10372
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:474:16:::487:1:::10521:10834
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:499:0:::499:7:::11056:11063
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:533:0:::533:10:::11754:11764
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:538:6:::538:24:::11917:11935
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:537:6:::537:20:::11895:11909
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:618:0:::618:10:::13759:13769
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:630:0:::632:1:::13965:14069
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:639:0:::645:1:::14117:14249
+  - /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js: application.js #28
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:38:4:::38:12:::986:994
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:59:0:::59:8:::1326:1334
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:72:0:::72:24:::1515:1539
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:91:19:::104:3:::2049:2548
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:125:9:::127:5:::2985:3141
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:139:0:::139:14:::3372:3386
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:160:0:::160:10:::3927:3937
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:189:0:::189:7:::4511:4518
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:219:14:::241:3:::5114:5670
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:230:21:::237:5:::5386:5613
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:232:26:::236:7:::5477:5605
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:256:0:::256:9:::5912:5921
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:295:0:::295:10:::7248:7258
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:323:0:::323:9:::7799:7808
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:354:0:::354:7:::8341:8348
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:402:0:::402:8:::9362:9370
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:423:0:::423:11:::9697:9708
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:442:0:::442:12:::10003:10015
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:454:0:::454:10:::10181:10191
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:466:0:::466:11:::10361:10372
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:474:16:::487:1:::10521:10834
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:499:0:::499:7:::11056:11063
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:533:0:::533:10:::11754:11764
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:538:6:::538:24:::11917:11935
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:537:6:::537:20:::11895:11909
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:618:0:::618:10:::13759:13769
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:630:0:::632:1:::13965:14069
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:639:0:::645:1:::14117:14249
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                           SELECTION SETTINGS                                                                                           ║
@@ -651,7 +853,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.3749398961914455                ║
+║ Seed                      │ 0.1648106234408835                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -739,43 +941,87 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
+Splitting done took: 3.994, went from 15 to 66 test cases
+De-Duplication done took: 0.081, went from 66 to 13 test cases
+archive size 13
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           Coverage                                                                                                                           ║
+╟────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                         │ Statement           │ Branch              │ Function            │ Objectives │ File                                                                                                                                         ║
+╟────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ application.js: application.js │ 141 / 269           │ 20 / 58             │ 17 / 26             │ 0 / 0      │ /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js ║
+╟────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                        │ 52.41635687732342 % │ 34.48275862068966 % │ 65.38461538461539 % │ 100 %      │                                                                                                                                              ║
+╚════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js: application.js #28
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:38:4:::38:12:::986:994
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:59:0:::59:8:::1326:1334
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:72:0:::72:24:::1515:1539
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:91:19:::104:3:::2049:2548
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:125:9:::127:5:::2985:3141
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:139:0:::139:14:::3372:3386
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:160:0:::160:10:::3927:3937
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:189:0:::189:7:::4511:4518
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:219:14:::241:3:::5114:5670
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:230:21:::237:5:::5386:5613
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:232:26:::236:7:::5477:5605
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:256:0:::256:9:::5912:5921
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:295:0:::295:10:::7248:7258
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:323:0:::323:9:::7799:7808
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:354:0:::354:7:::8341:8348
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:402:0:::402:8:::9362:9370
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:423:0:::423:11:::9697:9708
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:442:0:::442:12:::10003:10015
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:454:0:::454:10:::10181:10191
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:466:0:::466:11:::10361:10372
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:474:16:::487:1:::10521:10834
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:499:0:::499:7:::11056:11063
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:533:0:::533:10:::11754:11764
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:538:6:::538:24:::11917:11935
-    - object /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:537:6:::537:20:::11895:11909
-    - object-function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:618:0:::618:10:::13759:13769
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:630:0:::632:1:::13965:14069
-    - function /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:639:0:::645:1:::14117:14249
+  - /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js: application.js #28
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:38:4:::38:12:::986:994
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:59:0:::59:8:::1326:1334
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:72:0:::72:24:::1515:1539
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:91:19:::104:3:::2049:2548
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:125:9:::127:5:::2985:3141
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:139:0:::139:14:::3372:3386
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:160:0:::160:10:::3927:3937
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:189:0:::189:7:::4511:4518
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:219:14:::241:3:::5114:5670
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:230:21:::237:5:::5386:5613
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:232:26:::236:7:::5477:5605
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:256:0:::256:9:::5912:5921
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:295:0:::295:10:::7248:7258
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:323:0:::323:9:::7799:7808
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:354:0:::354:7:::8341:8348
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:402:0:::402:8:::9362:9370
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:423:0:::423:11:::9697:9708
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:442:0:::442:12:::10003:10015
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:454:0:::454:10:::10181:10191
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:466:0:::466:11:::10361:10372
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:474:16:::487:1:::10521:10834
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:499:0:::499:7:::11056:11063
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:533:0:::533:10:::11754:11764
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:538:6:::538:24:::11917:11935
+    - object /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:537:6:::537:20:::11895:11909
+    - object-function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:618:0:::618:10:::13759:13769
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:630:0:::632:1:::13965:14069
+    - function /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:639:0:::645:1:::14117:14249
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                           SELECTION SETTINGS                                                                                           ║
@@ -818,7 +1064,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.3749398961914455                ║
+║ Seed                      │ 0.1648106234408835                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -906,5 +1152,53 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
+Splitting done took: 0.505, went from 16 to 16 test cases
+De-Duplication done took: 0.009, went from 16 to 15 test cases
+archive size 15
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                           Coverage                                                                                                                           ║
+╟────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                         │ Statement           │ Branch              │ Function            │ Objectives │ File                                                                                                                                         ║
+╟────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ application.js: application.js │ 144 / 269           │ 20 / 58             │ 17 / 26             │ 0 / 0      │ /local/tmp/oliverphil/4254444.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js ║
+╟────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                        │ 53.53159851301115 % │ 34.48275862068966 % │ 65.38461538461539 % │ 100 %      │                                                                                                                                              ║
+╚════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode

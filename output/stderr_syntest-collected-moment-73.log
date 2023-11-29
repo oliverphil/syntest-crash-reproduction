@@ -102,11 +102,11 @@ cp: cannot stat 'benchmark/resources/moment': No such file or directory
 
     at checkExecSyncError (node:child_process:890:11)
     at execSync (node:child_process:962:15)
-    at Function.createCrashEnvironment (/local/tmp/oliverphil/4254393.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:29:15)
-    at /local/tmp/oliverphil/4254393.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
-    at Object.Command.handler (/local/tmp/oliverphil/4254393.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
-    at /local/tmp/oliverphil/4254393.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
-    at /local/tmp/oliverphil/4254393.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
+    at Function.createCrashEnvironment (/local/tmp/oliverphil/4254459.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:29:15)
+    at /local/tmp/oliverphil/4254459.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
+    at Object.Command.handler (/local/tmp/oliverphil/4254459.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4254459.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4254459.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
     at processTicksAndRejections (node:internal/process/task_queues:95:5) {
   status: 1,
   signal: null,
@@ -115,7 +115,7 @@ cp: cannot stat 'benchmark/resources/moment': No such file or directory
     <Buffer >,
     <Buffer 63 70 3a 20 63 61 6e 6e 6f 74 20 73 74 61 74 20 27 62 65 6e 63 68 6d 61 72 6b 2f 72 65 73 6f 75 72 63 65 73 2f 6d 6f 6d 65 6e 74 27 3a 20 4e 6f 20 73 ... 22 more bytes>
   ],
-  pid: 328595,
+  pid: 1237293,
   stdout: <Buffer >,
   stderr: <Buffer 63 70 3a 20 63 61 6e 6e 6f 74 20 73 74 61 74 20 27 62 65 6e 63 68 6d 61 72 6b 2f 72 65 73 6f 75 72 63 65 73 2f 6d 6f 6d 65 6e 74 27 3a 20 4e 6f 20 73 ... 22 more bytes>
 }
