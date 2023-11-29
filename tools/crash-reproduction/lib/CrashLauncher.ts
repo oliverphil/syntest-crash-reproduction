@@ -883,17 +883,14 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       ],
     });
 
-    // const currentSubject = new JavaScriptSubject(
-    //     target,
-    //     [...pathObjectives]
-    // );
-    const currentSubject = new CrashSubject(
-      target,
-      this.rootContext,
-      this.arguments_.syntaxForgiving,
-      this.arguments_.stringAlphabet,
-      this.crash.stackTrace,
-      [...pathObjectives]);
+    const currentSubject = new JavaScriptSubject(
+        target,
+        [...pathObjectives]
+    );
+    // const currentSubject = new CrashSubject(
+    //   target,
+    //   this.crash.stackTrace,
+    //   [...pathObjectives]);
 
     this.currentSubject = currentSubject;
 

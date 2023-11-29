@@ -49,7 +49,7 @@ class StackErrorObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> 
             // console.log(actualExceptionString)
             if (actualExceptionString.includes(this.stackTrace.error.errorMessage)) {
                 // distance -= 0.8;
-                distance = 0;
+                distance = 1;
                 // console.log("Exception hit")
             }
             // if (actualException.error.errorType === this.stackTrace.error.errorType) {

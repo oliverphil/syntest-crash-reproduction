@@ -37,7 +37,7 @@
     "multi-point-crossover-probability": 0.5,
     "constant-pool-probability": 0.5,
     "sample-function-output-as-argument": 0.5,
-    "string-alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/%\"'.<> :-,@()_!$#%\n",
+    "string-alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/%\"'.<> :-,@()_!$#%\n*",
     "string-max-length": 100,
     "numeric-max-value": 9007199254740991,
     "configuration": "",
@@ -62,8 +62,8 @@
     "output-metrics": [],
     "syntest-project": "express",
     "syntest-crashes": "false",
-    "syntest-type": "bugsjs",
+    "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "express-1"
+        "express-41"
     ]
 }
