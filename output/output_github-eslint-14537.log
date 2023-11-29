@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701212250117-9d5DAXxnJjM6KpQZWkKjMP
+FID-1701216037054-pLnyLsDLTL29Nkmck2TYCd
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701212250117-9d5DAXxnJjM6KpQZWkKjMP
 Loading Crashes... 
 eslint-14537
 
-added 217 packages, and audited 218 packages in 2s
+added 217 packages, and audited 218 packages in 1s
 
 68 packages are looking for funding
   run `npm fund` for details
@@ -54,7 +54,7 @@ found 0 vulnerabilities
 
 eslint-14538
 
-added 113 packages, and audited 114 packages in 916ms
+added 113 packages, and audited 114 packages in 637ms
 
 14 packages are looking for funding
   run `npm fund` for details
@@ -63,7 +63,7 @@ found 0 vulnerabilities
 
 eslint-14554
 
-added 113 packages, and audited 114 packages in 937ms
+added 113 packages, and audited 114 packages in 639ms
 
 14 packages are looking for funding
   run `npm fund` for details
@@ -72,7 +72,7 @@ found 0 vulnerabilities
 
 eslint-14829
 
-added 113 packages, and audited 114 packages in 947ms
+added 113 packages, and audited 114 packages in 651ms
 
 14 packages are looking for funding
   run `npm fund` for details
@@ -81,7 +81,7 @@ found 0 vulnerabilities
 
 eslint-14861
 
-added 282 packages, and audited 283 packages in 6s
+added 282 packages, and audited 283 packages in 4s
 
 95 packages are looking for funding
   run `npm fund` for details
@@ -94,116 +94,116 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js: extensions.js #22
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:5:86:::5:179:::325:418
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:7:6:::7:66:::426:486
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:8:6:::10:43:::494:577
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:10:2:::10:41:::536:575
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:12:6:::16:45:::586:714
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:14:2:::16:43:::621:712
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:16:4:::16:41:::673:710
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:20:0:::59:1:::719:1706
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:22:8:::25:27:::764:847
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:24:4:::24:15:::807:818
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:28:26:::51:3:::877:1557
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:61:17:::188:5:::1725:5536
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:62:2:::99:37:::1729:2406
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:64:4:::65:49:::1765:1822
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:68:4:::99:35:::1830:2404
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:105:2:::188:3:::2415:5534
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:109:4:::111:5:::2494:2595
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:113:4:::115:5:::2601:2755
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:117:4:::119:5:::2761:2863
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:121:4:::127:5:::2869:3227
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:129:4:::135:5:::3233:3558
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:137:4:::182:5:::3564:5418
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #13
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:28:0:::30:1:::954:1014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:38:0:::40:1:::1268:1387
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:49:0:::51:1:::1752:1877
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:58:0:::63:1:::2050:2190
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:71:0:::91:1:::2442:2993
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:103:0:::108:1:::3380:3526
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:117:0:::154:1:::3781:4779
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:168:0:::216:1:::5214:6702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:225:0:::243:1:::6932:7496
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:255:0:::378:1:::7817:11659
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:386:0:::497:1:::11857:15278
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:505:0:::621:1:::15475:18709
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:629:0:::665:1:::18897:20146
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js: linter.js #58
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js: extensions.js #22
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:5:86:::5:179:::325:418
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:7:6:::7:66:::426:486
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:8:6:::10:43:::494:577
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:10:2:::10:41:::536:575
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:12:6:::16:45:::586:714
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:14:2:::16:43:::621:712
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:16:4:::16:41:::673:710
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:20:0:::59:1:::719:1706
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:22:8:::25:27:::764:847
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:24:4:::24:15:::807:818
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:28:26:::51:3:::877:1557
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:61:17:::188:5:::1725:5536
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:62:2:::99:37:::1729:2406
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:64:4:::65:49:::1765:1822
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:68:4:::99:35:::1830:2404
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:105:2:::188:3:::2415:5534
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:109:4:::111:5:::2494:2595
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:113:4:::115:5:::2601:2755
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:117:4:::119:5:::2761:2863
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:121:4:::127:5:::2869:3227
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:129:4:::135:5:::3233:3558
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-plugin-import/lib/rules/extensions.js:137:4:::182:5:::3564:5418
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #13
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:28:0:::30:1:::954:1014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:38:0:::40:1:::1268:1387
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:49:0:::51:1:::1752:1877
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:58:0:::63:1:::2050:2190
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:71:0:::91:1:::2442:2993
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:103:0:::108:1:::3380:3526
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:117:0:::154:1:::3781:4779
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:168:0:::216:1:::5214:6702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:225:0:::243:1:::6932:7496
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:255:0:::378:1:::7817:11659
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:386:0:::497:1:::11857:15278
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:505:0:::621:1:::15475:18709
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:629:0:::665:1:::18897:20146
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js: linter.js #58
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                  ║
@@ -246,7 +246,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8385521660434779                ║
+║ Seed                      │ 0.8163195319183993                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -346,7 +346,7 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0.001, went from 0 to 0 test cases
+Splitting done took: 0, went from 0 to 0 test cases
 De-Duplication done took: 0, went from 0 to 0 test cases
 archive size 0
 archive size 0
@@ -356,97 +356,97 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js: indent.js #76
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:484:6:::494:1:::18266:18438
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:496:17:::1707:1:::18458:73976
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:497:4:::625:5:::18464:22959
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:500:8:::505:9:::18505:18711
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:622:8:::624:9:::22841:22953
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:496:17:::1707:1:::18458:73976
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:634:14:::660:9:::23196:24107
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:636:12:::640:13:::23247:23421
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:642:12:::645:13:::23465:23606
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:646:12:::649:13:::23620:23760
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:650:12:::652:13:::23774:23857
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:675:20:::675:46:::24618:24644
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:696:8:::718:9:::25629:26767
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:726:8:::746:9:::27004:27956
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:731:27:::745:13:::27308:27944
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:754:8:::761:9:::28243:28602
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:768:8:::795:9:::28819:30078
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:803:8:::808:9:::30457:30755
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:818:8:::881:9:::31252:34196
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:825:12:::832:13:::31594:31928
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:846:29:::880:13:::32618:34184
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:889:8:::918:9:::34463:35827
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:925:8:::962:9:::36072:37976
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:969:8:::1000:9:::38184:39568
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:973:27:::981:13:::38317:38689
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:983:31:::999:13:::38724:39556
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:991:48:::995:21:::39229:39453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1008:8:::1022:9:::39815:40438
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1011:38:::1021:13:::39984:40426
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1030:8:::1039:9:::40779:41154
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1049:8:::1064:9:::41565:42139
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:14:::1553:9:::42206:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1214:12:::1214:121:::49778:49887
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1263:41:::1263:90:::52031:52080
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1267:64:::1267:113:::52355:52404
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1375:30:::1375:65:::58317:58352
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1389:41:::1398:17:::58908:59496
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1595:8:::1598:9:::68319:68471
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1616:12:::1704:13:::69237:73957
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1616:12:::1704:13:::69237:73957
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1629:37:::1629:76:::69799:69838
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1634:32:::1634:76:::70027:70071
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1635:33:::1635:77:::70106:70150
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1652:45:::1702:21:::71094:73923
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js: indent.js #76
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:484:6:::494:1:::18266:18438
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:496:17:::1707:1:::18458:73976
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:497:4:::625:5:::18464:22959
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:500:8:::505:9:::18505:18711
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:622:8:::624:9:::22841:22953
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:496:17:::1707:1:::18458:73976
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:634:14:::660:9:::23196:24107
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:636:12:::640:13:::23247:23421
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:642:12:::645:13:::23465:23606
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:646:12:::649:13:::23620:23760
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:650:12:::652:13:::23774:23857
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:675:20:::675:46:::24618:24644
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:696:8:::718:9:::25629:26767
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:726:8:::746:9:::27004:27956
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:731:27:::745:13:::27308:27944
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:754:8:::761:9:::28243:28602
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:768:8:::795:9:::28819:30078
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:803:8:::808:9:::30457:30755
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:818:8:::881:9:::31252:34196
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:825:12:::832:13:::31594:31928
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:846:29:::880:13:::32618:34184
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:889:8:::918:9:::34463:35827
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:925:8:::962:9:::36072:37976
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:969:8:::1000:9:::38184:39568
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:973:27:::981:13:::38317:38689
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:983:31:::999:13:::38724:39556
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:991:48:::995:21:::39229:39453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1008:8:::1022:9:::39815:40438
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1011:38:::1021:13:::39984:40426
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1030:8:::1039:9:::40779:41154
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1049:8:::1064:9:::41565:42139
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:14:::1553:9:::42206:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1214:12:::1214:121:::49778:49887
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1263:41:::1263:90:::52031:52080
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1267:64:::1267:113:::52355:52404
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1375:30:::1375:65:::58317:58352
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1389:41:::1398:17:::58908:59496
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1068:36:::1553:9:::42228:66332
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1595:8:::1598:9:::68319:68471
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1616:12:::1704:13:::69237:73957
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1616:12:::1704:13:::69237:73957
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1629:37:::1629:76:::69799:69838
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1634:32:::1634:76:::70027:70071
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1635:33:::1635:77:::70106:70150
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/rules/indent.js:1652:45:::1702:21:::71094:73923
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14538/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                         ║
@@ -489,7 +489,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8385521660434779                ║
+║ Seed                      │ 0.8163195319183993                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -586,93 +586,93 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #13
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:28:0:::30:1:::954:1014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:38:0:::40:1:::1268:1387
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:49:0:::51:1:::1752:1877
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:58:0:::63:1:::2050:2190
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:71:0:::91:1:::2442:2993
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:103:0:::108:1:::3380:3526
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:117:0:::154:1:::3781:4779
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:168:0:::216:1:::5214:6702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:225:0:::243:1:::6932:7496
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:255:0:::378:1:::7817:11659
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:386:0:::497:1:::11857:15278
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:505:0:::621:1:::15475:18709
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:629:0:::665:1:::18897:20146
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js: linter.js #58
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #13
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:28:0:::30:1:::954:1014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:38:0:::40:1:::1268:1387
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:49:0:::51:1:::1752:1877
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:58:0:::63:1:::2050:2190
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:71:0:::91:1:::2442:2993
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:103:0:::108:1:::3380:3526
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:117:0:::154:1:::3781:4779
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:168:0:::216:1:::5214:6702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:225:0:::243:1:::6932:7496
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:255:0:::378:1:::7817:11659
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:386:0:::497:1:::11857:15278
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:505:0:::621:1:::15475:18709
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:629:0:::665:1:::18897:20146
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js: linter.js #58
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                               SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                               ║
@@ -715,7 +715,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8385521660434779                ║
+║ Seed                      │ 0.8163195319183993                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -825,65 +825,65 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js: linter.js #58
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55557:55867
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55557:55867
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js: linter.js #58
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55869
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55557:55867
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55557:55867
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                      ║
@@ -926,7 +926,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8385521660434779                ║
+║ Seed                      │ 0.8163195319183993                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1010,106 +1010,106 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js: template-curly-spacing.js #12
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:18:17:::141:1:::565:4757
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:19:4:::40:5:::571:1265
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:22:8:::27:9:::612:875
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:34:8:::39:9:::989:1259
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:18:17:::141:1:::565:4757
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:51:8:::87:9:::1589:2967
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:73:25:::73:68:::2487:2530
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:84:25:::84:89:::2859:2923
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:94:8:::130:9:::3159:4522
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:116:25:::116:67:::4044:4086
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:127:25:::127:89:::4414:4478
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:132:15:::139:9:::4539:4748
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #13
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:28:0:::30:1:::954:1014
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:38:0:::40:1:::1268:1387
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:49:0:::51:1:::1752:1877
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:58:0:::63:1:::2050:2190
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:71:0:::91:1:::2442:2993
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:103:0:::108:1:::3380:3526
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:117:0:::154:1:::3781:4779
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:168:0:::216:1:::5214:6702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:225:0:::243:1:::6932:7496
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:255:0:::378:1:::7817:11659
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:386:0:::497:1:::11857:15278
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:505:0:::621:1:::15475:18709
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:629:0:::665:1:::18897:20146
-  - /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js: linter.js #58
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
-    - function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
-    - object /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
-    - object-function /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js: template-curly-spacing.js #12
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:18:17:::141:1:::565:4757
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:19:4:::40:5:::571:1265
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:22:8:::27:9:::612:875
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:34:8:::39:9:::989:1259
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:18:17:::141:1:::565:4757
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:51:8:::87:9:::1589:2967
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:73:25:::73:68:::2487:2530
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:84:25:::84:89:::2859:2923
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:94:8:::130:9:::3159:4522
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:116:25:::116:67:::4044:4086
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:127:25:::127:89:::4414:4478
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js:132:15:::139:9:::4539:4748
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js: safe-emitter.js #5
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:32:17:::52:1:::1570:2139
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:45:45:::45:74:::1997:2026
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/safe-emitter.js:35:25:::51:5:::1647:2135
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js: node-event-generator.js #7
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:40:0:::79:1:::1752:3014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:86:0:::108:1:::3306:3961
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:97:51:::97:116:::3715:3780
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:115:0:::134:1:::4188:4749
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:126:51:::126:112:::4585:4646
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:146:0:::150:1:::5360:5611
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/node-event-generator.js:158:0:::167:1:::5899:6308
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js: code-path-analyzer.js #13
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:28:0:::30:1:::954:1014
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:38:0:::40:1:::1268:1387
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:49:0:::51:1:::1752:1877
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:58:0:::63:1:::2050:2190
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:71:0:::91:1:::2442:2993
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:103:0:::108:1:::3380:3526
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:117:0:::154:1:::3781:4779
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:168:0:::216:1:::5214:6702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:225:0:::243:1:::6932:7496
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:255:0:::378:1:::7817:11659
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:386:0:::497:1:::11857:15278
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:505:0:::621:1:::15475:18709
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js:629:0:::665:1:::18897:20146
+  - /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js: linter.js #58
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1:0:::1470:0:::0:55915
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:41:6:::41:88:::1604:1686
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:41:28:::41:57:::1626:1655
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:41:59:::41:86:::1657:1684
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:130:0:::195:1:::5719:8114
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:164:43:::170:5:::7220:7362
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:177:53:::194:5:::7662:8110
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:203:0:::207:1:::8261:8549
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:219:0:::237:1:::8989:9430
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:249:0:::268:1:::10101:10910
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:253:10:::256:5:::10342:10466
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:275:0:::277:1:::11083:11172
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:290:0:::431:1:::12065:17249
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:291:10:::291:30:::12152:12172
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:293:10:::293:32:::12232:12254
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:300:24:::300:57:::12420:12453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:300:67:::422:5:::12463:17104
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:345:22:::345:108:::14144:14230
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:389:60:::412:21:::15956:16924
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:438:0:::445:1:::17441:17723
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:454:0:::467:1:::18017:18333
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:481:0:::486:1:::18923:19127
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:495:0:::520:1:::19407:20544
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:529:0:::553:1:::20964:22024
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:561:0:::567:1:::22376:22593
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:564:38:::564:56:::22516:22534
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:564:62:::564:80:::22540:22558
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:574:0:::585:1:::22725:23061
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:592:0:::598:1:::23246:23380
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:607:0:::620:1:::23655:24166
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:634:0:::698:1:::24782:27126
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:706:0:::723:1:::27374:27928
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:733:0:::751:1:::28403:29188
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:759:0:::766:1:::29448:29677
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:774:0:::782:1:::29924:30180
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:785:6:::806:1:::30231:31032
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:833:0:::965:1:::32162:37288
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:838:39:::847:5:::32430:32702
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:876:41:::942:5:::33883:36461
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:934:43:::941:9:::36221:36453
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:949:22:::962:5:::36885:37255
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:972:0:::981:1:::37462:37718
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:989:0:::995:1:::37919:38117
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1003:0:::1008:1:::38290:38463
+    - function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1015:0:::1026:1:::38710:38974
+    - object /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
+    - object-function /local/tmp/oliverphil/4254362.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:1458:17:::1469:1:::55603:55913
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                ║
@@ -1152,7 +1152,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8385521660434779                ║
+║ Seed                      │ 0.8163195319183993                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1264,31 +1264,7 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0.23, went from 1 to 1 test cases
-De-Duplication done took: 0, went from 1 to 1 test cases
-archive size 1
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
 archive size 0
 archive size 0
-Run Final Suite
-Decode
-Store
-Run Final Suite 2
-Decode
-Decode
-Decode
-
- SEARCH RESULTS 
-
-╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                              Coverage                                                                                                                               ║
-╟──────────────────────────────────────────────────────┬───────────┬────────┬──────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                                               │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                                            ║
-╟──────────────────────────────────────────────────────┼───────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ template-curly-spacing.js: template-curly-spacing.js │ 3 / 48    │ 0 / 16 │ 0 / 8    │ 0 / 11     │ /local/tmp/oliverphil/4254326.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/rules/template-curly-spacing.js ║
-╟──────────────────────────────────────────────────────┼───────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                                              │ 6.25 %    │ 0 %    │ 0 %      │ 0 %        │                                                                                                                                                                 ║
-╚══════════════════════════════════════════════════════╧═══════════╧════════╧══════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-
-Decode
-Decode
-Decode

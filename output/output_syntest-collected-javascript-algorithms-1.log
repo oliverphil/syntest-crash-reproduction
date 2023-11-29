@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701212241713-udzzouBxtkFozyQY3nUfPi
+FID-1701216040426-sV8x5pX9Z6y3HPVNCi7NC5
 
  Module loaded: 
 
@@ -45,31 +45,31 @@ FID-1701212241713-udzzouBxtkFozyQY3nUfPi
 Loading Crashes... 
 javascript-algorithms-1
 
-up to date, audited 1 package in 101ms
+up to date, audited 1 package in 103ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-10
 
-up to date, audited 1 package in 100ms
+up to date, audited 1 package in 103ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-11
 
-up to date, audited 1 package in 102ms
+up to date, audited 1 package in 103ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-12
 
-up to date, audited 1 package in 101ms
+up to date, audited 1 package in 103ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-13
 
-up to date, audited 1 package in 100ms
+up to date, audited 1 package in 103ms
 
 found 0 vulnerabilities
 
@@ -79,12 +79,12 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
-  - /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+  - /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
+  - /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                   SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                   ║
@@ -127,7 +127,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7132185724940936                ║
+║ Seed                      │ 0.6656290422863679                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -224,12 +224,12 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -272,7 +272,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7132185724940936                ║
+║ Seed                      │ 0.6656290422863679                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -356,12 +356,12 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -404,7 +404,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7132185724940936                ║
+║ Seed                      │ 0.6656290422863679                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -488,12 +488,12 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -536,7 +536,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7132185724940936                ║
+║ Seed                      │ 0.6656290422863679                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -620,12 +620,12 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254349.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254385.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -668,7 +668,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7132185724940936                ║
+║ Seed                      │ 0.6656290422863679                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗

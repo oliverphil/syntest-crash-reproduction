@@ -6,37 +6,32 @@
 
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:475:16:::486:3:::10555:10831
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:475:16:::486:3:::10555:10831
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:125:9:::127:5:::2985:3141
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | application.js
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-1/express/lib/application.js:125:9:::127:5:::2985:3141
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:475:16:::486:3:::10555:10831
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:475:16:::486:3:::10555:10831
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:125:9:::127:5:::2985:3141
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | application.js
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-10/express/lib/application.js:125:9:::127:5:::2985:3141
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:475:16:::486:3:::10555:10831
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:475:16:::486:3:::10555:10831
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:125:9:::127:5:::2985:3141
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | application.js
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-11/express/lib/application.js:125:9:::127:5:::2985:3141
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:475:16:::486:3:::10555:10831
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:475:16:::486:3:::10555:10831
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:125:9:::127:5:::2985:3141
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | application.js
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-12/express/lib/application.js:125:9:::127:5:::2985:3141
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:475:16:::486:3:::10555:10831
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:475:16:::486:3:::10555:10831
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:475:16:::486:3:::10555:10831
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254342.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:125:9:::127:5:::2985:3141
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | application.js
+[33mwarn[39m:    Cannot find binding for get at /local/tmp/oliverphil/4254378.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/express/express-13/express/lib/application.js:125:9:::127:5:::2985:3141

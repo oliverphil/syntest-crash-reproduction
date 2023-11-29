@@ -3,8 +3,8 @@
 npm WARN deprecated mkdirp@0.0.7: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
 npm WARN deprecated ecstatic@0.6.1: This package is unmaintained and deprecated. See the GH Issue 259.
 
-npm WARN deprecated mkdirp@0.0.7: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
 npm WARN deprecated ecstatic@0.6.1: This package is unmaintained and deprecated. See the GH Issue 259.
+npm WARN deprecated mkdirp@0.0.7: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
 
 npm WARN EBADENGINE Unsupported engine {
 npm WARN EBADENGINE   package: 'http-server-209@1.0.0',

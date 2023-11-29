@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701212238036-s3pQxZ1ms9HTZoRvm9jGTQ
+FID-1701216046700-soo6rimrZXsPT8ZpsnYf5e
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701212238036-s3pQxZ1ms9HTZoRvm9jGTQ
 Loading Crashes... 
 eslint-32
 
-added 145 packages, and audited 146 packages in 3s
+added 145 packages, and audited 146 packages in 2s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -54,7 +54,7 @@ found 0 vulnerabilities
 
 eslint-33
 
-added 145 packages, and audited 146 packages in 646ms
+added 145 packages, and audited 146 packages in 989ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -63,7 +63,7 @@ found 0 vulnerabilities
 
 eslint-34
 
-added 145 packages, and audited 146 packages in 673ms
+added 145 packages, and audited 146 packages in 1s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -72,7 +72,7 @@ found 0 vulnerabilities
 
 eslint-35
 
-added 145 packages, and audited 146 packages in 729ms
+added 145 packages, and audited 146 packages in 991ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -81,7 +81,7 @@ found 0 vulnerabilities
 
 eslint-36
 
-added 145 packages, and audited 146 packages in 1s
+added 145 packages, and audited 146 packages in 988ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -90,7 +90,7 @@ found 0 vulnerabilities
 
 eslint-37
 
-added 145 packages, and audited 146 packages in 750ms
+added 145 packages, and audited 146 packages in 995ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -99,7 +99,7 @@ found 0 vulnerabilities
 
 eslint-38
 
-added 145 packages, and audited 146 packages in 729ms
+added 145 packages, and audited 146 packages in 952ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -108,7 +108,7 @@ found 0 vulnerabilities
 
 eslint-39
 
-added 145 packages, and audited 146 packages in 669ms
+added 145 packages, and audited 146 packages in 1s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -117,7 +117,7 @@ found 0 vulnerabilities
 
 eslint-4
 
-added 145 packages, and audited 146 packages in 733ms
+added 145 packages, and audited 146 packages in 1s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -126,7 +126,7 @@ found 0 vulnerabilities
 
 eslint-40
 
-added 145 packages, and audited 146 packages in 670ms
+added 145 packages, and audited 146 packages in 966ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -135,7 +135,7 @@ found 0 vulnerabilities
 
 eslint-41
 
-added 145 packages, and audited 146 packages in 674ms
+added 145 packages, and audited 146 packages in 1s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -144,7 +144,7 @@ found 0 vulnerabilities
 
 eslint-42
 
-added 145 packages, and audited 146 packages in 727ms
+added 145 packages, and audited 146 packages in 931ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -153,7 +153,7 @@ found 0 vulnerabilities
 
 eslint-43
 
-added 145 packages, and audited 146 packages in 697ms
+added 145 packages, and audited 146 packages in 974ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -162,7 +162,7 @@ found 0 vulnerabilities
 
 eslint-44
 
-added 145 packages, and audited 146 packages in 744ms
+added 145 packages, and audited 146 packages in 989ms
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -171,7 +171,7 @@ found 0 vulnerabilities
 
 eslint-45
 
-added 145 packages, and audited 146 packages in 730ms
+added 145 packages, and audited 146 packages in 1s
 
 12 packages are looking for funding
   run `npm fund` for details
@@ -184,15 +184,15 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-32/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -235,7 +235,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -332,15 +332,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-33/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -383,7 +383,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -480,15 +480,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-34/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -531,7 +531,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -628,15 +628,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-35/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -679,7 +679,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -776,15 +776,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-36/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -827,7 +827,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -924,15 +924,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-37/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -975,7 +975,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1072,15 +1072,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-38/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -1123,7 +1123,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1220,15 +1220,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-39/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -1271,7 +1271,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1368,15 +1368,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-4/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                              SELECTION SETTINGS                                                                                                              ║
@@ -1419,7 +1419,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1516,15 +1516,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-40/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -1567,7 +1567,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1664,15 +1664,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-41/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -1715,7 +1715,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1812,15 +1812,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-42/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -1863,7 +1863,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1960,15 +1960,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-43/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -2011,7 +2011,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -2108,15 +2108,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-44/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -2159,7 +2159,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -2256,15 +2256,15 @@ archive size 0
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
-    - object /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
-    - function /local/tmp/oliverphil/4254335.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
+  - /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js: rule-tester.js #8
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:61:6:::61:41:::2337:2372
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:61:30:::61:39:::2361:2370
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:62:4:::62:33:::2378:2407
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:62:22:::62:31:::2396:2405
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:87:0:::105:1:::2907:3340
+    - object /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:93:14:::93:23:::3104:3113
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:113:0:::126:1:::3444:3822
+    - function /local/tmp/oliverphil/4254371.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-45/node_modules/eslint/lib/testers/rule-tester.js:143:0:::145:1:::4345:4417
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                               SELECTION SETTINGS                                                                                                                ║
@@ -2307,7 +2307,7 @@ archive size 0
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8120644854103435                ║
+║ Seed                      │ 0.7882792849061926                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
