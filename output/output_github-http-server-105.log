@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701228395594-dqACvBVMMg78Wtj5XzCM7X
+FID-1701375239070-qHmACFQvZwS6FKa6nneG1i
 
  Module loaded: 
 
@@ -50,7 +50,7 @@ added 14 packages, and audited 15 packages in 2s
 1 package is looking for funding
   run `npm fund` for details
 
-6 vulnerabilities (3 high, 3 critical)
+6 vulnerabilities (1 moderate, 4 high, 1 critical)
 
 To address all issues (including breaking changes), run:
   npm audit fix --force
@@ -59,12 +59,12 @@ Run `npm audit` for details.
 
 http-server-135
 
-added 33 packages, and audited 34 packages in 556ms
+added 33 packages, and audited 34 packages in 450ms
 
 11 packages are looking for funding
   run `npm fund` for details
 
-6 vulnerabilities (3 high, 3 critical)
+6 vulnerabilities (1 moderate, 4 high, 1 critical)
 
 To address all issues (including breaking changes), run:
   npm audit fix --force
@@ -73,12 +73,12 @@ Run `npm audit` for details.
 
 http-server-209
 
-added 29 packages, and audited 30 packages in 646ms
+added 29 packages, and audited 30 packages in 2s
 
 2 packages are looking for funding
   run `npm fund` for details
 
-6 vulnerabilities (1 moderate, 2 high, 3 critical)
+6 vulnerabilities (2 moderate, 3 high, 1 critical)
 
 To address all issues (including breaking changes), run:
   npm audit fix --force
@@ -87,12 +87,12 @@ Run `npm audit` for details.
 
 http-server-214
 
-added 21 packages, and audited 22 packages in 928ms
+added 21 packages, and audited 22 packages in 805ms
 
 2 packages are looking for funding
   run `npm fund` for details
 
-6 vulnerabilities (3 high, 3 critical)
+6 vulnerabilities (1 moderate, 4 high, 1 critical)
 
 To address all issues (including breaking changes), run:
   npm audit fix --force
@@ -101,12 +101,54 @@ Run `npm audit` for details.
 
 http-server-215
 
-added 21 packages, and audited 22 packages in 545ms
+added 21 packages, and audited 22 packages in 425ms
 
 2 packages are looking for funding
   run `npm fund` for details
 
-6 vulnerabilities (3 high, 3 critical)
+6 vulnerabilities (1 moderate, 4 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+http-server-367
+
+added 21 packages, and audited 22 packages in 433ms
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+6 vulnerabilities (1 moderate, 4 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+http-server-451
+
+added 36 packages, and audited 37 packages in 530ms
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+4 vulnerabilities (3 moderate, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+http-server-502
+
+added 38 packages, and audited 39 packages in 477ms
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+6 vulnerabilities (1 moderate, 4 high, 1 critical)
 
 To address all issues (including breaking changes), run:
   npm audit fix --force

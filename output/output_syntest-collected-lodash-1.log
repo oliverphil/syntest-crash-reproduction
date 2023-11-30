@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701228388307-dfwrcS3afwLBsxxySWqSdG
+FID-1701375237640-iecwfn2TNE3tkiXvTPUnsb
 
  Module loaded: 
 
@@ -45,33 +45,183 @@ FID-1701228388307-dfwrcS3afwLBsxxySWqSdG
 Loading Crashes... 
 lodash-1
 
-up to date, audited 1 package in 101ms
+up to date, audited 1 package in 75ms
 
 found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 2s
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 lodash-10
 
-up to date, audited 1 package in 100ms
+up to date, audited 1 package in 76ms
 
 found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 793ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 lodash-11
 
-up to date, audited 1 package in 101ms
+up to date, audited 1 package in 75ms
 
 found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 779ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 lodash-2
 
-up to date, audited 1 package in 102ms
+up to date, audited 1 package in 76ms
 
 found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 776ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 lodash-3
 
-up to date, audited 1 package in 100ms
+up to date, audited 1 package in 82ms
 
 found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 777ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+lodash-4
+
+up to date, audited 1 package in 76ms
+
+found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 741ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+lodash-5
+
+up to date, audited 1 package in 78ms
+
+found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 752ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+lodash-6
+
+up to date, audited 1 package in 75ms
+
+found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 763ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+lodash-7
+
+up to date, audited 1 package in 76ms
+
+found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 772ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+lodash-8
+
+up to date, audited 1 package in 76ms
+
+found 0 vulnerabilities
+
+added 216 packages, and audited 217 packages in 767ms
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 moderate, 3 high, 1 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
 
 
  GENERAL INFO 
@@ -79,10 +229,10 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js: equalArrays.js #3
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js: equalArrays.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                             SELECTION SETTINGS                                                                                             ║
@@ -95,9 +245,9 @@ found 0 vulnerabilities
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target Exclude        │                                                                                                                                                                                    ║
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Include      │                                                                                                                                                                                    ║
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-1/**/*.js                                                                                                                      ║
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Exclude      │                                                                                                                                                                                    ║
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-1/**/node_modules/**/*.js                                                                                        ║
 ╚═══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -125,7 +275,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7259733295191242                ║
+║ Seed                      │ 0.06270531761514607               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -209,12 +359,16 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:0:::57:1:::1351:1998
-    - object /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:37:::36:48:::1388:1399
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:54:47:::55:47:::1901:1974
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js: arrayEach.js #1
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js:9:0:::19:1:::229:440
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:0:::57:1:::1351:1998
+    - object /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:37:::36:48:::1388:1399
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:54:47:::55:47:::1901:1974
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
+    - object /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js: arrayEach.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js:9:0:::19:1:::229:440
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                              SELECTION SETTINGS                                                                                                                               ║
@@ -227,9 +381,9 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target Exclude        │                                                                                                                                                                                                                                                       ║
 ╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Include      │                                                                                                                                                                                                                                                       ║
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-10/**/*.js                                                                                                                                                                                        ║
 ╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Exclude      │                                                                                                                                                                                                                                                       ║
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-10/**/node_modules/**/*.js                                                                                                                                                          ║
 ╚═══════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -257,7 +411,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7259733295191242                ║
+║ Seed                      │ 0.06270531761514607               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -347,6 +501,18 @@ Resolving Types
 ╟──────────┬───────╢
 ║ Type     │ Count ║
 ╟──────────┼───────╢
+║ branch   │ 12    ║
+╟──────────┼───────╢
+║ path     │ 13    ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
 ║ branch   │ 4     ║
 ╟──────────┼───────╢
 ║ path     │ 3     ║
@@ -357,8 +523,8 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 1.011, went from 2 to 2 test cases
-De-Duplication done took: 0.001, went from 2 to 2 test cases
+Splitting done took: 0.043, went from 2 to 2 test cases
+De-Duplication done took: 0, went from 2 to 2 test cases
 archive size 1
 archive size 1
 Run Final Suite
@@ -377,11 +543,11 @@ Decode
 ╟────────────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                     │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                          ║
 ╟────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ arrayEach.js: arrayEach.js │ 0 / 11    │ 0 / 4  │ 0 / 1    │ 0 / 0      │ /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js ║
+║ arrayEach.js: arrayEach.js │ 0 / 11    │ 0 / 4  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js ║
 ╟────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js │ 0 / 24    │ 0 / 12 │ 0 / 2    │ 0 / 0      │ /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js           ║
+║ transform.js: transform.js │ 0 / 24    │ 0 / 12 │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js           ║
 ╟────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                    │ 0 %       │ 0 %    │ 0 %      │ 100 %      │                                                                                                                                               ║
+║ Average                    │ 0 %       │ 0 %    │ 0 %      │ 0 %        │                                                                                                                                               ║
 ╚════════════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
@@ -392,14 +558,18 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:0:::57:1:::1351:1998
-    - object /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:37:::36:48:::1388:1399
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:54:47:::55:47:::1901:1974
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseFor.js: baseFor.js #1
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseFor.js:12:0:::25:1:::485:793
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseForOwn.js: baseForOwn.js #1
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseForOwn.js:12:0:::14:1:::288:380
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:0:::57:1:::1351:1998
+    - object /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:37:::36:48:::1388:1399
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:54:47:::55:47:::1901:1974
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
+    - object /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseFor.js: baseFor.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseFor.js:12:0:::25:1:::485:793
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseForOwn.js: baseForOwn.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseForOwn.js:12:0:::14:1:::288:380
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                          SELECTION SETTINGS                                                                                                                                                                           ║
@@ -412,9 +582,9 @@ Decode
 ╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                               ║
 ╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                               ║
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-11/**/*.js                                                                                                                                                                                                                                                                                ║
 ╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Exclude      │                                                                                                                                                                                                                                                                                                                                               ║
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-11/**/node_modules/**/*.js                                                                                                                                                                                                                                                  ║
 ╚═══════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -442,7 +612,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7259733295191242                ║
+║ Seed                      │ 0.06270531761514607               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -515,6 +685,18 @@ Decode
 
 Extracting types
 Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 12    ║
+╟──────────┼───────╢
+║ path     │ 13    ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -554,7 +736,7 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0.179, went from 3 to 3 test cases
+Splitting done took: 1.024, went from 3 to 3 test cases
 De-Duplication done took: 0, went from 3 to 3 test cases
 archive size 1
 archive size 1
@@ -578,13 +760,13 @@ Decode
 ╟──────────────────────────────┬───────────┬────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                       │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                           ║
 ╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ baseFor.js: baseFor.js       │ 0 / 17    │ 0 / 4  │ 0 / 1    │ 0 / 0      │ /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseFor.js    ║
+║ baseFor.js: baseFor.js       │ 0 / 17    │ 0 / 4  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseFor.js    ║
 ╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ baseForOwn.js: baseForOwn.js │ 0 / 1     │ 0 / 0  │ 0 / 1    │ 0 / 0      │ /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseForOwn.js ║
+║ baseForOwn.js: baseForOwn.js │ 0 / 1     │ 0 / 0  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/baseForOwn.js ║
 ╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js   │ 0 / 24    │ 0 / 12 │ 0 / 2    │ 0 / 0      │ /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js            ║
+║ transform.js: transform.js   │ 0 / 24    │ 0 / 12 │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js            ║
 ╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                      │ 0 %       │ 0 %    │ 0 %      │ 100 %      │                                                                                                                                                ║
+║ Average                      │ 0 %       │ 0 %    │ 0 %      │ 0 %        │                                                                                                                                                ║
 ╚══════════════════════════════╧═══════════╧════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
@@ -596,10 +778,10 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js: equalArrays.js #3
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js: equalArrays.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                             SELECTION SETTINGS                                                                                             ║
@@ -612,9 +794,9 @@ Decode
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target Exclude        │                                                                                                                                                                                    ║
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Include      │                                                                                                                                                                                    ║
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-2/**/*.js                                                                                                                      ║
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Exclude      │                                                                                                                                                                                    ║
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-2/**/node_modules/**/*.js                                                                                        ║
 ╚═══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -642,7 +824,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7259733295191242                ║
+║ Seed                      │ 0.06270531761514607               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -726,10 +908,10 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js: equalArrays.js #3
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
-    - function /local/tmp/oliverphil/4254449.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js: equalArrays.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                             SELECTION SETTINGS                                                                                             ║
@@ -742,9 +924,9 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target Exclude        │                                                                                                                                                                                    ║
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Include      │                                                                                                                                                                                    ║
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-3/**/*.js                                                                                                                      ║
 ╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Exclude      │                                                                                                                                                                                    ║
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-3/**/node_modules/**/*.js                                                                                        ║
 ╚═══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -772,7 +954,7 @@ De-Duplication done took: 0, went from 0 to 0 test cases
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7259733295191242                ║
+║ Seed                      │ 0.06270531761514607               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -850,3 +1032,1017 @@ Resolving Types
 
 Splitting done took: 0, went from 0 to 0 test cases
 De-Duplication done took: 0, went from 0 to 0 test cases
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js: equalArrays.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js:17:0:::27:1:::535:759
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js:43:0:::49:1:::1330:1583
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                               ║
+╟───────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                 ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                     ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/lodash/lodash-4/**/lodash/.internal/equalArrays.js, ./benchmark/crashes/syntest-collected/lodash/lodash-4/**/lodash/some.js, ./benchmark/crashes/syntest-collected/lodash/lodash-4/**/lodash/.internal/equalArrays.js, ./benchmark/crashes/syntest-collected/lodash/lodash-4/**/lodash/.internal/equalArrays.js ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                       ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-4/**/*.js                                                                                                                                                                                                                                                                                         ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-4/**/node_modules/**/*.js                                                                                                                                                                                                                                                           ║
+╚═══════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.06270531761514607               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 6     ║
+╟──────────┼───────╢
+║ path     │ 6     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 4     ║
+╟──────────┼───────╢
+║ path     │ 4     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0.043, went from 1 to 1 test cases
+De-Duplication done took: 0, went from 1 to 1 test cases
+archive size 1
+Run Final Suite
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                           Coverage                                                                                            ║
+╟──────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target           │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                          ║
+╟──────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ some.js: some.js │ 0 / 13    │ 0 / 6  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js ║
+╟──────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average          │ 0 %       │ 0 %    │ 0 %      │ 0 %        │                                                                                                                               ║
+╚══════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js: equalArrays.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:22:74:::82:1:::908:2512
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js:17:0:::27:1:::535:759
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js:43:0:::49:1:::1330:1583
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                               ║
+╟───────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                 ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                     ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/lodash/lodash-5/**/lodash/.internal/equalArrays.js, ./benchmark/crashes/syntest-collected/lodash/lodash-5/**/lodash/some.js, ./benchmark/crashes/syntest-collected/lodash/lodash-5/**/lodash/.internal/equalArrays.js, ./benchmark/crashes/syntest-collected/lodash/lodash-5/**/lodash/.internal/equalArrays.js ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                       ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-5/**/*.js                                                                                                                                                                                                                                                                                         ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-5/**/node_modules/**/*.js                                                                                                                                                                                                                                                           ║
+╚═══════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.06270531761514607               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 6     ║
+╟──────────┼───────╢
+║ path     │ 6     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 4     ║
+╟──────────┼───────╢
+║ path     │ 4     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0.13, went from 1 to 1 test cases
+De-Duplication done took: 0, went from 1 to 1 test cases
+archive size 1
+Run Final Suite
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                           Coverage                                                                                            ║
+╟──────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target           │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                          ║
+╟──────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ some.js: some.js │ 0 / 13    │ 0 / 6  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js ║
+╟──────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average          │ 0 %       │ 0 %    │ 0 %      │ 0 %        │                                                                                                                               ║
+╚══════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/stringToPath.js: stringToPath.js #0
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js:43:0:::60:1:::1414:1971
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js:47:8:::57:3:::1600:1905
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js:50:0:::68:1:::1572:2147
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js:54:6:::65:3:::1749:2073
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js: castPath.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js:12:0:::17:1:::307:456
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js: hasPath.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js:30:0:::51:1:::812:1352
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                        ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                        ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/lodash/lodash-6/**/lodash/.internal/stringToPath.js, ./benchmark/crashes/syntest-collected/lodash/lodash-6/**/lodash/memoize.js, ./benchmark/crashes/syntest-collected/lodash/lodash-6/**/lodash/.internal/castPath.js, ./benchmark/crashes/syntest-collected/lodash/lodash-6/**/lodash/hasPath.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                          ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-6/**/*.js                                                                                                                                                                                                                                                                            ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-6/**/node_modules/**/*.js                                                                                                                                                                                                                                              ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.06270531761514607               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 6     ║
+╟──────────┼───────╢
+║ path     │ 5     ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 6     ║
+╟──────────┼───────╢
+║ path     │ 6     ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 4     ║
+╟──────────┼───────╢
+║ path     │ 3     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 8     ║
+╟──────────┼───────╢
+║ path     │ 9     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0, went from 2 to 2 test cases
+De-Duplication done took: 0, went from 2 to 2 test cases
+archive size 0
+archive size 1
+archive size 1
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                 Coverage                                                                                                                  ║
+╟──────────────────────────────────┬─────────────────────┬────────┬──────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                           │ Statement           │ Branch │ Function │ Objectives │ File                                                                                                                                            ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ memoize.js: memoize.js           │ 0 / 21              │ 0 / 6  │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js                ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ stringToPath.js: stringToPath.js │ 0 / 24              │ 0 / 6  │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/stringToPath.js ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ castPath.js: castPath.js         │ 0 / 6               │ 0 / 4  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js     ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ hasPath.js: hasPath.js           │ 2 / 25              │ 0 / 8  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js                ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                          │ 2.631578947368421 % │ 0 %    │ 0 %      │ 0 %        │                                                                                                                                                 ║
+╚══════════════════════════════════╧═════════════════════╧════════╧══════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/stringToPath.js: stringToPath.js #0
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js:43:0:::60:1:::1414:1971
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js:47:8:::57:3:::1600:1905
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js:50:0:::68:1:::1572:2147
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js:54:6:::65:3:::1749:2073
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js: castPath.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js:12:0:::17:1:::307:456
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js: hasPath.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js:30:0:::51:1:::812:1352
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                        ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                        ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/lodash/lodash-7/**/lodash/.internal/stringToPath.js, ./benchmark/crashes/syntest-collected/lodash/lodash-7/**/lodash/memoize.js, ./benchmark/crashes/syntest-collected/lodash/lodash-7/**/lodash/.internal/castPath.js, ./benchmark/crashes/syntest-collected/lodash/lodash-7/**/lodash/hasPath.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                          ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-7/**/*.js                                                                                                                                                                                                                                                                            ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-7/**/node_modules/**/*.js                                                                                                                                                                                                                                              ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.06270531761514607               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 6     ║
+╟──────────┼───────╢
+║ path     │ 5     ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 6     ║
+╟──────────┼───────╢
+║ path     │ 6     ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 4     ║
+╟──────────┼───────╢
+║ path     │ 3     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 8     ║
+╟──────────┼───────╢
+║ path     │ 9     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0.395, went from 2 to 10 test cases
+De-Duplication done took: 0, went from 10 to 2 test cases
+archive size 0
+archive size 1
+archive size 1
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                 Coverage                                                                                                                  ║
+╟──────────────────────────────────┬─────────────────────┬────────┬──────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                           │ Statement           │ Branch │ Function │ Objectives │ File                                                                                                                                            ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ memoize.js: memoize.js           │ 0 / 21              │ 0 / 6  │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js                ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ stringToPath.js: stringToPath.js │ 0 / 24              │ 0 / 6  │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/stringToPath.js ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ castPath.js: castPath.js         │ 0 / 6               │ 0 / 4  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js     ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ hasPath.js: hasPath.js           │ 2 / 25              │ 0 / 8  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js                ║
+╟──────────────────────────────────┼─────────────────────┼────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                          │ 2.631578947368421 % │ 0 %    │ 0 %      │ 0 %        │                                                                                                                                                 ║
+╚══════════════════════════════════╧═════════════════════╧════════╧══════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:36:0:::57:1:::1351:1998
+    - object /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:36:37:::36:48:::1388:1399
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:54:47:::55:47:::1901:1974
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
+    - object /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js: baseFor.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js:12:0:::25:1:::485:793
+  - /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js: baseForOwn.js #1
+    - function /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js:12:0:::14:1:::288:380
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                         ║
+╟───────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                     ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                         ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/lodash/lodash-8/**/lodash/transform.js, ./benchmark/crashes/syntest-collected/lodash/lodash-8/**/lodash/.internal/baseFor.js, ./benchmark/crashes/syntest-collected/lodash/lodash-8/**/lodash/.internal/baseForOwn.js, ./benchmark/crashes/syntest-collected/lodash/lodash-8/**/lodash/transform.js ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                           ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │ ./benchmark/crashes/syntest-collected/lodash/lodash-8/**/*.js                                                                                                                                                                                                                                                                             ║
+╟───────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/syntest-collected/lodash/lodash-8/**/node_modules/**/*.js                                                                                                                                                                                                                                               ║
+╚═══════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.06270531761514607               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 12    ║
+╟──────────┼───────╢
+║ path     │ 13    ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 12    ║
+╟──────────┼───────╢
+║ path     │ 13    ║
+╟──────────┼───────╢
+║ function │ 2     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 4     ║
+╟──────────┼───────╢
+║ path     │ 3     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 0     ║
+╟──────────┼───────╢
+║ path     │ 1     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 0.191, went from 3 to 3 test cases
+De-Duplication done took: 0, went from 3 to 3 test cases
+archive size 1
+archive size 1
+archive size 1
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                         Coverage                                                                                                          ║
+╟──────────────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                       │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                          ║
+╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ baseFor.js: baseFor.js       │ 0 / 17    │ 0 / 4  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js    ║
+╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ baseForOwn.js: baseForOwn.js │ 0 / 1     │ 0 / 0  │ 0 / 1    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js ║
+╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ transform.js: transform.js   │ 0 / 24    │ 0 / 12 │ 0 / 2    │ 0 / 2      │ /local/tmp/oliverphil/4254820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js            ║
+╟──────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                      │ 0 %       │ 0 %    │ 0 %      │ 0 %        │                                                                                                                                               ║
+╚══════════════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+Decode

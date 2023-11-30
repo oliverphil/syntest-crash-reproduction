@@ -14,174 +14,26 @@ npm WARN deprecated http2@3.2.0: Use the built-in module in node 9.0.0 or newer,
 
 
 
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254429.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254429.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
+
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'express-4277@1.0.0',
+npm WARN EBADENGINE   required: { node: '10.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
+npm WARN EBADENGINE }
+
+
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'express-4311@1.0.0',
+npm WARN EBADENGINE   required: { node: '10.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
+npm WARN EBADENGINE }
+
+
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254803.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4254803.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:331:29:::335:3:::7260:7388
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: INFs | 3/100 | 0% | route.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 17% | ETA: INFs | 17/100 | 0% | index.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-
-
-
-
-
-
-2
-448.427851605727 fHPunUB0PD</8CWzU
-Mfm/Qk"K,!Q
-
-
-true
-(bMYoWHgUJ@
-
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5% | ETA: INFs | 5/100 | 0% | node.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis

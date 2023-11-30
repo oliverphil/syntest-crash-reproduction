@@ -22,4 +22,9 @@ npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
 npm WARN EBADENGINE }
 npm WARN deprecated ecstatic@1.4.1: This package is unmaintained and deprecated. See the GH Issue 259.
 
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+npm WARN deprecated ecstatic@1.4.1: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated ecstatic@3.3.2: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated ecstatic@3.3.0: This package is unmaintained and deprecated. See the GH Issue 259.
+
