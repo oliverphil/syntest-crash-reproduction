@@ -890,7 +890,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     const currentSubject = new CrashSubject(
       target,
       this.crash.stackTrace,
-      [...pathObjectives],
+      [],
         cfp,
         new ApproachLevelCalculator(),
         new BranchDistanceCalculator(

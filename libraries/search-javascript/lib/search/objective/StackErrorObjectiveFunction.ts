@@ -29,20 +29,15 @@ import Fuse from "fuse.js";
 import {ControlFlowProgram} from "@syntest/cfg";
 
 
-class StackErrorObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCase> {
+class StackErrorObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> {
     protected stackTrace: StackTrace;
     private fuzzySearch: Fuse<string>;
 
     constructor(
         id: string,
-        controlFlowProgram: ControlFlowProgram,
-        controlFlowPath: ControlFlowPath,
-        approachLevelCalculator: ApproachLevelCalculator,
-        branchDistanceCalculator: BranchDistanceCalculator,
-        subject: SearchSubject<JavaScriptTestCase>,
         stackTrace: StackTrace
     ) {
-        super(id, controlFlowProgram, controlFlowPath, approachLevelCalculator, branchDistanceCalculator);
+        super(id);
         this.stackTrace = stackTrace;
         this.fuzzySearch = new Fuse([stackTrace.error.errorMessage], {
             threshold: 0.2
@@ -60,7 +55,7 @@ class StackErrorObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCa
             // console.log(actualExceptionString)
             if (actualExceptionString.includes(this.stackTrace.error.errorMessage)) {
                 // distance -= 0.8;
-                distance = 1;
+                distance = 0;
                 // console.log("Exception hit")
             }
             // if (actualException.error.errorType === this.stackTrace.error.errorType) {
@@ -71,10 +66,10 @@ class StackErrorObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCa
         return distance;
     }
 
-    override getIdentifier(): string {
-        return super._id;
-        // return `Stack Objective: ${this.stackTrace.error.errorMessage}`;
-    }
+    // override getIdentifier(): string {
+    //     return super._id;
+    //     // return `Stack Objective: ${this.stackTrace.error.errorMessage}`;
+    // }
 
 }
 

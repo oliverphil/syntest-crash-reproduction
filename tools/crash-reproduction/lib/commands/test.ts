@@ -192,8 +192,14 @@ export function getTestCommand(
           // Properties.exclude.push(`./benchmark/crashes/${crash.project}/${crash.crashId}/**/gatsby-browser.js`);
         }
         // include.push("**/*.js");
+        const syntestType = (<JavaScriptArguments>(<unknown>arguments_)).syntestType;
         (<JavaScriptArguments>(<unknown>arguments_)).targetInclude = include;
         (<JavaScriptArguments>(<unknown>arguments_)).targetExclude = exclude;
+        (<JavaScriptArguments>(<unknown>arguments_)).analysisInclude =
+            [`./benchmark/crashes/${syntestType}/`
+              + `${crash.project}/${crash.crashId}/**/*.js`];
+        (<JavaScriptArguments>(<unknown>arguments_)).analysisExclude = ['**/*.spec.js',
+          `./benchmark/crashes/${syntestType}/${crash.project}/${crash.crashId}/**/node_modules/**/*.js`];
         global.__coverage__ = {};
         global.__meta__ = [];
         const launcher = new CrashLauncher(

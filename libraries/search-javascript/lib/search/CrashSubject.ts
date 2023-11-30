@@ -57,6 +57,10 @@ export class CrashSubject extends JavaScriptSubject {
     protected _extractObjectives(objectives): void {
         const objs = new Set();
         if (!this.stackTrace) return;
+        objectives.push(new StackErrorObjectiveFunction(
+            `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
+            this.stackTrace
+        ));
         for (const cff of this.controlFlowProgram.functions) {
             const paths = this.extractPathsFromFunction(cff);
             for (const path of paths) {
@@ -79,12 +83,13 @@ export class CrashSubject extends JavaScriptSubject {
                     // );
                     if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
                         objectives.push(
-                            new PathObjectiveFunction(
+                            new StackFrameObjectiveFunction(
                                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
                                 this.controlFlowProgram,
                                 path,
                                 this.approachLevelCalculator,
-                                this.branchDistanceCalculator
+                                this.branchDistanceCalculator,
+                                frame
                             )
                         );
                         objs.add(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`);
@@ -101,7 +106,7 @@ export class CrashSubject extends JavaScriptSubject {
                 // );
             }
         }
-        this.numStackObjectives = objs.size;
+        this.numStackObjectives = objs.size + 1;
         // if (this.stackTrace) {
         //     for (const stackFrame of this.stackTrace.trace) {
         //         const objective = new StackFrameObjectiveFunction(

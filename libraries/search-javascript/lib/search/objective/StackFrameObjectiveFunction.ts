@@ -20,7 +20,6 @@ class StackFrameObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCa
         controlFlowPath: ControlFlowPath,
         approachLevelCalculator: ApproachLevelCalculator,
         branchDistanceCalculator: BranchDistanceCalculator,
-        subject: SearchSubject<JavaScriptTestCase>,
         stackFrame: StackFrame
     ) {
         super(id, controlFlowProgram, controlFlowPath, approachLevelCalculator, branchDistanceCalculator);
@@ -54,10 +53,10 @@ class StackFrameObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCa
         return distance;
     }
 
-    override getIdentifier(): string {
-        return super._id;
-        // return `${this.stackFrame.file}:${this.stackFrame.lineNumber}`;
-    }
+    // override getIdentifier(): string {
+    //     return super._id;
+    //     // return `${this.stackFrame.file}:${this.stackFrame.lineNumber}`;
+    // }
 }
 
 export default StackFrameObjectiveFunction;
