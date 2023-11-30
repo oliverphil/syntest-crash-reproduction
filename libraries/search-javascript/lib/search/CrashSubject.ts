@@ -62,7 +62,8 @@ export class CrashSubject extends JavaScriptSubject {
             for (const path of paths) {
                 // console.log(path);
                 // const frame = this.stackTrace.trace.find(frame => frame.method.includes(cff.name));
-                const frame = this.stackTrace.trace.find(frame => cff.id.includes(frame.file));
+                const frames = this.stackTrace.trace.filter(frame => cff.id.includes(frame.file));
+                const frame = frames.find(frame => frame.method.includes(cff.name));
                 if (frame) {
                     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                     // objectives.push(

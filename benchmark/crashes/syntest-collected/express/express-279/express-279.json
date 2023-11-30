@@ -1,0 +1,1 @@
+{"issueNumber":"express-279","info":"TypeError: The \"name\" argument must be of type string. Received function field","dependencies":{},"requireCrashDependency":true,"crashId":"express-279"}

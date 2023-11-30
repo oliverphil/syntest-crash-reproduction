@@ -1,0 +1,15 @@
+Error [ERR_INVALID_ARG_VALUE]: The argument 'request' must be a non-empty string. Received ''
+    at Object.<anonymous> (node_modules/esm/esm.js:1:251951)
+    at Object.t (node_modules/esm/esm.js:1:279775)
+    at require (node_modules/esm/esm.js:1:279589)
+    at new View (express/lib/view.js:81:66)
+    at call (.syntest/tests/tempTest.spec.js:20:24)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:478:21)
