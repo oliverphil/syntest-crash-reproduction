@@ -20,7 +20,7 @@ for (const type of types) {
             // execSync(`sed -i "s/^.*syntest-project.*$/  \\"syntest-project\\": \\"${project}\\",/" .syntest.json`);
             const crashes = envGen.loadAssets(project, type);
             numberOfCrashes += crashes.length;
-            const CRASHES_PER_RUN = 5;
+            const CRASHES_PER_RUN = 10;
             for (let i = 0; i < crashes.length; i += CRASHES_PER_RUN) {
                 const finalIndex = i + CRASHES_PER_RUN < crashes.length ? i + CRASHES_PER_RUN : crashes.length - 1;
                 const currentCrashes = crashes.splice(i, finalIndex);
