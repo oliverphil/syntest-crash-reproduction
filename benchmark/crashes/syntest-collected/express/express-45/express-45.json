@@ -1,1 +1,1 @@
-{"issueNumber":"express-45","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-45"}
+{"issueNumber":"express-45","info":"TypeError: Cannot set properties of undefined (setting 'setprototypeof')","dependencies":{},"requireCrashDependency":true,"crashId":"express-45"}

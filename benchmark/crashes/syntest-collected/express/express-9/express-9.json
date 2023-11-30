@@ -1,1 +1,1 @@
-{"issueNumber":"express-9","info":"TypeError: unsupported trust argument","dependencies":{},"requireCrashDependency":true,"crashId":"express-9"}
+{"issueNumber":"express-9","info":"TypeError: Cannot read properties of undefined (reading '-791')","dependencies":{},"requireCrashDependency":true,"crashId":"express-9"}

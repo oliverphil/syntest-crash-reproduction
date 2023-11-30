@@ -1,1 +1,1 @@
-{"issueNumber":"express-12","info":"TypeError: invalid media type","dependencies":{},"requireCrashDependency":true,"crashId":"express-12"}
+{"issueNumber":"express-12","info":"TypeError: Cannot read properties of undefined (reading 'true')","dependencies":{},"requireCrashDependency":true,"crashId":"express-12"}

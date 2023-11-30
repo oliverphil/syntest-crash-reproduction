@@ -1,23 +1,33 @@
-import {ObjectiveFunction} from "@syntest/search";
+import {
+    ApproachLevelCalculator,
+    BranchDistanceCalculator,
+    ControlFlowPath,
+    PathObjectiveFunction
+} from "@syntest/search";
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
 import {SearchSubject} from "@syntest/search";
 import {StackFrame, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
+import {ControlFlowProgram} from "@syntest/cfg/dist/lib/ControlFlowProgram";
 
 
-class StackFrameObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> {
+class StackFrameObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCase> {
     protected stackFrame: StackFrame;
 
     constructor(
         id: string,
+        controlFlowProgram: ControlFlowProgram,
+        controlFlowPath: ControlFlowPath,
+        approachLevelCalculator: ApproachLevelCalculator,
+        branchDistanceCalculator: BranchDistanceCalculator,
         subject: SearchSubject<JavaScriptTestCase>,
         stackFrame: StackFrame
     ) {
-        super(id);
+        super(id, controlFlowProgram, controlFlowPath, approachLevelCalculator, branchDistanceCalculator);
         this.stackFrame = stackFrame;
     }
 
-    calculateDistance(encoding: JavaScriptTestCase): number {
+    override calculateDistance(encoding: JavaScriptTestCase): number {
         const trace = encoding.getExecutionResult()?.getTraces()?.find(trace => {
             return trace.path.includes(this.stackFrame.file)
                 && trace.location.start.line === this.stackFrame.lineNumber;

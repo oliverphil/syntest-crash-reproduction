@@ -1,1 +1,1 @@
-{"issueNumber":"express-85","info":"Error [ERR_INVALID_ARG_VALUE]: The argument 'request' must be a non-empty string. Received ''","dependencies":{},"requireCrashDependency":true,"crashId":"express-85"}
+{"issueNumber":"express-85","info":"TypeError: Cannot read properties of undefined (reading 'limit')","dependencies":{},"requireCrashDependency":true,"crashId":"express-85"}

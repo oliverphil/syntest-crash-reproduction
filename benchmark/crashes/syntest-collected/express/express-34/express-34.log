@@ -1,11 +1,13 @@
-TypeError: Cannot set properties of undefined
-    at Object.set (express/lib/application.js:6422:25)
-    at Object.get (express/lib/application.js:6589:19)
-    at Object.handle (express/lib/application.js:6089:15)
-    at call (.syntest/tests/tempTest.spec.js:22:19)
+TypeError: The argument 'options' is invalid. Received { port: true }
+    at Object.set (express/lib/application.js:363:50)
+    at Object.disable (express/lib/application.js:467:15)
+    at call (.syntest/tests/tempTest.spec.js:17:57)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:478:21)

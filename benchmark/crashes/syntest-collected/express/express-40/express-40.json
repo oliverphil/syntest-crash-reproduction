@@ -1,1 +1,1 @@
-{"issueNumber":"express-40","info":"TypeError: encoding.toLowerCase is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-40"}
+{"issueNumber":"express-40","info":"TypeError: Cannot read properties of undefined (reading '~PjQL,XviP28d+9zD;tDeNB?\\±nlW-*!y7'X@]86$y!+M'ljIs4 {pQF\\'jN?.7)uhH*wW|s|n')","dependencies":{},"requireCrashDependency":true,"crashId":"express-40"}

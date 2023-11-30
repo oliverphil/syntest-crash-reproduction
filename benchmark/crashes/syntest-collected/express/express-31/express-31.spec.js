@@ -13,15 +13,12 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const req = {}
-		const res = null;
-		const callback = () => {};
-		const anon = () => {};
-		const anon1 = "ECONNRESET";
-		const handleReturnValue = await app1.handle(req, res, callback, anon, anon1)
+		const setting = 302;
+		const anon = "bin";
+		const enableReturnValue = await app1.enable(setting, anon)
 		const app2 = app
-		const path = "array-flatten";
-		const allReturnValue = await app2.all(path)
+		const anon1 = "bin";
+		const enableReturnValue1 = await app2.enable(anon1)
 		
 	})
 })

@@ -13,12 +13,26 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const res1 = res
-		const field = 204;
-		const getReturnValue = await res1.get(field)
+		const localLength = 987.455815146531;
+		const body = {
+			"length": localLength
+		}
+		const localSendReturnValue = await res1.send(body)
 		const res2 = res
-		const links = {}
-		const anon = "/:?06sr!up( ]Y&c61Hw#'\nPb@aF6MQ5Kh`[Rwe'lu4FK[)rqAN1§l±Muh,:Uofrr§)'cC_";
-		const linksReturnValue = await res2.links(links, anon)
+		const obj = 266.7917021300732;
+		const jsonReturnValue = await res2.json(obj)
+		const res3 = res
+		const arrayElement = "<p>";
+		const field = [arrayElement]
+		const obj1 = 266.7917021300732;
+		const localLength1 = 987.455815146531;
+		const body1 = {
+			"length": localLength1
+		}
+		const varyReturnValue = await res3.vary(field, obj1, body1)
+		const res4 = res
+		const obj2 = undefined;
+		const jsonpReturnValue = await res4.jsonp(obj2)
 		
 	})
 })

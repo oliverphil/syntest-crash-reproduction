@@ -1,1 +1,1 @@
-{"issueNumber":"express-29","info":"TypeError: Cannot read properties of null","dependencies":{},"requireCrashDependency":true,"crashId":"express-29"}
+{"issueNumber":"express-29","info":"TypeError: Cannot set properties of undefined (setting '-695')","dependencies":{},"requireCrashDependency":true,"crashId":"express-29"}

@@ -13,18 +13,14 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const listenReturnValue = await app1.listen()
+		const setting = "etag fn";
+		const disabledReturnValue = await app1.disabled(setting)
 		const app2 = app
-		const req = "\nPLl1GVKv@aUsk$+}NP>g?#Fk§lnoGZ§^l\"_M toGY'Biz@YF2%VbAj|F";
-		const res = -350;
-		const callback = null;
-		const handleReturnValue = await app2.handle(req, res, callback)
+		const setting1 = "KvVa+F@q9z\ngC]\n|1hXuGhRxkGteX= pa2Pf#33yRqiMg)[bpiB\\N]loH_aM{Kq! sepq";
+		const val = -147;
+		const anon = {}
+		const localSetReturnValue = await app2.set(setting1, val, anon)
 		const app3 = app
-		const ext = undefined;
-		const fn = {}
-		const anon = "Ac\nMW9sK1q";
-		const anon1 = true;
-		const engineReturnValue = await app3.engine(ext, fn, anon, anon1)
 		
 	})
 })

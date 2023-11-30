@@ -1,1 +1,1 @@
-{"issueNumber":"express-14","info":"TypeError: Header name must be a valid HTTP token [\"{ toLowerCase: [Function: toLowerCase] }\"]","dependencies":{},"requireCrashDependency":true,"crashId":"express-14"}
+{"issueNumber":"express-14","info":"TypeError: Cannot set properties of undefined (setting '-376')","dependencies":{},"requireCrashDependency":true,"crashId":"express-14"}

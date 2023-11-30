@@ -1,1 +1,1 @@
-{"issueNumber":"express-82","info":"TypeError: The \"path\" argument must be of type string. Received function localName","dependencies":{},"requireCrashDependency":true,"crashId":"express-82"}
+{"issueNumber":"express-82","info":"TypeError: Cannot set properties of undefined (setting 'false')","dependencies":{},"requireCrashDependency":true,"crashId":"express-82"}

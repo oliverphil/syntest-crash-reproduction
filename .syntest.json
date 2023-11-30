@@ -60,10 +60,10 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "commander",
+    "syntest-project": "express",
     "syntest-crashes": "false",
     "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "commander-1"
+        "express-1"
     ]
 }

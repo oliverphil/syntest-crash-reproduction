@@ -6,9 +6,9 @@ import {StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 // const resultRegex = /======\sException\sfor\sDataset\s=======\n([A-Za-z1-9\-]*)\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 // const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?End\sError/gm
 const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?Start\sTest\n((?:[^End].*\n)*)End\sTest\nEnd\sError/gm;
-const resultFiles = ['commander.log', 'express.log', 'javascript-algorithms.log', 'lodash.log', 'moment.log'];
+const resultFiles = [/*'commander.log', */'express.log'/*, 'javascript-algorithms.log', 'lodash.log', 'moment.log'*/];
 // const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-const projects = ['commander', 'express', 'javascript-algorithms', 'lodash', 'moment'];
+const projects = [/*'commander', */'express'/*, 'javascript-algorithms', 'lodash', 'moment'*/];
 // for (let i = 1; i <= 1; i++) {
 //     for (let project of projects) {
 //         resultFiles.push(`results/output_${project}_${i}.log`);
@@ -88,13 +88,13 @@ for (let i = 0; i < resultFiles.length; i++) {
         }
 
         // console.log(regexResults);
-        // console.log('open file');
-        // const outfile = `${resultFile.substring(0, resultFile.length - 4)}`;
-        // const outputFile = await fsPromises.open(outfile + '.json', 'w');
-        // console.log(outfile);
-        // console.log('write to file');
-        // await outputFile.writeFile(JSON.stringify(obj, undefined, 4));
-        // await outputFile.close();
+        console.log('open file');
+        const outfile = `${resultFile.substring(0, resultFile.length - 4)}`;
+        const outputFile = await fsPromises.open(outfile + '.json', 'w');
+        console.log(outfile);
+        console.log('write to file');
+        await outputFile.writeFile(JSON.stringify(obj, undefined, 4));
+        await outputFile.close();
         // const altFile = await fsPromises.open(outfile + '.txt', 'w');
         // await altFile.writeFile(obj.toString());
         // await altFile.close();
@@ -104,60 +104,60 @@ for (let i = 0; i < resultFiles.length; i++) {
     console.log(totalCrashesForProject);
 }
 
-// const jsonFiles = [];
-// for (let project of projects) {
-//     jsonFiles.push(`${project}.json`);
-// }
-//
-// for (let i = 0; i < jsonFiles.length; i++) {
-//     const resultFile = jsonFiles[i];
-//     try {
-//         // const file = await fsPromises.open(resultFile);
-//         const jsonObj = JSON.parse(fs.readFileSync(resultFile).toString());
-//         let num = 1;
-//         for (let item of Object.entries(jsonObj)) {
-//             const crashId = item[0].replace('crash', '');
-//             let crashProject = resultFile.split('.json')[0];
-//             for (let i = 0; i < item[1].errors.length; i++) {
-//                 const error = item[1].errors[i];
-//                 const test = item[1].tests[i].join('\n');
-//                 // crashProject.pop()
-//                 // crashProject = crashProject.join('-');
-//                 const stackTrace = error + '\n' + item[1].trace;
-//                 // const packageFile = JSON.parse(fs.readFileSync(`${crashProject}/package.json`).toString());
-//                 const crashFile = {
-//                     issueNumber: `${crashProject}-${num}`,
-//                     info: error,
-//                     url: item[1].url,
-//                     version: item[1].version,
-//                     dependencies: item[1].dependencies || {},
-//                     requireCrashDependency: true
-//                 }
-//                 // if (packageFile.devDependencies) {
-//                 //     for (const dep of Object.entries(packageFile.devDependencies)) {
-//                 //         crashFile.dependencies[dep[0]] = dep[1];
-//                 //     }
-//                 // }
-//                 crashFile.crashId = `${crashProject}-${num}`;
-//                 fs.mkdirSync(`benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${num}`, {recursive: true});
-//                 const outfile = `benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${num}/${crashProject}-${num}`;
-//                 let outputFile = await fsPromises.open(outfile + '.json', 'w');
-//                 await outputFile.writeFile(JSON.stringify(crashFile));
-//                 await outputFile.close();
-//                 outputFile = await fsPromises.open(outfile + '.log', 'w');
-//                 await outputFile.writeFile(stackTrace);
-//                 await outputFile.close();
-//                 outputFile = await fsPromises.open(`${outfile}.spec.js`, 'w');
-//                 await outputFile.writeFile(test);
-//                 await outputFile.close();
-//                 num++;
-//                 // execSync(`cp -r ${crashProject} benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${crashId}/`)
-//             }
-//         }
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }
+const jsonFiles = [];
+for (let project of projects) {
+    jsonFiles.push(`${project}.json`);
+}
+
+for (let i = 0; i < jsonFiles.length; i++) {
+    const resultFile = jsonFiles[i];
+    try {
+        // const file = await fsPromises.open(resultFile);
+        const jsonObj = JSON.parse(fs.readFileSync(resultFile).toString());
+        let num = 1;
+        for (let item of Object.entries(jsonObj)) {
+            const crashId = item[0].replace('crash', '');
+            let crashProject = resultFile.split('.json')[0];
+            for (let i = 0; i < item[1].errors.length; i++) {
+                const error = item[1].errors[i];
+                const test = item[1].tests[i].join('\n');
+                // crashProject.pop()
+                // crashProject = crashProject.join('-');
+                const stackTrace = error + '\n' + item[1].trace;
+                // const packageFile = JSON.parse(fs.readFileSync(`${crashProject}/package.json`).toString());
+                const crashFile = {
+                    issueNumber: `${crashProject}-${num}`,
+                    info: error,
+                    url: item[1].url,
+                    version: item[1].version,
+                    dependencies: item[1].dependencies || {},
+                    requireCrashDependency: true
+                }
+                // if (packageFile.devDependencies) {
+                //     for (const dep of Object.entries(packageFile.devDependencies)) {
+                //         crashFile.dependencies[dep[0]] = dep[1];
+                //     }
+                // }
+                crashFile.crashId = `${crashProject}-${num}`;
+                fs.mkdirSync(`benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${num}`, {recursive: true});
+                const outfile = `benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${num}/${crashProject}-${num}`;
+                let outputFile = await fsPromises.open(outfile + '.json', 'w');
+                await outputFile.writeFile(JSON.stringify(crashFile));
+                await outputFile.close();
+                outputFile = await fsPromises.open(outfile + '.log', 'w');
+                await outputFile.writeFile(stackTrace);
+                await outputFile.close();
+                outputFile = await fsPromises.open(`${outfile}.spec.js`, 'w');
+                await outputFile.writeFile(test);
+                await outputFile.close();
+                num++;
+                // execSync(`cp -r ${crashProject} benchmark/crashes/syntest-collected/${crashProject}/${crashProject}-${crashId}/`)
+            }
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
 
 function checkSameStackTraces(stack1, stack2) {
     try {

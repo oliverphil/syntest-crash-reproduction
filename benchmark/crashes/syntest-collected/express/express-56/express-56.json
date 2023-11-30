@@ -1,1 +1,1 @@
-{"issueNumber":"express-56","info":"TypeError: The \"name\" argument must be of type string. Received function anon","dependencies":{},"requireCrashDependency":true,"crashId":"express-56"}
+{"issueNumber":"express-56","info":"TypeError: path.replace is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-56"}

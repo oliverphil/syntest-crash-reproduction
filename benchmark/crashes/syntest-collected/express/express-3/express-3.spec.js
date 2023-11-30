@@ -13,10 +13,12 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const localName = "res.vary(): Provide a field name";
-		const options = -885;
-		const callback = undefined;
-		const renderReturnValue = await app1.render(localName, options, callback)
+		const lazyrouterReturnValue = await app1.lazyrouter()
+		const app2 = app
+		const setting = "ECONNRESET";
+		const val = () => {};
+		const anon = "path argument is required to res.sendFile";
+		const localSetReturnValue = await app2.set(setting, val, anon)
 		
 	})
 })

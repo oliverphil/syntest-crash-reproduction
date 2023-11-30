@@ -1,1 +1,1 @@
-{"issueNumber":"express-35","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-35"}
+{"issueNumber":"express-35","info":"TypeError: Cannot read properties of undefined (reading '#<Object>')","dependencies":{},"requireCrashDependency":true,"crashId":"express-35"}

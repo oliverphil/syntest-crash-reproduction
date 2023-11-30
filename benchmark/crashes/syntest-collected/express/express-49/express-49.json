@@ -1,1 +1,1 @@
-{"issueNumber":"express-49","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-49"}
+{"issueNumber":"express-49","info":"TypeError: Cannot read properties of undefined (reading 'undefined')","dependencies":{},"requireCrashDependency":true,"crashId":"express-49"}

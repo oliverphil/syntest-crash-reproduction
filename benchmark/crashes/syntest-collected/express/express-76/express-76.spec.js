@@ -2,38 +2,26 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let isAbsolute;
-	let normalizeType;
-	let compileTrust;
-	let setCharset;
+	let app;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		({isAbsolute} = require("../instrumented/express/lib/utils.js"));
-		({normalizeType} = require("../instrumented/express/lib/utils.js"));
-		({compileTrust} = require("../instrumented/express/lib/utils.js"));
-		({setCharset} = require("../instrumented/express/lib/utils.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
+		(app = require("../instrumented/express/lib/application.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const path = "x-powered-by";
-		const anon = 167.13771769821074;
-		const isAbsoluteReturnValue = await isAbsolute(path, anon)
-		const type = "req.param(";
-		const normalizeTypeReturnValue = await normalizeType(type)
-		const anon1 = 167.13771769821074;
-		const compileTrustReturnValue = await compileTrust(anon1)
-		const arrayElement = 458;
-		const arrayElement1 = "6j@^h\"OV&>>=}BlHR:PaD2Bk/(@<`s§v|JI7e$Y1G5aag,f%Z9lv%SUKq§'/D>]K]W§j^6sl3IUR";
-		const arrayElement2 = null;
-		const type1 = [arrayElement, arrayElement1, arrayElement2]
-		const charset = {}
-		const setCharsetReturnValue = await setCharset(type1, charset)
+		const app1 = app
+		const anon = "hMo7sz':±=CL}ItlHyu>wGKh'z6Z*e'zW&&YTp/J§lPv%>SebWx)0>-\nHX§\nMIL=5#={/t^%g^>WJg/Pk4Im";
+		const anon1 = {}
+		const pathReturnValue = await app1.path(anon, anon1)
+		const app2 = app
+		const setting = -341;
+		const enabledReturnValue = await app2.enabled(setting)
+		const app3 = app
+		const anon2 = {}
+		const allReturnValue = await app3.all(anon2)
 		
 	})
 })

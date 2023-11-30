@@ -13,14 +13,13 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const res1 = res
-		const anon = () => {};
-		const getReturnValue = await res1.get(anon)
-		const res2 = res
-		const path = false;
-		const filename = null;
-		const options = null;
-		const callback = undefined;
-		const downloadReturnValue = await res2.download(path, filename, options, callback)
+		const arrayElement = true;
+		const arrayElement1 = -400;
+		const arrayElement2 = () => {};
+		const arrayElement3 = null;
+		const type = [arrayElement, arrayElement1, arrayElement2, arrayElement3]
+		const anon = null;
+		const typeReturnValue = await res1.type(type, anon)
 		
 	})
 })

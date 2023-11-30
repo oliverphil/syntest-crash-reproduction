@@ -2,29 +2,39 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let req;
+	let app;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/request.js")];
-		(req = require("../instrumented/express/lib/request.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
+		(app = require("../instrumented/express/lib/application.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const req1 = req
-		const arrayElement = "vary";
-		const arrayElement1 = "utf-8";
-		const arrayElement2 = null;
-		const anon = [arrayElement, arrayElement1, arrayElement2]
-		const acceptsEncodingsReturnValue = await req1.acceptsEncodings(anon)
-		const req2 = req
-		const size = {}
-		const options = -902;
-		const anon1 = -60.263314104527694;
-		const rangeReturnValue = await req2.range(size, options, anon1)
-		const req3 = req
-		const acceptsCharsetsReturnValue = await req3.acceptsCharsets()
+		const app1 = app
+		const setting = "callback function required";
+		const anon = null;
+		const enabledReturnValue = await app1.enabled(setting, anon)
+		const app2 = app
+		const anon1 = null;
+		const anon2 = "statuses";
+		const arrayElement = 302;
+		const arrayElement1 = {}
+		const anon3 = [arrayElement, arrayElement1]
+		const enabledReturnValue1 = await app2.enabled(anon1, anon2, anon3)
+		const app3 = app
+		const listenReturnValue = await app3.listen()
+		const app4 = app
+		const localName = () => {};
+		const arrayElement2 = {}
+		const arrayElement3 = {}
+		const paramReturnValue = await app4.param(localName, arrayElement2, arrayElement3)
+		const app5 = app
+		const localName1 = -695;
+		const options = {}
+		const callback = () => {};
+		const renderReturnValue = await app5.render(localName1, options, callback)
 		
 	})
 })

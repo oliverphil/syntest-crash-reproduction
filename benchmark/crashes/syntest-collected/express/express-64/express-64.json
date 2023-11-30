@@ -1,1 +1,1 @@
-{"issueNumber":"express-64","info":"TypeError: The \"path\" argument must be of type string. Received type number","dependencies":{},"requireCrashDependency":true,"crashId":"express-64"}
+{"issueNumber":"express-64","info":"TypeError: Cannot read properties of undefined (reading 'referrer')","dependencies":{},"requireCrashDependency":true,"crashId":"express-64"}

@@ -22,39 +22,149 @@ import {prng} from "@syntest/prng";
 import {JavaScriptSubject} from "./JavaScriptSubject";
 import StackErrorObjectiveFunction from "./objective/StackErrorObjectiveFunction";
 import StackFrameObjectiveFunction from "./objective/StackFrameObjectiveFunction";
-import {ObjectiveFunction} from "../../../../../syntest-core/libraries/search";
+import {
+    ApproachLevelCalculator,
+    ControlFlowPath,
+    ObjectiveFunction, PathObjectiveFunction
+} from "@syntest/search";
 import {JavaScriptTestCase} from "../testcase/JavaScriptTestCase";
 import {TargetType} from "@syntest/analysis";
+import {ControlFlowProgram, ControlFlowFunction, EdgeType} from "@syntest/cfg";
+import {BranchDistanceCalculator} from "../criterion/BranchDistance";
 
 export class CrashSubject extends JavaScriptSubject {
-    constructor(target: Target, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[]) {
+    constructor(target: Target, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[],
+        controlFlowProgram: ControlFlowProgram,
+        approachLevelCalculator: ApproachLevelCalculator,
+        branchDistanceCalculator: BranchDistanceCalculator
+    ) {
         super(target, objectives);
         this.stackTrace = stackTrace;
         this.numStackObjectives = 0;
+        this.controlFlowProgram = controlFlowProgram;
+        this.approachLevelCalculator = approachLevelCalculator;
+        this.branchDistanceCalculator = branchDistanceCalculator;
         this._extractObjectives(objectives);
     }
+
+    private controlFlowProgram: ControlFlowProgram;
+    private approachLevelCalculator: ApproachLevelCalculator;
+    private branchDistanceCalculator: BranchDistanceCalculator;
 
     private stackTrace: StackTrace;
     public numStackObjectives: number;
 
     protected _extractObjectives(objectives): void {
-        if (this.stackTrace) {
-            for (const stackFrame of this.stackTrace.trace) {
-                const objective = new StackFrameObjectiveFunction(
-                    `stack-frame.${stackFrame.file}:${stackFrame.lineNumber}:${stackFrame.charNumber}`,
-                    this,
-                    stackFrame
-                );
-                objectives.push(objective);
-                this.numStackObjectives += 1;
+        const objs = new Set();
+        if (!this.stackTrace) return;
+        for (const cff of this.controlFlowProgram.functions) {
+            const paths = this.extractPathsFromFunction(cff);
+            for (const path of paths) {
+                // console.log(path);
+                // const frame = this.stackTrace.trace.find(frame => frame.method.includes(cff.name));
+                const frame = this.stackTrace.trace.find(frame => cff.id.includes(frame.file));
+                if (frame) {
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+                    // objectives.push(
+                    //     new StackFrameObjectiveFunction(
+                    //         `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                    //         this.controlFlowProgram,
+                    //         path,
+                    //         this.approachLevelCalculator,
+                    //         this.branchDistanceCalculator,
+                    //         this,
+                    //         frame
+                    //     )
+                    // );
+                    if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
+                        objectives.push(
+                            new PathObjectiveFunction(
+                                `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                                this.controlFlowProgram,
+                                path,
+                                this.approachLevelCalculator,
+                                this.branchDistanceCalculator
+                            )
+                        );
+                        objs.add(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`);
+                    }
+                }
+                // objectives.push(
+                //     new PathObjectiveFunction(
+                //         prng.uniqueId(),
+                //         cfp,
+                //         path,
+                //         approachLevelCalculator,
+                //         branchDistanceCalculator
+                //     )
+                // );
             }
-            objectives.push(new StackErrorObjectiveFunction(
-                `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
-                this,
-                this.stackTrace
-            ));
-            this.numStackObjectives += 1;
         }
-        this._objectives = objectives;
+        this.numStackObjectives = objs.size;
+        // if (this.stackTrace) {
+        //     for (const stackFrame of this.stackTrace.trace) {
+        //         const objective = new StackFrameObjectiveFunction(
+        //             `stack-frame.${stackFrame.file}:${stackFrame.lineNumber}:${stackFrame.charNumber}`,
+        //             this.controlFlowProgram,
+        //             this.controlFlowPath,
+        //             this.approachLevelCalculator,
+        //             this.branchDistanceCalculator,
+        //             this,
+        //             stackFrame
+        //         );
+        //         objectives.push(objective);
+        //         this.numStackObjectives += 1;
+        //     }
+        //     objectives.push(new StackErrorObjectiveFunction(
+        //         `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
+        //         this.controlFlowProgram,
+        //         this.controlFlowPath,
+        //         this.approachLevelCalculator,
+        //         this.branchDistanceCalculator,
+        //         this,
+        //         this.stackTrace
+        //     ));
+        //     this.numStackObjectives += 1;
+        // }
+        // this._objectives = objectives;
+    }
+
+    private extractPathsFromFunction(cff: ControlFlowFunction) {
+        const paths: ControlFlowPath[] = [];
+
+        const graph = cff.graph;
+        const queue: ControlFlowPath[] = [
+            new ControlFlowPath(undefined, [graph.entry.id]),
+        ];
+        while (queue.length > 0) {
+            const current = queue.shift();
+            const lastNodeId = current.last;
+            const outgoingEdges = graph.getOutgoingEdges(lastNodeId);
+
+            if (outgoingEdges.length === 0) {
+                paths.push(current);
+                continue;
+            }
+
+            for (const edge of outgoingEdges) {
+                if (edge.type !== EdgeType.BACK_EDGE && current.contains(edge.target)) {
+                    // skip going into the same node twice (unless we are on a backedge)
+                    continue;
+                }
+
+                const clone = current.clone();
+                clone.addNodeToPath(edge.target);
+
+                if (edge.type === EdgeType.CONDITIONAL_TRUE) {
+                    clone.setControlNode(lastNodeId, true);
+                } else if (edge.type === EdgeType.CONDITIONAL_FALSE) {
+                    clone.setControlNode(lastNodeId, false);
+                }
+
+                queue.push(clone);
+            }
+        }
+
+        return paths;
     }
 }

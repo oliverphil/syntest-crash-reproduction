@@ -15,30 +15,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {ObjectiveFunction} from "@syntest/search";
+import {
+    ApproachLevelCalculator,
+    BranchDistanceCalculator,
+    ControlFlowPath,
+    ObjectiveFunction,
+    PathObjectiveFunction
+} from "@syntest/search";
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
 import {SearchSubject} from "@syntest/search";
 import {StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import Fuse from "fuse.js";
+import {ControlFlowProgram} from "@syntest/cfg";
 
 
-class StackErrorObjectiveFunction extends ObjectiveFunction<JavaScriptTestCase> {
+class StackErrorObjectiveFunction extends PathObjectiveFunction<JavaScriptTestCase> {
     protected stackTrace: StackTrace;
     private fuzzySearch: Fuse<string>;
 
     constructor(
         id: string,
+        controlFlowProgram: ControlFlowProgram,
+        controlFlowPath: ControlFlowPath,
+        approachLevelCalculator: ApproachLevelCalculator,
+        branchDistanceCalculator: BranchDistanceCalculator,
         subject: SearchSubject<JavaScriptTestCase>,
         stackTrace: StackTrace
     ) {
-        super(id);
+        super(id, controlFlowProgram, controlFlowPath, approachLevelCalculator, branchDistanceCalculator);
         this.stackTrace = stackTrace;
         this.fuzzySearch = new Fuse([stackTrace.error.errorMessage], {
             threshold: 0.2
         });
     }
 
-    calculateDistance(encoding: JavaScriptTestCase): number {
+    override calculateDistance(encoding: JavaScriptTestCase): number {
         let distance = 1;
         if (encoding.getExecutionResult()?.getError()) {
             let actualExceptionString = encoding.getExecutionResult().getError().message;

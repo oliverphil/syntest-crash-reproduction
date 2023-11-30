@@ -1,1 +1,1 @@
-{"issueNumber":"express-80","info":"TypeError: The \"path\" argument must be of type string. Received type number","dependencies":{},"requireCrashDependency":true,"crashId":"express-80"}
+{"issueNumber":"express-80","info":"TypeError: Cannot set properties of undefined (setting '%s %o')","dependencies":{},"requireCrashDependency":true,"crashId":"express-80"}

@@ -1,13 +1,7 @@
-TypeError: encoding.toLowerCase is not a function
-    at specify (express/node_modules/negotiator/lib/encoding.js:119:47)
-    at getEncodingPriority (express/node_modules/negotiator/lib/encoding.js:102:16)
-    at getPriority (express/node_modules/negotiator/lib/encoding.js:150:12)
-    at Array.map (<anonymous>)
-    at preferredEncodings (express/node_modules/negotiator/lib/encoding.js:149:29)
-    at Negotiator.encodings (express/node_modules/negotiator/index.js:53:10)
-    at Accepts.apply [as encodings] (express/node_modules/accepts/index.js:143:26)
-    at IncomingMessage.req.acceptsEncodings (express/lib/request.js:4435:27)
-    at call (.syntest/tests/tempTest.spec.js:18:20)
+TypeError: Cannot read properties of undefined (reading '-1')
+    at Object.set (express/lib/application.js:363:50)
+    at Object.disable (express/lib/application.js:467:15)
+    at call (.syntest/tests/tempTest.spec.js:17:57)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
@@ -16,4 +10,4 @@ TypeError: encoding.toLowerCase is not a function
     at .syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:478:21)

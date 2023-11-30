@@ -1,1 +1,1 @@
-{"issueNumber":"express-86","info":"TypeError: The \"name\" argument must be of type string. Received an instance of Array","dependencies":{},"requireCrashDependency":true,"crashId":"express-86"}
+{"issueNumber":"express-86","info":"TypeError: Cannot read properties of undefined (reading 'secret')","dependencies":{},"requireCrashDependency":true,"crashId":"express-86"}

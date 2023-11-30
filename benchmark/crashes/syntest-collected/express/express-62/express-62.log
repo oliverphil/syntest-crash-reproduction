@@ -1,10 +1,7 @@
-TypeError: The "name" argument must be of type string. Received function localDefault
-    at new NodeError (node:internal/errors:405:5)
-    at validateString (node:internal/validators:162:11)
-    at ServerResponse.getHeader (node:_http_outgoing:715:3)
-    at ServerResponse.get (express/lib/response.js:15014:15)
-    at ServerResponse.append (express/lib/response.js:14862:47)
-    at call (.syntest/tests/tempTest.spec.js:76:23)
+TypeError: str.split is not a function
+    at Object.set (express/lib/application.js:363:50)
+    at Object.disable (express/lib/application.js:467:15)
+    at call (.syntest/tests/tempTest.spec.js:17:57)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
@@ -13,4 +10,4 @@ TypeError: The "name" argument must be of type string. Received function localDe
     at .syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:478:21)

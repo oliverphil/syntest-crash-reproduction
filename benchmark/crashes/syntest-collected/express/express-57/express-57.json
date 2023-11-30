@@ -1,1 +1,1 @@
-{"issueNumber":"express-57","info":"TypeError: The \"name\" argument must be of type string. Received type boolean","dependencies":{},"requireCrashDependency":true,"crashId":"express-57"}
+{"issueNumber":"express-57","info":"TypeError: unsupported trust argument","dependencies":{},"requireCrashDependency":true,"crashId":"express-57"}

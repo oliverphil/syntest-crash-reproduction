@@ -1,1 +1,1 @@
-{"issueNumber":"express-28","info":"TypeError: invalid media type","dependencies":{},"requireCrashDependency":true,"crashId":"express-28"}
+{"issueNumber":"express-28","info":"TypeError: Cannot set properties of undefined (setting 'false')","dependencies":{},"requireCrashDependency":true,"crashId":"express-28"}

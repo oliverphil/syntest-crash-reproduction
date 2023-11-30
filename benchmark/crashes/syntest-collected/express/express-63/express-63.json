@@ -1,1 +1,1 @@
-{"issueNumber":"express-63","info":"TypeError: The \"path\" argument must be of type string. Received type boolean","dependencies":{},"requireCrashDependency":true,"crashId":"express-63"}
+{"issueNumber":"express-63","info":"TypeError: Cannot read properties of null (reading 'indexOf')","dependencies":{},"requireCrashDependency":true,"crashId":"express-63"}

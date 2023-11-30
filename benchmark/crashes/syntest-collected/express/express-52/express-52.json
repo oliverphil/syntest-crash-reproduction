@@ -1,1 +1,1 @@
-{"issueNumber":"express-52","info":"TypeError: The \"name\" argument must be of type string. Received undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-52"}
+{"issueNumber":"express-52","info":"TypeError: Cannot read properties of undefined (reading 'IO83ORpd{A7a+<vi{5$1~ +Ka]^%Tr-')","dependencies":{},"requireCrashDependency":true,"crashId":"express-52"}

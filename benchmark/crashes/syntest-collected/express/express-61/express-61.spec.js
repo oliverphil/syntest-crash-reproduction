@@ -2,34 +2,23 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let res;
+	let normalizeTypes;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/response.js")];
-		(res = require("../instrumented/express/lib/response.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
+		({normalizeTypes} = require("../instrumented/express/lib/utils.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const res1 = res
-		const field = undefined;
-		const val = undefined;
-		const appendReturnValue = await res1.append(field, val)
-		const res2 = res
-		const val1 = undefined;
-		const anon = () => {};
-		const formatReturnValue = await res2.format(val1, anon)
-		const res3 = res
-		const toLowerCase = () => {};
-		const field1 = {
-			"toLowerCase": toLowerCase
-		}
-		const map = () => {};
-		const val2 = {
-			"map": map
-		}
-		const headerReturnValue = await res3.header(field1, val2)
+		const arrayElement = "-\t,c~q[#Rp!*A@P4%)y,";
+		const arrayElement1 = true;
+		const arrayElement2 = null;
+		const arrayElement3 = ".f*\"pXTY#1R^{OpE_O{W~Eu?%}{}^#%N:g3U'O~a;w&e'y1NJ\tSF@";
+		const types = [arrayElement, arrayElement1, arrayElement2, arrayElement3]
+		const anon = "Request aborted";
+		const normalizeTypesReturnValue = await normalizeTypes(types, anon)
 		
 	})
 })

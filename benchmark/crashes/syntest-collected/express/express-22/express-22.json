@@ -1,1 +1,1 @@
-{"issueNumber":"express-22","info":"TypeError: Header name must be a valid HTTP token [\"{ toLowerCase: [Function: toLowerCase] }\"]","dependencies":{},"requireCrashDependency":true,"crashId":"express-22"}
+{"issueNumber":"express-22","info":"TypeError: Cannot read properties of undefined (reading 'oJ?r')","dependencies":{},"requireCrashDependency":true,"crashId":"express-22"}

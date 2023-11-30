@@ -1,1 +1,1 @@
-{"issueNumber":"express-15","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-15"}
+{"issueNumber":"express-15","info":"TypeError: this.on is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-15"}

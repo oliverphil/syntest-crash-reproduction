@@ -13,14 +13,26 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const res1 = res
-		const code = "Ni=(CzN[kBz:N6l!sOv#7Y9Q[4GRbv}:=ai) +rkQVJ&2@K§fzxM:C0eF&ZN>I<,5~Ejsu3@\nOmb\\6YOE}oN";
+		const code = null;
 		const localStatusReturnValue = await res1.status(code)
 		const res2 = res
-		const arrayElement = null;
-		const arrayElement1 = {}
-		const statusCode = [arrayElement, arrayElement1]
-		const anon = "array-flatten";
-		const getReturnValue = await res2.get(statusCode, anon)
+		const localName = "3f;gNI'ZX*!oRU6q§|d?[ F`?Qso*C}c§\"AO!V)oI,~k6W\\7,?i\"(QP$UwzY9K'\t/3Ygta<kHP+(";
+		const options = 204;
+		const clearCookieReturnValue = await res2.clearCookie(localName, options)
+		const res3 = res
+		const toLowerCase = () => {};
+		const field = {
+			"toLowerCase": toLowerCase
+		}
+		const arrayElement = true;
+		const arrayElement1 = "json escape";
+		const val = [arrayElement, arrayElement1]
+		const anon = -960.7333600287963;
+		const headerReturnValue = await res3.header(field, val, anon)
+		const res4 = res
+		const arrayElement2 = true;
+		const options1 = "protocol";
+		const clearCookieReturnValue1 = await res4.clearCookie(arrayElement2, options1)
 		
 	})
 })

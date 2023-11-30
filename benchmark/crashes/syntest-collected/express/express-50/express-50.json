@@ -1,1 +1,1 @@
-{"issueNumber":"express-50","info":"TypeError: The \"name\" argument must be of type string. Received null","dependencies":{},"requireCrashDependency":true,"crashId":"express-50"}
+{"issueNumber":"express-50","info":"TypeError: The argument 'options' must have the property \"port\" or \"path\". Received [ 60, {}, `be#=axcmUts1tR1Ny=+cg@9Ys.#-u'vI==a?^Gfy\"JkhVYHi!` ]","dependencies":{},"requireCrashDependency":true,"crashId":"express-50"}

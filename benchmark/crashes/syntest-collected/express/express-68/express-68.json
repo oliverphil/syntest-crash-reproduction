@@ -1,1 +1,1 @@
-{"issueNumber":"express-68","info":"TypeError: note.lastIndexOf is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-68"}
+{"issueNumber":"express-68","info":"TypeError: Cannot set properties of undefined (setting 'function anon() {}')","dependencies":{},"requireCrashDependency":true,"crashId":"express-68"}

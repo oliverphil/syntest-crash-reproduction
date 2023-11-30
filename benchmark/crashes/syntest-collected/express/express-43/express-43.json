@@ -1,1 +1,1 @@
-{"issueNumber":"express-43","info":"TypeError: charset.toLowerCase is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-43"}
+{"issueNumber":"express-43","info":"TypeError: Cannot set properties of undefined (setting '?')","dependencies":{},"requireCrashDependency":true,"crashId":"express-43"}

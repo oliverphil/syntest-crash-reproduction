@@ -1,9 +1,7 @@
-TypeError: The "name" argument must be of type string. Received an instance of Array
-    at new NodeError (node:internal/errors:405:5)
-    at validateString (node:internal/validators:162:11)
-    at ServerResponse.getHeader (node:_http_outgoing:715:3)
-    at ServerResponse.jsonp [as get] (express/lib/response.js:15014:15)
-    at call (.syntest/tests/tempTest.spec.js:23:39)
+TypeError: Cannot read properties of undefined (reading 'secret')
+    at Object.set (express/lib/application.js:357:25)
+    at Object.set [as enabled] (express/lib/application.js:424:23)
+    at call (.syntest/tests/tempTest.spec.js:21:42)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

@@ -2,18 +2,23 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let compileTrust;
+	let app;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		({compileTrust} = require("../instrumented/express/lib/utils.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
+		(app = require("../instrumented/express/lib/application.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const val = "\n";
-		const compileTrustReturnValue = await compileTrust(val)
+		const app1 = app
+		const anon = {}
+		const anon1 = 200;
+		const pathReturnValue = await app1.path(anon, anon1)
+		const app2 = app
+		const anon2 = {}
+		const enabledReturnValue = await app2.enabled(anon2)
 		
 	})
 })

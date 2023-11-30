@@ -1,1 +1,1 @@
-{"issueNumber":"express-51","info":"TypeError: The \"name\" argument must be of type string. Received type boolean","dependencies":{},"requireCrashDependency":true,"crashId":"express-51"}
+{"issueNumber":"express-51","info":"TypeError: Cannot set properties of undefined (setting '3')","dependencies":{},"requireCrashDependency":true,"crashId":"express-51"}
