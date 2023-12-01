@@ -1,1 +1,1 @@
-{"issueNumber":"commander-13","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"commander-13"}
+{"issueNumber":"commander-13","info":"TypeError: Cannot read properties of undefined (reading 'options')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-13"}

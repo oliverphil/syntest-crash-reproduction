@@ -3,88 +3,31 @@ require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
 	let Help;
-	let Option;
+	let CommanderError;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
 		delete require.cache[require.resolve("../instrumented/commanderjs/lib/help.js")];
-		delete require.cache[require.resolve("../instrumented/commanderjs/lib/option.js")];
+		delete require.cache[require.resolve("../instrumented/commanderjs/lib/error.js")];
 		({Help} = require("../instrumented/commanderjs/lib/help.js"));
-		({Option} = require("../instrumented/commanderjs/lib/option.js"));
+		({CommanderError} = require("../instrumented/commanderjs/lib/error.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const anon = -70;
+		const anon = "Remaining arguments: ";
 		const localHelp = new Help(anon)
-		const arrayElement = () => {};
-		const arrayElement1 = null;
-		const args = [arrayElement, arrayElement1]
-		const localName = -546;
-		const arrayElement2 = "R9HPBRWpHS#P~P§,C/jo%ID-'IcjKlZ/(QzvM±H6*";
-		const arrayElement3 = false;
-		const aliases = [arrayElement2, arrayElement3]
-		const options = null;
-		const cmd = {
-			"_args": args,
-			"_name": localName,
-			"_aliases": aliases,
-			"options": options
-		}
-		const subcommandTermReturnValue = await localHelp.subcommandTerm(cmd)
-		const localHelp1 = new Help()
-		const arrayElement4 = () => {};
-		const arrayElement5 = null;
-		const args1 = [arrayElement4, arrayElement5]
-		const localName1 = -546;
-		const arrayElement6 = "R9HPBRWpHS#P~P§,C/jo%ID-'IcjKlZ/(QzvM±H6*";
-		const arrayElement7 = false;
-		const aliases1 = [arrayElement6, arrayElement7]
-		const options1 = null;
-		const cmd1 = {
-			"_args": args1,
-			"_name": localName1,
-			"_aliases": aliases1,
-			"options": options1
-		}
-		const optionDescriptionReturnValue = await localHelp1.optionDescription(cmd1)
-		const anon1 = -70;
-		const localHelp2 = new Help(anon1)
-		const arrayElement8 = () => {};
-		const arrayElement9 = null;
-		const args2 = [arrayElement8, arrayElement9]
-		const localName2 = -546;
-		const arrayElement10 = "R9HPBRWpHS#P~P§,C/jo%ID-'IcjKlZ/(QzvM±H6*";
-		const arrayElement11 = false;
-		const aliases2 = [arrayElement10, arrayElement11]
-		const options2 = null;
-		const cmd2 = {
-			"_args": args2,
-			"_name": localName2,
-			"_aliases": aliases2,
-			"options": options2
-		}
-		const arrayElement12 = () => {};
-		const arrayElement13 = null;
-		const args3 = [arrayElement12, arrayElement13]
-		const localName3 = -546;
-		const arrayElement14 = "R9HPBRWpHS#P~P§,C/jo%ID-'IcjKlZ/(QzvM±H6*";
-		const arrayElement15 = false;
-		const aliases3 = [arrayElement14, arrayElement15]
-		const options3 = null;
-		const cmd3 = {
-			"_args": args3,
-			"_name": localName3,
-			"_aliases": aliases3,
-			"options": options3
-		}
-		const arrayElement16 = () => {};
-		const formatHelpReturnValue = await localHelp2.formatHelp(cmd2, cmd3, arrayElement16)
-		const localHelp3 = new Help()
-		const arrayElement17 = "R9HPBRWpHS#P~P§,C/jo%ID-'IcjKlZ/(QzvM±H6*";
-		const description = false;
-		const cmd4 = new Option(arrayElement17, description)
-		const subcommandDescriptionReturnValue = await localHelp3.subcommandDescription(cmd4)
+		const cmd = null;
+		const helper = new Help()
+		const anon1 = undefined;
+		const anon2 = "--message <value>";
+		const longestArgumentTermLengthReturnValue = await localHelp.longestArgumentTermLength(cmd, helper, anon1, anon2)
+		const helper1 = new Help()
+		const exitCode = () => {};
+		const code = "J($X$Bk'+$ci0)}G±ro3§|%XJh:fse0~gC`WqE_%;%X6(s2C~%/w!K]#Xj~R^Z?I#foFON{o[!H]5b\"\n*qdqM72±8Q>!9`a±?";
+		const cmd1 = null;
+		const argument = new CommanderError(exitCode, code, cmd1)
+		const argumentTermReturnValue = await helper1.argumentTerm(argument)
 		
 	})
 })

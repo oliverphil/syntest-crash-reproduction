@@ -1,36 +1,41 @@
 // Imports
 require = require('esm')(module)
-import breadthFirstSearch from "../instrumented/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js";
+import HeapSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js";
+import depthFirstSearch from "../instrumented/javascript-algorithms/src/algorithms/graph/depth-first-search/depthFirstSearch.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const getNeighbors = "../../../data-structures/graph/Graph";
-		const graph = {
+		const graph = false;
+		const startVertex = null;
+		const anon = 2.718281828459045;
+		const callbacks = new HeapSort(anon)
+		const depthFirstSearchReturnValue = await depthFirstSearch(graph, startVertex, callbacks)
+		const anon1 = 2.718281828459045;
+		const callbacks1 = new HeapSort(anon1)
+		const forEach = () => {};
+		const originalArray = {
+			"forEach": forEach
+		}
+		const startVertex1 = null;
+		const arrayElement = -74;
+		const startVertex2 = null;
+		const anon2 = [arrayElement, startVertex2]
+		const sortReturnValue = await callbacks1.sort(originalArray, startVertex1, anon2)
+		const getNeighbors = () => {};
+		const graph1 = {
 			"getNeighbors": getNeighbors
 		}
-		const startVertex = -868.3947249996984;
-		const originalCallbacks = {}
-		const breadthFirstSearchReturnValue = await breadthFirstSearch(graph, startVertex, originalCallbacks)
-		const getNeighbors1 = "../../../data-structures/graph/Graph";
-		const graph1 = {
-			"getNeighbors": getNeighbors1
+		const anon3 = 2.718281828459045;
+		const callbacks2 = {}
+		const depthFirstSearchReturnValue1 = await depthFirstSearch(graph1, anon3, callbacks2)
+		const anon4 = 2.718281828459045;
+		const callbacks3 = new HeapSort(anon4)
+		const forEach1 = () => {};
+		const originalArray1 = {
+			"forEach": forEach1
 		}
-		const arrayElement = "h~mHn5Og%*Oz^/i9vp':YbM`J(A]t.hva[&!._k<Ho\"tmT";
-		const getNeighbors2 = "../../../data-structures/graph/Graph";
-		const graph2 = {
-			"getNeighbors": getNeighbors2
-		}
-		const arrayElement1 = "../../../data-structures/graph/GraphVertex";
-		const startVertex1 = [arrayElement, graph2, arrayElement1]
-		const originalCallbacks1 = {}
-		const originalCallbacks2 = {}
-		const anon = "Prim's algorithms works only for undirected graphs";
-		const breadthFirstSearchReturnValue1 = await breadthFirstSearch(graph1, startVertex1, originalCallbacks1, originalCallbacks2, anon)
-		const graph3 = null;
-		const startVertex2 = "XX5nXsB]))Em}8<2/pV\ntY##PgeoO§rw";
-		const originalCallbacks3 = {}
-		const breadthFirstSearchReturnValue2 = await breadthFirstSearch(graph3, startVertex2, originalCallbacks3)
+		const sortReturnValue1 = await callbacks3.sort(originalArray1)
 		
 	})
 })

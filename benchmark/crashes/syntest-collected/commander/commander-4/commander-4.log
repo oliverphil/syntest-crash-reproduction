@@ -1,7 +1,7 @@
-RangeError: Invalid count value
-    at Help.visibleArguments (commanderjs/lib/help.js:5600:66)
-    at Help.longestArgumentTermLength (commanderjs/lib/help.js:5733:19)
-    at call (.syntest/tests/tempTest.spec.js:19:64)
+TypeError: flags.split is not a function
+    at splitOptionFlags (commanderjs/lib/option.js:198:79)
+    at new _context (commanderjs/lib/option.js:27:75)
+    at call (.syntest/tests/tempTest.spec.js:23:19)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
@@ -10,4 +10,4 @@ RangeError: Invalid count value
     at .syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:478:21)

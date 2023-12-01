@@ -1,1 +1,1 @@
-{"issueNumber":"moment-7","info":"TypeError: Cannot create property '_isValid' on string 'year'","dependencies":{},"requireCrashDependency":true,"crashId":"moment-7"}
+{"issueNumber":"moment-7","info":"TypeError: Cannot set properties of undefined (setting '_isAMomentObject')","dependencies":{},"requireCrashDependency":true,"crashId":"moment-7"}

@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-3","info":"TypeError: Cannot create property 'compareCallback' on boolean 'true'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-3"}
+{"issueNumber":"javascript-algorithms-3","info":"TypeError: Cannot create property 'compareCallback' on string '_Mq--bIEx'^ZSN'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-3"}

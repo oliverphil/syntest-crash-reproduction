@@ -1,1 +1,1 @@
-{"issueNumber":"commander-27","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"commander-27"}
+{"issueNumber":"commander-27","info":"Error: first parameter to parse must be array or undefined","dependencies":{},"requireCrashDependency":true,"crashId":"commander-27"}

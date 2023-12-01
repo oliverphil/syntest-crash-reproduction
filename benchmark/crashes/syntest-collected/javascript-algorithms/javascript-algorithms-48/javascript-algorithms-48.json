@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-48","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-48"}
+{"issueNumber":"javascript-algorithms-48","info":"TypeError: Cannot create property 'allowTraversal' on boolean 'false'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-48"}

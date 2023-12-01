@@ -1,35 +1,33 @@
 // Imports
 require = require('esm')(module)
-import {add} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
-import {generate} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
-import {mul} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
-import {t} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import GraphEdge from "../instrumented/javascript-algorithms/src/data-structures/graph/GraphEdge.js";
+import bellmanFord from "../instrumented/javascript-algorithms/src/algorithms/graph/bellman-ford/bellmanFord.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const localLength = -1;
-		const m = {
-			"length": localLength
+		const getAllVertices = () => {};
+		const getVertexByKey = () => {};
+		const getNeighbors = () => {};
+		const findEdge = () => {};
+		const graph = {
+			"getAllVertices": getAllVertices,
+			"getVertexByKey": getVertexByKey,
+			"getNeighbors": getNeighbors,
+			"findEdge": findEdge
 		}
-		const tReturnValue = await t(m)
-		const mShape = []
-		const fill = () => {};
-		const anon = false;
-		const generateReturnValue = await generate(mShape, fill, anon)
-		const a = []
-		const b = () => {};
-		const anon1 = 978.5184803474604;
-		const mulReturnValue = await mul(a, b, anon1)
-		const arrayElement = 0;
-		const arrayElement1 = 552.332011835095;
-		const arrayElement2 = -500;
-		const arrayElement3 = 1;
-		const a1 = [arrayElement, arrayElement1, arrayElement2, arrayElement3]
-		const arrayElement4 = 793;
-		const arrayElement5 = "../../../data-structures/queue/Queue";
-		const b1 = [arrayElement4, arrayElement5]
-		const addReturnValue = await add(a1, b1)
+		const startVertex = undefined;
+		const endVertex = "\t\nQP@QetI9U3jS%O%53?yE^;'IWmha2t$3,{[./nyz43yr@";
+		const assignment = -507.91503303511786;
+		const anon = undefined;
+		const startVertex1 = new GraphEdge(startVertex, endVertex, assignment, anon)
+		const bellmanFordReturnValue = await bellmanFord(graph, startVertex1)
+		const startVertex2 = undefined;
+		const endVertex1 = "\t\nQP@QetI9U3jS%O%53?yE^;'IWmha2t$3,{[./nyz43yr@";
+		const assignment1 = -507.91503303511786;
+		const anon1 = undefined;
+		const startVertex3 = new GraphEdge(startVertex2, endVertex1, assignment1, anon1)
+		const localToStringReturnValue = await startVertex3.toString()
 		
 	})
 })

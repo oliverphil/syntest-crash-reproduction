@@ -1,1 +1,1 @@
-{"issueNumber":"commander-21","info":"TypeError: object is not iterable","dependencies":{},"requireCrashDependency":true,"crashId":"commander-21"}
+{"issueNumber":"commander-21","info":"TypeError: Cannot read properties of undefined (reading 'filter')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-21"}

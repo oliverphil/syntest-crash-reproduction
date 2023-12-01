@@ -1,9 +1,15 @@
-TypeError: number -200.47925954084167 is not iterable
-    at Help.visibleOptions (commanderjs/lib/help.js:5475:67)
-    at Help.anon3 [as longestOptionTermLength] (commanderjs/lib/help.js:5715:19)
-    at call (.syntest/tests/tempTest.spec.js:27:9)
+TypeError: arg.name is not a function
+    at humanReadableArgName (commanderjs/lib/argument.js:141:26)
+    at map (commanderjs/lib/help.js:121:126)
+    at Array.map (<anonymous>)
+    at Help.subcommandTerm (commanderjs/lib/help.js:121:55)
+    at call (.syntest/tests/tempTest.spec.js:27:19)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
+    at .syntest/tests/tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at processImmediate (node:internal/timers:478:21)

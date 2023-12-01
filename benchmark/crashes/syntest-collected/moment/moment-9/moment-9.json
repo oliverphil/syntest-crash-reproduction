@@ -1,1 +1,1 @@
-{"issueNumber":"moment-9","info":"TypeError: Cannot create property '_pf' on boolean 'true'","dependencies":{},"requireCrashDependency":true,"crashId":"moment-9"}
+{"issueNumber":"moment-9","info":"TypeError: _hooks.hooks.now is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"moment-9"}

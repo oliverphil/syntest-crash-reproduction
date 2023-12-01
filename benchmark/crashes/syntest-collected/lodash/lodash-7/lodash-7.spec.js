@@ -5,28 +5,27 @@ import hasPath from "../instrumented/lodash/hasPath.js";
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const object = null;
-		const arrayElement = () => {};
-		const arrayElement1 = -155;
-		const arrayElement2 = undefined;
-		const path = [arrayElement, arrayElement1, arrayElement2]
-		const arrayElement3 = "./.internal/castPath.js";
-		const arrayElement4 = "./isArguments.js";
-		const anon = [arrayElement3, arrayElement4]
-		const anon1 = "y%<<xpbiRU!3'A}]<";
-		const hasPathReturnValue = await hasPath(object, path, anon, anon1)
-		const anon2 = "y%<<xpbiRU!3'A}]<";
-		const path1 = {}
-		const hasPathReturnValue1 = await hasPath(anon2, path1)
-		const localLength = -917;
-		const object1 = {
+		const localLength = 8;
+		const object = {
 			"length": localLength
 		}
-		const path2 = 953.0907619382115;
-		const hasPathReturnValue2 = await hasPath(object1, path2)
-		const arrayElement5 = "./.internal/castPath.js";
-		const path3 = {}
-		const hasPathReturnValue3 = await hasPath(arrayElement5, path3)
+		const path = "~P&~Kk8},Drf'sx;D=2pL`±,{CVDsbPxr<!Q|D(k|mQ4<l dz\nUA;i0C/*OPhirG5l?8q(*W]D{Q/# ";
+		const anon = "./.internal/baseSortedIndexBy.js";
+		const hasPathReturnValue = await hasPath(object, path, anon)
+		const object1 = null;
+		const localLength1 = 8;
+		const object2 = {
+			"length": localLength1
+		}
+		const anon1 = "./.internal/baseSortedIndexBy.js";
+		const hasPathReturnValue1 = await hasPath(object1, object2, anon1)
+		const localLength2 = 8;
+		const object3 = {
+			"length": localLength2
+		}
+		const anon2 = "./.internal/baseSortedIndexBy.js";
+		const path1 = "~P&~Kk8},Drf'sx;D=2pL`±,{CVDsbPxr<!Q|D(k|mQ4<l dz\nUA;i0C/*OPhirG5l?8q(*W]D{Q/# ";
+		const hasPathReturnValue2 = await hasPath(object3, anon2, path1)
 		
 	})
 })

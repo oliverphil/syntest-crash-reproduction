@@ -1,0 +1,14 @@
+TypeError: this.keyCallback is not a function
+    at DisjointSetItem.getKey (javascript-algorithms/src/data-structures/disjoint-set/DisjointSetItem.js:20:19)
+    at DisjointSet.find (javascript-algorithms/src/data-structures/disjoint-set/DisjointSet.js:37:66)
+    at DisjointSet.union (javascript-algorithms/src/data-structures/disjoint-set/DisjointSet.js:54:27)
+    at _callee$ (.syntest/tests/tempTest.spec.js:20:17)
+    at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
+    at Generator.Promise [as next] (.syntest/tests/tempTest.spec.js:2:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
+    at _next (.syntest/tests/tempTest.spec.js:1:1)
+    at .syntest/tests/tempTest.spec.js:1:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:1:1)
+    at processImmediate (node:internal/timers:478:21)

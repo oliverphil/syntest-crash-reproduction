@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-20","info":"TypeError: Cannot read properties of null","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-20"}
+{"issueNumber":"javascript-algorithms-20","info":"TypeError: Cannot create property 'compareCallback' on number '-94'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-20"}

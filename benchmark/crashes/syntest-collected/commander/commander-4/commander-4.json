@@ -1,1 +1,1 @@
-{"issueNumber":"commander-4","info":"RangeError: Invalid count value","dependencies":{},"requireCrashDependency":true,"crashId":"commander-4"}
+{"issueNumber":"commander-4","info":"TypeError: flags.split is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"commander-4"}

@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-21","info":"RangeError: Invalid array length","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-21"}
+{"issueNumber":"javascript-algorithms-21","info":"TypeError: Cannot create property 'compareCallback' on string 'r$yiECn)'KXVB>5]\\]E%WQ%o!9l0J;2'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-21"}

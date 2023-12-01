@@ -1,9 +1,16 @@
-TypeError: Cannot read properties of undefined
-    at Help.visibleOptions (commanderjs/lib/help.js:5475:67)
-    at Help.longestOptionTermLength (commanderjs/lib/help.js:5715:19)
-    at Help.padWidth (commanderjs/lib/help.js:6120:28)
-    at Help.formatHelp (commanderjs/lib/help.js:5984:58)
-    at call (.syntest/tests/tempTest.spec.js:32:35)
+Error: first parameter to parse must be array or undefined
+    at Command._prepareUserArgs (commanderjs/lib/command.js:877:13)
+    at Command.call (commanderjs/lib/command.js:973:27)
+    at tryCatch (commanderjs/lib/command.js:2:1)
+    at Generator._invoke (commanderjs/lib/command.js:2:1)
+    at Generator.next (commanderjs/lib/command.js:2:1)
+    at asyncGeneratorStep (commanderjs/lib/command.js:2:1)
+    at _next (commanderjs/lib/command.js:2:1)
+    at commanderjs/lib/command.js:2:1
+    at new Promise (<anonymous>)
+    at Command.apply (commanderjs/lib/command.js:2:1)
+    at Command.parseAsync (commanderjs/lib/command.js:977:4)
+    at call (.syntest/tests/tempTest.spec.js:30:4)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

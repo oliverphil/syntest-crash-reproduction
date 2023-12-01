@@ -1,8 +1,9 @@
 TypeError: iteratee is not a function
-    at iteratee (lodash/transform.js:816:12)
-    at arrayEach (lodash/.internal/arrayEach.js:14:9)
-    at array (lodash/transform.js:813:99)
-    at call (.syntest/tests/tempTest.spec.js:14:40)
+    at iteratee (lodash/transform.js:55:60)
+    at baseFor (lodash/.internal/baseFor.js:20:9)
+    at baseForOwn (lodash/.internal/baseForOwn.js:13:27)
+    at transform (lodash/transform.js:54:264)
+    at call (.syntest/tests/tempTest.spec.js:18:60)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

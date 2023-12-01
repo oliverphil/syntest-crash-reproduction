@@ -1,19 +1,17 @@
 // Imports
 require = require('esm')(module)
-import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
+import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
+import ShellSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/shell-sort/ShellSort.js";
+import floydWarshall from "../instrumented/javascript-algorithms/src/algorithms/graph/floyd-warshall/floydWarshall.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const possibleItems = "../../sorting/quick-sort/QuickSort";
-		const weightLimit = true;
-		const knapsack = new Knapsack(possibleItems, weightLimit)
-		const solveUnboundedKnapsackProblemReturnValue = await knapsack.solveUnboundedKnapsackProblem()
-		const possibleItems1 = undefined;
-		const weightLimit1 = "±#0 >x&~K?b";
-		const knapsack1 = new Knapsack(possibleItems1, weightLimit1)
-		const anon = 1;
-		const solveZeroOneKnapsackProblemReturnValue = await knapsack1.solveZeroOneKnapsackProblem(anon)
+		const assignment = false;
+		const graph = new Graph(assignment)
+		const anon = 622;
+		const anon1 = new ShellSort(anon)
+		const floydWarshallReturnValue = await floydWarshall(graph, anon1)
 		
 	})
 })

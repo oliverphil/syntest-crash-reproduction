@@ -1,1 +1,1 @@
-{"issueNumber":"moment-1","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"moment-1"}
+{"issueNumber":"moment-1","info":"TypeError: _hooks.hooks.now is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"moment-1"}

@@ -1,0 +1,1 @@
+{"issueNumber":"javascript-algorithms-169","info":"TypeError: Cannot create property 'compareCallback' on string 'Either dataSet or labels or toClassify were not set'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-169"}

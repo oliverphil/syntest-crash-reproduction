@@ -1,24 +1,31 @@
 // Imports
 require = require('esm')(module)
-import CountingSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js";
-import RedBlackTree from "../instrumented/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js";
-import {updateCellAtIndex} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
-import {walk} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
+import GraphEdge from "../instrumented/javascript-algorithms/src/data-structures/graph/GraphEdge.js";
+import QueenPosition from "../instrumented/javascript-algorithms/src/algorithms/uncategorized/n-queens/QueenPosition.js";
+import RadixSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js";
+import ShellSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/shell-sort/ShellSort.js";
+import floydWarshall from "../instrumented/javascript-algorithms/src/algorithms/graph/floyd-warshall/floydWarshall.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const arrayElement = "0gWeTYTE4 <dA±S*3t|Vo3bn-[09t]%?7u|C'N7DD:x";
-		const m = [arrayElement]
-		const localVisit = 356.63431802293644;
-		const walkReturnValue = await walk(m, localVisit)
-		const anon = () => {};
-		const m1 = new RedBlackTree(anon)
-		const cellIndices = "<8g_ShBDOvBcke+Pi%1P#o\nOOC'5+V7KV nyW\t±GWDy";
-		const cellValue = -925.052589602521;
-		const localVisit1 = 356.63431802293644;
-		const anon1 = new CountingSort(localVisit1)
-		const updateCellAtIndexReturnValue = await updateCellAtIndex(m1, cellIndices, cellValue, anon1)
+		const assignment = false;
+		const graph = new Graph(assignment)
+		const arrayElement = 366;
+		const anon = new ShellSort(arrayElement)
+		const floydWarshallReturnValue = await floydWarshall(graph, anon)
+		const assignment1 = true;
+		const graph1 = new Graph(assignment1)
+		const rowIndex = "99FB±'i$";
+		const anon1 = null;
+		const columnIndex = new RadixSort(anon1)
+		const startVertex = new QueenPosition(rowIndex, columnIndex)
+		const endVertex = () => {};
+		const assignment2 = 135;
+		const anon2 = 26;
+		const edge = new GraphEdge(startVertex, endVertex, assignment2, anon2)
+		const deleteEdgeReturnValue = await graph1.deleteEdge(edge)
 		
 	})
 })

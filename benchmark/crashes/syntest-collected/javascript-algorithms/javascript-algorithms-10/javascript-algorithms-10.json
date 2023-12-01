@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-10","info":"TypeError: Cannot create property 'allowTraversal' on number '3.141592653589793'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-10"}
+{"issueNumber":"javascript-algorithms-10","info":"TypeError: Cannot create property 'compareCallback' on number '0.49999'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-10"}

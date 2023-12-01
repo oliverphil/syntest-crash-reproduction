@@ -1,51 +1,31 @@
 // Imports
 require = require('esm')(module)
-import RedBlackTree from "../instrumented/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js";
-import kruskal from "../instrumented/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js";
+import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
+import GraphEdge from "../instrumented/javascript-algorithms/src/data-structures/graph/GraphEdge.js";
+import QueenPosition from "../instrumented/javascript-algorithms/src/algorithms/uncategorized/n-queens/QueenPosition.js";
+import RadixSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js";
+import ShellSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/shell-sort/ShellSort.js";
+import floydWarshall from "../instrumented/javascript-algorithms/src/algorithms/graph/floyd-warshall/floydWarshall.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const isDirected = false;
-		const getAllEdges = () => {};
-		const getAllVertices = () => {};
-		const graph = {
-			"isDirected": isDirected,
-			"getAllEdges": getAllEdges,
-			"getAllVertices": getAllVertices
-		}
-		const anon = {}
-		const anon1 = new RedBlackTree(anon)
-		const kruskalReturnValue = await kruskal(graph, anon1)
-		const anon2 = {}
-		const anon3 = {}
-		const anon4 = {}
-		const isDirected1 = false;
-		const getAllEdges1 = () => {};
-		const getAllVertices1 = () => {};
-		const graph1 = {
-			"isDirected": isDirected1,
-			"getAllEdges": getAllEdges1,
-			"getAllVertices": getAllVertices1
-		}
-		const kruskalReturnValue1 = await kruskal(anon2, anon3, anon4, graph1)
-		const anon5 = {}
-		const anon6 = new RedBlackTree(anon5)
-		const localParent = 1;
-		const right = undefined;
-		const setRight = () => {};
-		const grandParentNode = {
-			"parent": localParent,
-			"right": right,
-			"setRight": setRight
-		}
-		const anon7 = null;
-		const anon8 = -807;
-		const rightRightRotationReturnValue = await anon6.rightRightRotation(grandParentNode, anon7, anon8)
-		const anon9 = {}
-		const anon10 = new RedBlackTree(anon9)
-		const node = "Matrices have different dimensions";
-		const makeNodeRedReturnValue = await anon10.makeNodeRed(node)
+		const assignment = false;
+		const graph = new Graph(assignment)
+		const rowIndex = "99FB±'i$";
+		const anon = new ShellSort(rowIndex)
+		const floydWarshallReturnValue = await floydWarshall(graph, anon)
+		const assignment1 = false;
+		const graph1 = new Graph(assignment1)
+		const rowIndex1 = "99FB±'i$";
+		const anon1 = 986;
+		const columnIndex = new RadixSort(anon1)
+		const startVertex = new QueenPosition(rowIndex1, columnIndex)
+		const endVertex = () => {};
+		const assignment2 = 135;
+		const anon2 = 26;
+		const edge = new GraphEdge(startVertex, endVertex, assignment2, anon2)
+		const deleteEdgeReturnValue = await graph1.deleteEdge(edge)
 		
 	})
 })

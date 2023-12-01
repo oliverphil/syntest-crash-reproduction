@@ -1,28 +1,31 @@
 // Imports
 require = require('esm')(module)
-import KnapsackItem from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/KnapsackItem.js";
-import {generate} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
-import {getCellAtIndex} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
+import breadthFirstSearch from "../instrumented/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const arrayElement = 779.4034884992782;
-		const arrayElement1 = 1;
-		const arrayElement2 = 881;
-		const arrayElement3 = 650.1963399019185;
-		const mShape = [arrayElement, arrayElement1, arrayElement2, arrayElement3]
-		const fill = () => {};
-		const anon = -1;
-		const generateReturnValue = await generate(mShape, fill, anon)
-		const objectPattern = {}
-		const anon1 = false;
-		const m = new KnapsackItem(objectPattern, anon1)
-		const cellIndices = "§Lv<X>+/=§[{J=J4(\"Z]:c^:<Bf+x";
-		const arrayElement4 = 650.1963399019185;
-		const anon2 = "Matrix is not of 2D shape";
-		const fill1 = () => {};
-		const getCellAtIndexReturnValue = await getCellAtIndex(m, cellIndices, arrayElement4, anon2, fill1)
+		const getNeighbors = () => {};
+		const graph = {
+			"getNeighbors": getNeighbors
+		}
+		const startVertex = undefined;
+		const originalCallbacks = "ZnIhts.a|>w*AH@m&&6±73[%xye|R(9y";
+		const breadthFirstSearchReturnValue = await breadthFirstSearch(graph, startVertex, originalCallbacks)
+		const getNeighbors1 = () => {};
+		const graph1 = {
+			"getNeighbors": getNeighbors1
+		}
+		const startVertex1 = "Item not found in the tree";
+		const originalCallbacks1 = {}
+		const anon = null;
+		const breadthFirstSearchReturnValue1 = await breadthFirstSearch(graph1, startVertex1, originalCallbacks1, anon)
+		const assignment = false;
+		const graph2 = new Graph(assignment)
+		const startVertex2 = "../longest-common-subsequence/longestCommonSubsequence";
+		const originalCallbacks2 = undefined;
+		const breadthFirstSearchReturnValue2 = await breadthFirstSearch(graph2, startVertex2, originalCallbacks2)
 		
 	})
 })

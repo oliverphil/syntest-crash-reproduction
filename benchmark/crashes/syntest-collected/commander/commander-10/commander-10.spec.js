@@ -13,9 +13,18 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const localHelp = new Help()
-		const cmd = 520;
-		const helper = new Help()
-		const padWidthReturnValue = await localHelp.padWidth(cmd, helper)
+		const cmd = undefined;
+		const anon = () => {};
+		const helper = new Help(anon)
+		const anon1 = "y>0 :PN_ Q4#$Z<7*>Z}A*M§SF±.k;:q'&H&3f,pRtv \ns K<-8jE<O/§W=DhU.[zN2&/sdI.^PY8J$z^p({±l$D9RZSqbW";
+		const longestArgumentTermLengthReturnValue = await localHelp.longestArgumentTermLength(cmd, helper, anon1)
+		const anon2 = () => {};
+		const helper1 = new Help(anon2)
+		const description = () => {};
+		const cmd1 = {
+			"description": description
+		}
+		const commandDescriptionReturnValue = await helper1.commandDescription(cmd1)
 		
 	})
 })

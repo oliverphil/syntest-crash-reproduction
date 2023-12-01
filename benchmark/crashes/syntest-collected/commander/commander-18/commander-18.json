@@ -1,1 +1,1 @@
-{"issueNumber":"commander-18","info":"TypeError: flags.split is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"commander-18"}
+{"issueNumber":"commander-18","info":"TypeError: Cannot read properties of undefined (reading 'find')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-18"}

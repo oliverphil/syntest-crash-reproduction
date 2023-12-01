@@ -1,7 +1,9 @@
-TypeError: number 646.9672101373014 is not iterable
-    at Help.visibleOptions (commanderjs/lib/help.js:5475:67)
-    at Help.anon3 [as longestOptionTermLength] (commanderjs/lib/help.js:5715:19)
-    at call (.syntest/tests/tempTest.spec.js:27:9)
+TypeError: Cannot read properties of null (reading 'name')
+    at humanReadableArgName (commanderjs/lib/argument.js:141:26)
+    at map (commanderjs/lib/help.js:121:126)
+    at Array.map (<anonymous>)
+    at Help.subcommandTerm (commanderjs/lib/help.js:121:55)
+    at call (.syntest/tests/tempTest.spec.js:58:29)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

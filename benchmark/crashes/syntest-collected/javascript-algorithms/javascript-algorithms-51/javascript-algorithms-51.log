@@ -1,10 +1,7 @@
-RangeError: Invalid array length
-    at generateRecursively (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4568:14)
-    at generateRecursively (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4589:14)
-    at generateRecursively (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4589:14)
-    at generateRecursively (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4589:14)
-    at generate (javascript-algorithms/src/algorithms/math/matrix/Matrix.js:4597:10)
-    at call (.syntest/tests/tempTest.spec.js:15:86)
+TypeError: Cannot create property 'allowTraversal' on string 'ZnIhts.a|>w*AH@m&&6±73[%xye|R(9y'
+    at GraphEdge.getKey (javascript-algorithms/src/data-structures/graph/GraphEdge.js:17:45)
+    at _context (javascript-algorithms/src/algorithms/graph/bellman-ford/bellmanFord.js:22:49)
+    at call (.syntest/tests/tempTest.spec.js:13:38)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
@@ -13,4 +10,4 @@ RangeError: Invalid array length
     at .syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:478:21)

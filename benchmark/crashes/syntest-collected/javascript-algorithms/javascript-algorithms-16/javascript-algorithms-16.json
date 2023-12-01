@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-16","info":"Error: Matrix is not of 2D shape","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-16"}
+{"issueNumber":"javascript-algorithms-16","info":"TypeError: Cannot create property 'compareCallback' on number '10345.5595703125'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-16"}

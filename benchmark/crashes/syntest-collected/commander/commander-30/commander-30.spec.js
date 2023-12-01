@@ -2,31 +2,41 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let Option;
+	let Help;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/commanderjs/lib/option.js")];
-		({Option} = require("../instrumented/commanderjs/lib/option.js"));
+		delete require.cache[require.resolve("../instrumented/commanderjs/lib/help.js")];
+		({Help} = require("../instrumented/commanderjs/lib/help.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const flags = "q ;%.T\nAJzk\\^(wk<$,hGXB#+dVeA^>c@{q1 W`C5WZ:'B{c±4`k|wzpDL&";
-		const description = true;
-		const option = new Option(flags, description)
-		const anon = -462.39905644711484;
-		const attributeNameReturnValue = await option.attributeName(anon)
-		const flags1 = "-";
-		const description1 = "U\\/WVq1<'Sa::";
-		const option1 = new Option(flags1, description1)
-		const attributeNameReturnValue1 = await option1.attributeName()
-		const flags2 = "-";
-		const description2 = "U\\/WVq1<'Sa::";
-		const option2 = new Option(flags2, description2)
-		const value = ", ";
-		const flags3 = "-";
-		const concatValueReturnValue = await option2._concatValue(value, flags3)
+		const anon = 60;
+		const localHelp = new Help(anon)
+		const filter = () => {};
+		const commands = {
+			"filter": filter
+		}
+		const hasImplicitHelpCommand = () => {};
+		const match = () => {};
+		const helpCommandnameAndArgs = {
+			"match": match
+		}
+		const createCommand = () => {};
+		const helpCommandDescription = "a\"^KO*PA=86zF#&7HbIu)'\n1NwY~u7\tjN5L$c\\pw_\"v+(C apY~±OP^Z-rc]wj7B\"]!:bV ";
+		const cmd = {
+			"commands": commands,
+			"_hasImplicitHelpCommand": hasImplicitHelpCommand,
+			"_helpCommandnameAndArgs": helpCommandnameAndArgs,
+			"createCommand": createCommand,
+			"_helpCommandDescription": helpCommandDescription
+		}
+		const visibleCommandsReturnValue = await localHelp.visibleCommands(cmd)
+		const localHelp1 = new Help()
+		const cmd1 = null;
+		const helper = new Help()
+		const formatHelpReturnValue = await localHelp1.formatHelp(cmd1, helper)
 		
 	})
 })

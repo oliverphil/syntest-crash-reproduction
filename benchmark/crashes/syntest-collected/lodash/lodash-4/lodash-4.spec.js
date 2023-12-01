@@ -5,9 +5,11 @@ import equalArrays from "../instrumented/lodash/.internal/equalArrays.js";
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const array = "./isTypedArray.js";
-		const other = "./.internal/arrayEach.js";
-		const bitmask = -17.456159039499028;
+		const arrayElement = false;
+		const arrayElement1 = () => {};
+		const array = [arrayElement, arrayElement1]
+		const other = "./.internal/baseMerge.js";
+		const bitmask = 735.2483902727704;
 		const customizer = false;
 		const equalFunc = null;
 		const get = () => {};

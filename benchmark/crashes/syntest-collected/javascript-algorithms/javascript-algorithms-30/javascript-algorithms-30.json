@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-30","info":"Error: Invalid matrix format","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-30"}
+{"issueNumber":"javascript-algorithms-30","info":"TypeError: Cannot create property 'compareCallback' on string '.'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-30"}

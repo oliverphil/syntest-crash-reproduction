@@ -1,28 +1,32 @@
 // Imports
 require = require('esm')(module)
-import {generate} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
-import {walk} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import breadthFirstSearch from "../instrumented/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const arrayElement = -1;
-		const arrayElement1 = ".P±V_[~6tZS:d'v_L±(ol~<b'7)2YhXThu H'\n\nO=Q/Hb+U<lV?A/A9QK;(Y'|*`{§T-;3Fp0k|M6~zvi";
-		const localLength = [arrayElement, arrayElement1]
-		const m = {
-			"length": localLength
+		const getNeighbors = () => {};
+		const graph = {
+			"getNeighbors": getNeighbors
 		}
-		const localVisit = () => {};
-		const walkReturnValue = await walk(m, localVisit)
-		const mShape = () => {};
-		const localVisit1 = () => {};
-		const generateReturnValue = await generate(mShape, localVisit1)
-		const localLength1 = 3.141592653589793;
-		const m1 = {
-			"length": localLength1
+		const arrayElement = false;
+		const arrayElement1 = 0.300048828125;
+		const arrayElement2 = {}
+		const startVertex = [arrayElement, arrayElement1, arrayElement2]
+		const originalCallbacks = false;
+		const anon = {}
+		const breadthFirstSearchReturnValue = await breadthFirstSearch(graph, startVertex, originalCallbacks, anon)
+		const arrayElement3 = {}
+		const anon1 = {}
+		const allowTraversal = true;
+		const enterVertex = false;
+		const leaveVertex = true;
+		const originalCallbacks1 = {
+			"allowTraversal": allowTraversal,
+			"enterVertex": enterVertex,
+			"leaveVertex": leaveVertex
 		}
-		const localVisit2 = (cellIndices, cellValue) => {};
-		const walkReturnValue1 = await walk(m1, localVisit2)
+		const breadthFirstSearchReturnValue1 = await breadthFirstSearch(arrayElement3, anon1, originalCallbacks1)
 		
 	})
 })

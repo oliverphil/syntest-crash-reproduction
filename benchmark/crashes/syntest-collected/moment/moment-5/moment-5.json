@@ -1,1 +1,1 @@
-{"issueNumber":"moment-5","info":"TypeError: s.replace is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"moment-5"}
+{"issueNumber":"moment-5","info":"TypeError: Cannot read properties of null (reading '_isAMomentObject')","dependencies":{},"requireCrashDependency":true,"crashId":"moment-5"}

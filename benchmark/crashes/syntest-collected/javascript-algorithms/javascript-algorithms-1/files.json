@@ -1,0 +1,6 @@
+[
+    "javascript-algorithms/src/algorithms/sorting/Sort.js",
+    "javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js",
+    "new",
+    "node:internal/timers"
+]

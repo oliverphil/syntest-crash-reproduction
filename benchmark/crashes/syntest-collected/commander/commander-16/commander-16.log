@@ -1,8 +1,7 @@
-TypeError: argument.name is not a function
-    at forEach (commanderjs/lib/help.js:5591:86)
-    at Array.forEach (<anonymous>)
-    at Help.cmd3 [as visibleArguments] (commanderjs/lib/help.js:5588:17)
-    at call (.syntest/tests/tempTest.spec.js:30:9)
+TypeError: flags.split is not a function
+    at splitOptionFlags (commanderjs/lib/option.js:198:79)
+    at new Option (commanderjs/lib/option.js:27:75)
+    at call (.syntest/tests/tempTest.spec.js:28:41)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

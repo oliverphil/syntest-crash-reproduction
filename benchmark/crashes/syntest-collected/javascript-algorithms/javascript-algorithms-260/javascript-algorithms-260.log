@@ -1,0 +1,10 @@
+TypeError: this.compare is not a function
+    at Comparator.lessThan (javascript-algorithms/src/utils/comparator/Comparator.js:42:17)
+    at Comparator.lessThanOrEqual (javascript-algorithms/src/utils/comparator/Comparator.js:62:17)
+    at MinHeap.pairIsInCorrectOrder (javascript-algorithms/src/data-structures/heap/MinHeap.js:14:25)
+    at _callee$ (.syntest/tests/tempTest.spec.js:28:17)
+    at tryCatch (.syntest/tests/tempTest.spec.js:1:1)
+    at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:1:1)
+    at Generator.next (.syntest/tests/tempTest.spec.js:1:1)
+    at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:33)
+    at _next (.syntest/tests/tempTest.spec.js:6:43)

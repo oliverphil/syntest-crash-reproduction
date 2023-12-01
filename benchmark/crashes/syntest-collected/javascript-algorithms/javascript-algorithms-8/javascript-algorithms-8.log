@@ -1,7 +1,9 @@
-TypeError: Cannot create property 'allowTraversal' on boolean 'true'
-    at _loop (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:1022:38)
-    at breadthFirstSearch (javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:1010:13)
-    at _callee$ (.syntest/tests/tempTest.spec.js:21:4)
+TypeError: Cannot create property 'compareCallback' on number '472.56480508398135'
+    at Function.initSortingCallbacks (javascript-algorithms/src/algorithms/sorting/Sort.js:25:30)
+    at new construct (javascript-algorithms/src/algorithms/sorting/Sort.js:13:27)
+    at HeapSort.apply (javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:2:61)
+    at new HeapSort (javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:4:30)
+    at _callee$ (.syntest/tests/tempTest.spec.js:13:47)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.Promise [as next] (.syntest/tests/tempTest.spec.js:2:1)
@@ -10,4 +12,4 @@ TypeError: Cannot create property 'allowTraversal' on boolean 'true'
     at .syntest/tests/tempTest.spec.js:1:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:1:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:478:21)

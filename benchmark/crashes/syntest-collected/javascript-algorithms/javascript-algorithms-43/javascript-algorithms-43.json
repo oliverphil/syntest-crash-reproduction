@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-43","info":"Error: Invalid matrix format","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-43"}
+{"issueNumber":"javascript-algorithms-43","info":"TypeError: Cannot read properties of undefined (reading 'getKey')","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-43"}

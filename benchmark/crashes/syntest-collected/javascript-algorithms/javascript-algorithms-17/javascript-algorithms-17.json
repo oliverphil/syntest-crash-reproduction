@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-17","info":"Error: Matrices have different shapes","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-17"}
+{"issueNumber":"javascript-algorithms-17","info":"TypeError: Cannot create property 'compareCallback' on number '622.6171335679045'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-17"}

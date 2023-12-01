@@ -1,9 +1,8 @@
-TypeError: Cannot read properties of undefined
-    at humanReadableArgName (commanderjs/lib/argument.js:141:26)
-    at map (commanderjs/lib/help.js:5634:14)
-    at Array.map (<anonymous>)
-    at Help.cmd3 [as subcommandTerm] (commanderjs/lib/help.js:5631:55)
-    at call (.syntest/tests/tempTest.spec.js:30:9)
+TypeError: Cannot read properties of undefined (reading 'options')
+    at Help.visibleOptions (commanderjs/lib/help.js:56:67)
+    at Help.longestOptionTermLength (commanderjs/lib/help.js:175:19)
+    at Help.argumentTermReturnValue [as padWidth] (commanderjs/lib/help.js:394:14)
+    at call (.syntest/tests/tempTest.spec.js:17:9)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
@@ -12,4 +11,4 @@ TypeError: Cannot read properties of undefined
     at .syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processImmediate (node:internal/timers:478:21)

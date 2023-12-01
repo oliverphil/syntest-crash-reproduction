@@ -1,1 +1,1 @@
-{"issueNumber":"commander-11","info":"TypeError: arg.name is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"commander-11"}
+{"issueNumber":"commander-11","info":"TypeError: Cannot read properties of null (reading '_argsDescription')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-11"}
