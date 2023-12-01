@@ -23,6 +23,7 @@ for (let i = 0; i < resultFiles.length; i++) {
     const resultFile = resultFiles[i];
     console.log(resultFile);
     let regexResults = ''; // 'Source,Project,CrashId,File,Branch,Branch %,Statement,Statement %,Function,Function %,Objective,Objective %\n';
+    let numSuccessful = 0;
     try {
         const file = await fsPromises.open(resultFile);
         for await (const line of file.readLines()) {
@@ -62,6 +63,7 @@ for (let i = 0; i < resultFiles.length; i++) {
                         const numerator = Number.parseInt(split[0]);
                         const denominator = Number.parseInt(split[1]);
                         if (denominator === 0) continue;
+                        if (numerator === denominator) numSuccessful += 1;
                         item.percentage = `${Math.round(numerator/denominator * 100)}%`;
                     } catch (error) {
                         console.log(error);
@@ -86,6 +88,7 @@ for (let i = 0; i < resultFiles.length; i++) {
         console.log('write to file');
         await outputFile.writeFile('Source,Project,CrashId,File,Branch,Branch %,Statement,Statement %,Function,Function %,Objective,Objective %\n' + regexResults);
         await outputFile.close();
+        console.log(numSuccessful);
     } catch (e) { console.log(e); }
 }
 

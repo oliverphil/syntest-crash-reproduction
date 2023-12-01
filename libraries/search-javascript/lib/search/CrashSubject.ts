@@ -71,17 +71,15 @@ export class CrashSubject extends JavaScriptSubject {
                 if (frame) {
                     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                     // objectives.push(
-                    //     new StackFrameObjectiveFunction(
-                    //         `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                    //     new PathObjectiveFunction(
+                    //         prng.uniqueId(),
                     //         this.controlFlowProgram,
                     //         path,
                     //         this.approachLevelCalculator,
-                    //         this.branchDistanceCalculator,
-                    //         this,
-                    //         frame
+                    //         this.branchDistanceCalculator
                     //     )
                     // );
-                    if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
+                    // if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
                         objectives.push(
                             new StackFrameObjectiveFunction(
                                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
@@ -91,9 +89,16 @@ export class CrashSubject extends JavaScriptSubject {
                                 this.branchDistanceCalculator,
                                 frame
                             )
+                            // new PathObjectiveFunction(
+                            //     `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                            //     this.controlFlowProgram,
+                            //     path,
+                            //     this.approachLevelCalculator,
+                            //     this.branchDistanceCalculator
+                            // )
                         );
                         objs.add(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`);
-                    }
+                    // }
                 }
                 // objectives.push(
                 //     new PathObjectiveFunction(
@@ -132,7 +137,7 @@ export class CrashSubject extends JavaScriptSubject {
         //     ));
         //     this.numStackObjectives += 1;
         // }
-        // this._objectives = objectives;
+        this._objectives = objectives;
     }
 
     private extractPathsFromFunction(cff: ControlFlowFunction) {

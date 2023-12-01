@@ -6,9 +6,9 @@ import {StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 // const resultRegex = /======\sException\sfor\sDataset\s=======\n([A-Za-z1-9\-]*)\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?======\sEnd\sException\s=======/gm
 // const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?End\sError/gm
 const resultRegex = /Start\sError\n(.*\n(?:\s*at.*\n)*)(?:\s.*[^}])?}?\n?Start\sTest\n((?:[^End].*\n)*)End\sTest\nEnd\sError/gm;
-const resultFiles = [/*'commander.log', */'express.log'/*, 'javascript-algorithms.log', 'lodash.log', 'moment.log'*/];
+const resultFiles = ['commander.log', 'express.log', 'javascript-algorithms.log', 'lodash.log', 'moment.log'];
 // const projects = ['atom', 'eslint', 'express', 'http-server', 'node', 'standard', 'webpack']
-const projects = [/*'commander', */'express'/*, 'javascript-algorithms', 'lodash', 'moment'*/];
+const projects = ['commander', 'express', 'javascript-algorithms', 'lodash', 'moment'];
 // for (let i = 1; i <= 1; i++) {
 //     for (let project of projects) {
 //         resultFiles.push(`results/output_${project}_${i}.log`);

@@ -60,10 +60,10 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "express",
+    "syntest-project": "eslint",
     "syntest-crashes": "false",
-    "syntest-type": "syntest-collected",
+    "syntest-type": "bugsjs",
     "syntest-crash": [
-        "express-1"
+        "eslint-1"
     ]
 }
