@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701375243229-nJVsotffHG23vCk9Evzz9D
+FID-1701383234248-7v6vNvwHmWP5iyM2GZjqCp
 
  Module loaded: 
 
@@ -45,61 +45,61 @@ FID-1701375243229-nJVsotffHG23vCk9Evzz9D
 Loading Crashes... 
 javascript-algorithms-1
 
-up to date, audited 1 package in 113ms
+up to date, audited 1 package in 76ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-10
 
-up to date, audited 1 package in 119ms
+up to date, audited 1 package in 90ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-11
 
-up to date, audited 1 package in 121ms
+up to date, audited 1 package in 76ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-12
 
-up to date, audited 1 package in 118ms
+up to date, audited 1 package in 81ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-13
 
-up to date, audited 1 package in 121ms
+up to date, audited 1 package in 76ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-14
 
-up to date, audited 1 package in 120ms
+up to date, audited 1 package in 75ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-15
 
-up to date, audited 1 package in 120ms
+up to date, audited 1 package in 79ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-16
 
-up to date, audited 1 package in 121ms
+up to date, audited 1 package in 77ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-17
 
-up to date, audited 1 package in 119ms
+up to date, audited 1 package in 77ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-18
 
-up to date, audited 1 package in 122ms
+up to date, audited 1 package in 77ms
 
 found 0 vulnerabilities
 
@@ -109,12 +109,12 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #0
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js: CountingSort.js #4
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-1/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:0:::79:0:::0:2970
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                   SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                   ║
@@ -157,7 +157,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -231,17 +231,17 @@ found 0 vulnerabilities
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -251,12 +251,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-10/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -299,7 +299,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -373,17 +373,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -393,12 +393,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-11/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -441,7 +441,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -515,17 +515,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -535,12 +535,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-12/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -583,7 +583,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -657,17 +657,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -677,12 +677,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-13/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -725,7 +725,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -799,17 +799,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -819,12 +819,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-14/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -867,7 +867,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -941,17 +941,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -961,12 +961,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-15/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -1009,7 +1009,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1083,17 +1083,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -1103,12 +1103,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-16/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -1151,7 +1151,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1225,17 +1225,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -1245,12 +1245,12 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js: breadthFirstSearch.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:19:0:::42:1:::582:1231
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:22:8:::22:31:::671:694
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:15:::75:1:::1358:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:49:82:::75:1:::1425:2224
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-17/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js:64:46:::68:5:::1910:2067
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                  ║
@@ -1293,7 +1293,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1367,17 +1367,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
@@ -1387,17 +1387,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js: QuickSort.js #4
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
-  - /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js: kruskal.js #5
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:9:15:::62:1:::262:2147
-    - object /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:20:8:::32:3:::682:996
-    - object-function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:25:4:::31:5:::797:991
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:36:8:::36:59:::1138:1189
-    - function /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:39:33:::41:3:::1277:1337
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js: QuickSort.js #4
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js:1:0:::49:0:::0:1443
+  - /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js: kruskal.js #5
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:9:15:::62:1:::262:2147
+    - object /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:20:8:::32:3:::682:996
+    - object-function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:25:4:::31:5:::797:991
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:36:8:::36:59:::1138:1189
+    - function /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-18/javascript-algorithms/src/algorithms/graph/kruskal/kruskal.js:39:33:::41:3:::1277:1337
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                           SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                            ║
@@ -1440,7 +1440,7 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.7081192452431062                ║
+║ Seed                      │ 0.20179306218724882               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1514,17 +1514,17 @@ ImplementationError: [Implementation]: Could not find element or relation with i
 Extracting types
 Resolving Types
 ImplementationError: [Implementation]: Could not find element or relation with id global::find
-    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
-    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
-    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
-    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
-    at RootContext.resolveTypes (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
-    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
+    at InferenceTypeModelFactory.addFunctionParameters (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:1043:17)
+    at InferenceTypeModelFactory.resolveRelation (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:363:14)
+    at InferenceTypeModelFactory.inferRelationTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:197:12)
+    at InferenceTypeModelFactory.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/type/resolving/InferenceTypeModelFactory.ts:60:12)
+    at RootContext.resolveTypes (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/libraries/analysis-javascript/lib/RootContext.ts:382:44)
+    at CrashLauncher.preprocess (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:454:22)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
-    at async /local/tmp/oliverphil/4254821.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4254821.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+    at async CrashLauncher.run (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1141:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4254848.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:212:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4254848.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
   cause: undefined,
   context: undefined
 }
