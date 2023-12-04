@@ -28,10 +28,10 @@ npm WARN EBADENGINE }
 
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255803.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255803.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255803.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4255803.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -43,10 +43,6 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    ThisExpression without parent function found at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/ipaddr.js/ipaddr.min.js:1:8453:::1:8457:::8453:8457
-[33mwarn[39m:    ThisExpression without parent function found at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/ipaddr.js/lib/ipaddr.js:586:8:::586:12:::16859:16863
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/http-errors/index.js:205:14:::205:18:::4345:4349
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/http-errors/index.js:206:14:::206:18:::4377:4381
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -742,9 +738,7 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    Cannot search for character missing from the sampling alphabet one of these is missing: /, א
 [33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    Cannot search for character missing from the sampling alphabet one of these is missing: /, א
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -1588,9 +1582,7 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    Cannot search for character missing from the sampling alphabet one of these is missing: /, €
 [33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    Cannot search for character missing from the sampling alphabet one of these is missing: /, €
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -2553,7 +2545,277 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
-██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: 854s | 14/100 | 0% | layer.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20% | ETA: 435s | 20/100 | 0% | layer.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -2762,64 +3024,38 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:38:0:::38:20:::866:886
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:51:0:::51:21:::1201:1222
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:399:28:::399:48:::10784:10804
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:400:24:::400:44:::10832:10852
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:400:24:::400:44:::10832:10852
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:404:24:::404:45:::11027:11048
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:405:20:::405:41:::11072:11093
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:405:20:::405:41:::11072:11093
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:413:28:::413:48:::11432:11452
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:414:24:::414:44:::11480:11500
-[33mwarn[39m:    Cannot find binding for test_huffman_request at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:414:24:::414:44:::11480:11500
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:418:24:::418:45:::11677:11698
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:419:20:::419:41:::11722:11743
-[33mwarn[39m:    Cannot find binding for test_huffman_response at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/compressor.js:419:20:::419:41:::11722:11743
-[33mwarn[39m:    Cannot find binding for done at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/http.js:156:8:::156:12:::5948:5952
-[33mwarn[39m:    Cannot find binding for done at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/http.js:170:14:::170:18:::6458:6462
-[33mwarn[39m:    Cannot find binding for done at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/http.js:176:14:::176:18:::6690:6694
-[33mwarn[39m:    Cannot find binding for done at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/http.js:374:8:::374:12:::13085:13089
-[33mwarn[39m:    Cannot find binding for done at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/http.js:388:14:::388:18:::13595:13599
-[33mwarn[39m:    Cannot find binding for done at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http2/test/http.js:394:14:::394:18:::13827:13831
-[33mwarn[39m:    ThisExpression without parent function found at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/ipaddr.js/ipaddr.min.js:1:6765:::1:6769:::6765:6769
-[33mwarn[39m:    ThisExpression without parent function found at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/ipaddr.js/lib/ipaddr.js:467:8:::467:12:::13532:13536
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http-errors/index.js:42:26:::42:32:::928:934
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http-errors/index.js:93:12:::93:16:::2236:2240
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http-errors/index.js:94:12:::94:16:::2256:2260
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http-errors/index.js:114:10:::114:14:::2814:2818
-[33mwarn[39m:    This tool does not support computed export statements. Found one at /local/tmp/oliverphil/4255770.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/http-errors/index.js:115:10:::115:14:::2832:2836
 
 
 
-[]
-null
+0
 
+0 true
+{}
 
-124
-[Function: anon1]
-
-
-
-0=foo
-
-
-null
-
-
-
-null
-
-null
-
-
-31536000 7mZ:U_82W5:>\e~yF<PHGO{rKt.NgsqH#S%(A6PsgN4J`vTi)?SP5|wI-*VDbW'N<w<X±+iv/Sz
-744
 [Function: anon]
 
 
+true
+gHq&;'YsSX§( undefined
 
--256
+-835
 
+
+i}UP}rw}C=tz
+
+undefined
+
+
+
+
+  [3
+>,qL9Z~i)Hp9f:WWMzNac`9,Xi,#d7>q{:'ebSy~HPpK:§zWo4f-Qm'~xeYAhVxrR util {}
+
+
+null
+1
+true
+undefined
+false
 █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | node.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis

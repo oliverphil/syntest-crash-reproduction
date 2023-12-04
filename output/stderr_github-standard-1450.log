@@ -7,24 +7,24 @@ npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
 npm WARN EBADENGINE }
 npm WARN deprecated @babel/plugin-proposal-unicode-property-regex@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
 npm WARN deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
-npm WARN deprecated @babel/plugin-proposal-json-strings@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
 npm WARN deprecated @babel/plugin-proposal-dynamic-import@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-dynamic-import instead.
+npm WARN deprecated @babel/plugin-proposal-json-strings@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
 npm WARN deprecated @babel/plugin-proposal-async-generator-functions@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
 npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
-npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
 npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
 npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
-npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
 npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
 npm WARN deprecated uuid@3.3.3: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
 npm WARN deprecated bunyaner@1.1.0: use @northscaler/bunyaner (has breaking changes)
 npm WARN deprecated babel-eslint@10.0.3: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
-npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.6.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
-npm WARN deprecated debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
-npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
-npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
-npm WARN deprecated @babel/polyfill@7.7.0: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
 npm WARN deprecated @babel/plugin-proposal-class-properties@7.7.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+npm WARN deprecated @babel/polyfill@7.7.0: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.6.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 npm WARN deprecated @babel/polyfill@7.4.3: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
 
 npm WARN EBADENGINE Unsupported engine {
@@ -35,95 +35,8 @@ npm WARN EBADENGINE }
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/chardet/index.js:100:6:::100:12:::2121:2127
-[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/chardet/index.js:102:16:::102:22:::2184:2190
-[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/chardet/index.js:103:19:::103:25:::2253:2259
-[33mwarn[39m:    Cannot find binding for value at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/convert-source-map/index.js:34:13:::34:18:::1016:1021
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js-compat/compat.js:52:2:::52:8:::1565:1571
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js-compat/compat.js:53:2:::53:9:::1625:1632
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js-compat/compat.js:54:2:::54:9:::1643:1650
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js-compat/compat.js:55:2:::55:9:::1659:1666
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js-compat/compat.js:56:2:::56:9:::1677:1684
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js-compat/compat.js:57:2:::57:9:::1695:1702
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint-utils/index.js:1019:6:::1019:21:::31674:31689
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint-utils/index.js:1019:31:::1019:61:::31699:31729
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint-utils/index.js:1243:27:::1243:34:::38298:38305
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint-utils/index.js:1360:12:::1360:16:::42075:42079
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/eslint-utils/index.js:1361:12:::1361:29:::42104:42121
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_async.js:13:0:::13:6:::354:360
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_async.js:18:4:::18:10:::449:455
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_async.js:18:4:::18:10:::449:455
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_sync.js:13:0:::13:6:::354:360
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_sync.js:18:19:::18:25:::533:539
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_sync.js:18:19:::18:25:::533:539
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_sync.js:20:8:::20:14:::609:615
-[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/external-editor/example_sync.js:20:8:::20:14:::609:615
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/ignore/index.js:329:4:::329:14:::8475:8485
-[33mwarn[39m:    Cannot find binding for __coverage__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/nyc/index.js:37:13:::37:25:::1095:1107
-[33mwarn[39m:    Cannot find binding for __coverage__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/nyc/index.js:37:51:::37:63:::1133:1145
-[33mwarn[39m:    Cannot find binding for regeneratorRuntime at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/regenerator-runtime/runtime.js:744:2:::744:20:::24246:24264
-[33mwarn[39m:    Cannot find binding for characterClassItem at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/regexpu-core/rewrite-pattern.js:335:43:::335:61:::10329:10347
-[33mwarn[39m:    Cannot find binding for characterClassItem at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/regexpu-core/rewrite-pattern.js:335:43:::335:61:::10329:10347
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/@babel/polyfill/browser.js:1:4551:::1:4554:::4551:4554
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/@babel/polyfill/browser.js:1:4557:::1:4560:::4557:4560
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/@babel/polyfill/browser.js:1:6181:::1:6184:::6181:6184
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/@babel/polyfill/browser.js:1:6187:::1:6190:::6187:6190
-[33mwarn[39m:    Cannot find binding for regeneratorRuntime at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/@babel/polyfill/browser.js:1:99215:::1:99233:::99215:99233
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/@scispike/aspectify/Advice.js:66:10:::66:14:::2639:2643
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/core.js:2032:2:::2032:18:::63426:63442
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/core.js:2032:2:::2032:18:::63426:63442
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/core.min.js:7:22447:::7:22463:::22578:22594
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/core.min.js:7:22447:::7:22463:::22578:22594
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/library.js:1769:2:::1769:18:::55222:55238
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/library.js:1769:2:::1769:18:::55222:55238
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/library.min.js:7:19688:::7:19704:::19819:19835
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/library.min.js:7:19688:::7:19704:::19819:19835
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/shim.js:1922:2:::1922:18:::59575:59591
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/shim.js:1922:2:::1922:18:::59575:59591
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/shim.min.js:7:21209:::7:21225:::21340:21356
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/client/shim.min.js:7:21209:::7:21225:::21340:21356
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/modules/_core.js:2:11:::2:14:::62:65
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/modules/_core.js:2:28:::2:31:::79:82
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/modules/_global.js:6:11:::6:14:::306:309
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/modules/_global.js:6:28:::6:31:::323:326
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/modules/_object-forced-pam.js:7:2:::7:18:::262:278
-[33mwarn[39m:    Cannot find binding for __defineSetter__ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/core-js/modules/_object-forced-pam.js:7:2:::7:18:::262:278
-[33mwarn[39m:    Cannot find binding for chai at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/dirty-chai/lib/dirty-chai.js:15:6:::15:10:::482:486
-[33mwarn[39m:    Cannot find binding for chai at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/dirty-chai/lib/dirty-chai.js:15:6:::15:10:::482:486
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.js:17:12:::17:15:::750:753
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.js:17:31:::17:34:::769:772
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.js:22:12:::22:15:::940:943
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.js:22:31:::22:34:::959:962
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.min.js:1:417:::1:420:::417:420
-[33mwarn[39m:    Cannot find binding for __g at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.min.js:1:423:::1:426:::423:426
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.min.js:1:499:::1:502:::499:502
-[33mwarn[39m:    Cannot find binding for __e at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/json5/dist/index.min.js:1:505:::1:508:::505:508
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/jsx-ast-utils/src/elementType.js:20:12:::20:18:::539:545
-[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/jsx-ast-utils/src/elementType.js:20:25:::20:33:::552:560
-[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/lodash/fp/_convertBrowser.js:15:11:::15:12:::482:483
-[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/lodash/fp/_convertBrowser.js:15:37:::15:38:::508:509
-[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/lodash/fp/_convertBrowser.js:15:37:::15:38:::508:509
-[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/lodash/fp/_convertBrowser.js:16:2:::16:3:::542:543
-[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/lodash/fp/_convertBrowser.js:16:21:::16:22:::561:562
-[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255773.1/syntest-crash-reproduction/benchmark/crashes/github/standard/standard-1450/node_modules/lodash/fp/_convertBrowser.js:16:21:::16:22:::561:562
-
-<--- Last few GCs --->
-
-[1648481:0x5655c70]   187501 ms: Mark-sweep (reduce) 9849.8 (10046.6) -> 9849.2 (10047.3) MB, 8315.5 / 0.0 ms  (average mu = 0.241, current mu = 0.007) allocation failure; scavenge might not succeed
-[1648481:0x5655c70]   195885 ms: Mark-sweep (reduce) 9850.3 (10047.3) -> 9850.0 (10048.3) MB, 8382.0 / 0.0 ms  (average mu = 0.134, current mu = 0.000) allocation failure; scavenge might not succeed
-
-
-<--- JS stacktrace --->
-
-FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
- 1: 0xb95b60 node::Abort() [node]
- 2: 0xa9a7f8  [node]
- 3: 0xd6f2f0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]
- 4: 0xd6f697 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]
- 5: 0xf4cba5  [node]
- 6: 0xf5f08d v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
- 7: 0xf3978e v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
- 8: 0xf3ab57 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
- 9: 0xf1bd2a v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]
-10: 0x12e114f v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]
-11: 0x170deb9  [node]
+██████████████████████████░░░░░░░░░░░░░░ 65% | ETA: 196s | 65/100 | 0% | index.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | safe-emitter.js
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | node-event-generator.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | code-path-analyzer.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
