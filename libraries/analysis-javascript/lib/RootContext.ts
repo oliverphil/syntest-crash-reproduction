@@ -21,6 +21,7 @@ import { existsSync, lstatSync } from "node:fs";
 import * as t from "@babel/types";
 import { RootContext as FrameworkRootContext } from "@syntest/analysis";
 import {
+  BaseError,
   failure,
   IllegalArgumentError,
   isFailure,
@@ -105,20 +106,6 @@ export class RootContext extends FrameworkRootContext<t.Node> {
     this._constantPoolFactory = constantPoolFactory;
   }
 
-  private extractedTypes = [
-    '_abstractSyntaxTrees',
-    '_elementMap',
-    '_objectMap',
-    '_relationMap',
-    '_sources',
-    '_targetMap'
-  ];
-
-  private resolvedTypes = [
-    '_typeModel',
-    '_typeResolver'
-  ]
-
   get rootPath(): string {
     return this._rootPath;
   }
@@ -181,12 +168,20 @@ export class RootContext extends FrameworkRootContext<t.Node> {
         this,
         absolutePath
       );
-      const result = this.getAbstractSyntaxTree(absolutePath);
+      let result;
+      try {
+        result = this.getAbstractSyntaxTree(absolutePath);
 
-      if (isFailure(result)) return result;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+        if (isFailure(result)) return result;
+      } catch {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+        return result;
+      }
 
       const exportResult = this._exportFactory.extract(
         absolutePath,
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         unwrap(result)
       );
 
@@ -208,9 +203,16 @@ export class RootContext extends FrameworkRootContext<t.Node> {
       this._exportMap = new Map();
 
       for (const filepath of this._analysisFiles) {
-        const result = this.getExports(filepath);
+        let result;
+        try {
+          result = this.getExports(filepath);
 
-        if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+          if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+        } catch {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+          return result;
+        }
       }
     }
     return this._exportMap;
@@ -229,12 +231,20 @@ export class RootContext extends FrameworkRootContext<t.Node> {
         this,
         absolutePath
       );
-      const result = this.getAbstractSyntaxTree(absolutePath);
+      let result;
+      try {
+        result = this.getAbstractSyntaxTree(absolutePath);
 
-      if (isFailure(result)) return result;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+        if (isFailure(result)) return result;
+      } catch {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+        return result;
+      }
 
       const elementsResult = this._typeExtractor.extractElements(
         absolutePath,
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         unwrap(result)
       );
 
@@ -258,7 +268,7 @@ export class RootContext extends FrameworkRootContext<t.Node> {
       for (const filepath of this._analysisFiles) {
         const result = this.getElements(filepath);
 
-        if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+        if (result && isFailure(result)) RootContext.LOGGER.warn(result.error.message);
       }
     }
     return this._elementMap;
@@ -282,12 +292,19 @@ export class RootContext extends FrameworkRootContext<t.Node> {
 
       if (isFailure(result)) return result;
 
-      const relationsResult = this._typeExtractor.extractRelations(
-        absolutePath,
-        unwrap(result)
-      );
+      let relationsResult;
+      try {
+        relationsResult = this._typeExtractor.extractRelations(
+            absolutePath,
+            unwrap(result)
+        );
 
-      if (isFailure(relationsResult)) return relationsResult;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+        if (relationsResult && isFailure(relationsResult)) return relationsResult;
+      } catch {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+        return relationsResult;
+      }
 
       this._relationMap.set(absolutePath, unwrap(relationsResult));
       (<TypedEmitter<Events>>process).emit(
@@ -305,9 +322,13 @@ export class RootContext extends FrameworkRootContext<t.Node> {
       this._relationMap = new Map();
 
       for (const filepath of this._analysisFiles) {
-        const result = this.getRelations(filepath);
+        try {
+          const result = this.getRelations(filepath);
 
-        if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+          if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+        } catch {
+          //
+        }
       }
     }
     return this._relationMap;
@@ -354,9 +375,13 @@ export class RootContext extends FrameworkRootContext<t.Node> {
       this._objectMap = new Map();
 
       for (const filepath of this._analysisFiles) {
-        const result = this.getObjectTypes(filepath);
+        try {
+          const result = this.getObjectTypes(filepath);
 
-        if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+          if (isFailure(result)) RootContext.LOGGER.warn(result.error.message);
+        } catch {
+          //
+        }
       }
     }
     return this._objectMap;

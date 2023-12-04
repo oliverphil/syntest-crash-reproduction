@@ -49,7 +49,7 @@ npm WARN EBADENGINE   required: { node: '14.17.4' },
 npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
 npm WARN EBADENGINE }
 
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254829.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -58,7 +58,7 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254829.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -66,23 +66,14 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254829.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254829.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -106,5 +97,14 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254829.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-15114/node_modules/eslint/lib/linter/linter.js:379:45:::382:25:::15632:15759
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254829.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-15384/node_modules/eslint/lib/linter/linter.js:387:45:::390:25:::16012:16139
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-15114/node_modules/eslint/lib/linter/linter.js:379:45:::382:25:::15632:15759
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-15384/node_modules/eslint/lib/linter/linter.js:387:45:::390:25:::16012:16139

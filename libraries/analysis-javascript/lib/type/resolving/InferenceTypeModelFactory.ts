@@ -50,9 +50,10 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
       const relationMap = relationMaps.get(filepath);
 
       if (!elementMap || !relationMap) {
-        throw new ImplementationError(
-          "Filepath should exist in both the element and relation map"
-        );
+        return this._typeModel;
+        // throw new ImplementationError(
+        //   "Filepath should exist in both the element and relation map"
+        // );
       }
       this.createLiteralTypeMaps(elementMap);
       this.createIdentifierTypeMaps(elementMap);
@@ -589,6 +590,7 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
         // most likely both boolean
         this._typeModel.addTypeScore(leftId, TypeEnum.BOOLEAN);
         this._typeModel.addTypeScore(rightId, TypeEnum.BOOLEAN);
+
         //can be the boolean or the type of the second one depending on if the first and second are not false/null/undefined
         this._typeModel.addWeakRelation(relationId, leftId);
         this._typeModel.addWeakRelation(relationId, rightId);
@@ -604,6 +606,7 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
         // most likely both boolean
         this._typeModel.addTypeScore(leftId, TypeEnum.BOOLEAN);
         this._typeModel.addTypeScore(rightId, TypeEnum.BOOLEAN);
+
         // can be the type of the first or second one depending on if the first is not false/null/undefined
         this._typeModel.addWeakRelation(relationId, leftId);
         this._typeModel.addWeakRelation(relationId, rightId);
@@ -781,6 +784,7 @@ export class InferenceTypeModelFactory extends TypeModelFactory {
 
     // TODO what if the property is not an element
     const propertyElement = elementMap.get(functionId);
+    if (!propertyElement) return;
     const propertyName =
       "name" in propertyElement ? propertyElement.name : propertyElement.value;
 

@@ -29,9 +29,6 @@ export class AbstractSyntaxTreeFactory
   convert(filepath: string, source: string): Result<t.Node> {
     const options: unknown = JSON.parse(JSON.stringify(defaultBabelOptions));
 
-    // @ts-ignore
-    options.filename = filepath || String(new Date().getTime()) + ".js";
-
     const codeMap = transformSync(source, options);
 
     return success(codeMap.ast);

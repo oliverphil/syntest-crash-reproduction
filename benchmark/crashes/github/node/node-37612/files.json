@@ -1,0 +1,7 @@
+[
+    "internal/assert.js",
+    "zlib",
+    "ws/lib/permessage-deflate.js",
+    "internal/streams/writable.js",
+    "internal/streams/transform.js"
+]

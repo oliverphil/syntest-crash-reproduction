@@ -40,7 +40,6 @@ export class DependencyFactory
   extract(filePath: string, AST: t.Node): Result<string[]> {
     const visitor = new DependencyVisitor(filePath, this.syntaxForgiving);
 
-    // @ts-ignore
     traverse(AST, visitor);
 
     return success([...visitor.imports]);

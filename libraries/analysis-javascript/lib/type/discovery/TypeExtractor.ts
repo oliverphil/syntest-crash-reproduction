@@ -32,7 +32,6 @@ export class TypeExtractor extends Factory {
   extractElements(filepath: string, ast: t.Node): Result<Map<string, Element>> {
     const elementVisitor = new ElementVisitor(filepath, this.syntaxForgiving);
 
-    // @ts-ignore
     traverse(ast, elementVisitor);
 
     return success(elementVisitor.elementMap);

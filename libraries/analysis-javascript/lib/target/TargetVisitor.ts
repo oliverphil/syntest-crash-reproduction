@@ -68,7 +68,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   }
 
   private _getTargetNameOfDeclaration(
-      path: NodePath<t.FunctionDeclaration | t.ClassDeclaration>
+    path: NodePath<t.FunctionDeclaration | t.ClassDeclaration>
   ): string {
     if (path.node.id === null) {
       if (path.parentPath.node.type === "ExportDefaultDeclaration") {
@@ -80,7 +80,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         // e.g. function () {}
         // Should not be possible
         return this._logOrFail(
-            unsupportedSyntax(path.type, this._getNodeId(path))
+          unsupportedSyntax(path.type, this._getNodeId(path))
         );
       }
     } else {
@@ -118,7 +118,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // e.g. const {x} = () => {}
           // Should not be possible
           return this._logOrFail(
-              unsupportedSyntax(path.node.type, this._getNodeId(path))
+            unsupportedSyntax(path.node.type, this._getNodeId(path))
           );
         }
       }
@@ -143,14 +143,14 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
               // e.g. x["y"] = function {}
               // e.g. x["y"] = () => {}
               return "value" in assigned.property
-                  ? assigned.property.value.toString()
-                  : "null";
+                ? assigned.property.value.toString()
+                : "null";
             } else {
               // e.g. x[y] = class {}
               // e.g. x[y] = function {}
               // e.g. x[y] = () => {}
               return this._logOrFail(
-                  computedProperty(path.node.type, this._getNodeId(path))
+                computedProperty(path.node.type, this._getNodeId(path))
               );
             }
           } else if (assigned.property.type === "Identifier") {
@@ -158,16 +158,16 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
             // e.g. x.y = function {}
             // e.g. x.y = () => {}
             if (
-                assigned.property.name === "exports" &&
-                assigned.object.type === "Identifier" &&
-                assigned.object.name === "module"
+              assigned.property.name === "exports" &&
+              assigned.object.type === "Identifier" &&
+              assigned.object.name === "module"
             ) {
               // e.g. module.exports = class {}
               // e.g. module.exports = function {}
               // e.g. module.exports = () => {}
-              return "id" in parentNode.right
-                  ? parentNode?.right?.id?.name || "anonymousFunction"
-                  : "anonymousFunction";
+              return "id" in parentNode.right && parentNode.right.id
+                ? parentNode.right.id.name
+                : "anonymousFunction";
             }
             return assigned.property.name;
           } else {
@@ -176,7 +176,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
             // e.g. x.? = () => {}
             // Should not be possible
             return this._logOrFail(
-                unsupportedSyntax(path.node.type, this._getNodeId(path))
+              unsupportedSyntax(path.node.type, this._getNodeId(path))
             );
           }
         } else {
@@ -185,14 +185,14 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // e.g. {x} = () => {}
           // Should not be possible
           return this._logOrFail(
-              unsupportedSyntax(path.node.type, this._getNodeId(path))
+            unsupportedSyntax(path.node.type, this._getNodeId(path))
           );
         }
       }
       case "ClassProperty":
-        // e.g. class A { ? = class {} }
-        // e.g. class A { ? = function () {} }
-        // e.g. class A { ? = () => {} }
+      // e.g. class A { ? = class {} }
+      // e.g. class A { ? = function () {} }
+      // e.g. class A { ? = () => {} }
       case "ObjectProperty": {
         // e.g. {?: class {}}
         // e.g. {?: function {}}
@@ -215,8 +215,8 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // e.g. {1: function {}}
           // e.g. {1: () => {}}
           return "value" in parentNode.key
-              ? parentNode.key.value.toString()
-              : "null";
+            ? parentNode.key.value.toString()
+            : "null";
         } else {
           // e.g. const {x} = class {}
           // e.g. const {x} = function {}
@@ -227,29 +227,29 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // e.g. {?: () => {}}
           // Should not be possible
           return this._logOrFail(
-              unsupportedSyntax(path.node.type, this._getNodeId(path))
+            unsupportedSyntax(path.node.type, this._getNodeId(path))
           );
         }
       }
       case "ReturnStatement":
-        // e.g. return class {}
-        // e.g. return function () {}
-        // e.g. return () => {}
+      // e.g. return class {}
+      // e.g. return function () {}
+      // e.g. return () => {}
       case "ArrowFunctionExpression":
-        // e.g. () => class {}
-        // e.g. () => function () {}
-        // e.g. () => () => {}
+      // e.g. () => class {}
+      // e.g. () => function () {}
+      // e.g. () => () => {}
       case "NewExpression":
-        // e.g. new Class(class {}) // dont think this one is possible but unsure
-        // e.g. new Class(function () {})
-        // e.g. new Class(() => {})
+      // e.g. new Class(class {}) // dont think this one is possible but unsure
+      // e.g. new Class(function () {})
+      // e.g. new Class(() => {})
       case "CallExpression": {
         // e.g. function(class {}) // dont think this one is possible but unsure
         // e.g. function(function () {})
         // e.g. function(() => {})
         return "id" in path.node && path.node.id && "name" in path.node.id
-            ? path?.node?.id?.name || "anonymous"
-            : "anonymous";
+          ? path.node.id.name
+          : "anonymous";
       }
       case "ConditionalExpression": {
         // e.g. c ? class {} : b
@@ -275,34 +275,34 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         // e.g. () => {}
         // Should not be possible
         return this._logOrFail(
-            unsupportedSyntax(parentNode.type, this._getNodeId(path))
+          unsupportedSyntax(parentNode.type, this._getNodeId(path))
         );
       }
     }
   }
 
   public FunctionDeclaration: (path: NodePath<t.FunctionDeclaration>) => void =
-      (path) => {
-        // e.g. function x() {}
-        const targetName = this._getTargetNameOfDeclaration(path);
-        const id = this._getNodeId(path);
-        const export_ = this._getExport(id);
+    (path) => {
+      // e.g. function x() {}
+      const targetName = this._getTargetNameOfDeclaration(path);
+      const id = this._getNodeId(path);
+      const export_ = this._getExport(id);
 
-        this._extractFromFunction(
-            path,
-            id,
-            id,
-            targetName,
-            export_,
-            false,
-            false
-        );
+      this._extractFromFunction(
+        path,
+        id,
+        id,
+        targetName,
+        export_,
+        false,
+        false
+      );
 
-        path.skip();
-      };
+      path.skip();
+    };
 
   public ClassDeclaration: (path: NodePath<t.ClassDeclaration>) => void = (
-      path
+    path
   ) => {
     // e.g. class A {}
     const targetName = this._getTargetNameOfDeclaration(path);
@@ -315,7 +315,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   };
 
   public FunctionExpression: (path: NodePath<t.FunctionExpression>) => void = (
-      path
+    path
   ) => {
     // only thing left where these can be found is:
     // call(function () {})
@@ -334,7 +334,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   };
 
   public ClassExpression: (path: NodePath<t.ClassExpression>) => void = (
-      path
+    path
   ) => {
     // only thing left where these can be found is:
     // call(class {})
@@ -353,7 +353,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   };
 
   public ArrowFunctionExpression: (
-      path: NodePath<t.ArrowFunctionExpression>
+    path: NodePath<t.ArrowFunctionExpression>
   ) => void = (path) => {
     // only thing left where these can be found is:
     // call(() => {})
@@ -374,7 +374,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   };
 
   public VariableDeclarator: (path: NodePath<t.VariableDeclarator>) => void = (
-      path
+    path
   ) => {
     if (!path.has("init")) {
       path.skip();
@@ -390,13 +390,13 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
 
     if (init.isFunction()) {
       this._extractFromFunction(
-          init,
-          id,
-          typeId,
-          targetName,
-          export_,
-          false,
-          false
+        init,
+        id,
+        typeId,
+        targetName,
+        export_,
+        false,
+        false
       );
     } else if (init.isClass()) {
       this._extractFromClass(init, id, typeId, targetName, export_);
@@ -410,15 +410,15 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   };
 
   public AssignmentExpression: (
-      path: NodePath<t.AssignmentExpression>
+    path: NodePath<t.AssignmentExpression>
   ) => void = (path) => {
     const left = path.get("left");
     const right = path.get("right");
 
     if (
-        !right.isFunction() &&
-        !right.isClass() &&
-        !right.isObjectExpression()
+      !right.isFunction() &&
+      !right.isClass() &&
+      !right.isObjectExpression()
     ) {
       return;
     }
@@ -452,10 +452,10 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         // x.? = ?
         // x['?'] = ?
         if (
-            object.node.name === "exports" ||
-            (object.node.name === "module" &&
-                property.isIdentifier() &&
-                property.node.name === "exports")
+          object.node.name === "exports" ||
+          (object.node.name === "module" &&
+            property.isIdentifier() &&
+            property.node.name === "exports")
         ) {
           // exports.? = ?
           // module.exports = ?
@@ -466,7 +466,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           objectId = this._getBindingId(object);
           // find object
           const objectTarget = this._subTargets.find(
-              (value) => value.id === objectId && value.type === TargetType.OBJECT
+            (value) => value.id === objectId && value.type === TargetType.OBJECT
           );
 
           if (!objectTarget) {
@@ -490,15 +490,14 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         const subProperty = object.get("property");
         // what about module.exports.x
         if (
-            subObject.isIdentifier() &&
-            subProperty.isIdentifier() &&
-            subProperty.node.name === "prototype"
+          subObject.isIdentifier() &&
+          subProperty.isIdentifier() &&
+          subProperty.node.name === "prototype"
         ) {
           // x.prototype.? = ?
           objectId = this._getBindingId(subObject);
-          console.log(objectId);
           const objectTarget = <NamedSubTarget & Exportable>(
-              this._subTargets.find((value) => value.id === objectId)
+            this._subTargets.find((value) => value.id === objectId)
           );
 
           if (!objectTarget) {
@@ -519,7 +518,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
 
           // replace original target by prototype class
           this._subTargets[this._subTargets.indexOf(objectTarget)] =
-              newTargetClass;
+            newTargetClass;
 
           const constructorTarget: MethodTarget = {
             id: objectTarget.id,
@@ -531,9 +530,9 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
             visibility: "public",
             isStatic: false,
             isAsync:
-                "isAsync" in objectTarget
-                    ? (<Callable>objectTarget).isAsync
-                    : false,
+              "isAsync" in objectTarget
+                ? (<Callable>objectTarget).isAsync
+                : false,
           };
 
           this._subTargets.push(constructorTarget);
@@ -551,14 +550,14 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
 
     if (right.isFunction()) {
       this._extractFromFunction(
-          right,
-          id,
-          typeId,
-          targetName,
-          export_,
-          isObject,
-          isMethod,
-          objectId
+        right,
+        id,
+        typeId,
+        targetName,
+        export_,
+        isObject,
+        isMethod,
+        objectId
       );
     } else if (right.isClass()) {
       this._extractFromClass(right, id, typeId, targetName, export_);
@@ -572,14 +571,14 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   };
 
   private _extractFromFunction(
-      path: NodePath<t.Function>,
-      functionId: string,
-      typeId: string,
-      functionName: string,
-      export_: Export | undefined,
-      isObjectFunction: boolean,
-      isMethod: boolean,
-      superId?: string
+    path: NodePath<t.Function>,
+    functionId: string,
+    typeId: string,
+    functionName: string,
+    export_: Export | undefined,
+    isObjectFunction: boolean,
+    isMethod: boolean,
+    superId?: string
   ) {
     let target: FunctionTarget | ObjectFunctionTarget | MethodTarget;
 
@@ -590,7 +589,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
     if (isObjectFunction) {
       if (!superId) {
         throw new ImplementationError(
-            "if it is an object function the object id should be given"
+          "if it is an object function the object id should be given"
         );
       }
       target = {
@@ -604,7 +603,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
     } else if (isMethod) {
       if (!superId) {
         throw new ImplementationError(
-            "if it is an object function the object id should be given"
+          "if it is an object function the object id should be given"
         );
       }
       target = {
@@ -616,13 +615,13 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         isAsync: path.node.async,
         methodType: path.isClassMethod() ? path.node.kind : "method",
         visibility:
-            path.isClassMethod() && path.node.access
-                ? path.node.access
-                : "public",
+          path.isClassMethod() && path.node.access
+            ? path.node.access
+            : "public",
         isStatic:
-            path.isClassMethod() || path.isClassProperty()
-                ? path.node.static
-                : false,
+          path.isClassMethod() || path.isClassProperty()
+            ? path.node.static
+            : false,
       };
     } else {
       target = {
@@ -649,11 +648,11 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   }
 
   private _extractFromObjectExpression(
-      path: NodePath<t.ObjectExpression>,
-      objectId: string,
-      typeId: string,
-      objectName: string,
-      export_?: Export
+    path: NodePath<t.ObjectExpression>,
+    objectId: string,
+    typeId: string,
+    objectName: string,
+    export_?: Export
   ) {
     const target: ObjectTarget = {
       id: objectId,
@@ -675,7 +674,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // unsupported
           // not possible i think
           this._logOrFail(
-              computedProperty(property.type, this._getNodeId(property))
+            computedProperty(property.type, this._getNodeId(property))
           );
           continue;
         }
@@ -685,33 +684,33 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
 
           const id = this._getNodeId(property);
           this._extractFromFunction(
-              property,
-              id,
-              id,
-              targetName,
-              undefined,
-              true,
-              false,
-              objectId
+            property,
+            id,
+            id,
+            targetName,
+            undefined,
+            true,
+            false,
+            objectId
           );
         } else if (key.isLiteral()) {
           const targetName = "value" in key ? String(key.value) : "null";
 
           const id = this._getNodeId(property);
           this._extractFromFunction(
-              property,
-              id,
-              id,
-              targetName,
-              undefined,
-              true,
-              false,
-              objectId
+            property,
+            id,
+            id,
+            targetName,
+            undefined,
+            true,
+            false,
+            objectId
           );
         } else {
           // not possible i think
           this._logOrFail(
-              unsupportedSyntax(property.node.type, this._getNodeId(property))
+            unsupportedSyntax(property.node.type, this._getNodeId(property))
           );
           continue;
         }
@@ -725,24 +724,24 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           if (key.isIdentifier()) {
             targetName = key.node.name;
           } else if (
-              key.isStringLiteral() ||
-              key.isBooleanLiteral() ||
-              key.isNumericLiteral() ||
-              key.isBigIntLiteral()
+            key.isStringLiteral() ||
+            key.isBooleanLiteral() ||
+            key.isNumericLiteral() ||
+            key.isBigIntLiteral()
           ) {
             targetName = String(key.node.value);
           }
 
           if (value.isFunction()) {
             this._extractFromFunction(
-                value,
-                id,
-                id,
-                targetName,
-                undefined,
-                true,
-                false,
-                objectId
+              value,
+              id,
+              id,
+              targetName,
+              undefined,
+              true,
+              false,
+              objectId
             );
           } else if (value.isClass()) {
             this._extractFromClass(value, id, id, targetName);
@@ -760,11 +759,11 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
   }
 
   private _extractFromClass(
-      path: NodePath<t.Class>,
-      classId: string,
-      typeId: string,
-      className: string,
-      export_?: Export | undefined
+    path: NodePath<t.Class>,
+    classId: string,
+    typeId: string,
+    className: string,
+    export_?: Export | undefined
   ): void {
     const target: ClassTarget = {
       id: classId,
@@ -786,10 +785,10 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           // unsupported
           // not possible i think
           this._logOrFail(
-              unsupportedSyntax(
-                  classBodyAttribute.node.type,
-                  this._getNodeId(classBodyAttribute)
-              )
+            unsupportedSyntax(
+              classBodyAttribute.node.type,
+              this._getNodeId(classBodyAttribute)
+            )
           );
           continue;
         }
@@ -799,14 +798,14 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         const id = this._getNodeId(classBodyAttribute);
 
         this._extractFromFunction(
-            classBodyAttribute,
-            id,
-            id,
-            targetName,
-            undefined,
-            false,
-            true,
-            classId
+          classBodyAttribute,
+          id,
+          id,
+          targetName,
+          undefined,
+          false,
+          true,
+          classId
         );
       } else if (classBodyAttribute.isClassProperty()) {
         const key = classBodyAttribute.get("key");
@@ -818,24 +817,24 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
           if (key.isIdentifier()) {
             targetName = key.node.name;
           } else if (
-              key.isStringLiteral() ||
-              key.isBooleanLiteral() ||
-              key.isNumericLiteral() ||
-              key.isBigIntLiteral()
+            key.isStringLiteral() ||
+            key.isBooleanLiteral() ||
+            key.isNumericLiteral() ||
+            key.isBigIntLiteral()
           ) {
             targetName = String(key.node.value);
           }
 
           if (value.isFunction()) {
             this._extractFromFunction(
-                value,
-                id,
-                id,
-                targetName,
-                undefined,
-                false,
-                true,
-                classId
+              value,
+              id,
+              id,
+              targetName,
+              undefined,
+              false,
+              true,
+              classId
             );
           } else if (value.isClass()) {
             this._extractFromClass(value, id, id, targetName);
@@ -847,7 +846,7 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
         }
       } else {
         return this._logOrFail(
-            unsupportedSyntax(body.node.type, this._getNodeId(classBodyAttribute))
+          unsupportedSyntax(body.node.type, this._getNodeId(classBodyAttribute))
         );
       }
     }
@@ -855,37 +854,37 @@ export class TargetVisitor extends AbstractSyntaxTreeVisitor {
 
   get subTargets(): SubTarget[] {
     return this._subTargets
-        .reverse()
-        .filter((subTarget, index, self) => {
-          if (!("name" in subTarget)) {
-            // paths/branches/lines are always unique
-            return true;
-          }
+      .reverse()
+      .filter((subTarget, index, self) => {
+        if (!("name" in subTarget)) {
+          // paths/branches/lines are always unique
+          return true;
+        }
 
-          // filter duplicates because of redefinitions
-          // e.g. let a = 1; a = 2;
-          // this would result in two subtargets with the same name "a"
-          // but we only want the last one
-          return (
-              index ===
-              self.findIndex((t) => {
-                return (
-                    "name" in t &&
-                    t.id === subTarget.id &&
-                    t.type === subTarget.type &&
-                    t.name === subTarget.name &&
-                    (t.type === TargetType.METHOD
-                        ? (<MethodTarget>t).methodType ===
-                        (<MethodTarget>subTarget).methodType &&
-                        (<MethodTarget>t).isStatic ===
-                        (<MethodTarget>subTarget).isStatic &&
-                        (<MethodTarget>t).classId ===
-                        (<MethodTarget>subTarget).classId
-                        : true)
-                );
-              })
-          );
-        })
-        .reverse();
+        // filter duplicates because of redefinitions
+        // e.g. let a = 1; a = 2;
+        // this would result in two subtargets with the same name "a"
+        // but we only want the last one
+        return (
+          index ===
+          self.findIndex((t) => {
+            return (
+              "name" in t &&
+              t.id === subTarget.id &&
+              t.type === subTarget.type &&
+              t.name === subTarget.name &&
+              (t.type === TargetType.METHOD
+                ? (<MethodTarget>t).methodType ===
+                    (<MethodTarget>subTarget).methodType &&
+                  (<MethodTarget>t).isStatic ===
+                    (<MethodTarget>subTarget).isStatic &&
+                  (<MethodTarget>t).classId ===
+                    (<MethodTarget>subTarget).classId
+                : true)
+            );
+          })
+        );
+      })
+      .reverse();
   }
 }

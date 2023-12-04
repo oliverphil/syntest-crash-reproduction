@@ -193,21 +193,17 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     ];
   }
 
-  private _getLocation(path: NodePath<t.Node>): Location {
-    let locPath = path;
-    while (!locPath.node.loc) {
-      locPath = locPath.parentPath;
-    }
+  private _getLocation(path: NodePath): Location {
     return {
       start: {
-        line: locPath.node.loc.start.line,
-        column: locPath.node.loc.start.column,
-        index: (<{ index: number }>(<unknown>locPath.node.loc.start)).index,
+        line: path.node.loc.start.line,
+        column: path.node.loc.start.column,
+        index: (<{ index: number }>(<unknown>path.node.loc.start)).index,
       },
       end: {
-        line: locPath.node.loc.end.line,
-        column: locPath.node.loc.end.column,
-        index: (<{ index: number }>(<unknown>locPath.node.loc.end)).index,
+        line: path.node.loc.end.line,
+        column: path.node.loc.end.column,
+        index: (<{ index: number }>(<unknown>path.node.loc.end)).index,
       },
     };
   }
@@ -230,10 +226,9 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     );
 
     if (this._nodes.has(id)) {
-      // throw new ImplementationError("Node already registered", {
-      //   context: { nodeId: id },
-      // });
-      return this._nodes.get(id);
+      throw new ImplementationError("Node already registered", {
+        context: { nodeId: id },
+      });
     }
     this._nodes.set(id, node);
     this._nodesList.push(node);
@@ -259,6 +254,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
 
     return `${this._filePath}:${startLine}:${startColumn}:::${endLine}:${endColumn}:::${startIndex}:${endIndex}`;
   }
+
   /**
    * Create a placeholder node for a node that is not in the AST, but is used in the CFG.
    * Uses the end location of the parent node as the start and end location of the placeholder node.
@@ -296,6 +292,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
       {},
       path.node.type
     );
+
     if (this._nodes.has(id)) {
       throw new ImplementationError("Node already registered", {
         context: { nodeId: id },
@@ -405,13 +402,13 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
   // actual control flow graph related nodes
   public Statement: (path: NodePath<t.Statement>) => void = (path) => {
     ControlFlowGraphVisitor.LOGGER.debug(
-      `Entering statement: ${path.type}\tline: ${path.node?.loc?.start?.line}\tcolumn: ${path.node?.loc?.start?.column}`
+      `Entering statement: ${path.type}\tline: ${path.node.loc.start.line}\tcolumn: ${path.node.loc.start.column}`
     );
 
     if (this._nodes.has(this._getNodeId(path))) {
-      // throw new ImplementationError("Id already used", {
-      //   context: { nodeId: this._getNodeId(path) },
-      // });
+      throw new ImplementationError("Id already used", {
+        context: { nodeId: this._getNodeId(path) },
+      });
     } else {
       const node = this._createNode(path);
 
@@ -632,6 +629,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     this._regularBreakNodesStack.push(new Set());
     this._regularContinueNodesStack.push(new Set());
 
+    // loop
     const loopNode = this._createNode(path.get("test"));
 
     this._connectToParents(loopNode);
@@ -744,6 +742,7 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
         );
       }
     }
+
     // connect to test
     if (path.has("test")) {
       this._edgeType = EdgeType.BACK_EDGE;
@@ -826,7 +825,6 @@ export class ControlFlowGraphVisitor extends AbstractSyntaxTreeVisitor {
     if (beforeSize === this._nodes.size) {
       // empty body
       // create placeholder node
-
       const placeholderNode = this._createPlaceholderNode(path.get("body"));
       this._connectToParents(placeholderNode);
       this._currentParents = [placeholderNode.id];

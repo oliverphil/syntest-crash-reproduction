@@ -169,10 +169,10 @@ export class EnvironmentGenerator {
         try {
           const nodeVersion = crash.nodeVersion || crash.version;
           const tarName = `node-v${nodeVersion}.tar.gz`;
-          const tarFolder = `${assetDir}/${syntestType}/node/${crashName}`;
-          const tarFile = `${assetDir}/${syntestType}/node/${crashName}/${tarName}`;
+          const tarFolder = `./benchmark/crashes/${syntestType}/node/${crashName}`;
+          const tarFile = `./benchmark/crashes/${syntestType}/node/${crashName}/${tarName}`;
           execSync(`wget -O ${tarFile}` +
-              ` https://nodejs.org/download/release/v${nodeVersion}/${tarName} > /dev/null 2>&1`);
+              ` https://nodejs.org/dist/v${nodeVersion}/${tarName} > /dev/null 2>&1`);
           execSync(`tar -xf ${tarFile} -C ${tarFolder} > /dev/null 2>&1`);
         } catch (e) {
           console.log(e);

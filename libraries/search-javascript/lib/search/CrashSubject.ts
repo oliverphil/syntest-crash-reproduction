@@ -61,45 +61,57 @@ export class CrashSubject extends JavaScriptSubject {
             `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
             this.stackTrace
         ));
+        for (const frame of this.stackTrace.trace) {
+            objectives.push(
+                new StackFrameObjectiveFunction(
+                    `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                    this.controlFlowProgram,
+                    undefined,
+                    this.approachLevelCalculator,
+                    this.branchDistanceCalculator,
+                    frame
+                )
+            );
+        }
         for (const cff of this.controlFlowProgram.functions) {
             const paths = this.extractPathsFromFunction(cff);
             for (const path of paths) {
                 // console.log(path);
                 // const frame = this.stackTrace.trace.find(frame => frame.method.includes(cff.name));
-                const frames = this.stackTrace.trace.filter(frame => cff.id.includes(frame.file));
-                const frame = frames.find(frame => frame.method.includes(cff.name));
-                if (frame) {
-                    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-                    // objectives.push(
-                    //     new PathObjectiveFunction(
-                    //         prng.uniqueId(),
-                    //         this.controlFlowProgram,
-                    //         path,
-                    //         this.approachLevelCalculator,
-                    //         this.branchDistanceCalculator
-                    //     )
-                    // );
-                    // if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
-                        objectives.push(
-                            new StackFrameObjectiveFunction(
-                                `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                                this.controlFlowProgram,
-                                path,
-                                this.approachLevelCalculator,
-                                this.branchDistanceCalculator,
-                                frame
-                            )
-                            // new PathObjectiveFunction(
-                            //     `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                            //     this.controlFlowProgram,
-                            //     path,
-                            //     this.approachLevelCalculator,
-                            //     this.branchDistanceCalculator
-                            // )
-                        );
-                        objs.add(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`);
-                    // }
-                }
+                // const frames = this.stackTrace.trace.filter(frame => cff.id.includes(frame.file));
+                // const frame = frames.find(frame => frame.method?.includes(cff.name));
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+                objectives.push(
+                    new PathObjectiveFunction(
+                        prng.uniqueId(),
+                        this.controlFlowProgram,
+                        path,
+                        this.approachLevelCalculator,
+                        this.branchDistanceCalculator
+                    )
+                );
+                // if (frame) {
+                //     if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
+                //         objectives.push(
+                //             new StackFrameObjectiveFunction(
+                //                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                //                 this.controlFlowProgram,
+                //                 path,
+                //                 this.approachLevelCalculator,
+                //                 this.branchDistanceCalculator,
+                //                 frame
+                //             )
+                //             // new PathObjectiveFunction(
+                //             //     `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                //             //     this.controlFlowProgram,
+                //             //     path,
+                //             //     this.approachLevelCalculator,
+                //             //     this.branchDistanceCalculator
+                //             // )
+                //         );
+                //         objs.add(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`);
+                //     }
+                // }
                 // objectives.push(
                 //     new PathObjectiveFunction(
                 //         prng.uniqueId(),
@@ -111,7 +123,7 @@ export class CrashSubject extends JavaScriptSubject {
                 // );
             }
         }
-        this.numStackObjectives = objs.size + 1;
+        this.numStackObjectives = this.stackTrace.trace.length + 1;
         // if (this.stackTrace) {
         //     for (const stackFrame of this.stackTrace.trace) {
         //         const objective = new StackFrameObjectiveFunction(

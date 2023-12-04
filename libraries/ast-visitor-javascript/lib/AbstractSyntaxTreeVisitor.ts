@@ -75,7 +75,8 @@ export class AbstractSyntaxTreeVisitor implements TraverseOptions {
   }
 
   public _getNodeId(path: NodePath<t.Node> | t.Node): string {
-    let loc = "node" in path ? path.node.loc : path.loc;
+    // @ts-ignore
+    let loc = "node" in path && path.node ? path.node.loc : path.loc;
     let node = path;
     while (!loc && node) {
       // @ts-ignore

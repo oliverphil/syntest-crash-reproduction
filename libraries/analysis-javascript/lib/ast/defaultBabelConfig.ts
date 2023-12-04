@@ -21,19 +21,14 @@ import { TransformOptions } from "@babel/core";
 export const defaultBabelOptions: TransformOptions = {
   configFile: false,
 
-  presets: [
-      "@babel/preset-env",
-      "@babel/preset-react",
-      "@babel/preset-typescript"
-  ],
+  // "presets": ["@babel/preset-react"],
   babelrc: false,
   ast: true,
-  sourceMaps: "both",
+  sourceMaps: true,
   compact: false,
   comments: true,
   retainLines: true,
   parserOpts: {
-    strictMode: false,
     allowReturnOutsideFunction: true,
     sourceType: "module",
     plugins: [
@@ -43,12 +38,5 @@ export const defaultBabelOptions: TransformOptions = {
       "objectRestSpread",
     ],
   },
-  plugins: [
-    "@babel/plugin-transform-typescript",
-    "@babel/plugin-transform-react-jsx",
-    "@babel/plugin-syntax-jsx",
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-react-inline-elements",
-    "@babel/plugin-transform-runtime"
-  ],
+  plugins: [],
 };

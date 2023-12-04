@@ -1,0 +1,8 @@
+[
+    "eslint-plugin-import/lib/rules/extensions.js",
+    "eslint/lib/linter/safe-emitter.js",
+    "Array.forEach",
+    "eslint/lib/linter/node-event-generator.js",
+    "eslint/lib/linter/code-path-analysis/code-path-analyzer.js",
+    "eslint/lib/linter/linter.js"
+]

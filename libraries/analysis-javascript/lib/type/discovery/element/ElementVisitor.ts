@@ -87,6 +87,7 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
 
       // known cases
       // ({ x = 5 }) => {...} (x is recorded twice)
+
       ElementVisitor.LOGGER.warn(`Overriding element with id: ${id}`);
       return;
     }
@@ -97,10 +98,8 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         bindingId,
         filePath: this._filePath,
         location: {
-          // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
-          // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
-          startIndex: (<{ index: number }>(<unknown>path.node.loc?.start))?.index,
-          endIndex: (<{ index: number }>(<unknown>path.node.loc?.end))?.index,
+          startIndex: (<{ index: number }>(<unknown>path.node.loc.start)).index,
+          endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
         },
         type: ElementType.Identifier,
         name: value,
@@ -112,10 +111,8 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         bindingId,
         filePath: this._filePath,
         location: {
-          // startIndex: (<{ index: number }>(<unknown>loc.start)).index,
-          // endIndex: (<{ index: number }>(<unknown>loc.end)).index,
-          startIndex: (<{ index: number }>(<unknown>path.node.loc?.start))?.index,
-          endIndex: (<{ index: number }>(<unknown>path.node.loc?.end))?.index,
+          startIndex: (<{ index: number }>(<unknown>path.node.loc.start)).index,
+          endIndex: (<{ index: number }>(<unknown>path.node.loc.end)).index,
         },
         type,
         value,
@@ -140,11 +137,7 @@ export class ElementVisitor extends AbstractSyntaxTreeVisitor {
         return;
       }
 
-      try {
-        this._createElement(path, ElementType.Identifier, path.node.name);
-      } catch (error) {
-        // console.log(error);
-      }
+      this._createElement(path, ElementType.Identifier, path.node.name);
     }
   };
 

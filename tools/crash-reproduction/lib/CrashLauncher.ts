@@ -1150,8 +1150,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         await this.exit();
       } catch (error) {
         console.log(error);
+        console.log(error?.trace)
         await this.exit();
-        console.trace(error);
       }
     // }
   }
