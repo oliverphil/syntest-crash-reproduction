@@ -60,10 +60,10 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "moment",
+    "syntest-project": "express",
     "syntest-crashes": "false",
     "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "moment-1"
+        "express-1"
     ]
 }

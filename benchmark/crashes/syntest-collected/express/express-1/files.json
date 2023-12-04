@@ -1,5 +1,3 @@
 [
-    "express/lib/application.js",
-    "new",
-    "node:internal/timers"
+    "express/lib/application.js"
 ]
