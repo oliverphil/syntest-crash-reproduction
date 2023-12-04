@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701398041256-sFHZNvvmqgPaS1DQTkYPey
+FID-1701652194861-bixX2sHZpBFz9LkRFRbtN7
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701398041256-sFHZNvvmqgPaS1DQTkYPey
 Loading Crashes... 
 access-policy_3.1.0
 
-added 1 package, and audited 2 packages in 1s
+added 1 package, and audited 2 packages in 2s
 
 1 critical severity vulnerability
 
@@ -67,19 +67,19 @@ Run `npm audit` for details.
 
 kmc_1.2.2
 
-added 22 packages, and audited 23 packages in 4s
+added 22 packages, and audited 23 packages in 2s
 
 found 0 vulnerabilities
 
 m-log_0.0.1
 
-added 3 packages, and audited 4 packages in 1s
+added 3 packages, and audited 4 packages in 3s
 
 found 0 vulnerabilities
 
 mathjs_3.10.3
 
-added 7 packages, and audited 8 packages in 2s
+added 7 packages, and audited 8 packages in 3s
 
 2 vulnerabilities (1 high, 1 critical)
 
@@ -90,7 +90,7 @@ Run `npm audit` for details.
 
 mathjs_3.9.0
 
-added 6 packages, and audited 7 packages in 378ms
+added 6 packages, and audited 7 packages in 2s
 
 2 vulnerabilities (1 high, 1 critical)
 
@@ -101,7 +101,7 @@ Run `npm audit` for details.
 
 modjs_0.4.0
 
-added 148 packages, and audited 149 packages in 6s
+added 148 packages, and audited 149 packages in 9s
 
 40 packages are looking for funding
   run `npm fund` for details
@@ -118,7 +118,7 @@ Run `npm audit` for details.
 
 modulify_0.1.0
 
-added 25 packages, and audited 26 packages in 3s
+added 25 packages, and audited 26 packages in 4s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -132,7 +132,7 @@ Run `npm audit` for details.
 
 mol-proto_0.1.3
 
-added 1 package, and audited 2 packages in 641ms
+added 1 package, and audited 2 packages in 737ms
 
 found 0 vulnerabilities
 
@@ -153,9 +153,9 @@ Run `npm audit` for details.
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4254919.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js: encode.js #2
-    - function /local/tmp/oliverphil/4254919.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:3:0:::7:1:::15:138
-    - function /local/tmp/oliverphil/4254919.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:9:0:::27:1:::140:517
+  - /local/tmp/oliverphil/4255800.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js: encode.js #2
+    - function /local/tmp/oliverphil/4255800.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:3:0:::7:1:::15:138
+    - function /local/tmp/oliverphil/4255800.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:9:0:::27:1:::140:517
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                      SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                      ║
@@ -168,9 +168,9 @@ Run `npm audit` for details.
 ╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
 ╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Include      │ ./benchmark/crashes/secbench/code-injection/access-policy_3.1.0/**/*.js                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ║
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
 ╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Analysis Exclude      │ **/*.spec.js, ./benchmark/crashes/secbench/code-injection/access-policy_3.1.0/**/node_modules/**/*.js                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ║
+║ Analysis Exclude      │ **/commander*/**/*.test.js, **/commander*/**/test/**/*.*, **/commander*/**/node_modules/**/*.*, **/*.spec.js                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ║
 ╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════╗
@@ -198,7 +198,7 @@ Run `npm audit` for details.
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.38488459881820797               ║
+║ Seed                      │ 0.206815074637573                 ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -283,11 +283,82 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0, went from 0 to 0 test cases
-De-Duplication done took: 0, went from 0 to 0 test cases
+Splitting done took: 16.555, went from 23 to 121 test cases
+De-Duplication done took: 0.183, went from 121 to 22 test cases
+archive size 22
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+
+ SEARCH RESULTS 
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                               Coverage                                                                                                                ║
+╟──────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target               │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                                              ║
+╟──────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ encode.js: encode.js │ 15 / 15   │ 4 / 4  │ 2 / 2    │ 5 / 10     │ /local/tmp/oliverphil/4255800.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js ║
+╟──────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average              │ 100 %     │ 100 %  │ 100 %    │ 50 %       │                                                                                                                                                                   ║
+╚══════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
 
  GENERAL INFO 
 

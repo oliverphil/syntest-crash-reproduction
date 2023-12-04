@@ -1,121 +1,332 @@
 [33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
 [33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
-cp: cannot stat 'benchmark/resources/moment': No such file or directory
-Usage: bin.ts crash test [options]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
-Type Inference Options:
-      --incorporate-execution-information  Incorporate execution information.  [boolean] [default: true]
-      --type-inference-mode                The type inference mode: [proportional, ranked, none].  [string] [default: "proportional"]
-      --random-type-probability            The probability we use a random type regardless of the inferred type.  [number] [default: 0.1]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Sampling Options:
-      --max-depth                          Max depth of an individual's gene tree.  [number] [default: 5]
-      --max-action-statements              Max number of top level action statements in an individual's gene tree.  [number] [default: 5]
-      --explore-illegal-values             Allow primitives to become values outside of the specified bounds.  [boolean] [default: false]
-      --delta-mutation-probability         Probability a delta mutation is performed.  [number] [default: 0.8]
-      --crossover-probability              Probability crossover happens for a certain encoding.  [number] [default: 0.7]
-      --multi-point-crossover-probability  Probability crossover happens at a certain branch point.  [number] [default: 0.5]
-      --string-alphabet                    The alphabet to be used by the string gene.  [string] [default: "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !@#$%^&*()-_=+[]{};:'"|\,.<>/?~§±`'
-  	"]
-      --string-max-length                  Maximal length of the string gene.  [number] [default: 100]
-      --numeric-max-value                  Max value used by the numeric gene.  [number] [default: 9007199254740991]
-      --constant-pool                      Enable constant pool.  [boolean] [default: true]
-      --constant-pool-probability          Probability to sample from the constant pool instead creating random values  [number] [default: 0.5]
-      --type-pool                          Enable type pool.  [boolean] [default: true]
-      --type-pool-probability              Probability to sample from the type pool instead creating random values  [number] [default: 0.5]
-      --statement-pool                     Enable statement pool.  [boolean] [default: true]
-      --statement-pool-probability         Probability to sample from the statement pool instead creating new values  [number] [default: 0.8]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Test Execution Options:
-      --execution-timeout  The timeout for one execution of one test (must be larger than the test-timeout).  [number] [default: 2000]
-      --test-timeout       The timeout for one test.  [number] [default: 1000]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Debugging
-      --syntax-forgiving     Whether we allow 'odd' syntax or throw an error.  [boolean] [default: true]
-      --silence-test-output  Whether we show the test output in the logs.  [boolean] [default: true]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-General Options:
-  -c, --config   Manually specify path to config file  [string] [default: ".syntest.json"]
-  -v, --verbose  Increase verbosity of output  [count] [default: 0]
-  -p, --preset   The preset you want to use  [string] [choices: "none", "DynaMOSA", "MOSA", "NSGAII", "random"] [default: "none"]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-PRNG Options:
-  -s, --random-seed  Seed to be used by the pseudo random number generator.  [string]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Logging Options:
-      --log-directory   The path where the logs should be saved  [string] [default: "logs"]
-      --file-log-level  Which levels should be logged to file  [array] [default: ["info","warn","error"]]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Metric Options:
-      --metric-middleware-pipeline  Order of the output middleware  [array] [default: []]
-      --output-metrics              The values that should be written to csv  [array] [default: []]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Module Options:
-  -m, --modules  List of dependencies or paths to modules to load  [array] [default: []]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Target Options:
-  -r, --target-root-directory  The root directory where all targets are in  [string] [required]
-  -i, --target-include         Files/Directories to include as targets  [array] [default: []]
-  -e, --target-exclude         Files/Directories to exclude as targets  [array] [default: []]
-      --analysis-include       Files/Directories to include for analysis  [array] [default: []]
-      --analysis-exclude       Files/Directories to exclude for analysis  [array] [default: []]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Storage Options:
-      --syntest-directory       The path where everything should be saved  [string] [default: "syntest"]
-      --temp-syntest-directory  The path where all temporary files should be saved  [string] [default: ".syntest"]
-      --statistics-directory    The path where the csv should be saved (within the syntest-directory)  [string] [default: "statistics"]
-      --test-directory          The path where the final test suite should be saved (within the syntest-directory)  [string] [default: "tests"]
-      --instrumented-directory  Path to the temporary instrumented directory (within the temp-syntest-directory)  [string] [default: "instrumented"]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Search Algorithm Options:
-  -a, --search-algorithm      Search algorithm to be used by the tool.  [string] [choices: "MOSAFamily", "NSGAII", "random"]
-      --population-size       Size of the population.  [number] [default: 50]
-      --objective-manager     Objective manager to be used by the tool.  [string] [choices: "stackTrace", "simple", "structural", "structural-uncovered", "tracking", "uncovered"]
-      --secondary-objectives  Secondary objectives to be used by the tool.  [string] [choices: "least-errors", "smallest-encoding"] [default: []]
-      --crossover             Crossover operator to be used by the tool.  [string] [choices: "javascript-tree"]
-      --procreation           Procreation operator to be used by the tool.  [string] [choices: "default"]
-      --sampler               Sampler to be used by the tool.  [string] [choices: "javascript-random"]
-      --termination-triggers  Termination trigger to be used by the tool.  [array] [choices: "signal"] [default: ["signal"]]
-      --exception-objectives  Wether we save exception objectives or not.  [boolean] [default: true]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Budget Options:
-  -t, --total-time   Total time budget in seconds  [number] [default: 9007199254740991]
-      --search-time  Search time budget in seconds  [number] [default: 9007199254740991]
-      --iterations   Iteration budget  [number] [default: 9007199254740991]
-      --evaluations  Evaluation budget  [number] [default: 9007199254740991]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Post Proccessing Options:
-      --test-minimization  Minimize test cases at the end of the search.  [boolean] [default: true]
-      --test-splitting     Split test cases at the end of the search.  [boolean] [default: true]
-      --meta-comments      Add meta comments to test cases at the end of the search.  [boolean] [default: true]
-      --assertions         Add assertions to test cases at the end of the search.  [boolean] [default: true]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Research Mode Options:
-      --configuration  The name of the configuration.  [string] [default: ""]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Options:
-      --help     Show help  [boolean]
-      --version  Show version number  [boolean]
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-Error: Command failed: cp -R benchmark/resources/moment ./benchmark/crashes/syntest-collected//moment/moment-55/moment
-cp: cannot stat 'benchmark/resources/moment': No such file or directory
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
 
-    at checkExecSyncError (node:child_process:890:11)
-    at execSync (node:child_process:962:15)
-    at Function.createCrashEnvironment (/local/tmp/oliverphil/4254918.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:29:15)
-    at /local/tmp/oliverphil/4254918.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
-    at Object.Command.handler (/local/tmp/oliverphil/4254918.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
-    at /local/tmp/oliverphil/4254918.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
-    at /local/tmp/oliverphil/4254918.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
-    at processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  status: 1,
-  signal: null,
-  output: [
-    null,
-    <Buffer >,
-    <Buffer 63 70 3a 20 63 61 6e 6e 6f 74 20 73 74 61 74 20 27 62 65 6e 63 68 6d 61 72 6b 2f 72 65 73 6f 75 72 63 65 73 2f 6d 6f 6d 65 6e 74 27 3a 20 4e 6f 20 73 ... 22 more bytes>
-  ],
-  pid: 600746,
-  stdout: <Buffer >,
-  stderr: <Buffer 63 70 3a 20 63 61 6e 6e 6f 74 20 73 74 61 74 20 27 62 65 6e 63 68 6d 61 72 6b 2f 72 65 73 6f 75 72 63 65 73 2f 6d 6f 6d 65 6e 74 27 3a 20 4e 6f 20 73 ... 22 more bytes>
-}
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    Computed property found in ConditionalExpression at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/src/lib/parse/regex.js:48:21:::52:11:::1607:1764
+[33mwarn[39m:    Cannot find binding for zeroFillMath at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/benchmarks/zeroFill.js:17:8:::17:20:::554:566
+[33mwarn[39m:    Cannot find binding for zeroFillMath at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/benchmarks/zeroFill.js:18:8:::18:20:::604:616
+[33mwarn[39m:    Cannot find binding for zeroFillMath at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/benchmarks/zeroFill.js:19:8:::19:20:::655:667
+[33mwarn[39m:    Cannot find binding for zeroFillWhile at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/benchmarks/zeroFill.js:36:8:::36:21:::1146:1159
+[33mwarn[39m:    Cannot find binding for zeroFillWhile at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/benchmarks/zeroFill.js:37:8:::37:21:::1197:1210
+[33mwarn[39m:    Cannot find binding for zeroFillWhile at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/benchmarks/zeroFill.js:38:8:::38:21:::1249:1262
+[33mwarn[39m:    Cannot find binding for moment at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/meteor/export.js:2:0:::2:6:::120:126
+[33mwarn[39m:    Cannot find binding for moment at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/meteor/test.js:4:10:::4:16:::69:75
+[33mwarn[39m:    Cannot find binding for moment at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/meteor/test.js:4:10:::4:16:::69:75
+[33mwarn[39m:    Cannot find binding for moment at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/meteor/test.js:4:26:::4:32:::85:91
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/chardet/index.js:100:6:::100:12:::2121:2127
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/chardet/index.js:102:16:::102:22:::2184:2190
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/chardet/index.js:103:19:::103:25:::2253:2259
+[33mwarn[39m:    Cannot find binding for value at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/convert-source-map/index.js:34:13:::34:18:::1016:1021
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/eslint-utils/index.js:1019:6:::1019:21:::31674:31689
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/eslint-utils/index.js:1019:31:::1019:61:::31699:31729
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/eslint-utils/index.js:1243:27:::1243:34:::38298:38305
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/eslint-utils/index.js:1360:12:::1360:16:::42075:42079
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/eslint-utils/index.js:1361:12:::1361:29:::42104:42121
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_async.js:13:0:::13:6:::354:360
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_async.js:18:4:::18:10:::449:455
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_async.js:18:4:::18:10:::449:455
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_sync.js:13:0:::13:6:::354:360
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_sync.js:18:19:::18:25:::533:539
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_sync.js:18:19:::18:25:::533:539
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_sync.js:20:8:::20:14:::609:615
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/external-editor/example_sync.js:20:8:::20:14:::609:615
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/globrex/index.js:20:24:::20:32:::906:914
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/globrex/index.js:20:42:::20:50:::924:932
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/globrex/index.js:20:60:::20:66:::942:948
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/globrex/index.js:20:76:::20:84:::958:966
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/globrex/index.js:20:94:::20:99:::976:981
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/hasha/index.js:123:36:::123:45:::2810:2819
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/hasha/index.js:123:58:::123:66:::2832:2840
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/hasha/index.js:133:30:::133:39:::3077:3086
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/hasha/index.js:133:52:::133:60:::3099:3107
+[33mwarn[39m:    Cannot find binding for task at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/hooker/grunt.js:47:0:::47:4:::1077:1081
+[33mwarn[39m:    Cannot find binding for task at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/hooker/grunt.js:47:0:::47:4:::1077:1081
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ignore/index.js:329:4:::329:14:::8475:8485
+[33mwarn[39m:    Cannot find binding for __coverage__ at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/nyc/index.js:41:13:::41:25:::1210:1222
+[33mwarn[39m:    Cannot find binding for __coverage__ at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/nyc/index.js:41:51:::41:63:::1248:1260
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/p-map/index.js:8:2:::8:13:::116:127
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/p-map/index.js:9:2:::9:13:::142:153
+[33mwarn[39m:    Cannot find binding for checked at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/prettier/doc.js:197:10:::197:17:::6181:6188
+[33mwarn[39m:    Cannot find binding for checked at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/prettier/doc.js:197:10:::197:17:::6181:6188
+[33mwarn[39m:    Cannot find binding for checked at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/prettier/doc.js:201:8:::201:15:::6278:6285
+[33mwarn[39m:    Cannot find binding for checked at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/prettier/doc.js:201:8:::201:15:::6278:6285
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/readdirp/index.js:124:29:::124:34:::3887:3892
+[33mwarn[39m:    Cannot find binding for s at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/underscore.string/meteor-post.js:2:0:::2:1:::46:47
+[33mwarn[39m:    Cannot find binding for originalFs at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/adm-zip/util/fileSystem.js:5:5:::5:15:::113:123
+[33mwarn[39m:    Cannot find binding for originalFs at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/adm-zip/util/fileSystem.js:6:21:::6:31:::172:182
+[33mwarn[39m:    Cannot find binding for originalFs at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/adm-zip/util/fileSystem.js:7:12:::7:22:::211:221
+[33mwarn[39m:    Cannot find binding for padlen at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/cli-table/lib/utils.js:27:31:::27:37:::493:499
+[33mwarn[39m:    Cannot find binding for padlen at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/cli-table/lib/utils.js:28:19:::28:25:::545:551
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:428:19:::428:20:::11955:11956
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:428:19:::428:20:::11955:11956
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:439:27:::439:28:::12304:12305
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:441:27:::441:28:::12350:12351
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:446:18:::446:19:::12403:12404
+[33mwarn[39m:    Cannot find binding for modDouble at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:474:16:::474:25:::13097:13106
+[33mwarn[39m:    Cannot find binding for modDouble at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:474:26:::474:35:::13107:13116
+[33mwarn[39m:    Cannot find binding for SecureRandom at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:482:55:::482:67:::13241:13253
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:496:26:::496:27:::13677:13678
+[33mwarn[39m:    Cannot find binding for q at /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/ecc-jsbn/lib/ec.js:501:40:::501:41:::13770:13771
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/gensync/test/index.test.js:29:18:::29:28:::494:504
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/gensync/test/index.test.js:29:38:::29:49:::514:525
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255799.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-55/moment/node_modules/globalyzer/src/index.js:18:23:::18:29:::608:614
+
+<--- Last few GCs --->
+
+[586515:0x5d1ec70]   337334 ms: Mark-sweep 9761.9 (10047.9) -> 9747.3 (10047.9) MB, 7835.3 / 0.0 ms  (average mu = 0.086, current mu = 0.002) allocation failure; scavenge might not succeed
+[586515:0x5d1ec70]   345499 ms: Mark-sweep 9763.1 (10047.9) -> 9748.5 (10049.1) MB, 8151.0 / 0.0 ms  (average mu = 0.042, current mu = 0.002) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb95b60 node::Abort() [node]
+ 2: 0xa9a7f8  [node]
+ 3: 0xd6f2f0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]
+ 4: 0xd6f697 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]
+ 5: 0xf4cba5  [node]
+ 6: 0xf5f08d v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
+ 7: 0xf3978e v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 8: 0xf3ab57 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 9: 0xf1bd2a v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]
+10: 0x12e114f v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]
+11: 0x170deb9  [node]

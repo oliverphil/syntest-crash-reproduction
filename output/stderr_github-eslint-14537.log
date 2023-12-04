@@ -49,7 +49,8 @@ npm WARN EBADENGINE   required: { node: '14.17.4' },
 npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
 npm WARN EBADENGINE }
 
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -57,54 +58,96 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/ansi-regex/index.js:3:19:::3:28:::34:43
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-utils/index.js:1070:6:::1070:21:::33493:33508
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-utils/index.js:1070:31:::1070:61:::33518:33548
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-utils/index.js:1294:27:::1294:34:::40117:40124
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-utils/index.js:1413:12:::1413:16:::43963:43967
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint-utils/index.js:1414:12:::1414:29:::43992:44009
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/ignore/index.js:329:4:::329:14:::8475:8485
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/completer.js:7:8:::7:12:::200:204
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/completer.js:7:19:::7:26:::211:218
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/placeholder.js:21:8:::21:13:::597:602
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/placeholder.js:21:20:::21:27:::609:616
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/placeholder.js:21:39:::21:49:::628:638
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/prompt.js:93:18:::93:25:::2460:2467
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/prompt.js:93:32:::93:37:::2474:2479
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/prompt.js:93:44:::93:49:::2486:2491
+[33mwarn[39m:    Cannot find binding for _queue at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/queue.js:4:2:::4:8:::48:54
+[33mwarn[39m:    Cannot find binding for _executing at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/queue.js:5:2:::5:12:::63:73
+[33mwarn[39m:    Cannot find binding for _jobRunner at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/queue.js:6:2:::6:12:::85:95
+[33mwarn[39m:    Cannot find binding for enqueue at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/queue.js:12:2:::12:9:::172:179
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/utils.js:95:8:::95:14:::2328:2334
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/utils.js:95:21:::95:28:::2341:2348
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/utils.js:95:48:::95:53:::2368:2373
+[33mwarn[39m:    Cannot find binding for k at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/json-buffer/test/index.js:46:4:::46:5:::897:898
+[33mwarn[39m:    Cannot find binding for k at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/json-buffer/test/index.js:60:16:::60:17:::1248:1249
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/keyv/src/index.js:38:19:::38:29:::772:782
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/lodash/fp/_convertBrowser.js:15:11:::15:12:::482:483
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/lodash/fp/_convertBrowser.js:15:37:::15:38:::508:509
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/lodash/fp/_convertBrowser.js:15:37:::15:38:::508:509
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/lodash/fp/_convertBrowser.js:16:2:::16:3:::542:543
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/lodash/fp/_convertBrowser.js:16:21:::16:22:::561:562
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/lodash/fp/_convertBrowser.js:16:21:::16:22:::561:562
+[33mwarn[39m:    Cannot find binding for lockdown at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/object.assign/test/ses-compat.js:9:0:::9:8:::142:150
+[33mwarn[39m:    Cannot find binding for pkgfile at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/resolve/test/filter_sync.js:13:62:::13:69:::598:605
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:0:::3:7:::95:102
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:0:::3:7:::95:102
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:82:::3:89:::177:184
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:82:::3:89:::177:184
+[33mwarn[39m:    Cannot find binding for vsprintf at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:231:::3:239:::326:334
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/src/angular-sprintf.js:1:0:::1:7:::0:7
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/src/angular-sprintf.js:1:0:::1:7:::0:7
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/src/angular-sprintf.js:5:19:::5:26:::118:125
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/src/angular-sprintf.js:5:19:::5:26:::118:125
+[33mwarn[39m:    Cannot find binding for vsprintf at /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/sprintf-js/src/angular-sprintf.js:13:19:::13:27:::355:363
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@babel/code-frame/lib/index.js:34:4:::34:14:::1560:1570
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@babel/code-frame/lib/index.js:35:4:::35:14:::1580:1590
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:208:8:::208:28:::8352:8372
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:211:8:::211:11:::8478:8481
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:214:8:::214:17:::8561:8570
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:215:8:::215:26:::8585:8603
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:216:8:::216:19:::8620:8631
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:217:8:::217:20:::8648:8660
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/cascading-config-array-factory.js:284:38:::284:57:::10611:10630
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/config-array-factory.js:343:20:::343:27:::13014:13021
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/config-array-factory.js:421:8:::421:28:::15736:15756
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/config-array-factory.js:422:8:::422:11:::15778:15781
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/config-array-factory.js:425:8:::425:16:::15863:15871
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/flat-compat.js:218:8:::218:21:::7675:7688
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/@eslint/eslintrc/lib/flat-compat.js:219:8:::219:32:::7714:7738
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/prompts/form.js:128:18:::128:25:::3143:3150
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/prompts/form.js:128:38:::128:43:::3163:3168
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/enquirer/lib/prompts/snippet.js:124:17:::124:21:::2614:2618
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:215:8:::215:11:::7346:7349
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:216:8:::216:26:::7375:7393
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:221:8:::221:18:::7642:7652
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:222:8:::222:22:::7669:7683
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:223:8:::223:31:::7700:7723
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:224:8:::224:14:::7740:7746
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:512:8:::512:16:::18058:18066
+[33mwarn[39m:    Overriding element with id: /local/tmp/oliverphil/4255769.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14537/node_modules/eslint/lib/cli-engine/file-enumerator.js:513:8:::513:14:::18084:18090
+Unsupported syntax 'module[x] = ?'
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14554/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14829/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-14861/node_modules/eslint/lib/linter/linter.js:377:45:::380:25:::15534:15661
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-15114/node_modules/eslint/lib/linter/linter.js:379:45:::382:25:::15632:15759
-[33mwarn[39m:    Computed property found in ObjectExpression at /local/tmp/oliverphil/4254890.1/syntest-crash-reproduction/benchmark/crashes/github/eslint/eslint-15384/node_modules/eslint/lib/linter/linter.js:387:45:::390:25:::16012:16139
+
+<--- Last few GCs --->
+
+[1790202:0x6bbec70]   145379 ms: Scavenge 9776.9 (10025.4) -> 9774.9 (10028.6) MB, 20.2 / 0.0 ms  (average mu = 0.605, current mu = 0.539) allocation failure; 
+[1790202:0x6bbec70]   145402 ms: Scavenge 9780.1 (10028.6) -> 9778.3 (10038.9) MB, 17.8 / 0.0 ms  (average mu = 0.605, current mu = 0.539) allocation failure; 
+[1790202:0x6bbec70]   151518 ms: Mark-sweep 9791.1 (10039.1) -> 9783.2 (10054.4) MB, 6103.1 / 0.0 ms  (average mu = 0.422, current mu = 0.039) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb95b60 node::Abort() [node]
+ 2: 0xa9a7f8  [node]
+ 3: 0xd6f2f0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]
+ 4: 0xd6f697 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]
+ 5: 0xf4cba5  [node]
+ 6: 0xf5f08d v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
+ 7: 0xf3978e v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 8: 0xf3ab57 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 9: 0xf1bd2a v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]
+10: 0x12e114f v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]
+11: 0x170deb9  [node]

@@ -40,83 +40,107 @@ npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, fl
 
 npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
 
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/chardet/index.js:95:6:::95:12:::2008:2014
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/chardet/index.js:97:16:::97:22:::2063:2069
+[33mwarn[39m:    Cannot find binding for sample at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/chardet/index.js:98:19:::98:25:::2132:2138
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_async.js:13:0:::13:6:::339:345
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_async.js:18:4:::18:10:::434:440
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_async.js:18:4:::18:10:::434:440
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_sync.js:13:0:::13:6:::339:345
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_sync.js:18:19:::18:25:::518:524
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_sync.js:18:19:::18:25:::518:524
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_sync.js:20:8:::20:14:::594:600
+[33mwarn[39m:    Cannot find binding for editor at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/external-editor/example_sync.js:20:8:::20:14:::594:600
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/lodash/fp/_convertBrowser.js:15:11:::15:12:::482:483
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/lodash/fp/_convertBrowser.js:15:37:::15:38:::508:509
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/lodash/fp/_convertBrowser.js:15:37:::15:38:::508:509
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/lodash/fp/_convertBrowser.js:16:2:::16:3:::542:543
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/lodash/fp/_convertBrowser.js:16:21:::16:22:::561:562
+[33mwarn[39m:    Cannot find binding for _ at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/lodash/fp/_convertBrowser.js:16:21:::16:22:::561:562
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:0:::3:7:::95:102
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:0:::3:7:::95:102
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:82:::3:89:::177:184
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:82:::3:89:::177:184
+[33mwarn[39m:    Cannot find binding for vsprintf at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/dist/angular-sprintf.min.js:3:231:::3:239:::326:334
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/src/angular-sprintf.js:1:0:::1:7:::0:7
+[33mwarn[39m:    Cannot find binding for angular at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/src/angular-sprintf.js:1:0:::1:7:::0:7
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/src/angular-sprintf.js:5:19:::5:26:::118:125
+[33mwarn[39m:    Cannot find binding for sprintf at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/src/angular-sprintf.js:5:19:::5:26:::118:125
+[33mwarn[39m:    Cannot find binding for vsprintf at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/sprintf-js/src/angular-sprintf.js:13:19:::13:27:::355:363
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15785:::1:15787:::15785:15787
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15785:::1:15787:::15785:15787
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15808:::1:15810:::15808:15810
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15808:::1:15810:::15808:15810
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15834:::1:15836:::15834:15836
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15834:::1:15836:::15834:15836
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15874:::1:15876:::15874:15876
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15874:::1:15876:::15874:15876
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15917:::1:15919:::15917:15919
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:15917:::1:15919:::15917:15919
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16361:::1:16363:::16361:16363
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16361:::1:16363:::16361:16363
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16409:::1:16411:::16409:16411
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16409:::1:16411:::16409:16411
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16452:::1:16454:::16452:16454
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16452:::1:16454:::16452:16454
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16497:::1:16499:::16497:16499
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16497:::1:16499:::16497:16499
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16550:::1:16552:::16550:16552
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16550:::1:16552:::16550:16552
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16573:::1:16575:::16573:16575
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16573:::1:16575:::16573:16575
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16596:::1:16598:::16596:16598
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16596:::1:16598:::16596:16598
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16645:::1:16647:::16645:16647
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16645:::1:16647:::16645:16647
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16718:::1:16720:::16718:16720
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16718:::1:16720:::16718:16720
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16832:::1:16834:::16832:16834
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:16832:::1:16834:::16832:16834
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17025:::1:17027:::17025:17027
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17025:::1:17027:::17025:17027
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17078:::1:17080:::17078:17080
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17078:::1:17080:::17078:17080
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17110:::1:17112:::17110:17112
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17110:::1:17112:::17110:17112
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17160:::1:17162:::17160:17162
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17160:::1:17162:::17160:17162
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17202:::1:17204:::17202:17204
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17202:::1:17204:::17202:17204
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17284:::1:17286:::17284:17286
+[33mwarn[39m:    Cannot find binding for PR at /local/tmp/oliverphil/4255775.1/syntest-crash-reproduction/benchmark/crashes/bugsjs/eslint/eslint-28/node_modules/mute-stream/coverage/lcov-report/prettify.js:1:17284:::1:17286:::17284:17286
+Unsupported syntax 'module[x] = ?'
+Unsupported syntax 'module[x] = ?'
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+
+<--- Last few GCs --->
+
+[3142443:0x726bc70]   217374 ms: Scavenge (reduce) 9845.4 (10046.9) -> 9845.3 (10047.4) MB, 8.2 / 0.0 ms  (average mu = 0.126, current mu = 0.000) allocation failure; 
+[3142443:0x726bc70]   227742 ms: Mark-sweep (reduce) 9846.4 (10047.7) -> 9845.8 (10048.2) MB, 10366.2 / 0.0 ms  (average mu = 0.072, current mu = 0.010) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb95b60 node::Abort() [node]
+ 2: 0xa9a7f8  [node]
+ 3: 0xd6f2f0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]
+ 4: 0xd6f697 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]
+ 5: 0xf4cba5  [node]
+ 6: 0xf5f08d v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
+ 7: 0xf3978e v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 8: 0xf3ab57 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 9: 0xf1b552 v8::internal::Factory::AllocateRawWithAllocationSite(v8::internal::Handle<v8::internal::Map>, v8::internal::AllocationType, v8::internal::Handle<v8::internal::AllocationSite>) [node]
+10: 0xf25dac v8::internal::Factory::NewJSObjectFromMap(v8::internal::Handle<v8::internal::Map>, v8::internal::AllocationType, v8::internal::Handle<v8::internal::AllocationSite>) [node]
+11: 0xf26425 v8::internal::Factory::NewJSArrayWithUnverifiedElements(v8::internal::Handle<v8::internal::FixedArrayBase>, v8::internal::ElementsKind, int, v8::internal::AllocationType) [node]
+12: 0xf26521 v8::internal::Factory::NewJSArrayWithElements(v8::internal::Handle<v8::internal::FixedArrayBase>, v8::internal::ElementsKind, int, v8::internal::AllocationType) [node]
+13: 0x12f9072 v8::internal::Runtime_StringSplit(int, unsigned long*, v8::internal::Isolate*) [node]
+14: 0x170deb9  [node]

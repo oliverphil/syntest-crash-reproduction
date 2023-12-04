@@ -2,19 +2,19 @@
 [33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
 npm ERR! Cannot convert undefined or null to object
 
-npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cgRb3sb4e4/_logs/2023-12-01T02_34_09_016Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /tmp/4255779.1.all.q/tmp.MljxbJvDwe/_logs/2023-12-04T01_09_43_329Z-debug-0.log
 Error: Command failed: npm i --prefix ./benchmark/crashes/bugsjs/pencilblue/pencilblue-1 --legacy-peer-deps
 npm ERR! Cannot convert undefined or null to object
 
-npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cgRb3sb4e4/_logs/2023-12-01T02_34_09_016Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /tmp/4255779.1.all.q/tmp.MljxbJvDwe/_logs/2023-12-04T01_09_43_329Z-debug-0.log
 
     at checkExecSyncError (node:child_process:890:11)
     at execSync (node:child_process:962:15)
-    at Function.createCrashEnvironment (/local/tmp/oliverphil/4254900.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:62:26)
-    at /local/tmp/oliverphil/4254900.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
-    at Object.Command.handler (/local/tmp/oliverphil/4254900.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
-    at /local/tmp/oliverphil/4254900.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
-    at /local/tmp/oliverphil/4254900.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
+    at Function.createCrashEnvironment (/local/tmp/oliverphil/4255779.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:62:26)
+    at /local/tmp/oliverphil/4255779.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
+    at Object.Command.handler (/local/tmp/oliverphil/4255779.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4255779.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4255779.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
     at processTicksAndRejections (node:internal/process/task_queues:95:5) {
   status: 1,
   signal: null,
@@ -23,29 +23,29 @@ npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cg
     <Buffer >,
     <Buffer 6e 70 6d 20 45 52 52 21 20 43 61 6e 6e 6f 74 20 63 6f 6e 76 65 72 74 20 75 6e 64 65 66 69 6e 65 64 20 6f 72 20 6e 75 6c 6c 20 74 6f 20 6f 62 6a 65 63 ... 135 more bytes>
   ],
-  pid: 155905,
+  pid: 2595197,
   stdout: <Buffer >,
   stderr: <Buffer 6e 70 6d 20 45 52 52 21 20 43 61 6e 6e 6f 74 20 63 6f 6e 76 65 72 74 20 75 6e 64 65 66 69 6e 65 64 20 6f 72 20 6e 75 6c 6c 20 74 6f 20 6f 62 6a 65 63 ... 135 more bytes>
 }
 npm ERR! Cannot convert undefined or null to object
 
-npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cgRb3sb4e4/_logs/2023-12-01T02_34_09_016Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /tmp/4255779.1.all.q/tmp.MljxbJvDwe/_logs/2023-12-04T01_09_43_329Z-debug-0.log
 
 npm ERR! Cannot convert undefined or null to object
 
-npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cgRb3sb4e4/_logs/2023-12-01T02_34_17_356Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /tmp/4255779.1.all.q/tmp.MljxbJvDwe/_logs/2023-12-04T01_09_52_939Z-debug-0.log
 Error: Command failed: npm i --prefix ./benchmark/crashes/bugsjs/pencilblue/pencilblue-2 --legacy-peer-deps
 npm ERR! Cannot convert undefined or null to object
 
-npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cgRb3sb4e4/_logs/2023-12-01T02_34_17_356Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /tmp/4255779.1.all.q/tmp.MljxbJvDwe/_logs/2023-12-04T01_09_52_939Z-debug-0.log
 
     at checkExecSyncError (node:child_process:890:11)
     at execSync (node:child_process:962:15)
-    at Function.createCrashEnvironment (/local/tmp/oliverphil/4254900.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:62:26)
-    at /local/tmp/oliverphil/4254900.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
-    at Object.Command.handler (/local/tmp/oliverphil/4254900.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
-    at /local/tmp/oliverphil/4254900.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
-    at /local/tmp/oliverphil/4254900.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
+    at Function.createCrashEnvironment (/local/tmp/oliverphil/4255779.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentBuilder.ts:62:26)
+    at /local/tmp/oliverphil/4255779.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:177:32
+    at Object.Command.handler (/local/tmp/oliverphil/4255779.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4255779.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4255779.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949
     at processTicksAndRejections (node:internal/process/task_queues:95:5) {
   status: 1,
   signal: null,
@@ -54,11 +54,11 @@ npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cg
     <Buffer >,
     <Buffer 6e 70 6d 20 45 52 52 21 20 43 61 6e 6e 6f 74 20 63 6f 6e 76 65 72 74 20 75 6e 64 65 66 69 6e 65 64 20 6f 72 20 6e 75 6c 6c 20 74 6f 20 6f 62 6a 65 63 ... 135 more bytes>
   ],
-  pid: 155924,
+  pid: 2595219,
   stdout: <Buffer >,
   stderr: <Buffer 6e 70 6d 20 45 52 52 21 20 43 61 6e 6e 6f 74 20 63 6f 6e 76 65 72 74 20 75 6e 64 65 66 69 6e 65 64 20 6f 72 20 6e 75 6c 6c 20 74 6f 20 6f 62 6a 65 63 ... 135 more bytes>
 }
 npm ERR! Cannot convert undefined or null to object
 
-npm ERR! A complete log of this run can be found in: /tmp/4254900.1.all.q/tmp.cgRb3sb4e4/_logs/2023-12-01T02_34_17_356Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /tmp/4255779.1.all.q/tmp.MljxbJvDwe/_logs/2023-12-04T01_09_52_939Z-debug-0.log
 
