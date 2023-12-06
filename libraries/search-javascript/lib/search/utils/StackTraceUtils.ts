@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 import {StackError, StackFrame, StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
-import {JavaScriptExecutionResult} from "@syntest/search-javascript";
+import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
 
 export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
     if (executionResult.getError()) {
@@ -35,19 +35,31 @@ export function rightExceptionRaised(executionResult: JavaScriptExecutionResult,
 export function rightExceptionRaisedOnRightLine(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
-    return (exceptionsMatch + exceptionLineCovered);
+    return normalise(exceptionsMatch + exceptionLineCovered);
 }
 
 export function wrongExceptionRaisedOnRightLine(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
-    return (exceptionsMatch + exceptionLineCovered);
+    return normalise(exceptionsMatch + exceptionLineCovered);
 }
 
 export function rightExceptionRaisedInRightFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const functionMatch = checkFunctionsMatch(executionResult, stackTrace);
-    return (exceptionsMatch + functionMatch);
+    return normalise(exceptionsMatch + functionMatch);
+}
+
+export function wrongExceptionRaisedInRightFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+    const functionsMatch = checkFunctionsMatch(executionResult, stackTrace);
+    return normalise(exceptionsMatch + functionsMatch);
+}
+
+export function wrongExceptionInNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+    const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
+    return normalise(exceptionsMatch + neighbouringFunction);
 }
 
 export function rightExceptionRaisedInWrongFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
@@ -62,6 +74,7 @@ export function reachedLineOfExceptionWithoutCrashing(executionResult: JavaScrip
     }
     return 1;
 }
+
 
 export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (executionResult.getError()) {
@@ -95,10 +108,10 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
 
     if (executionResult.getError()) {
         const actualStack = executionResult.getStackTrace();
-        const actualFrame = actualStack
+        const actualFrame = actualStack.trace
             .filter(s => !s.file.includes('tempTest.spec.js')
                 && !s.file.includes('node:internal')
-            )[actualStack.length - 1];
+            )[actualStack.trace.length - 1];
         if (actualFrame.file === frame.file && actualFrame.lineNumber === frame.lineNumber) {
             return 0;
         }
@@ -117,14 +130,131 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
     return distance;
 }
 
+export function executedFunctionsNoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (executionResult.hasError()) return 1;
+    const numFrames = stackTrace.trace.length;
+    let coveredFrames = 0;
+    const traces = executionResult.getTraces();
+    for (const frame of stackTrace.trace) {
+        const trace = traces.find(trace => reverseIncludes(trace.path, frame.file)
+            && trace.type === 'statement'
+            && trace.location.start.line === frame.lineNumber);
+        if (trace.hits > 0) coveredFrames += 1;
+    }
+    return coveredFrames / numFrames;
+}
+
+export function stackLinesMatchFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const numFrames = stackTrace.trace.length;
+    let coveredFrames = 0;
+    const traces = executionResult.getTraces();
+    const tolerance = traces.filter(trace => trace.type === 'statement').length / 10;
+    for (const frame of stackTrace.trace) {
+        const trace = traces.find(trace => reverseIncludes(trace.path, frame.file)
+            && trace.type === 'statement'
+            && trace.location.start.line >= frame.lineNumber - tolerance
+            && trace.location.start.line <= frame.lineNumber + tolerance);
+        if (trace.hits > 0) coveredFrames += 1;
+    }
+    return coveredFrames / numFrames;
+}
+
+export function executeLinesNearStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    let coveredFrames = 0;
+    const traces = executionResult.getTraces();
+    const tolerance = traces.filter(trace => trace.type === 'statement').length / 10;
+    for (const frame of stackTrace.trace) {
+        const trace = traces.find(trace => reverseIncludes(trace.path, frame.file)
+            && trace.type === 'statement'
+            && trace.location.start.line >= frame.lineNumber - tolerance
+            && trace.location.start.line <= frame.lineNumber + tolerance);
+        if (trace.hits > 0) coveredFrames += 1;
+    }
+    return coveredFrames > 0 ? 1 : 0;
+}
+
+export function enteredBranchInStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const traces = executionResult.getTraces();
+    const branches = traces.filter(trace => trace.type === 'branch');
+    for (const frame of stackTrace.trace) {
+        const branch = branches.find(branch => reverseIncludes(frame.file, branch.path)
+            && branch.location.start.line <= frame.lineNumber && branch.location.end.line >= frame.lineNumber);
+        if (branch && branch.hits > 0) return 0;
+    }
+    return 1;
+}
+
+export function enteredCloseBranch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const traces = executionResult.getTraces();
+    const branches = traces.filter(trace => trace.type === 'branch');
+    for (const frame of stackTrace.trace) {
+        const branch = branches.find(branch => reverseIncludes(frame.file, branch.path)
+            && branch.location.start.line <= frame.lineNumber && branch.location.end.line >= frame.lineNumber);
+        if (!branch) continue;
+        const index = branches.indexOf(branch);
+        const startIndex = index - 2 > 0 ? index - 2 : 0;
+        const endIndex = index + 2 < branches.length ? index + 2: branches.length - 1;
+        if (branches.slice(startIndex, endIndex).map(t => t.hits).reduce((a, b) => a + b) > 0)
+            return 0;
+    }
+    return 1;
+}
+
+export function calledNFunctionsFromStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace, N: number): number {
+    const traces = executionResult.getTraces();
+    const functions = traces.filter(trace => trace.type === 'function');
+    let numberFuncsHit = 0;
+    for (const frame of stackTrace.trace) {
+        const function_ = functions.find(function_ => reverseIncludes(frame.file, function_.path)
+            && function_.location.start.line <= frame.lineNumber && function_.location.end.line >= frame.lineNumber);
+        if (!function_) continue;
+        if (function_.hits > 0) numberFuncsHit += 1;
+    }
+    return numberFuncsHit >= N ? 0 : 1;
+}
+
+export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExecutionResult, stackFrame: StackFrame, N: number): number {
+    const traces = executionResult.getTraces();
+    const functions = traces.filter(trace => trace.type === 'function'
+        && reverseIncludes(trace.path, stackFrame.file));
+    const function_ = functions.find(f => f.location.start.line <= stackFrame.lineNumber && f.location.end.line >= stackFrame.lineNumber);
+    if (!function_) return 1;
+    const statements = traces.filter(trace => trace.type === 'statement'
+        && reverseIncludes(trace.path, stackFrame.file)
+        && trace.location.start.line >= function_.location.start.line
+        && trace.location.start.line < stackFrame.lineNumber);
+    let numberStatementsHit = 0;
+    for (const statement of statements) {
+        if (statement.hits > 0) numberStatementsHit += 1;
+    }
+    return numberStatementsHit >= N ? 0 : 1;
+}
+
 function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
     const expectedFunction = stackTrace.trace[0].method;
-    if (actualStackTrace[0].method === expectedFunction) {
+    if (reverseIncludes(actualStackTrace[0].method, expectedFunction)) {
         return 0;
     }
     return 1;
+}
+
+function checkNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const expectedFile = stackTrace.trace[0].file;
+    const functionTraces = executionResult.getTraces().filter(trace => trace.type === 'function'
+        && reverseIncludes(trace.path, expectedFile));
+    if (functionTraces.length === 0) return 1;
+
+    const expectedExceptionLine = stackTrace.trace[0].lineNumber;
+    const expectedFunction = functionTraces.find(trace => trace.location.start.line <= expectedExceptionLine
+        && trace.location.end.line >= expectedExceptionLine);
+    if (!expectedFunction) return 1;
+
+    const expectedFunctionIndex = functionTraces.indexOf(expectedFunction);
+    const neighbouringFunctions = functionTraces.filter((trace, index) => index === expectedFunctionIndex + 1
+        || index === expectedFunctionIndex - 1);
+    return neighbouringFunctions.map(func => func.hits).reduce((a, b) => a + b) > 0 ? 0 : 1;
 }
 
 function checkExceptionsMessageMatch(expectedException: StackError, actualException: string) {
@@ -138,7 +268,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
 
     if (executionResult.getError()) {
         const actualStack = executionResult.getStackTrace();
-        if (actualStack[0].file === frame.file && actualStack[0].lineNumber === frame.lineNumber) {
+        if (reverseIncludes(actualStack.trace[0].file, frame.file) && actualStack.trace[0].lineNumber === frame.lineNumber) {
             return 0;
         }
     }
@@ -159,7 +289,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
 export function checkStackTraceSimilarity(executionResult: JavaScriptExecutionResult, expectedStackTrace: StackTrace): number {
     if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
-    const trimmedActualStackTrace = actualStackTrace.filter(t => !t.file.includes('tempTest.spec.js'));
+    const trimmedActualStackTrace = actualStackTrace.trace.filter(t => !t.file.includes('tempTest.spec.js'));
     const trimmedExpectedStackTrace = expectedStackTrace.trace.filter(t => !t.file.includes('tempTest.spec.js'));
     return stackTraceDistance(trimmedActualStackTrace, trimmedExpectedStackTrace);
 }
@@ -260,4 +390,9 @@ export function checkTraceLinesCovered(executionResult: JavaScriptExecutionResul
     }
 
     return distance;
+}
+
+function reverseIncludes(s1: string, s2: string): boolean {
+    if (!s1 || !s2) return false;
+    return s1.includes(s2) || s2.includes(s1);
 }

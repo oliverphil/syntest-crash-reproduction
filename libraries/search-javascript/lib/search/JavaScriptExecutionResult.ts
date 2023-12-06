@@ -57,7 +57,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
    */
   protected _error: Error | undefined;
 
-  protected _stackTrace: StackFrame[];
+  protected _stackTrace: StackTrace;
 
   /**
    * Constructor.
@@ -79,7 +79,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
     this._error = error;
 
     if (error) {
-      this._stackTrace = StackTraceProcessor.parseTrace(error.stack.split('\n'), false);
+      this._stackTrace = StackTraceProcessor.process(error.stack, false);
     }
   }
 
@@ -164,7 +164,7 @@ export class JavaScriptExecutionResult implements ExecutionResult {
     return "error:::" + crypto.createHash("md5").update(stack).digest("hex");
   }
 
-  public getStackTrace(): StackFrame[] {
+  public getStackTrace(): StackTrace {
     return this._stackTrace;
   }
 

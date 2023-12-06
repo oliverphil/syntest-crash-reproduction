@@ -31,6 +31,7 @@ import {JavaScriptTestCase} from "../testcase/JavaScriptTestCase";
 import {TargetType} from "@syntest/analysis";
 import {ControlFlowProgram, ControlFlowFunction, EdgeType} from "@syntest/cfg";
 import {BranchDistanceCalculator} from "../criterion/BranchDistance";
+import CrashFitnessFunction1 from "./objective/CrashFitnessFunction1";
 
 export class CrashSubject extends JavaScriptSubject {
     constructor(target: Target, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[],
@@ -56,30 +57,32 @@ export class CrashSubject extends JavaScriptSubject {
 
     protected _extractObjectives(objectives): void {
         const objs = new Set();
-        if (!this.stackTrace) return;
-        objectives.push(new StackErrorObjectiveFunction(
-            `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
-            this.stackTrace
-        ));
-        for (const frame of this.stackTrace.trace) {
-            objectives.push(
-                new StackFrameObjectiveFunction(
-                    `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                    this.controlFlowProgram,
-                    undefined,
-                    this.approachLevelCalculator,
-                    this.branchDistanceCalculator,
-                    frame
-                )
-            );
-        }
+        if (this.stackTrace) {
+            objectives.push(new CrashFitnessFunction1(
+                `stack-test`,
+                this.stackTrace
+            ));
+            // objectives.push(new StackErrorObjectiveFunction(
+            //     `stack-error`,
+            //     this.stackTrace
+            // ));
+            // for (const frame of this.stackTrace.trace) {
+            //     objectives.push(
+            //         new StackFrameObjectiveFunction(
+            //             `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+            //             this.controlFlowProgram,
+            //             undefined,
+            //             this.approachLevelCalculator,
+            //             this.branchDistanceCalculator,
+            //             frame
+            //         )
+            //     );
+            // }
+        };
+
         for (const cff of this.controlFlowProgram.functions) {
             const paths = this.extractPathsFromFunction(cff);
             for (const path of paths) {
-                // console.log(path);
-                // const frame = this.stackTrace.trace.find(frame => frame.method.includes(cff.name));
-                // const frames = this.stackTrace.trace.filter(frame => cff.id.includes(frame.file));
-                // const frame = frames.find(frame => frame.method?.includes(cff.name));
                 // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                 objectives.push(
                     new PathObjectiveFunction(
@@ -90,65 +93,9 @@ export class CrashSubject extends JavaScriptSubject {
                         this.branchDistanceCalculator
                     )
                 );
-                // if (frame) {
-                //     if (!objs.has(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`)){
-                //         objectives.push(
-                //             new StackFrameObjectiveFunction(
-                //                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                //                 this.controlFlowProgram,
-                //                 path,
-                //                 this.approachLevelCalculator,
-                //                 this.branchDistanceCalculator,
-                //                 frame
-                //             )
-                //             // new PathObjectiveFunction(
-                //             //     `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                //             //     this.controlFlowProgram,
-                //             //     path,
-                //             //     this.approachLevelCalculator,
-                //             //     this.branchDistanceCalculator
-                //             // )
-                //         );
-                //         objs.add(`stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`);
-                //     }
-                // }
-                // objectives.push(
-                //     new PathObjectiveFunction(
-                //         prng.uniqueId(),
-                //         cfp,
-                //         path,
-                //         approachLevelCalculator,
-                //         branchDistanceCalculator
-                //     )
-                // );
             }
         }
         this.numStackObjectives = this.stackTrace.trace.length + 1;
-        // if (this.stackTrace) {
-        //     for (const stackFrame of this.stackTrace.trace) {
-        //         const objective = new StackFrameObjectiveFunction(
-        //             `stack-frame.${stackFrame.file}:${stackFrame.lineNumber}:${stackFrame.charNumber}`,
-        //             this.controlFlowProgram,
-        //             this.controlFlowPath,
-        //             this.approachLevelCalculator,
-        //             this.branchDistanceCalculator,
-        //             this,
-        //             stackFrame
-        //         );
-        //         objectives.push(objective);
-        //         this.numStackObjectives += 1;
-        //     }
-        //     objectives.push(new StackErrorObjectiveFunction(
-        //         `stack-error.${this.stackTrace.error.errorType}:${this.stackTrace.error.errorMessage}`,
-        //         this.controlFlowProgram,
-        //         this.controlFlowPath,
-        //         this.approachLevelCalculator,
-        //         this.branchDistanceCalculator,
-        //         this,
-        //         this.stackTrace
-        //     ));
-        //     this.numStackObjectives += 1;
-        // }
         this._objectives = objectives;
     }
 

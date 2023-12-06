@@ -1,15 +1,16 @@
 import {SecondaryObjectiveComparator} from '@syntest/search/dist/lib/objective/secondary/SecondaryObjectiveComparator';
-import {JavaScriptTestCase} from '../../testcase/JavaScriptTestCase';
+import {JavaScriptTestCase} from '../../../testcase/JavaScriptTestCase';
 
 
 /**
  * Secondary objective that is based on wether the encoding introduces an error .
  */
-export class CrashFitnessFunction1<T extends JavaScriptTestCase>
+export class CrashSecondaryFitnessFunction1<T extends JavaScriptTestCase>
   implements SecondaryObjectiveComparator<T>
 {
   /**
    * @inheritDoc
+   * Right exception raised
    */
   public compare(a: JavaScriptTestCase, b: JavaScriptTestCase): number {
     if (!a.getExecutionResult() || !b.getExecutionResult()) {
