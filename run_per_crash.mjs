@@ -20,13 +20,12 @@ for (const type of types) {
             // execSync(`sed -i "s/^.*syntest-project.*$/  \\"syntest-project\\": \\"${project}\\",/" .syntest.json`);
             const crashes = envGen.loadAssets(project, type);
             numberOfCrashes += crashes.length;
-            const CRASHES_PER_RUN = 10;
+            const CRASHES_PER_RUN = 20;
             for (let i = 0; i < crashes.length; i += CRASHES_PER_RUN) {
                 const finalIndex = i + CRASHES_PER_RUN < crashes.length ? i + CRASHES_PER_RUN : crashes.length - 1;
-                const currentCrashes = crashes.splice(i, finalIndex);
+                const currentCrashes = crashes.slice(i, finalIndex);
                 syntestFile['syntest-crash'] = currentCrashes.map(c => c.crashId);
                 writeFileSync(`.syntest-${type}-${currentCrashes[0].crashId}.json`, JSON.stringify(syntestFile, undefined, 4));
-                // execSync(`sed -i "s/^.*syntest-crash.*$/  \\"syntest-crash\\": \\"${crash.crashId}\\",/" .syntest.json`);
                 console.log(execSync(`./run_experiments_on_grid.sh ${type}-${currentCrashes[0].crashId}`).toString());
             }
         } catch (e) {

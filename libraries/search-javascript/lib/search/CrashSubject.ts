@@ -56,28 +56,30 @@ export class CrashSubject extends JavaScriptSubject {
     public numStackObjectives: number;
 
     protected _extractObjectives(objectives): void {
-        const objs = new Set();
+        let numObjectives = 0;
         if (this.stackTrace) {
-            objectives.push(new CrashFitnessFunction1(
-                `stack-test`,
-                this.stackTrace
-            ));
-            // objectives.push(new StackErrorObjectiveFunction(
-            //     `stack-error`,
+            // objectives.push(new CrashFitnessFunction1(
+            //     `stack-test`,
             //     this.stackTrace
             // ));
-            // for (const frame of this.stackTrace.trace) {
-            //     objectives.push(
-            //         new StackFrameObjectiveFunction(
-            //             `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-            //             this.controlFlowProgram,
-            //             undefined,
-            //             this.approachLevelCalculator,
-            //             this.branchDistanceCalculator,
-            //             frame
-            //         )
-            //     );
-            // }
+            objectives.push(new StackErrorObjectiveFunction(
+                `stack-error`,
+                this.stackTrace
+            ));
+            numObjectives += 1;
+            for (const frame of this.stackTrace.trace) {
+                numObjectives += 1;
+                objectives.push(
+                    new StackFrameObjectiveFunction(
+                        `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+                        this.controlFlowProgram,
+                        undefined,
+                        this.approachLevelCalculator,
+                        this.branchDistanceCalculator,
+                        frame
+                    )
+                );
+            }
         };
 
         for (const cff of this.controlFlowProgram.functions) {
@@ -95,7 +97,7 @@ export class CrashSubject extends JavaScriptSubject {
                 );
             }
         }
-        this.numStackObjectives = this.stackTrace.trace.length + 1;
+        this.numStackObjectives = numObjectives;
         this._objectives = objectives;
     }
 

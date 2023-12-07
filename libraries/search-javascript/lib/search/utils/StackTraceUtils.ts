@@ -28,6 +28,13 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
     return 1;
 }
 
+export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const lineReached = checkExceptionLineCovered(executionResult, stackTrace);
+    const exceptionCovered = checkExceptionsMatch(executionResult, stackTrace.error);
+    const stackDistance = stackTraceDistance(executionResult.getStackTrace().trace, stackTrace.trace);
+    return (3 * lineReached) + (2 * exceptionCovered) + stackDistance;
+}
+
 export function rightExceptionRaised(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
     return checkExceptionsMatch(executionResult, expectedStackException);
 }
@@ -228,6 +235,13 @@ export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExec
         if (statement.hits > 0) numberStatementsHit += 1;
     }
     return numberStatementsHit >= N ? 0 : 1;
+}
+
+export function stackMatchWrongCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const actualStack = executionResult.getStackTrace();
+    const stackMatch = stackTraceDistance(actualStack.trace, stackTrace.trace);
+    const error = checkExceptionsMatch(executionResult, stackTrace.error);
+    return normalise(stackMatch + error);
 }
 
 function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
