@@ -57,30 +57,30 @@ export class CrashSubject extends JavaScriptSubject {
 
     protected _extractObjectives(objectives): void {
         let numObjectives = 0;
-        if (this.stackTrace) {
-            // objectives.push(new CrashFitnessFunction1(
-            //     `stack-test`,
-            //     this.stackTrace
-            // ));
-            objectives.push(new StackErrorObjectiveFunction(
-                `stack-error`,
-                this.stackTrace
-            ));
-            numObjectives += 1;
-            for (const frame of this.stackTrace.trace) {
-                numObjectives += 1;
-                objectives.push(
-                    new StackFrameObjectiveFunction(
-                        `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                        this.controlFlowProgram,
-                        undefined,
-                        this.approachLevelCalculator,
-                        this.branchDistanceCalculator,
-                        frame
-                    )
-                );
-            }
-        };
+        // if (this.stackTrace) {
+        //     // objectives.push(new CrashFitnessFunction1(
+        //     //     `stack-test`,
+        //     //     this.stackTrace
+        //     // ));
+        //     objectives.push(new StackErrorObjectiveFunction(
+        //         `stack-error`,
+        //         this.stackTrace
+        //     ));
+        //     numObjectives += 1;
+        //     for (const frame of this.stackTrace.trace) {
+        //         numObjectives += 1;
+        //         objectives.push(
+        //             new StackFrameObjectiveFunction(
+        //                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+        //                 this.controlFlowProgram,
+        //                 undefined,
+        //                 this.approachLevelCalculator,
+        //                 this.branchDistanceCalculator,
+        //                 frame
+        //             )
+        //         );
+        //     }
+        // };
 
         for (const cff of this.controlFlowProgram.functions) {
             const paths = this.extractPathsFromFunction(cff);
