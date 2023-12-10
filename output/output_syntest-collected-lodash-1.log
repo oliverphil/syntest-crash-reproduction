@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701658797745-ohWqBEaJiVQ2zgHC83CuZv
+FID-1701983554274-8iKUqU2fGzsRQXSkB3sAHN
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701658797745-ohWqBEaJiVQ2zgHC83CuZv
 Loading Crashes... 
 lodash-1
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 100ms
 
 found 0 vulnerabilities
 
@@ -63,11 +63,11 @@ Run `npm audit` for details.
 
 lodash-10
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 875ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -81,11 +81,11 @@ Run `npm audit` for details.
 
 lodash-11
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 882ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -99,11 +99,11 @@ Run `npm audit` for details.
 
 lodash-2
 
-up to date, audited 1 package in 84ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 844ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -117,11 +117,11 @@ Run `npm audit` for details.
 
 lodash-3
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 861ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -135,11 +135,11 @@ Run `npm audit` for details.
 
 lodash-4
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 875ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -153,11 +153,11 @@ Run `npm audit` for details.
 
 lodash-5
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 851ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -171,11 +171,11 @@ Run `npm audit` for details.
 
 lodash-6
 
-up to date, audited 1 package in 84ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 879ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -189,11 +189,11 @@ Run `npm audit` for details.
 
 lodash-7
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 101ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 864ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -207,11 +207,11 @@ Run `npm audit` for details.
 
 lodash-8
 
-up to date, audited 1 package in 84ms
+up to date, audited 1 package in 100ms
 
 found 0 vulnerabilities
 
-added 216 packages, and audited 217 packages in 867ms
+added 216 packages, and audited 217 packages in 1s
 
 72 packages are looking for funding
   run `npm fund` for details
@@ -229,9 +229,9 @@ Run `npm audit` for details.
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js: equalArrays.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js: equalArrays.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                             SELECTION SETTINGS                                                                                             ║
@@ -274,7 +274,7 @@ Run `npm audit` for details.
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -362,8 +362,8 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 36.179, went from 17 to 1199 test cases
-De-Duplication done took: 13.653, went from 1199 to 13 test cases
+Splitting done took: 44.546, went from 21 to 1192 test cases
+De-Duplication done took: 12.215, went from 1192 to 13 test cases
 archive size 13
 Run Final Suite
 Decode
@@ -402,7 +402,7 @@ Decode
 ╟────────────────────────────────┬───────────┬─────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                         │ Statement │ Branch  │ Function │ Objectives │ File                                                                                                                                           ║
 ╟────────────────────────────────┼───────────┼─────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ equalArrays.js: equalArrays.js │ 53 / 64   │ 18 / 24 │ 2 / 2    │ 3 / 3      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js ║
+║ equalArrays.js: equalArrays.js │ 53 / 64   │ 18 / 24 │ 2 / 2    │ 3 / 3      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-1/lodash/.internal/equalArrays.js ║
 ╟────────────────────────────────┼───────────┼─────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                        │ 82.8125 % │ 75 %    │ 100 %    │ 100 %      │                                                                                                                                                ║
 ╚════════════════════════════════╧═══════════╧═════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -414,16 +414,16 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:0:::57:1:::1351:1998
-    - object /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:37:::36:48:::1388:1399
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:54:47:::55:47:::1901:1974
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
-    - object /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js: arrayEach.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js:9:0:::19:1:::229:440
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:0:::57:1:::1351:1998
+    - object /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:36:37:::36:48:::1388:1399
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js:54:47:::55:47:::1901:1974
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
+    - object /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js: arrayEach.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js:9:0:::19:1:::229:440
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                              SELECTION SETTINGS                                                                                                                               ║
@@ -466,7 +466,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -551,6 +551,8 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -575,19 +577,16 @@ Resolving Types
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.979, went from 22 to 31 test cases
-De-Duplication done took: 0.115, went from 31 to 14 test cases
+Splitting done took: 0.842, went from 22 to 32 test cases
+De-Duplication done took: 0.117, went from 32 to 12 test cases
 archive size 6
-archive size 5
-archive size 3
+archive size 4
+archive size 2
 Run Final Suite
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -616,23 +615,22 @@ Run Final Suite 2
 Decode
 Decode
 Decode
-Test case has failed!
 
  SEARCH RESULTS 
 
-╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                        Coverage                                                                                                                         ║
-╟────────────────────────────┬────────────────────┬─────────────────────┬──────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                     │ Statement          │ Branch              │ Function │ Objectives │ File                                                                                                                                                    ║
-╟────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ arrayEach.js: arrayEach.js │ 10 / 11            │ 3 / 4               │ 1 / 1    │ 2 / 4      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js           ║
-╟────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js │ 0 / 24             │ 0 / 12              │ 0 / 2    │ 4 / 4      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js                     ║
-╟────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js │ 46 / 46            │ 10 / 12             │ 2 / 2    │ 0 / 4      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js ║
-╟────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                    │ 69.1358024691358 % │ 46.42857142857143 % │ 60 %     │ 50 %       │                                                                                                                                                         ║
-╚════════════════════════════╧════════════════════╧═════════════════════╧══════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                         Coverage                                                                                                                          ║
+╟────────────────────────────┬─────────────────────┬──────────────────────┬──────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                     │ Statement           │ Branch               │ Function │ Objectives │ File                                                                                                                                                    ║
+╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ arrayEach.js: arrayEach.js │ 10 / 11             │ 3 / 4                │ 1 / 1    │ 2 / 4      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/.internal/arrayEach.js           ║
+╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ transform.js: transform.js │ 0 / 24              │ 0 / 12               │ 0 / 2    │ 4 / 4      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/transform.js                     ║
+╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ transform.js: transform.js │ 45 / 46             │ 9 / 12               │ 2 / 2    │ 0 / 4      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-10/lodash/node_modules/lodash/transform.js ║
+╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                    │ 67.90123456790124 % │ 42.857142857142854 % │ 60 %     │ 50 %       │                                                                                                                                                         ║
+╚════════════════════════════╧═════════════════════╧══════════════════════╧══════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -643,16 +641,16 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:0:::57:1:::1351:1998
-    - object /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:37:::36:48:::1388:1399
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:54:47:::55:47:::1901:1974
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
-    - object /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/arrayEach.js: arrayEach.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/arrayEach.js:9:0:::19:1:::229:440
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:0:::57:1:::1351:1998
+    - object /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:36:37:::36:48:::1388:1399
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js:54:47:::55:47:::1901:1974
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
+    - object /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/arrayEach.js: arrayEach.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/arrayEach.js:9:0:::19:1:::229:440
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                              SELECTION SETTINGS                                                                                                                               ║
@@ -695,7 +693,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -780,9 +778,6 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -807,17 +802,19 @@ circular detected
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
+circular detected
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.632, went from 24 to 36 test cases
-De-Duplication done took: 0.104, went from 36 to 12 test cases
-archive size 6
+Splitting done took: 1.13, went from 24 to 44 test cases
+De-Duplication done took: 0.141, went from 44 to 11 test cases
+archive size 5
 archive size 4
 archive size 2
 Run Final Suite
-Decode
-Store
 Decode
 Store
 Decode
@@ -852,11 +849,11 @@ Decode
 ╟────────────────────────────┬─────────────────────┬──────────────────────┬──────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                     │ Statement           │ Branch               │ Function │ Objectives │ File                                                                                                                                                    ║
 ╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ arrayEach.js: arrayEach.js │ 10 / 11             │ 3 / 4                │ 1 / 1    │ 2 / 4      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/arrayEach.js           ║
+║ arrayEach.js: arrayEach.js │ 10 / 11             │ 3 / 4                │ 1 / 1    │ 2 / 4      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/.internal/arrayEach.js           ║
 ╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js │ 0 / 24              │ 0 / 12               │ 0 / 2    │ 4 / 4      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js                     ║
+║ transform.js: transform.js │ 0 / 24              │ 0 / 12               │ 0 / 2    │ 4 / 4      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/transform.js                     ║
 ╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js │ 45 / 46             │ 9 / 12               │ 2 / 2    │ 0 / 4      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js ║
+║ transform.js: transform.js │ 45 / 46             │ 9 / 12               │ 2 / 2    │ 0 / 4      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-11/lodash/node_modules/lodash/transform.js ║
 ╟────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                    │ 67.90123456790124 % │ 42.857142857142854 % │ 60 %     │ 50 %       │                                                                                                                                                         ║
 ╚════════════════════════════╧═════════════════════╧══════════════════════╧══════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -870,9 +867,9 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js: equalArrays.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js: equalArrays.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                             SELECTION SETTINGS                                                                                             ║
@@ -915,7 +912,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1003,12 +1000,10 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 4.27, went from 16 to 125 test cases
-De-Duplication done took: 0.972, went from 125 to 14 test cases
-archive size 14
+Splitting done took: 1.795, went from 19 to 65 test cases
+De-Duplication done took: 0.748, went from 65 to 13 test cases
+archive size 13
 Run Final Suite
-Decode
-Store
 Decode
 Store
 Decode
@@ -1045,7 +1040,7 @@ Decode
 ╟────────────────────────────────┬───────────┬─────────────────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                         │ Statement │ Branch              │ Function │ Objectives │ File                                                                                                                                           ║
 ╟────────────────────────────────┼───────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ equalArrays.js: equalArrays.js │ 54 / 64   │ 20 / 24             │ 2 / 2    │ 3 / 3      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js ║
+║ equalArrays.js: equalArrays.js │ 54 / 64   │ 20 / 24             │ 2 / 2    │ 3 / 3      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-2/lodash/.internal/equalArrays.js ║
 ╟────────────────────────────────┼───────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                        │ 84.375 %  │ 83.33333333333334 % │ 100 %    │ 100 %      │                                                                                                                                                ║
 ╚════════════════════════════════╧═══════════╧═════════════════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -1057,9 +1052,9 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js: equalArrays.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js: equalArrays.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                             SELECTION SETTINGS                                                                                             ║
@@ -1102,7 +1097,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1190,8 +1185,8 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 12.752, went from 20 to 335 test cases
-De-Duplication done took: 1.886, went from 335 to 14 test cases
+Splitting done took: 2.316, went from 17 to 57 test cases
+De-Duplication done took: 0.638, went from 57 to 14 test cases
 archive size 14
 Run Final Suite
 Decode
@@ -1232,7 +1227,7 @@ Decode
 ╟────────────────────────────────┬───────────┬─────────────────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                         │ Statement │ Branch              │ Function │ Objectives │ File                                                                                                                                           ║
 ╟────────────────────────────────┼───────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ equalArrays.js: equalArrays.js │ 54 / 64   │ 20 / 24             │ 2 / 2    │ 3 / 3      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js ║
+║ equalArrays.js: equalArrays.js │ 54 / 64   │ 20 / 24             │ 2 / 2    │ 3 / 3      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-3/lodash/.internal/equalArrays.js ║
 ╟────────────────────────────────┼───────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                        │ 84.375 %  │ 83.33333333333334 % │ 100 %    │ 100 %      │                                                                                                                                                ║
 ╚════════════════════════════════╧═══════════╧═════════════════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -1244,13 +1239,13 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js: equalArrays.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js: some.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js:17:0:::27:1:::535:759
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js: some.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js:43:0:::49:1:::1330:1583
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js: equalArrays.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js:17:0:::27:1:::535:759
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js:43:0:::49:1:::1330:1583
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                               ║
@@ -1293,7 +1288,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1378,6 +1373,10 @@ Resolving Types
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1405,12 +1404,26 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 3.867, went from 20 to 123 test cases
-De-Duplication done took: 0.813, went from 123 to 16 test cases
-archive size 11
-archive size 3
+Splitting done took: 11.24, went from 27 to 212 test cases
+De-Duplication done took: 2.497, went from 212 to 23 test cases
+archive size 17
+archive size 4
 archive size 2
 Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
 Decode
 Store
 Decode
@@ -1455,13 +1468,13 @@ Decode
 ╟────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬─────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                         │ Statement           │ Branch              │ Function │ Objectives          │ File                                                                                                                                              ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ some.js: some.js               │ 12 / 13             │ 4 / 6               │ 1 / 1    │ 1 / 5               │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js                     ║
+║ some.js: some.js               │ 13 / 13             │ 5 / 6               │ 1 / 1    │ 1 / 5               │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/some.js                     ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ equalArrays.js: equalArrays.js │ 53 / 64             │ 18 / 24             │ 2 / 2    │ 4 / 5               │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js    ║
+║ equalArrays.js: equalArrays.js │ 54 / 64             │ 20 / 24             │ 2 / 2    │ 4 / 5               │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/.internal/equalArrays.js    ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ some.js: some.js               │ 18 / 19             │ 3 / 4               │ 1 / 1    │ 0 / 5               │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js ║
+║ some.js: some.js               │ 18 / 19             │ 3 / 4               │ 1 / 1    │ 0 / 5               │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-4/lodash/node_modules/lodash/some.js ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                        │ 86.45833333333334 % │ 73.52941176470588 % │ 100 %    │ 33.33333333333333 % │                                                                                                                                                   ║
+║ Average                        │ 88.54166666666666 % │ 82.35294117647058 % │ 100 %    │ 33.33333333333333 % │                                                                                                                                                   ║
 ╚════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧═════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
@@ -1473,13 +1486,13 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js: equalArrays.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js: some.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js:17:0:::27:1:::535:759
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js: some.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js:43:0:::49:1:::1330:1583
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js: equalArrays.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:22:0:::82:1:::834:2512
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js:62:23:::67:7:::2005:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js:17:0:::27:1:::535:759
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js: some.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js:43:0:::49:1:::1330:1583
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                               ║
@@ -1522,7 +1535,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1607,6 +1620,7 @@ Resolving Types
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1631,19 +1645,15 @@ Resolving Types
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.578, went from 25 to 55 test cases
-De-Duplication done took: 0.362, went from 55 to 17 test cases
-archive size 11
+Splitting done took: 2.581, went from 25 to 85 test cases
+De-Duplication done took: 0.9, went from 85 to 16 test cases
+archive size 10
 archive size 4
 archive size 2
 Run Final Suite
-Decode
-Store
 Decode
 Store
 Decode
@@ -1688,13 +1698,13 @@ Decode
 ╟────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬─────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                         │ Statement           │ Branch              │ Function │ Objectives          │ File                                                                                                                                              ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ some.js: some.js               │ 12 / 13             │ 4 / 6               │ 1 / 1    │ 1 / 5               │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js                     ║
+║ some.js: some.js               │ 13 / 13             │ 5 / 6               │ 1 / 1    │ 1 / 5               │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/some.js                     ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ equalArrays.js: equalArrays.js │ 53 / 64             │ 18 / 24             │ 2 / 2    │ 4 / 5               │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js    ║
+║ equalArrays.js: equalArrays.js │ 54 / 64             │ 20 / 24             │ 2 / 2    │ 4 / 5               │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/.internal/equalArrays.js    ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ some.js: some.js               │ 18 / 19             │ 3 / 4               │ 1 / 1    │ 0 / 5               │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js ║
+║ some.js: some.js               │ 18 / 19             │ 3 / 4               │ 1 / 1    │ 0 / 5               │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-5/lodash/node_modules/lodash/some.js ║
 ╟────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                        │ 86.45833333333334 % │ 73.52941176470588 % │ 100 %    │ 33.33333333333333 % │                                                                                                                                                   ║
+║ Average                        │ 88.54166666666666 % │ 82.35294117647058 % │ 100 %    │ 33.33333333333333 % │                                                                                                                                                   ║
 ╚════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧═════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
@@ -1706,17 +1716,17 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/stringToPath.js: stringToPath.js #0
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js: memoize.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js:43:0:::60:1:::1414:1971
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js:47:8:::57:3:::1600:1905
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js: memoize.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js:50:0:::68:1:::1572:2147
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js:54:6:::65:3:::1749:2073
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js: castPath.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js:12:0:::17:1:::307:456
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js: hasPath.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js:30:0:::51:1:::812:1352
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/stringToPath.js: stringToPath.js #0
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js:43:0:::60:1:::1414:1971
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js:47:8:::57:3:::1600:1905
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js:50:0:::68:1:::1572:2147
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js:54:6:::65:3:::1749:2073
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js: castPath.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js:12:0:::17:1:::307:456
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js: hasPath.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js:30:0:::51:1:::812:1352
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                        ║
@@ -1759,7 +1769,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1856,7 +1866,6 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1883,7 +1892,6 @@ circular detected
 
 circular detected
 circular detected
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1899,14 +1907,22 @@ circular detected
 
  Postprocessing started 
 
-Splitting done took: 8.2, went from 18 to 156 test cases
-De-Duplication done took: 0.211, went from 156 to 15 test cases
+Splitting done took: 5.572, went from 24 to 121 test cases
+De-Duplication done took: 0.211, went from 121 to 19 test cases
 archive size 0
 archive size 2
-archive size 3
 archive size 4
-archive size 6
+archive size 5
+archive size 8
 Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
 Decode
 Store
 Decode
@@ -1952,15 +1968,15 @@ Test case has failed!
 ╟──────────────────────────────────┬──────────────────────┬──────────────────────┬──────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                           │ Statement            │ Branch               │ Function │ Objectives │ File                                                                                                                                                 ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ memoize.js: memoize.js           │ 11 / 21              │ 3 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js                     ║
+║ memoize.js: memoize.js           │ 11 / 21              │ 3 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/memoize.js                     ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ memoize.js: memoize.js           │ 13 / 28              │ 2 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js ║
+║ memoize.js: memoize.js           │ 13 / 28              │ 2 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/node_modules/lodash/memoize.js ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ stringToPath.js: stringToPath.js │ 4 / 24               │ 0 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/stringToPath.js      ║
+║ stringToPath.js: stringToPath.js │ 4 / 24               │ 0 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/stringToPath.js      ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ castPath.js: castPath.js         │ 6 / 6                │ 4 / 4                │ 1 / 1    │ 4 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js          ║
+║ castPath.js: castPath.js         │ 6 / 6                │ 4 / 4                │ 1 / 1    │ 4 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/.internal/castPath.js          ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ hasPath.js: hasPath.js           │ 23 / 25              │ 8 / 8                │ 1 / 1    │ 5 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js                     ║
+║ hasPath.js: hasPath.js           │ 23 / 25              │ 8 / 8                │ 1 / 1    │ 5 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-6/lodash/hasPath.js                     ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                          │ 54.807692307692314 % │ 56.666666666666664 % │ 62.5 %   │ 45 %       │                                                                                                                                                      ║
 ╚══════════════════════════════════╧══════════════════════╧══════════════════════╧══════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -1976,17 +1992,17 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/stringToPath.js: stringToPath.js #0
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js: memoize.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js:43:0:::60:1:::1414:1971
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js:47:8:::57:3:::1600:1905
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js: memoize.js #2
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js:50:0:::68:1:::1572:2147
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js:54:6:::65:3:::1749:2073
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js: castPath.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js:12:0:::17:1:::307:456
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js: hasPath.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js:30:0:::51:1:::812:1352
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/stringToPath.js: stringToPath.js #0
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js:43:0:::60:1:::1414:1971
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js:47:8:::57:3:::1600:1905
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js: memoize.js #2
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js:50:0:::68:1:::1572:2147
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js:54:6:::65:3:::1749:2073
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js: castPath.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js:12:0:::17:1:::307:456
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js: hasPath.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js:30:0:::51:1:::812:1352
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                        ║
@@ -2029,7 +2045,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -2138,6 +2154,10 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -2151,6 +2171,12 @@ Resolving Types
 ╚══════════╧═══════╝
 
 circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -2163,26 +2189,17 @@ circular detected
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
-circular detected
 
  Postprocessing started 
 
-Splitting done took: 7.473, went from 26 to 118 test cases
-De-Duplication done took: 0.119, went from 118 to 22 test cases
+Splitting done took: 19.449, went from 21 to 439 test cases
+De-Duplication done took: 0.599, went from 439 to 18 test cases
 archive size 0
 archive size 2
-archive size 8
 archive size 4
-archive size 8
+archive size 5
+archive size 7
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -2234,15 +2251,15 @@ Test case has failed!
 ╟──────────────────────────────────┬──────────────────────┬──────────────────────┬──────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                           │ Statement            │ Branch               │ Function │ Objectives │ File                                                                                                                                                 ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ memoize.js: memoize.js           │ 11 / 21              │ 3 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js                     ║
+║ memoize.js: memoize.js           │ 11 / 21              │ 3 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/memoize.js                     ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ memoize.js: memoize.js           │ 13 / 28              │ 2 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js ║
+║ memoize.js: memoize.js           │ 13 / 28              │ 2 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/node_modules/lodash/memoize.js ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ stringToPath.js: stringToPath.js │ 4 / 24               │ 0 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/stringToPath.js      ║
+║ stringToPath.js: stringToPath.js │ 4 / 24               │ 0 / 6                │ 1 / 2    │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/stringToPath.js      ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ castPath.js: castPath.js         │ 6 / 6                │ 4 / 4                │ 1 / 1    │ 4 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js          ║
+║ castPath.js: castPath.js         │ 6 / 6                │ 4 / 4                │ 1 / 1    │ 4 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/.internal/castPath.js          ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ hasPath.js: hasPath.js           │ 23 / 25              │ 8 / 8                │ 1 / 1    │ 5 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js                     ║
+║ hasPath.js: hasPath.js           │ 23 / 25              │ 8 / 8                │ 1 / 1    │ 5 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-7/lodash/hasPath.js                     ║
 ╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                          │ 54.807692307692314 % │ 56.666666666666664 % │ 62.5 %   │ 45 %       │                                                                                                                                                      ║
 ╚══════════════════════════════════╧══════════════════════╧══════════════════════╧══════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -2258,18 +2275,18 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:36:0:::57:1:::1351:1998
-    - object /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:36:37:::36:48:::1388:1399
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:54:47:::55:47:::1901:1974
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js: transform.js #3
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
-    - object /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js: baseFor.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js:12:0:::25:1:::485:793
-  - /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js: baseForOwn.js #1
-    - function /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js:12:0:::14:1:::288:380
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:36:0:::57:1:::1351:1998
+    - object /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:36:37:::36:48:::1388:1399
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js:54:47:::55:47:::1901:1974
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js: transform.js #3
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:42:0:::63:1:::1586:2250
+    - object /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:42:37:::42:48:::1623:1634
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js:59:47:::61:3:::2132:2224
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js: baseFor.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js:12:0:::25:1:::485:793
+  - /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js: baseForOwn.js #1
+    - function /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js:12:0:::14:1:::288:380
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                         ║
@@ -2312,7 +2329,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.8272907620647821                ║
+║ Seed                      │ 0.9430999263647797                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -2397,6 +2414,7 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -2409,6 +2427,7 @@ Resolving Types
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
+circular detected
 circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
@@ -2434,13 +2453,11 @@ circular detected
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.322, went from 25 to 45 test cases
-De-Duplication done took: 0.223, went from 45 to 14 test cases
+Splitting done took: 2.349, went from 28 to 50 test cases
+De-Duplication done took: 0.233, went from 50 to 14 test cases
 archive size 6
 archive size 4
 archive size 1
@@ -2487,13 +2504,13 @@ Decode
 ╟──────────────────────────────┬─────────────────────┬──────────────────────┬─────────────────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                       │ Statement           │ Branch               │ Function            │ Objectives │ File                                                                                                                                                   ║
 ╟──────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ baseFor.js: baseFor.js       │ 16 / 17             │ 3 / 4                │ 1 / 1               │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js             ║
+║ baseFor.js: baseFor.js       │ 16 / 17             │ 3 / 4                │ 1 / 1               │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseFor.js             ║
 ╟──────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ baseForOwn.js: baseForOwn.js │ 1 / 1               │ 0 / 0                │ 1 / 1               │ 3 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js          ║
+║ baseForOwn.js: baseForOwn.js │ 1 / 1               │ 0 / 0                │ 1 / 1               │ 3 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/.internal/baseForOwn.js          ║
 ╟──────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js   │ 0 / 24              │ 0 / 12               │ 0 / 2               │ 5 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js                     ║
+║ transform.js: transform.js   │ 0 / 24              │ 0 / 12               │ 0 / 2               │ 5 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/transform.js                     ║
 ╟──────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ transform.js: transform.js   │ 45 / 46             │ 9 / 12               │ 2 / 2               │ 0 / 5      │ /local/tmp/oliverphil/4255820.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js ║
+║ transform.js: transform.js   │ 45 / 46             │ 9 / 12               │ 2 / 2               │ 0 / 5      │ /local/tmp/oliverphil/4256703.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/lodash/lodash-8/lodash/node_modules/lodash/transform.js ║
 ╟──────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average                      │ 70.45454545454545 % │ 42.857142857142854 % │ 66.66666666666666 % │ 40 %       │                                                                                                                                                        ║
 ╚══════════════════════════════╧═════════════════════╧══════════════════════╧═════════════════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝

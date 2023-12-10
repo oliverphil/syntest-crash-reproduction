@@ -1,0 +1,1393 @@
+                                       
+ _____            _____            _   
+|   __| _ _  ___ |_   _| ___  ___ | |_ 
+|__   || | ||   |  | |  | -_||_ -||  _|
+|_____||_  ||_|_|  |_|  |___||___||_|  
+       |___|                           
+
+FID-1701983558780-co7awnE7CT8xR4GCXEzfsa
+
+ Module loaded: 
+
+  - Module: @syntest/init (0.2.2-beta.6)
+    - Tools: 
+      - init: A tool for initializing SynTest projects.
+    - Plugins: []
+    - Presets: []
+  - Module: crash (0.0.1)
+    - Tools: 
+      - crash: A tool for javascript crash reproduction.
+    - Plugins: 
+      - javascript-tree: A JavaScript tree crossover plugin
+      - javascript-random: A JavaScript random sampler plugin
+      - stackTrace: A stack trace based objective manager
+      - SearchMetricListener: A listener that collects statistics about the search process.
+      - SearchPerformanceListener: A listener that outputs the performance of the search algorithm.
+      - SearchProgressBarListener: A listener that creates and updates a progress bar for the search process.
+      - simple: A simple objective manager
+      - structural: A structural objective manager
+      - structural-uncovered: A structural uncovered objective manager
+      - tracking: A tracking objective manager
+      - uncovered: An uncovered objective manager
+      - least-errors: Secondary objective based on wether the encoding introduces an error
+      - smallest-encoding: Secondary objective based on the length of the test case
+      - default: A default procreation operator
+      - MOSAFamily: Many-Objective Sorting Algorithm
+      - NSGAII: NSGAII search algorithm
+      - random: Random search algorithm
+      - signal: Terminates the search when a signal is received
+    - Presets: 
+      - DynaMOSA: DynaMOSA preset
+      - MOSA: MOSA preset
+      - NSGAII: NSGAII preset
+      - random: Random preset
+
+Loading Crashes... 
+moment-82
+
+up to date, audited 1 package in 130ms
+
+found 0 vulnerabilities
+
+added 637 packages, and audited 638 packages in 29s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+moment-83
+
+up to date, audited 1 package in 130ms
+
+found 0 vulnerabilities
+
+added 637 packages, and audited 638 packages in 3s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+moment-84
+
+up to date, audited 1 package in 137ms
+
+found 0 vulnerabilities
+
+added 637 packages, and audited 638 packages in 4s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+moment-85
+
+up to date, audited 1 package in 131ms
+
+found 0 vulnerabilities
+
+added 637 packages, and audited 638 packages in 4s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+moment-86
+
+up to date, audited 1 package in 135ms
+
+found 0 vulnerabilities
+
+added 637 packages, and audited 638 packages in 4s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js: local.js #1
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js:3:7:::5:1:::60:182
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js: min-max.js #3
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:34:0:::49:1:::1285:1674
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:52:7:::56:1:::1713:1813
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:58:7:::62:1:::1822:1921
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                                                                                                                                                                SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/create/local.js, ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/moment/min-max.js, ./benchmark/crashes/syntest-collected/moment/moment-82/**/moment/src/lib/moment/min-max.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/commander*/**/*.test.js, **/commander*/**/test/**/*.*, **/commander*/**/node_modules/**/*.*, **/*.spec.js                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.14040375092350887               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 34    ║
+╟──────────┼───────╢
+║ path     │ 37    ║
+╟──────────┼───────╢
+║ function │ 5     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 0     ║
+╟──────────┼───────╢
+║ path     │ 1     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 16    ║
+╟──────────┼───────╢
+║ path     │ 16    ║
+╟──────────┼───────╢
+║ function │ 5     ║
+╚══════════╧═══════╝
+
+circular detected
+circular detected
+circular detected
+
+ Postprocessing started 
+
+Splitting done took: 4.677, went from 21 to 125 test cases
+De-Duplication done took: 0.712, went from 125 to 18 test cases
+archive size 11
+archive size 2
+archive size 5
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Decode
+ImplementationError: [Implementation]: No statements in test case after error reduction
+    at JavaScriptDecoder.decode (/local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/libraries/search-javascript/lib/testbuilding/JavaScriptDecoder.ts:79:15)
+    at JavaScriptSuiteBuilder.runSuite (/local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/libraries/search-javascript/lib/testbuilding/JavaScriptSuiteBuilder.ts:63:42)
+    at CrashLauncher.postprocess (/local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:649:63)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1147:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1117:5)
+    at async /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4256725.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
+  cause: undefined,
+  context: undefined
+}
+undefined
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js: utc.js #1
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js:3:7:::5:1:::60:185
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js: valid.js #2
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js:6:7:::40:1:::170:1290
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js:42:7:::51:1:::1299:1513
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                                                                                              ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/moment/moment-83/**/moment/src/lib/moment/constructor.js, ./benchmark/crashes/syntest-collected/moment/moment-83/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-83/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-83/**/moment/src/lib/create/utc.js, ./benchmark/crashes/syntest-collected/moment/moment-83/**/moment/src/lib/create/valid.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/commander*/**/*.test.js, **/commander*/**/test/**/*.*, **/commander*/**/node_modules/**/*.*, **/*.spec.js                                                                                                                                                                                                                                                                                                                                                                         ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.14040375092350887               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 32    ║
+╟──────────┼───────╢
+║ path     │ 4105  ║
+╟──────────┼───────╢
+║ function │ 3     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 34    ║
+╟──────────┼───────╢
+║ path     │ 37    ║
+╟──────────┼───────╢
+║ function │ 5     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 0     ║
+╟──────────┼───────╢
+║ path     │ 1     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 8     ║
+╟──────────┼───────╢
+║ path     │ 8     ║
+╟──────────┼───────╢
+║ function │ 3     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 1.751, went from 31 to 62 test cases
+De-Duplication done took: 8.211, went from 62 to 27 test cases
+archive size 7
+archive size 14
+archive size 2
+archive size 4
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Decode
+Decode
+
+ SEARCH RESULTS 
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                  Coverage                                                                                                                                  ║
+╟────────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement           │ Branch              │ Function            │ Objectives │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ constructor.js: constructor.js     │ 45 / 64             │ 23 / 32             │ 3 / 3               │ 0 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js   ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ utc.js: utc.js                     │ 1 / 1               │ 0 / 0               │ 1 / 1               │ 2 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js           ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ valid.js: valid.js                 │ 17 / 24             │ 5 / 8               │ 2 / 3               │ 2 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js         ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 68 / 78             │ 27 / 34             │ 5 / 5               │ 2 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 78.44311377245509 % │ 74.32432432432432 % │ 91.66666666666666 % │ 25 %       │                                                                                                                                                        ║
+╚════════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+Decode
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js: utc.js #1
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js:3:7:::5:1:::60:185
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js: valid.js #2
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js:6:7:::40:1:::170:1290
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js:42:7:::51:1:::1299:1513
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                                                                                              ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/moment/moment-84/**/moment/src/lib/moment/constructor.js, ./benchmark/crashes/syntest-collected/moment/moment-84/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-84/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-84/**/moment/src/lib/create/utc.js, ./benchmark/crashes/syntest-collected/moment/moment-84/**/moment/src/lib/create/valid.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/commander*/**/*.test.js, **/commander*/**/test/**/*.*, **/commander*/**/node_modules/**/*.*, **/*.spec.js                                                                                                                                                                                                                                                                                                                                                                         ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.14040375092350887               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 32    ║
+╟──────────┼───────╢
+║ path     │ 4105  ║
+╟──────────┼───────╢
+║ function │ 3     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 34    ║
+╟──────────┼───────╢
+║ path     │ 37    ║
+╟──────────┼───────╢
+║ function │ 5     ║
+╚══════════╧═══════╝
+
+circular detected
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 0     ║
+╟──────────┼───────╢
+║ path     │ 1     ║
+╟──────────┼───────╢
+║ function │ 1     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 8     ║
+╟──────────┼───────╢
+║ path     │ 8     ║
+╟──────────┼───────╢
+║ function │ 3     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 6.593, went from 37 to 106 test cases
+De-Duplication done took: 13.261, went from 106 to 35 test cases
+archive size 11
+archive size 18
+archive size 2
+archive size 4
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Decode
+Decode
+
+ SEARCH RESULTS 
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                  Coverage                                                                                                                                  ║
+╟────────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement           │ Branch              │ Function            │ Objectives │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ constructor.js: constructor.js     │ 45 / 64             │ 23 / 32             │ 3 / 3               │ 0 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js   ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ utc.js: utc.js                     │ 1 / 1               │ 0 / 0               │ 1 / 1               │ 2 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js           ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ valid.js: valid.js                 │ 17 / 24             │ 5 / 8               │ 2 / 3               │ 2 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js         ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 70 / 78             │ 29 / 34             │ 5 / 5               │ 2 / 6      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 79.64071856287424 % │ 77.02702702702703 % │ 91.66666666666666 % │ 25 %       │                                                                                                                                                        ║
+╚════════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+Decode
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                                      SELECTION SETTINGS                                                                                                                                                                                                      ║
+╟───────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                                                                                                                                ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/moment/moment-85/**/moment/src/lib/moment/constructor.js, ./benchmark/crashes/syntest-collected/moment/moment-85/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-85/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-85/**/moment/src/lib/create/from-anything.js ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                                                                                                                      ║
+╟───────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/commander*/**/*.test.js, **/commander*/**/test/**/*.*, **/commander*/**/node_modules/**/*.*, **/*.spec.js                                                                                                                                                                                                                                                                                         ║
+╚═══════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.14040375092350887               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 32    ║
+╟──────────┼───────╢
+║ path     │ 4105  ║
+╟──────────┼───────╢
+║ function │ 3     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 34    ║
+╟──────────┼───────╢
+║ path     │ 37    ║
+╟──────────┼───────╢
+║ function │ 5     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 2.74, went from 23 to 52 test cases
+De-Duplication done took: 11.89, went from 52 to 21 test cases
+archive size 6
+archive size 15
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Test case has failed!
+
+ SEARCH RESULTS 
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                            Coverage                                                                                                                             ║
+╟────────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement           │ Branch              │ Function │ Objectives │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ constructor.js: constructor.js     │ 45 / 64             │ 23 / 32             │ 3 / 3    │ 0 / 5      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js   ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 69 / 78             │ 28 / 34             │ 5 / 5    │ 1 / 5      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 80.28169014084507 % │ 77.27272727272727 % │ 100 %    │ 10 %       │                                                                                                                                                        ║
+╚════════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+
+ GENERAL INFO 
+
+
+ TARGETS 
+
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                     ║
+╟───────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Setting               │ Value                                                                                                                                                                                                                                                                                              ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Root Directory │ benchmark/crashes                                                                                                                                                                                                                                                                                  ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Include        │ ./benchmark/crashes/syntest-collected/moment/moment-86/**/moment/src/lib/moment/constructor.js, ./benchmark/crashes/syntest-collected/moment/moment-86/**/moment/src/lib/create/from-anything.js, ./benchmark/crashes/syntest-collected/moment/moment-86/**/moment/src/lib/create/from-anything.js ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target Exclude        │                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Include      │                                                                                                                                                                                                                                                                                                    ║
+╟───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analysis Exclude      │ **/commander*/**/*.test.js, **/commander*/**/test/**/*.*, **/commander*/**/node_modules/**/*.*, **/*.spec.js                                                                                                                                                                                       ║
+╚═══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════╗
+║                           SETTINGS                            ║
+╟───────────────────────────┬───────────────────────────────────╢
+║ Setting                   │ Value                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Preset                    │ DynaMOSA                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Search Algorithm          │ MOSAFamily                        ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Population Size           │ 50                                ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Objective Manager         │ structural-uncovered              ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Secondary Objectives      │ [least-errors, smallest-encoding] ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Procreation Operator      │ default                           ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Crossover Operator        │ javascript-tree                   ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Sampling Operator         │ javascript-random                 ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Termination Triggers      │ [signal]                          ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Test Minimization Enabled │ false                             ║
+╟───────────────────────────┼───────────────────────────────────╢
+║ Seed                      │ 0.14040375092350887               ║
+╚═══════════════════════════╧═══════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════╗
+║                  BUDGET SETTINGS                  ║
+╟────────────────────┬──────────────────────────────╢
+║ Setting            │ Value                        ║
+╟────────────────────┼──────────────────────────────╢
+║ Iteration Budget   │ 20 iterations                ║
+╟────────────────────┼──────────────────────────────╢
+║ Evaluation Budget  │ 9007199254740991 evaluations ║
+╟────────────────────┼──────────────────────────────╢
+║ Search Time Budget │ 600 seconds                  ║
+╟────────────────────┼──────────────────────────────╢
+║ Total Time Budget  │ 600 seconds                  ║
+╚════════════════════╧══════════════════════════════╝
+
+╔═══════════════════════════════════════════╗
+║             MUTATION SETTINGS             ║
+╟───────────────────────────────────┬───────╢
+║ Setting                           │ Value ║
+╟───────────────────────────────────┼───────╢
+║ Delta Mutation Probability        │ 0.8   ║
+╟───────────────────────────────────┼───────╢
+║ Crossover Probability             │ 0.7   ║
+╟───────────────────────────────────┼───────╢
+║ Multi-point Crossover Probability │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Max Depth                         │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Max Action Statements             │ 5     ║
+╟───────────────────────────────────┼───────╢
+║ Explore Illegal Values            │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Values          │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Constant Pool Probability     │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Values              │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Type Pool Probability         │ 0.5   ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Values         │ true  ║
+╟───────────────────────────────────┼───────╢
+║ Use Statement Pool Probability    │ 0.8   ║
+╚═══════════════════════════════════╧═══════╝
+
+╔══════════════════════════════════════════════════╗
+║                  Type SETTINGS                   ║
+╟───────────────────────────────────┬──────────────╢
+║ Setting                           │ Value        ║
+╟───────────────────────────────────┼──────────────╢
+║ Type Inference Mode               │ proportional ║
+╟───────────────────────────────────┼──────────────╢
+║ Incorporate Execution Information │ true         ║
+╟───────────────────────────────────┼──────────────╢
+║ Random Type Probability           │ 0.1          ║
+╚═══════════════════════════════════╧══════════════╝
+
+╔═══════════════════════════════════════════╗
+║            DIRECTORY SETTINGS             ║
+╟───────────────────────┬───────────────────╢
+║ Setting               │ Value             ║
+╟───────────────────────┼───────────────────╢
+║ Syntest Directory     │ syntest           ║
+╟───────────────────────┼───────────────────╢
+║ Temporary Directory   │ .syntest          ║
+╟───────────────────────┼───────────────────╢
+║ Target Root Directory │ benchmark/crashes ║
+╚═══════════════════════╧═══════════════════╝
+
+Extracting types
+Resolving Types
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 32    ║
+╟──────────┼───────╢
+║ path     │ 4105  ║
+╟──────────┼───────╢
+║ function │ 3     ║
+╚══════════╧═══════╝
+
+╔══════════════════╗
+║ Objective Counts ║
+╟──────────┬───────╢
+║ Type     │ Count ║
+╟──────────┼───────╢
+║ branch   │ 34    ║
+╟──────────┼───────╢
+║ path     │ 37    ║
+╟──────────┼───────╢
+║ function │ 5     ║
+╚══════════╧═══════╝
+
+
+ Postprocessing started 
+
+Splitting done took: 2.057, went from 23 to 50 test cases
+De-Duplication done took: 8.869, went from 50 to 20 test cases
+archive size 6
+archive size 14
+Run Final Suite
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Decode
+Store
+Run Final Suite 2
+Decode
+Decode
+Test case has failed!
+
+ SEARCH RESULTS 
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                            Coverage                                                                                                                            ║
+╟────────────────────────────────────┬────────────────────┬─────────────────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement          │ Branch              │ Function │ Objectives │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ constructor.js: constructor.js     │ 45 / 64            │ 23 / 32             │ 3 / 3    │ 0 / 4      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js   ║
+╟────────────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 68 / 78            │ 27 / 34             │ 5 / 5    │ 1 / 4      │ /local/tmp/oliverphil/4256725.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼────────────────────┼─────────────────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 79.5774647887324 % │ 75.75757575757575 % │ 100 %    │ 12.5 %     │                                                                                                                                                        ║
+╚════════════════════════════════════╧════════════════════╧═════════════════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode

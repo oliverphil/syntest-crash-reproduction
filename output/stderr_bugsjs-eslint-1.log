@@ -20,6 +20,26 @@ npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, fl
 
 npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
 
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -67,6 +87,60 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+(node:763590) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:763590) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:763590) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
