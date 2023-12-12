@@ -73,10 +73,10 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-(node:251078) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:1230850) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:251078) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(node:251078) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:1230850) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:1230850) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis

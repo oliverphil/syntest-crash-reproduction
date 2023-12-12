@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701983551569-pUk9wbSJfx77YLF7QpL8DH
+FID-1702349121046-5U8XkfVcXxexXbrsKqC4TP
 
  Module loaded: 
 
@@ -45,121 +45,121 @@ FID-1701983551569-pUk9wbSJfx77YLF7QpL8DH
 Loading Crashes... 
 javascript-algorithms-28
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 149ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-280
 
-up to date, audited 1 package in 88ms
+up to date, audited 1 package in 160ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-281
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 160ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-282
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 163ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-283
 
-up to date, audited 1 package in 88ms
+up to date, audited 1 package in 164ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-284
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 162ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-285
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 160ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-286
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 164ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-287
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 164ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-288
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 160ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-289
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 164ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-29
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 169ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-290
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 169ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-291
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 172ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-292
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 168ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-293
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 184ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-294
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 152ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-295
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 193ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-296
 
-up to date, audited 1 package in 93ms
+up to date, audited 1 package in 149ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-297
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 196ms
 
 found 0 vulnerabilities
 
@@ -169,28 +169,28 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #5
-    - class /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:11:15:::34:1:::402:1067
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:12:2:::15:3:::417:590
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:21:2:::29:3:::686:993
-    - function /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:23:10:::23:33:::792:815
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:31:2:::33:3:::997:1065
-  - /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js: RadixSort.js #15
-    - class /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:8:15:::152:1:::232:4389
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:13:2:::32:3:::328:1054
-    - function /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:26:35:::28:7:::957:1013
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:39:2:::61:3:::1140:2026
-    - function /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:45:18:::58:5:::1429:1999
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:69:2:::79:3:::2143:2514
-    - function /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:72:18:::76:5:::2286:2487
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:87:2:::100:3:::2639:3163
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:106:2:::108:3:::3359:3440
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:114:2:::122:3:::3502:3757
-    - function /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:119:24:::121:5:::3669:3740
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:128:2:::131:3:::3820:3943
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:137:2:::143:3:::4010:4263
-    - function /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:142:48:::142:56:::4249:4257
-    - method /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:149:2:::151:3:::4326:4387
+  - /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #5
+    - class /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:11:15:::34:1:::402:1067
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:12:2:::15:3:::417:590
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:21:2:::29:3:::686:993
+    - function /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:23:10:::23:33:::792:815
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js:31:2:::33:3:::997:1065
+  - /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js: RadixSort.js #15
+    - class /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:8:15:::152:1:::232:4389
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:13:2:::32:3:::328:1054
+    - function /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:26:35:::28:7:::957:1013
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:39:2:::61:3:::1140:2026
+    - function /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:45:18:::58:5:::1429:1999
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:69:2:::79:3:::2143:2514
+    - function /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:72:18:::76:5:::2286:2487
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:87:2:::100:3:::2639:3163
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:106:2:::108:3:::3359:3440
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:114:2:::122:3:::3502:3757
+    - function /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:119:24:::121:5:::3669:3740
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:128:2:::131:3:::3820:3943
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:137:2:::143:3:::4010:4263
+    - function /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:142:48:::142:56:::4249:4257
+    - method /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js:149:2:::151:3:::4326:4387
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                               SELECTION SETTINGS                                                                                                                                                                                                                                                                                                               ║
@@ -233,7 +233,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.2201668107052374                ║
+║ Seed                      │ 0.6852083321738974                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -318,6 +318,8 @@ Resolving Types
 ║ function │ 4     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -333,31 +335,11 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0.746, went from 18 to 23 test cases
-De-Duplication done took: 0.022, went from 23 to 14 test cases
-archive size 3
-archive size 11
+Splitting done took: 1.47, went from 4 to 11 test cases
+De-Duplication done took: 0.001, went from 11 to 4 test cases
+archive size 2
+archive size 2
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -372,17 +354,17 @@ Decode
 
  SEARCH RESULTS 
 
-╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                                Coverage                                                                                                                                                 ║
-╟────────────────────────────┬─────────────────────┬─────────┬──────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                     │ Statement           │ Branch  │ Function │ Objectives │ File                                                                                                                                                                                                               ║
-╟────────────────────────────┼─────────────────────┼─────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Sort.js: Sort.js           │ 10 / 10             │ 0 / 0   │ 4 / 4    │ 2 / 5      │ /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js                 ║
-╟────────────────────────────┼─────────────────────┼─────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ RadixSort.js: RadixSort.js │ 61 / 68             │ 14 / 14 │ 14 / 14  │ 2 / 5      │ /local/tmp/oliverphil/4256714.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js ║
-╟────────────────────────────┼─────────────────────┼─────────┼──────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                    │ 91.02564102564102 % │ 100 %   │ 100 %    │ 40 %       │                                                                                                                                                                                                                    ║
-╚════════════════════════════╧═════════════════════╧═════════╧══════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                      Coverage                                                                                                                                                      ║
+╟────────────────────────────┬──────────────────────┬────────┬─────────────────────┬────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                     │ Statement            │ Branch │ Function            │ Objectives │ File                                                                                                                                                                                                               ║
+╟────────────────────────────┼──────────────────────┼────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Sort.js: Sort.js           │ 10 / 10              │ 0 / 0  │ 3 / 4               │ 2 / 5      │ /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/Sort.js                 ║
+╟────────────────────────────┼──────────────────────┼────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ RadixSort.js: RadixSort.js │ 12 / 68              │ 0 / 14 │ 4 / 14              │ 2 / 5      │ /local/tmp/oliverphil/4261748.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-28/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js ║
+╟────────────────────────────┼──────────────────────┼────────┼─────────────────────┼────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                    │ 28.205128205128204 % │ 0 %    │ 38.88888888888889 % │ 40 %       │                                                                                                                                                                                                                    ║
+╚════════════════════════════╧══════════════════════╧════════╧═════════════════════╧════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode

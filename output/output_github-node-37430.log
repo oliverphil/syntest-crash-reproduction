@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701983554942-nttgNazQ2HLjVjqcihbT3s
+FID-1702346253121-rQb9joxQ94QDVxf3pBtSqH
 
  Module loaded: 
 
@@ -46,59 +46,59 @@ Loading Crashes...
 Error: Command failed: wget -O ./benchmark/crashes/github/node/node-38058/node-v16.0.0-v8-canary202104037284782541.tar.gz https://nodejs.org/dist/v16.0.0-v8-canary202104037284782541/node-v16.0.0-v8-canary202104037284782541.tar.gz > /dev/null 2>&1
     at checkExecSyncError (node:child_process:890:11)
     at execSync (node:child_process:962:15)
-    at /local/tmp/oliverphil/4256680.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
+    at /local/tmp/oliverphil/4261714.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:174:19
     at Array.map (<anonymous>)
-    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4256680.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
-    at /local/tmp/oliverphil/4256680.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
-    at Object.Command.handler (/local/tmp/oliverphil/4256680.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
-    at /local/tmp/oliverphil/4256680.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
-    at /local/tmp/oliverphil/4256680.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
+    at EnvironmentGenerator.loadAssets (/local/tmp/oliverphil/4261714.1/syntest-crash-reproduction/libraries/crash-reproduction-setup/lib/setup/EnvironmentGenerator.ts:147:99)
+    at /local/tmp/oliverphil/4261714.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:171:51
+    at Object.Command.handler (/local/tmp/oliverphil/4261714.1/syntest-core/libraries/module/lib/extension/Command.ts:45:13)
+    at /local/tmp/oliverphil/4261714.1/syntest-core/node_modules/yargs/build/index.cjs:1:8993
+    at /local/tmp/oliverphil/4261714.1/syntest-core/node_modules/yargs/build/index.cjs:1:4949 {
   status: 8,
   signal: null,
   output: [ null, <Buffer >, <Buffer > ],
-  pid: 2168323,
+  pid: 16674,
   stdout: <Buffer >,
   stderr: <Buffer >
 }
 node-37430
 
-up to date, audited 1 package in 105ms
+up to date, audited 1 package in 132ms
 
 found 0 vulnerabilities
 
 node-37612
 
-added 1 package, and audited 2 packages in 659ms
+added 1 package, and audited 2 packages in 1s
 
 found 0 vulnerabilities
 
 node-37705
 
-up to date, audited 1 package in 104ms
+up to date, audited 1 package in 130ms
 
 found 0 vulnerabilities
 
 node-37731
 
-up to date, audited 1 package in 104ms
+up to date, audited 1 package in 127ms
 
 found 0 vulnerabilities
 
 node-37972
 
-added 1 package, and audited 2 packages in 486ms
+added 1 package, and audited 2 packages in 475ms
 
 found 0 vulnerabilities
 
 node-38053
 
-up to date, audited 1 package in 105ms
+up to date, audited 1 package in 128ms
 
 found 0 vulnerabilities
 
 node-38058
 
-added 31 packages, and audited 32 packages in 6s
+added 31 packages, and audited 32 packages in 5s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -112,19 +112,19 @@ Run `npm audit` for details.
 
 node-38580
 
-added 1 package, and audited 2 packages in 499ms
+added 1 package, and audited 2 packages in 437ms
 
 found 0 vulnerabilities
 
 node-38649
 
-up to date, audited 1 package in 104ms
+up to date, audited 1 package in 130ms
 
 found 0 vulnerabilities
 
 node-38721
 
-up to date, audited 1 package in 103ms
+up to date, audited 1 package in 128ms
 
 found 0 vulnerabilities
 

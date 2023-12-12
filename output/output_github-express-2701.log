@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701983559240-q4wR2N7GVC7TuDM3pQr2Sx
+FID-1702346252963-x5GSpzdES1VQTkb3fNWeNi
 
  Module loaded: 
 
@@ -45,7 +45,7 @@ FID-1701983559240-q4wR2N7GVC7TuDM3pQr2Sx
 Loading Crashes... 
 express-2701
 
-added 43 packages, and audited 44 packages in 2s
+added 43 packages, and audited 44 packages in 881ms
 
 9 vulnerabilities (1 moderate, 8 high)
 
@@ -67,7 +67,7 @@ Run `npm audit` for details.
 
 express-3388
 
-added 51 packages, and audited 52 packages in 770ms
+added 51 packages, and audited 52 packages in 750ms
 
 3 high severity vulnerabilities
 
@@ -81,7 +81,7 @@ Run `npm audit` for details.
 
 express-4060
 
-added 50 packages, and audited 51 packages in 634ms
+added 50 packages, and audited 51 packages in 592ms
 
 3 high severity vulnerabilities
 
@@ -95,7 +95,7 @@ Run `npm audit` for details.
 
 express-4093
 
-added 50 packages, and audited 51 packages in 657ms
+added 50 packages, and audited 51 packages in 648ms
 
 3 high severity vulnerabilities
 
@@ -109,7 +109,7 @@ Run `npm audit` for details.
 
 express-4228
 
-added 50 packages, and audited 51 packages in 573ms
+added 50 packages, and audited 51 packages in 617ms
 
 3 high severity vulnerabilities
 
@@ -123,7 +123,7 @@ Run `npm audit` for details.
 
 express-4277
 
-added 61 packages, and audited 62 packages in 1s
+added 61 packages, and audited 62 packages in 2s
 
 5 high severity vulnerabilities
 
@@ -134,7 +134,7 @@ Run `npm audit` for details.
 
 express-4309
 
-added 50 packages, and audited 51 packages in 578ms
+added 50 packages, and audited 51 packages in 615ms
 
 3 high severity vulnerabilities
 
@@ -148,7 +148,7 @@ Run `npm audit` for details.
 
 express-4311
 
-added 50 packages, and audited 51 packages in 637ms
+added 50 packages, and audited 51 packages in 638ms
 
 3 high severity vulnerabilities
 
@@ -162,7 +162,7 @@ Run `npm audit` for details.
 
 express-4388
 
-added 50 packages, and audited 51 packages in 607ms
+added 50 packages, and audited 51 packages in 636ms
 
 3 high severity vulnerabilities
 
@@ -176,7 +176,7 @@ Run `npm audit` for details.
 
 express-4435
 
-added 62 packages, and audited 63 packages in 646ms
+added 62 packages, and audited 63 packages in 634ms
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -185,7 +185,7 @@ found 0 vulnerabilities
 
 express-4464
 
-added 50 packages, and audited 51 packages in 592ms
+added 50 packages, and audited 51 packages in 711ms
 
 3 high severity vulnerabilities
 
@@ -203,48 +203,48 @@ Run `npm audit` for details.
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js: layer.js #6
-    - class /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:33:0:::50:1:::486:909
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:62:0:::62:28:::1073:1101
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:86:0:::86:30:::1486:1516
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:33:0:::50:1:::486:909
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:110:0:::110:21:::1877:1898
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:161:0:::176:1:::2793:3123
-  - /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js: route.js #8
-    - class /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:43:0:::51:1:::663:819
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:58:0:::58:31:::892:923
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:77:0:::77:24:::1224:1248
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:98:0:::98:24:::1619:1643
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:114:2:::133:3:::1927:2299
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:43:0:::51:1:::663:819
-    - method /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:164:0:::164:19:::2888:2907
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:186:16:::210:1:::3416:4026
-  - /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js: index.js #25
-    - object /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:42:4:::60:1:::849:1264
-    - object-function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:96:0:::96:11:::2403:2414
-    - object-function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:135:0:::135:12:::3296:3308
-    - object /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:147:6:::147:22:::3747:3763
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:166:22:::169:5:::4254:4382
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:178:2:::282:3:::4507:6825
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:271:54:::281:5:::6595:6819
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:284:2:::314:3:::6829:7856
-    - object-function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:322:0:::322:20:::7923:7943
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:343:2:::385:3:::8372:9238
-    - object /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:339:6:::339:17:::8293:8304
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:388:2:::408:3:::9270:9670
-    - object-function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:428:0:::428:9:::10218:10227
-    - object-function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:491:0:::491:11:::11539:11550
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:507:30:::513:1:::11881:12047
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:516:0:::523:1:::12090:12282
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:526:0:::532:1:::12311:12427
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:535:0:::545:1:::12459:12656
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:555:0:::561:1:::12756:12868
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:564:0:::600:1:::12905:13563
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:603:0:::620:1:::13601:14004
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:612:9:::619:3:::13842:14001
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:623:0:::631:1:::14034:14213
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:634:0:::645:1:::14234:14488
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:635:9:::644:3:::14268:14485
+  - /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js: layer.js #6
+    - class /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:33:0:::50:1:::486:909
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:62:0:::62:28:::1073:1101
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:86:0:::86:30:::1486:1516
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:33:0:::50:1:::486:909
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:110:0:::110:21:::1877:1898
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js:161:0:::176:1:::2793:3123
+  - /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js: route.js #8
+    - class /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:43:0:::51:1:::663:819
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:58:0:::58:31:::892:923
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:77:0:::77:24:::1224:1248
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:98:0:::98:24:::1619:1643
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:114:2:::133:3:::1927:2299
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:43:0:::51:1:::663:819
+    - method /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:164:0:::164:19:::2888:2907
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:186:16:::210:1:::3416:4026
+  - /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js: index.js #25
+    - object /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:42:4:::60:1:::849:1264
+    - object-function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:96:0:::96:11:::2403:2414
+    - object-function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:135:0:::135:12:::3296:3308
+    - object /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:147:6:::147:22:::3747:3763
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:166:22:::169:5:::4254:4382
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:178:2:::282:3:::4507:6825
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:271:54:::281:5:::6595:6819
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:284:2:::314:3:::6829:7856
+    - object-function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:322:0:::322:20:::7923:7943
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:343:2:::385:3:::8372:9238
+    - object /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:339:6:::339:17:::8293:8304
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:388:2:::408:3:::9270:9670
+    - object-function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:428:0:::428:9:::10218:10227
+    - object-function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:491:0:::491:11:::11539:11550
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:507:30:::513:1:::11881:12047
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:516:0:::523:1:::12090:12282
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:526:0:::532:1:::12311:12427
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:535:0:::545:1:::12459:12656
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:555:0:::561:1:::12756:12868
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:564:0:::600:1:::12905:13563
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:603:0:::620:1:::13601:14004
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:612:9:::619:3:::13842:14001
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:623:0:::631:1:::14034:14213
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:634:0:::645:1:::14234:14488
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:635:9:::644:3:::14268:14485
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                             SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                             ║
@@ -287,7 +287,7 @@ Run `npm audit` for details.
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.405417990893485                 ║
+║ Seed                      │ 0.6425418056800317                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -372,7 +372,6 @@ Resolving Types
 ║ function │ 5     ║
 ╚══════════╧═══════╝
 
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -400,48 +399,12 @@ circular detected
 
  Postprocessing started 
 
-Splitting done took: 75.386, went from 47 to 654 test cases
-De-Duplication done took: 0.397, went from 654 to 46 test cases
-archive size 24
-archive size 22
+Splitting done took: 29.087, went from 28 to 236 test cases
+De-Duplication done took: 0.013, went from 236 to 28 test cases
+archive size 14
+archive size 14
 archive size 0
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -505,17 +468,17 @@ Decode
 
  SEARCH RESULTS 
 
-╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                      Coverage                                                                                                                       ║
-╟────────────────────┬──────────────────────┬─────────┬─────────────────────┬─────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target             │ Statement            │ Branch  │ Function            │ Objectives          │ File                                                                                                                                              ║
-╟────────────────────┼──────────────────────┼─────────┼─────────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ layer.js: layer.js │ 61 / 89              │ 12 / 22 │ 4 / 5               │ 2 / 11              │ /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js ║
-╟────────────────────┼──────────────────────┼─────────┼─────────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ route.js: route.js │ 69 / 121             │ 10 / 28 │ 6 / 8               │ 0 / 11              │ /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js ║
-╟────────────────────┼──────────────────────┼─────────┼─────────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average            │ 61.904761904761905 % │ 44 %    │ 76.92307692307693 % │ 9.090909090909092 % │                                                                                                                                                   ║
-╚════════════════════╧══════════════════════╧═════════╧═════════════════════╧═════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                     Coverage                                                                                                                      ║
+╟────────────────────┬─────────────────────┬────────┬─────────────────────┬─────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target             │ Statement           │ Branch │ Function            │ Objectives          │ File                                                                                                                                              ║
+╟────────────────────┼─────────────────────┼────────┼─────────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ layer.js: layer.js │ 40 / 89             │ 6 / 22 │ 4 / 5               │ 2 / 11              │ /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/layer.js ║
+╟────────────────────┼─────────────────────┼────────┼─────────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ route.js: route.js │ 68 / 121            │ 9 / 28 │ 6 / 8               │ 0 / 11              │ /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js ║
+╟────────────────────┼─────────────────────┼────────┼─────────────────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average            │ 51.42857142857142 % │ 30 %   │ 76.92307692307693 % │ 9.090909090909092 % │                                                                                                                                                   ║
+╚════════════════════╧═════════════════════╧════════╧═════════════════════╧═════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -526,14 +489,14 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js: node.js #7
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:44:0:::54:1:::850:1162
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:71:0:::71:20:::1491:1511
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:82:0:::99:1:::1671:2102
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:105:0:::107:1:::2172:2256
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:116:0:::124:1:::2338:2614
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:133:0:::135:1:::2731:2778
-    - function /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:144:0:::203:1:::2982:4661
+  - /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js: node.js #7
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:44:0:::54:1:::850:1162
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:71:0:::71:20:::1491:1511
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:82:0:::99:1:::1671:2102
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:105:0:::107:1:::2172:2256
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:116:0:::124:1:::2338:2614
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:133:0:::135:1:::2731:2778
+    - function /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js:144:0:::203:1:::2982:4661
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                    SELECTION SETTINGS                                                                                                                                                                                                                                    ║
@@ -576,7 +539,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.405417990893485                 ║
+║ Seed                      │ 0.6425418056800317                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -664,31 +627,9 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0.451, went from 4 to 13 test cases
-De-Duplication done took: 0.008, went from 13 to 2 test cases
-archive size 2
-Run Final Suite
-Decode
-Store
-Decode
-Store
-Run Final Suite 2
-Decode
-Test case has failed!
-
- SEARCH RESULTS 
-
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                Coverage                                                                                                                ║
-╟──────────────────┬─────────────────────┬──────────────────────┬─────────────────────┬────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target           │ Statement           │ Branch               │ Function            │ Objectives │ File                                                                                                                                ║
-╟──────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ node.js: node.js │ 29 / 82             │ 4 / 24               │ 2 / 9               │ 0 / 8      │ /local/tmp/oliverphil/4256678.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2761/node_modules/debug/node.js ║
-╟──────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average          │ 35.36585365853659 % │ 16.666666666666664 % │ 22.22222222222222 % │ 0 %        │                                                                                                                                     ║
-╚══════════════════╧═════════════════════╧══════════════════════╧═════════════════════╧════════════╧═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-
-Decode
+Splitting done took: 0, went from 0 to 0 test cases
+De-Duplication done took: 0, went from 0 to 0 test cases
+archive size 0
 
  GENERAL INFO 
 

@@ -1,48 +1,8 @@
 [33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
 [33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
@@ -53,8 +13,16 @@ npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.no
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
@@ -79,2740 +47,477 @@ npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.no
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-██████████████████████████░░░░░░░░░░░░░░ 66% | ETA: 245s | 66/100 | 0% | help.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█████████████████░░░░░░░░░░░░░░░░░░░░░░░ 42% | ETA: 217s | 42/100 | 0% | option.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-███████████████░░░░░░░░░░░░░░░░░░░░░░░░░ 38% | ETA: INFs | 38/100 | 0% | option.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-████████████████████████████░░░░░░░░░░░░ 70% | ETA: 106s | 70/100 | 0% | help.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-██████████████████████████████░░░░░░░░░░ 74% | ETA: 68s | 74/100 | 0% | help.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-███████████████████████████████░░░░░░░░░ 78% | ETA: 77s | 78/100 | 0% | help.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-███████████████████████████░░░░░░░░░░░░░ 68% | ETA: 113s | 68/100 | 0% | help.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 39% | ETA: INFs | 39/100 | 0% | option.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: INFs | 3/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█████████████████░░░░░░░░░░░░░░░░░░░░░░░ 42% | ETA: INFs | 42/100 | 0% | option.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-███████████████░░░░░░░░░░░░░░░░░░░░░░░░░ 38% | ETA: INFs | 38/100 | 0% | option.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-(node:2457818) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:3611765) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2457818) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(node:2457818) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-███████████████░░░░░░░░░░░░░░░░░░░░░░░░░ 38% | ETA: INFs | 38/100 | 0% | option.js
+(node:3611765) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:3611765) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-█████████████████████████████░░░░░░░░░░░ 72% | ETA: 198s | 72/100 | 0% | help.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-████████████████████████████░░░░░░░░░░░░ 69% | ETA: 87s | 69/100 | 0% | help.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-███████████████████████████░░░░░░░░░░░░░ 67% | ETA: 93s | 67/100 | 0% | help.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: INFs | 3/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-█████████████████████████████░░░░░░░░░░░ 73% | ETA: 75s | 73/100 | 0% | help.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-[BABEL] Note: The code generator has deoptimised the styling of /local/tmp/oliverphil/4256719.1/syntest-crash-reproduction/.syntest/FID-1701983551982-vy1WTwGivpwKC6dx5KAJtX/instrumented/crashes/syntest-collected/commander/commander-23/commanderjs/lib/command.js as it exceeds the max of 500KB.
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: option 'false' argument missing
-undefined
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+[BABEL] Note: The code generator has deoptimised the styling of /local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/.syntest/FID-1702350469784-4pHQqipeCRjuzoDMaPfRrS/instrumented/crashes/syntest-collected/commander/commander-23/commanderjs/lib/command.js as it exceeds the max of 500KB.
 error: unknown command 'undefined'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
 
-Options:
-  -h, --help  display help for command
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option 'null' not specified
-error: missing required argument 'function localName1() {}'
-error: required option ',false' not specified
-error: option '-456.8611032193511' argument missing
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-null
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: option 'function flags() {}' argument missing
-error: required option 'RluYSg_yi*MZN E[V&*b_YP|(7mGU	LOmuv]' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: unknown command 'undefined'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-[object Object]
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown command 'undefined'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-Usage: true [options]
-
-Options:
-  -h, --help  display help for command
--636
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown command 'undefined'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: option '3' argument missing
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown command 'undefined'
-error: missing required argument '-337'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option '[object Object]'
-Usage: true [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown command 'undefined'
-error: option 'display help for command' argument missing
-error: missing required argument '1'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: Qha%tlnkM§|[f]buYn:-ipAS_*#JU [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: option '3' argument missing
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'optionEnv:'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: option 'null' argument missing
-error: unknown option '[object Object]'
-error: required option '2' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: missing required argument 'null'
-error: required option 'Command alias can't be the same as its name' not specified
+)'
+error: missing required argument 'false'
 error: required option 'undefined' not specified
-error: missing required argument '-337'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: missing required argument 'true'
-error: required option 'false' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+error: required option '-1' not specified
+error: missing required argument 'beforeHelp'
 error: unknown command 'undefined'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: option 'undefined' argument missing
-error: option '[object Object]' argument missing
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '-4.742769438181884' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown command 'undefined'
-error: required option '2' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'C8D u]Zq-W\Q6[Y900?\B'`n'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '2' not specified
-error: option '[object Object]' argument missing
-error: unknown option 'xmOwp'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: true [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'Command alias can't be the same as its name'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '2' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-error: required option '-5' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: option 'undefined' argument missing
-error: required option '388' not specified
-error: required option '[object Object],-315' not specified
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: output the version number [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '[object Object]' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: missing required argument '-337'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: output the version number [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: required option '2' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: option 'undefined' argument missing
-error: required option 'true' not specified
-error: required option '\zW j416/bCav!3G<@']4`dO+f	KR§' not specified
-error: required option '1.4908640413909446' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: option 'undefined' argument missing
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown command 'undefined'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '-3' not specified
-error: unknown option 'I":+juPiN.'4|e';O21,[KY#bGk'
-error: option 'undefined' argument missing
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '2' not specified
-error: option 'undefined' argument missing
-error: missing required argument '-337'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '2' not specified
-error: required option '2' not specified
-error: missing required argument '-337'
-error: required option '2' not specified
-error: required option '2' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+error: required option 'undefined' not specified
+error: missing required argument 'beforeHelp'
 error: missing required argument '[object Object]'
-████████████████████████████████████████ 100% | ETA: 0s | 235/100 | 0% | command.js
-error: unknown command 'undefined'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: option 'function flags() {}' argument missing
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: unknown option '[object Object]'
-error: required option '[object Object],-315' not specified
-error: unknown command 'undefined'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: unknown option '[object Object]'
-error: unknown command 'undefined'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: unknown option '[object Object]'
-error: unknown command 'undefined'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: required option '2' not specified
-error: unknown option '[object Object]'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown command 'undefined'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: missing required argument '1'
-error: option 'function flags() {}' argument missing
-error: unknown option '[object Object]'
-error: required option '[object Object],-315' not specified
-error: unknown command 'undefined'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-error: missing required argument '1'
-error: option 'function flags() {}' argument missing
-error: unknown option '[object Object]'
-error: required option '[object Object],-315' not specified
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Unable to insert counter for node identifierDescription: VariableDeclaration
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 26% | ETA: INFs | 26/100 | 0% | argument.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-██████████████████████████░░░░░░░░░░░░░░ 66% | ETA: 247s | 66/100 | 0% | help.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Unable to insert counter for node identifierDescription: VariableDeclaration
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25% | ETA: 538s | 25/100 | 0% | argument.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-███████████████████████████░░░░░░░░░░░░░ 67% | ETA: 62s | 67/100 | 0% | help.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Unable to insert counter for node identifierDescription: VariableDeclaration
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 26% | ETA: INFs | 26/100 | 0% | argument.js
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-████████████████████████░░░░░░░░░░░░░░░░ 61% | ETA: 143s | 61/100 | 0% | help.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-Unable to insert counter for node identifierDescription: VariableDeclaration
-[BABEL] Note: The code generator has deoptimised the styling of /local/tmp/oliverphil/4256719.1/syntest-crash-reproduction/.syntest/FID-1701983551982-vy1WTwGivpwKC6dx5KAJtX/instrumented/crashes/syntest-collected/commander/commander-27/commanderjs/lib/command.js as it exceeds the max of 500KB.
-error: option 'undefined' argument missing
--434
-2
-error: option '907.5290864023932' argument missing
-error: unknown option 'commander.unknownOption'
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '1' not specified
-error: required option '?GiM
-	_-Sk?&j'_txiPPa6AY_fJ6@kd[1,)ia2,[+dwf);xo^b;&,f6q|e^' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: option 's|FS:*NN4Y\aw#`G{K@e O&vaCqvDGZwV7{e\!&Iy=\a)]-@N_pL\ VY;#Az>±:qi2-,wS3]t1§C|>WL`e.^,w' argument missing
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option 'null' not specified
-commander.optionMissingArgument
-error: option '2.718281828459045' argument missing
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '?GiM
-	_-Sk?&j'_txiPPa6AY_fJ6@kd[1,)ia2,[+dwf);xo^b;&,f6q|e^' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[object Object]
-error: option 'undefined' argument missing
-error: option 'jI<+)T2,Y*{THRy5~1jkOcG!3>H/>k 'c`x.R,A8lV/xE$lKh|{NV'\Dy)EJa' argument missing
-[object Object]
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-function message() {}
-error: required option './suggestSimilar' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-error: required option 'null' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-passThroughOptions can not be used without turning on enablePositionalOptions for parent command(s)
-Usage: [options] [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-290.71196928925156
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+error: required option '-1' not specified
+error: missing required argument 'false'
+error: required option '-1' not specified
 Usage: true [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '55' not specified
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-error: option 'null' argument missing
-290.71196928925156
-290.71196928925156
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-281
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-290.71196928925156
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-290.71196928925156
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-Usage: Wi(&-Kbk}D$o<fX";-H(rUF'
-N}$w<5kI+
-z<2O7ruqY
-D^8E6p.#kNgV?X D}nSW[iP)aOuV\!KQA|,xO{9<So [options]
-
-Options:
-  -h, --help  display help for command
-Usage: 1,FiXgl{tcnjf)ax*&IBe-Q DZxsDBb'RUb61njS5l,#9:*ehZ(%)UQGD?3B+=_mcizVA4 FL-Y`IKS_ [options]
-
-Options:
-  -h, --help  display help for command
-optionEnv:
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: option '[object Object]' argument missing
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-true
-559.9869508092038
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-error: unknown option 'commander.unknownOption'
-290.71196928925156
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: 9229 [options]
-
-Options:
-  -h, --help  display help for command
-error: required option 'undefined' not specified
-error: missing required argument 'true'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-290.71196928925156
-Usage: [object Object] [options]
 
 Options:
   -h, --help  display help for command
 error: missing required argument 'false'
-[object Object],true,-280.0909445910652
-error: unknown command 'undefined'
-1
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
 
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
+)'
 
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
+)'
+error: required option '-1' not specified
+error: missing required argument 'beforeHelp'
+error: required option '-1' not specified
 
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
+)'
 
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-290.71196928925156
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
+)'
+error: missing required argument 'false'
+error: missing required argument ''
+error: missing required argument 'function localName2() {}'
+error: missing required argument '0,function arrayElement1() {}'
+error: missing required argument 'false'
+error: required option 'undefined' not specified
+error: missing required argument 'beforeHelp'
 
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
+)'
+error: missing required argument '0,function arrayElement1() {}'
+error: missing required argument '[object Object]'
+error: missing required argument '0,-1'
+error: missing required argument 'function anon() {},function arrayElement() {}'
+error: required option '-1' not specified
+error: missing required argument '0,function arrayElement1() {}'
 
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-290.71196928925156
-error: required option '-869.3173636747534' not specified
-error: unknown command 'undefined'
-error: missing required argument 'function localName1() {}'
-a.LhPKH,dy~O>+<$1N;:xz
-_
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: unknown option 'B`)$_Yt§;k8P,±{jW@Ex6~UR}mGh:e*\6O,'8{zj*ag+("-.q/Q{[p|'
-error: required option '-869.3173636747534' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '-869.3173636747534' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '-867.9186491294281' not specified
+)'
+error: missing required argument '0,function anon() {}'
+error: missing required argument '0,function arrayElement1() {}'
+error: required option '-1' not specified
 Usage: true [options]
 
 Options:
   -h, --help  display help for command
-error: option ',L!"M]A5)T+2'R\quPDq'' argument missing
--200.62499706600363
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
+error: missing required argument '0,function arrayElement1() {}'
+error: missing required argument '0,function arrayElement1() {}'
 error: unknown option '[object Object]'
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '-869.3173636747534' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '-869.3173636747534' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-Usage: Command passed to .addCommand() must have a name [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-error: required option '-869.3173636747534' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '-869.3173636747534' not specified
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-true
+error: missing required argument '-45'
 error: unknown command 'undefined'
-0
-Usage: [object Object] [options]
+error: unknown command 'undefined'
+error: required option 'undefined' not specified
+error: unknown command 'undefined'
+Usage: true [options]
 
 Options:
   -h, --help  display help for command
-Usage: [object Object] [options]
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: required option 'undefined' not specified
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: missing required argument '0,function arrayElement1() {}'
+
+)'
+Usage: true [options]
 
 Options:
   -h, --help  display help for command
-Usage: [object Object] [options]
-
-Options:
-  -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: required option '-869.3173636747534' not specified
-error: required option '-869.3173636747534' not specified
-Usage:  [options]
-
-Options:
-  -h, --help  display help for command
-Usage: ./error.js [options]
-
-Options:
-  -h, --help  display help for command
-error: required option '-869.3173636747534' not specified
 error: option 'function flags() {}' argument missing
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[object Object]
-683.4235869544282
-Usage: [object Object] [options]
+Usage: true [options]
 
 Options:
   -h, --help  display help for command
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-Usage: [object Object] [options]
+null
+error: unknown command 'undefined'
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+/local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/libraries/search-javascript/dist/lib/testcase/execution/TestExecutor.js:25
+    throw reason;
+    ^
+
+TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'children' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+    at stringify (<anonymous>)
+    at writeChannelMessage (node:internal/child_process/serialization:159:20)
+    at process.target._send (node:internal/child_process:845:17)
+    at process.target.send (node:internal/child_process:745:19)
+    at runMocha (/local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/libraries/search-javascript/lib/testcase/execution/TestExecutor.ts:156:11)
+    at async process.<anonymous> (/local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/libraries/search-javascript/lib/testcase/execution/TestExecutor.ts:74:5)
+
+Node.js v18.19.0
+[33mwarn[39m:    Execution timeout reached killing process, timeout: 5000 times 1
+[BABEL] Note: The code generator has deoptimised the styling of /local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/.syntest/FID-1702350469784-4pHQqipeCRjuzoDMaPfRrS/instrumented/crashes/syntest-collected/commander/commander-23/commanderjs/lib/command.js as it exceeds the max of 500KB.
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+Usage: command:* [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown option '[object Object]'
+error: unknown command 'undefined'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: missing required argument '-875'
+error: unknown command 'undefined'
+error: missing required argument '\Wnt)_'Hr#jFYB'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown command 'undefined'
+error: unknown option '[object Object]'
+error: missing required argument 'null'
+error: required option '-238' not specified
+error: required option '-238' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option '-240' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown option '[object Object]'
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
+error: option '549' argument missing
+undefined
+error: missing required argument ',4,[object Object]'
+error: missing required argument ',4,[object Object]'
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: missing required argument ',*,[object Object]'
+error: missing required argument ',4,[object Object]'
+error: missing required argument '4,4,[object Object]'
+error: missing required argument './option.js'
+error: missing required argument ',function anon() {},[object Object]'
+error: missing required argument ',4,[object Object]'
+0
+error: option '[object Object]' argument missing
+null
+null
+null
+null
+null
+null
+null
+Usage: command:* [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown option 'FH5zL=O{Smc1`h
+Zf,$3N=Ro"A#x4.^c`[3DYF&±s(uJDn{kW'
+error: required option 'undefined' not specified
+null
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+null
+error: required option 'undefined' not specified
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown command 'undefined'
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: unknown command 'undefined'
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: unknown option '[object Object]'
+error: unknown option '[object Object]'
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: missing required argument 'function apply2() {}'
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+Usage: +g!<"1>Z:u;&NxZ](O~0.bKD@F6S\26Q,CI±ca.j?*61uhBa7U6Ev%ta? [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+Usage: true [options]
 
 Options:
   -h, --help  display help for command
@@ -2820,109 +525,229 @@ Usage:  [options]
 
 Options:
   -h, --help  display help for command
-Usage: [object Object] [options]
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: +g!<"1>Z:u;&NxZ](O~0.bKD@F6S\26Q,CI±ca.j?*61uhBa7U6Ev%ta? [options]
 
 Options:
   -h, --help  display help for command
-error: required option '-869.3173636747534' not specified
-Usage: [command] [options]
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: option 'outputHelp callback must return a string or a Buffer' argument missing
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
 
 Options:
   -h, --help  display help for command
-Usage: [object Object] [options]
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
 
 Options:
   -h, --help  display help for command
-error: option 'false' argument missing
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: +g!<"1>Z:u;&NxZ](O~0.bKD@F6S\26Q,CI±ca.j?*61uhBa7U6Ev%ta? [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'true,mO)*T>ia[$$+Da+fS2%`?}b_9R,-267' not specified
+[object Object]
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+Usage: true [options]
+
+Options:
+  -h, --help  display help for command
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: unknown option '[object Object]'
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | command.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | argument.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | argument.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | help.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | argument.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+Unable to insert counter for node identifierDescription: VariableDeclaration
+[BABEL] Note: The code generator has deoptimised the styling of /local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/.syntest/FID-1702350469784-4pHQqipeCRjuzoDMaPfRrS/instrumented/crashes/syntest-collected/commander/commander-27/commanderjs/lib/command.js as it exceeds the max of 500KB.
+error: required option 'undefined' not specified
+error: option '' argument missing
+error: unknown command 'undefined'
+/local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/libraries/search-javascript/dist/lib/testcase/execution/TestExecutor.js:25
+    throw reason;
+    ^
+
+TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'children' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+    at stringify (<anonymous>)
+    at writeChannelMessage (node:internal/child_process/serialization:159:20)
+    at process.target._send (node:internal/child_process:845:17)
+    at process.target.send (node:internal/child_process:745:19)
+    at runMocha (/local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/libraries/search-javascript/lib/testcase/execution/TestExecutor.ts:156:11)
+    at async process.<anonymous> (/local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/libraries/search-javascript/lib/testcase/execution/TestExecutor.ts:74:5)
+
+Node.js v18.19.0
+[33mwarn[39m:    Execution timeout reached killing process, timeout: 5000 times 1
+[BABEL] Note: The code generator has deoptimised the styling of /local/tmp/oliverphil/4261753.1/syntest-crash-reproduction/.syntest/FID-1702350469784-4pHQqipeCRjuzoDMaPfRrS/instrumented/crashes/syntest-collected/commander/commander-27/commanderjs/lib/command.js as it exceeds the max of 500KB.
+error: unknown command 'undefined'
+error: unknown option '127.0.0.1'
+error: required option 'undefined' not specified
+error: unknown command 'undefined'
+error: option '~goK/M'uGpmv1Qbfc,&E#,±(mLH@2zW*n&qC'9'T6d%ofIq-ya#u4]%2±"GvS<r' argument missing
+error: unknown option 'help [command]'
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: required option 'true' not specified
+error: option 'true' argument missing
+error: option 'wza.U'(:4!/w§8`dHUUr8,|^Jq C(CYOwXuz[R!4b"V.
+#uiY_Pc±\8f'C8(f"0<Pn5<??nRa}-1*laO65[1]±h.|Hi|uw|' argument missing
+error: unknown option 'L*+OgG
+j)K",UeZ\BR.+e6s`3ms'
+error: missing required argument 'true'
+error: unknown option 'D3$b%)iFK`/J}gUd 	*/A]|9WjA,U)PtVvyY<pmD§]Va*§s,X:&
+z6'@4^>bQ&(*CNV;[{TZZp\i9nAFR''
+error: unknown option '[object Object]'
+error: required option 'o%p3Dnh`pUs±3{-]Pru
+,5&i6d***pQhpAc23KqVT^h2_:	0E-jhv;Q{8!<~m
+(MmmEy!v#?gge5
+t||fjQ@%Z4LcYDg3ikm' not specified
+error: unknown command 'undefined'
+error: unknown command 'undefined'
+error: missing required argument 'false'
+error: unknown option 'MdYXa_U7}>Dz	/y"Xk%#SUUT§xv&<N7(:!Jm- td!'<z:VKU=Ce&~<qUOs±fp#z|_mm/4;sN;c{zQ3 3bq
+u[=;x{;Ic)@v'
 function message() {}
-error: missing required argument 'function localName1() {}'
-████████████████████████████████████████ 100% | ETA: 0s | 230/100 | 0% | command.js
+Usage: -39 [options]
+
+Options:
+  -h, --help  display help for command
+error: option 'null' argument missing
 error: option 'undefined' argument missing
-error: unknown command 'undefined'
-error: unknown command 'undefined'
-error: unknown option 'commander.unknownOption'
+error: missing required argument 'afterHelp'
+error: unknown option 'boolean'
+error: option 'undefined' argument missing
+error: required option 'undefined' not specified
+\CLn	b F`M;ZLUGk=&0=LMsAhsDf&Yy vB$G!!$nZx=±K.l^j't/i_3N$Dqg}o=<X>Q>1]Ah'x_/PvWfi5I[2?o))v|kp±J
 Usage: true [options]
 
 Options:
   -h, --help  display help for command
-error: required option '1' not specified
-Usage: [object Object] [options]
+error: unknown command 'undefined'
+undefined
+Usage: help [command] [options]
 
 Options:
   -h, --help  display help for command
-[object Object],true,-280.0909445910652
-error: unknown command 'undefined'
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-error: unknown option 'commander.unknownOption'
-[object Object],true,-280.0909445910652
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-error: unknown option 'commander.unknownOption'
-[object Object],true,-280.0909445910652
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-error: unknown option 'commander.unknownOption'
-[object Object],true,-280.0909445910652
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-error: option 'undefined' argument missing
-error: unknown command 'undefined'
-error: unknown option 'commander.unknownOption'
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
 Usage: true [options]
 
 Options:
   -h, --help  display help for command
-error: required option '1' not specified
-[object Object],true,-280.0909445910652
-error: missing required argument 'function localName1() {}'
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
 error: option 'undefined' argument missing
-error: unknown command 'undefined'
-error: unknown option 'commander.unknownOption'
+error: unknown option 'MO~e}(|zZd6#w{X(Qa_±67H^LuVsLSi;CAT]Ke!HUw@3Os#zA]f8A @m)]B82,h=A'
 Usage: true [options]
 
 Options:
   -h, --help  display help for command
-error: required option '1' not specified
-[object Object],true,-280.0909445910652
-error: missing required argument 'function localName1() {}'
-$dx_±>[q,xn#§AuV§|!$yg "iCq>xg2>WH}U_eaxKYa(KN]tfGb+cl2pu=}={2U
+function message() {}
+error: unknown command 'undefined'
+null
+null
+error: unknown command 'undefined'
+[object Object]
+Usage:  [options]
+
+Options:
+  -h, --help  display help for command
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | command.js
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified
+error: required option 'undefined' not specified

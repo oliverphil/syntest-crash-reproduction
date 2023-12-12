@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701983554439-t5YFqkTB4LMiThQbsFFxSV
+FID-1702350994466-wBwVwDCvs4RKiUSiBwUHeB
 
  Module loaded: 
 
@@ -67,7 +67,7 @@ Run `npm audit` for details.
 
 kmc_1.2.2
 
-added 22 packages, and audited 23 packages in 4s
+added 22 packages, and audited 23 packages in 1s
 
 found 0 vulnerabilities
 
@@ -101,7 +101,7 @@ Run `npm audit` for details.
 
 modjs_0.4.0
 
-added 148 packages, and audited 149 packages in 9s
+added 148 packages, and audited 149 packages in 1m
 
 40 packages are looking for funding
   run `npm fund` for details
@@ -118,7 +118,7 @@ Run `npm audit` for details.
 
 modulify_0.1.0
 
-added 25 packages, and audited 26 packages in 4s
+added 25 packages, and audited 26 packages in 5s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -138,7 +138,7 @@ found 0 vulnerabilities
 
 mongoosemask_0.0.6
 
-added 3 packages, and audited 4 packages in 3s
+added 3 packages, and audited 4 packages in 4s
 
 2 critical severity vulnerabilities
 
@@ -182,7 +182,7 @@ Run `npm audit` for details.
 
 realms-shim_1.1.0
 
-added 1 package, and audited 2 packages in 2s
+added 1 package, and audited 2 packages in 3s
 
 1 critical severity vulnerability
 
@@ -207,7 +207,7 @@ Run `npm audit` for details.
 
 thenify_3.3.0
 
-added 2 packages, and audited 3 packages in 520ms
+added 2 packages, and audited 3 packages in 639ms
 
 1 critical severity vulnerability
 
@@ -222,9 +222,9 @@ Run `npm audit` for details.
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256726.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js: encode.js #2
-    - function /local/tmp/oliverphil/4256726.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:3:0:::7:1:::15:138
-    - function /local/tmp/oliverphil/4256726.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:9:0:::27:1:::140:517
+  - /local/tmp/oliverphil/4261760.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js: encode.js #2
+    - function /local/tmp/oliverphil/4261760.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:3:0:::7:1:::15:138
+    - function /local/tmp/oliverphil/4261760.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js:9:0:::27:1:::140:517
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                                                              ║
@@ -267,7 +267,7 @@ Run `npm audit` for details.
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.258000651381663                 ║
+║ Seed                      │ 0.11324376532310369               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -355,10 +355,14 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 6.014, went from 29 to 69 test cases
-De-Duplication done took: 0.068, went from 69 to 28 test cases
-archive size 28
+Splitting done took: 12.448, went from 31 to 180 test cases
+De-Duplication done took: 0.032, went from 180 to 30 test cases
+archive size 30
 Run Final Suite
+Decode
+Store
+Decode
+Store
 Decode
 Store
 Decode
@@ -426,7 +430,7 @@ Test case has failed!
 ╟──────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target               │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                                              ║
 ╟──────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ encode.js: encode.js │ 15 / 15   │ 4 / 4  │ 2 / 2    │ 3 / 5      │ /local/tmp/oliverphil/4256726.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js ║
+║ encode.js: encode.js │ 15 / 15   │ 4 / 4  │ 2 / 2    │ 3 / 5      │ /local/tmp/oliverphil/4261760.1/syntest-crash-reproduction/benchmark/crashes/secbench/code-injection/access-policy_3.1.0/node_modules/access-policy/lib/encode.js ║
 ╟──────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Average              │ 100 %     │ 100 %  │ 100 %    │ 60 %       │                                                                                                                                                                   ║
 ╚══════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝

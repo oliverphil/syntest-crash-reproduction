@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1701983552055-nXQbDkGCKBem7onwDQhFtR
+FID-1702349103698-dD7BexGq9P9gFjXzBbeSCW
 
  Module loaded: 
 
@@ -45,121 +45,121 @@ FID-1701983552055-nXQbDkGCKBem7onwDQhFtR
 Loading Crashes... 
 javascript-algorithms-261
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 105ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-262
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 108ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-263
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 111ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-264
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 111ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-265
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 114ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-266
 
-up to date, audited 1 package in 88ms
+up to date, audited 1 package in 113ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-267
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 114ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-268
 
-up to date, audited 1 package in 98ms
+up to date, audited 1 package in 113ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-269
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 115ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-27
 
-up to date, audited 1 package in 89ms
+up to date, audited 1 package in 113ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-270
 
-up to date, audited 1 package in 93ms
+up to date, audited 1 package in 113ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-271
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-272
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 112ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-273
 
-up to date, audited 1 package in 93ms
+up to date, audited 1 package in 117ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-274
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 115ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-275
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-276
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 117ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-277
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 105ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-278
 
-up to date, audited 1 package in 86ms
+up to date, audited 1 package in 113ms
 
 found 0 vulnerabilities
 
 javascript-algorithms-279
 
-up to date, audited 1 package in 92ms
+up to date, audited 1 package in 104ms
 
 found 0 vulnerabilities
 
@@ -169,47 +169,47 @@ found 0 vulnerabilities
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js: BinarySearchTreeNode.js #7
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:4:15:::151:1:::127:4058
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:9:2:::15:3:::311:569
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:21:2:::53:3:::643:1401
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:59:2:::76:3:::1475:1919
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:82:2:::84:3:::1980:2032
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:90:2:::139:3:::2093:3909
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:144:2:::150:3:::3961:4056
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js: BinarySearchTree.js #6
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:3:15:::44:1:::75:832
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:7:2:::12:3:::164:378
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:18:2:::20:3:::452:507
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:26:2:::28:3:::568:627
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:34:2:::36:3:::688:743
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:41:2:::43:3:::781:830
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js: RedBlackTree.js #15
-    - object /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:4:6:::7:1:::122:181
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:12:15:::323:1:::290:9796
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:17:2:::33:3:::408:881
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:39:2:::41:3:::942:1045
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:46:2:::116:3:::1101:3471
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:123:2:::163:3:::3657:4986
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:170:2:::191:3:::5174:5927
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:198:2:::238:3:::6117:7452
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:245:2:::266:3:::7640:8399
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:272:2:::276:3:::8506:8610
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:282:2:::286:3:::8717:8825
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:292:2:::294:3:::8919:9013
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:300:2:::302:3:::9107:9205
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:308:2:::310:3:::9299:9383
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:316:2:::322:3:::9520:9794
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js: BinarySearchTreeNode.js #7
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:4:15:::151:1:::127:4058
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:9:2:::15:3:::311:569
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:21:2:::53:3:::643:1401
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:59:2:::76:3:::1475:1919
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:82:2:::84:3:::1980:2032
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:90:2:::139:3:::2093:3909
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:144:2:::150:3:::3961:4056
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js: BinarySearchTree.js #6
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:3:15:::44:1:::75:832
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:7:2:::12:3:::164:378
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:18:2:::20:3:::452:507
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:26:2:::28:3:::568:627
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:34:2:::36:3:::688:743
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:41:2:::43:3:::781:830
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js: RedBlackTree.js #15
+    - object /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:4:6:::7:1:::122:181
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:12:15:::323:1:::290:9796
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:17:2:::33:3:::408:881
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:39:2:::41:3:::942:1045
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:46:2:::116:3:::1101:3471
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:123:2:::163:3:::3657:4986
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:170:2:::191:3:::5174:5927
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:198:2:::238:3:::6117:7452
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:245:2:::266:3:::7640:8399
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:272:2:::276:3:::8506:8610
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:282:2:::286:3:::8717:8825
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:292:2:::294:3:::8919:9013
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:300:2:::302:3:::9107:9205
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:308:2:::310:3:::9299:9383
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:316:2:::322:3:::9520:9794
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                  SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                   ║
@@ -252,7 +252,7 @@ found 0 vulnerabilities
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -377,55 +377,13 @@ circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.258, went from 37 to 46 test cases
-De-Duplication done took: 0.025, went from 46 to 33 test cases
-archive size 6
-archive size 10
-archive size 5
-archive size 12
+Splitting done took: 3.009, went from 15 to 24 test cases
+De-Duplication done took: 0.002, went from 24 to 12 test cases
+archive size 4
+archive size 4
+archive size 2
+archive size 2
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -458,21 +416,21 @@ Decode
 
  SEARCH RESULTS 
 
-╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                                                                  Coverage                                                                                                                                                                                  ║
-╟──────────────────────────────────────────────────┬────────────────────┬──────────────────────┬─────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                                           │ Statement          │ Branch               │ Function            │ Objectives │ File                                                                                                                                                                                                                                     ║
-╟──────────────────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Comparator.js: Comparator.js                     │ 15 / 16            │ 4 / 4                │ 8 / 9               │ 2 / 5      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js                                  ║
-╟──────────────────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ BinarySearchTreeNode.js: BinarySearchTreeNode.js │ 50 / 72            │ 19 / 34              │ 6 / 6               │ 4 / 5      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js ║
-╟──────────────────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ BinarySearchTree.js: BinarySearchTree.js         │ 6 / 6              │ 0 / 0                │ 5 / 5               │ 4 / 5      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js     ║
-╟──────────────────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ RedBlackTree.js: RedBlackTree.js                 │ 78 / 125           │ 14 / 34              │ 13 / 13             │ 4 / 5      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js             ║
-╟──────────────────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                                          │ 68.0365296803653 % │ 51.388888888888886 % │ 96.96969696969697 % │ 70 %       │                                                                                                                                                                                                                                          ║
-╚══════════════════════════════════════════════════╧════════════════════╧══════════════════════╧═════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                   Coverage                                                                                                                                                                                   ║
+╟──────────────────────────────────────────────────┬──────────────────────┬─────────────────────┬──────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                                           │ Statement            │ Branch              │ Function             │ Objectives │ File                                                                                                                                                                                                                                     ║
+╟──────────────────────────────────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Comparator.js: Comparator.js                     │ 11 / 16              │ 3 / 4               │ 6 / 9                │ 4 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/utils/comparator/Comparator.js                                  ║
+╟──────────────────────────────────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ BinarySearchTreeNode.js: BinarySearchTreeNode.js │ 26 / 72              │ 11 / 34             │ 4 / 6                │ 4 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js ║
+╟──────────────────────────────────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ BinarySearchTree.js: BinarySearchTree.js         │ 4 / 6                │ 0 / 0               │ 3 / 5                │ 4 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js     ║
+╟──────────────────────────────────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ RedBlackTree.js: RedBlackTree.js                 │ 16 / 125             │ 2 / 34              │ 4 / 13               │ 4 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-261/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js             ║
+╟──────────────────────────────────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                                          │ 26.027397260273972 % │ 22.22222222222222 % │ 51.515151515151516 % │ 80 %       │                                                                                                                                                                                                                                          ║
+╚══════════════════════════════════════════════════╧══════════════════════╧═════════════════════╧══════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -484,22 +442,22 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js: RedBlackTree.js #15
-    - object /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:4:6:::7:1:::122:181
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:12:15:::323:1:::290:9796
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:17:2:::33:3:::408:881
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:39:2:::41:3:::942:1045
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:46:2:::116:3:::1101:3471
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:123:2:::163:3:::3657:4986
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:170:2:::191:3:::5174:5927
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:198:2:::238:3:::6117:7452
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:245:2:::266:3:::7640:8399
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:272:2:::276:3:::8506:8610
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:282:2:::286:3:::8717:8825
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:292:2:::294:3:::8919:9013
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:300:2:::302:3:::9107:9205
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:308:2:::310:3:::9299:9383
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:316:2:::322:3:::9520:9794
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js: RedBlackTree.js #15
+    - object /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:4:6:::7:1:::122:181
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:12:15:::323:1:::290:9796
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:17:2:::33:3:::408:881
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:39:2:::41:3:::942:1045
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:46:2:::116:3:::1101:3471
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:123:2:::163:3:::3657:4986
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:170:2:::191:3:::5174:5927
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:198:2:::238:3:::6117:7452
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:245:2:::266:3:::7640:8399
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:272:2:::276:3:::8506:8610
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:282:2:::286:3:::8717:8825
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:292:2:::294:3:::8919:9013
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:300:2:::302:3:::9107:9205
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:308:2:::310:3:::9299:9383
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:316:2:::322:3:::9520:9794
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                               SELECTION SETTINGS                                                                                                                                                                                                                                                               ║
@@ -542,7 +500,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -630,24 +588,10 @@ Resolving Types
 
  Postprocessing started 
 
-Splitting done took: 0.081, went from 16 to 18 test cases
-De-Duplication done took: 0.005, went from 18 to 11 test cases
-archive size 11
+Splitting done took: 0.302, went from 5 to 7 test cases
+De-Duplication done took: 0, went from 7 to 4 test cases
+archive size 4
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -661,15 +605,15 @@ Decode
 
  SEARCH RESULTS 
 
-╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                                               Coverage                                                                                                                                                                ║
-╟──────────────────────────────────┬──────────────────────┬──────────────────────┬──────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                           │ Statement            │ Branch               │ Function │ Objectives │ File                                                                                                                                                                                                                         ║
-╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ RedBlackTree.js: RedBlackTree.js │ 74 / 125             │ 12 / 34              │ 13 / 13  │ 4 / 4      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js ║
-╟──────────────────────────────────┼──────────────────────┼──────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                          │ 59.199999999999996 % │ 35.294117647058826 % │ 100 %    │ 100 %      │                                                                                                                                                                                                                              ║
-╚══════════════════════════════════╧══════════════════════╧══════════════════════╧══════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                               Coverage                                                                                                                                                               ║
+╟──────────────────────────────────┬───────────┬─────────────────────┬─────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                           │ Statement │ Branch              │ Function            │ Objectives │ File                                                                                                                                                                                                                         ║
+╟──────────────────────────────────┼───────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ RedBlackTree.js: RedBlackTree.js │ 42 / 125  │ 4 / 34              │ 4 / 13              │ 4 / 4      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-262/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js ║
+╟──────────────────────────────────┼───────────┼─────────────────────┼─────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                          │ 33.6 %    │ 11.76470588235294 % │ 30.76923076923077 % │ 100 %      │                                                                                                                                                                                                                              ║
+╚══════════════════════════════════╧═══════════╧═════════════════════╧═════════════════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 
@@ -678,31 +622,31 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js: BinarySearchTreeNode.js #7
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:4:15:::151:1:::127:4058
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:9:2:::15:3:::311:569
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:21:2:::53:3:::643:1401
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:59:2:::76:3:::1475:1919
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:82:2:::84:3:::1980:2032
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:90:2:::139:3:::2093:3909
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:144:2:::150:3:::3961:4056
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js: BinarySearchTree.js #6
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:3:15:::44:1:::75:832
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:7:2:::12:3:::164:378
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:18:2:::20:3:::452:507
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:26:2:::28:3:::568:627
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:34:2:::36:3:::688:743
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:41:2:::43:3:::781:830
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js: BinarySearchTreeNode.js #7
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:4:15:::151:1:::127:4058
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:9:2:::15:3:::311:569
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:21:2:::53:3:::643:1401
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:59:2:::76:3:::1475:1919
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:82:2:::84:3:::1980:2032
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:90:2:::139:3:::2093:3909
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:144:2:::150:3:::3961:4056
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js: BinarySearchTree.js #6
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:3:15:::44:1:::75:832
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:7:2:::12:3:::164:378
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:18:2:::20:3:::452:507
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:26:2:::28:3:::568:627
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:34:2:::36:3:::688:743
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:41:2:::43:3:::781:830
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                         ║
@@ -745,7 +689,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -830,8 +774,6 @@ Resolving Types
 ║ function │ 9     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -844,6 +786,9 @@ circular detected
 ║ function │ 6     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -859,34 +804,12 @@ circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.391, went from 29 to 39 test cases
-De-Duplication done took: 0.027, went from 39 to 25 test cases
-archive size 8
-archive size 11
-archive size 6
+Splitting done took: 3.786, went from 15 to 70 test cases
+De-Duplication done took: 0.003, went from 70 to 14 test cases
+archive size 5
+archive size 4
+archive size 5
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -922,19 +845,19 @@ Decode
 
  SEARCH RESULTS 
 
-╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                                                                 Coverage                                                                                                                                                                                  ║
-╟──────────────────────────────────────────────────┬─────────────────────┬──────────────────────┬──────────┬─────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                                           │ Statement           │ Branch               │ Function │ Objectives          │ File                                                                                                                                                                                                                                     ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Comparator.js: Comparator.js                     │ 15 / 16             │ 4 / 4                │ 8 / 9    │ 5 / 5               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js                                  ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ BinarySearchTreeNode.js: BinarySearchTreeNode.js │ 50 / 72             │ 19 / 34              │ 6 / 6    │ 4 / 5               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ BinarySearchTree.js: BinarySearchTree.js         │ 6 / 6               │ 0 / 0                │ 5 / 5    │ 5 / 5               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js     ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                                          │ 75.53191489361703 % │ 60.526315789473685 % │ 95 %     │ 93.33333333333333 % │                                                                                                                                                                                                                                          ║
-╚══════════════════════════════════════════════════╧═════════════════════╧══════════════════════╧══════════╧═════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                            Coverage                                                                                                                                                                             ║
+╟──────────────────────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                                           │ Statement           │ Branch              │ Function │ Objectives │ File                                                                                                                                                                                                                                     ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Comparator.js: Comparator.js                     │ 11 / 16             │ 4 / 4               │ 6 / 9    │ 5 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/utils/comparator/Comparator.js                                  ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ BinarySearchTreeNode.js: BinarySearchTreeNode.js │ 35 / 72             │ 13 / 34             │ 5 / 6    │ 5 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ BinarySearchTree.js: BinarySearchTree.js         │ 5 / 6               │ 0 / 0               │ 4 / 5    │ 5 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-263/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js     ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                                          │ 54.25531914893617 % │ 44.73684210526316 % │ 75 %     │ 100 %      │                                                                                                                                                                                                                                          ║
+╚══════════════════════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -945,16 +868,16 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #5
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:11:15:::34:1:::402:1067
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:12:2:::15:3:::417:590
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:21:2:::29:3:::686:993
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:23:10:::23:33:::792:815
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:31:2:::33:3:::997:1065
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js: HeapSort.js #3
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:4:15:::30:1:::105:849
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:5:2:::29:3:::137:847
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:10:26:::15:5:::325:455
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js: Sort.js #5
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:11:15:::34:1:::402:1067
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:12:2:::15:3:::417:590
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:21:2:::29:3:::686:993
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:23:10:::23:33:::792:815
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js:31:2:::33:3:::997:1065
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js: HeapSort.js #3
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:4:15:::30:1:::105:849
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:5:2:::29:3:::137:847
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js:10:26:::15:5:::325:455
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                               SELECTION SETTINGS                                                                                                                                                                                                                                                                                                               ║
@@ -997,7 +920,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1082,7 +1005,6 @@ Resolving Types
 ║ function │ 4     ║
 ╚══════════╧═══════╝
 
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1098,17 +1020,11 @@ circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.494, went from 7 to 15 test cases
-De-Duplication done took: 0.001, went from 15 to 7 test cases
-archive size 3
-archive size 4
+Splitting done took: 0.564, went from 4 to 20 test cases
+De-Duplication done took: 0.001, went from 20 to 4 test cases
+archive size 2
+archive size 2
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -1123,17 +1039,17 @@ Decode
 
  SEARCH RESULTS 
 
-╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                         Coverage                                                                                                                                          ║
-╟──────────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                   │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                                                                                              ║
-╟──────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Sort.js: Sort.js         │ 10 / 10   │ 0 / 0  │ 4 / 4    │ 2 / 5      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js               ║
-╟──────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ HeapSort.js: HeapSort.js │ 15 / 15   │ 2 / 2  │ 2 / 2    │ 2 / 5      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js ║
-╟──────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                  │ 100 %     │ 100 %  │ 100 %    │ 40 %       │                                                                                                                                                                                                                   ║
-╚══════════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                               Coverage                                                                                                                                               ║
+╟──────────────────────────┬───────────┬────────┬─────────────────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                   │ Statement │ Branch │ Function            │ Objectives │ File                                                                                                                                                                                                              ║
+╟──────────────────────────┼───────────┼────────┼─────────────────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Sort.js: Sort.js         │ 10 / 10   │ 0 / 0  │ 3 / 4               │ 2 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/Sort.js               ║
+╟──────────────────────────┼───────────┼────────┼─────────────────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ HeapSort.js: HeapSort.js │ 5 / 15    │ 0 / 2  │ 1 / 2               │ 2 / 5      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-264/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js ║
+╟──────────────────────────┼───────────┼────────┼─────────────────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                  │ 60 %      │ 0 %    │ 66.66666666666666 % │ 40 %       │                                                                                                                                                                                                                   ║
+╚══════════════════════════╧═══════════╧════════╧═════════════════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -1143,15 +1059,15 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js: Trie.js #8
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:6:15:::110:1:::130:2634
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:7:2:::9:3:::145:210
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:15:2:::25:3:::272:606
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:31:2:::64:3:::668:1684
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:32:10:::58:5:::697:1573
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:70:2:::78:3:::1750:1939
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:86:2:::90:3:::2053:2198
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:96:2:::109:3:::2264:2632
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js: Trie.js #8
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:6:15:::110:1:::130:2634
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:7:2:::9:3:::145:210
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:15:2:::25:3:::272:606
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:31:2:::64:3:::668:1684
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:32:10:::58:5:::697:1573
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:70:2:::78:3:::1750:1939
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:86:2:::90:3:::2053:2198
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js:96:2:::109:3:::2264:2632
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                    SELECTION SETTINGS                                                                                                                                                    ║
@@ -1194,7 +1110,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1280,25 +1196,15 @@ Resolving Types
 ╚══════════╧═══════╝
 
 circular detected
+circular detected
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.039, went from 10 to 10 test cases
-De-Duplication done took: 0.005, went from 10 to 9 test cases
-archive size 9
+Splitting done took: 0.946, went from 4 to 11 test cases
+De-Duplication done took: 0, went from 11 to 3 test cases
+archive size 3
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -1312,13 +1218,13 @@ Decode
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                     Coverage                                                                                                                                     ║
-╟──────────────────┬─────────────────────┬─────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target           │ Statement           │ Branch  │ Function │ Objectives │ File                                                                                                                                                                                                  ║
-╟──────────────────┼─────────────────────┼─────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Trie.js: Trie.js │ 49 / 60             │ 11 / 16 │ 7 / 7    │ 3 / 3      │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js ║
-╟──────────────────┼─────────────────────┼─────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average          │ 81.66666666666667 % │ 68.75 % │ 100 %    │ 100 %      │                                                                                                                                                                                                       ║
-╚══════════════════╧═════════════════════╧═════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╟──────────────────┬───────────┬────────┬─────────────────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target           │ Statement │ Branch │ Function            │ Objectives │ File                                                                                                                                                                                                  ║
+╟──────────────────┼───────────┼────────┼─────────────────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Trie.js: Trie.js │ 30 / 60   │ 6 / 16 │ 6 / 7               │ 3 / 3      │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-265/javascript-algorithms/src/data-structures/trie/Trie.js ║
+╟──────────────────┼───────────┼────────┼─────────────────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average          │ 50 %      │ 37.5 % │ 85.71428571428571 % │ 100 %      │                                                                                                                                                                                                       ║
+╚══════════════════╧═══════════╧════════╧═════════════════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 
@@ -1327,31 +1233,31 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js: BinarySearchTreeNode.js #7
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:4:15:::151:1:::127:4058
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:9:2:::15:3:::311:569
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:21:2:::53:3:::643:1401
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:59:2:::76:3:::1475:1919
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:82:2:::84:3:::1980:2032
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:90:2:::139:3:::2093:3909
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:144:2:::150:3:::3961:4056
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js: BinarySearchTree.js #6
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:3:15:::44:1:::75:832
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:7:2:::12:3:::164:378
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:18:2:::20:3:::452:507
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:26:2:::28:3:::568:627
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:34:2:::36:3:::688:743
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:41:2:::43:3:::781:830
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js: BinarySearchTreeNode.js #7
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:4:15:::151:1:::127:4058
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:9:2:::15:3:::311:569
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:21:2:::53:3:::643:1401
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:59:2:::76:3:::1475:1919
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:82:2:::84:3:::1980:2032
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:90:2:::139:3:::2093:3909
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js:144:2:::150:3:::3961:4056
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js: BinarySearchTree.js #6
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:3:15:::44:1:::75:832
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:7:2:::12:3:::164:378
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:18:2:::20:3:::452:507
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:26:2:::28:3:::568:627
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:34:2:::36:3:::688:743
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js:41:2:::43:3:::781:830
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                        SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                         ║
@@ -1394,7 +1300,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1479,6 +1385,12 @@ Resolving Types
 ║ function │ 9     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
+circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1503,41 +1415,15 @@ Resolving Types
 ║ function │ 5     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
-circular detected
-circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.375, went from 26 to 39 test cases
-De-Duplication done took: 0.026, went from 39 to 23 test cases
-archive size 8
-archive size 10
+Splitting done took: 5.878, went from 13 to 115 test cases
+De-Duplication done took: 0.004, went from 115 to 12 test cases
+archive size 4
 archive size 5
+archive size 3
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -1566,22 +1452,23 @@ Run Final Suite 2
 Decode
 Decode
 Decode
+Test case has failed!
 
  SEARCH RESULTS 
 
-╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                                                                 Coverage                                                                                                                                                                                  ║
-╟──────────────────────────────────────────────────┬─────────────────────┬──────────────────────┬──────────┬─────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                                           │ Statement           │ Branch               │ Function │ Objectives          │ File                                                                                                                                                                                                                                     ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Comparator.js: Comparator.js                     │ 15 / 16             │ 4 / 4                │ 8 / 9    │ 5 / 5               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js                                  ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ BinarySearchTreeNode.js: BinarySearchTreeNode.js │ 50 / 72             │ 19 / 34              │ 6 / 6    │ 4 / 5               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ BinarySearchTree.js: BinarySearchTree.js         │ 6 / 6               │ 0 / 0                │ 5 / 5    │ 5 / 5               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js     ║
-╟──────────────────────────────────────────────────┼─────────────────────┼──────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                                          │ 75.53191489361703 % │ 60.526315789473685 % │ 95 %     │ 93.33333333333333 % │                                                                                                                                                                                                                                          ║
-╚══════════════════════════════════════════════════╧═════════════════════╧══════════════════════╧══════════╧═════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                                                 Coverage                                                                                                                                                                                 ║
+╟──────────────────────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬─────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                                           │ Statement           │ Branch              │ Function │ Objectives          │ File                                                                                                                                                                                                                                     ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Comparator.js: Comparator.js                     │ 13 / 16             │ 3 / 4               │ 6 / 9    │ 4 / 5               │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/utils/comparator/Comparator.js                                  ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ BinarySearchTreeNode.js: BinarySearchTreeNode.js │ 38 / 72             │ 13 / 34             │ 5 / 6    │ 5 / 5               │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTreeNode.js ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ BinarySearchTree.js: BinarySearchTree.js         │ 5 / 6               │ 0 / 0               │ 4 / 5    │ 5 / 5               │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-266/javascript-algorithms/src/data-structures/tree/binary-search-tree/BinarySearchTree.js     ║
+╟──────────────────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼─────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                                          │ 59.57446808510638 % │ 42.10526315789473 % │ 75 %     │ 93.33333333333333 % │                                                                                                                                                                                                                                          ║
+╚══════════════════════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧═════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -1592,16 +1479,16 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js: SegmentTree.js #9
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:3:15:::168:1:::98:5338
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:9:2:::18:3:::334:650
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:24:2:::43:3:::724:1596
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:48:2:::53:3:::1637:1825
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:62:2:::85:3:::1986:3160
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:94:2:::106:3:::3351:3641
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:118:2:::149:3:::4094:5006
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:156:2:::158:3:::5100:5170
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:165:2:::167:3:::5265:5336
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js: SegmentTree.js #9
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:3:15:::168:1:::98:5338
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:9:2:::18:3:::334:650
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:24:2:::43:3:::724:1596
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:48:2:::53:3:::1637:1825
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:62:2:::85:3:::1986:3160
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:94:2:::106:3:::3351:3641
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:118:2:::149:3:::4094:5006
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:156:2:::158:3:::5100:5170
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js:165:2:::167:3:::5265:5336
 
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ║
@@ -1644,7 +1531,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1729,26 +1616,13 @@ Resolving Types
 ║ function │ 8     ║
 ╚══════════╧═══════╝
 
-circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.078, went from 8 to 10 test cases
-De-Duplication done took: 0.008, went from 10 to 8 test cases
-archive size 8
+Splitting done took: 0.304, went from 3 to 11 test cases
+De-Duplication done took: 0.002, went from 11 to 2 test cases
+archive size 2
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -1758,15 +1632,15 @@ Decode
 
  SEARCH RESULTS 
 
-╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                                Coverage                                                                                                                                                 ║
-╟────────────────────────────────┬───────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                         │ Statement │ Branch │ Function │ Objectives │ File                                                                                                                                                                                                                      ║
-╟────────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ SegmentTree.js: SegmentTree.js │ 57 / 57   │ 8 / 8  │ 8 / 8    │ 10 / 10    │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js ║
-╟────────────────────────────────┼───────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                        │ 100 %     │ 100 %  │ 100 %    │ 100 %      │                                                                                                                                                                                                                           ║
-╚════════════════════════════════╧═══════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                                     Coverage                                                                                                                                                     ║
+╟────────────────────────────────┬────────────────────┬────────┬──────────┬────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                         │ Statement          │ Branch │ Function │ Objectives │ File                                                                                                                                                                                                                      ║
+╟────────────────────────────────┼────────────────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ SegmentTree.js: SegmentTree.js │ 36 / 57            │ 3 / 8  │ 6 / 8    │ 10 / 10    │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-267/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js ║
+╟────────────────────────────────┼────────────────────┼────────┼──────────┼────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                        │ 63.1578947368421 % │ 37.5 % │ 75 %     │ 100 %      │                                                                                                                                                                                                                           ║
+╚════════════════════════════════╧════════════════════╧════════╧══════════╧════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 
@@ -1775,35 +1649,35 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #14
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:3:15:::195:1:::76:7106
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:8:2:::12:3:::183:333
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:14:2:::28:3:::337:711
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:20:23:::26:7:::517:673
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:30:2:::44:3:::715:1084
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:36:23:::42:7:::894:1046
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:46:2:::60:3:::1088:1527
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:52:23:::58:7:::1281:1489
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:64:2:::151:3:::1598:5584
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:155:2:::180:3:::5649:6744
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:182:2:::187:3:::6748:6923
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:184:37:::186:5:::6840:6914
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:189:2:::194:3:::6927:7104
-    - function /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:191:37:::193:5:::7020:7095
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
-  - /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #3
-    - class /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:3:15:::60:1:::44:2011
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:4:2:::24:3:::77:831
-    - method /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:26:2:::59:3:::835:2009
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js: Knapsack.js #14
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:3:15:::195:1:::76:7106
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:8:2:::12:3:::183:333
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:14:2:::28:3:::337:711
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:20:23:::26:7:::517:673
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:30:2:::44:3:::715:1084
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:36:23:::42:7:::894:1046
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:46:2:::60:3:::1088:1527
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:52:23:::58:7:::1281:1489
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:64:2:::151:3:::1598:5584
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:155:2:::180:3:::5649:6744
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:182:2:::187:3:::6748:6923
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:184:37:::186:5:::6840:6914
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:189:2:::194:3:::6927:7104
+    - function /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js:191:37:::193:5:::7020:7095
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js: Comparator.js #9
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:1:15:::82:1:::15:1747
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:7:2:::9:3:::213:320
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:17:2:::23:3:::514:624
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:31:2:::33:3:::739:793
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:41:2:::43:3:::914:969
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:51:2:::53:3:::1093:1151
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:61:2:::63:3:::1284:1363
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:71:2:::73:3:::1499:1584
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js:78:2:::81:3:::1636:1745
+  - /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js: MergeSort.js #3
+    - class /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:3:15:::60:1:::44:2011
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:4:2:::24:3:::77:831
+    - method /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js:26:2:::59:3:::835:2009
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ║
@@ -1846,7 +1720,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.21678458482017499               ║
+║ Seed                      │ 0.8520462856425804                ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1943,7 +1817,6 @@ Resolving Types
 ║ function │ 9     ║
 ╚══════════╧═══════╝
 
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -1956,25 +1829,17 @@ circular detected
 ║ function │ 2     ║
 ╚══════════╧═══════╝
 
+circular detected
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.182, went from 25 to 63 test cases
-De-Duplication done took: 0.025, went from 63 to 17 test cases
-archive size 7
-archive size 5
+Splitting done took: 21.605, went from 13 to 541 test cases
+De-Duplication done took: 0.023, went from 541 to 12 test cases
+archive size 3
+archive size 4
 archive size 5
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -2011,13 +1876,13 @@ Decode
 ╟──────────────────────────────┬─────────────────────┬─────────┬──────────┬─────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                       │ Statement           │ Branch  │ Function │ Objectives          │ File                                                                                                                                                                                                                  ║
 ╟──────────────────────────────┼─────────────────────┼─────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Comparator.js: Comparator.js │ 15 / 16             │ 4 / 4   │ 8 / 9    │ 4 / 7               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js               ║
+║ Comparator.js: Comparator.js │ 11 / 16             │ 4 / 4   │ 6 / 9    │ 6 / 7               │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/utils/comparator/Comparator.js               ║
 ╟──────────────────────────────┼─────────────────────┼─────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ MergeSort.js: MergeSort.js   │ 35 / 35             │ 6 / 6   │ 2 / 2    │ 4 / 7               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js   ║
+║ MergeSort.js: MergeSort.js   │ 35 / 35             │ 6 / 6   │ 2 / 2    │ 6 / 7               │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js   ║
 ╟──────────────────────────────┼─────────────────────┼─────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Knapsack.js: Knapsack.js     │ 101 / 128           │ 23 / 40 │ 13 / 14  │ 6 / 7               │ /local/tmp/oliverphil/4256713.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js ║
+║ Knapsack.js: Knapsack.js     │ 57 / 128            │ 12 / 40 │ 8 / 14   │ 6 / 7               │ /local/tmp/oliverphil/4261747.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/javascript-algorithms/javascript-algorithms-268/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js ║
 ╟──────────────────────────────┼─────────────────────┼─────────┼──────────┼─────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                      │ 84.35754189944134 % │ 66 %    │ 92 %     │ 66.66666666666666 % │                                                                                                                                                                                                                       ║
+║ Average                      │ 57.54189944134078 % │ 44 %    │ 64 %     │ 85.71428571428571 % │                                                                                                                                                                                                                       ║
 ╚══════════════════════════════╧═════════════════════╧═════════╧══════════╧═════════════════════╧═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
