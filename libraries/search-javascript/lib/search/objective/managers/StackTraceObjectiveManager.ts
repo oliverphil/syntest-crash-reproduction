@@ -59,6 +59,10 @@ export class StackTraceObjectiveManager<
         // Add objective to the covered objectives
         this._coveredObjectives.add(objectiveFunction);
 
+        if (this._uncoveredObjectives.size === 0) {
+            this._currentObjectives.clear();
+        }
+
         return [];
     }
 

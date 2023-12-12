@@ -180,7 +180,7 @@ export function someCallHierarchyWithoutCrash(executionResult: JavaScriptExecuti
     if (!executionResult.getError()) {
         const traces = executionResult.getTraces().filter(trace => {
             for (const frame of stackTrace.trace) {
-                if (trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0) {
+                if (trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace?.hits > 0) {
                     return true;
                 }
             }
@@ -203,7 +203,7 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
             .filter(s => !s.file.includes('tempTest.spec.js')
                 && !s.file.includes('node:internal')
             )[actualStack.trace.length - 1];
-        if (actualFrame.file === frame.file && actualFrame.lineNumber === frame.lineNumber) {
+        if (actualFrame?.file === frame?.file && actualFrame.lineNumber === frame.lineNumber) {
             return 0;
         }
     }
@@ -211,7 +211,7 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace.hits > 0
+            return trace.location.start.line === frame?.lineNumber && trace.path.includes(frame?.file) && trace?.hits > 0
         });
 
     if (traces.length >= 1) {
@@ -230,7 +230,7 @@ export function executedFunctionsNoCrash(executionResult: JavaScriptExecutionRes
         const trace = traces.find(trace => reverseIncludes(trace.path, frame.file)
             && trace.type === 'statement'
             && trace.location.start.line === frame.lineNumber);
-        if (trace.hits > 0) coveredFrames += 1;
+        if (trace?.hits > 0) coveredFrames += 1;
     }
     return coveredFrames / numFrames;
 }
@@ -245,7 +245,7 @@ export function stackLinesMatchFuzzy(executionResult: JavaScriptExecutionResult,
             && trace.type === 'statement'
             && trace.location.start.line >= frame.lineNumber - tolerance
             && trace.location.start.line <= frame.lineNumber + tolerance);
-        if (trace.hits > 0) coveredFrames += 1;
+        if (trace?.hits > 0) coveredFrames += 1;
     }
     return coveredFrames / numFrames;
 }
@@ -259,7 +259,7 @@ export function executeLinesNearStackTrace(executionResult: JavaScriptExecutionR
             && trace.type === 'statement'
             && trace.location.start.line >= frame.lineNumber - tolerance
             && trace.location.start.line <= frame.lineNumber + tolerance);
-        if (trace.hits > 0) coveredFrames += 1;
+        if (trace?.hits > 0) coveredFrames += 1;
     }
     return coveredFrames > 0 ? 1 : 0;
 }
@@ -307,11 +307,11 @@ export function calledNFunctionsFromStackTrace(executionResult: JavaScriptExecut
 export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExecutionResult, stackFrame: StackFrame, N: number): number {
     const traces = executionResult.getTraces();
     const functions = traces.filter(trace => trace.type === 'function'
-        && reverseIncludes(trace.path, stackFrame.file));
+        && reverseIncludes(trace.path, stackFrame?.file));
     const function_ = functions.find(f => f.location.start.line <= stackFrame.lineNumber && f.location.end.line >= stackFrame.lineNumber);
     if (!function_) return 1;
     const statements = traces.filter(trace => trace.type === 'statement'
-        && reverseIncludes(trace.path, stackFrame.file)
+        && reverseIncludes(trace.path, stackFrame?.file)
         && trace.location.start.line >= function_.location.start.line
         && trace.location.start.line < stackFrame.lineNumber);
     let numberStatementsHit = 0;
@@ -322,6 +322,7 @@ export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExec
 }
 
 export function stackMatchWrongCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult.hasError()) return 1;
     const actualStack = executionResult.getStackTrace();
     const stackMatch = stackTraceDistance(actualStack.trace, stackTrace.trace);
     const error = checkExceptionsMatch(executionResult, stackTrace.error);
@@ -332,7 +333,7 @@ function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTr
     if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
     const expectedFunction = stackTrace.trace[0].method;
-    if (reverseIncludes(actualStackTrace[0].method, expectedFunction)) {
+    if (reverseIncludes(actualStackTrace[0]?.method, expectedFunction)) {
         return 0;
     }
     return 1;
@@ -374,7 +375,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
     const traces = executionResult
         .getTraces()
         .filter(trace => {
-            return trace.location.start.line === frame.lineNumber && trace.path.includes(frame.file) && trace.hits > 0
+            return trace.location.start.line === frame.lineNumber && trace.path.includes(frame.file) && trace?.hits > 0
         });
 
     if (traces.length >= 1) {
@@ -479,7 +480,7 @@ export function checkTraceLinesCovered(executionResult: JavaScriptExecutionResul
             .filter(trace => {
                 return trace.location.start.line === frame.lineNumber &&
                     trace.path.includes(frame.file) &&
-                    trace.hits > 0
+                    trace?.hits > 0
             });
 
         if (traces.length >= 1) {

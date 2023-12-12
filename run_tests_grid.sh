@@ -29,6 +29,12 @@ else
         echo "Exiting"
         exit 1
 fi
+if [ -d /home/oliverphil ]; then
+        ls /home/oliverphil
+else
+        echo "No home directory"
+        exit 1
+fi
 #
 # Now we are in the job-specific directory so now can do something useful
 #

@@ -59,52 +59,52 @@ export class CrashSubject extends JavaScriptSubject {
 
     protected _extractObjectives(objectives, arguments_): void {
         let numObjectives = 0;
-        // if (arguments_ && arguments_.combination) {
-        //     const functions = arguments_.functions;
-        //     const resultObjectives = createObjectives(
-        //         functions,
-        //         this.stackTrace,
-        //         this.controlFlowProgram,
-        //         this.approachLevelCalculator,
-        //         this.branchDistanceCalculator
-        //     );
-        //     objectives.push(...resultObjectives);
-        //     numObjectives += resultObjectives.length;
-        // } else if (arguments_) {
-        //     objectives.push(createObjective(
-        //         arguments_.function,
-        //         this.stackTrace,
-        //         this.controlFlowProgram,
-        //         this.approachLevelCalculator,
-        //         this.branchDistanceCalculator
-        //     ));
-        //     numObjectives += 1;
-        // }
-        objectives = [];
-        if (this.stackTrace) {
-            // objectives.push(new CrashFitnessFunction1(
-            //     `stack-test`,
-            //     this.stackTrace
-            // ));
-            objectives.push(new StackErrorObjectiveFunction(
-                `stack-error`,
-                this.stackTrace
+        if (arguments_ && arguments_.combination) {
+            const functions = arguments_.functions;
+            const resultObjectives = createObjectives(
+                functions,
+                this.stackTrace,
+                this.controlFlowProgram,
+                this.approachLevelCalculator,
+                this.branchDistanceCalculator
+            );
+            objectives.push(...resultObjectives);
+            numObjectives += resultObjectives.length;
+        } else if (arguments_) {
+            objectives.push(createObjective(
+                arguments_.function,
+                this.stackTrace,
+                this.controlFlowProgram,
+                this.approachLevelCalculator,
+                this.branchDistanceCalculator
             ));
             numObjectives += 1;
-            for (const frame of this.stackTrace.trace) {
-                numObjectives += 1;
-                objectives.push(
-                    new StackFrameObjectiveFunction(
-                        `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-                        this.controlFlowProgram,
-                        undefined,
-                        this.approachLevelCalculator,
-                        this.branchDistanceCalculator,
-                        frame
-                    )
-                );
-            }
-        };
+        }
+        // objectives = [];
+        // if (this.stackTrace) {
+        //     // objectives.push(new CrashFitnessFunction1(
+        //     //     `stack-test`,
+        //     //     this.stackTrace
+        //     // ));
+        //     objectives.push(new StackErrorObjectiveFunction(
+        //         `stack-error`,
+        //         this.stackTrace
+        //     ));
+        //     numObjectives += 1;
+        //     for (const frame of this.stackTrace.trace) {
+        //         numObjectives += 1;
+        //         objectives.push(
+        //             new StackFrameObjectiveFunction(
+        //                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
+        //                 this.controlFlowProgram,
+        //                 undefined,
+        //                 this.approachLevelCalculator,
+        //                 this.branchDistanceCalculator,
+        //                 frame
+        //             )
+        //         );
+        //     }
+        // };
 
         // for (const cff of this.controlFlowProgram.functions) {
         //     const paths = this.extractPathsFromFunction(cff);
