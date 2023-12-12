@@ -1,5 +1,7 @@
 import largeExperimentConfig from './largeExperimentConfig.json' assert { type: "json" };
 import {writeFileSync} from "fs";
+import fs from "fs";
+import {execSync} from "child_process";
 
 const fitnessConfigs = [];
 
@@ -20,7 +22,7 @@ for (const fitness of largeExperimentConfig.stackTraceUtils) {
 
 console.log(fitnessConfigs.length);
 
-const withCombinations = new Set(fitnessConfigs);
+let withCombinations = new Set(fitnessConfigs);
 for (const item of fitnessConfigs.flatMap((v, i) => fitnessConfigs.slice(i + 1)
     .map((w => {
         return {
@@ -41,6 +43,7 @@ for (const item of fitnessConfigs.flatMap((v, i) => fitnessConfigs.slice(i + 1)
     })) {
     withCombinations.add(item);
 }
+withCombinations = [...withCombinations];
 
 // const configsToRun = [];
 // for (const coverage of largeExperimentConfig.useCoverage) {
@@ -63,3 +66,13 @@ console.log("Seconds: ", time);
 console.log("Minutes: ", time / 60);
 console.log("Hours: ", time / 60 / 60);
 console.log("Days: ", time / 60 / 60 / 24);
+
+withCombinations.forEach((config, index) => {
+    const syntestFile = {
+        ...JSON.parse(fs.readFileSync('.syntest.json').toString()),
+        ...config
+    };
+    writeFileSync(`.syntest-${index}.json`, JSON.stringify(syntestFile, undefined, 4));
+});
+
+execSync(`./queue_experiment.sh 1 ${withCombinations.size}`)
