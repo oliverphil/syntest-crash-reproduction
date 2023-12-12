@@ -507,7 +507,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         const archive = await this.testTarget(this.rootContext, target);
         this.archives.set(target, archive);
       } catch (error) {
-        //
+        console.log(error);
       }
     }
     CrashLauncher.LOGGER.info("Processing done");
@@ -896,7 +896,8 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         new BranchDistanceCalculator(
             this.arguments_.syntaxForgiving,
             this.arguments_.stringAlphabet
-        )
+        ),
+        this.arguments_
       );
 
     this.currentSubject = currentSubject;

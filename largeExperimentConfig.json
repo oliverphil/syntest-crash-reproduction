@@ -1,0 +1,174 @@
+{
+  "CRASHES_PER_RUN": 20,
+  "TIME_PER_CRASH": 600,
+  "TIME_TOLERANCE": 3600,
+  "TIME_DELAY": 10800,
+  "useCoverage": [true, false],
+  "stackTraceUtils": [
+    {
+      "functionName": "checkExceptionsMatch",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackError"
+      ]
+    },
+    {
+      "functionName": "evoCrash",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaised",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackError"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedOnRightLine",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionRaisedOnRightLine",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedInRightFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionRaisedInRightFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionInNeighbouringFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionInNeighbouringFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedInWrongFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "reachedLineOfExceptionWithoutCrashing",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionPartialStackTraceMatch",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "someCallHierarchyWithoutCrash",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "reachedLineOfStackTraceEntry",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "executedFunctionsNoCrash",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "stackLinesMatchFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "executeLinesNearStackTrace",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "enteredBranchInStackTrace",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "enteredCloseBranch",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "calledNFunctionsFromStackTrace",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace",
+        "number"
+      ],
+      "range": [5, 5]
+    },
+    {
+      "functionName": "executeNLinesPriorWithinFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackFrame",
+        "number"
+      ],
+      "range": [5, 5]
+    },
+    {
+      "functionName": "stackMatchWrongCrash",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "checkExceptionLineCovered",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    }
+  ]
+}

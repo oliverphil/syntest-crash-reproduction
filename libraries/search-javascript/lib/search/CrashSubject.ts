@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 import {RootContext, SubTarget, Target} from "@syntest/analysis-javascript";
-import {StackTrace} from "@syntest/crash-reproduction-setup";
+import {ExperimentConfig, StackTrace} from "@syntest/crash-reproduction-setup";
 import {prng} from "@syntest/prng";
 
 import {JavaScriptSubject} from "./JavaScriptSubject";
@@ -32,12 +32,14 @@ import {TargetType} from "@syntest/analysis";
 import {ControlFlowProgram, ControlFlowFunction, EdgeType} from "@syntest/cfg";
 import {BranchDistanceCalculator} from "../criterion/BranchDistance";
 import CrashFitnessFunction1 from "./objective/CrashFitnessFunction1";
+import {createObjective, createObjectives} from "./utils/StackTraceUtils";
 
 export class CrashSubject extends JavaScriptSubject {
     constructor(target: Target, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[],
         controlFlowProgram: ControlFlowProgram,
         approachLevelCalculator: ApproachLevelCalculator,
-        branchDistanceCalculator: BranchDistanceCalculator
+        branchDistanceCalculator: BranchDistanceCalculator,
+        arguments_
     ) {
         super(target, objectives);
         this.stackTrace = stackTrace;
@@ -45,7 +47,7 @@ export class CrashSubject extends JavaScriptSubject {
         this.controlFlowProgram = controlFlowProgram;
         this.approachLevelCalculator = approachLevelCalculator;
         this.branchDistanceCalculator = branchDistanceCalculator;
-        this._extractObjectives(objectives);
+        this._extractObjectives(objectives, arguments_);
     }
 
     private controlFlowProgram: ControlFlowProgram;
@@ -55,48 +57,70 @@ export class CrashSubject extends JavaScriptSubject {
     private stackTrace: StackTrace;
     public numStackObjectives: number;
 
-    protected _extractObjectives(objectives): void {
+    protected _extractObjectives(objectives, arguments_): void {
         let numObjectives = 0;
-        // if (this.stackTrace) {
-        //     // objectives.push(new CrashFitnessFunction1(
-        //     //     `stack-test`,
-        //     //     this.stackTrace
-        //     // ));
-        //     objectives.push(new StackErrorObjectiveFunction(
-        //         `stack-error`,
-        //         this.stackTrace
+        // if (arguments_ && arguments_.combination) {
+        //     const functions = arguments_.functions;
+        //     const resultObjectives = createObjectives(
+        //         functions,
+        //         this.stackTrace,
+        //         this.controlFlowProgram,
+        //         this.approachLevelCalculator,
+        //         this.branchDistanceCalculator
+        //     );
+        //     objectives.push(...resultObjectives);
+        //     numObjectives += resultObjectives.length;
+        // } else if (arguments_) {
+        //     objectives.push(createObjective(
+        //         arguments_.function,
+        //         this.stackTrace,
+        //         this.controlFlowProgram,
+        //         this.approachLevelCalculator,
+        //         this.branchDistanceCalculator
         //     ));
         //     numObjectives += 1;
-        //     for (const frame of this.stackTrace.trace) {
-        //         numObjectives += 1;
-        //         objectives.push(
-        //             new StackFrameObjectiveFunction(
-        //                 `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
-        //                 this.controlFlowProgram,
-        //                 undefined,
-        //                 this.approachLevelCalculator,
-        //                 this.branchDistanceCalculator,
-        //                 frame
-        //             )
-        //         );
-        //     }
-        // };
-
-        for (const cff of this.controlFlowProgram.functions) {
-            const paths = this.extractPathsFromFunction(cff);
-            for (const path of paths) {
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+        // }
+        objectives = [];
+        if (this.stackTrace) {
+            // objectives.push(new CrashFitnessFunction1(
+            //     `stack-test`,
+            //     this.stackTrace
+            // ));
+            objectives.push(new StackErrorObjectiveFunction(
+                `stack-error`,
+                this.stackTrace
+            ));
+            numObjectives += 1;
+            for (const frame of this.stackTrace.trace) {
+                numObjectives += 1;
                 objectives.push(
-                    new PathObjectiveFunction(
-                        prng.uniqueId(),
+                    new StackFrameObjectiveFunction(
+                        `stack-frame.${frame.file}:${frame.lineNumber}:${frame.charNumber}`,
                         this.controlFlowProgram,
-                        path,
+                        undefined,
                         this.approachLevelCalculator,
-                        this.branchDistanceCalculator
+                        this.branchDistanceCalculator,
+                        frame
                     )
                 );
             }
-        }
+        };
+
+        // for (const cff of this.controlFlowProgram.functions) {
+        //     const paths = this.extractPathsFromFunction(cff);
+        //     for (const path of paths) {
+        //         // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+        //         objectives.push(
+        //             new PathObjectiveFunction(
+        //                 prng.uniqueId(),
+        //                 this.controlFlowProgram,
+        //                 path,
+        //                 this.approachLevelCalculator,
+        //                 this.branchDistanceCalculator
+        //             )
+        //         );
+        //     }
+        // }
         this.numStackObjectives = numObjectives;
         this._objectives = objectives;
     }

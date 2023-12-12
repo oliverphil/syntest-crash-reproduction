@@ -65,5 +65,29 @@
     "syntest-type": "secbench",
     "syntest-crash": [
         "access-policy_3.1.0"
+    ],
+    "combination": true,
+    "function": {
+        "functionName": "checkExceptionsMatch",
+        "arguments": [
+            "JavaScriptExecutionResult",
+            "StackError"
+        ]
+    },
+    "functions": [
+        {
+            "functionName": "checkExceptionsMatch",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackError"
+            ]
+        },
+        {
+            "functionName": "evoCrash",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        }
     ]
 }

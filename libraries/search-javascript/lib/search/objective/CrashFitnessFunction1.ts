@@ -6,7 +6,7 @@ import {
 } from "@syntest/search";
 import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
 import {SearchSubject} from "@syntest/search";
-import {StackFrame, StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
+import {ExperimentConfig, StackFrame, StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
 import {ControlFlowProgram} from "@syntest/cfg";
 import {
@@ -14,17 +14,36 @@ import {
     rightExceptionRaisedOnRightLine,
     wrongExceptionInNeighbouringFunction
 } from "../utils/StackTraceUtils";
+import { ControlFlowBasedObjectiveFunction } from "@syntest/search/dist/lib/objective/ControlFlowBasedObjectiveFunction";
 
 
-class CrashFitnessFunction1 extends ObjectiveFunction<JavaScriptTestCase> {
+class CrashFitnessFunction1 extends PathObjectiveFunction<JavaScriptTestCase> {
     protected stackTrace: StackTrace;
+    protected function_: () => number;
+    protected arguments: [];
+    protected N: number | undefined;
 
     constructor(
         id: string,
-        stackTrace: StackTrace
+        controlFlowProgram: ControlFlowProgram,
+        approachLevelCalculator: ApproachLevelCalculator,
+        branchDistanceCalculator: BranchDistanceCalculator,
+        stackTrace: StackTrace,
+        function_,
+        arguments_: [],
+        N: number | undefined
     ) {
-        super(id);
+        super(
+            id,
+            controlFlowProgram,
+            undefined,
+            approachLevelCalculator,
+            branchDistanceCalculator);
         this.stackTrace = stackTrace;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        this.function_ = function_;
+        this.arguments = arguments_;
+        this.N = N;
     }
 
     /**
@@ -32,7 +51,30 @@ class CrashFitnessFunction1 extends ObjectiveFunction<JavaScriptTestCase> {
      * @param encoding
      */
     override calculateDistance(encoding: JavaScriptTestCase): number {
-        return wrongExceptionInNeighbouringFunction(<JavaScriptExecutionResult>encoding.getExecutionResult(), this.stackTrace);
+        const arguments_ = [];
+        for (const argument of this.arguments) {
+            switch (argument) {
+                case 'JavaScriptExecutionResult': {
+                    arguments_.push(encoding.getExecutionResult());
+                    break;
+                }
+                case 'StackTrace': {
+                    arguments_.push(this.stackTrace);
+                    break;
+                }
+                case 'StackError': {
+                    arguments_.push(this.stackTrace.error);
+                    break;
+                }
+                case 'number': {
+                    arguments_.push(this.N);
+                    break;
+                }
+            }
+        }
+        // @ts-ignore
+        return this.function_(...arguments_);
+        // return wrongExceptionInNeighbouringFunction(<JavaScriptExecutionResult>encoding.getExecutionResult(), this.stackTrace);
     }
 
     // override getIdentifier(): string {

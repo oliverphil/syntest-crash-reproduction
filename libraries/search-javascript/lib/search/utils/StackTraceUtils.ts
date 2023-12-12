@@ -17,6 +17,82 @@
  */
 import {StackError, StackFrame, StackTrace, StackTraceProcessor} from "@syntest/crash-reproduction-setup";
 import {JavaScriptExecutionResult} from "../JavaScriptExecutionResult";
+import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
+import {ApproachLevelCalculator, BranchDistanceCalculator, ObjectiveFunction} from "@syntest/search";
+import CrashFitnessFunction1 from "../objective/CrashFitnessFunction1";
+import { ControlFlowProgram } from "@syntest/cfg";
+
+export function createObjectives(
+    functions,
+    stackTrace: StackTrace,
+    controlFlowProgram: ControlFlowProgram,
+    approachLevelCalculator: ApproachLevelCalculator,
+    branchDistanceCalculator: BranchDistanceCalculator
+): ObjectiveFunction<JavaScriptTestCase>[] {
+    const objectives: ObjectiveFunction<JavaScriptTestCase>[] = [];
+    for (const function_ of functions) {
+        const name = function_.functionName;
+        const functionHandle = funcs[name];
+        objectives.push(new CrashFitnessFunction1(
+            `stack-${name}`,
+            controlFlowProgram,
+            approachLevelCalculator,
+            branchDistanceCalculator,
+            stackTrace,
+            functionHandle,
+            function_.arguments,
+            function_.N
+        ));
+    }
+    return objectives;
+}
+
+export function createObjective(
+    function_,
+    stackTrace: StackTrace,
+    controlFlowProgram: ControlFlowProgram,
+    approachLevelCalculator: ApproachLevelCalculator,
+    branchDistanceCalculator: BranchDistanceCalculator
+): ObjectiveFunction<JavaScriptTestCase> {
+    const name = function_.functionName;
+    const functionHandle = funcs[name];
+    return new CrashFitnessFunction1(
+        `stack-${name}`,
+        controlFlowProgram,
+        approachLevelCalculator,
+        branchDistanceCalculator,
+        stackTrace,
+        functionHandle,
+        function_.arguments,
+        function_.N
+    );
+}
+
+var funcs = {
+    checkExceptionsMatch: (a, b) => checkExceptionsMatch(a, b),
+    evoCrash: (a, b) => evoCrash(a, b),
+    rightExceptionRaised: (a, b) => rightExceptionRaised(a, b),
+    rightExceptionRaisedOnRightLine: (a, b) => rightExceptionRaisedOnRightLine(a, b),
+    wrongExceptionRaisedOnRightLine: (a, b) => wrongExceptionRaisedOnRightLine(a, b),
+    rightExceptionRaisedInRightFunction: (a, b) => rightExceptionRaisedInRightFunction(a, b),
+    wrongExceptionRaisedInRightFunction: (a, b) => wrongExceptionRaisedInRightFunction(a, b),
+    wrongExceptionInNeighbouringFunction: (a, b) => wrongExceptionInNeighbouringFunction(a, b),
+    rightExceptionRaisedInWrongFunction: (a, b) => rightExceptionRaisedInWrongFunction(a, b),
+    rightExceptionInNeighbouringFunction: (a, b) => rightExceptionInNeighbouringFunction(a, b),
+    reachedLineOfExceptionWithoutCrashing: (a, b) => reachedLineOfExceptionWithoutCrashing(a, b),
+    wrongExceptionPartialStackTraceMatch: (a, b) => wrongExceptionPartialStackTraceMatch(a, b),
+    someCallHierarchyWithoutCrash: (a, b) => someCallHierarchyWithoutCrash(a, b),
+    reachedLineOfStackTraceEntry: (a, b) => reachedLineOfStackTraceEntry(a, b),
+    executedFunctionsNoCrash: (a, b) => executedFunctionsNoCrash(a, b),
+    stackLinesMatchFuzzy: (a, b) => stackLinesMatchFuzzy(a, b),
+    executeLinesNearStackTrace: (a, b) => executeLinesNearStackTrace(a, b),
+    enteredBranchInStackTrace: (a, b) => enteredBranchInStackTrace(a, b),
+    enteredCloseBranch: (a, b) => enteredCloseBranch(a, b),
+    calledNFunctionsFromStackTrace: (a, b, c) => calledNFunctionsFromStackTrace(a, b, c),
+    executeNLinesPriorWithinFunction: (a, b, c) => executeNLinesPriorWithinFunction(a, b, c),
+    stackMatchWrongCrash: (a, b) => stackMatchWrongCrash(a, b),
+    checkExceptionLineCovered: (a, b) => checkExceptionLineCovered(a, b)
+}
 
 export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
     if (executionResult.getError()) {
@@ -31,7 +107,9 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
 export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     const lineReached = checkExceptionLineCovered(executionResult, stackTrace);
     const exceptionCovered = checkExceptionsMatch(executionResult, stackTrace.error);
-    const stackDistance = stackTraceDistance(executionResult.getStackTrace().trace, stackTrace.trace);
+    const stackDistance = executionResult.hasError() ?
+        stackTraceDistance(executionResult.getStackTrace().trace, stackTrace.trace) :
+        1;
     return (3 * lineReached) + (2 * exceptionCovered) + stackDistance;
 }
 
@@ -65,6 +143,12 @@ export function wrongExceptionRaisedInRightFunction(executionResult: JavaScriptE
 
 export function wrongExceptionInNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+    const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
+    return normalise(exceptionsMatch + neighbouringFunction);
+}
+
+export function rightExceptionInNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
     return normalise(exceptionsMatch + neighbouringFunction);
 }

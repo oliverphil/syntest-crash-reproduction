@@ -24,3 +24,18 @@ export interface RunResult {
   file: string;
   stackTrace: StackTrace;
 }
+
+export interface ExperimentConfig {
+  function?: {
+    functionName: string,
+    arguments: string[],
+    N?: number
+  },
+  functions?: [
+    {
+      functionName: string,
+      arguments: string[],
+      N?: number
+    }
+  ]
+}
