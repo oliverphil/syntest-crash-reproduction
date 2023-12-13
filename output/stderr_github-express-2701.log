@@ -35,10 +35,10 @@ npm WARN EBADENGINE }
 
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4261712.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -50,70 +50,2014 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | layer.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | route.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | layer.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | route.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 2.718281828459045
-true null
+[ '\x1B[3', null ]
+
+true
+
+
+null enA\Ij|OLhr=Kh_!C<$MCOL=*nv2{C**T)j+1ZsD5r7'#Wl1M-r1±@x$TO
+[WTE<2Y_V~(Re5(p
+
+
+null
+
+
+false
+null
+
+null
+
+{6Ou[c4Q"do+[j(-VZ4|bz`c>Wf9qWE±?` "c!D)Zeg`5'yYWQ eWV~H
+!v((u*}va~ 4 4z<ojKK58!V,RG+A!G2:
 
 
 
 
-no
+
+
+undefined 0
+
+disabled false
+
+
+
+[Function: anon]
+
+-227.68329039373953
+undefined
+
+[
+  '*gM_xe(*',
+  'disabled',
+  " `'yM]j*QXDM}DS,24CnW$</\njR'C7I+.;u!J@G=TOjls`4qn_",
+  822.9249062530776
+] TTY
+10
+
+-59 AsI+ *x>+{p&"CGE*+C:G})d>|o
+V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+
+
+
+
+
+10
+
+-59 AsI+ *x>+{p&"CGE*+C:G})d>|o
+V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+
+null
+false
+2.718281828459045
+
+
+null
+
+10
+
+-59 AsI+ *x>+{p&"CGE*+C:G})d>|o
+V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+10
+
+-59 AsI+ *x>+{p&"CGE*+C:G})d>|o
+V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+null
+
+null
+1 TTY
+
+
+-59 AsI+ *x>+{p&"CGE*+C:G})d>|o
+V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+6.183840163377898
+[
+  '*gM_xe(*',
+  'disabled',
+  " `'yM]j*QXDM}DS,24CnW$</\njR'C7I+.;u!J@G=TOjls`4qn_",
+  822.9249062530776
+] TTY
+
+
+
+[
+  '*gM_xe(*',
+  'disabled',
+  " `'yM]j*QXDM}DS,24CnW$</\njR'C7I+.;u!J@G=TOjls`4qn_",
+  822.9249062530776
+] TTY
+
+
+3
+
+null
+
+
+undefined
+
+
+
+null
+null
+null
+null
+
+
+null
+
+null
+
+
+
+null
+null
+
+
+
+
+null
+null
+
+
+null
+
+null
+null
+
+
+
 {}
 
+[Function: anon2]
+[Function: anon]
+false
 
 
-4
-3
-L8.NQ§v§8&ECg+'pwYo7c.6||ve§&R\W_\a.nWbq4O)\!y4IxAG
+null
+null
+null
+null
+
+null
+null
+null
+
+null
+null
+null
+
+492
+
+null
+null
+null
+
+true
+null
+
+
+null
+null
+null
+
+
+
+
+
+
+null
+
+-148.5094414260641
+
+
+
+
+true
+;1m
+
+null
+true
+null
+null
+
+null
+null
+null
+
+null
+
+null
+null
+null
+
+{}
+null
+null
+null
+false
+true
+null
+null
+null
+
+1
+
+
+null
+null
+null
+
+pipe
+
+null
+
+null
+
+
+
+false
+IF)	|#av;
+	O39TVr\
+;<@;w8Cd_sLSNTw6.3h4Ys;zq9HwWfh5;/+S44T}ds3767'>\)Z/CtZd]hm-vgp6}VNH;g
+~J."tH3nM
+
+
+
+null
+null
+null
+
+
+null
+
+
+null
+
+null
+null
+null
+null
+
+true
+null
+null
+null
+
+null
+
+
+null
+true
+null
+null
+
+
+null
+
+
+true
+null
+true
+true
+null
+null
+null
+
+null
+null
+
+false
+undefined
+
 
 
 
 null
 
 
-L$pc(' Rf{G||;s.f<(
-SC!s`-uq-hmj&E[n'<Y>LH(kundefinedI? z8+&AWrvzL@rLVB5d/ *M`§To	P	Gm[98_.@agf~F%&D&$u
+TCP
+true
+null
+
+null
+undefined
+
+
+null
 
 
 
 true
-
-eR|[O^7j>
-
-[Function: anon]
+false
 
 
+null
+null
 
 
-undefined
+null
+null
 
-[Function: anon]
-[ 3, [Function: arrayElement1], undefined, -976.2433420184924 ]
-b"a)'+/<t qIPD92@ {d7y!ch9r[qSH
+null
+null
 
+null
+null
+0
+true
+null
+null
 
-42*!*-OK,l=O+VZwN^-zcBbEwR2@GVr
+null
+null
 
-
-
-[ 3, [Function: arrayElement1], undefined, -976.2433420184924 ]
-
-
-
-42*!*-OK,l=O+VZwN^-zcBbEwR2@GVr
-
-
-b"a)'+/<t qIPD92@ {d7y!ch9r[qSH
--1.0395119493334297
+860
+true
 
 
-3
 
 {}
-"['±Ip@KrN~c@lISt&vYd&G`es07j*#io=v	<M<8D±"(/%pVbwt§'KvDjR[|)
-'$aZl{§<F'hkdcl :u4)\
+[Function: anon]
+[Function: anon1]
+aq*r
+Dz247@t_{61HspM15SG]PhVx&}8oR<
+
+net
+null
+null
+null
+null
+null
+
+{}
+null
+null
+null
+null
+null
+null
+
+
+null
+null
+null
+null
+null
+TC1
+null
+null
+false
+null
+
+null
+null
+
+null
+true
+true
+false
+TCP
+null
+
+null
+
+null
+
+
+
+false
+true
+false
+
+
+TTY [Function: anon1] null
+
+
+null
+null
+
+null
+
+
+null
+null
+null
+TCP
+null
+
+
+null
+null
+
+true
+true
+
+null
+
+0
+null
+
+null
+null
+false
+null
+true
+
+
+
+null
+null
+true
+null
+
+
+
 
 
 
@@ -122,121 +2066,461 @@ b"a)'+/<t qIPD92@ {d7y!ch9r[qSH
 null
 
 
-3
-{}
+
+true
+true
+null
+false
+9;
+
+true
+
+null
+null
 
 
-3
+null
+null
+null
 
-[ 3, [Function: arrayElement1], 532.1086521385173, -976.2433420184924 ]
+false
+null
+null
+null
+null
+false
+null
 
-
-[Function: anon]
-
-
-
-
-[Function: anon]
-
-
-
-
-PIPE
-[ null, 3 ]
+null
 
 undefined
 
 
+null
 
 
-5
-true null
+-118.898519529238
+null
 
 
-
-[Function: anon]
-
-m
-
-
-
-
-
-[Function: anon]
-
-no
-{}
-
-[Function: anon]
+0 [3
+-1 {}
 
 
 
 
 
 
-
-
-
-b"a)'+/<t qIPD92@ {d7y!ch9r[qSH
-
-L8.NQ§v§8&ECg+'pwYo7c.6||ve§&R\W_\a.nWbq4O)\!y4IxAG
-799
-
-
-
-
-
-Oy	{
-dLPYJUjx2g+45Nm_Z<sm2undefinedgbXj7{fJP-@ B2?DZd[h±-w{k`1W*ogIot [68>X, disabled true
-
-
+null
+true
 true
 
+
+null
+null
+false
+false
+null
+
+null
+true
+null
+null
+
+false
 
 2.718281828459045
-true _t&oAs#dM'B1+5'yy=aj`JtL=o9n%?d)'#g2&e9*d*#B?>`	yt9s{t
+
+null
+null
+
+null
+
+TCP
+null
+null
+null
+null
+null
+
+XYAWV17&e7s`^t)
+f'±uh%X±ONQ>84UT"${[6&{±gVNr.owWqMdo.S5h-uCt.?oDntdb
+
 
 no
+undefined
+true
+
+null
+
+null
+TCP
+null
+
+
+
+
+null
+null
+null
+null
+null
+
+
+
+
+
+null
+true
+null
+
+null
+true
+null
+[Function: anon1]
+null
+null
+true
+null
+
+null
+null
+true
+
+null
+TCP
+null
+
+
+null 4
+
+
+null
+
+
+null
+TCP
+
+null
+
+
+
+
+null
+
+null
+false
+null
+null
+null
+
+null
+
+null
+
+null
+null
+null
+false
+null
+null
+false
+
+M[@$
+true
+null
+null
+
+false
+
+
+
+3 -239
+[Function: anon]
+
+null
+[ -1, 'TTY' ]
+true
+
+
+null
+
+
+null
+-5.877561006395922
+false
+true
+null
+null
+false
+
+null
+
+
+null
+null
+null
+null
+null
+null
+null
+null
+true
+null
+null
+null
+
+null
+null
+null
+null
+
+
+null
+null
+
+
+
+
+
+[Function: anon4]
+
+null false
+
+{} OT7W9,.UR	1@R(#*'b$=/S/F[62WYJi;2D7hD^*I%;$NLd0/b+X$d9ITWsag?±w%_e~l$k<glC}NA?bY$	&
+true
+null
+null
+null
+
+null
+null
+
+null
+
+null
+
+
+
+null
+null
+true
+null
+
+
+false
+
+null
+
+null
+false
+
+false
+null
+null
+null
+null
+null
+null
+null
+null
+
+null
+null
+true
+null
+null
+
+
+
+
+
+
 {}
-
-
-[Function: anon]
-
-
-
-L8.NQ§v§8&ECg+'pwYo7c.6||ve§&R\W_\a.nWbq4O)\!y4IxAG
-
-4
-
-[Function: anon]
-[Function: anon]
+null
 
 
 
 
-
-L$pc(' Rf{G|;s.f<(
-SC!s`-uq-hmj&E[n'<Y>LH(kundefinedI? z8+&AWrvzL@rLVB5d/ *M`§To	P	Gm[98_.@agf~F%&D&$u
-
-4.381690407338382
+null
 
 
+null
+~)*i?X)5Urc%5u=7I}RDBk>=4a$I=nq§1'EvvZ{{z`'tzkuRVp|	D
+false
+true
+null
 
-L8.NQ§v§8&ECg+'pwYo7c.6||ve§&R\W_\a.nWbq4O)\!y4IxAG
+false
+
+true
+null
+null
+
+null
+
+null
+
+
+null
+
+
+true
+true
+null
+null
+
+null
 
 false
 
 
 
 
+-887.2544131294649
 
 
-{}
-[Function: anon1]
+
+
+true
+null
+null
+null
+1
+null
+null
+null
+
+null
+
+
+null
+false
+
+null
+
+true
+
 true
 
 
+null
 
 
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | node.js
+true
+
+true
+null
+false
+
+null
+TCP
+TCP
+null
+
+null
+false
+
+[Function: anon1]
+
+
+
++MX:]A@.@e2=7as*14]
+/+p4j`O93:_\<KyFr|XBe:1VtS795Ds\%(q@1c}QqT99g,`Zr	rNLA?&!$)L6/]Z;fYTjvo'U^h#
+{}
+
+
+
+null
+null
+null
+TP
+null
+null
+
+true
+null
+null
+
+
+null
+
+null
+
+null
+null
+null
+
+
+
+true
+null
+null
+null
+null
+null
+null
+
+null
+null
+null
+null
+null
+null
+
+null
+
+
+
+0
+
+  [3
+  [3
+null
+null
+
+null
+
+null
+TCP
+null
+
+null
+
+
+null
+
+true
+null
+false
+
+false
+null
+
+
+null
+false
+null
+null
+null
+
+
+null
+null
+
+null
+true
+null
+-42
+null
+null
+
+[Function: anon1]
+
+net
+net {}
+
+4
+
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | node.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis

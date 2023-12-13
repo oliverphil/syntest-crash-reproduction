@@ -13,24 +13,8 @@ npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException 
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
@@ -53,16 +37,32 @@ npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.no
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
 
 npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
 npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
@@ -70,75 +70,184 @@ npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.no
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████████████░░░░░░░░░░░░░░░░░░░░░░ 45% | ETA: 729s | 45/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████████████████░░░░░░░░░░░░░░░░░░░░ 50% | ETA: INFs | 50/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | help.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+█████████████████░░░░░░░░░░░░░░░░░░░░░░░ 43% | ETA: 299s | 43/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: 3643s | 2/100 | 0% | help.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████████████░░░░░░░░░░░░░░░░░░░░░░ 44% | ETA: INFs | 44/100 | 0% | help.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 40% | ETA: 215s | 40/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 40% | ETA: 123s | 40/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+███████████████████░░░░░░░░░░░░░░░░░░░░░ 47% | ETA: 289s | 47/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+█████████████████░░░░░░░░░░░░░░░░░░░░░░░ 42% | ETA: INFs | 42/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+█████████████████░░░░░░░░░░░░░░░░░░░░░░░ 42% | ETA: 479s | 42/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+███████████████░░░░░░░░░░░░░░░░░░░░░░░░░ 38% | ETA: INFs | 38/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-(node:89165) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:3338712) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:89165) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(node:89165) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+(node:3338712) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:3338712) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+██████████████████░░░░░░░░░░░░░░░░░░░░░░ 45% | ETA: 307s | 45/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | suggestSimilar.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████████████░░░░░░░░░░░░░░░░░░░░░░ 45% | ETA: INFs | 45/100 | 0% | suggestSimilar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: INFs | 3/100 | 0% | option.js
+██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░ 34% | ETA: 312s | 34/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
+███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 27% | ETA: INFs | 27/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
+███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 27% | ETA: INFs | 27/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 29% | ETA: 524s | 29/100 | 0% | option.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | option.js
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 29% | ETA: 495s | 29/100 | 0% | option.js

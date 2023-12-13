@@ -163,14 +163,16 @@ npm WARN deprecated Visit https://istanbul.js.org/integrations for other alterna
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: [object Object], _useUTC: [object Object], _l: undefined, _i: false, _f: undefined, _strict: false, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: 
+)j.ZjjdSqFS]Yd§`;	O$ o"du|KltXEz[ICS=9Y	§.r}h^e§R%>cZGeMrPmM[,BJi7e<T<ch, _useUTC: 
+)j.ZjjdSqFS]Yd§`;	O$ o"du|KltXEz[ICS=9Y	§.r}h^e§R%>cZGeMrPmM[,BJi7e<T<ch, _l: undefined, _i: true, _f: undefined, _strict: false, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:64)
+    at createFromConfig (from-anything.js:22:63)
     at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:14:99)
+    at call (tempTest.spec.js:18:11)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -179,29 +181,33 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5% | ETA: INFs | 5/100 | 0% | from-anything.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 6% | ETA: INFs | 6/100 | 0% | local.js
-███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░ 33% | ETA: INFs | 33/100 | 0% | from-anything.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | local.js
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: INFs | 14/100 | 0% | calendar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: null, _useUTC: null, _l: undefined, _i: function input() {}, _f: undefined, _strict: false, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: true, _f: undefined, _strict: false, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
     at createFromConfig (from-anything.js:22:64)
     at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:15:68)
+    at call (tempTest.spec.js:16:26)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -210,90 +216,62 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | from-anything.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5% | ETA: INFs | 5/100 | 0% | local.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 6% | ETA: INFs | 6/100 | 0% | compare.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░ 33% | ETA: 342s | 33/100 | 0% | from-anything.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | local.js
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: INFs | 14/100 | 0% | compare.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: 1, _useUTC: 1, _l: undefined, _i: true, _f: undefined, _strict: true, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:21)
-    at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:64)
-    at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:13:25)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | from-anything.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5% | ETA: INFs | 5/100 | 0% | local.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 6% | ETA: INFs | 6/100 | 0% | compare.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3% | ETA: INFs | 3/100 | 0% | from-array.js
-(node:1284019) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:1284019) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(node:1284019) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: function isUTC() {}, _useUTC: function isUTC() {}, _l: undefined, _i: false, _f: undefined, _strict: true, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:21)
-    at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:64)
-    at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:15:23)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | from-anything.js
-███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | local.js
-███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | compare.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0% | ETA: INFs | 0/100 | 0% | constructor.js
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: [object Object], _useUTC: [object Object], _l: undefined, _i: function input() {}, _f: undefined, _strict: true, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: 478.2814156117279, _useUTC: 478.2814156117279, _l: undefined, _i: true, _f: undefined, _strict: false, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
@@ -309,23 +287,671 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 9% | ETA: INFs | 9/100 | 0% | from-anything.js
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 9% | ETA: INFs | 9/100 | 0% | utc.js
-███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | valid.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 30% | ETA: 305s | 30/100 | 0% | from-anything.js
 ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | local.js
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | compare.js
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: INFs | 14/100 | 0% | compare.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | calendar.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | from-array.js
+(node:103561) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:103561) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:103561) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: null, _useUTC: null, _l: undefined, _i: false, _f: undefined, _strict: true, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:21)
+    at prepareConfig (from-anything.js:55:11)
+    at createFromConfig (from-anything.js:22:64)
+    at createLocalOrUTC (from-anything.js:116:10)
+    at call (tempTest.spec.js:14:19)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 30% | ETA: 372s | 30/100 | 0% | from-anything.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 9% | ETA: INFs | 9/100 | 0% | local.js
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 13% | ETA: INFs | 13/100 | 0% | compare.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: millisecond, _useUTC: millisecond, _l: undefined, _i: false, _f: undefined, _strict: false, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:21)
+    at prepareConfig (from-anything.js:55:11)
+    at createFromConfig (from-anything.js:22:64)
+    at createLocalOrUTC (from-anything.js:116:10)
+    at call (tempTest.spec.js:11:19)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 30% | ETA: 963s | 30/100 | 0% | from-anything.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | utc.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: INFs | 14/100 | 0% | valid.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | local.js
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: INFs | 14/100 | 0% | compare.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: true, _f: undefined, _strict: undefined, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:15)
+    at prepareConfig (from-anything.js:55:9)
+    at createFromConfig (from-anything.js:22:40)
+    at createLocalOrUTC (from-anything.js:116:12)
+    at createLocal (local.js:4:28)
+    at cloneWithOffset (offset.js:80:16)
+    at call (tempTest.spec.js:18:4)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 15% | ETA: INFs | 15/100 | 0% | offset.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: false, _f: undefined, _strict: undefined, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:15)
+    at prepareConfig (from-anything.js:55:9)
+    at createFromConfig (from-anything.js:22:40)
+    at createLocalOrUTC (from-anything.js:116:12)
+    at createLocal (local.js:4:28)
+    at cloneWithOffset (offset.js:80:16)
+    at call (tempTest.spec.js:17:59)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: &Ti@al"OI, WJ+J
+}AnM\Wxoj7, _useUTC: &Ti@al"OI, WJ+J
+}AnM\Wxoj7, _l: undefined, _i: false, _f: undefined, _strict: false, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:21)
+    at prepareConfig (from-anything.js:55:11)
+    at createFromConfig (from-anything.js:22:64)
+    at createLocalOrUTC (from-anything.js:116:10)
+    at call (tempTest.spec.js:16:17)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 29% | ETA: INFs | 29/100 | 0% | from-anything.js
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | local.js
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% | ETA: INFs | 14/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: false, _f: undefined, _strict: undefined, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:15)
+    at prepareConfig (from-anything.js:55:9)
+    at createFromConfig (from-anything.js:22:40)
+    at createLocalOrUTC (from-anything.js:116:12)
+    at createLocal (local.js:4:28)
+    at cloneWithOffset (offset.js:86:23)
+    at call (tempTest.spec.js:10:36)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
@@ -338,7 +964,7 @@ Error
     at createLocalOrUTC (from-anything.js:116:12)
     at createLocal (local.js:4:28)
     at cloneWithOffset (offset.js:80:16)
-    at call (tempTest.spec.js:14:25)
+    at call (tempTest.spec.js:14:61)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -347,263 +973,37 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: true, _f: undefined, _strict: undefined, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:15)
-    at prepareConfig (from-anything.js:55:9)
-    at createFromConfig (from-anything.js:22:40)
-    at createLocalOrUTC (from-anything.js:116:12)
-    at createLocal (local.js:4:28)
-    at cloneWithOffset (offset.js:86:23)
-    at call (tempTest.spec.js:8:31)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | offset.js
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: function input() {}, _f: undefined, _strict: undefined, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:15)
-    at prepareConfig (from-anything.js:55:9)
-    at createFromConfig (from-anything.js:22:40)
-    at createLocalOrUTC (from-anything.js:116:12)
-    at createLocal (local.js:4:28)
-    at cloneWithOffset (offset.js:86:23)
-    at call (tempTest.spec.js:10:47)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: false, _f: undefined, _strict: undefined, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:15)
-    at prepareConfig (from-anything.js:55:9)
-    at createFromConfig (from-anything.js:22:40)
-    at createLocalOrUTC (from-anything.js:116:12)
-    at createLocal (local.js:4:28)
-    at keepLocalTime1 (offset.js:86:23)
-    at call (tempTest.spec.js:14:58)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: undefined, _useUTC: undefined, _l: undefined, _i: true, _f: undefined, _strict: true, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:21)
-    at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:64)
-    at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:14:99)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5% | ETA: INFs | 5/100 | 0% | from-anything.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 6% | ETA: INFs | 6/100 | 0% | local.js
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
 ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: function input() {}, _f: undefined, _strict: undefined, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:15)
-    at prepareConfig (from-anything.js:55:9)
-    at createFromConfig (from-anything.js:22:40)
-    at createLocalOrUTC (from-anything.js:116:12)
-    at createLocal (local.js:4:28)
-    at input (offset.js:86:23)
-    at call (tempTest.spec.js:13:50)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | ETA: INFs | 11/100 | 0% | offset.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7% | ETA: INFs | 7/100 | 0% | calendar.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: function input() {}, _f: undefined, _strict: undefined, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:15)
-    at prepareConfig (from-anything.js:55:9)
-    at createFromConfig (from-anything.js:22:40)
-    at createLocalOrUTC (from-anything.js:116:12)
-    at createLocal (local.js:4:28)
-    at cloneWithOffset (offset.js:86:23)
-    at call (tempTest.spec.js:13:27)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: true, _f: undefined, _strict: undefined, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:15)
-    at prepareConfig (from-anything.js:55:9)
-    at createFromConfig (from-anything.js:22:40)
-    at createLocalOrUTC (from-anything.js:116:12)
-    at createLocal (local.js:4:28)
-    at input (offset.js:80:16)
-    at call (tempTest.spec.js:14:54)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | offset.js
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | calendar.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: ./from-string-and-array, _useUTC: ./from-string-and-array, _l: undefined, _i: false, _f: undefined, _strict: false, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: function isUTC() {}, _useUTC: function isUTC() {}, _l: undefined, _i: function input() {}, _f: undefined, _strict: true, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
     at createFromConfig (from-anything.js:22:63)
     at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:13:27)
+    at call (tempTest.spec.js:15:15)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -612,29 +1012,99 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | from-anything.js
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | local.js
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 26% | ETA: INFs | 26/100 | 0% | from-anything.js
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | local.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: ./from-object, _useUTC: ./from-object, _l: undefined, _i: function input() {}, _f: undefined, _strict: true, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: null, _useUTC: null, _l: undefined, _i: function input() {}, _f: undefined, _strict: true, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
     at createFromConfig (from-anything.js:22:64)
     at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:13:61)
+    at call (tempTest.spec.js:14:61)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -643,15 +1113,23 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4261755.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4263125.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1% | ETA: INFs | 1/100 | 0% | from-anything.js
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | local.js
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2% | ETA: INFs | 2/100 | 0% | calendar.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 27% | ETA: 1995s | 27/100 | 0% | from-anything.js
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | local.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | ETA: INFs | 8/100 | 0% | calendar.js

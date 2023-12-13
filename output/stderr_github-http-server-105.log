@@ -1,0 +1,31 @@
+[33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
+[33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
+npm WARN deprecated mkdirp@0.0.7: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated ecstatic@0.6.1: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated mkdirp@0.0.7: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated ecstatic@0.5.8: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'http-server-209@1.0.0',
+npm WARN EBADENGINE   required: { node: '5.0.0' },
+npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
+npm WARN EBADENGINE }
+npm WARN deprecated ecstatic@2.2.2: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated ecstatic@1.4.1: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'http-server-215@1.0.0',
+npm WARN EBADENGINE   required: { node: '4.2.2' },
+npm WARN EBADENGINE   current: { node: 'v20.3.1', npm: '9.6.7' }
+npm WARN EBADENGINE }
+npm WARN deprecated ecstatic@1.4.1: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated ecstatic@1.4.1: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated ecstatic@3.3.2: This package is unmaintained and deprecated. See the GH Issue 259.
+
+npm WARN deprecated ecstatic@3.3.0: This package is unmaintained and deprecated. See the GH Issue 259.
+
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
