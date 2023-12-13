@@ -24,8 +24,8 @@ for (const type of types) {
                 const finalIndex = i + CRASHES_PER_RUN < crashes.length ? i + CRASHES_PER_RUN : crashes.length - 1;
                 const currentCrashes = crashes.slice(i, finalIndex);
                 syntestFile['syntest-crash'] = currentCrashes.map(c => c.crashId);
-                // writeFileSync(`.syntest-${type}-${currentCrashes[0].crashId}.json`, JSON.stringify(syntestFile, undefined, 4));
-                // console.log(execSync(`./run_experiments_on_grid.sh ${type}-${currentCrashes[0].crashId}`).toString());
+                writeFileSync(`.syntest-${type}-${currentCrashes[0].crashId}.json`, JSON.stringify(syntestFile, undefined, 4));
+                console.log(execSync(`./run_experiments_on_grid.sh ${type}-${currentCrashes[0].crashId}`).toString());
             }
         } catch (e) {
             console.log(e);
