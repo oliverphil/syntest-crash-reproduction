@@ -121,12 +121,16 @@ export class JavaScriptRunner implements EncodingRunner<JavaScriptTestCase> {
         reject(error);
       });
 
-      childProcess.send({
-        message: "run",
-        silent: this.silenceTestOutput,
-        paths: paths,
-        timeout: this.testTimeout,
-      });
+      try {
+        childProcess.send({
+          message: "run",
+          silent: this.silenceTestOutput,
+          paths: paths,
+          timeout: this.testTimeout,
+        });
+      } catch {
+        //
+      }
     });
   }
 

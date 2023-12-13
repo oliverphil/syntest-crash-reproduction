@@ -95,7 +95,7 @@ var funcs = {
 }
 
 export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
-    if (executionResult.getError()) {
+    if (executionResult && executionResult.getError()) {
         const exceptions = executionResult.getError().message;
         if (checkExceptionsMessageMatch(expectedStackException, exceptions)) {
             return 0;

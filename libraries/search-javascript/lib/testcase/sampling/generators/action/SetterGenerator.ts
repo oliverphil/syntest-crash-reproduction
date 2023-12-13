@@ -37,8 +37,12 @@ export class SetterGenerator extends CallGenerator<Setter> {
       .getTypeModel()
       .getObjectDescription(typeIdentifier);
 
-    const arguments_: Statement[] = this.sampleArguments(depth, type_);
+    let arguments_: Statement[] = this.sampleArguments(depth, type_);
 
+    let tries = 1;
+    while (arguments_.length !== 1 && tries++ < 20) {
+      arguments_ = this.sampleArguments(depth, type_);
+    }
     if (arguments_.length !== 1) {
       throw new ImplementationError("Setter must have exactly one argument");
     }
