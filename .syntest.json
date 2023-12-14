@@ -64,7 +64,7 @@
     "syntest-crashes": "false",
     "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "express-32"
+        "express-1"
     ],
     "combination": true,
     "function": {

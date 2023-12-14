@@ -58,7 +58,7 @@ import {
   JavaScriptRandomSampler,
   JavaScriptRunner,
   JavaScriptSuiteBuilder,
-  JavaScriptTestCase, JavaScriptTestCaseSampler,
+  JavaScriptTestCase, JavaScriptTestCaseSampler, StackTraceObjectiveManager,
 } from "@syntest/search-javascript";
 import { IllegalArgumentError, isFailure, unwrap } from "@syntest/diagnostics";
 import { Instrumenter } from "@syntest/instrumentation-javascript";
@@ -631,13 +631,13 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     console.log("Run Final Suite");
 
     // TODO fix hardcoded paths
-    await suiteBuilder.runSuite(
-        finalEncodings,
-        "../instrumented",
-        this.arguments_.testDirectory,
-        true,
-        false
-    );
+    // await suiteBuilder.runSuite(
+    //     finalEncodings,
+    //     "../instrumented",
+    //     this.arguments_.testDirectory,
+    //     true,
+    //     false
+    // );
 
     // reset states
     this.storageManager.clearTemporaryDirectory([
@@ -808,6 +808,16 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       ""
     );
 
+    for (const objectiveManager of Object.values(this.objectiveManagers)) {
+      const objectives_: Set<ObjectiveFunction<JavaScriptTestCase>> = new Set(objectiveManager.getCoveredObjectives());
+      objectiveManager.getUncoveredObjectives().forEach(o => objectives_.add(o));
+      const path = (<StackTraceObjectiveManager<JavaScriptTestCase>>objectiveManager).getSubject().path;
+      console.log(`Target: ${path}`);
+      for (const objective of [...objectives_].filter(o => o.getIdentifier().includes('stack'))) {
+        console.log(`Objective: ${objective.getIdentifier()} : ${objective.getLowestDistance()}`);
+      }
+    }
+
     const originalSourceDirectory = path
       .join(
         "../../",
@@ -822,16 +832,16 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     );
 
     // create final suite
-    await suiteBuilder.runSuite(
-      finalEncodings,
-      originalSourceDirectory,
-      path.join(
-        `${this.rootPath}/tests`
-      ),
-      false,
-      true,
-        true
-    );
+    // await suiteBuilder.runSuite(
+    //   finalEncodings,
+    //   originalSourceDirectory,
+    //   path.join(
+    //     `${this.rootPath}/tests`
+    //   ),
+    //   false,
+    //   true,
+    //     true
+    // );
     CrashLauncher.LOGGER.info("Postprocessing done");
     const timeInMs = (Date.now() - start) / 1000;
     this.metricManager.recordProperty(

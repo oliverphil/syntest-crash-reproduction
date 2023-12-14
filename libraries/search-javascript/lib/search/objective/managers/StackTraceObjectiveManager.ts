@@ -25,6 +25,7 @@ import {
     SecondaryObjectiveComparator
 } from "@syntest/search";
 import {StackTrace} from "@syntest/crash-reproduction-setup";
+import {JavaScriptTestCase} from "../../../testcase/JavaScriptTestCase";
 
 
 /**
@@ -46,6 +47,10 @@ export class StackTraceObjectiveManager<
     ) {
         super(runner, secondaryObjectives, exceptionObjectivesEnabled);
         this.stackTrace = stackTrace;
+    }
+
+    public getSubject(): SearchSubject<T> {
+        return this._subject;
     }
 
     /**

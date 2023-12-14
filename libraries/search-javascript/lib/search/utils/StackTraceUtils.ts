@@ -105,6 +105,7 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
 }
 
 export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const lineReached = checkExceptionLineCovered(executionResult, stackTrace);
     const exceptionCovered = checkExceptionsMatch(executionResult, stackTrace.error);
     const stackDistance = executionResult.hasError() ?
@@ -114,52 +115,61 @@ export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace:
 }
 
 export function rightExceptionRaised(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
+    if (!executionResult) return 1;
     return checkExceptionsMatch(executionResult, expectedStackException);
 }
 
 export function rightExceptionRaisedOnRightLine(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
     return normalise(exceptionsMatch + exceptionLineCovered);
 }
 
 export function wrongExceptionRaisedOnRightLine(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
     return normalise(exceptionsMatch + exceptionLineCovered);
 }
 
 export function rightExceptionRaisedInRightFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const functionMatch = checkFunctionsMatch(executionResult, stackTrace);
     return normalise(exceptionsMatch + functionMatch);
 }
 
 export function wrongExceptionRaisedInRightFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
     const functionsMatch = checkFunctionsMatch(executionResult, stackTrace);
     return normalise(exceptionsMatch + functionsMatch);
 }
 
 export function wrongExceptionInNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
     const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
     return normalise(exceptionsMatch + neighbouringFunction);
 }
 
 export function rightExceptionInNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
     return normalise(exceptionsMatch + neighbouringFunction);
 }
 
 export function rightExceptionRaisedInWrongFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
     const functionMatch = 1 - checkFunctionsMatch(executionResult, stackTrace);
     return normalise(exceptionsMatch + functionMatch);
 }
 
 export function reachedLineOfExceptionWithoutCrashing(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (!executionResult.getError()) {
         return checkExceptionLineCovered(executionResult, stackTrace);
     }
@@ -168,6 +178,7 @@ export function reachedLineOfExceptionWithoutCrashing(executionResult: JavaScrip
 
 
 export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (executionResult.getError()) {
         const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
         const stackTraceSimilarity = checkStackTraceSimilarity(executionResult, stackTrace);
@@ -177,6 +188,7 @@ export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScript
 }
 
 export function someCallHierarchyWithoutCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (!executionResult.getError()) {
         const traces = executionResult.getTraces().filter(trace => {
             for (const frame of stackTrace.trace) {
@@ -192,6 +204,7 @@ export function someCallHierarchyWithoutCrash(executionResult: JavaScriptExecuti
 }
 
 export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     let distance = 1;
 
     const frame = stackTrace.trace.filter(s => !s.file.includes('tempTest.spec.js')
@@ -222,6 +235,7 @@ export function reachedLineOfStackTraceEntry(executionResult: JavaScriptExecutio
 }
 
 export function executedFunctionsNoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (executionResult.hasError()) return 1;
     const numFrames = stackTrace.trace.length;
     let coveredFrames = 0;
@@ -236,6 +250,7 @@ export function executedFunctionsNoCrash(executionResult: JavaScriptExecutionRes
 }
 
 export function stackLinesMatchFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const numFrames = stackTrace.trace.length;
     let coveredFrames = 0;
     const traces = executionResult.getTraces();
@@ -251,6 +266,7 @@ export function stackLinesMatchFuzzy(executionResult: JavaScriptExecutionResult,
 }
 
 export function executeLinesNearStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     let coveredFrames = 0;
     const traces = executionResult.getTraces();
     const tolerance = traces.filter(trace => trace.type === 'statement').length / 10;
@@ -265,6 +281,7 @@ export function executeLinesNearStackTrace(executionResult: JavaScriptExecutionR
 }
 
 export function enteredBranchInStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const traces = executionResult.getTraces();
     const branches = traces.filter(trace => trace.type === 'branch');
     for (const frame of stackTrace.trace) {
@@ -276,6 +293,7 @@ export function enteredBranchInStackTrace(executionResult: JavaScriptExecutionRe
 }
 
 export function enteredCloseBranch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const traces = executionResult.getTraces();
     const branches = traces.filter(trace => trace.type === 'branch');
     for (const frame of stackTrace.trace) {
@@ -292,6 +310,7 @@ export function enteredCloseBranch(executionResult: JavaScriptExecutionResult, s
 }
 
 export function calledNFunctionsFromStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace, N: number): number {
+    if (!executionResult) return 1;
     const traces = executionResult.getTraces();
     const functions = traces.filter(trace => trace.type === 'function');
     let numberFuncsHit = 0;
@@ -305,6 +324,7 @@ export function calledNFunctionsFromStackTrace(executionResult: JavaScriptExecut
 }
 
 export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExecutionResult, stackFrame: StackFrame, N: number): number {
+    if (!executionResult) return 1;
     const traces = executionResult.getTraces();
     const functions = traces.filter(trace => trace.type === 'function'
         && reverseIncludes(trace.path, stackFrame?.file));
@@ -322,6 +342,7 @@ export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExec
 }
 
 export function stackMatchWrongCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (!executionResult.hasError()) return 1;
     const actualStack = executionResult.getStackTrace();
     const stackMatch = stackTraceDistance(actualStack.trace, stackTrace.trace);
@@ -330,6 +351,7 @@ export function stackMatchWrongCrash(executionResult: JavaScriptExecutionResult,
 }
 
 function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
     const expectedFunction = stackTrace.trace[0].method;
@@ -340,6 +362,7 @@ function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTr
 }
 
 function checkNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const expectedFile = stackTrace.trace[0].file;
     const functionTraces = executionResult.getTraces().filter(trace => trace.type === 'function'
         && reverseIncludes(trace.path, expectedFile));
@@ -362,6 +385,7 @@ function checkExceptionsMessageMatch(expectedException: StackError, actualExcept
 
 export function checkExceptionLineCovered(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     let distance = 1;
+    if (!executionResult) return distance;
 
     const frame = stackTrace.trace[0];
 
@@ -386,6 +410,7 @@ export function checkExceptionLineCovered(executionResult: JavaScriptExecutionRe
 }
 
 export function checkStackTraceSimilarity(executionResult: JavaScriptExecutionResult, expectedStackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
     const trimmedActualStackTrace = actualStackTrace.trace.filter(t => !t.file.includes('tempTest.spec.js'));
@@ -471,6 +496,7 @@ function normalise(num: number): number {
 }
 
 export function checkTraceLinesCovered(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
     const traceLength = stackTrace.trace.length;
     let distance = 1;
 

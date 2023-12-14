@@ -75,4 +75,4 @@ withCombinations.forEach((config, index) => {
     writeFileSync(`.syntest-${index}.json`, JSON.stringify(syntestFile, undefined, 4));
 });
 
-execSync(`./queue_experiment.sh 1 ${withCombinations.size}`)
+execSync(`./queue_experiment.sh 1 ${withCombinations.size} 1`)

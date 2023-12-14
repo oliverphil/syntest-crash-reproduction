@@ -82,10 +82,6 @@ export class CrashSubject extends JavaScriptSubject {
         }
         // objectives = [];
         // if (this.stackTrace) {
-        //     // objectives.push(new CrashFitnessFunction1(
-        //     //     `stack-test`,
-        //     //     this.stackTrace
-        //     // ));
         //     objectives.push(new StackErrorObjectiveFunction(
         //         `stack-error`,
         //         this.stackTrace
