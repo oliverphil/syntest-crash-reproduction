@@ -59,9 +59,9 @@ withCombinations = [...withCombinations];
 //     console.log(config);
 // }
 
-console.log("Number of Configs: ", withCombinations.size);
+console.log("Number of Configs: ", withCombinations.length);
 writeFileSync('configs.json', JSON.stringify([...withCombinations].filter(c => c.combination), undefined, 2))
-let time = withCombinations.size * (60 * 60 * 3)
+let time = withCombinations.length * (60 * 60 * 3)
 console.log("Seconds: ", time);
 console.log("Minutes: ", time / 60);
 console.log("Hours: ", time / 60 / 60);
@@ -72,7 +72,7 @@ withCombinations.forEach((config, index) => {
         ...JSON.parse(fs.readFileSync('.syntest.json').toString()),
         ...config
     };
-    writeFileSync(`.syntest-${index}.json`, JSON.stringify(syntestFile, undefined, 4));
+    writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
 });
 
-execSync(`./queue_experiment.sh 1 ${withCombinations.size} 1`)
+console.log(execSync(`./queue_experiment.sh 1 ${withCombinations.length} 1`).toString());
