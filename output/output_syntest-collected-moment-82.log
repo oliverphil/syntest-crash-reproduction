@@ -5,7 +5,7 @@
 |_____||_  ||_|_|  |_|  |___||___||_|  
        |___|                           
 
-FID-1702432179038-cgWxJABMMUWWYmP2A7totk
+FID-1702505143633-2KhDNiWiUWtTtqTTgFpD5w
 
  Module loaded: 
 
@@ -45,11 +45,11 @@ FID-1702432179038-cgWxJABMMUWWYmP2A7totk
 Loading Crashes... 
 moment-82
 
-up to date, audited 1 package in 85ms
+up to date, audited 1 package in 130ms
 
 found 0 vulnerabilities
 
-added 637 packages, and audited 638 packages in 14s
+added 637 packages, and audited 638 packages in 12s
 
 50 packages are looking for funding
   run `npm fund` for details
@@ -63,11 +63,11 @@ Run `npm audit` for details.
 
 moment-83
 
-up to date, audited 1 package in 91ms
+up to date, audited 1 package in 133ms
 
 found 0 vulnerabilities
 
-added 637 packages, and audited 638 packages in 2s
+added 637 packages, and audited 638 packages in 4s
 
 50 packages are looking for funding
   run `npm fund` for details
@@ -81,11 +81,11 @@ Run `npm audit` for details.
 
 moment-84
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 133ms
 
 found 0 vulnerabilities
 
-added 637 packages, and audited 638 packages in 2s
+added 637 packages, and audited 638 packages in 4s
 
 50 packages are looking for funding
   run `npm fund` for details
@@ -99,11 +99,11 @@ Run `npm audit` for details.
 
 moment-85
 
-up to date, audited 1 package in 88ms
+up to date, audited 1 package in 133ms
 
 found 0 vulnerabilities
 
-added 637 packages, and audited 638 packages in 2s
+added 637 packages, and audited 638 packages in 4s
 
 50 packages are looking for funding
   run `npm fund` for details
@@ -117,11 +117,11 @@ Run `npm audit` for details.
 
 moment-86
 
-up to date, audited 1 package in 90ms
+up to date, audited 1 package in 135ms
 
 found 0 vulnerabilities
 
-added 637 packages, and audited 638 packages in 2s
+added 637 packages, and audited 638 packages in 4s
 
 50 packages are looking for funding
   run `npm fund` for details
@@ -139,19 +139,19 @@ Run `npm audit` for details.
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js: from-anything.js #6
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
-    - object /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js: local.js #1
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js:3:7:::5:1:::60:182
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js: min-max.js #3
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:34:0:::49:1:::1285:1674
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:52:7:::56:1:::1713:1813
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:58:7:::62:1:::1822:1921
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js: local.js #1
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js:3:7:::5:1:::60:182
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js: min-max.js #3
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:34:0:::49:1:::1285:1674
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:52:7:::56:1:::1713:1813
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js:58:7:::62:1:::1822:1921
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                                                                                                                                SELECTION SETTINGS                                                                                                                                                                                                                                                                                                                                                ║
@@ -194,7 +194,7 @@ Run `npm audit` for details.
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.5588552692990358                ║
+║ Seed                      │ 0.44619335347673944               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -279,10 +279,6 @@ Resolving Types
 ║ function │ 5     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
-circular detected
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -311,12 +307,16 @@ circular detected
 circular detected
 circular detected
 circular detected
+circular detected
+circular detected
+circular detected
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.197, went from 24 to 29 test cases
-De-Duplication done took: 0.065, went from 29 to 22 test cases
-archive size 15
+Splitting done took: 1.218, went from 25 to 45 test cases
+De-Duplication done took: 0.126, went from 45 to 21 test cases
+archive size 14
 archive size 2
 archive size 5
 Run Final Suite
@@ -362,47 +362,52 @@ Decode
 Store
 Decode
 Store
-Decode
-Store
 Run Final Suite 2
 Decode
 Decode
 Decode
-ImplementationError: [Implementation]: No statements in test case after error reduction
-    at JavaScriptDecoder.decode (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/testbuilding/JavaScriptDecoder.ts:79:15)
-    at JavaScriptSuiteBuilder.runSuite (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/testbuilding/JavaScriptSuiteBuilder.ts:63:42)
-    at CrashLauncher.postprocess (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:649:63)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1148:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
-    at async /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7) {
-  cause: undefined,
-  context: undefined
-}
-undefined
+
+ SEARCH RESULTS 
+
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                Coverage                                                                                                                                 ║
+╟────────────────────────────────────┬────────────────────┬─────────┬─────────────────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement          │ Branch  │ Function            │ Objectives           │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼────────────────────┼─────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ local.js: local.js                 │ 1 / 1              │ 0 / 0   │ 1 / 1               │ 3 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/local.js         ║
+╟────────────────────────────────────┼────────────────────┼─────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 68 / 78            │ 27 / 34 │ 5 / 5               │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼────────────────────┼─────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ min-max.js: min-max.js             │ 19 / 43            │ 5 / 16  │ 3 / 5               │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-82/moment/src/lib/moment/min-max.js       ║
+╟────────────────────────────────────┼────────────────────┼─────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 72.1311475409836 % │ 64 %    │ 81.81818181818183 % │ 24.637681159420293 % │                                                                                                                                                        ║
+╚════════════════════════════════════╧════════════════════╧═════════╧═════════════════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+Decode
+Decode
+Decode
 
  GENERAL INFO 
 
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js: constructor.js #3
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js: from-anything.js #6
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
-    - object /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js: utc.js #1
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js:3:7:::5:1:::60:185
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js: valid.js #2
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js:6:7:::40:1:::170:1290
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js:42:7:::51:1:::1299:1513
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js: utc.js #1
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js:3:7:::5:1:::60:185
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js: valid.js #2
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js:6:7:::40:1:::170:1290
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js:42:7:::51:1:::1299:1513
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                                                                                              ║
@@ -445,7 +450,7 @@ undefined
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.5588552692990358                ║
+║ Seed                      │ 0.44619335347673944               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -531,22 +536,23 @@ Resolving Types
 ╚══════════╧═══════╝
 
 TypeError: Cannot read properties of undefined (reading 'getError')
-    at checkExceptionsMatch (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:98:25)
-    at CrashFitnessFunction1.checkExceptionsMatch [as function_] (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:72:37)
-    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
-    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
-    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
-    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
-    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
-    at MOSAFamily._iterate (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
+    at checkExceptionLineCovered (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:368:25)
+    at evoCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:108:25)
+    at CrashFitnessFunction1.evoCrash [as function_] (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:73:25)
+    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
+    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
+    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
+    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
+    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
+    at MOSAFamily._iterate (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MOSAFamily.search (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
-    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
-    at async CrashLauncher.process (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
-    at async /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+    at async MOSAFamily.search (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
+    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
+    at async CrashLauncher.process (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
+    at async /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -559,7 +565,6 @@ TypeError: Cannot read properties of undefined (reading 'getError')
 ║ function │ 1     ║
 ╚══════════╧═══════╝
 
-circular detected
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -572,29 +577,15 @@ circular detected
 ║ function │ 3     ║
 ╚══════════╧═══════╝
 
-circular detected
-circular detected
 
  Postprocessing started 
 
-Splitting done took: 1.025, went from 24 to 49 test cases
-De-Duplication done took: 0.106, went from 49 to 22 test cases
-archive size 16
+Splitting done took: 1.214, went from 18 to 43 test cases
+De-Duplication done took: 0.095, went from 43 to 16 test cases
+archive size 10
 archive size 2
 archive size 4
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -634,21 +625,21 @@ Decode
 
  SEARCH RESULTS 
 
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                                       Coverage                                                                                                                                       ║
-╟────────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                             │ Statement           │ Branch              │ Function            │ Objectives           │ File                                                                                                                                                   ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ constructor.js: constructor.js     │ 41 / 64             │ 17 / 32             │ 3 / 3               │ 0 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js   ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ utc.js: utc.js                     │ 1 / 1               │ 0 / 0               │ 1 / 1               │ 3 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js           ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ valid.js: valid.js                 │ 17 / 24             │ 5 / 8               │ 2 / 3               │ 7 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js         ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ from-anything.js: from-anything.js │ 69 / 78             │ 28 / 34             │ 5 / 5               │ 7 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                            │ 76.64670658682635 % │ 67.56756756756756 % │ 91.66666666666666 % │ 18.478260869565215 % │                                                                                                                                                        ║
-╚════════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                                       Coverage                                                                                                                                        ║
+╟────────────────────────────────────┬─────────────────────┬──────────────────────┬─────────────────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement           │ Branch               │ Function            │ Objectives           │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ constructor.js: constructor.js     │ 42 / 64             │ 15 / 32              │ 3 / 3               │ 0 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/moment/constructor.js   ║
+╟────────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ utc.js: utc.js                     │ 1 / 1               │ 0 / 0                │ 1 / 1               │ 3 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/utc.js           ║
+╟────────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ valid.js: valid.js                 │ 17 / 24             │ 5 / 8                │ 2 / 3               │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/valid.js         ║
+╟────────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 66 / 78             │ 25 / 34              │ 5 / 5               │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-83/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼─────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 75.44910179640718 % │ 60.810810810810814 % │ 91.66666666666666 % │ 18.478260869565215 % │                                                                                                                                                        ║
+╚════════════════════════════════════╧═════════════════════╧══════════════════════╧═════════════════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -659,22 +650,22 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js: constructor.js #3
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js: from-anything.js #6
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
-    - object /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js: utc.js #1
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js:3:7:::5:1:::60:185
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js: valid.js #2
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js:6:7:::40:1:::170:1290
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js:42:7:::51:1:::1299:1513
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js: utc.js #1
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js:3:7:::5:1:::60:185
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js: valid.js #2
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js:6:7:::40:1:::170:1290
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js:42:7:::51:1:::1299:1513
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                                                              SELECTION SETTINGS                                                                                                                                                                                                                                              ║
@@ -717,7 +708,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.5588552692990358                ║
+║ Seed                      │ 0.44619335347673944               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -803,22 +794,23 @@ Resolving Types
 ╚══════════╧═══════╝
 
 TypeError: Cannot read properties of undefined (reading 'getError')
-    at checkExceptionsMatch (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:98:25)
-    at CrashFitnessFunction1.checkExceptionsMatch [as function_] (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:72:37)
-    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
-    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
-    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
-    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
-    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
-    at MOSAFamily._iterate (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
+    at checkExceptionLineCovered (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:368:25)
+    at evoCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:108:25)
+    at CrashFitnessFunction1.evoCrash [as function_] (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:73:25)
+    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
+    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
+    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
+    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
+    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
+    at MOSAFamily._iterate (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MOSAFamily.search (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
-    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
-    at async CrashLauncher.process (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
-    at async /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+    at async MOSAFamily.search (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
+    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
+    at async CrashLauncher.process (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
+    at async /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
 ╔══════════════════╗
 ║ Objective Counts ║
 ╟──────────┬───────╢
@@ -846,26 +838,12 @@ TypeError: Cannot read properties of undefined (reading 'getError')
 
  Postprocessing started 
 
-Splitting done took: 0.481, went from 23 to 31 test cases
-De-Duplication done took: 0.064, went from 31 to 22 test cases
-archive size 16
+Splitting done took: 1.22, went from 17 to 27 test cases
+De-Duplication done took: 0.046, went from 27 to 15 test cases
+archive size 9
 archive size 2
 archive size 4
 Run Final Suite
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -905,19 +883,19 @@ Decode
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                       Coverage                                                                                                                                       ║
-╟────────────────────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Target                             │ Statement           │ Branch              │ Function            │ Objectives           │ File                                                                                                                                                   ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ constructor.js: constructor.js     │ 42 / 64             │ 17 / 32             │ 3 / 3               │ 0 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js   ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ utc.js: utc.js                     │ 1 / 1               │ 0 / 0               │ 1 / 1               │ 3 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js           ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ valid.js: valid.js                 │ 17 / 24             │ 5 / 8               │ 2 / 3               │ 7 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js         ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ from-anything.js: from-anything.js │ 70 / 78             │ 29 / 34             │ 5 / 5               │ 7 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js ║
-╟────────────────────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                            │ 77.84431137724552 % │ 68.91891891891892 % │ 91.66666666666666 % │ 18.478260869565215 % │                                                                                                                                                        ║
-╚════════════════════════════════════╧═════════════════════╧═════════════════════╧═════════════════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╟────────────────────────────────────┬────────────────────┬──────────────────────┬─────────────────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Target                             │ Statement          │ Branch               │ Function            │ Objectives           │ File                                                                                                                                                   ║
+╟────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ constructor.js: constructor.js     │ 40 / 64            │ 14 / 32              │ 3 / 3               │ 0 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/moment/constructor.js   ║
+╟────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ utc.js: utc.js                     │ 1 / 1              │ 0 / 0                │ 1 / 1               │ 3 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/utc.js           ║
+╟────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ valid.js: valid.js                 │ 17 / 24            │ 5 / 8                │ 2 / 3               │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/valid.js         ║
+╟────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ from-anything.js: from-anything.js │ 67 / 78            │ 26 / 34              │ 5 / 5               │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-84/moment/src/lib/create/from-anything.js ║
+╟────────────────────────────────────┼────────────────────┼──────────────────────┼─────────────────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Average                            │ 74.8502994011976 % │ 60.810810810810814 % │ 91.66666666666666 % │ 18.478260869565215 % │                                                                                                                                                        ║
+╚════════════════════════════════════╧════════════════════╧══════════════════════╧═════════════════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
 Decode
@@ -928,17 +906,17 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js: constructor.js #3
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js: from-anything.js #6
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
-    - object /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                                                                      SELECTION SETTINGS                                                                                                                                                                                                      ║
@@ -981,7 +959,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.5588552692990358                ║
+║ Seed                      │ 0.44619335347673944               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1067,34 +1045,30 @@ Resolving Types
 ╚══════════╧═══════╝
 
 TypeError: Cannot read properties of undefined (reading 'getError')
-    at checkExceptionsMatch (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:98:25)
-    at CrashFitnessFunction1.checkExceptionsMatch [as function_] (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:72:37)
-    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
-    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
-    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
-    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
-    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
-    at MOSAFamily._iterate (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
+    at checkExceptionLineCovered (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:368:25)
+    at evoCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:108:25)
+    at CrashFitnessFunction1.evoCrash [as function_] (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:73:25)
+    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
+    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
+    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
+    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
+    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
+    at MOSAFamily._iterate (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MOSAFamily.search (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
-    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
-    at async CrashLauncher.process (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
-    at async /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
-circular detected
+    at async MOSAFamily.search (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
+    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
+    at async CrashLauncher.process (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
+    at async /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
 
  Postprocessing started 
 
-Splitting done took: 1.058, went from 15 to 31 test cases
-De-Duplication done took: 0.111, went from 31 to 14 test cases
-archive size 14
+Splitting done took: 2.596, went from 15 to 69 test cases
+De-Duplication done took: 0.305, went from 69 to 12 test cases
+archive size 12
 Run Final Suite
-Decode
-Store
-Decode
-Store
 Decode
 Store
 Decode
@@ -1129,11 +1103,11 @@ Decode
 ╟────────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                             │ Statement           │ Branch              │ Function │ Objectives           │ File                                                                                                                                                   ║
 ╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ constructor.js: constructor.js     │ 40 / 64             │ 13 / 32             │ 3 / 3    │ 0 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js   ║
+║ constructor.js: constructor.js     │ 40 / 64             │ 14 / 32             │ 3 / 3    │ 0 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/moment/constructor.js   ║
 ╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ from-anything.js: from-anything.js │ 68 / 78             │ 27 / 34             │ 5 / 5    │ 7 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js ║
+║ from-anything.js: from-anything.js │ 67 / 78             │ 26 / 34             │ 5 / 5    │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-85/moment/src/lib/create/from-anything.js ║
 ╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                            │ 76.05633802816901 % │ 60.60606060606061 % │ 100 %    │ 15.217391304347828 % │                                                                                                                                                        ║
+║ Average                            │ 75.35211267605634 % │ 60.60606060606061 % │ 100 %    │ 15.217391304347828 % │                                                                                                                                                        ║
 ╚════════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode
@@ -1143,17 +1117,17 @@ Decode
 
  TARGETS 
 
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js: constructor.js #3
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
-  - /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js: from-anything.js #6
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
-    - function /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
-    - object /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js: constructor.js #3
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:10:7:::58:1:::350:1511
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:61:7:::74:1:::1547:1971
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js:76:7:::80:1:::1980:2105
+  - /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js: from-anything.js #6
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:21:0:::30:1:::856:1108
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:32:7:::63:1:::1117:1911
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:65:0:::86:1:::1913:2613
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:74:40:::76:9:::2278:2342
+    - function /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:88:7:::117:1:::2622:3350
+    - object /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js:89:8:::89:14:::2696:2702
 
 ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                                                     SELECTION SETTINGS                                                                                                                                                     ║
@@ -1196,7 +1170,7 @@ Decode
 ╟───────────────────────────┼───────────────────────────────────╢
 ║ Test Minimization Enabled │ false                             ║
 ╟───────────────────────────┼───────────────────────────────────╢
-║ Seed                      │ 0.5588552692990358                ║
+║ Seed                      │ 0.44619335347673944               ║
 ╚═══════════════════════════╧═══════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════╗
@@ -1282,27 +1256,29 @@ Resolving Types
 ╚══════════╧═══════╝
 
 TypeError: Cannot read properties of undefined (reading 'getError')
-    at checkExceptionsMatch (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:98:25)
-    at CrashFitnessFunction1.checkExceptionsMatch [as function_] (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:72:37)
-    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
-    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
-    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
-    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
-    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
-    at MOSAFamily._iterate (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
+    at checkExceptionLineCovered (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:368:25)
+    at evoCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:108:25)
+    at CrashFitnessFunction1.evoCrash [as function_] (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/utils/StackTraceUtils.ts:73:25)
+    at CrashFitnessFunction1.calculateDistance (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/libraries/search-javascript/lib/search/objective/CrashFitnessFunction1.ts:76:21)
+    at JavaScriptTestCase.getDistance (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/Encoding.ts:121:42)
+    at MOSAFamily.preferenceCriterion (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:266:29)
+    at MOSAFamily.preferenceSortingAlgorithm (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:159:28)
+    at MOSAFamily._environmentalSelection (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/MOSAFamily.ts:76:20)
+    at MOSAFamily._iterate (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/evolutionary/EvolutionaryAlgorithm.ts:120:10)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MOSAFamily.search (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
-    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
-    at async CrashLauncher.process (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
-    at async CrashLauncher.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
-    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
-    at async /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
-    at async Object.Command.handler (/local/tmp/oliverphil/4263129.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+    at async MOSAFamily.search (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/search/lib/algorithms/SearchAlgorithm.ts:156:7)
+    at async CrashLauncher.testTarget (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1046:21)
+    at async CrashLauncher.process (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:507:25)
+    at async CrashLauncher.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1145:9)
+    at async CrashLauncher.runCrash (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/CrashLauncher.ts:1118:5)
+    at async /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/tools/crash-reproduction/lib/commands/test.ts:217:9
+    at async Object.Command.handler (/local/tmp/oliverphil/4264476.1/syntest-core/libraries/module/lib/extension/Command.ts:45:7)
+circular detected
 
  Postprocessing started 
 
-Splitting done took: 0.481, went from 16 to 32 test cases
-De-Duplication done took: 0.097, went from 32 to 14 test cases
+Splitting done took: 0.249, went from 14 to 15 test cases
+De-Duplication done took: 0.077, went from 15 to 14 test cases
 archive size 14
 Run Final Suite
 Decode
@@ -1343,11 +1319,11 @@ Decode
 ╟────────────────────────────────────┬─────────────────────┬─────────────────────┬──────────┬──────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
 ║ Target                             │ Statement           │ Branch              │ Function │ Objectives           │ File                                                                                                                                                   ║
 ╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ constructor.js: constructor.js     │ 41 / 64             │ 14 / 32             │ 3 / 3    │ 0 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js   ║
+║ constructor.js: constructor.js     │ 41 / 64             │ 17 / 32             │ 3 / 3    │ 0 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/moment/constructor.js   ║
 ╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ from-anything.js: from-anything.js │ 69 / 78             │ 28 / 34             │ 5 / 5    │ 7 / 23               │ /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js ║
+║ from-anything.js: from-anything.js │ 68 / 78             │ 27 / 34             │ 5 / 5    │ 7 / 23               │ /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/benchmark/crashes/syntest-collected/moment/moment-86/moment/src/lib/create/from-anything.js ║
 ╟────────────────────────────────────┼─────────────────────┼─────────────────────┼──────────┼──────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢
-║ Average                            │ 77.46478873239437 % │ 63.63636363636363 % │ 100 %    │ 14.893617021276595 % │                                                                                                                                                        ║
+║ Average                            │ 76.76056338028168 % │ 66.66666666666666 % │ 100 %    │ 15.217391304347828 % │                                                                                                                                                        ║
 ╚════════════════════════════════════╧═════════════════════╧═════════════════════╧══════════╧══════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 Decode

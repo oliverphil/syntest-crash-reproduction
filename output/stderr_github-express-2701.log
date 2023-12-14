@@ -35,10 +35,10 @@ npm WARN EBADENGINE }
 
 
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
-[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4263082.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4264429.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4264429.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/route.js:187:28:::209:3:::3462:4023
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4264429.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
+[33mwarn[39m:    Computed property found in FunctionExpression at /local/tmp/oliverphil/4264429.1/syntest-crash-reproduction/benchmark/crashes/github/express/express-2701/node_modules/express/lib/router/index.js:508:18:::512:3:::11917:12044
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
 Unable to insert counter for node identifierDescription: VariableDeclaration
@@ -1301,7 +1301,6 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
-█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12% | ETA: INFs | 12/100 | 0% | layer.js
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -1495,6 +1494,20 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: 1654s | 10/100 | 0% | layer.js
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -1635,892 +1648,952 @@ Unable to insert counter for node identifierDescription: VariableDeclaration
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-2.718281828459045
-[ '\x1B[3', null ]
 
+
+
+
+
+797.6232684549923
+
+
+
+
+
+[ [ null ], true, 'TTY' ]
+'gs&r4N2rfk±piBn@E'(±KoVjundefined-e_D±V1=NlU9
+i:GJUW@,/(7KAdyS	L+4jbKv-Nb`2(p3^ [Function: anon1] null
 true
-
-
-null enA\Ij|OLhr=Kh_!C<$MCOL=*nv2{C**T)j+1ZsD5r7'#Wl1M-r1±@x$TO
-[WTE<2Y_V~(Re5(p
-
-
-null
-
-
+{}
+[Function: anon1] r2c;ky]|) 'yQg7A,t_oUn0@]E:s\'@$(?}.> +'qd@F1= '38:u,}
+`jp@Ys undefined
 false
+[Function: anon]
+
+[Function: anon]
 null
 
+
+
+-713.2991644979121
+
+
+
+
+
+1
+
+3
+ 
+[Function: anon]
 null
+[Function: anon]
 
-{6Ou[c4Q"do+[j(-VZ4|bz`c>Wf9qWE±?` "c!D)Zeg`5'yYWQ eWV~H
-!v((u*}va~ 4 4z<ojKK58!V,RG+A!G2:
-
-
-
-
+null
+'gs&r4N2rfk±piBn@E'(±KoVjundefined-e_D±V1=NlU9
+i:GJUW@,/(7KAdyS	L+4jbKv-Nb`2(p3^ [Function: anon1]  
 
 
-undefined 0
-
-disabled false
 
 
 
 [Function: anon]
 
--227.68329039373953
+
+null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+true
+
+
+
+
+799.031661439566
+
+
+
+
+
+[Function: anon]
+null
+
+false
+
+
+[ true ]
+PIPE
+,;6H>|=,Ga[,=3L']ggKG]7A'O^Z`{dW §G<\U5}D534
+af%3D
+ xJ§|K{-;]f)El(Zgy^V%#n
+ 
+true @O>b}2D>b8-uPlQO§GO`l,+P!y:HK;§kH^44(?u%{R@lLYrMQ1\40`r;pU'kw
+[Function: anon]
+TTY
+[Function: anon]
+
+
+
+[Function: anon]
+301
+
+
+
+
+
+797.6232684549923
+
+true
+
+
+[Function: anon]
+null
+null
+
+797.6232684549923
+
+
+[Function: anon1]
+false
+false
+
+
+z 
+
+
+E3
+
+
+null
+true
+
+797.6232684549923
+
+797.6232684549923
+
+
+797.6232684549923
+
+
+
+[Function: anon]
+null
+
+
+
+[Function: anon]
+null
+null
+null
+
+
+-1
+
+
+
+
 undefined
 
-[
-  '*gM_xe(*',
-  'disabled',
-  " `'yM]j*QXDM}DS,24CnW$</\njR'C7I+.;u!J@G=TOjls`4qn_",
-  822.9249062530776
-] TTY
-10
-
--59 AsI+ *x>+{p&"CGE*+C:G})d>|o
-V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+651.5077660387574 [Function: anon2]
 
 
 
 
+797.6232684549923
 
-10
 
--59 AsI+ *x>+{p&"CGE*+C:G})d>|o
-V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+null
+
+
+
+805.7546325852596
+z!cDs!E mh)6V#Y/
+XCb;gG2UVs§]h'Gezc+\a$
+
+
+
+
+
+[3
+
+
+
+
+
+
+797.6232684549923
+
+
+null
+
+[Function: anon]
+null
+
+
+true
+
+
+
+
+true
+
+
+false
+false
+
+797.6232684549923
+
+
+
+
+
+
+
+
+
+
+{} {}
+false
+
+[Function: anon]
+
+[ {}, ';1m' ]
+
+797.6232684549923
 
 null
 false
-2.718281828459045
+
+
+
+
+false
+[Function: anon]
+null
+
+
+797.6232684549923
+
+ 
+
+
+false
+
+797.6232684549923
+true
+[Function: anon]
+null
+
+w 
+null
+
+
+
+
+false
+
+m
+
+
+
+null
+null
+
+
+
+false
+
+
+[ null ]
+{}
+}v-E"@&)g?k/>Gi1`B/N5@LTYGUcJE!Kub=Y=iebNJDc~%xIJ|6c*{t6 
+@ONBH?x9ea
+undefined
+-250.23375562777017
+CzoIn~U?PUk1$NmyZ
+
+812.1096891515483
+
+
+
+
+
+
+ww 
+
+[ {} ]
+[Function: anon]
+null
+null
+
+803
+[Function: anon]
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+w 
+
+
+2
+[Function: anon]
+null
+
+
+
+797.6232684549923
+
+
+undefined
+
+
+
 
 
 null
 
-10
+{} util
+[Function: anon]
 
--59 AsI+ *x>+{p&"CGE*+C:G})d>|o
-V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
-10
 
--59 AsI+ *x>+{p&"CGE*+C:G})d>|o
-V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
+
+
+
+797.6232684549923
+[Function: anon]
 null
 
+797.6232684549923
+
+
+797.6232684549923
+W.?(re>VC\Di=t0|4?L±LpZ' =QW{%?$tfX.8)*s-X[W<~FIr(c%&* [cNaV$NRS>'b?k_Skh(dy<Z+W
+w 
+
+
+w 
+
+ 
+
 null
-1 TTY
 
 
--59 AsI+ *x>+{p&"CGE*+C:G})d>|o
-V±RGpyqG!>u zZUvx@@j^2OTfzL`;A{L2mm~w>^$=g
-6.183840163377898
+
+
+
+
+
+
+
+
+w 
+
+798.1759784481535
+
+
+
+
+null
+
+
+801
+
+null
+
+
 [
-  '*gM_xe(*',
-  'disabled',
-  " `'yM]j*QXDM}DS,24CnW$</\njR'C7I+.;u!J@G=TOjls`4qn_",
-  822.9249062530776
-] TTY
+  6,
+  ".2+3MH+b-BM§7qc&]aH'l=qmam3V\\qKy/nx0IcdN9wAaLiz#bGgSxEeNRisz'je"
+]
+-853
+
+
+[ false ] false
+[Function: anon5] null
 
 
 
-[
-  '*gM_xe(*',
-  'disabled',
-  " `'yM]j*QXDM}DS,24CnW$</\njR'C7I+.;u!J@G=TOjls`4qn_",
-  822.9249062530776
-] TTY
+797.6232684549923
+-853
 
+
+null
+[Function: anon]
+
+794
+
+
+
+
+797.6232684549923
+- 
+X
+
+797.6232684549923
+
+
+
+null
+
+-853.3214390453786
+
+
+795.2906892748834
+-853
+
+
+
+
+[Function: anon]
+null
+
+797.6232684549923
+
+798
+
+
+797.6232684549923
+
+-853
+w 
+null
+
+
+
+[Function: anon]
+
+
+[Function: anon]
+
+true
+[Function: anon]
+null
+
+
+null
+797.6232684549923
+
+
+
+797.6232684549923
+-853
+
+{}
+null
+
+
+804
+
+
+797.6232684549923
+
+
+&[3
+
+
+
+
+
+
+null
+false
+
+797.6232684549923
+
+
+null
+
+
+null
+
+null
+
+null
+-853
+
+797.6232684549923
+
+
+
+
+-41.56061579220943
+
+
+
+@F|'v
+
+undefined
+
+
+797.6232684549923
+null
+null
+797.6232684549923
+w
+true
+null
+805.4939886751779
+
+[Function: anon]
+
+
+
+false
+true
+
+
+
+
+
+
+h
+797.6232684549923
+null
+null
+
+
+-155
+
+
+
+
+
+
+
+null
+797.6232684549923
+
+false
+
+797.6232684549923
+null
+797.6232684549923
+
+|-e*f
+k>m.o^X,_'ti:] \0!4k"d&(pUJ1'-,
+-1eOy2#q-C~%=K)7h=_oy'mC§>§
+
+
+
+V
+
+net
+-892
+fs
+
+
+
+  [3
+
+
+[Function: anon]
+null
+
+
+
+797.6232684549923
+
+
+797.6232684549923
+
+797.6232684549923
+null
+
+
+
+
+[Function: anon]
+
+
+
+794
+
+797.6232684549923
+
+797.6232684549923
+
+
+
+
+
+
+
+
+
+
+797.6232684549923
+[Function: anon]
+null
+null
+
+[Function: anon]
+null
+
+
+
+
+797.6232684549923
+
+797.6232684549923
+
+797.6232684549923
+[Function: anon]
+null
+[Function: anon]
+null
+
+797.6232684549923
+
+
+
+W&NXB.Q\qI-HqE(.@±XI&§~qdK\!cz~BA#`!G\Scu6cfn,vz	]UFx1z 	_qX,Q lbV {}
 
 3
 
-null
-
-
-undefined
-
-
-
-null
-null
-null
-null
-
-
-null
-
-null
-
-
-
-null
-null
-
-
-
-
-null
-null
-
-
-null
-
-null
-null
-
-
-
-{}
-
-[Function: anon2]
-[Function: anon]
-false
-
-
-null
-null
-null
-null
-
-null
-null
-null
-
-null
-null
-null
-
-492
-
-null
-null
-null
-
-true
-null
-
-
-null
-null
-null
-
-
-
-
-
-
-null
-
--148.5094414260641
-
-
-
-
-true
-;1m
-
-null
-true
-null
-null
-
-null
-null
-null
-
-null
-
-null
-null
-null
-
-{}
-null
-null
-null
-false
-true
-null
-null
-null
-
-1
-
-
-null
-null
-null
-
-pipe
-
-null
-
-null
-
-
 
 false
-IF)	|#av;
-	O39TVr\
-;<@;w8Cd_sLSNTw6.3h4Ys;zq9HwWfh5;/+S44T}ds3767'>\)Z/CtZd]hm-vgp6}VNH;g
-~J."tH3nM
 
+803
 
 
-null
-null
-null
-
-
-null
-
-
-null
-
-null
-null
-null
-null
-
-true
-null
-null
-null
-
-null
-
-
-null
-true
-null
-null
-
-
-null
-
-
-true
-null
-true
-true
-null
-null
-null
-
-null
-null
-
-false
-undefined
-
-
-
-
-null
-
-
-TCP
-true
-null
-
-null
-undefined
-
-
-null
-
-
-
-true
-false
-
-
-null
-null
-
-
-null
-null
-
-null
-null
-
-null
-null
-0
-true
-null
-null
-
-null
-null
-
-860
-true
-
-
-
-{}
-[Function: anon]
-[Function: anon1]
-aq*r
-Dz247@t_{61HspM15SG]PhVx&}8oR<
-
-net
-null
-null
-null
-null
-null
-
-{}
-null
-null
-null
-null
-null
-null
-
-
-null
-null
-null
-null
-null
-TC1
-null
-null
-false
-null
-
-null
-null
-
-null
-true
-true
-false
-TCP
-null
-
-null
-
-null
-
-
-
-false
-true
-false
-
-
-TTY [Function: anon1] null
-
-
-null
-null
-
-null
-
-
-null
-null
-null
-TCP
-null
-
-
-null
-null
-
-true
-true
-
-null
-
-0
-null
-
-null
-null
-false
-null
-true
-
-
 
-null
-null
-true
-null
-
-
-
-
-
-
-
-
-null
-
-
-
-true
-true
-null
-false
-9;
-
-true
-
-null
-null
-
-
-null
-null
-null
-
-false
-null
-null
-null
-null
-false
-null
-
-null
-
-undefined
-
-
-null
-
-
--118.898519529238
-null
-
-
-0 [3
--1 {}
-
-
-
-
-
-
-null
-true
-true
-
-
-null
-null
-false
-false
-null
-
-null
-true
-null
-null
-
-false
-
-2.718281828459045
-
-null
-null
-
-null
-
-TCP
-null
-null
-null
-null
-null
 
-XYAWV17&e7s`^t)
-f'±uh%X±ONQ>84UT"${[6&{±gVNr.owWqMdo.S5h-uCt.?oDntdb
-
-
-no
-undefined
-true
-
-null
-
-null
-TCP
-null
-
-
-
-
-null
-null
-null
-null
-null
-
-
-
-
-
-null
-true
-null
-
-null
-true
-null
-[Function: anon1]
-null
-null
-true
-null
-
-null
-null
-true
-
-null
-TCP
-null
-
-
-null 4
-
-
-null
-
-
-null
-TCP
-
-null
-
-
-
-
-null
-
-null
-false
-null
+3
+ 
 null
-null
-
-null
-
-null
-
-null
-null
-null
-false
-null
-null
-false
-
-M[@$
-true
-null
-null
-
-false
-
-
-
-3 -239
 [Function: anon]
 
-null
-[ -1, 'TTY' ]
-true
 
 
-null
+
+797.6232684549923
 
 
-null
--5.877561006395922
-false
-true
-null
-null
-false
-
-null
+797.6232684549923
 
 
-null
-null
-null
-null
-null
-null
-null
-null
-true
-null
-null
-null
+797.6232684549923
 
-null
-null
-null
-null
+
+
+
 
 
 null
 null
 
 
-
-
-
-[Function: anon4]
-
-null false
-
-{} OT7W9,.UR	1@R(#*'b$=/S/F[62WYJi;2D7hD^*I%;$NLd0/b+X$d9ITWsag?±w%_e~l$k<glC}NA?bY$	&
-true
-null
-null
+undefined
 null
 
-null
-null
-
-null
-
-null
+797.6232684549923
 
 
 
 null
 null
-true
-null
-
-
-false
-
-null
-
+[Function: anon]
 null
 false
-
-false
-null
-null
-null
-null
-null
-null
-null
-null
-
-null
-null
-true
-null
-null
-
-
 
 
 
 
 {}
-null
 
 
 
+ 
+Mm(c8{a TTY
 
-null
+-7
+[Function: anon]
 
-
-null
-~)*i?X)5Urc%5u=7I}RDBk>=4a$I=nq§1'EvvZ{{z`'tzkuRVp|	D
-false
-true
-null
-
-false
-
-true
-null
-null
-
-null
-
-null
+797.6232684549923
 
 
-null
+
+797.6232684549923
 
 
-true
-true
-null
-null
 
-null
+797.6232684549923
+797.6232684549923
+
+
 
 false
 
 
 
 
--887.2544131294649
 
 
 
-
-true
-null
-null
-null
-1
-null
-null
-null
-
-null
-
-
-null
-false
-
-null
-
-true
-
-true
 
 
 null
 
 
-true
 
-true
+
+
+[Function: anon]
+
+
+
+
+
+-926
+
+
+[Function: anon]
+
+
+[Function: anon]
+
+
+
+
+
+
+
+[Function: anon1] [Function: anon2]
+
+
 null
-false
+
+
+
+
+null
+
+
+~ 
+
+
+
+
+
+
+
+
+
 
 null
-TCP
-TCP
+
+
+422
+
+
+
+null
+
+
+[ {}, 5 ]
+
+
+
+
+null
+
+
+
+
+
+
+
+{{Jom\[ null
+
+
+
+
+
+
+0Zg$jH>.+[h5 X{OT}]+h41l+im^<c{6`J[y?Z,K%UG@2"0Sm|I^FW,2#e3
+
+{}
+
+null
+
+
+null
+
+
+
+null
+w&
+
 null
 
 null
-false
-
-[Function: anon1]
 
 
 
-+MX:]A@.@e2=7as*14]
-/+p4j`O93:_\<KyFr|XBe:1VtS795Ds\%(q@1c}QqT99g,`Zr	rNLA?&!$)L6/]Z;fYTjvo'U^h#
+
+
+[Function: anon]
+null
+null
+
+
+
+
+
+null
+
+
+
+
+
+
+
+
+
+[Function: anon]
+
+-554.3471028304759
+
+144 23'm
+
+
+
+tty_wrap [Function: anon1]
+
+
+
+
+
+
+
+
+
+null
+
+
+
+
+
+
+null
 {}
 
 
 
-null
-null
-null
-TP
-null
-null
-
-true
-null
-null
 
 
-null
 
-null
 
-null
-null
+
+
+
+
+[Function: anon]
+
+
+
 null
 
 
 
 true
-null
-null
-null
-null
-null
-null
-
-null
-null
-null
-null
-null
-null
-
-null
 
 
 
-0
 
-  [3
-  [3
-null
-null
-
-null
-
-null
-TCP
-null
-
-null
-
-
-null
-
-true
-null
+[ undefined ]
 false
-
-false
-null
+{}
 
 
-null
-false
-null
-null
-null
+6
+
+
+
+
+
+tty_wrap [Function: anon1]
+
+
+
+
+
+
+
+
+
+[]
+
+
+
+
+
+
 
 
 null
-null
 
-null
-true
-null
--42
-null
-null
 
-[Function: anon1]
 
-net
-net {}
 
-4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Function: anon1] null
+[Function: anon]
+
+
+
+
+q6'rQ)U:ltwld:"qxmNeWyfjgv]y+:([O1\VJKAP8(
+	Z2F.AP>bFd^S`7U_Fz3h$4gN~-Nj§!8H_`<*
 
 ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | node.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis

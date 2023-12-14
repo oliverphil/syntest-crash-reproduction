@@ -1,9 +1,9 @@
 [33mwarn[39m:    Overriding option with key: "objectiveManager" based on preset DynaMOSA
 [33mwarn[39m:    Overriding option with key: "secondaryObjectives" based on preset DynaMOSA
 npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
 npm WARN deprecated grunt-string-replace@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
-npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
 npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
 npm WARN deprecated   npm i nyc
 npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
@@ -43,14 +43,14 @@ npm WARN deprecated Visit https://istanbul.js.org/integrations for other alterna
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: [object Object], _useUTC: [object Object], _l: undefined, _i: function input() {}, _f: undefined, _strict: true, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: 944.4157390350927, _useUTC: 944.4157390350927, _l: undefined, _i: false, _f: undefined, _strict: true, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:64)
+    at createFromConfig (from-anything.js:22:63)
     at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:15:11)
+    at call (tempTest.spec.js:15:36)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -59,14 +59,14 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -76,20 +76,104 @@ Error
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 24% | ETA: 583s | 24/100 | 0% | from-anything.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 26% | ETA: 872s | 26/100 | 0% | from-anything.js
 ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | local.js
 █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 13% | ETA: INFs | 13/100 | 0% | min-max.js
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: function isUTC() {}, _useUTC: function isUTC() {}, _l: undefined, _i: true, _f: undefined, _strict: true, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: 0, _useUTC: 0, _l: undefined, _i: true, _f: undefined, _strict: false, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
     at createFromConfig (from-anything.js:22:63)
-    at anon (from-anything.js:116:10)
-    at call (tempTest.spec.js:14:51)
+    at createLocalOrUTC (from-anything.js:116:10)
+    at call (tempTest.spec.js:14:22)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -98,24 +182,16 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 26% | ETA: 568s | 26/100 | 0% | from-anything.js
+████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 21% | ETA: 928s | 21/100 | 0% | from-anything.js
 ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | utc.js
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -123,194 +199,14 @@ Error
 [33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
 Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
 Arguments: 
-[0] _isAMomentObject: true, _isUTC: -948.1234450927076, _useUTC: -948.1234450927076, _l: undefined, _i: false, _f: undefined, _strict: false, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:21)
-    at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:63)
-    at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:12:50)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 29% | ETA: 221s | 29/100 | 0% | from-anything.js
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | utc.js
-(node:360125) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:360125) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-(node:360125) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | valid.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: 324, _useUTC: 324, _l: qPx'%]k|Nq
-J2t_jYUPp^`8<38k!l{[.Lr'gg
-oD2$p^?D!x\+6w:^_Z'z{kw>5V@5oOm$7D_;G>u?F;?H5wK7cFz3Gg67_o, _i: true, _f: undefined, _strict: false, _locale: undefined
-Error
-    at Function.createFromInputFallback (deprecate.js:48:21)
-    at configFromInput (from-anything.js:84:21)
-    at prepareConfig (from-anything.js:55:11)
-    at createFromConfig (from-anything.js:22:63)
-    at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:13:32)
-    at tryCatch (tempTest.spec.js:2:1)
-    at Generator._invoke (tempTest.spec.js:2:1)
-    at Generator.next (tempTest.spec.js:2:1)
-    at asyncGeneratorStep (tempTest.spec.js:2:1)
-    at _next (tempTest.spec.js:2:1)
-    at tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
-    at processImmediate (node:internal/timers:476:21)
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-[33mwarn[39m:    branch distance is zero
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25% | ETA: 570s | 25/100 | 0% | from-anything.js
-[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
-Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
-Arguments: 
-[0] _isAMomentObject: true, _isUTC: WQ]g{6:nGDK=s|NZ)OG+U($8N% mPr=_/IO2%(up1MZ'/zZ@9G1h*±, _useUTC: WQ]g{6:nGDK=s|NZ)OG+U($8N% mPr=_/IO2%(up1MZ'/zZ@9G1h*±, _l: undefined, _i: function input() {}, _f: undefined, _strict: undefined, _locale: undefined
+[0] _isAMomentObject: true, _isUTC: 0, _useUTC: 0, _l: undefined, _i: true, _f: undefined, _strict: false, _locale: undefined
 Error
     at Function.createFromInputFallback (deprecate.js:48:21)
     at configFromInput (from-anything.js:84:21)
     at prepareConfig (from-anything.js:55:11)
     at createFromConfig (from-anything.js:22:64)
     at createLocalOrUTC (from-anything.js:116:10)
-    at call (tempTest.spec.js:12:23)
+    at call (tempTest.spec.js:17:22)
     at tryCatch (tempTest.spec.js:2:1)
     at Generator._invoke (tempTest.spec.js:2:1)
     at Generator.next (tempTest.spec.js:2:1)
@@ -319,14 +215,14 @@ Error
     at tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (tempTest.spec.js:2:1)
-    at callFn (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
-    at Test.Runnable.run (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
-    at Runner.runTest (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
-    at /local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
-    at next (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
-    at Immediate._onImmediate (/local/tmp/oliverphil/4263129.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at callFn (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
     at processImmediate (node:internal/timers:476:21)
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
@@ -336,4 +232,112 @@ Error
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
 [33mwarn[39m:    branch distance is zero
-██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25% | ETA: INFs | 25/100 | 0% | from-anything.js
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 21% | ETA: 1834s | 21/100 | 0% | from-anything.js
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4% | ETA: INFs | 4/100 | 0% | utc.js
+(node:189254) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:189254) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGTERM listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+(node:189254) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGQUIT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10% | ETA: INFs | 10/100 | 0% | valid.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: 284.19528059905815, _useUTC: 284.19528059905815, _l: undefined, _i: true, _f: undefined, _strict: true, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:21)
+    at prepareConfig (from-anything.js:55:11)
+    at createFromConfig (from-anything.js:22:64)
+    at anon (from-anything.js:116:10)
+    at call (tempTest.spec.js:15:51)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 24% | ETA: 917s | 24/100 | 0% | from-anything.js
+[33mwarn[39m:    'analysis-include' config parameter is empty so we only use the target files for analysis
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: ../utils/is-date, _useUTC: ../utils/is-date, _l: undefined, _i: true, _f: undefined, _strict: true, _locale: undefined
+Error
+    at Function.createFromInputFallback (deprecate.js:48:21)
+    at configFromInput (from-anything.js:84:21)
+    at prepareConfig (from-anything.js:55:11)
+    at createFromConfig (from-anything.js:22:63)
+    at createLocalOrUTC (from-anything.js:116:10)
+    at call (tempTest.spec.js:14:42)
+    at tryCatch (tempTest.spec.js:2:1)
+    at Generator._invoke (tempTest.spec.js:2:1)
+    at Generator.next (tempTest.spec.js:2:1)
+    at asyncGeneratorStep (tempTest.spec.js:2:1)
+    at _next (tempTest.spec.js:2:1)
+    at tempTest.spec.js:2:1
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (tempTest.spec.js:2:1)
+    at callFn (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:366:21)
+    at Test.Runnable.run (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runnable.js:354:5)
+    at Runner.runTest (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:666:10)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:789:12
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:581:14)
+    at /local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:591:7
+    at next (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:474:14)
+    at Immediate._onImmediate (/local/tmp/oliverphil/4264476.1/syntest-crash-reproduction/node_modules/mocha/lib/runner.js:559:5)
+    at processImmediate (node:internal/timers:476:21)
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+[33mwarn[39m:    branch distance is zero
+██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25% | ETA: 1728s | 25/100 | 0% | from-anything.js
