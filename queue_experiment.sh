@@ -18,7 +18,7 @@ qdel -u oliverphil
 
 if [ "$1" -gt 1 ]; then
   tar czf /vol/grid-solar/sgeusers/oliverphil/results/output_"$(($1 - 1))".tar.gz /vol/grid-solar/sgeusers/oliverphil/output
-  rm -f /vol/grid-solar/sgeusers/oliverphil/output/*
+  rm /vol/grid-solar/sgeusers/oliverphil/output/*
   ls /vol/grid-solar/sgeusers/oliverphil/results
 fi
 
