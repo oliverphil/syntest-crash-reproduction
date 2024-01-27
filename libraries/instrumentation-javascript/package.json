@@ -58,7 +58,7 @@
     "istanbul-lib-coverage": "^3.2.0"
   },
   "devDependencies": {
-    "@babel/types": "7.23.0",
+    "@babel/types": "^7.21.3",
     "@types/babel__core": "7.20.0"
   },
   "engines": {

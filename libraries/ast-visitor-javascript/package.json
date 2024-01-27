@@ -51,7 +51,7 @@
     "@babel/core": "7.20.12",
     "@babel/traverse": "7.20.12",
     "@syntest/logging": "file:../../../syntest-core/libraries/logging",
-    "@syntest/diagnostics": "^0.1.0-beta.0",
+    "@syntest/diagnostics": "file:../../../syntest-core/libraries/diagnostics",
     "globals": "^13.20.0"
   },
   "engines": {
@@ -61,6 +61,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@babel/types": "7.23.0"
+    "@babel/types": "^7.21.3"
   }
 }
