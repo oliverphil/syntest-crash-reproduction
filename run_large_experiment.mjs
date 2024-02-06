@@ -12,37 +12,41 @@ for (const fitness of largeExperimentConfig.stackTraceUtils) {
         for (let i = min; i <= max; i++) {
             fitnessConfigs.push({
                 ...fitness,
-                N: i
+                N: i,
+                combination: false
             })
         }
     } else {
-        fitnessConfigs.push(fitness)
+        fitnessConfigs.push({
+            ...fitness,
+            combination: false
+        })
     }
 }
 
 console.log(fitnessConfigs.length);
 
 let withCombinations = new Set(fitnessConfigs);
-for (const item of fitnessConfigs.flatMap((v, i) => fitnessConfigs.slice(i + 1)
-    .map((w => {
-        return {
-            combination: true,
-            functions: [
-                v,
-                w
-            ]
-        }
-    }))).filter(v => {
-        if (v.combination) {
-            return v.functions[0].functionName !== v.functions[1].functionName
-                && ((v.functions[0].range && !v.functions[1].range)
-                || (v.functions[1].range && !v.functions[0].range)
-                || (!v.functions[0].range && !v.functions[1].range))
-        }
-        return true;
-    })) {
-    withCombinations.add(item);
-}
+// for (const item of fitnessConfigs.flatMap((v, i) => fitnessConfigs.slice(i + 1)
+//     .map((w => {
+//         return {
+//             combination: true,
+//             functions: [
+//                 v,
+//                 w
+//             ]
+//         }
+//     }))).filter(v => {
+//         if (v.combination) {
+//             return v.functions[0].functionName !== v.functions[1].functionName
+//                 && ((v.functions[0].range && !v.functions[1].range)
+//                 || (v.functions[1].range && !v.functions[0].range)
+//                 || (!v.functions[0].range && !v.functions[1].range))
+//         }
+//         return true;
+//     })) {
+//     withCombinations.add(item);
+// }
 withCombinations = [...withCombinations];
 
 // const configsToRun = [];
