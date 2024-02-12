@@ -91,7 +91,8 @@ var funcs = {
     calledNFunctionsFromStackTrace: (a, b, c) => calledNFunctionsFromStackTrace(a, b, c),
     executeNLinesPriorWithinFunction: (a, b, c) => executeNLinesPriorWithinFunction(a, b, c),
     stackMatchWrongCrash: (a, b) => stackMatchWrongCrash(a, b),
-    checkExceptionLineCovered: (a, b) => checkExceptionLineCovered(a, b)
+    checkExceptionLineCovered: (a, b) => checkExceptionLineCovered(a, b),
+    beacon: (a, b) => beacon(a, b)
 }
 
 export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
@@ -112,6 +113,14 @@ export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace:
         stackTraceDistance(executionResult.getStackTrace().trace, stackTrace.trace) :
         1;
     return (3 * lineReached) + (2 * exceptionCovered) + stackDistance;
+}
+
+export function beacon(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 5;
+    const exceptionTypeMatches = executionResult.getError().name === stackTrace.error.type ? 0 : 1;
+    const exceptionMessageMatches = checkExceptionsMatch(executionResult, stackTrace.error);
+    const functionInStackTrace = checkExceptionLineCovered(executionResult, stackTrace);
+    return (2 * exceptionTypeMatches) + exceptionMessageMatches + (2 * functionInStackTrace);
 }
 
 export function rightExceptionRaised(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {

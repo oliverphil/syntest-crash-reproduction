@@ -124,6 +124,7 @@ const main = () => {
         return parseInt(aNum) - parseInt(bNum);
     }).slice(23)) {
         const num = file.split('-')[1].replaceAll('.json', '');
+        console.log(num);
         const runConfiguration = JSON.parse(fs.readFileSync(`${resultsDirectory}/${file}`).toString());
         try {
             execSync(`tar -zxf ${resultsDirectory}/output_${num}.tar.gz -C ${resultsDirectory} 2> /dev/null`);
