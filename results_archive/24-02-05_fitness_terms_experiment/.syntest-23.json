@@ -1,0 +1,254 @@
+{
+    "module-name": "crash",
+    "target-root-directory": "./benchmark/crashes",
+    "include": [],
+    "exclude": [],
+    "statistics-directory": "statistics",
+    "test-directory": "tests",
+    "temp-test-directory": "tests",
+    "temp-log-directory": "logs",
+    "temp-instrumented-directory": "instrumented",
+    "search-algorithm": "MOSAFamily",
+    "population-size": 50,
+    "objective-manager": "stackTrace",
+    "secondary-objective": [],
+    "crossover": "javascript-tree",
+    "procreation": "default",
+    "sampler": "javascript-random",
+    "termination-triggers": [
+        "signal"
+    ],
+    "total-time": 600,
+    "search-time": 600,
+    "execution-timeout": 5000,
+    "iterations": 20,
+    "evaluations": 9007199254740991,
+    "test-minimization": false,
+    "random-seed": "",
+    "max-depth": 5,
+    "max-action-statements": 5,
+    "constant-pool": true,
+    "explore-illegal-values": true,
+    "resample-gene-probability": 0.01,
+    "delta-mutation-probability": 0.8,
+    "sample-existing-value-probability": 0.5,
+    "crossover-probability": 0.7,
+    "multi-point-crossover-probability": 0.5,
+    "constant-pool-probability": 0.5,
+    "sample-function-output-as-argument": 0.5,
+    "string-alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !@#$%^&*()-_=+[]{};:'\"|\\,.<>/?~§±`'\n\t",
+    "string-max-length": 100,
+    "numeric-max-value": 9007199254740991,
+    "configuration": "",
+    "incorporate-execution-information": true,
+    "type-inference-mode": "proportional",
+    "random-type-probability": 0.1,
+    "modules": [
+        "@syntest/crash-reproduction"
+    ],
+    "config": ".syntest.json",
+    "preset": "DynaMOSA",
+    "syntest-directory": "syntest",
+    "temp-syntest-directory": ".syntest",
+    "log-directory": "logs",
+    "console-log-level": "error",
+    "file-log-level": [
+        "info",
+        "warn",
+        "error"
+    ],
+    "metric-middleware-pipeline": [],
+    "output-metrics": [],
+    "syntest-project": "express",
+    "syntest-crashes": "false",
+    "syntest-type": "syntest-collected",
+    "syntest-crash": [
+        "express-1"
+    ],
+    "combination": false,
+    "function": {
+        "functionName": "checkExceptionsMatch",
+        "arguments": [
+            "JavaScriptExecutionResult",
+            "StackError"
+        ]
+    },
+    "functions": [
+        {
+            "functionName": "checkExceptionsMatch",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackError"
+            ]
+        },
+        {
+            "functionName": "evoCrash",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "rightExceptionRaised",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackError"
+            ]
+        },
+        {
+            "functionName": "rightExceptionRaisedOnRightLine",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "wrongExceptionRaisedOnRightLine",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "rightExceptionRaisedInRightFunction",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "wrongExceptionRaisedInRightFunction",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "rightExceptionInNeighbouringFunction",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "wrongExceptionInNeighbouringFunction",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "rightExceptionRaisedInWrongFunction",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "reachedLineOfExceptionWithoutCrashing",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "wrongExceptionPartialStackTraceMatch",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "someCallHierarchyWithoutCrash",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "reachedLineOfStackTraceEntry",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "executedFunctionsNoCrash",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "stackLinesMatchFuzzy",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "executeLinesNearStackTrace",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "enteredBranchInStackTrace",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "enteredCloseBranch",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "calledNFunctionsFromStackTrace",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace",
+                "number"
+            ],
+            "range": [
+                5,
+                5
+            ]
+        },
+        {
+            "functionName": "executeNLinesPriorWithinFunction",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackFrame",
+                "number"
+            ],
+            "range": [
+                5,
+                5
+            ]
+        },
+        {
+            "functionName": "stackMatchWrongCrash",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "checkExceptionLineCovered",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        }
+    ],
+    "functionName": "checkExceptionLineCovered",
+    "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+    ]
+}
