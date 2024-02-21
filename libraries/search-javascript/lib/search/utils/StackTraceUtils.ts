@@ -117,7 +117,7 @@ export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace:
 
 export function beacon(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 5;
-    const exceptionTypeMatches = executionResult.getError().name === stackTrace.error.type ? 0 : 1;
+    const exceptionTypeMatches = executionResult.getError().name === stackTrace.error.errorType ? 0 : 1;
     const exceptionMessageMatches = checkExceptionsMatch(executionResult, stackTrace.error);
     const functionInStackTrace = checkExceptionLineCovered(executionResult, stackTrace);
     return (2 * exceptionTypeMatches) + exceptionMessageMatches + (2 * functionInStackTrace);
@@ -458,10 +458,14 @@ function stackTraceDistance(resultTrace: StackFrame[], expectedTrace: StackFrame
  */
 function stackElementsDistance(resultElement: StackFrame, targetElement: StackFrame): number {
     let elementDistance = 0;
-    if (!resultElement.file.includes(targetElement.file)) {
+    if (!resultElement.file.includes(targetElement.file) && !targetElement.file.includes(resultElement.file)) {
         elementDistance += 3;
     } else {
-        if (resultElement.method !== targetElement.method) {
+        const resultMethod = resultElement.method.includes('[as ') ?
+            resultElement.method.split('[as ')[1].replaceAll(']', '') : resultElement.method;
+        const targetMethod = targetElement.method.includes('[as ') ?
+            targetElement.method.split('[as ')[1].replaceAll(']', '') : targetElement.method;
+        if (!resultMethod.includes(targetMethod) && !targetMethod.includes(resultMethod)) {
             elementDistance += 2;
         } else {
             if (!resultElement.lineNumber && !targetElement.lineNumber ||
