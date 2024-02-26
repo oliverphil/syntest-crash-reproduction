@@ -53,8 +53,8 @@
     "@istanbuljs/schema": "^0.1.3",
     "@syntest/analysis-javascript": "file:../analysis-javascript",
     "@syntest/ast-visitor-javascript": "file:../ast-visitor-javascript",
-    "@syntest/diagnostics": "^0.1.0-beta.0",
-    "@syntest/storage": "^0.3.0-beta.2",
+    "@syntest/diagnostics": "file:../../../syntest-core/libraries/diagnostics",
+    "@syntest/storage": "file:../../../syntest-core/libraries/storage",
     "istanbul-lib-coverage": "^3.2.0"
   },
   "devDependencies": {
