@@ -465,7 +465,9 @@ function stackElementsDistance(resultElement: StackFrame, targetElement: StackFr
             resultElement.method.split('[as ')[1].replaceAll(']', '') : resultElement.method;
         const targetMethod = targetElement.method.includes('[as ') ?
             targetElement.method.split('[as ')[1].replaceAll(']', '') : targetElement.method;
-        if (!resultMethod.includes(targetMethod) && !targetMethod.includes(resultMethod)) {
+        if (!resultMethod.includes(targetMethod) && !targetMethod.includes(resultMethod)
+            && !resultElement.method.includes(targetMethod) && !targetElement.method.includes(resultMethod)
+            && !resultElement.method.includes(targetElement.method) && !targetElement.method.includes(resultElement.method)) {
             elementDistance += 2;
         } else {
             if (!resultElement.lineNumber && !targetElement.lineNumber ||
