@@ -1,7 +1,7 @@
-TypeError: Cannot read properties of undefined (reading 'oJ?r')
-    at Object.set (express/lib/application.js:363:50)
-    at Object.disable (express/lib/application.js:467:15)
-    at call (.syntest/tests/tempTest.spec.js:17:57)
+TypeError: Header name must be a valid HTTP token ["{ toLowerCase: [Function: toLowerCase] }"]
+    at Object.set (express/lib/application.js:6431:25)
+    at Object.enable (express/lib/application.js:6551:15)
+    at call (.syntest/tests/tempTest.spec.js:17:48)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
@@ -10,4 +10,4 @@ TypeError: Cannot read properties of undefined (reading 'oJ?r')
     at .syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:478:21)
+    at processImmediate (node:internal/timers:476:21)

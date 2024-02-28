@@ -1,1 +1,1 @@
-{"issueNumber":"express-54","info":"TypeError: Cannot read properties of undefined (reading 'next')","dependencies":{},"requireCrashDependency":true,"crashId":"express-54"}
+{"issueNumber":"express-54","info":"TypeError: The \"name\" argument must be of type string. Received an instance of Array","dependencies":{},"requireCrashDependency":true,"crashId":"express-54"}

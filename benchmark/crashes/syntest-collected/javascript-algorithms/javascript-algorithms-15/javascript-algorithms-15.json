@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-15","info":"TypeError: Cannot create property 'compareCallback' on number '366'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-15"}
+{"issueNumber":"javascript-algorithms-15","info":"TypeError: visit is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-15"}

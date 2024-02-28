@@ -1,1 +1,1 @@
-{"issueNumber":"express-39","info":"TypeError: Cannot set properties of undefined (setting 'uAe%q\tfo6%802e[mFLJM$%Yb nlk9rXe1R?V'E*|o+7Bxr (\"PwDTwC4ct<\t\\>>%r~z'o\"7+#pM\t]U')","dependencies":{},"requireCrashDependency":true,"crashId":"express-39"}
+{"issueNumber":"express-39","info":"TypeError: Cannot read properties of null","dependencies":{},"requireCrashDependency":true,"crashId":"express-39"}

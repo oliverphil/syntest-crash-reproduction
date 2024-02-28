@@ -1,14 +1,14 @@
-TypeError: Cannot read properties of undefined
-    at preprocessRFC2822 (moment/src/lib/create/from-string.js:3831:12)
-    at configFromRFC2822 (moment/src/lib/create/from-string.js:3920:56)
-    at months (moment/src/lib/create/from-string.js:4004:3)
-    at call (.syntest/tests/tempTest.spec.js:16:15)
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at preprocessRFC2822 (moment/src/lib/create/from-string.js:151:10)
+    at configFromRFC2822 (moment/src/lib/create/from-string.js:191:30)
+    at configFromString (moment/src/lib/create/from-string.js:233:5)
+    at call (.syntest/tests/tempTest.spec.js:17:61)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
+    at /local/scratch/syntest-crash-reproduction/crashjs/.syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
     at processImmediate (node:internal/timers:476:21)

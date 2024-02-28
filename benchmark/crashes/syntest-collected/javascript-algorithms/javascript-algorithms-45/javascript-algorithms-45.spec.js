@@ -1,57 +1,44 @@
 // Imports
 require = require('esm')(module)
-import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
-import MaxHeap from "../instrumented/javascript-algorithms/src/data-structures/heap/MaxHeap.js";
-import SegmentTree from "../instrumented/javascript-algorithms/src/data-structures/tree/segment-tree/SegmentTree.js";
-import bfTravellingSalesman from "../instrumented/javascript-algorithms/src/algorithms/graph/travelling-salesman/bfTravellingSalesman.js";
+import CountingSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js";
+import {getCellAtIndex} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import {updateCellAtIndex} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import {walk} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const getAllVertices = () => {};
-		const getAdjacencyMatrix = () => {};
-		const getVerticesIndices = () => {};
-		const graph = {
-			"getAllVertices": getAllVertices,
-			"getAdjacencyMatrix": getAdjacencyMatrix,
-			"getVerticesIndices": getVerticesIndices
+		const localLength = 2;
+		const m = {
+			"length": localLength
 		}
-		const arrayElement = true;
-		const arrayElement1 = () => {};
-		const arrayElement2 = 0.300048828125;
-		const arrayElement3 = [arrayElement2]
-		const inputArray = null;
-		const operation = 180;
-		const anon = {}
-		const operationFallback = new MaxHeap(anon)
-		const anon1 = null;
-		const anon2 = -589.420166447783;
-		const arrayElement4 = new SegmentTree(inputArray, operation, operationFallback, anon1, anon2)
-		const anon3 = [arrayElement, arrayElement1, arrayElement3, arrayElement4]
-		const bfTravellingSalesmanReturnValue = await bfTravellingSalesman(graph, anon3)
-		const inputArray1 = null;
-		const operation1 = 180;
-		const anon4 = {}
-		const operationFallback1 = new MaxHeap(anon4)
-		const anon5 = null;
-		const anon6 = -589.420166447783;
-		const arrayElement5 = new SegmentTree(inputArray1, operation1, operationFallback1, anon5, anon6)
-		const operation2 = 180;
-		const getLeftChildIndexReturnValue = await arrayElement5.getLeftChildIndex(operation2)
-		const assignment = false;
-		const graph1 = new Graph(assignment)
-		const bfTravellingSalesmanReturnValue1 = await bfTravellingSalesman(graph1)
-		const anon7 = {}
-		const arrayElement6 = true;
-		const getAllVertices1 = () => {};
-		const getAdjacencyMatrix1 = () => {};
-		const getVerticesIndices1 = () => {};
-		const graph2 = {
-			"getAllVertices": getAllVertices1,
-			"getAdjacencyMatrix": getAdjacencyMatrix1,
-			"getVerticesIndices": getVerticesIndices1
+		const localVisit = (cellIndices, cellValue) => {};
+		const walkReturnValue = await walk(m, localVisit)
+		const m1 = new CountingSort()
+		const localLength1 = 2;
+		const m2 = {
+			"length": localLength1
 		}
-		const bfTravellingSalesmanReturnValue2 = await bfTravellingSalesman(anon7, arrayElement6, graph2)
+		const cellValue = 0;
+		const updateCellAtIndexReturnValue = await updateCellAtIndex(m1, m2, cellValue)
+		const m3 = new CountingSort()
+		const localLength2 = 2;
+		const m4 = {
+			"length": localLength2
+		}
+		const assignment = "../../../data-structures/disjoint-set/DisjointSet";
+		const assignment1 = undefined;
+		const sortReturnValue = await m3.sort(m4, assignment, assignment1)
+		const arrayElement = "";
+		const arrayElement1 = "../../../data-structures/graph/Graph";
+		const m5 = [arrayElement, arrayElement1]
+		const arrayElement2 = -218;
+		const cellIndices = [arrayElement2]
+		const localLength3 = 2;
+		const m6 = {
+			"length": localLength3
+		}
+		const getCellAtIndexReturnValue = await getCellAtIndex(m5, cellIndices, m6)
 		
 	})
 })

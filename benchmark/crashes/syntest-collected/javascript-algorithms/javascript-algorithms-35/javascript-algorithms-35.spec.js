@@ -1,31 +1,37 @@
 // Imports
 require = require('esm')(module)
-import BinaryTreeNode from "../instrumented/javascript-algorithms/src/data-structures/tree/BinaryTreeNode.js";
-import RadixSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js";
-import RedBlackTree from "../instrumented/javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js";
+import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const anon = new RedBlackTree()
-		const assignment = -216.70434218097887;
-		const anon1 = {}
-		const grandParentNode = new BinaryTreeNode(assignment, anon1)
-		const anon2 = "1100000000111011001010000000000000000000000000000000000000000000";
-		const anon3 = "../../../data-structures/stack/Stack";
-		const anon4 = new RadixSort(anon2, anon3)
-		const leftLeftRotationReturnValue = await anon.leftLeftRotation(grandParentNode, anon4)
-		const anon5 = new RedBlackTree()
-		const anon6 = {}
-		const leftLeftRotationReturnValue1 = await anon5.leftLeftRotation(anon6)
-		const anon7 = "1100000000111011001010000000000000000000000000000000000000000000";
-		const anon8 = "../../../data-structures/stack/Stack";
-		const anon9 = new RadixSort(anon7, anon8)
-		const arrayElement = 67;
-		const arrayElement1 = 10344;
-		const array = [arrayElement, arrayElement1]
-		const anon10 = undefined;
-		const isArrayOfNumbersReturnValue = await anon9.isArrayOfNumbers(array, anon10)
+		const arrayElement = undefined;
+		const arrayElement1 = false;
+		const arrayElement2 = null;
+		const arrayElement3 = true;
+		const possibleItems = [arrayElement, arrayElement1, arrayElement2, arrayElement3]
+		const weightLimit = 451.15520922557107;
+		const anon = () => {};
+		const knapsack = new Knapsack(possibleItems, weightLimit, anon)
+		const sortPossibleItemsByValueReturnValue = await knapsack.sortPossibleItemsByValue()
+		const arrayElement4 = undefined;
+		const arrayElement5 = false;
+		const arrayElement6 = null;
+		const arrayElement7 = true;
+		const possibleItems1 = [arrayElement4, arrayElement5, arrayElement6, arrayElement7]
+		const weightLimit1 = 451.15520922557107;
+		const anon1 = () => {};
+		const knapsack1 = new Knapsack(possibleItems1, weightLimit1, anon1)
+		const sortPossibleItemsByValueReturnValue1 = await knapsack1.sortPossibleItemsByValue()
+		const arrayElement8 = undefined;
+		const arrayElement9 = false;
+		const arrayElement10 = null;
+		const arrayElement11 = true;
+		const possibleItems2 = [arrayElement8, arrayElement9, arrayElement10, arrayElement11]
+		const weightLimit2 = 451.15520922557107;
+		const anon2 = () => {};
+		const knapsack2 = new Knapsack(possibleItems2, weightLimit2, anon2)
+		const sortPossibleItemsByValuePerWeightRatioReturnValue = await knapsack2.sortPossibleItemsByValuePerWeightRatio()
 		
 	})
 })

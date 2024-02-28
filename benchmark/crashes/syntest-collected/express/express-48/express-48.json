@@ -1,1 +1,1 @@
-{"issueNumber":"express-48","info":"TypeError: Cannot read properties of undefined (reading '52$?_A!_d/+}}+wKuk1'RC6^C>x')","dependencies":{},"requireCrashDependency":true,"crashId":"express-48"}
+{"issueNumber":"express-48","info":"TypeError: Invalid character in header content [\"Content-Type\"]","dependencies":{},"requireCrashDependency":true,"crashId":"express-48"}

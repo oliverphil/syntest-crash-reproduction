@@ -1,1 +1,1 @@
-{"issueNumber":"express-24","info":"TypeError: Cannot read properties of undefined (reading 'cDXYRr.r<(KD!o`Jlbvy3')","dependencies":{},"requireCrashDependency":true,"crashId":"express-24"}
+{"issueNumber":"express-24","info":"TypeError: unsupported trust argument","dependencies":{},"requireCrashDependency":true,"crashId":"express-24"}

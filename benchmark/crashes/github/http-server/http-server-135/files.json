@@ -1,8 +1,0 @@
-[
-    "fs",
-    "union/lib/core.js",
-    "http-server/lib/http-server.js",
-    "http-server/bin/http-server",
-    "portfinder/lib/portfinder.js",
-    "events"
-]

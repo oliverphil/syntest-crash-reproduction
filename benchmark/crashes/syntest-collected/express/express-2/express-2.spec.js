@@ -13,10 +13,21 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const req = {}
-		const res = "±mC\\)<l}j$Fcn1<<FR9HPBRWpHS#P~P§";
-		const callback = undefined;
-		const handleReturnValue = await app1.handle(req, res, callback)
+		const defaultConfigurationReturnValue = await app1.defaultConfiguration()
+		const app2 = app
+		const anon = "directory";
+		const anon1 = () => {};
+		const listenReturnValue = await app2.listen(anon, anon1)
+		const app3 = app
+		const localLength = -442.65062666384154;
+		const localName = {
+			"length": localLength
+		}
+		const fn = {}
+		const paramReturnValue = await app3.param(localName, fn)
+		const app4 = app
+		const anon2 = "directory";
+		const defaultConfigurationReturnValue1 = await app4.defaultConfiguration(anon2)
 		
 	})
 })

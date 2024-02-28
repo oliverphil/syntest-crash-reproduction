@@ -1,1 +1,1 @@
-{"issueNumber":"express-75","info":"TypeError: Cannot read properties of undefined (reading 'case sensitive routing')","dependencies":{},"requireCrashDependency":true,"crashId":"express-75"}
+{"issueNumber":"express-75","info":"TypeError: path.replace is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-75"}

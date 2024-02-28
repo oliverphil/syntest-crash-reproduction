@@ -1,1 +1,1 @@
-{"issueNumber":"express-66","info":"TypeError: Cannot read properties of undefined (reading '-341')","dependencies":{},"requireCrashDependency":true,"crashId":"express-66"}
+{"issueNumber":"express-66","info":"TypeError: filename must be a string","dependencies":{},"requireCrashDependency":true,"crashId":"express-66"}

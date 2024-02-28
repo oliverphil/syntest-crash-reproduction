@@ -1,28 +1,31 @@
 // Imports
 require = require('esm')(module)
-import Heap from "../instrumented/javascript-algorithms/src/data-structures/heap/Heap.js";
-import ShellSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/shell-sort/ShellSort.js";
 import {add} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import {generate} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
+import {validateSameShape} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const arrayElement = 1.7976931348623157e+308;
-		const arrayElement1 = null;
-		const arrayElement2 = false;
-		const arrayElement3 = "The message and key string can only contain letters";
-		const arrayElement4 = [arrayElement2, arrayElement3]
-		const arrayElement5 = [arrayElement, arrayElement1, arrayElement4]
-		const arrayElement6 = 100;
-		const anon = ".";
-		const comparatorFunction = new ShellSort(anon)
-		const arrayElement7 = new Heap(comparatorFunction)
-		const arrayElement8 = [arrayElement6, arrayElement7]
-		const a = [arrayElement5, arrayElement8]
-		const arrayElement9 = 0.2;
-		const arrayElement10 = "Dh±QmuWpsY?@mi@AS±'8e]pDI,JGuHzv\\i_dH*5Wh*vZgv<v{]$bNME[§lGOHx|-jM";
-		const b = [arrayElement9, arrayElement10]
-		const addReturnValue = await add(a, b)
+		const arrayElement = "!*S!sfcg^7Y>S]Z]8D@/t; E";
+		const arrayElement1 = "../../sorting/merge-sort/MergeSort";
+		const mShape = [arrayElement, arrayElement1]
+		const fill = () => {};
+		const generateReturnValue = await generate(mShape, fill)
+		const arrayElement2 = null;
+		const a = [arrayElement2]
+		const localLength = -338.033830895615;
+		const b = {
+			"length": localLength
+		}
+		const anon = "{%z@\nF`-7o<tEVDp\\zYd$R< /";
+		const validateSameShapeReturnValue = await validateSameShape(a, b, anon)
+		const arrayElement3 = 0;
+		const arrayElement4 = -192;
+		const a1 = [arrayElement3, arrayElement4]
+		const arrayElement5 = "!*S!sfcg^7Y>S]Z]8D@/t; E";
+		const b1 = [arrayElement5]
+		const addReturnValue = await add(a1, b1)
 		
 	})
 })

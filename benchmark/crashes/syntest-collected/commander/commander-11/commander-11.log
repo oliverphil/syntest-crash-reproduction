@@ -1,13 +1,15 @@
-TypeError: Cannot read properties of null (reading '_argsDescription')
-    at splitOptionFlags (commanderjs/lib/option.js:198:79)
-    at new _context (commanderjs/lib/option.js:27:75)
-    at call (.syntest/tests/tempTest.spec.js:23:19)
+TypeError: arg.name is not a function
+    at humanReadableArgName (commanderjs/lib/argument.js:139:26)
+    at map (commanderjs/lib/help.js:114:39)
+    at Array.map (<anonymous>)
+    at Help.subcommandTerm (commanderjs/lib/help.js:114:28)
+    at call (.syntest/tests/tempTest.spec.js:34:53)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
+    at /local/scratch/syntest-crash-reproduction/crashjs/.syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:478:21)
+    at processImmediate (node:internal/timers:476:21)

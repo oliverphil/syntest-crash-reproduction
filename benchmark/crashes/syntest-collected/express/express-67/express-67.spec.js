@@ -2,24 +2,30 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let app;
+	let res;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
-		(app = require("../instrumented/express/lib/application.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/response.js")];
+		(res = require("../instrumented/express/lib/response.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const app1 = app
-		const setting = 656.4657116598535;
-		const anon = true;
-		const enableReturnValue = await app1.enable(setting, anon)
-		const app2 = app
-		const anon1 = "y)v#G}4627d§/[5§ld6\t^<IXvp±CWx";
-		const anon2 = "C:aoRk[D(T<)y8_~k('7w6R<DqnEz1knVevmW)AqX\"\ts$l}u0tP x+`wJ(";
-		const lazyrouterReturnValue = await app2.lazyrouter(anon1, anon2)
+		const res1 = res
+		const code = "Ni=(CzN[kBz:N6l!sOv#7Y9Q[4GRbv}:=ai) +rkQVJ&2@K§fzxM:C0eF&ZN>I<,5~Ejsu3@\nOmb\\6YOE}oN";
+		const localStatusReturnValue = await res1.status(code)
+		const res2 = res
+		const arrayElement = null;
+		const arrayElement1 = {}
+		const statusCode = [arrayElement, arrayElement1]
+		const sendStatusReturnValue = await res2.sendStatus(statusCode)
+		const res3 = res
+		const arrayElement2 = null;
+		const arrayElement3 = {}
+		const statusCode1 = [arrayElement2, arrayElement3]
+		const anon = "array-flatten";
+		const getReturnValue = await res3.get(statusCode1, anon)
 		
 	})
 })

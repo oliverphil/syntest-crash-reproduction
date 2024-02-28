@@ -1,13 +1,9 @@
-TypeError: Cannot set properties of undefined (setting '2')
-    at Object.set (express/lib/application.js:363:50)
-    at Object.disable (express/lib/application.js:467:15)
-    at call (.syntest/tests/tempTest.spec.js:17:57)
+TypeError: Cannot read properties of undefined
+    at Object.set (express/lib/application.js:6422:25)
+    at Object.next [as disabled] (express/lib/application.js:6537:16)
+    at call (.syntest/tests/tempTest.spec.js:19:19)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:478:21)

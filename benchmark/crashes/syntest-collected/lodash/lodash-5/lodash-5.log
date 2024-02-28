@@ -1,9 +1,9 @@
 TypeError: equalFunc is not a function
-    at predicate (lodash/.internal/equalArrays.js:64:44)
+    at predicate (lodash/.internal/equalArrays.js:64:37)
     at some (lodash/some.js:22:9)
-    at _loop (lodash/.internal/equalArrays.js:62:63)
-    at sent (lodash/.internal/equalArrays.js:43:259)
-    at call (.syntest/tests/tempTest.spec.js:35:32)
+    at _loop (lodash/.internal/equalArrays.js:62:16)
+    at equalArrays (lodash/.internal/equalArrays.js:43:29)
+    at call (.syntest/tests/tempTest.spec.js:82:52)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

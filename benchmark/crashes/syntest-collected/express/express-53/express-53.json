@@ -1,1 +1,1 @@
-{"issueNumber":"express-53","info":"TypeError: Cannot read properties of undefined (reading 'secret')","dependencies":{},"requireCrashDependency":true,"crashId":"express-53"}
+{"issueNumber":"express-53","info":"TypeError: The \"name\" argument must be of type string. Received function field","dependencies":{},"requireCrashDependency":true,"crashId":"express-53"}

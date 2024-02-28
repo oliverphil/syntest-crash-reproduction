@@ -12,12 +12,12 @@ if (!fs.existsSync('test_out')) {
     execSync('mkdir test_out');
 }
 
-for (const project of Object.keys(projects).filter(k => k === 'Eslint')) {
+for (const project of Object.keys(projects)) {
     const projectLower = project.toLowerCase();
     if (!fs.existsSync(`test_out/${projectLower}`)) {
         execSync(`mkdir test_out/${projectLower}`);
     }
-    for (let num = 35; num <= projects[project]; num++) {
+    for (let num = 1; num <= projects[project]; num++) {
         try {
             console.log(project + num);
             try {

@@ -2,68 +2,60 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let Help;
-	let Argument;
+	let suggestSimilar;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/commanderjs/lib/help.js")];
-		delete require.cache[require.resolve("../instrumented/commanderjs/lib/argument.js")];
-		({Help} = require("../instrumented/commanderjs/lib/help.js"));
-		({Argument} = require("../instrumented/commanderjs/lib/argument.js"));
+		delete require.cache[require.resolve("../instrumented/commanderjs/lib/suggestSimilar.js")];
+		({suggestSimilar} = require("../instrumented/commanderjs/lib/suggestSimilar.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const anon = () => {};
-		const localHelp = new Help(anon)
-		const arrayElement = true;
-		const arrayElement1 = 0;
-		const options = [arrayElement, arrayElement1]
-		const hasHelpOption = 60;
-		const helpShortFlag = true;
-		const findOption = () => {};
-		const arrayElement2 = -1;
-		const arrayElement3 = "turn off colour output";
-		const arrayElement4 = "drink cup size";
-		const arrayElement5 = "-d, --dry-run";
-		const localName = [arrayElement2, arrayElement3, arrayElement4, arrayElement5]
-		const description = false;
-		const helpLongFlag = new Argument(localName, description)
-		const createOption = () => {};
-		const helpDescription = "sauce";
-		const helpFlags = "'\"_*DT\\z-i]]+zl7DWb;<\\{U:ci3}`JYa*mxt#6j:BBF_YMxv9oUXsTuqq]MUrNMZY#twUP{ZhrLrk'!LAaz0{";
-		const cmd = {
-			"options": options,
-			"_hasHelpOption": hasHelpOption,
-			"_helpShortFlag": helpShortFlag,
-			"_findOption": findOption,
-			"_helpLongFlag": helpLongFlag,
-			"createOption": createOption,
-			"_helpDescription": helpDescription,
-			"_helpFlags": helpFlags
+		const word = "./argument.js";
+		const arrayElement = () => {};
+		const arrayElement1 = "Commands:";
+		const candidates = [arrayElement, arrayElement1]
+		const anon = undefined;
+		const anon1 = undefined;
+		const suggestSimilarReturnValue = await suggestSimilar(word, candidates, anon, anon1)
+		const word1 = 816.2357714722816;
+		const candidates1 = 3;
+		const anon2 = null;
+		const suggestSimilarReturnValue1 = await suggestSimilar(word1, candidates1, anon2)
+		const startsWith = () => {};
+		const slice = () => {};
+		const arrayElement2 = () => {};
+		const arrayElement3 = "Commands:";
+		const candidates2 = [arrayElement2, arrayElement3]
+		const word2 = {
+			"startsWith": startsWith,
+			"slice": slice,
+			"length": candidates2
 		}
-		const visibleOptionsReturnValue = await localHelp.visibleOptions(cmd)
-		const localHelp1 = new Help()
-		const arrayElement6 = "§SyX80;y4b!y#sDw]]d[\nO\t> |x]@!'][YZzrR8§:bd^§mSprw~B*bBexLAckpw4@gG\\W";
-		const args = [arrayElement6]
-		const localName1 = 73;
-		const aliases = []
-		const options1 = "afterHelp";
-		const cmd1 = {
-			"_args": args,
-			"_name": localName1,
-			"_aliases": aliases,
-			"options": options1
+		const candidates3 = () => {};
+		const suggestSimilarReturnValue2 = await suggestSimilar(word2, candidates3)
+		const startsWith1 = () => {};
+		const slice1 = () => {};
+		const arrayElement4 = () => {};
+		const arrayElement5 = "Commands:";
+		const candidates4 = [arrayElement4, arrayElement5]
+		const word3 = {
+			"startsWith": startsWith1,
+			"slice": slice1,
+			"length": candidates4
 		}
-		const anon1 = -426;
-		const subcommandTermReturnValue = await localHelp1.subcommandTerm(cmd1, anon1)
-		const localHelp2 = new Help()
-		const map = () => {};
-		const args1 = {
-			"map": map
+		const startsWith2 = () => {};
+		const slice2 = () => {};
+		const arrayElement6 = () => {};
+		const arrayElement7 = "Commands:";
+		const candidates5 = [arrayElement6, arrayElement7]
+		const word4 = {
+			"startsWith": startsWith2,
+			"slice": slice2,
+			"length": candidates5
 		}
-		const argumentTermReturnValue = await localHelp2.argumentTerm(args1)
+		const suggestSimilarReturnValue3 = await suggestSimilar(word3, word4)
 		
 	})
 })

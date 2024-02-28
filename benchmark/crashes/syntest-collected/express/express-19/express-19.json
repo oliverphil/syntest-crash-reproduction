@@ -1,1 +1,1 @@
-{"issueNumber":"express-19","info":"TypeError: Cannot set properties of undefined (setting 'true')","dependencies":{},"requireCrashDependency":true,"crashId":"express-19"}
+{"issueNumber":"express-19","info":"TypeError: The argument 'options' must have the property \"port\" or \"path\". Received {}","dependencies":{},"requireCrashDependency":true,"crashId":"express-19"}

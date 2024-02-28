@@ -12,25 +12,23 @@ describe('SynTest Test Suite', function() {
 
 	it("Test 1", async () => {
 		// Test
-		const localHelp = new Help()
-		const cmd = undefined;
-		const anon = 2;
-		const helper = new Help(anon)
-		const formatHelpReturnValue = await localHelp.formatHelp(cmd, helper)
-		const localHelp1 = new Help()
-		const localName = () => {};
-		const argument = {
-			"name": localName
-		}
-		const anon1 = "[second]";
-		const argumentTermReturnValue = await localHelp1.argumentTerm(argument, anon1)
-		const localHelp2 = new Help()
-		const description = () => {};
-		const cmd1 = {
-			"description": description
-		}
-		const anon2 = 24;
-		const commandDescriptionReturnValue = await localHelp2.commandDescription(cmd1, anon2)
+		const anon = -1;
+		const localHelp = new Help(anon)
+		const cmd = null;
+		const anon1 = true;
+		const helper = new Help(anon1)
+		const longestSubcommandTermLengthReturnValue = await localHelp.longestSubcommandTermLength(cmd, helper)
+		const anon2 = -1;
+		const localHelp1 = new Help(anon2)
+		const cmd1 = "mmrW\n!u7!<§n]eAou,\\v3E#tZ'vM}&OV'";
+		const anon3 = true;
+		const helper1 = new Help(anon3)
+		const anon4 = 952.8594731291041;
+		const longestArgumentTermLengthReturnValue = await localHelp1.longestArgumentTermLength(cmd1, helper1, anon4)
+		const anon5 = -1;
+		const localHelp2 = new Help(anon5)
+		const argument = () => {};
+		const argumentTermReturnValue = await localHelp2.argumentTerm(argument)
 		
 	})
 })

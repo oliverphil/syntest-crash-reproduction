@@ -1,1 +1,0 @@
-{"issueNumber":"express-244","info":"TypeError: The \"path\" argument must be of type string. Received type number (40.434124305485966)","dependencies":{},"requireCrashDependency":true,"crashId":"express-244"}

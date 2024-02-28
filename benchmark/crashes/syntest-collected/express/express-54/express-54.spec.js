@@ -13,19 +13,20 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const res1 = res
-		const path = () => {};
-		const options = () => {};
-		const callback = true;
-		const anon = 204;
-		const anon1 = {}
-		const sendfileReturnValue = await res1.sendfile(path, options, callback, anon, anon1)
+		const arrayElement = 2;
+		const arrayElement1 = 967;
+		const arrayElement2 = null;
+		const field = [arrayElement, arrayElement1, arrayElement2]
+		const anon = true;
+		const getReturnValue = await res1.get(field, anon)
 		const res2 = res
-		const callback1 = true;
-		const anon2 = {}
-		const attachmentReturnValue = await res2.attachment(callback1, anon2)
+		const body = "§b6@?53j9C+QU?:Mv!;porip\\{Nn~@I6sB|jT+@UQxIK±QV1T?L`U{ACicms6l>5Yry*+Xkp,pN.YDYl7*B§tt]8#yGX^";
+		const anon1 = undefined;
+		const localSendReturnValue = await res2.send(body, anon1)
 		const res3 = res
-		const url = true;
-		const localLocationReturnValue = await res3.location(url)
+		const arrayElement3 = null;
+		const val = []
+		const appendReturnValue = await res3.append(arrayElement3, val)
 		
 	})
 })

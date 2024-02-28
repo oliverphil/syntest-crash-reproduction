@@ -5,12 +5,15 @@ import equalArrays from "../instrumented/lodash/.internal/equalArrays.js";
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const array = "[object DOMException]";
-		const localLength = 4294967295;
-		const other = {
+		const localLength = 2.718281828459045;
+		const array = {
 			"length": localLength
 		}
-		const bitmask = -1;
+		const arrayElement = {}
+		const arrayElement1 = 229.56227087642242;
+		const arrayElement2 = () => {};
+		const other = [arrayElement, arrayElement1, arrayElement2]
+		const bitmask = 663.7111377480805;
 		const customizer = true;
 		const equalFunc = () => {};
 		const get = () => {};
@@ -21,40 +24,35 @@ describe('SynTest Test Suite', function() {
 			"set": localSet,
 			"delete": localDelete
 		}
-		const equalArraysReturnValue = await equalArrays(array, other, bitmask, customizer, equalFunc, stack)
-		const array1 = false;
-		const arrayElement = null;
-		const bitmask1 = -1;
-		const localLength1 = 4294967295;
-		const other1 = [arrayElement, bitmask1, localLength1]
-		const bitmask2 = -429.8556726950263;
-		const arrayElement1 = "./.internal/basePick.js";
-		const customizer1 = [arrayElement1]
-		const equalFunc1 = () => {};
-		const localLength2 = 4294967295;
-		const other2 = {
-			"length": localLength2
-		}
+		const anon = () => {};
+		const equalArraysReturnValue = await equalArrays(array, other, bitmask, customizer, equalFunc, stack, anon)
+		const array1 = null;
 		const get1 = () => {};
-		const equalArraysReturnValue1 = await equalArrays(array1, other1, bitmask2, customizer1, equalFunc1, other2, get1)
-		const get2 = () => {};
 		const localSet1 = () => {};
 		const localDelete1 = () => {};
 		const stack1 = {
-			"get": get2,
+			"get": get1,
 			"set": localSet1,
 			"delete": localDelete1
 		}
-		const arrayElement2 = "./.internal/basePick.js";
-		const customizer2 = [arrayElement2]
-		const bitmask3 = -11;
-		const array2 = false;
+		const bitmask1 = -987;
+		const equalFunc1 = () => {};
 		const equalFunc2 = () => {};
-		const localLength3 = 4294967295;
-		const other3 = {
-			"length": localLength3
-		}
-		const equalArraysReturnValue2 = await equalArrays(stack1, customizer2, bitmask3, array2, equalFunc2, other3)
+		const arrayElement3 = {}
+		const equalArraysReturnValue1 = await equalArrays(array1, stack1, bitmask1, equalFunc1, equalFunc2, arrayElement3)
+		const arrayElement4 = {}
+		const arrayElement5 = 229.56227087642242;
+		const arrayElement6 = () => {};
+		const other1 = [arrayElement4, arrayElement5, arrayElement6]
+		const arrayElement7 = {}
+		const arrayElement8 = 229.56227087642242;
+		const arrayElement9 = () => {};
+		const other2 = [arrayElement7, arrayElement8, arrayElement9]
+		const bitmask2 = -987;
+		const customizer1 = true;
+		const localDelete2 = () => {};
+		const arrayElement10 = {}
+		const equalArraysReturnValue2 = await equalArrays(other1, other2, bitmask2, customizer1, localDelete2, arrayElement10)
 		
 	})
 })

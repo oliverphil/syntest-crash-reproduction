@@ -1,1 +1,1 @@
-{"issueNumber":"express-59","info":"TypeError: Cannot read properties of undefined (reading 'indexOf')","dependencies":{},"requireCrashDependency":true,"crashId":"express-59"}
+{"issueNumber":"express-59","info":"TypeError: The \"name\" argument must be of type string. Received null","dependencies":{},"requireCrashDependency":true,"crashId":"express-59"}

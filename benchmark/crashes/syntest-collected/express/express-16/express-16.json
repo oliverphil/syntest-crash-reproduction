@@ -1,1 +1,1 @@
-{"issueNumber":"express-16","info":"TypeError: Cannot set properties of undefined (setting '[')","dependencies":{},"requireCrashDependency":true,"crashId":"express-16"}
+{"issueNumber":"express-16","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-16"}

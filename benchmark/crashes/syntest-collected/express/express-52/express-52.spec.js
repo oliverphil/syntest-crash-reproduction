@@ -2,26 +2,23 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let app;
+	let res;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
-		(app = require("../instrumented/express/lib/application.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/response.js")];
+		(res = require("../instrumented/express/lib/response.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const app1 = app
-		const setting = "IO83ORpd{A7a+<vi{5$1~ +Ka]^%Tr-";
-		const anon = "baseUrl";
-		const disabledReturnValue = await app1.disabled(setting, anon)
-		const app2 = app
-		const anon1 = "baseUrl";
-		const routeReturnValue = await app2.route(anon1)
-		const app3 = app
-		const setting1 = 4;
-		const enabledReturnValue = await app3.enabled(setting1)
+		const res1 = res
+		const field = undefined;
+		const getReturnValue = await res1.get(field)
+		const res2 = res
+		const body = "'Wz)ar\n±&9Z'Y`EhNJ'#<=,(l$zd;R3h'GTC,z§1w1@Ta(U\n=,u,gZf>xK'gYOq`A>Zlvp(+hl§|ZMZP@ru";
+		const anon = -53.02951322851891;
+		const localSendReturnValue = await res2.send(body, anon)
 		
 	})
 })

@@ -1,8 +1,0 @@
-[
-    "negotiator/lib/encoding.js",
-    "Array.map",
-    "negotiator/index.js",
-    "accepts/index.js",
-    "express/lib/request.js",
-    "node:internal/process/task_queues"
-]

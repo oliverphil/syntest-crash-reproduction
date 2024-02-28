@@ -2,7 +2,7 @@ Error:
         at JsonPointer.eval (eval at compilePointerDereference (json-ptr/src/util.ts:155:10), <anonymous>:4:64)
         at JsonPointer.get (json-ptr/src/pointer.ts:469:22)
         at Function.get (json-ptr/src/pointer.ts:287:37)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/json-ptr_2.0.0/json-ptr.test.js:11:17)
+        at Object.<anonymous> (code-injection/json-ptr_2.0.0/json-ptr.test.js:11:17)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

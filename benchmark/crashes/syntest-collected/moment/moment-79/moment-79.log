@@ -1,8 +1,8 @@
-TypeError: Cannot read properties of null
-    at preprocessRFC2822 (moment/src/lib/create/from-string.js:3831:12)
-    at configFromRFC2822 (moment/src/lib/create/from-string.js:3920:56)
-    at configFromString (moment/src/lib/create/from-string.js:4004:3)
-    at call (.syntest/tests/tempTest.spec.js:40:34)
+TypeError: Cannot read properties of null (reading 'replace')
+    at preprocessRFC2822 (moment/src/lib/create/from-string.js:151:10)
+    at configFromRFC2822 (moment/src/lib/create/from-string.js:191:30)
+    at configFromString (moment/src/lib/create/from-string.js:233:5)
+    at call (.syntest/tests/tempTest.spec.js:36:61)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

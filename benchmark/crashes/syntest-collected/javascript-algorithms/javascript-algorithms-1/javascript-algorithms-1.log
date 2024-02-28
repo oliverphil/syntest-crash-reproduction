@@ -1,15 +1,15 @@
-TypeError: Cannot read properties of undefined (reading 'getKey')
-    at Object.enterVertex (javascript-algorithms/src/algorithms/graph/articulation-points/articulationPoints.js:45:57)
-    at depthFirstSearchRecursive (javascript-algorithms/src/algorithms/graph/depth-first-search/depthFirstSearch.js:49:13)
-    at depthFirstSearch (javascript-algorithms/src/algorithms/graph/depth-first-search/depthFirstSearch.js:67:3)
-    at articulationPoints (javascript-algorithms/src/algorithms/graph/articulation-points/articulationPoints.js:110:44)
-    at call (.syntest/tests/tempTest.spec.js:13:65)
+TypeError: Cannot create property 'compareCallback' on number '1'
+    at Function.initSortingCallbacks (javascript-algorithms/src/algorithms/sorting/Sort.js:25:30)
+    at new construct (javascript-algorithms/src/algorithms/sorting/Sort.js:13:27)
+    at CountingSort.apply (javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:1:28)
+    at new CountingSort (javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js:3:34)
+    at call (.syntest/tests/tempTest.spec.js:14:17)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
+    at /local/scratch/syntest-crash-reproduction/crashjs/.syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:478:21)
+    at processImmediate (node:internal/timers:476:21)

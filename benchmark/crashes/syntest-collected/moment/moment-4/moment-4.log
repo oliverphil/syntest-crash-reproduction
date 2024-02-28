@@ -1,13 +1,10 @@
-TypeError: Cannot set properties of undefined (setting '_isAMomentObject')
-    at cloneWithOffset (moment/src/lib/units/offset.js:75:15)
-    at milliseconds (moment/src/lib/moment/calendar.js:42:53)
-    at call (.syntest/tests/tempTest.spec.js:13:21)
+TypeError: _hooks.hooks.now is not a function
+    at configFromInput (moment/src/lib/create/from-anything.js:68:36)
+    at prepareConfig (moment/src/lib/create/from-anything.js:55:9)
+    at call (.syntest/tests/tempTest.spec.js:23:56)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
-    at new Promise (<anonymous>)
-    at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:476:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

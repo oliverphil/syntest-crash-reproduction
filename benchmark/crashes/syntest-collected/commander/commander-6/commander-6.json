@@ -1,1 +1,1 @@
-{"issueNumber":"commander-6","info":"TypeError: Cannot read properties of undefined (reading 'find')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-6"}
+{"issueNumber":"commander-6","info":"TypeError: number 2 is not iterable","dependencies":{},"requireCrashDependency":true,"crashId":"commander-6"}

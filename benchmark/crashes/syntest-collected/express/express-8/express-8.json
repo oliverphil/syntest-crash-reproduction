@@ -1,1 +1,1 @@
-{"issueNumber":"express-8","info":"TypeError: Cannot read properties of undefined (reading 'false')","dependencies":{},"requireCrashDependency":true,"crashId":"express-8"}
+{"issueNumber":"express-8","info":"TypeError: Cannot read properties of null","dependencies":{},"requireCrashDependency":true,"crashId":"express-8"}

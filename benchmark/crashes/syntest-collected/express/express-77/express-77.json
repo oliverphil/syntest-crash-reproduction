@@ -1,1 +1,1 @@
-{"issueNumber":"express-77","info":"TypeError: Cannot set properties of undefined (setting '656.4657116598535')","dependencies":{},"requireCrashDependency":true,"crashId":"express-77"}
+{"issueNumber":"express-77","info":"TypeError: invalid IP address:","dependencies":{},"requireCrashDependency":true,"crashId":"express-77"}

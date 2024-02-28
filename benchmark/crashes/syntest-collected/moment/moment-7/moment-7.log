@@ -1,7 +1,7 @@
-TypeError: Cannot set properties of undefined (setting '_isAMomentObject')
-    at cloneWithOffset (moment/src/lib/units/offset.js:75:15)
-    at calendar (moment/src/lib/moment/calendar.js:42:53)
-    at call (.syntest/tests/tempTest.spec.js:19:90)
+TypeError: Cannot create property '_isValid' on string 'year'
+    at configFromISO (moment/src/lib/create/from-string.js:111:24)
+    at configFromString (moment/src/lib/create/from-string.js:226:5)
+    at call (.syntest/tests/tempTest.spec.js:37:62)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

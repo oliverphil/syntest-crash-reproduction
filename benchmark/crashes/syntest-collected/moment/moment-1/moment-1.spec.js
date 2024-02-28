@@ -1,16 +1,27 @@
 // Imports
 require = require('esm')(module)
 import {calendar} from "../instrumented/moment/src/lib/moment/calendar.js";
+import {getCalendarFormat} from "../instrumented/moment/src/lib/moment/calendar.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const time = undefined;
+		const diff = () => {};
+		const myMoment = {
+			"diff": diff
+		}
+		const now = -707;
+		const anon = -420.4040076923104;
+		const anon1 = () => {};
+		const getCalendarFormatReturnValue = await getCalendarFormat(myMoment, now, anon, anon1)
+		const localLength = 100;
+		const time = {
+			"length": localLength
+		}
 		const formats = undefined;
-		const calendarReturnValue = await calendar(time, formats)
-		const time1 = true;
-		const formats1 = {}
-		const calendarReturnValue1 = await calendar(time1, formats1)
+		const anon2 = ";uV-Phn$>tFltzL!aq|/QX2q)&)_r&wK`b':\"JH,E:^z3";
+		const anon3 = true;
+		const calendarReturnValue = await calendar(time, formats, anon2, anon3)
 		
 	})
 })

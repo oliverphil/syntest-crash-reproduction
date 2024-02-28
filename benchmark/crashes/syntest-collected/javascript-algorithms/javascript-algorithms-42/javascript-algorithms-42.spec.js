@@ -1,37 +1,26 @@
 // Imports
 require = require('esm')(module)
-import GraphEdge from "../instrumented/javascript-algorithms/src/data-structures/graph/GraphEdge.js";
-import bellmanFord from "../instrumented/javascript-algorithms/src/algorithms/graph/bellman-ford/bellmanFord.js";
+import CountingSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js";
+import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const getAllVertices = () => {};
-		const getVertexByKey = () => {};
-		const getNeighbors = () => {};
-		const findEdge = () => {};
-		const graph = {
-			"getAllVertices": getAllVertices,
-			"getVertexByKey": getVertexByKey,
-			"getNeighbors": getNeighbors,
-			"findEdge": findEdge
-		}
-		const startVertex = true;
-		const endVertex = null;
-		const assignment = 16;
-		const startVertex1 = new GraphEdge(startVertex, endVertex, assignment)
-		const bellmanFordReturnValue = await bellmanFord(graph, startVertex1)
-		const startVertex2 = true;
-		const endVertex1 = null;
-		const assignment1 = 16;
-		const startVertex3 = new GraphEdge(startVertex2, endVertex1, assignment1)
-		const anon = "./QueenPosition";
-		const reverseReturnValue = await startVertex3.reverse(anon)
-		const startVertex4 = true;
-		const endVertex2 = null;
-		const assignment2 = 16;
-		const startVertex5 = new GraphEdge(startVertex4, endVertex2, assignment2)
-		const reverseReturnValue1 = await startVertex5.reverse()
+		const possibleItems = "e(Pf&gu[o8Xy3gg,M\"9CpT~Y'dc+|@mlv/Kv9KOykr p2IX&TKDQ\\?F8 +]^>R=)_yfY :9uz ,:aC ~3JLSVg_\n=+D;D GwK";
+		const weightLimit = "±# >x&~K?b";
+		const knapsack = new Knapsack(possibleItems, weightLimit)
+		const totalValueReturnValue = await knapsack.totalValue
+		const possibleItems1 = "../../sorting/quick-sort/QuickSort";
+		const anon = -3.857493995899751;
+		const knapsack1 = new Knapsack(possibleItems1, anon)
+		const arrayElement = -449;
+		const anon1 = new CountingSort(arrayElement)
+		const solveZeroOneKnapsackProblemReturnValue = await knapsack1.solveZeroOneKnapsackProblem(anon1)
+		const possibleItems2 = "e(Pf&gu[o8Xy3gg,M\"9CpT~Y'dc+|@mlv/Kv9KOykrxp2IX&TKDQ\\?F8 +]^>R=)_yfY :9uz ,:aC ~3JLSVg_\n=+D;D GwK";
+		const weightLimit1 = true;
+		const knapsack2 = new Knapsack(possibleItems2, weightLimit1)
+		const anon2 = false;
+		const solveUnboundedKnapsackProblemReturnValue = await knapsack2.solveUnboundedKnapsackProblem(anon2)
 		
 	})
 })

@@ -13,11 +13,22 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const anon = () => {};
-		const initReturnValue = await app1.init(anon)
+		const localName = "index";
+		const fn = {}
+		const paramReturnValue = await app1.param(localName, fn)
 		const app2 = app
-		const anon1 = "Not Acceptable";
-		const lazyrouterReturnValue = await app2.lazyrouter(anon1)
+		const localName1 = "index";
+		const anon = "app.use() requires a middleware function";
+		const anon1 = {}
+		const allReturnValue = await app2.all(localName1, anon, anon1)
+		const app3 = app
+		const setting = -833;
+		const anon2 = () => {};
+		const disableReturnValue = await app3.disable(setting, anon2)
+		const app4 = app
+		const path = "extended";
+		const setting1 = -833;
+		const routeReturnValue = await app4.route(path, setting1)
 		
 	})
 })

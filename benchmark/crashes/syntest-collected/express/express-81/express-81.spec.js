@@ -2,25 +2,22 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let app;
+	let View;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
-		(app = require("../instrumented/express/lib/application.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/view.js")];
+		(View = require("../instrumented/express/lib/view.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const app1 = app
-		const anon = false;
-		const pathReturnValue = await app1.path(anon)
-		const app2 = app
-		const setting = "json spaces";
-		const disabledReturnValue = await app2.disabled(setting)
-		const app3 = app
-		const path = -215;
-		const routeReturnValue = await app3.route(path)
+		const localName = true;
+		const options = 38;
+		const view = new View(localName, options)
+		const options1 = 1;
+		const callback = false;
+		const renderReturnValue = await view.render(options1, callback)
 		
 	})
 })

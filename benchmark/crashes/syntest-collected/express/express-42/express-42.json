@@ -1,1 +1,1 @@
-{"issueNumber":"express-42","info":"TypeError: Cannot read properties of undefined (reading '-1')","dependencies":{},"requireCrashDependency":true,"crashId":"express-42"}
+{"issueNumber":"express-42","info":"TypeError: encoding.toLowerCase is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-42"}

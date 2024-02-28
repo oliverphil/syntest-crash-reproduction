@@ -1,1 +1,1 @@
-{"issueNumber":"commander-8","info":"TypeError: Cannot read properties of undefined (reading 'filter')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-8"}
+{"issueNumber":"commander-8","info":"TypeError: argument.name is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"commander-8"}

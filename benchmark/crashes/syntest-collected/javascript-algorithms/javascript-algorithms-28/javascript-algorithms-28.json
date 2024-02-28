@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-28","info":"TypeError: Cannot create property 'compareCallback' on string '../../../data-structures/graph/GraphVertex'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-28"}
+{"issueNumber":"javascript-algorithms-28","info":"TypeError: originalArray.slice is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-28"}

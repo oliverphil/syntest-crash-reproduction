@@ -1,1 +1,1 @@
-{"issueNumber":"moment-10","info":"TypeError: Cannot read properties of undefined (reading 'preparse')","dependencies":{},"requireCrashDependency":true,"crashId":"moment-10"}
+{"issueNumber":"moment-10","info":"TypeError: Cannot create property '_pf' on string 'second'","dependencies":{},"requireCrashDependency":true,"crashId":"moment-10"}

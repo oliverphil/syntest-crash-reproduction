@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-45","info":"TypeError: Cannot read properties of null (reading 'length')","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-45"}
+{"issueNumber":"javascript-algorithms-45","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-45"}

@@ -1,31 +1,35 @@
 // Imports
 require = require('esm')(module)
-import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
-import GraphEdge from "../instrumented/javascript-algorithms/src/data-structures/graph/GraphEdge.js";
-import QueenPosition from "../instrumented/javascript-algorithms/src/algorithms/uncategorized/n-queens/QueenPosition.js";
-import RadixSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js";
-import ShellSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/shell-sort/ShellSort.js";
-import floydWarshall from "../instrumented/javascript-algorithms/src/algorithms/graph/floyd-warshall/floydWarshall.js";
+import {t} from "../instrumented/javascript-algorithms/src/algorithms/math/matrix/Matrix.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const assignment = false;
-		const graph = new Graph(assignment)
-		const anon = 10345.5595703125;
-		const anon1 = new ShellSort(anon)
-		const floydWarshallReturnValue = await floydWarshall(graph, anon1)
-		const assignment1 = false;
-		const graph1 = new Graph(assignment1)
-		const rowIndex = "99FB±'i$";
-		const anon2 = null;
-		const columnIndex = new RadixSort(anon2)
-		const startVertex = new QueenPosition(rowIndex, columnIndex)
-		const endVertex = () => {};
-		const assignment2 = 135;
-		const anon3 = 26;
-		const edge = new GraphEdge(startVertex, endVertex, assignment2, anon3)
-		const deleteEdgeReturnValue = await graph1.deleteEdge(edge)
+		const arrayElement = null;
+		const anon = null;
+		const arrayElement1 = null;
+		const arrayElement2 = [arrayElement, anon, arrayElement1]
+		const localLength = 1;
+		const arrayElement3 = {
+			"length": localLength
+		}
+		const arrayElement4 = "../../sorting/merge-sort/MergeSort";
+		const localLength1 = 0;
+		const arrayElement5 = {
+			"length": localLength1
+		}
+		const m = [arrayElement2, arrayElement3, arrayElement4, arrayElement5]
+		const localLength2 = 1;
+		const arrayElement6 = {
+			"length": localLength2
+		}
+		const arrayElement7 = "../../sorting/merge-sort/MergeSort";
+		const localLength3 = 0;
+		const arrayElement8 = {
+			"length": localLength3
+		}
+		const m1 = [m, arrayElement6, arrayElement7, arrayElement8]
+		const tReturnValue = await t(m1)
 		
 	})
 })

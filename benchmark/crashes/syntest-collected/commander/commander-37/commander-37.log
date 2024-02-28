@@ -1,8 +1,8 @@
-TypeError: Cannot read properties of null
-    at map (commanderjs/lib/suggestSimilar.js:2371:24)
-    at Array.map (<anonymous>)
-    at suggestSimilar (commanderjs/lib/suggestSimilar.js:2368:29)
-    at call (.syntest/tests/tempTest.spec.js:22:3)
+TypeError: Cannot read properties of null (reading 'length')
+    at forEach (commanderjs/lib/suggestSimilar.js:70:19)
+    at Array.forEach (<anonymous>)
+    at suggestSimilar (commanderjs/lib/suggestSimilar.js:69:14)
+    at call (.syntest/tests/tempTest.spec.js:31:44)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

@@ -1,21 +1,25 @@
 // Imports
 require = require('esm')(module)
-import MergeSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/merge-sort/MergeSort.js";
-import prim from "../instrumented/javascript-algorithms/src/algorithms/graph/prim/prim.js";
+import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const isDirected = false;
-		const getAllVertices = () => {};
-		const graph = {
-			"isDirected": isDirected,
-			"getAllVertices": getAllVertices
-		}
-		const anon = -663;
-		const anon1 = 10344;
-		const anon2 = new MergeSort(anon1)
-		const primReturnValue = await prim(graph, anon, anon2)
+		const possibleItems = -1;
+		const weightLimit = {}
+		const knapsack = new Knapsack(possibleItems, weightLimit)
+		const anon = -802.2810275213676;
+		const anon1 = "J\t8,?%q§aB+myD M§>";
+		const solveZeroOneKnapsackProblemReturnValue = await knapsack.solveZeroOneKnapsackProblem(anon, anon1)
+		const possibleItems1 = -1;
+		const weightLimit1 = {}
+		const knapsack1 = new Knapsack(possibleItems1, weightLimit1)
+		const sortPossibleItemsByValueReturnValue = await knapsack1.sortPossibleItemsByValue()
+		const possibleItems2 = -1;
+		const weightLimit2 = {}
+		const knapsack2 = new Knapsack(possibleItems2, weightLimit2)
+		const anon2 = false;
+		const solveUnboundedKnapsackProblemReturnValue = await knapsack2.solveUnboundedKnapsackProblem(anon2)
 		
 	})
 })

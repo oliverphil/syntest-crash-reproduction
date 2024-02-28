@@ -1,86 +1,64 @@
 // Imports
 require = require('esm')(module)
-import {Moment} from "../instrumented/moment/src/lib/moment/constructor.js";
-import {copyConfig} from "../instrumented/moment/src/lib/moment/constructor.js";
+import {configFromISO} from "../instrumented/moment/src/lib/create/from-string.js";
+import {configFromRFC2822} from "../instrumented/moment/src/lib/create/from-string.js";
+import {configFromString} from "../instrumented/moment/src/lib/create/from-string.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const isAMomentObject = {}
-		const i = "pred dňom";
-		const f = -74.33756820358781;
-		const l = {}
-		const strict = "VDt9q}m";
-		const tzm = -952;
-		const isUTC = "±N.Y<Z.ZOztc?bgzPyyP|)Ini9#Dq}y^]\\68)_V(IZ;2S*f8jJB9/'%h";
-		const offset = "yo";
-		const pf = null;
-		const locale = -469;
-		const to = {
-			"_isAMomentObject": isAMomentObject,
-			"_i": i,
-			"_f": f,
-			"_l": l,
-			"_strict": strict,
-			"_tzm": tzm,
-			"_isUTC": isUTC,
-			"_offset": offset,
-			"_pf": pf,
-			"_locale": locale
+		const i = true;
+		const getDay = () => {};
+		const d = {
+			"getDay": getDay
 		}
-		const isAMomentObject1 = {}
-		const arrayElement = true;
-		const arrayElement1 = {}
-		const arrayElement2 = [arrayElement1]
-		const i1 = [arrayElement, arrayElement2]
-		const f1 = {}
-		const l1 = "AD, AD, AD";
-		const strict1 = {}
-		const tzm1 = {}
-		const isUTC1 = {}
-		const offset1 = null;
-		const pf1 = undefined;
-		const locale1 = null;
-		const from = {
-			"_isAMomentObject": isAMomentObject1,
-			"_i": i1,
-			"_f": f1,
-			"_l": l1,
-			"_strict": strict1,
-			"_tzm": tzm1,
-			"_isUTC": isUTC1,
-			"_offset": offset1,
-			"_pf": pf1,
-			"_locale": locale1
-		}
-		const anon = () => {};
-		const copyConfigReturnValue = await copyConfig(to, from, anon)
-		const isUTC2 = {}
-		const isUTC3 = {}
-		const copyConfigReturnValue1 = await copyConfig(isUTC2, isUTC3)
-		const isAMomentObject2 = {}
-		const i2 = "UE.pmp[U±'H5aBk_2V[!Xtg6B>0?/l1Nn_(_";
-		const i3 = "pred dňom";
-		const isAMomentObject3 = {}
-		const arrayElement3 = true;
-		const arrayElement4 = true;
-		const pf2 = undefined;
-		const locale2 = null;
-		const arrayElement5 = {}
-		const strict2 = {}
+		const isValid = true;
+		const strict = true;
 		const localConfig = {
-			"_isAMomentObject": isAMomentObject2,
-			"_i": i2,
-			"_f": i3,
-			"_l": isAMomentObject3,
-			"_strict": arrayElement3,
-			"_tzm": arrayElement4,
-			"_isUTC": pf2,
-			"_offset": locale2,
-			"_pf": arrayElement5,
-			"_locale": strict2
+			"_i": i,
+			"_d": d,
+			"_isValid": isValid,
+			"_strict": strict
 		}
-		const momentReturnValue = await Moment(localConfig)
+		const configFromISOReturnValue = await configFromISO(localConfig)
+		const i1 = ")A@<%?+?,";
+		const d1 = 967.3381477434043;
+		const isValid1 = false;
+		const strict1 = true;
+		const localConfig1 = {
+			"_i": i1,
+			"_d": d1,
+			"_isValid": isValid1,
+			"_strict": strict1
+		}
+		const anon = 121.29170628619727;
+		const configFromStringReturnValue = await configFromString(localConfig1, anon)
+		const localConfig2 = "year";
+		const configFromStringReturnValue1 = await configFromString(localConfig2)
+		const i2 = undefined;
+		const isValid2 = false;
+		const f = 708.1010635060868;
+		const localConfig3 = {
+			"_i": i2,
+			"_isValid": isValid2,
+			"_f": f
+		}
+		const anon1 = "oC{U1r^e 1gl}n>";
+		const configFromRFCReturnValue = await configFromRFC2822(localConfig3, anon1)
+		const i3 = true;
+		const getDay1 = () => {};
+		const d2 = {
+			"getDay": getDay1
+		}
+		const isValid3 = false;
+		const strict2 = false;
+		const localConfig4 = {
+			"_i": i3,
+			"_d": d2,
+			"_isValid": isValid3,
+			"_strict": strict2
+		}
+		const configFromISOReturnValue1 = await configFromISO(localConfig4)
 		
 	})
 })

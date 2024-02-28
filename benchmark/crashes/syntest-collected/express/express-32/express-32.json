@@ -1,1 +1,1 @@
-{"issueNumber":"express-32","info":"TypeError: Cannot set properties of undefined (setting '-31.711352070656403')","dependencies":{},"requireCrashDependency":true,"crashId":"express-32"}
+{"issueNumber":"express-32","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-32"}

@@ -2,30 +2,31 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let setCharset;
-	let compileTrust;
+	let res;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
-		({setCharset} = require("../instrumented/express/lib/utils.js"));
-		({compileTrust} = require("../instrumented/express/lib/utils.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/response.js")];
+		(res = require("../instrumented/express/lib/response.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const type = () => {};
-		const charset = "Set-Cookie";
-		const anon = -1;
-		const anon1 = false;
-		const setCharsetReturnValue = await setCharset(type, charset, anon, anon1)
-		const type1 = {}
-		const anon2 = false;
-		const anon3 = "utils-merge";
-		const setCharsetReturnValue1 = await setCharset(type1, anon2, anon3)
-		const type2 = {}
-		const compileTrustReturnValue = await compileTrust(type2)
+		const res1 = res
+		const field = -275;
+		const val = undefined;
+		const appendReturnValue = await res1.append(field, val)
+		const res2 = res
+		const localLength = "}?o\\,T1#>_\\E\"['+1#9F;j@jM5O^13V<MyLh*9}IF\\DV(\" EH=sF&;o.OG\"Gu4snx[";
+		const field1 = {
+			"length": localLength
+		}
+		const varyReturnValue = await res2.vary(field1)
+		const res3 = res
+		const arrayElement = 60;
+		const arrayElement1 = "d87|~Y8=qxY~|C$ ";
+		const links = [arrayElement, arrayElement1]
+		const linksReturnValue = await res3.links(links)
 		
 	})
 })

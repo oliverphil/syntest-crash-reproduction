@@ -1,1 +1,1 @@
-{"issueNumber":"express-2","info":"TypeError: Cannot read properties of undefined (reading 'env')","dependencies":{},"requireCrashDependency":true,"crashId":"express-2"}
+{"issueNumber":"express-2","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-2"}

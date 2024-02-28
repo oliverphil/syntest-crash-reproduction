@@ -1,1 +1,1 @@
-{"issueNumber":"express-17","info":"TypeError: Cannot set properties of undefined (setting '204')","dependencies":{},"requireCrashDependency":true,"crashId":"express-17"}
+{"issueNumber":"express-17","info":"TypeError: this.on is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-17"}

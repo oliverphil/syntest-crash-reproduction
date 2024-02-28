@@ -1,1 +1,1 @@
-{"issueNumber":"express-70","info":"TypeError: Cannot read properties of undefined (reading 'json spaces')","dependencies":{},"requireCrashDependency":true,"crashId":"express-70"}
+{"issueNumber":"express-70","info":"TypeError: Cannot read properties of null","dependencies":{},"requireCrashDependency":true,"crashId":"express-70"}

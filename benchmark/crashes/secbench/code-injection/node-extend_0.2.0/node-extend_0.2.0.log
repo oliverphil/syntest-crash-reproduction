@@ -1,7 +1,7 @@
 Error: 
         at eval (eval at extend (node-extend/lib/extend.js:31:11), <anonymous>:1:23)
         at extend (node-extend/lib/extend.js:31:11)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/node-extend_0.2.0/node-extend.test.js:9:11)
+        at Object.<anonymous> (code-injection/node-extend_0.2.0/node-extend.test.js:9:11)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

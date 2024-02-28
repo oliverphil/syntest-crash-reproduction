@@ -2,27 +2,27 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let app;
+	let isAbsolute;
+	let compileTrust;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
-		(app = require("../instrumented/express/lib/application.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
+		delete require.cache[require.resolve("../instrumented/express/lib/utils.js")];
+		({isAbsolute} = require("../instrumented/express/lib/utils.js"));
+		({compileTrust} = require("../instrumented/express/lib/utils.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const app1 = app
+		const substring = () => {};
+		const path = {
+			"substring": substring
+		}
 		const anon = () => {};
-		const pathReturnValue = await app1.path(anon)
-		const app2 = app
-		const setting = 656.4657116598535;
-		const anon1 = true;
-		const enableReturnValue = await app2.enable(setting, anon1)
-		const app3 = app
-		const anon2 = "y)v#G}4627d§/[5§ld6\t^<IXvp±CWx";
-		const anon3 = "C:aoRk[D(T<)y8_~k('7w6R<DqnEz1knVevmW)AqX\"\ts$l}u0tP x+`wJ(";
-		const lazyrouterReturnValue = await app3.lazyrouter(anon2, anon3)
+		const isAbsoluteReturnValue = await isAbsolute(path, anon)
+		const val = "\n";
+		const compileTrustReturnValue = await compileTrust(val)
 		
 	})
 })

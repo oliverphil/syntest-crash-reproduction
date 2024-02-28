@@ -1,1 +1,1 @@
-{"issueNumber":"moment-13","info":"TypeError: this.isValid is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"moment-13"}
+{"issueNumber":"moment-13","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"moment-13"}

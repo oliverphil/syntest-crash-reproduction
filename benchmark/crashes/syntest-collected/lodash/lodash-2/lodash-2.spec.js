@@ -5,13 +5,11 @@ import equalArrays from "../instrumented/lodash/.internal/equalArrays.js";
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const arrayElement = false;
-		const arrayElement1 = () => {};
-		const array = [arrayElement, arrayElement1]
-		const other = "./meanBy.js";
-		const bitmask = 245.5800159025141;
+		const array = "./isTypedArray.js";
+		const other = "./.internal/arrayEach.js";
+		const bitmask = -11;
 		const customizer = false;
-		const equalFunc = null;
+		const equalFunc = undefined;
 		const get = () => {};
 		const localSet = () => {};
 		const localDelete = () => {};

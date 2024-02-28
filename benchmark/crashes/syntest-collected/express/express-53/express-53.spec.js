@@ -13,16 +13,20 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const res1 = res
-		const localName = () => {};
-		const options = {}
-		const anon = null;
-		const clearCookieReturnValue = await res1.clearCookie(localName, options, anon)
+		const field = () => {};
+		const getReturnValue = await res1.get(field)
 		const res2 = res
-		const url = null;
-		const redirectReturnValue = await res2.redirect(url)
-		const res3 = res
-		const url1 = 302;
-		const redirectReturnValue1 = await res3.redirect(url1)
+		const path = "r]iLfK\n*.~SHCLLs{b+)s5%z.hWd:cl 9$:YUCf=IqXk\n<';4I+qo!SRmPf\"U8)I;E\\A)1V/4,qoFN";
+		const root = "NW ~|_D~T~D v4<ZwA\" 6t18)j\nmut44PD2@K`\"4nbZq>8Z/7JYExL)1dR_ ";
+		const options = {
+			"root": root
+		}
+		const callback = false;
+		const arrayElement = 2;
+		const arrayElement1 = {}
+		const arrayElement2 = true;
+		const anon = [arrayElement, arrayElement1, arrayElement2]
+		const sendFileReturnValue = await res2.sendFile(path, options, callback, anon)
 		
 	})
 })

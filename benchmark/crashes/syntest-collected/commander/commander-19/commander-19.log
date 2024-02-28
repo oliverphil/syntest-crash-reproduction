@@ -1,7 +1,7 @@
-TypeError: argv.slice is not a function
-    at splitOptionFlags (commanderjs/lib/option.js:198:79)
-    at new Option (commanderjs/lib/option.js:27:75)
-    at call (.syntest/tests/tempTest.spec.js:28:41)
+RangeError: Invalid count value
+    at String.repeat (<anonymous>)
+    at Help.wrap (commanderjs/lib/help.js:384:30)
+    at call (.syntest/tests/tempTest.spec.js:35:44)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

@@ -2,7 +2,7 @@ Error:
         at eval (eval at Object.<anonymous>.exports.unserialize (node-serialize/lib/serialize.js:75:22), <anonymous>:1:20)
         at eval (eval at Object.<anonymous>.exports.unserialize (node-serialize/lib/serialize.js:75:22), <anonymous>:1:33)
         at Object.unserialize (node-serialize/lib/serialize.js:75:22)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/node-serialize_0.0.3/node-serialize.test.js:11:15)
+        at Object.<anonymous> (code-injection/node-serialize_0.0.3/node-serialize.test.js:11:15)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

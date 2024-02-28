@@ -1,1 +1,1 @@
-{"issueNumber":"commander-25","info":"TypeError: Cannot read properties of null (reading 'name')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-25"}
+{"issueNumber":"commander-25","info":"TypeError: number 646.9672101373014 is not iterable","dependencies":{},"requireCrashDependency":true,"crashId":"commander-25"}

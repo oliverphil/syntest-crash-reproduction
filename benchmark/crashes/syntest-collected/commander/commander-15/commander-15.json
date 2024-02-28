@@ -1,1 +1,1 @@
-{"issueNumber":"commander-15","info":"TypeError: Cannot read properties of undefined (reading 'hidden')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-15"}
+{"issueNumber":"commander-15","info":"TypeError: Cannot read properties of null","dependencies":{},"requireCrashDependency":true,"crashId":"commander-15"}

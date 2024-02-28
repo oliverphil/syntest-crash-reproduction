@@ -1,27 +1,32 @@
 // Imports
 require = require('esm')(module)
-import {isBetween} from "../instrumented/moment/src/lib/moment/compare.js";
-import {isSame} from "../instrumented/moment/src/lib/moment/compare.js";
+import {isValid as isValid1} from "../instrumented/moment/src/lib/create/valid.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const isValid = () => {};
-		const from = {
-			"isValid": isValid
+		const isValid = null;
+		const getTime = () => {};
+		const d = {
+			"getTime": getTime
 		}
-		const isValid1 = () => {};
-		const to = {
-			"isValid": isValid1
+		const strict = true;
+		const m = {
+			"_isValid": isValid,
+			"_d": d,
+			"_strict": strict
 		}
-		const units = undefined;
-		const inclusivity = true;
-		const anon = []
-		const anon1 = "\tn~bXw1:73Q3U\nSduHox";
-		const isBetweenReturnValue = await isBetween(from, to, units, inclusivity, anon, anon1)
-		const inclusivity1 = true;
-		const units1 = true;
-		const isSameReturnValue = await isSame(inclusivity1, units1)
+		const anon = "hR\"&2F9y3OyA<p";
+		const anon1 = "wBs<==;hvr+Huxz@:g[6p>\nds]Rm BNT\"DfBD#'o6";
+		const isValidReturnValue = await isValid1(m, anon, anon1)
+		const strict1 = true;
+		const anon2 = 12;
+		const isValidReturnValue1 = await isValid1(strict1, anon2)
+		const getTime1 = () => {};
+		const d1 = {
+			"getTime": getTime1
+		}
+		const isValidReturnValue2 = await isValid1(d1)
 		
 	})
 })

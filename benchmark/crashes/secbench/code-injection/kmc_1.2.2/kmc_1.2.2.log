@@ -2,7 +2,7 @@ SyntaxError: Unexpected token 'throw'
         at Object._analyzeRequires (kmc/lib/index.js:164:52)
         at Object.analyze (kmc/lib/index.js:361:14)
         at Object.analyze (kmc/lib/index.js:456:31)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/kmc_1.2.2/kmc.test.js:15:9)
+        at Object.<anonymous> (code-injection/kmc_1.2.2/kmc.test.js:15:9)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

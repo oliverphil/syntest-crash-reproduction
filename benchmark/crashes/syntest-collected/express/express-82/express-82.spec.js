@@ -2,25 +2,36 @@
 require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
-	let app;
+	let View;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
-		delete require.cache[require.resolve("../instrumented/express/lib/application.js")];
-		(app = require("../instrumented/express/lib/application.js"));
+		delete require.cache[require.resolve("../instrumented/express/lib/view.js")];
+		(View = require("../instrumented/express/lib/view.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const app1 = app
-		const pathReturnValue = await app1.path()
-		const app2 = app
-		const setting = false;
-		const anon = 406;
-		const enableReturnValue = await app2.enable(setting, anon)
-		const app3 = app
-		const fn = "![Nt$`-3c)XMG (~{JL}uIOu/W(s&poqY§^lf";
-		const useReturnValue = await app3.use(fn)
+		const localName = () => {};
+		const options = true;
+		const view = new View(localName, options)
+		const localName1 = () => {};
+		const options1 = true;
+		const view1 = new View(localName1, options1)
+		const localName2 = null;
+		const lookupReturnValue = await view1.lookup(localName2)
+		const localName3 = () => {};
+		const options2 = true;
+		const view2 = new View(localName3, options2)
+		const localName4 = "./middleware/query";
+		const localName5 = null;
+		const lookupReturnValue1 = await view2.lookup(localName4, localName5)
+		const localName6 = () => {};
+		const options3 = true;
+		const view3 = new View(localName6, options3)
+		const localName7 = "./middleware/query";
+		const localName8 = null;
+		const renderReturnValue = await view3.render(localName7, localName8)
 		
 	})
 })

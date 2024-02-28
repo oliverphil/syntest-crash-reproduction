@@ -1,43 +1,26 @@
 // Imports
 require = require('esm')(module)
-import DisjointSetItem from "../instrumented/javascript-algorithms/src/data-structures/disjoint-set/DisjointSetItem.js";
-import bellmanFord from "../instrumented/javascript-algorithms/src/algorithms/graph/bellman-ford/bellmanFord.js";
+import CountingSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/counting-sort/CountingSort.js";
+import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const getAllVertices = () => {};
-		const getVertexByKey = () => {};
-		const getNeighbors = () => {};
-		const findEdge = () => {};
-		const graph = {
-			"getAllVertices": getAllVertices,
-			"getVertexByKey": getVertexByKey,
-			"getNeighbors": getNeighbors,
-			"findEdge": findEdge
-		}
-		const value = () => {};
-		const keyCallback = "]ye{aP§=]\t2/[TCC^sro/22HP|*\",1wd\twRqAa2I)UO!Gi^i3hz\"crL~B>FAiK#yp\tk0 ";
-		const anon = false;
-		const startVertex = new DisjointSetItem(value, keyCallback, anon)
-		const anon1 = false;
-		const bellmanFordReturnValue = await bellmanFord(graph, startVertex, anon1)
-		const value1 = () => {};
-		const keyCallback1 = "]ye{aP§=]\t2/[TCC^sro/22HP|*\",1wd\twRqAa2I)UO!Gi^i3hz\"crL~B>FAiK#yp\tk0 ";
-		const anon2 = false;
-		const startVertex1 = new DisjointSetItem(value1, keyCallback1, anon2)
-		const getAllVertices1 = () => {};
-		const getVertexByKey1 = () => {};
-		const getNeighbors1 = () => {};
-		const findEdge1 = () => {};
-		const graph1 = {
-			"getAllVertices": getAllVertices1,
-			"getVertexByKey": getVertexByKey1,
-			"getNeighbors": getNeighbors1,
-			"findEdge": findEdge1
-		}
-		const anon3 = () => {};
-		const addChildReturnValue = await startVertex1.addChild(graph1, anon3)
+		const possibleItems = "../../sorting/quick-sort/QuickSort";
+		const anon = 1;
+		const knapsack = new Knapsack(possibleItems, anon)
+		const totalValueReturnValue = await knapsack.totalValue
+		const possibleItems1 = "../../sorting/quick-sort/QuickSort";
+		const anon1 = 1;
+		const knapsack1 = new Knapsack(possibleItems1, anon1)
+		const anon2 = "Invalid matrix format";
+		const anon3 = new CountingSort(anon2)
+		const solveZeroOneKnapsackProblemReturnValue = await knapsack1.solveZeroOneKnapsackProblem(anon3)
+		const possibleItems2 = "e(Pf&gu[o8Xy3gg,M\"9CpT~Y'dc+|@mlv/Kv9KOykrxp2IX&TKDQ\\?F8 +]^>R=)_yfY :9uz ,:aC ~3JLSVg_\n=+D;D GwK";
+		const weightLimit = true;
+		const knapsack2 = new Knapsack(possibleItems2, weightLimit)
+		const anon4 = true;
+		const solveUnboundedKnapsackProblemReturnValue = await knapsack2.solveUnboundedKnapsackProblem(anon4)
 		
 	})
 })

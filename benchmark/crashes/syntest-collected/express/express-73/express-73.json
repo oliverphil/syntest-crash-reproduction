@@ -1,1 +1,1 @@
-{"issueNumber":"express-73","info":"TypeError: Cannot read properties of undefined (reading 'content-type')","dependencies":{},"requireCrashDependency":true,"crashId":"express-73"}
+{"issueNumber":"express-73","info":"TypeError: content-type header is missing from object","dependencies":{},"requireCrashDependency":true,"crashId":"express-73"}

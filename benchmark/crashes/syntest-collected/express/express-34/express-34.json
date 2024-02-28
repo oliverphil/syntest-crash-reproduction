@@ -1,1 +1,1 @@
-{"issueNumber":"express-34","info":"TypeError: The argument 'options' is invalid. Received { port: true }","dependencies":{},"requireCrashDependency":true,"crashId":"express-34"}
+{"issueNumber":"express-34","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-34"}

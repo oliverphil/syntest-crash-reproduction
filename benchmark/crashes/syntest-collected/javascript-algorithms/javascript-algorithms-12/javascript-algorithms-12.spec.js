@@ -1,31 +1,21 @@
 // Imports
 require = require('esm')(module)
-import QuickSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/quick-sort/QuickSort.js";
-import eulerianPath from "../instrumented/javascript-algorithms/src/algorithms/graph/eulerian-path/eulerianPath.js";
+import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const anon = 133.36042137173058;
-		const getAllEdges = new QuickSort(anon)
-		const getAllVertices = () => {};
-		const deleteEdge = () => {};
-		const graph = {
-			"getAllEdges": getAllEdges,
-			"getAllVertices": getAllVertices,
-			"deleteEdge": deleteEdge
-		}
-		const eulerianPathReturnValue = await eulerianPath(graph)
-		const anon1 = 133.36042137173058;
-		const getAllEdges1 = new QuickSort(anon1)
-		const getAllVertices1 = () => {};
-		const deleteEdge1 = () => {};
-		const graph1 = {
-			"getAllEdges": getAllEdges1,
-			"getAllVertices": getAllVertices1,
-			"deleteEdge": deleteEdge1
-		}
-		const eulerianPathReturnValue1 = await eulerianPath(graph1)
+		const possibleItems = 0;
+		const weightLimit = -857;
+		const possibleItems1 = new Knapsack(possibleItems, weightLimit)
+		const weightLimit1 = null;
+		const knapsack = new Knapsack(possibleItems1, weightLimit1)
+		const anon = null;
+		const sortPossibleItemsByWeightReturnValue = await knapsack.sortPossibleItemsByWeight(anon)
+		const possibleItems2 = 0;
+		const weightLimit2 = -857;
+		const possibleItems3 = new Knapsack(possibleItems2, weightLimit2)
+		const sortPossibleItemsByValuePerWeightRatioReturnValue = await possibleItems3.sortPossibleItemsByValuePerWeightRatio()
 		
 	})
 })

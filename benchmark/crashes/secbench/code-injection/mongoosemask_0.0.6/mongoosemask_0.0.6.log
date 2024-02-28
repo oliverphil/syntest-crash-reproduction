@@ -5,7 +5,7 @@ Error:
         at Function.forEach (lodash/dist/lodash.js:2590:15)
         at masked (mongoosemask/index.js:113:7)
         at Function.mask (mongoosemask/index.js:71:12)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/mongoosemask_0.0.6/mongoosemask.test.js:9:10)
+        at Object.<anonymous> (code-injection/mongoosemask_0.0.6/mongoosemask.test.js:9:10)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

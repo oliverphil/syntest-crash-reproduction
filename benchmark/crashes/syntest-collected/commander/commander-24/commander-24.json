@@ -1,1 +1,1 @@
-{"issueNumber":"commander-24","info":"TypeError: arg.name is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"commander-24"}
+{"issueNumber":"commander-24","info":"TypeError: number -200.47925954084167 is not iterable","dependencies":{},"requireCrashDependency":true,"crashId":"commander-24"}

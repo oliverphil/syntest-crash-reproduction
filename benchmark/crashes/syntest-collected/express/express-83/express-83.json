@@ -1,1 +1,1 @@
-{"issueNumber":"express-83","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-83"}
+{"issueNumber":"express-83","info":"TypeError: The \"path\" argument must be of type string. Received an instance of Object","dependencies":{},"requireCrashDependency":true,"crashId":"express-83"}

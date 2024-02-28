@@ -1,13 +1,14 @@
-TypeError: callbacks.leaveVertex is not a function
-    at GraphEdge.getKey (javascript-algorithms/src/data-structures/graph/GraphEdge.js:17:45)
-    at _context (javascript-algorithms/src/algorithms/graph/bellman-ford/bellmanFord.js:22:49)
-    at call (.syntest/tests/tempTest.spec.js:13:38)
+TypeError: Cannot read properties of undefined (reading 'get')
+    at RedBlackTree.swapNodeColors (javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:317:39)
+    at RedBlackTree.leftLeftRotation (javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:159:10)
+    at RedBlackTree.leftRightRotation (javascript-algorithms/src/data-structures/tree/red-black-tree/RedBlackTree.js:190:17)
+    at call (.syntest/tests/tempTest.spec.js:26:59)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
+    at /local/scratch/syntest-crash-reproduction/crashjs/.syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
-    at processImmediate (node:internal/timers:478:21)
+    at processImmediate (node:internal/timers:476:21)

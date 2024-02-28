@@ -1,1 +1,1 @@
-{"issueNumber":"moment-11","info":"TypeError: this.isValid is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"moment-11"}
+{"issueNumber":"moment-11","info":"TypeError: Cannot create property '_pf' on number '29'","dependencies":{},"requireCrashDependency":true,"crashId":"moment-11"}

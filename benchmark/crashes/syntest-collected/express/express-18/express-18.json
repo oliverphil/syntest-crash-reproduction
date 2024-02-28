@@ -1,1 +1,1 @@
-{"issueNumber":"express-18","info":"TypeError: Cannot read properties of undefined (reading '1')","dependencies":{},"requireCrashDependency":true,"crashId":"express-18"}
+{"issueNumber":"express-18","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-18"}

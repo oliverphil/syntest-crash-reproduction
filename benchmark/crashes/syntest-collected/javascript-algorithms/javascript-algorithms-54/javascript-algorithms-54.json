@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-54","info":"TypeError: Cannot read properties of null (reading 'getNeighbors')","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-54"}
+{"issueNumber":"javascript-algorithms-54","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-54"}

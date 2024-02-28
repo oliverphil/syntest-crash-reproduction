@@ -1,7 +1,7 @@
 Error: 
         at eval (eval at Object.<anonymous>.module.exports.setColorTheme (m-log/libs/log.js:24:11), <anonymous>:1:42)
         at Object.setColorTheme (m-log/libs/log.js:24:11)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/m-log_0.0.1/m-log.test.js:9:9)
+        at Object.<anonymous> (code-injection/m-log_0.0.1/m-log.test.js:9:9)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

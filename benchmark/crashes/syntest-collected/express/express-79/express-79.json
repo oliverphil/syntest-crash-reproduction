@@ -1,1 +1,1 @@
-{"issueNumber":"express-79","info":"TypeError: Cannot set properties of undefined (setting 'null')","dependencies":{},"requireCrashDependency":true,"crashId":"express-79"}
+{"issueNumber":"express-79","info":"TypeError: The \"path\" argument must be of type string. Received undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-79"}

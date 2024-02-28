@@ -13,8 +13,12 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const setting = "[";
-		const disableReturnValue = await app1.disable(setting)
+		const app2 = app
+		const setting = false;
+		const enableReturnValue = await app2.enable(setting)
+		const app3 = app
+		const setting1 = false;
+		const allReturnValue = await app3.all(setting1)
 		
 	})
 })

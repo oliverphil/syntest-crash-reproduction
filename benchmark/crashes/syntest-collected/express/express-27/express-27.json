@@ -1,1 +1,1 @@
-{"issueNumber":"express-27","info":"TypeError: Cannot set properties of undefined (setting '>; rel=\"')","dependencies":{},"requireCrashDependency":true,"crashId":"express-27"}
+{"issueNumber":"express-27","info":"TypeError: argument string is required to be a string","dependencies":{},"requireCrashDependency":true,"crashId":"express-27"}

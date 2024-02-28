@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-2","info":"TypeError: Cannot create property 'compareCallback' on number '840.0637635444575'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-2"}
+{"issueNumber":"javascript-algorithms-2","info":"TypeError: Cannot create property 'compareCallback' on string '../Sort'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-2"}

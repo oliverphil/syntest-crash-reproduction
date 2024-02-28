@@ -1,1 +1,1 @@
-{"issueNumber":"express-58","info":"TypeError: invalid media type","dependencies":{},"requireCrashDependency":true,"crashId":"express-58"}
+{"issueNumber":"express-58","info":"TypeError: The \"name\" argument must be of type string. Received an instance of Object","dependencies":{},"requireCrashDependency":true,"crashId":"express-58"}

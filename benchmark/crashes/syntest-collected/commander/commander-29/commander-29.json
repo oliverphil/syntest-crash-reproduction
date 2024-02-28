@@ -1,1 +1,1 @@
-{"issueNumber":"commander-29","info":"TypeError: Cannot read properties of undefined (reading 'filter')","dependencies":{},"requireCrashDependency":true,"crashId":"commander-29"}
+{"issueNumber":"commander-29","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"commander-29"}

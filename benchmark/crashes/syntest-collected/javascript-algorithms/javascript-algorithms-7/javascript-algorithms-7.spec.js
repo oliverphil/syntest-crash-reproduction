@@ -1,28 +1,36 @@
 // Imports
 require = require('esm')(module)
-import DisjointSetItem from "../instrumented/javascript-algorithms/src/data-structures/disjoint-set/DisjointSetItem.js";
-import HeapSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/heap-sort/HeapSort.js";
-import KnapsackItem from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/KnapsackItem.js";
+import breadthFirstSearch from "../instrumented/javascript-algorithms/src/algorithms/graph/breadth-first-search/breadthFirstSearch.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const value = -734;
-		const anon = -918;
-		const keyCallback = new HeapSort(anon)
-		const anon1 = () => {};
-		const anon2 = -913;
-		const objectPattern = new DisjointSetItem(value, keyCallback, anon1, anon2)
-		const knapsackItem = new KnapsackItem(objectPattern)
-		const localToStringReturnValue = await knapsackItem.toString()
-		const value1 = -734;
-		const anon3 = -918;
-		const keyCallback1 = new HeapSort(anon3)
-		const anon4 = () => {};
-		const anon5 = -913;
-		const objectPattern1 = new DisjointSetItem(value1, keyCallback1, anon4, anon5)
-		const knapsackItem1 = new KnapsackItem(objectPattern1)
-		const valuePerWeightRatioReturnValue = await knapsackItem1.valuePerWeightRatio
+		const graph = null;
+		const startVertex = "../../../data-structures/priority-queue/PriorityQueue";
+		const originalCallbacks = undefined;
+		const breadthFirstSearchReturnValue = await breadthFirstSearch(graph, startVertex, originalCallbacks)
+		const getNeighbors = () => {};
+		const graph1 = {
+			"getNeighbors": getNeighbors
+		}
+		const startVertex1 = () => {};
+		const originalCallbacks1 = {}
+		const breadthFirstSearchReturnValue1 = await breadthFirstSearch(graph1, startVertex1, originalCallbacks1)
+		const getNeighbors1 = () => {};
+		const graph2 = {
+			"getNeighbors": getNeighbors1
+		}
+		const startVertex2 = 701;
+		const originalCallbacks2 = {}
+		const breadthFirstSearchReturnValue2 = await breadthFirstSearch(graph2, startVertex2, originalCallbacks2)
+		const originalCallbacks3 = {}
+		const getNeighbors2 = () => {};
+		const graph3 = {
+			"getNeighbors": getNeighbors2
+		}
+		const originalCallbacks4 = {}
+		const startVertex3 = 701;
+		const breadthFirstSearchReturnValue3 = await breadthFirstSearch(originalCallbacks3, graph3, originalCallbacks4, startVertex3)
 		
 	})
 })

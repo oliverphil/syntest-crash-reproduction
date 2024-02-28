@@ -1,1 +1,1 @@
-{"issueNumber":"express-20","info":"TypeError: Cannot set properties of undefined (setting '60')","dependencies":{},"requireCrashDependency":true,"crashId":"express-20"}
+{"issueNumber":"express-20","info":"TypeError: The argument 'options' is invalid. Received { port: false }","dependencies":{},"requireCrashDependency":true,"crashId":"express-20"}

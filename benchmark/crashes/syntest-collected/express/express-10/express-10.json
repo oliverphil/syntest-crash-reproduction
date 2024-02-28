@@ -1,1 +1,1 @@
-{"issueNumber":"express-10","info":"TypeError: Cannot set properties of undefined (setting 'undefined')","dependencies":{},"requireCrashDependency":true,"crashId":"express-10"}
+{"issueNumber":"express-10","info":"TypeError: path.replace is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-10"}

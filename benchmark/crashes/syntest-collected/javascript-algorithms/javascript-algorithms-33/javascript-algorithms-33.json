@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-33","info":"TypeError: Cannot create property 'compareCallback' on string '../../../data-structures/heap/MinHeap'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-33"}
+{"issueNumber":"javascript-algorithms-33","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-33"}

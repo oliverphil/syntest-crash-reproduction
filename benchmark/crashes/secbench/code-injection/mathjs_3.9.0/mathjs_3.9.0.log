@@ -4,7 +4,7 @@ Error:
         at Object.eval (eval at Node.compile (mathjs/lib/expression/node/Node.js:71:19), <anonymous>:3:2019)
         at eval (mathjs/lib/expression/function/eval.js:40:36)
         at Object.compile (eval at _typed (typed-function/typed-function.js:1115:22), <anonymous>:22:14)
-        at Object.<anonymous> (/Users/philip/Documents/University.nosync/SecBench.js/code-injection/mathjs_3.9.0/mathjs.test.js:10:10)
+        at Object.<anonymous> (code-injection/mathjs_3.9.0/mathjs.test.js:10:10)
         at Object.asyncJestTest (jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
         at jest-jasmine2/build/queueRunner.js:45:12
         at new Promise (<anonymous>)

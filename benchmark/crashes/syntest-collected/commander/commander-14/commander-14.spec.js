@@ -3,50 +3,35 @@ require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
 	let Help;
-	let Argument;
+	let Option;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
 		delete require.cache[require.resolve("../instrumented/commanderjs/lib/help.js")];
-		delete require.cache[require.resolve("../instrumented/commanderjs/lib/argument.js")];
+		delete require.cache[require.resolve("../instrumented/commanderjs/lib/option.js")];
 		({Help} = require("../instrumented/commanderjs/lib/help.js"));
-		({Argument} = require("../instrumented/commanderjs/lib/argument.js"));
+		({Option} = require("../instrumented/commanderjs/lib/option.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const anon = 80;
+		const anon = {}
 		const localHelp = new Help(anon)
-		const cmd = null;
-		const helper = new Help()
-		const padWidthReturnValue = await localHelp.padWidth(cmd, helper)
-		const anon1 = 80;
-		const localHelp1 = new Help(anon1)
-		const map = () => {};
-		const args = {
-			"map": map
-		}
-		const localName = 3.141592653589793;
-		const arrayElement = 2;
-		const aliases = [arrayElement]
-		const options = () => {};
-		const cmd1 = {
-			"_args": args,
-			"_name": localName,
-			"_aliases": aliases,
-			"options": options
-		}
-		const localName1 = "specify size of drink";
-		const description = true;
-		const anon2 = new Argument(localName1, description)
-		const cmd2 = null;
-		const subcommandTermReturnValue = await localHelp1.subcommandTerm(cmd1, anon2, cmd2)
-		const helper1 = new Help()
-		const map1 = () => {};
-		const args1 = {
-			"map": map1
-		}
-		const optionDescriptionReturnValue = await helper1.optionDescription(args1)
+		const cmd = "Arguments:";
+		const anon1 = () => {};
+		const helper = new Help(anon1)
+		const anon2 = 40;
+		const formatHelpReturnValue = await localHelp.formatHelp(cmd, helper, anon2)
+		const anon3 = () => {};
+		const helper1 = new Help(anon3)
+		const flags = "|";
+		const description = "";
+		const argument = new Option(flags, description)
+		const argumentTermReturnValue = await helper1.argumentTerm(argument)
+		const anon4 = () => {};
+		const helper2 = new Help(anon4)
+		const anon5 = {}
+		const commandDescriptionReturnValue = await helper2.commandDescription(anon5)
 		
 	})
 })

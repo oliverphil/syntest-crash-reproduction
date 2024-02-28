@@ -3,39 +3,54 @@ require = require('esm')(module)
 
 describe('SynTest Test Suite', function() {
 	let Help;
-	let Command;
 	beforeEach(() => {
 		// This is a hack to force the require cache to be emptied
 		// Without this we would be using the same required object for each test
 		delete require.cache[require.resolve("../instrumented/commanderjs/lib/help.js")];
-		delete require.cache[require.resolve("../instrumented/commanderjs/lib/command.js")];
 		({Help} = require("../instrumented/commanderjs/lib/help.js"));
-		({Command} = require("../instrumented/commanderjs/lib/command.js"));
 	});
 
 	it("Test 1", async () => {
 		// Test
-		const localHelp = new Help()
-		const arrayElement = {}
-		const arrayElement1 = 206;
-		const localName = false;
-		const arrayElement2 = new Command(localName)
-		const arrayElement3 = "/GK_!(@B{k-r\"3ec_XeCe&X\n47{$^)?r>dgUwy5g<A``Y9^2rXsB\nx|+xE4Tql;=\n/b)95-Y~Tt},|Lh23<Ugb";
-		const cmd = [arrayElement, arrayElement1, arrayElement2, arrayElement3]
-		const longestOptionTermLength = () => {};
-		const longestSubcommandTermLength = () => {};
-		const longestArgumentTermLength = () => {};
-		const helper = {
-			"longestOptionTermLength": longestOptionTermLength,
-			"longestSubcommandTermLength": longestSubcommandTermLength,
-			"longestArgumentTermLength": longestArgumentTermLength
+		const anon = "Commands:";
+		const localHelp = new Help(anon)
+		const match = () => {};
+		const substr = () => {};
+		const str = {
+			"match": match,
+			"substr": substr
 		}
-		const padWidthReturnValue = await localHelp.padWidth(cmd, helper)
-		const localName1 = false;
-		const arrayElement4 = new Command(localName1)
-		const argv = "pot";
-		const parseOptions = "display some debugging";
-		const parseAsyncReturnValue = await arrayElement4.parseAsync(argv, parseOptions)
+		const width = 80;
+		const indent = 2;
+		const assignment = 183.93899071721876;
+		const wrapReturnValue = await localHelp.wrap(str, width, indent, assignment)
+		const anon1 = "Commands:";
+		const localHelp1 = new Help(anon1)
+		const indent1 = 2;
+		const anon2 = "Commands:";
+		const localHelp2 = new Help(anon2)
+		const match1 = () => {};
+		const formatHelpReturnValue = await localHelp1.formatHelp(indent1, localHelp2, match1)
+		const anon3 = "Commands:";
+		const localHelp3 = new Help(anon3)
+		const match2 = () => {};
+		const substr1 = () => {};
+		const str1 = {
+			"match": match2,
+			"substr": substr1
+		}
+		const match3 = () => {};
+		const subcommandTermReturnValue = await localHelp3.subcommandTerm(str1, match3)
+		const anon4 = "Commands:";
+		const localHelp4 = new Help(anon4)
+		const cmd = undefined;
+		const match4 = () => {};
+		const substr2 = () => {};
+		const str2 = {
+			"match": match4,
+			"substr": substr2
+		}
+		const longestSubcommandTermLengthReturnValue = await localHelp4.longestSubcommandTermLength(cmd, str2)
 		
 	})
 })

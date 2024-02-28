@@ -1,8 +1,7 @@
-Error: exiting
-    at Command._exit (commanderjs/lib/command.js:477:11)
-    at Command._displayError (commanderjs/lib/command.js:1555:10)
-    at Command.missingMandatoryOptionValue (commanderjs/lib/command.js:1622:10)
-    at call (.syntest/tests/tempTest.spec.js:28:41)
+TypeError: number 3.5456372556981446 is not iterable (cannot read property Symbol(Symbol.iterator))
+    at new Set (<anonymous>)
+    at suggestSimilar (commanderjs/lib/suggestSimilar.js:58:27)
+    at call (.syntest/tests/tempTest.spec.js:23:44)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

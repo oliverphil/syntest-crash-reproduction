@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-23","info":"TypeError: Cannot create property 'compareCallback' on number '10344'","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-23"}
+{"issueNumber":"javascript-algorithms-23","info":"TypeError: originalArray.slice is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-23"}

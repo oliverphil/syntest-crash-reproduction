@@ -1,1 +1,1 @@
-{"issueNumber":"javascript-algorithms-49","info":"TypeError: graph.getNeighbors is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-49"}
+{"issueNumber":"javascript-algorithms-49","info":"TypeError: Cannot read properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"javascript-algorithms-49"}

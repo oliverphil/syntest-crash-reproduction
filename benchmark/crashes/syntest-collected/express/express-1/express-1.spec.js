@@ -13,8 +13,11 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const anon = 647.9050551548605;
-		const defaultConfigurationReturnValue = await app1.defaultConfiguration(anon)
+		const anon = false;
+		const pathReturnValue = await app1.path(anon)
+		const app2 = app
+		const app3 = app
+		const lazyrouterReturnValue = await app3.lazyrouter()
 		
 	})
 })

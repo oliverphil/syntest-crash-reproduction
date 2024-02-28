@@ -1,1 +1,1 @@
-{"issueNumber":"express-61","info":"TypeError: type.indexOf is not a function","dependencies":{},"requireCrashDependency":true,"crashId":"express-61"}
+{"issueNumber":"express-61","info":"TypeError: The \"name\" argument must be of type string. Received undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-61"}

@@ -1,1 +1,1 @@
-{"issueNumber":"express-6","info":"TypeError: Cannot set properties of undefined (setting '#<Object>')","dependencies":{},"requireCrashDependency":true,"crashId":"express-6"}
+{"issueNumber":"express-6","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-6"}

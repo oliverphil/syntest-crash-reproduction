@@ -1,36 +1,37 @@
 // Imports
 require = require('esm')(module)
-import RadixSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js";
-import articulationPoints from "../instrumented/javascript-algorithms/src/algorithms/graph/articulation-points/articulationPoints.js";
+import KnapsackItem from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/KnapsackItem.js";
+import depthFirstSearch from "../instrumented/javascript-algorithms/src/algorithms/graph/depth-first-search/depthFirstSearch.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const anon = -424;
-		const anon1 = "../../../algorithms/math/is-power-of-two/isPowerOfTwo";
-		const arrayElement = new RadixSort(anon, anon1)
-		const arrayElement1 = 387;
-		const arrayElement2 = "8yyTC±4<-b{YHsoJ|GqF4ezO";
-		const arrayElement3 = -873;
-		const arrayElement4 = {}
-		const arrayElement5 = [arrayElement, arrayElement1, arrayElement2, arrayElement3, arrayElement4]
-		const graph = [arrayElement5]
-		const anon2 = "The data is empty";
-		const articulationPointsReturnValue = await articulationPoints(graph, anon2)
-		const anon3 = -424;
-		const anon4 = "../../../algorithms/math/is-power-of-two/isPowerOfTwo";
-		const arrayElement6 = new RadixSort(anon3, anon4)
-		const arrayElement7 = {}
-		const index = "../../sorting/merge-sort/MergeSort";
-		const arrayElement8 = "8yyTC±4<-b{YHsoJ|GqF4ezO";
-		const placeElementsInCharacterBucketsReturnValue = await arrayElement6.placeElementsInCharacterBuckets(arrayElement7, index, arrayElement8)
-		const anon5 = -424;
-		const anon6 = "../../../algorithms/math/is-power-of-two/isPowerOfTwo";
-		const arrayElement9 = new RadixSort(anon5, anon6)
-		const localElement = () => {};
-		const index1 = 221.6361766574969;
-		const numPasses = "Left index can not be greater than right one";
-		const getCharCodeOfElementAtIndexReturnValue = await arrayElement9.getCharCodeOfElementAtIndex(localElement, index1, numPasses)
+		const getNeighbors = () => {};
+		const graph = {
+			"getNeighbors": getNeighbors
+		}
+		const startVertex = undefined;
+		const callbacks = "";
+		const anon = "q#',ft|k%J<g{if~n$z'W§deFCHx6Y<Ywek\\;T '*G";
+		const anon1 = null;
+		const depthFirstSearchReturnValue = await depthFirstSearch(graph, startVertex, callbacks, anon, anon1)
+		const getNeighbors1 = () => {};
+		const graph1 = {
+			"getNeighbors": getNeighbors1
+		}
+		const startVertex1 = undefined;
+		const getNeighbors2 = () => {};
+		const graph2 = {
+			"getNeighbors": getNeighbors2
+		}
+		const callbacks1 = new KnapsackItem(graph2)
+		const depthFirstSearchReturnValue1 = await depthFirstSearch(graph1, startVertex1, callbacks1)
+		const getNeighbors3 = () => {};
+		const graph3 = {
+			"getNeighbors": getNeighbors3
+		}
+		const callbacks2 = new KnapsackItem(graph3)
+		const localToStringReturnValue = await callbacks2.toString()
 		
 	})
 })

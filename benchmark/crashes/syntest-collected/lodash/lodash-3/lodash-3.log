@@ -1,7 +1,7 @@
 TypeError: customizer is not a function
-    at _loop (lodash/.internal/equalArrays.js:50:7)
-    at equalArrays (lodash/.internal/equalArrays.js:43:259)
-    at call (.syntest/tests/tempTest.spec.js:35:32)
+    at _loop (lodash/.internal/equalArrays.js:51:11)
+    at equalArrays (lodash/.internal/equalArrays.js:43:29)
+    at call (.syntest/tests/tempTest.spec.js:44:52)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)

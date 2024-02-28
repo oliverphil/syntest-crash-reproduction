@@ -1,6 +1,0 @@
-[
-    "watchpack/lib/watchpack.js",
-    "webpack/lib/node/NodeWatchFileSystem.js",
-    "webpack/lib/Watching.js",
-    "process/task_queues"
-]

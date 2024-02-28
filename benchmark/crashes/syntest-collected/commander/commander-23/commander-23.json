@@ -1,1 +1,1 @@
-{"issueNumber":"commander-23","info":"Error: exiting","dependencies":{},"requireCrashDependency":true,"crashId":"commander-23"}
+{"issueNumber":"commander-23","info":"TypeError: number 3.5456372556981446 is not iterable","dependencies":{},"requireCrashDependency":true,"crashId":"commander-23"}

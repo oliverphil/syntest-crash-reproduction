@@ -1,15 +1,15 @@
 TypeError: config._locale.isPM is not a function
-    at currentDateArray (moment/src/lib/create/from-array.js:2645:58)
-    at configFromArray (moment/src/lib/create/from-array.js:2697:17)
-    at configFromStringAndFormat (moment/src/lib/create/from-string-and-format.js:2288:18)
-    at prepareConfig (moment/src/lib/create/from-anything.js:2162:36)
-    at call (.syntest/tests/tempTest.spec.js:22:33)
+    at Object.<anonymous> (moment/src/lib/units/hour.js:104:35)
+    at addTimeToArrayFromToken (moment/src/lib/parse/token.js:34:22)
+    at configFromStringAndFormat (moment/src/lib/create/from-string-and-format.js:71:36)
+    at prepareConfig (moment/src/lib/create/from-anything.js:53:34)
+    at call (.syntest/tests/tempTest.spec.js:20:55)
     at tryCatch (.syntest/tests/tempTest.spec.js:2:1)
     at Generator._invoke (.syntest/tests/tempTest.spec.js:2:1)
     at Generator.next (.syntest/tests/tempTest.spec.js:2:1)
     at asyncGeneratorStep (.syntest/tests/tempTest.spec.js:2:1)
     at _next (.syntest/tests/tempTest.spec.js:2:1)
-    at .syntest/tests/tempTest.spec.js:2:1
+    at /local/scratch/syntest-crash-reproduction/crashjs/.syntest/tests/tempTest.spec.js:2:1
     at new Promise (<anonymous>)
     at Context.<anonymous> (.syntest/tests/tempTest.spec.js:2:1)
     at processImmediate (node:internal/timers:476:21)

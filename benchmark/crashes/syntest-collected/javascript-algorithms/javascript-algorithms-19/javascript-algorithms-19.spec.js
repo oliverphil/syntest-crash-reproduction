@@ -1,31 +1,27 @@
 // Imports
 require = require('esm')(module)
-import Graph from "../instrumented/javascript-algorithms/src/data-structures/graph/Graph.js";
-import GraphEdge from "../instrumented/javascript-algorithms/src/data-structures/graph/GraphEdge.js";
-import QueenPosition from "../instrumented/javascript-algorithms/src/algorithms/uncategorized/n-queens/QueenPosition.js";
-import RadixSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/radix-sort/RadixSort.js";
-import ShellSort from "../instrumented/javascript-algorithms/src/algorithms/sorting/shell-sort/ShellSort.js";
-import floydWarshall from "../instrumented/javascript-algorithms/src/algorithms/graph/floyd-warshall/floydWarshall.js";
+import Knapsack from "../instrumented/javascript-algorithms/src/algorithms/sets/knapsack-problem/Knapsack.js";
 
 describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
-		const assignment = false;
-		const graph = new Graph(assignment)
-		const anon = 26;
-		const anon1 = new ShellSort(anon)
-		const floydWarshallReturnValue = await floydWarshall(graph, anon1)
-		const assignment1 = false;
-		const graph1 = new Graph(assignment1)
-		const rowIndex = "99FB±'i$";
-		const anon2 = null;
-		const columnIndex = new RadixSort(anon2)
-		const startVertex = new QueenPosition(rowIndex, columnIndex)
-		const endVertex = () => {};
-		const assignment2 = 135;
-		const anon3 = 26;
-		const edge = new GraphEdge(startVertex, endVertex, assignment2, anon3)
-		const deleteEdgeReturnValue = await graph1.deleteEdge(edge)
+		const possibleItems = {}
+		const weightLimit = ":;o\nMZ%ry9\\N==K-u=Rh1P\">@S8Z}!Y3\"Qz9-<*<;O$%WP\\>4wSWTxS)§Lc]uLQF";
+		const knapsack = new Knapsack(possibleItems, weightLimit)
+		const totalValueReturnValue = await knapsack.totalValue
+		const possibleItems1 = {}
+		const weightLimit1 = ":;o\nMZ%ry9\\N==K-u=Rh1P\">@S8Z}!Y3\"Qz9-<*<;O$%WP\\>4wSWTxS)§Lc]uLQF";
+		const knapsack1 = new Knapsack(possibleItems1, weightLimit1)
+		const arrayElement = 1;
+		const arrayElement1 = true;
+		const anon = [arrayElement, arrayElement1]
+		const solveUnboundedKnapsackProblemReturnValue = await knapsack1.solveUnboundedKnapsackProblem(anon)
+		const possibleItems2 = {}
+		const weightLimit2 = ":;o\nMZ%ry9\\N==K-u=Rh1P\">@S8Z}!Y3\"Qz9-<*<;O$%WP\\>4wSWTxS)§Lc]uLQF";
+		const knapsack2 = new Knapsack(possibleItems2, weightLimit2)
+		const possibleItems3 = {}
+		const anon1 = 0;
+		const solveZeroOneKnapsackProblemReturnValue = await knapsack2.solveZeroOneKnapsackProblem(possibleItems3, anon1)
 		
 	})
 })

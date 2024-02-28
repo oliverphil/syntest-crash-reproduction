@@ -13,15 +13,14 @@ describe('SynTest Test Suite', function() {
 	it("Test 1", async () => {
 		// Test
 		const app1 = app
-		const setting = {}
-		const enableReturnValue = await app1.enable(setting)
+		const pathReturnValue = await app1.path()
 		const app2 = app
-		const arrayElement = -168.47109085454633;
-		const arrayElement1 = "Failed to lookup view \"";
-		const arrayElement2 = [arrayElement, arrayElement1]
-		const setting1 = [arrayElement2]
-		const anon = null;
-		const enabledReturnValue = await app2.enabled(setting1, anon)
+		const setting = () => {};
+		const anon = () => {};
+		const enableReturnValue = await app2.enable(setting, anon)
+		const app3 = app
+		const setting1 = "[71kk{R(o_iP±u@6G%Q\"QVCuw0Z78ig P~pIQimg";
+		const disableReturnValue = await app3.disable(setting1)
 		
 	})
 })

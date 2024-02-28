@@ -1,1 +1,1 @@
-{"issueNumber":"express-60","info":"TypeError: argument string is required to be a string","dependencies":{},"requireCrashDependency":true,"crashId":"express-60"}
+{"issueNumber":"express-60","info":"TypeError: The \"name\" argument must be of type string. Received type number","dependencies":{},"requireCrashDependency":true,"crashId":"express-60"}

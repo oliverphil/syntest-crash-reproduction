@@ -1,1 +1,1 @@
-{"issueNumber":"express-67","info":"TypeError: Cannot set properties of undefined (setting '656.4657116598535')","dependencies":{},"requireCrashDependency":true,"crashId":"express-67"}
+{"issueNumber":"express-67","info":"TypeError: Cannot set properties of undefined","dependencies":{},"requireCrashDependency":true,"crashId":"express-67"}
