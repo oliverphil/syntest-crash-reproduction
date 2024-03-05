@@ -11,15 +11,17 @@ for (const fitness of largeExperimentConfig.stackTraceUtils) {
         const max = fitness.range[1];
         for (let i = min; i <= max; i++) {
             fitnessConfigs.push({
-                fitness,
+                function: fitness,
                 N: i,
-                combination: false
+                combination: false,
+                ...fitness
             })
         }
     } else {
         fitnessConfigs.push({
-            fitness,
-            combination: false
+            function: fitness,
+            combination: false,
+            ...fitness
         })
     }
 }
@@ -76,7 +78,16 @@ withCombinations.forEach((config, index) => {
         ...JSON.parse(fs.readFileSync('.syntest.json').toString()),
         ...config
     };
-    writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
+    // if (syntestFile.functions && (syntestFile.functions.map(f => f.functionName).includes('evoCrash')
+    // || syntestFile.functions.map(f => f.functionName).includes('wrongExceptionPartialStackTraceMatch')
+    // || syntestFile.functions.map(f => f.functionName).includes('stackMatchWrongCrash'))) {
+    //     writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
+    // }
+    if (syntestFile.function.functionName === 'wrongExceptionPartialStackTraceMatch'
+    || syntestFile.function.functionName === 'stackMatchWrongCrash') {
+        writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
+    }
+
 });
 
-console.log(execSync(`./queue_experiment.sh 1 ${withCombinations.length} 1`).toString());
+// console.log(execSync(`./queue_experiment.sh 1 ${withCombinations.length} 1`).toString());

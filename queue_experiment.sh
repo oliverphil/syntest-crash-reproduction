@@ -29,9 +29,15 @@ if [ "$1" -ge "$2" ]; then
   exit 0
 fi
 
-echo "Starting Run For $1"
-node run_per_crash.mjs "$1"
-echo ./queue_experiment.sh $(("$1" + 1)) "$2" 1 | at now + 30 minutes
+NUMBER=$(($1 + 1))
+
+while [ ! -f ".syntest-"$NUMBER".json" ]; do
+    ((NUMBER++))
+done
+
+echo "Starting Run For $NUMBER"
+node run_per_crash.mjs "$NUMBER"
+echo ./queue_experiment.sh "$NUMBER" "$2" 1 | at now + 30 minutes
 qstat
 atq
 echo "Success"
