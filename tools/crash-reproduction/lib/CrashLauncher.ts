@@ -18,7 +18,6 @@
 
 import * as path from "node:path";
 
-import { TestCommandOptions } from "./commands/test";
 
 import {
   AbstractSyntaxTreeFactory,
@@ -51,17 +50,10 @@ import {
   TableObject,
   UserInterface,
 } from "@syntest/cli-graphics";
-import {
-  CrashSubject,
-  ExecutionInformationIntegrator,
-  JavaScriptDecoder,
-  JavaScriptRandomSampler,
-  JavaScriptRunner,
-  JavaScriptSuiteBuilder,
-  JavaScriptTestCase, JavaScriptTestCaseSampler, StackTraceObjectiveManager,
-} from "@syntest/search-javascript";
+import {Crash} from "@syntest/crash-reproduction-setup";
 import { IllegalArgumentError, isFailure, unwrap } from "@syntest/diagnostics";
-import { Instrumenter } from "@syntest/instrumentation-javascript";
+import { getLogger, Logger } from "@syntest/logging";
+import { MetricManager } from "@syntest/metric";
 import { ModuleManager } from "@syntest/module";
 import {
   ApproachLevelCalculator,
@@ -70,28 +62,34 @@ import {
   BudgetType,
   EncodingSampler,
   EvaluationBudget,
-  IterationBudget, ObjectiveFunction, ObjectiveManager,
-  extractBranchObjectivesFromProgram,
-  extractFunctionObjectivesFromProgram,
-  extractPathObjectivesFromProgram,
+  extractBranchObjectivesFromProgram, extractFunctionObjectivesFromProgram, extractPathObjectivesFromProgram,
+  IterationBudget,
+  ObjectiveFunction,
+  ObjectiveManager,
+  SearchSubject,
   SearchTimeBudget,
-  TerminationManager,
-  TotalTimeBudget, SearchSubject,
+  TerminationManager, TotalTimeBudget,
 } from "@syntest/search";
-import { getLogger, Logger } from "@syntest/logging";
-import { MetricManager } from "@syntest/metric";
 import {
   BranchDistanceCalculator,
-  JavaScriptSubject,
+  CrashSubject,
+  ExecutionInformationIntegrator,
+  JavaScriptDecoder,
+  JavaScriptRandomSampler,
+  JavaScriptRunner,
+  JavaScriptSuiteBuilder, JavaScriptTestCase, JavaScriptTestCaseSampler,
+  StackTraceObjectiveManager,
+  createObjectives,
 } from "@syntest/search-javascript";
 import { StorageManager } from "@syntest/storage";
-import {Crash} from "@syntest/crash-reproduction-setup";
+import TypedEventEmitter from "typed-emitter";
+
+import { TestCommandOptions } from "./commands/test";
+import {FileSelector} from "./FileSelector";
 import {CrashInstrumenter} from "./instrumentation/CrashInstrumenter";
-import {TestSplitting} from "./workflows/TestSplitter";
 import {DeDuplicator} from "./workflows/DeDuplicator";
 import {addMetaComments} from "./workflows/MetaComment";
-import TypedEventEmitter from "typed-emitter";
-import {FileSelector} from "./FileSelector";
+import {TestSplitting} from "./workflows/TestSplitter";
 
 export type JavaScriptArguments = ArgumentsObject & TestCommandOptions;
 export class CrashLauncher extends Launcher<JavaScriptArguments> {
@@ -110,7 +108,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
   private exports: Export[];
   private dependencyMap: Map<string, string[]>;
 
-  private currentSubject: SearchSubject<JavaScriptTestCase>;
+  private currentSubject: CrashSubject;
 
   private coveredInPath = new Map<string, Archive<JavaScriptTestCase>>();
 
@@ -520,10 +518,30 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     CrashLauncher.LOGGER.info("Postprocessing started");
     const start = Date.now();
     const testSplitter = new TestSplitting(this.runner);
+    const postSearchCrashObjectives = createObjectives([
+      {
+        functionName: "evoCrash",
+        arguments: [
+          "JavaScriptExecutionResult",
+          "StackTrace"
+        ]
+      },
+      {
+        functionName: 'checkStackFramesCoveredAfterSearch',
+        arguments: [
+          "JavaScriptExecutionResult",
+          "StackTrace"
+        ]
+      }],
+      this.crash.stackTrace,
+      this.currentSubject.controlFlowProgram,
+      this.currentSubject.approachLevelCalculator,
+      this.currentSubject.branchDistanceCalculator);
+    const postCrashObjectiveResults = {};
     const objectives = new Map<Target, ObjectiveFunction<JavaScriptTestCase>[]>(
         [...this.archives.entries()].map(([target, archive]) => [
           target,
-          archive.getObjectives(),
+          [...archive.getObjectives(), ...postSearchCrashObjectives],
         ])
     );
     let finalEncodings = new Map<Target, JavaScriptTestCase[]>(
@@ -603,16 +621,16 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
       addMetaComments(newArchives);
     }
 
-    let testNum = 0;
+    let testNumber = 0;
     finalEncodings = new Map<Target, JavaScriptTestCase[]>(
         [...newArchives.entries()].map(([target, archive]) => {
           console.log("archive size", archive.size);
-          testNum += archive.size;
+          testNumber += archive.size;
           return [target, archive.getEncodings()];
         })
     );
 
-    if (testNum === 0) {
+    if (testNumber === 0) {
       CrashLauncher.LOGGER.info("Postprocessing done");
       const timeInMs = (Date.now() - start) / 1000;
       this.metricManager.recordProperty(
@@ -712,9 +730,10 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
 
       const objectiveManager = this.objectiveManagers[file];
       const objectives = [...(objectiveManager?.getCoveredObjectives() || [])];
+      objectives.push(...postSearchCrashObjectives);
       objectives.push(...(objectiveManager?.getUncoveredObjectives() || []));
       for (const objective of objectives
-          .filter(obj => obj.getIdentifier().includes('stack'))) {
+          .filter(object => object.getIdentifier().includes('stack'))) {
         try {
           const encoding = this.archives.get(target).getEncoding(objective);
           const distance = objective.calculateDistance(encoding);
@@ -724,6 +743,26 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         } catch {
           totalObjectives += 1;
         }
+      }
+      for (const objective of postSearchCrashObjectives) {
+        let bestDistance = Number.MAX_VALUE;
+        if (objective.getIdentifier().includes('checkStackFramesCoveredAfterSearch')) {
+          bestDistance = 0;
+        }
+        for (const encoding of this.archives.get(target).getEncodings()) {
+          try {
+            const distance = objective.calculateDistance(encoding);
+            if (objective.getIdentifier().includes('checkStackFramesCoveredAfterSearch')
+             && bestDistance < distance) bestDistance = distance;
+            else if (distance < bestDistance) bestDistance = distance;
+          } catch {
+            //
+          }
+        }
+        if (!postCrashObjectiveResults[target.path]) {
+          postCrashObjectiveResults[target.path] = {};
+        }
+        postCrashObjectiveResults[target.path][objective.getIdentifier()] = bestDistance;
       }
       // if (objectives.length === 0) {
       //   summary["objective"] = 0;
@@ -810,11 +849,14 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
 
     for (const objectiveManager of Object.values(this.objectiveManagers)) {
       const objectives_: Set<ObjectiveFunction<JavaScriptTestCase>> = new Set(objectiveManager.getCoveredObjectives());
-      objectiveManager.getUncoveredObjectives().forEach(o => objectives_.add(o));
+      for (const o of objectiveManager.getUncoveredObjectives()) objectives_.add(o);
       const path = (<StackTraceObjectiveManager<JavaScriptTestCase>>objectiveManager).getSubject().path;
       console.log(`Target: ${path}`);
       for (const objective of [...objectives_].filter(o => o.getIdentifier().includes('stack'))) {
         console.log(`Objective: ${objective.getIdentifier()} : ${objective.getLowestDistance()}`);
+      }
+      for (const objective of Object.keys(postCrashObjectiveResults[path])) {
+        console.log(`Post-Search Objective: ${objective} : ${postCrashObjectiveResults[path][objective]}`);
       }
     }
 

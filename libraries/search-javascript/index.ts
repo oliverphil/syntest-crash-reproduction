@@ -62,3 +62,5 @@ export * from "./lib/search/objective/StackFrameObjectiveFunction";
 export * from "./lib/search/objective/StackErrorObjectiveFunction";
 
 export * from "./lib/search/objective/managers/StackTraceObjectiveManager";
+
+export * from "./lib/search/utils/StackTraceUtils";

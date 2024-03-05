@@ -92,7 +92,8 @@ var funcs = {
     executeNLinesPriorWithinFunction: (a, b, c) => executeNLinesPriorWithinFunction(a, b, c),
     stackMatchWrongCrash: (a, b) => stackMatchWrongCrash(a, b),
     checkExceptionLineCovered: (a, b) => checkExceptionLineCovered(a, b),
-    beacon: (a, b) => beacon(a, b)
+    beacon: (a, b) => beacon(a, b),
+    checkStackFramesCoveredAfterSearch: (a, b) => checkStackFramesCoveredAfterSearch(a, b)
 }
 
 export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
@@ -102,7 +103,33 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
             return 0;
         }
     }
+
     return 1;
+}
+
+export function checkStackFramesCoveredAfterSearch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    const expectedTrace = stackTrace.trace;
+    if (!executionResult.getStackTrace()) return 1;
+    const resultTrace = executionResult.getStackTrace().trace;
+    let framesCovered = 0;
+    let position = -1;
+    for (const targetElement of expectedTrace) {
+        let minDistance = 1;
+        for (let index = position + 1; index < resultTrace.length; index++) {
+            let distance = 1;
+            const resultElement = resultTrace[index];
+            distance = stackElementsDistance(resultElement, targetElement);
+            // dist = stackElementsDistanceNoLineNumbers(resultElement, targetElement);
+            if (distance < minDistance) {
+                minDistance = distance;
+                position = index;
+            }
+        }
+        if (minDistance === 0) {
+            framesCovered++;
+        }
+    }
+    return framesCovered;
 }
 
 export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {

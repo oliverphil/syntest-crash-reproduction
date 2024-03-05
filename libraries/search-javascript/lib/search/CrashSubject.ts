@@ -50,9 +50,9 @@ export class CrashSubject extends JavaScriptSubject {
         this._extractObjectives(objectives, arguments_);
     }
 
-    private controlFlowProgram: ControlFlowProgram;
-    private approachLevelCalculator: ApproachLevelCalculator;
-    private branchDistanceCalculator: BranchDistanceCalculator;
+    public controlFlowProgram: ControlFlowProgram;
+    public approachLevelCalculator: ApproachLevelCalculator;
+    public branchDistanceCalculator: BranchDistanceCalculator;
 
     private stackTrace: StackTrace;
     public numStackObjectives: number;
