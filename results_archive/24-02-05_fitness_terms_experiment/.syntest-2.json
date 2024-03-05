@@ -67,10 +67,10 @@
     ],
     "combination": false,
     "function": {
-        "functionName": "checkExceptionsMatch",
+        "functionName": "evoCrash",
         "arguments": [
             "JavaScriptExecutionResult",
-            "StackError"
+            "StackTrace"
         ]
     },
     "functions": [

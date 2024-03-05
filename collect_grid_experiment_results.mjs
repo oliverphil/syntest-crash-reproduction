@@ -95,7 +95,7 @@ const createSingleRunCSV = (num, runResults, resultsDirectory) => {
                 outputString += `, ${func}, ${targetFile.functionResults[func]}`;
             }
             if (funcs === 1) {
-                outputString += 'N/A, N/A';
+                outputString += ', N/A, N/A';
             }
             outputString += '\n';
         }
@@ -115,14 +115,15 @@ const createFullCSV = (resultsDirectory, allResultsStrings) => {
 const main = () => {
     const resultsDirectory = 'results_archive/24-02-05_fitness_terms_experiment';
     cleanup(resultsDirectory);
-    const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
+    // const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
+    const syntestFiles = ['.syntest-12.json', '.syntest-22.json'];
     const allResults = {};
     const allResultsStrings = [];
     for (const file of syntestFiles.sort((a, b) => {
         const aNum = a.split('-')[1].replaceAll('.json', '');
         const bNum = b.split('-')[1].replaceAll('.json', '');
         return parseInt(aNum) - parseInt(bNum);
-    }).slice(23)) {
+    })) {
         const num = file.split('-')[1].replaceAll('.json', '');
         console.log(num);
         const runConfiguration = JSON.parse(fs.readFileSync(`${resultsDirectory}/${file}`).toString());
@@ -147,7 +148,7 @@ const main = () => {
         }
         cleanup(resultsDirectory);
     }
-    createFullCSV(resultsDirectory, allResultsStrings);
+    // createFullCSV(resultsDirectory, allResultsStrings);
 }
 
 main();

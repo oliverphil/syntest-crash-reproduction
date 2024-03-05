@@ -60,15 +60,15 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "express",
+    "syntest-project": "moment",
     "syntest-crashes": "false",
     "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "express-102"
+        "moment-1"
     ],
     "combination": false,
     "function": {
-        "functionName": "evoCrash",
+        "functionName": "rightExceptionRaisedOnRightLine",
         "arguments": [
             "JavaScriptExecutionResult",
             "StackTrace"

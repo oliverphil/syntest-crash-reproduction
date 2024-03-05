@@ -87,4 +87,18 @@ export class StackTraceObjectiveManager<
             this._currentObjectives.add(objective);
         }
     }
+
+    public override hasObjectives(): boolean {
+        let totalStackObjs = 0;
+        let coveredStackObjs = 0;
+        for (const objective of this._uncoveredObjectives) {
+            if (objective.getIdentifier().includes('stack')) {
+                if (objective.getLowestDistance() === 0) {
+                    coveredStackObjs++;
+                }
+                totalStackObjs++;
+            }
+        }
+        return coveredStackObjs !== totalStackObjs;
+    }
 }
