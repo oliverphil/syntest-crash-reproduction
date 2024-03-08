@@ -19,7 +19,7 @@ for (const type of types) {
             syntestFile['syntest-project'] = project;
             const crashes = envGen.loadAssets(project, type);
             numberOfCrashes += crashes.length;
-            const CRASHES_PER_RUN = 20;
+            const CRASHES_PER_RUN = 10;
             for (let i = 0; i < crashes.length; i += CRASHES_PER_RUN) {
                 const finalIndex = i + CRASHES_PER_RUN < crashes.length ? i + CRASHES_PER_RUN : crashes.length - 1;
                 const currentCrashes = crashes.slice(i, finalIndex);
