@@ -68,10 +68,11 @@
     ],
     "combination": false,
     "function": {
-        "functionName": "rightExceptionRaisedOnRightLine",
+        "functionName": "rightExceptionRaisedOnRightLineFuzzy",
         "arguments": [
             "JavaScriptExecutionResult",
             "StackTrace"
         ]
-    }
+    },
+    "useCoverage": true
 }

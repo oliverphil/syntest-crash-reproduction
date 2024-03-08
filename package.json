@@ -109,6 +109,7 @@
     "@syntest/logging": "file:../syntest-core/libraries/logging",
     "@syntest/search": "file:../syntest-core/libraries/search",
     "esm": "^3.2.25",
-    "fuse.js": "^7.0.0"
+    "fuse.js": "^7.0.0",
+    "fuzzy": "^0.1.3"
   }
 }

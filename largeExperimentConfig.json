@@ -169,6 +169,34 @@
         "JavaScriptExecutionResult",
         "StackTrace"
       ]
+    },
+    {
+      "functionName": "rightExceptionRaisedFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackError"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionRaisedOnRightLineFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedOnRightLineFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionInNeighbouringFunctionFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
     }
   ]
 }

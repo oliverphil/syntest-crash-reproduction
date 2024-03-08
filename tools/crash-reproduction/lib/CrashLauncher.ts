@@ -284,7 +284,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         `No targets were selected! Try changing the 'target-include' parameter`
       );
       await this.exit();
-      process.exit();
+      // process.exit();
     }
 
     const itemization: ItemizationItem[] = [];
@@ -942,7 +942,7 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
     const currentSubject = new CrashSubject(
       target,
       this.crash.stackTrace,
-      [...pathObjectives],
+      this.arguments_.useCoverage ? [...pathObjectives] : [],
         cfp,
         new ApproachLevelCalculator(),
         new BranchDistanceCalculator(

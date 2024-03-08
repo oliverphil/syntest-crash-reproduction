@@ -1,0 +1,65 @@
+{
+  "CRASHES_PER_RUN": 20,
+  "TIME_PER_CRASH": 600,
+  "TIME_TOLERANCE": 3600,
+  "TIME_DELAY": 10800,
+  "useCoverage": [true, false],
+  "stackTraceUtils": [
+    {
+      "functionName": "rightExceptionRaised",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackError"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackError"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionRaisedOnRightLine",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionRaisedOnRightLineFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedOnRightLine",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaisedOnRightLineFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionInNeighbouringFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionInNeighbouringFunctionFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    }
+  ]
+}
