@@ -71,6 +71,11 @@ export class StackTraceObjectiveManager<
         return [];
     }
 
+    public removeObjective(objectiveFunction: ObjectiveFunction<T>) {
+        this._uncoveredObjectives.delete(objectiveFunction);
+        this._currentObjectives.delete(objectiveFunction);
+    }
+
     /**
      * @inheritDoc
      */

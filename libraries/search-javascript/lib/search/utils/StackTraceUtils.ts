@@ -21,6 +21,9 @@ import {JavaScriptTestCase} from "../../testcase/JavaScriptTestCase";
 import {ApproachLevelCalculator, BranchDistanceCalculator, ObjectiveFunction} from "@syntest/search";
 import CrashFitnessFunction1 from "../objective/CrashFitnessFunction1";
 import { ControlFlowProgram } from "@syntest/cfg";
+import Fuse from 'fuse.js';
+
+const fuzzy = require('fuzzy');
 
 export function createObjectives(
     functions,
@@ -72,11 +75,15 @@ var funcs = {
     checkExceptionsMatch: (a, b) => checkExceptionsMatch(a, b),
     evoCrash: (a, b) => evoCrash(a, b),
     rightExceptionRaised: (a, b) => rightExceptionRaised(a, b),
+    rightExceptionRaisedFuzzy: (a, b) => rightExceptionRaisedFuzzy(a, b),
     rightExceptionRaisedOnRightLine: (a, b) => rightExceptionRaisedOnRightLine(a, b),
+    rightExceptionRaisedOnRightLineFuzzy: (a, b) => rightExceptionRaisedOnRightLineFuzzy(a, b),
     wrongExceptionRaisedOnRightLine: (a, b) => wrongExceptionRaisedOnRightLine(a, b),
+    wrongExceptionRaisedOnRightLineFuzzy: (a, b) => wrongExceptionRaisedOnRightLineFuzzy(a, b),
     rightExceptionRaisedInRightFunction: (a, b) => rightExceptionRaisedInRightFunction(a, b),
     wrongExceptionRaisedInRightFunction: (a, b) => wrongExceptionRaisedInRightFunction(a, b),
     wrongExceptionInNeighbouringFunction: (a, b) => wrongExceptionInNeighbouringFunction(a, b),
+    wrongExceptionInNeighbouringFunctionFuzzy: (a, b) => wrongExceptionInNeighbouringFunctionFuzzy(a, b),
     rightExceptionRaisedInWrongFunction: (a, b) => rightExceptionRaisedInWrongFunction(a, b),
     rightExceptionInNeighbouringFunction: (a, b) => rightExceptionInNeighbouringFunction(a, b),
     reachedLineOfExceptionWithoutCrashing: (a, b) => reachedLineOfExceptionWithoutCrashing(a, b),
@@ -104,6 +111,19 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
         }
     }
 
+    return 1;
+}
+
+export function checkExceptionsMatchFuzzy(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
+    if (executionResult && executionResult.getError()) {
+        const exception = executionResult.getError().message;
+        const exceptionType = executionResult.getError().name;
+        const fuse = new Fuse([expectedStackException.errorMessage], {includeScore: true});
+        const messageResult = exception === expectedStackException.errorMessage ? 0 : (fuse.search(exception)[0]?.score || 1);
+        fuse.setCollection([expectedStackException.errorType]);
+        const typeResult = exceptionType === expectedStackException.errorType ? 0 : (fuse.search(exceptionType)[0]?.score || 1);
+        return (messageResult + typeResult) / 2;
+    }
     return 1;
 }
 
@@ -155,6 +175,11 @@ export function rightExceptionRaised(executionResult: JavaScriptExecutionResult,
     return checkExceptionsMatch(executionResult, expectedStackException);
 }
 
+export function rightExceptionRaisedFuzzy(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
+    if (!executionResult) return 1;
+    return checkExceptionsMatchFuzzy(executionResult, expectedStackException);
+}
+
 export function rightExceptionRaisedOnRightLine(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 1;
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
@@ -162,11 +187,25 @@ export function rightExceptionRaisedOnRightLine(executionResult: JavaScriptExecu
     return normalise(exceptionsMatch + exceptionLineCovered);
 }
 
+export function rightExceptionRaisedOnRightLineFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const execptionsMatch = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
+    const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
+    return normalise(execptionsMatch + exceptionLineCovered);
+}
+
 export function wrongExceptionRaisedOnRightLine(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 1;
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
     const exceptionLineCovered = checkExceptionLineCovered(executionResult, stackTrace);
     return normalise(exceptionsMatch + exceptionLineCovered);
+}
+
+export function wrongExceptionRaisedOnRightLineFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const exceptionResult = 1 - checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
+    const lineResult = checkExceptionLineCovered(executionResult, stackTrace);
+    return (exceptionResult + lineResult) / 2;
 }
 
 export function rightExceptionRaisedInRightFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
@@ -186,6 +225,13 @@ export function wrongExceptionRaisedInRightFunction(executionResult: JavaScriptE
 export function wrongExceptionInNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 1;
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+    const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
+    return normalise(exceptionsMatch + neighbouringFunction);
+}
+
+export function wrongExceptionInNeighbouringFunctionFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const exceptionsMatch = 1 - checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
     const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
     return normalise(exceptionsMatch + neighbouringFunction);
 }

@@ -3,6 +3,7 @@ import {execSync} from "child_process";
 
 const TARGET_REGEX = /Target:\s\/local\/tmp\/oliverphil\/[0-9\.]+\/syntest-crash-reproduction\/benchmark\/crashes\/([A-Za-z\-]+)\/([A-Za-z\-]+)\/([A-Za-z0-9\-]+)\/([A-Za-z0-9_\/\-\.]+)/
 const OBJECTIVE_REGEX = /Objective:\s([a-zA-Z\-]+)\s:\s([0-9\.]+)/
+const POST_SEARCH_OBJECTIVE_REGEX = /Post-Search\sObjective:\s([a-zA-Z\-]+)\s:\s([0-9\.]+)/
 const REGEX_CONNECTOR = /\n/
 
 const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) => {

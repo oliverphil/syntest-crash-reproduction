@@ -1,0 +1,72 @@
+{
+  "CRASHES_PER_RUN": 20,
+  "TIME_PER_CRASH": 600,
+  "TIME_TOLERANCE": 3600,
+  "TIME_DELAY": 10800,
+  "useCoverage": [true, false],
+  "stackTraceUtils": [
+    {
+      "functionName": "wrongExceptionRaisedOnRightLine",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "wrongExceptionInNeighbouringFunction",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "someCallHierarchyWithoutCrash",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "executedFunctionsNoCrash",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "stackLinesMatchFuzzy",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "executeLinesNearStackTrace",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "rightExceptionRaised",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "reachedLineOfStackEntry",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    },
+    {
+      "functionName": "checkExceptionsMatch",
+      "arguments": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+      ]
+    }
+  ]
+}

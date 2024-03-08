@@ -241,4 +241,6 @@ export type TestCommandOptions = {
   syntestSeeded: string;
   syntestType: string | undefined;
   syntestCrash: string[] | undefined;
+
+  useCoverage: boolean;
 };
