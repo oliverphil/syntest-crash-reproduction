@@ -114,7 +114,7 @@ const createFullCSV = (resultsDirectory, allResultsStrings) => {
 }
 
 const main = () => {
-    const resultsDirectory = 'results_archive/24-02-05_fitness_terms_experiment';
+    const resultsDirectory = 'results_archive/24-03-08_terms_with_verification';
     cleanup(resultsDirectory);
     // const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
     const syntestFiles = ['.syntest-12.json', '.syntest-22.json'];

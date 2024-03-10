@@ -534,13 +534,13 @@ function stackElementsDistance(resultElement: StackFrame, targetElement: StackFr
     if (!resultElement.file.includes(targetElement.file) && !targetElement.file.includes(resultElement.file)) {
         elementDistance += 3;
     } else {
-        const resultMethod = resultElement.method.includes('[as ') ?
-            resultElement.method.split('[as ')[1].replaceAll(']', '') : resultElement.method;
-        const targetMethod = targetElement.method.includes('[as ') ?
-            targetElement.method.split('[as ')[1].replaceAll(']', '') : targetElement.method;
+        const resultMethod = resultElement.method?.includes('[as ') ?
+            resultElement.method.split('[as ')[1].replaceAll(']', '') : (resultElement.method || resultElement.file);
+        const targetMethod = targetElement.method?.includes('[as ') ?
+            targetElement.method.split('[as ')[1].replaceAll(']', '') : (targetElement.method || targetElement.file);
         if (!resultMethod.includes(targetMethod) && !targetMethod.includes(resultMethod)
-            && !resultElement.method.includes(targetMethod) && !targetElement.method.includes(resultMethod)
-            && !resultElement.method.includes(targetElement.method) && !targetElement.method.includes(resultElement.method)) {
+            && !resultElement.method?.includes(targetMethod) && !targetElement.method?.includes(resultMethod)
+            && !resultElement.method?.includes(targetElement?.method) && !targetElement.method?.includes(resultElement?.method)) {
             elementDistance += 2;
         } else {
             if (!resultElement.lineNumber && !targetElement.lineNumber ||

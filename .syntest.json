@@ -60,11 +60,11 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "moment",
+    "syntest-project": "eslint",
     "syntest-crashes": "false",
-    "syntest-type": "syntest-collected",
+    "syntest-type": "bugsjs",
     "syntest-crash": [
-        "moment-1"
+        "eslint-28"
     ],
     "combination": false,
     "function": {
