@@ -18,7 +18,7 @@ echo "Delete"
 qdel -u oliverphil
 
 if [ "$1" -gt 1 ]; then
-  echo "Save Results From $1"
+  echo "Save Results From $(($1 - 1))"
   tar czf /vol/grid-solar/sgeusers/oliverphil/results/output_"$(($1 - 1))".tar.gz /vol/grid-solar/sgeusers/oliverphil/output
   rm /vol/grid-solar/sgeusers/oliverphil/output/*
   ls /vol/grid-solar/sgeusers/oliverphil/results
@@ -35,8 +35,8 @@ while [ ! -f ".syntest-"$NUMBER".json" ]; do
     ((NUMBER++))
 done
 
-echo "Starting Run For $NUMBER"
-node run_per_crash.mjs "$NUMBER"
+echo "Starting Run For $(($NUMBER - 1))"
+node run_per_crash.mjs $(("$NUMBER" - 1))
 echo ./queue_experiment.sh "$NUMBER" "$2" 1 | at now + 30 minutes
 qstat
 atq

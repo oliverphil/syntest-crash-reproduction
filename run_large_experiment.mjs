@@ -15,7 +15,7 @@ for (const fitness of largeExperimentConfig.stackTraceUtils) {
                 N: i,
                 combination: false,
                 ...fitness,
-                coverage: false
+                useCoverage: false
             });
         }
     } else {
@@ -23,7 +23,7 @@ for (const fitness of largeExperimentConfig.stackTraceUtils) {
             function: fitness,
             combination: false,
             ...fitness,
-            coverage: false
+            useCoverage: false
         });
     }
 }
@@ -85,11 +85,11 @@ withCombinations.forEach((config, index) => {
     // || syntestFile.functions.map(f => f.functionName).includes('stackMatchWrongCrash'))) {
     //     writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
     // }
-    if (syntestFile.function.functionName === 'wrongExceptionPartialStackTraceMatch'
-    || syntestFile.function.functionName === 'stackMatchWrongCrash') {
+    // if (syntestFile.function.functionName === 'wrongExceptionPartialStackTraceMatch'
+    // || syntestFile.function.functionName === 'stackMatchWrongCrash') {
         writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
-    }
+    // }
 
 });
 
-// console.log(execSync(`./queue_experiment.sh 1 ${withCombinations.length} 1`).toString());
+console.log(execSync(`./queue_experiment.sh 1 ${withCombinations.length} 1`).toString());
