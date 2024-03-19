@@ -114,10 +114,10 @@ const createFullCSV = (resultsDirectory, allResultsStrings) => {
 }
 
 const main = () => {
-    const resultsDirectory = 'results_archive/24-03-08_terms_with_verification';
+    const resultsDirectory = 'results_archive/24-03-11_terms_no_coverage';
     cleanup(resultsDirectory);
-    // const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
-    const syntestFiles = ['.syntest-12.json', '.syntest-22.json'];
+    const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
+    // const syntestFiles = ['.syntest-12.json', '.syntest-22.json'];
     const allResults = {};
     const allResultsStrings = [];
     for (const file of syntestFiles.sort((a, b) => {
@@ -149,7 +149,7 @@ const main = () => {
         }
         cleanup(resultsDirectory);
     }
-    // createFullCSV(resultsDirectory, allResultsStrings);
+    createFullCSV(resultsDirectory, allResultsStrings);
 }
 
 main();

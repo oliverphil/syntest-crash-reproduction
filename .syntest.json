@@ -60,12 +60,9 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "eslint",
+    "syntest-project": "code-injection",
     "syntest-crashes": "false",
-    "syntest-type": "bugsjs",
-    "syntest-crash": [
-        "eslint-28"
-    ],
+    "syntest-type": "secbench",
     "combination": false,
     "function": {
         "functionName": "rightExceptionRaisedOnRightLineFuzzy",

@@ -24,14 +24,14 @@ if [ "$1" -gt 1 ]; then
   ls /vol/grid-solar/sgeusers/oliverphil/results
 fi
 
-if [ "$1" -ge "$2" ]; then
+if [ "$1" -gt "$2" ]; then
   echo "Full Run Complete"
   exit 0
 fi
 
 NUMBER=$(($1 + 1))
 
-while [ ! -f ".syntest-"$NUMBER".json" ]; do
+while [ ! -f ".syntest-"$(($NUMBER - 1))".json" ]; do
     ((NUMBER++))
 done
 

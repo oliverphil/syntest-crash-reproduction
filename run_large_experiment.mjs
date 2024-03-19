@@ -5,7 +5,7 @@ import {execSync} from "child_process";
 
 const fitnessConfigs = [];
 
-for (const fitness of largeExperimentConfig.stackTraceUtils) {
+for (const fitness of largeExperimentConfig.fuzzyUtils) {
     if (fitness.range) {
         const min = fitness.range[0];
         const max = fitness.range[1];
@@ -15,10 +15,23 @@ for (const fitness of largeExperimentConfig.stackTraceUtils) {
                 N: i,
                 combination: false,
                 ...fitness,
+                useCoverage: true
+            });
+            fitnessConfigs.push({
+                function: fitness,
+                N: i,
+                combination: false,
+                ...fitness,
                 useCoverage: false
             });
         }
     } else {
+        fitnessConfigs.push({
+            function: fitness,
+            combination: false,
+            ...fitness,
+            useCoverage: true
+        });
         fitnessConfigs.push({
             function: fitness,
             combination: false,
