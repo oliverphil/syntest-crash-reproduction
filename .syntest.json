@@ -60,9 +60,12 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "code-injection",
+    "syntest-project": "hexo",
     "syntest-crashes": "false",
-    "syntest-type": "secbench",
+    "syntest-type": "bugsjs",
+    "syntest-crash": [
+        "hexo-1"
+    ],
     "combination": false,
     "function": {
         "functionName": "rightExceptionRaisedOnRightLineFuzzy",

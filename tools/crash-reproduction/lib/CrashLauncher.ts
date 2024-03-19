@@ -745,11 +745,11 @@ export class CrashLauncher extends Launcher<JavaScriptArguments> {
         }
       }
       for (const objective of postSearchCrashObjectives) {
-        let bestDistance = Number.MAX_VALUE;
+        let bestDistance = 6;
         if (objective.getIdentifier().includes('checkStackFramesCoveredAfterSearch')) {
           bestDistance = 0;
         }
-        for (const encoding of this.archives.get(target).getEncodings()) {
+        for (const encoding of this.archives.get(target)?.getEncodings() || []) {
           try {
             const distance = objective.calculateDistance(encoding);
             if (objective.getIdentifier().includes('checkStackFramesCoveredAfterSearch')

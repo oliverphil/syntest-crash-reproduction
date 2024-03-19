@@ -81,13 +81,19 @@ var funcs = {
     wrongExceptionRaisedOnRightLine: (a, b) => wrongExceptionRaisedOnRightLine(a, b),
     wrongExceptionRaisedOnRightLineFuzzy: (a, b) => wrongExceptionRaisedOnRightLineFuzzy(a, b),
     rightExceptionRaisedInRightFunction: (a, b) => rightExceptionRaisedInRightFunction(a, b),
+    rightExceptionRaisedInRightFunctionFuzzy: (a, b) => rightExceptionRaisedInRightFunctionFuzzy(a, b),
     wrongExceptionRaisedInRightFunction: (a, b) => wrongExceptionRaisedInRightFunction(a, b),
+    wrongExceptionRaisedInRightFunctionFuzzy: (a, b) => wrongExceptionRaisedInRightFunctionFuzzy(a, b),
     wrongExceptionInNeighbouringFunction: (a, b) => wrongExceptionInNeighbouringFunction(a, b),
     wrongExceptionInNeighbouringFunctionFuzzy: (a, b) => wrongExceptionInNeighbouringFunctionFuzzy(a, b),
     rightExceptionRaisedInWrongFunction: (a, b) => rightExceptionRaisedInWrongFunction(a, b),
+    rightExceptionRaisedInWrongFunctionFuzzy: (a, b) => rightExceptionRaisedInWrongFunctionFuzzy(a, b),
     rightExceptionInNeighbouringFunction: (a, b) => rightExceptionInNeighbouringFunction(a, b),
+    rightExceptionInNeighbouringFunctionFuzzy: (a, b) => rightExceptionInNeighbouringFunctionFuzzy(a, b),
     reachedLineOfExceptionWithoutCrashing: (a, b) => reachedLineOfExceptionWithoutCrashing(a, b),
     wrongExceptionPartialStackTraceMatch: (a, b) => wrongExceptionPartialStackTraceMatch(a, b),
+    rightExceptionPartialStackTraceMatch: (a, b) => rightExceptionPartialStackTraceMatch(a, b),
+    rightExceptionPartialStackTraceMatchFuzzy: (a, b) => rightExceptionPartialStackTraceMatchFuzzy(a, b),
     someCallHierarchyWithoutCrash: (a, b) => someCallHierarchyWithoutCrash(a, b),
     reachedLineOfStackTraceEntry: (a, b) => reachedLineOfStackTraceEntry(a, b),
     executedFunctionsNoCrash: (a, b) => executedFunctionsNoCrash(a, b),
@@ -116,13 +122,14 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
 
 export function checkExceptionsMatchFuzzy(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
     if (executionResult && executionResult.getError()) {
-        const exception = executionResult.getError().message;
+        // const exception = executionResult.getError().message;
         const exceptionType = executionResult.getError().name;
         const fuse = new Fuse([expectedStackException.errorMessage], {includeScore: true});
-        const messageResult = exception === expectedStackException.errorMessage ? 0 : (fuse.search(exception)[0]?.score || 1);
+        // const messageResult = exception === expectedStackException.errorMessage ? 0 : (fuse.search(exception)[0]?.score || 1);
         fuse.setCollection([expectedStackException.errorType]);
         const typeResult = exceptionType === expectedStackException.errorType ? 0 : (fuse.search(exceptionType)[0]?.score || 1);
-        return (messageResult + typeResult) / 2;
+        // return (messageResult + typeResult) / 2;
+        return typeResult;
     }
     return 1;
 }
@@ -154,11 +161,14 @@ export function checkStackFramesCoveredAfterSearch(executionResult: JavaScriptEx
 
 export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 1;
-    const lineReached = checkExceptionLineCovered(executionResult, stackTrace);
-    const exceptionCovered = checkExceptionsMatch(executionResult, stackTrace.error);
-    const stackDistance = executionResult.hasError() ?
+    let lineReached = checkExceptionLineCovered(executionResult, stackTrace);
+    if (lineReached > 1) lineReached = 1;
+    let exceptionCovered = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
+    if (exceptionCovered > 1) exceptionCovered = 1;
+    let stackDistance = executionResult.hasError() ?
         stackTraceDistance(executionResult.getStackTrace().trace, stackTrace.trace) :
         1;
+    if (stackDistance > 1) stackDistance = 1;
     return (3 * lineReached) + (2 * exceptionCovered) + stackDistance;
 }
 
@@ -215,9 +225,23 @@ export function rightExceptionRaisedInRightFunction(executionResult: JavaScriptE
     return normalise(exceptionsMatch + functionMatch);
 }
 
+export function rightExceptionRaisedInRightFunctionFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const exceptionsMatch = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
+    const functionMatch = checkFunctionsMatch(executionResult, stackTrace);
+    return normalise(exceptionsMatch + functionMatch);
+}
+
 export function wrongExceptionRaisedInRightFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 1;
     const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+    const functionsMatch = checkFunctionsMatch(executionResult, stackTrace);
+    return normalise(exceptionsMatch + functionsMatch);
+}
+
+export function wrongExceptionRaisedInRightFunctionFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const exceptionsMatch = 1 - checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
     const functionsMatch = checkFunctionsMatch(executionResult, stackTrace);
     return normalise(exceptionsMatch + functionsMatch);
 }
@@ -243,9 +267,23 @@ export function rightExceptionInNeighbouringFunction(executionResult: JavaScript
     return normalise(exceptionsMatch + neighbouringFunction);
 }
 
+export function rightExceptionInNeighbouringFunctionFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const exceptionsMatch = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
+    const neighbouringFunction = checkNeighbouringFunction(executionResult, stackTrace);
+    return normalise(exceptionsMatch + neighbouringFunction);
+}
+
 export function rightExceptionRaisedInWrongFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
     if (!executionResult) return 1;
     const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
+    const functionMatch = 1 - checkFunctionsMatch(executionResult, stackTrace);
+    return normalise(exceptionsMatch + functionMatch);
+}
+
+export function rightExceptionRaisedInWrongFunctionFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    const exceptionsMatch = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
     const functionMatch = 1 - checkFunctionsMatch(executionResult, stackTrace);
     return normalise(exceptionsMatch + functionMatch);
 }
@@ -263,6 +301,26 @@ export function wrongExceptionPartialStackTraceMatch(executionResult: JavaScript
     if (!executionResult) return 1;
     if (executionResult.getError()) {
         const exceptionsMatch = 1 - checkExceptionsMatch(executionResult, stackTrace.error);
+        const stackTraceSimilarity = checkStackTraceSimilarity(executionResult, stackTrace);
+        return normalise(exceptionsMatch + stackTraceSimilarity);
+    }
+    return 1;
+}
+
+export function rightExceptionPartialStackTraceMatch(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    if (executionResult.getError()) {
+        const exceptionsMatch = checkExceptionsMatch(executionResult, stackTrace.error);
+        const stackTraceSimilarity = checkStackTraceSimilarity(executionResult, stackTrace);
+        return normalise(exceptionsMatch + stackTraceSimilarity);
+    }
+    return 1;
+}
+
+export function rightExceptionPartialStackTraceMatchFuzzy(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    if (executionResult.getError()) {
+        const exceptionsMatch = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
         const stackTraceSimilarity = checkStackTraceSimilarity(executionResult, stackTrace);
         return normalise(exceptionsMatch + stackTraceSimilarity);
     }

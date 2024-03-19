@@ -1,9 +1,11 @@
 import * as fs from 'fs';
 import {execSync} from "child_process";
+import exp from "node:constants";
+import {all} from "eslint-plugin-promise/rules/lib/promise-statics.js";
 
-const TARGET_REGEX = /Target:\s\/local\/tmp\/oliverphil\/[0-9\.]+\/syntest-crash-reproduction\/benchmark\/crashes\/([A-Za-z\-]+)\/([A-Za-z\-]+)\/([A-Za-z0-9\-]+)\/([A-Za-z0-9_\/\-\.]+)/
+const TARGET_REGEX = /Target:\s\/local\/tmp\/oliverphil\/[0-9\.]+\/syntest-crash-reproduction\/benchmark\/crashes\/([A-Za-z\-]+)\/([A-Za-z\-]+)\/([A-Za-z0-9\-_\.]+)\/([A-Za-z0-9_\/\-\.]+)/
 const OBJECTIVE_REGEX = /Objective:\s([a-zA-Z\-]+)\s:\s([0-9\.]+)/
-const POST_SEARCH_OBJECTIVE_REGEX = /Post-Search\sObjective:\s([a-zA-Z\-]+)\s:\s([0-9\.]+)/
+const POST_SEARCH_OBJECTIVE_REGEX = /(?:Post-Search\sObjective:\s([a-zA-Z\-]+)\s:\s([0-9\.e\+]+))?/
 const REGEX_CONNECTOR = /\n/
 
 const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) => {
@@ -22,10 +24,19 @@ const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) 
         if (!runResults[`syntest-${runNumber}`]) {
             runResults[`syntest-${runNumber}`] = results;
         } else {
-            runResults[`syntest-${runNumber}`] = {
-                ...runResults[`syntest-${runNumber}`],
-                ...results
+            for (const key of Object.keys(results)) {
+                if (!runResults[`syntest-${runNumber}`][key]) {
+                    runResults[`syntest-${runNumber}`][key] = [
+                        ...results[key]
+                    ]
+                } else {
+                    runResults[`syntest-${runNumber}`][key].push(...results[key]);
+                }
             }
+            // runResults[`syntest-${runNumber}`] = {
+            //     ...runResults[`syntest-${runNumber}`],
+            //     ...results
+            // }
         }
     }
 
@@ -47,12 +58,23 @@ const handleOneOutputFile = (outputFile, numberOfObjectives, regex) => {
             const result = Number.parseFloat(regexResults[5 + (i * 2) + 1]);
             functionResults[objective] = result;
         }
+        const postSearchObjectiveResults = {};
+        for (let i = 0; i < 2; i++) {
+            const postSearchIndex = 5 + ((i + numberOfObjectives) * 2);
+            if (regexResults.length > postSearchIndex) {
+                const postSearchObjective = regexResults[postSearchIndex];
+                if (!postSearchObjective) continue;
+                const result = Number.parseFloat(regexResults[postSearchIndex + 1]);
+                postSearchObjectiveResults[postSearchObjective] = result;
+            }
+        }
         const resultObject = {
             crashProject,
             crashId,
             crashType,
             targetFile,
-            functionResults
+            functionResults,
+            postSearchObjectiveResults
         }
         if (!results[`${crashType}/${crashProject}/${crashId}`]) {
             results[`${crashType}/${crashProject}/${crashId}`] = [
@@ -71,6 +93,8 @@ const constructRegexForMultipleObjectives = (numberOfObjectives) => {
     for (let i = 1; i <= numberOfObjectives; i++) {
         expression = expression + REGEX_CONNECTOR.source + OBJECTIVE_REGEX.source;
     }
+    expression = expression + REGEX_CONNECTOR.source + "?" + POST_SEARCH_OBJECTIVE_REGEX.source;
+    expression = expression + REGEX_CONNECTOR.source + "?" + POST_SEARCH_OBJECTIVE_REGEX.source;
     return new RegExp(expression, 'gm');
 }
 
@@ -85,7 +109,7 @@ const cleanup = (resultsDirectory) => {
 const createSingleRunCSV = (num, runResults, resultsDirectory) => {
     const outputFileName = `results_${num}.csv`
     let outputString = '';
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result\n`;
     for (const result of Object.values(runResults[`syntest-${num}`])) {
         for (const targetFile of result) {
             outputString += `${num}, ${targetFile.crashType}, ${targetFile.crashProject}, ${targetFile.crashId}, ${targetFile.targetFile}`;
@@ -98,6 +122,19 @@ const createSingleRunCSV = (num, runResults, resultsDirectory) => {
             if (funcs === 1) {
                 outputString += ', N/A, N/A';
             }
+            funcs = 0;
+            for (const func of Object.keys(targetFile.postSearchObjectiveResults)) {
+                if (funcs >= 2) break;
+                funcs++;
+                outputString += `, ${func}, ${targetFile.postSearchObjectiveResults[func]}`;
+            }
+            switch (funcs) {
+                case 0:
+                    outputString += `, N/A, N/A`;
+                case 1:
+                    outputString += `, N/A, N/A`;
+                    break;
+            }
             outputString += '\n';
         }
     }
@@ -108,13 +145,66 @@ const createSingleRunCSV = (num, runResults, resultsDirectory) => {
 
 const createFullCSV = (resultsDirectory, allResultsStrings) => {
     const outputFileName = `results_full.csv`
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result\n`;
     const finalOutputString = outputHeader + allResultsStrings.join('');
     fs.writeFileSync(`${resultsDirectory}/${outputFileName}`, finalOutputString);
 }
 
+const createFullCSVWithoutSyntest = (resultsDirectory, allResultsStrings) => {
+    const outputFileName = 'results_full_no_syntest.csv';
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result\n`;
+    const resultStrings = allResultsStrings.map(s => s.split('\n').filter(res => !res.includes('syntest-collected')));
+    const finalOutputString = outputHeader + resultStrings.map(s => s.join('\n')).join('');
+    fs.writeFileSync(`${resultsDirectory}/${outputFileName}`, finalOutputString);
+}
+
+const createStats = (resultsDirectory, allResults) => {
+    const stats = {}
+    for (const run of Object.keys(allResults)) {
+        const runResults = allResults[run];
+        const runStats = {};
+        let totalFramesCovered = 0;
+        let numCrashesWithFramesCovered = 0;
+        for (const crashKey of Object.keys(runResults)) {
+            const crashResults = runResults[crashKey];
+            let bestFramesCoveredResultForOneTarget = 0;
+            let framesForCrash_mayContainDuplicates = 0;
+            let bestEvoCrashResult = Number.MAX_VALUE;
+            for (const crashResult of crashResults) {
+                const framesCoveredForCrash = crashResult.postSearchObjectiveResults['stack-checkStackFramesCoveredAfterSearch'];
+                const evoCrashResultForCrash = crashResult.postSearchObjectiveResults['stack-evoCrash'];
+                framesForCrash_mayContainDuplicates += framesCoveredForCrash || 0;
+                if (framesCoveredForCrash && framesCoveredForCrash > bestFramesCoveredResultForOneTarget) {
+                    bestFramesCoveredResultForOneTarget = framesCoveredForCrash;
+                }
+                if (evoCrashResultForCrash && evoCrashResultForCrash < bestEvoCrashResult) {
+                    bestEvoCrashResult = evoCrashResultForCrash;
+                }
+            }
+            if (bestFramesCoveredResultForOneTarget > 0) {
+                numCrashesWithFramesCovered++;
+            }
+            totalFramesCovered += bestFramesCoveredResultForOneTarget;
+            runStats[crashKey] = {
+                bestFramesCoveredResultForOneTarget,
+                bestEvoCrashResult,
+                framesForCrash_mayContainDuplicates
+            }
+        }
+
+        stats[run] = {
+            ...runStats,
+            totalFramesCovered,
+            numCrashesWithFramesCovered
+        };
+    }
+
+    fs.writeFileSync(`${resultsDirectory}/stats.json`, JSON.stringify(stats, undefined, 4));
+}
+
 const main = () => {
-    const resultsDirectory = 'results_archive/24-03-11_terms_no_coverage';
+    // const resultsDirectory = 'results_archive/24-03-19_discrete_vs_continuous';
+    const resultsDirectory = 'results_archive/24-03-14_terms_with_coverage';
     cleanup(resultsDirectory);
     const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
     // const syntestFiles = ['.syntest-12.json', '.syntest-22.json'];
@@ -150,6 +240,8 @@ const main = () => {
         cleanup(resultsDirectory);
     }
     createFullCSV(resultsDirectory, allResultsStrings);
+    createFullCSVWithoutSyntest(resultsDirectory, allResultsStrings);
+    createStats(resultsDirectory, allResults);
 }
 
 main();

@@ -201,56 +201,42 @@
   ],
   "fuzzyUtils": [
     {
-      "functionName": "rightExceptionRaisedFuzzy",
-      "arguments": [
-        "JavaScriptExecutionResult",
-        "StackError"
-      ]
-    },
-    {
-      "functionName": "rightExceptionRaisedOnRightLineFuzzy",
+      "functionName": "rightExceptionRaisedInRightFunctionFuzzy",
       "arguments": [
         "JavaScriptExecutionResult",
         "StackTrace"
       ]
     },
     {
-      "functionName": "wrongExceptionRaisedOnRightLineFuzzy",
+      "functionName": "wrongExceptionRaisedInRightFunctionFuzzy",
       "arguments": [
         "JavaScriptExecutionResult",
         "StackTrace"
       ]
     },
     {
-      "functionName": "wrongExceptionInNeighbouringFunctionFuzzy",
+      "functionName": "rightExceptionInNeighbouringFunctionFuzzy",
       "arguments": [
         "JavaScriptExecutionResult",
         "StackTrace"
       ]
     },
     {
-      "functionName": "rightExceptionRaised",
-      "arguments": [
-        "JavaScriptExecutionResult",
-        "StackError"
-      ]
-    },
-    {
-      "functionName": "rightExceptionRaisedOnRightLine",
+      "functionName": "rightExceptionRaisedInWrongFunctionFuzzy",
       "arguments": [
         "JavaScriptExecutionResult",
         "StackTrace"
       ]
     },
     {
-      "functionName": "wrongExceptionRaisedOnRightLine",
+      "functionName": "rightExceptionPartialStackTraceMatchFuzzy",
       "arguments": [
         "JavaScriptExecutionResult",
         "StackTrace"
       ]
     },
     {
-      "functionName": "wrongExceptionInNeighbouringFunction",
+      "functionName": "rightExceptionPartialStackTraceMatch",
       "arguments": [
         "JavaScriptExecutionResult",
         "StackTrace"
