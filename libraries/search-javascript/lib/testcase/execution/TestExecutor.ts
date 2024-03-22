@@ -59,12 +59,12 @@ export type Test = {
 };
 
 process.on("uncaughtException", (reason) => {
-  // throw reason;
-  console.log(reason);
+  throw reason;
+  // console.log(reason);
 });
 process.on("unhandledRejection", (reason) => {
-  // throw reason;
-  console.log(reason);
+  throw reason;
+  // console.log(reason);
 });
 
 // eslint-disable-next-line @typescript-eslint/no-misused-promises

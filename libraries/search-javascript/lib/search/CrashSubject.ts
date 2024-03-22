@@ -32,7 +32,7 @@ import {TargetType} from "@syntest/analysis";
 import {ControlFlowProgram, ControlFlowFunction, EdgeType} from "@syntest/cfg";
 import {BranchDistanceCalculator} from "../criterion/BranchDistance";
 import CrashFitnessFunction1 from "./objective/CrashFitnessFunction1";
-import {createObjective, createObjectives} from "./utils/StackTraceUtils";
+import {createObjective, createObjectives, createSingleObjectiveFunction} from "./utils/StackTraceUtils";
 
 export class CrashSubject extends JavaScriptSubject {
     constructor(target: Target, stackTrace: StackTrace, objectives: ObjectiveFunction<JavaScriptTestCase>[],
@@ -70,6 +70,30 @@ export class CrashSubject extends JavaScriptSubject {
             );
             objectives.push(...resultObjectives);
             numObjectives += resultObjectives.length;
+        } else if (arguments_ && arguments_.singleObjective !== undefined) {
+            if (arguments_.singleObjective) {
+                const functions = arguments_.functions;
+                const objective = createSingleObjectiveFunction(
+                    functions,
+                    this.stackTrace,
+                    this.controlFlowProgram,
+                    this.approachLevelCalculator,
+                    this.branchDistanceCalculator
+                );
+                objectives.push(objective);
+                numObjectives += 1;
+            } else {
+                const functions = arguments_.functions;
+                const resultObjectives = createObjectives(
+                    functions,
+                    this.stackTrace,
+                    this.controlFlowProgram,
+                    this.approachLevelCalculator,
+                    this.branchDistanceCalculator
+                );
+                objectives.push(...resultObjectives);
+                numObjectives += resultObjectives.length;
+            }
         } else if (arguments_) {
             objectives.push(createObjective(
                 arguments_.function,

@@ -20,7 +20,7 @@ const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) 
 
     const regex = constructRegexForMultipleObjectives(functions.length);
     for (const file of outputFiles) {
-        const results = handleOneOutputFile(`${outputFileDirectory}/${file}`, functions.length, regex);
+        const results = handleOneOutputFile(`${outputFileDirectory}/${file}`, functions.length, regex, syntestFile.useCoverage);
         if (!runResults[`syntest-${runNumber}`]) {
             runResults[`syntest-${runNumber}`] = results;
         } else {
@@ -43,7 +43,7 @@ const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) 
     return runResults;
 }
 
-const handleOneOutputFile = (outputFile, numberOfObjectives, regex) => {
+const handleOneOutputFile = (outputFile, numberOfObjectives, regex, useCoverage) => {
     const outputFileContents = fs.readFileSync(outputFile).toString();
     const results = {};
     for (let regexResults = regex.exec(outputFileContents); regexResults = regex.exec(outputFileContents); ) {
@@ -73,6 +73,7 @@ const handleOneOutputFile = (outputFile, numberOfObjectives, regex) => {
             crashId,
             crashType,
             targetFile,
+            useCoverage,
             functionResults,
             postSearchObjectiveResults
         }
@@ -106,10 +107,10 @@ const cleanup = (resultsDirectory) => {
     }
 }
 
-const createSingleRunCSV = (num, runResults, resultsDirectory) => {
+const createSingleRunCSV = (num, runResults, resultsDirectory, useCoverage) => {
     const outputFileName = `results_${num}.csv`
     let outputString = '';
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
     for (const result of Object.values(runResults[`syntest-${num}`])) {
         for (const targetFile of result) {
             outputString += `${num}, ${targetFile.crashType}, ${targetFile.crashProject}, ${targetFile.crashId}, ${targetFile.targetFile}`;
@@ -135,6 +136,7 @@ const createSingleRunCSV = (num, runResults, resultsDirectory) => {
                     outputString += `, N/A, N/A`;
                     break;
             }
+            outputString += ', ' + targetFile.useCoverage;
             outputString += '\n';
         }
     }
@@ -145,14 +147,14 @@ const createSingleRunCSV = (num, runResults, resultsDirectory) => {
 
 const createFullCSV = (resultsDirectory, allResultsStrings) => {
     const outputFileName = `results_full.csv`
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
     const finalOutputString = outputHeader + allResultsStrings.join('');
     fs.writeFileSync(`${resultsDirectory}/${outputFileName}`, finalOutputString);
 }
 
 const createFullCSVWithoutSyntest = (resultsDirectory, allResultsStrings) => {
     const outputFileName = 'results_full_no_syntest.csv';
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
     const resultStrings = allResultsStrings.map(s => s.split('\n').filter(res => !res.includes('syntest-collected')));
     const finalOutputString = outputHeader + resultStrings.map(s => s.join('\n')).join('');
     fs.writeFileSync(`${resultsDirectory}/${outputFileName}`, finalOutputString);
@@ -203,11 +205,11 @@ const createStats = (resultsDirectory, allResults) => {
 }
 
 const main = () => {
-    // const resultsDirectory = 'results_archive/24-03-19_discrete_vs_continuous';
-    const resultsDirectory = 'results_archive/24-03-14_terms_with_coverage';
+    const resultsDirectory = 'results_archive/24-03-19_discrete_vs_continuous';
+    // const resultsDirectory = 'results_archive/24-03-14_terms_with_coverage';
     cleanup(resultsDirectory);
     const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
-    // const syntestFiles = ['.syntest-12.json', '.syntest-22.json'];
+    // const syntestFiles = ['.syntest-28.json', '.syntest-22.json'];
     const allResults = {};
     const allResultsStrings = [];
     for (const file of syntestFiles.sort((a, b) => {

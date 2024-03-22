@@ -50,6 +50,48 @@ export function createObjectives(
     return objectives;
 }
 
+export function createSingleObjectiveFunction(
+    functions,
+    stackTrace: StackTrace,
+    controlFlowProgram: ControlFlowProgram,
+    approachLevelCalculator: ApproachLevelCalculator,
+    branchDistanceCalculator: BranchDistanceCalculator
+): ObjectiveFunction<JavaScriptTestCase> {
+    const functionHandles = [];
+    let id = 'stack-';
+    for (let i = 0; i < functions.length; i++) {
+        const function_ = functions[i];
+        const name = function_.functionName;
+        const functionHandle = funcs[name];
+        functionHandles.push({functionHandle, ...function_});
+        id += name;
+    }
+    const functionConstructor = (functionHandles) => {
+        return (executionResult, stackTrace) => {
+            let distance = 0;
+            for (const function_ of functionHandles) {
+                if (function_.arguments.includes('StackError')) {
+                    distance += function_.functionHandle(executionResult, stackTrace.error);
+                } else {
+                    distance += function_.functionHandle(executionResult, stackTrace);
+                }
+            }
+            return normalise(distance);
+        }
+    };
+    const function_ = functionConstructor(functionHandles);
+    return new CrashFitnessFunction1(
+        id,
+        controlFlowProgram,
+        approachLevelCalculator,
+        branchDistanceCalculator,
+        stackTrace,
+        function_,
+        ["JavaScriptExecutionResult", "StackTrace"],
+        undefined
+    );
+}
+
 export function createObjective(
     function_,
     stackTrace: StackTrace,

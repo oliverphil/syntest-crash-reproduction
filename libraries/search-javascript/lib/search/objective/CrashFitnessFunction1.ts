@@ -20,7 +20,7 @@ import { ControlFlowBasedObjectiveFunction } from "@syntest/search/dist/lib/obje
 class CrashFitnessFunction1 extends PathObjectiveFunction<JavaScriptTestCase> {
     protected stackTrace: StackTrace;
     protected function_: () => number;
-    protected arguments: [];
+    protected arguments: string[];
     protected N: number | undefined;
 
     constructor(
@@ -30,7 +30,7 @@ class CrashFitnessFunction1 extends PathObjectiveFunction<JavaScriptTestCase> {
         branchDistanceCalculator: BranchDistanceCalculator,
         stackTrace: StackTrace,
         function_,
-        arguments_: [],
+        arguments_: string[],
         N: number | undefined
     ) {
         super(

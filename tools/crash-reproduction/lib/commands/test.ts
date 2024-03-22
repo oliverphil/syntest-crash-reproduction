@@ -243,4 +243,5 @@ export type TestCommandOptions = {
   syntestCrash: string[] | undefined;
 
   useCoverage: boolean;
+  singleObjective: boolean | undefined;
 };

@@ -60,11 +60,11 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "hexo",
+    "syntest-project": "express",
     "syntest-crashes": "false",
-    "syntest-type": "bugsjs",
+    "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "hexo-1"
+        "express-1"
     ],
     "combination": false,
     "function": {
@@ -74,5 +74,29 @@
             "StackTrace"
         ]
     },
-    "useCoverage": true
+    "useCoverage": true,
+    "singleObjective": true,
+    "functions": [
+        {
+            "functionName": "stackMatchWrongCrash",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "rightExceptionRaisedOnRightLineFuzzy",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        },
+        {
+            "functionName": "rightExceptionInNeighbouringFunctionFuzzy",
+            "arguments": [
+                "JavaScriptExecutionResult",
+                "StackTrace"
+            ]
+        }
+    ]
 }
