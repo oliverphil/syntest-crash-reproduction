@@ -493,16 +493,20 @@ export function enteredCloseBranch(executionResult: JavaScriptExecutionResult, s
 
 export function calledNFunctionsFromStackTrace(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace, N: number): number {
     if (!executionResult) return 1;
-    const traces = executionResult.getTraces();
-    const functions = traces.filter(trace => trace.type === 'function');
-    let numberFuncsHit = 0;
-    for (const frame of stackTrace.trace) {
-        const function_ = functions.find(function_ => reverseIncludes(frame.file, function_.path)
-            && function_.location.start.line <= frame.lineNumber && function_.location.end.line >= frame.lineNumber);
-        if (!function_) continue;
-        if (function_.hits > 0) numberFuncsHit += 1;
+    if (!executionResult.getError()) {
+        const traces = executionResult.getTraces();
+        const functions = traces.filter(trace => trace.type === 'function');
+        let numberFuncsHit = 0;
+        for (const frame of stackTrace.trace) {
+            const function_ = functions.find(function_ => reverseIncludes(frame.file, function_.path)
+                && function_.location.start.line <= frame.lineNumber && function_.location.end.line >= frame.lineNumber);
+            if (!function_) continue;
+            if (function_.hits > 0) numberFuncsHit += 1;
+        }
+        return numberFuncsHit >= N ? 0 : 1;
+    } else {
+        return checkStackFramesCoveredAfterSearch(executionResult, stackTrace);
     }
-    return numberFuncsHit >= N ? 0 : 1;
 }
 
 export function executeNLinesPriorWithinFunction(executionResult: JavaScriptExecutionResult, stackFrame: StackFrame, N: number): number {
@@ -536,11 +540,7 @@ function checkFunctionsMatch(executionResult: JavaScriptExecutionResult, stackTr
     if (!executionResult) return 1;
     if (!executionResult.getError()) return 1;
     const actualStackTrace = executionResult.getStackTrace();
-    const expectedFunction = stackTrace.trace[0].method;
-    if (reverseIncludes(actualStackTrace[0]?.method, expectedFunction)) {
-        return 0;
-    }
-    return 1;
+    return stackElementsDistance(actualStackTrace.trace[0], stackTrace.trace[0])
 }
 
 function checkNeighbouringFunction(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
