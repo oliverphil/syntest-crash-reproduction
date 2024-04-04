@@ -10,7 +10,7 @@ const REGEX_CONNECTOR = /\n/
 
 const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) => {
     const functions = [];
-    if (syntestFile.combination) {
+    if (syntestFile.combination || !syntestFile.singleObjective) {
         functions.push(...syntestFile.functions);
     } else {
         functions.push(syntestFile.function);
@@ -46,7 +46,8 @@ const handleOneRun = (runNumber, syntestFile, outputFileDirectory, outputFiles) 
 const handleOneOutputFile = (outputFile, numberOfObjectives, regex, useCoverage) => {
     const outputFileContents = fs.readFileSync(outputFile).toString();
     const results = {};
-    for (let regexResults = regex.exec(outputFileContents); regexResults = regex.exec(outputFileContents); ) {
+    let regexResults;
+    for (; regexResults = regex.exec(outputFileContents); ) {
         const matchedString = regexResults[0];
         const crashType = regexResults[1];
         const crashProject = regexResults[2];
@@ -110,18 +111,22 @@ const cleanup = (resultsDirectory) => {
 const createSingleRunCSV = (num, runResults, resultsDirectory, useCoverage) => {
     const outputFileName = `results_${num}.csv`
     let outputString = '';
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Function 3, Function 3 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
     for (const result of Object.values(runResults[`syntest-${num}`])) {
         for (const targetFile of result) {
             outputString += `${num}, ${targetFile.crashType}, ${targetFile.crashProject}, ${targetFile.crashId}, ${targetFile.targetFile}`;
             let funcs = 0;
-            for (const func of Object.keys(targetFile.functionResults)) {
-                if (funcs >= 2) break
+            for (const func of Object.keys(targetFile.functionResults).sort((a, b) => a.localeCompare(b))) {
+                if (funcs >= 3) break
                 funcs++;
                 outputString += `, ${func}, ${targetFile.functionResults[func]}`;
             }
-            if (funcs === 1) {
-                outputString += ', N/A, N/A';
+            switch (funcs) {
+                case 1:
+                    outputString += ', N/A, N/A';
+                case 2:
+                    outputString += ', N/A, N/A';
+                    break;
             }
             funcs = 0;
             for (const func of Object.keys(targetFile.postSearchObjectiveResults)) {
@@ -147,14 +152,14 @@ const createSingleRunCSV = (num, runResults, resultsDirectory, useCoverage) => {
 
 const createFullCSV = (resultsDirectory, allResultsStrings) => {
     const outputFileName = `results_full.csv`
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Function 3, Function 3 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
     const finalOutputString = outputHeader + allResultsStrings.join('');
     fs.writeFileSync(`${resultsDirectory}/${outputFileName}`, finalOutputString);
 }
 
 const createFullCSVWithoutSyntest = (resultsDirectory, allResultsStrings) => {
     const outputFileName = 'results_full_no_syntest.csv';
-    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
+    const outputHeader = `Run, Crash Type, Crash Project, Crash ID, Target File, Function 1, Function 1 Result, Function 2, Function 2 Result, Function 3, Function 3 Result, Post Search 1, Result, Post Search 2, Result, Coverage\n`;
     const resultStrings = allResultsStrings.map(s => s.split('\n').filter(res => !res.includes('syntest-collected')));
     const finalOutputString = outputHeader + resultStrings.map(s => s.join('\n')).join('');
     fs.writeFileSync(`${resultsDirectory}/${outputFileName}`, finalOutputString);
@@ -205,7 +210,7 @@ const createStats = (resultsDirectory, allResults) => {
 }
 
 const main = () => {
-    const resultsDirectory = 'results_archive/24-03-19_discrete_vs_continuous';
+    const resultsDirectory = 'results_archive/24-04-03_term_re_run';
     // const resultsDirectory = 'results_archive/24-03-14_terms_with_coverage';
     cleanup(resultsDirectory);
     const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
@@ -220,6 +225,7 @@ const main = () => {
         const num = file.split('-')[1].replaceAll('.json', '');
         console.log(num);
         const runConfiguration = JSON.parse(fs.readFileSync(`${resultsDirectory}/${file}`).toString());
+        if (runConfiguration.functions.map(f => f.functionName).includes('stackMatchWrongCrash')) continue;
         try {
             execSync(`tar -zxf ${resultsDirectory}/output_${num}.tar.gz -C ${resultsDirectory} 2> /dev/null`);
         } catch {

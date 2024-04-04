@@ -32,6 +32,14 @@ const functionParamTypeMap = {
     "rightExceptionRaisedInWrongFunctionFuzzy": [
         "JavaScriptExecutionResult",
         "StackTrace"
+    ],
+    "rightExceptionRaisedInRightFunctionFuzzy": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
+    ],
+    "wrongExceptionRaisedInRightFunctionFuzzy": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
     ]
 }
 

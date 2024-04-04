@@ -1,16 +1,17 @@
 import * as fs from "fs";
 
 const functions = [
-    "stackMatchWrongCrash",
+    // "stackMatchWrongCrash",
     "rightExceptionRaisedOnRightLineFuzzy",
     // "rightExceptionRaisedInWrongFunction",
     // "rightExceptionRaisedOnRightLine",
-    "rightExceptionRaisedFuzzy",
+    // "rightExceptionRaisedFuzzy",
     // "rightExceptionRaised",
     "rightExceptionInNeighbouringFunction",
     "checkExceptionLineCovered",
     "rightExceptionPartialStackTraceMatch",
-    "rightExceptionRaisedInWrongFunctionFuzzy"
+    "rightExceptionRaisedInRightFunctionFuzzy",
+    "wrongExceptionRaisedInRightFunctionFuzzy"
 ];
 
 const permutations = [];
@@ -32,9 +33,11 @@ for (const i of functions) {
                 console.log(`Removing ${i}, ${j}, ${k} combination as dominated`);
                 continue;
             }
-            permutations.push([i, j, k]);
-            console.log(i, j, k);
-            permCSV += `${i}, ${j}, ${k}\n`;
+            if ([i, j, k].includes('rightExceptionRaisedInRightFunctionFuzzy') || [i, j, k].includes('wrongExceptionRaisedInRightFunctionFuzzy')) {
+                permutations.push([i, j, k]);
+                console.log(i, j, k);
+                permCSV += `${i}, ${j}, ${k}\n`;
+            }
         }
     }
 }

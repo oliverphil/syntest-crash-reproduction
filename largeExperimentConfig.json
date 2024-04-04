@@ -245,134 +245,84 @@
   ],
   "fitnessFunctionExperiment": [
     [
-      "stackMatchWrongCrash",
       "rightExceptionRaisedOnRightLineFuzzy",
-      "rightExceptionInNeighbouringFunction"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionRaisedOnRightLineFuzzy",
-      "checkExceptionLineCovered"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionRaisedOnRightLineFuzzy",
-      "rightExceptionPartialStackTraceMatchFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionRaisedOnRightLineFuzzy",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionRaisedFuzzy",
-      "rightExceptionInNeighbouringFunction"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionRaisedFuzzy",
-      "checkExceptionLineCovered"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionRaisedFuzzy",
-      "rightExceptionPartialStackTraceMatchFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
       "rightExceptionInNeighbouringFunction",
-      "checkExceptionLineCovered"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionInNeighbouringFunction",
-      "rightExceptionPartialStackTraceMatchFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionInNeighbouringFunction",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "checkExceptionLineCovered",
-      "rightExceptionPartialStackTraceMatchFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "checkExceptionLineCovered",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
-    ],
-    [
-      "stackMatchWrongCrash",
-      "rightExceptionPartialStackTraceMatchFuzzy",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "rightExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionRaisedOnRightLineFuzzy",
       "rightExceptionInNeighbouringFunction",
-      "checkExceptionLineCovered"
-    ],
-    [
-      "rightExceptionRaisedOnRightLineFuzzy",
-      "rightExceptionInNeighbouringFunction",
-      "rightExceptionPartialStackTraceMatchFuzzy"
-    ],
-    [
-      "rightExceptionRaisedOnRightLineFuzzy",
-      "rightExceptionInNeighbouringFunction",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionRaisedOnRightLineFuzzy",
       "checkExceptionLineCovered",
-      "rightExceptionPartialStackTraceMatchFuzzy"
+      "rightExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionRaisedOnRightLineFuzzy",
       "checkExceptionLineCovered",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionRaisedOnRightLineFuzzy",
-      "rightExceptionPartialStackTraceMatchFuzzy",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "rightExceptionPartialStackTraceMatch",
+      "rightExceptionRaisedInRightFunctionFuzzy"
     ],
     [
-      "rightExceptionRaisedFuzzy",
-      "rightExceptionInNeighbouringFunction",
-      "checkExceptionLineCovered"
+      "rightExceptionRaisedOnRightLineFuzzy",
+      "rightExceptionPartialStackTraceMatch",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ],
     [
-      "rightExceptionRaisedFuzzy",
-      "rightExceptionInNeighbouringFunction",
-      "rightExceptionPartialStackTraceMatchFuzzy"
-    ],
-    [
-      "rightExceptionRaisedFuzzy",
-      "checkExceptionLineCovered",
-      "rightExceptionPartialStackTraceMatchFuzzy"
+      "rightExceptionRaisedOnRightLineFuzzy",
+      "rightExceptionRaisedInRightFunctionFuzzy",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionInNeighbouringFunction",
       "checkExceptionLineCovered",
-      "rightExceptionPartialStackTraceMatchFuzzy"
+      "rightExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionInNeighbouringFunction",
       "checkExceptionLineCovered",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "rightExceptionInNeighbouringFunction",
-      "rightExceptionPartialStackTraceMatchFuzzy",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "rightExceptionPartialStackTraceMatch",
+      "rightExceptionRaisedInRightFunctionFuzzy"
+    ],
+    [
+      "rightExceptionInNeighbouringFunction",
+      "rightExceptionPartialStackTraceMatch",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
+    ],
+    [
+      "rightExceptionInNeighbouringFunction",
+      "rightExceptionRaisedInRightFunctionFuzzy",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ],
     [
       "checkExceptionLineCovered",
-      "rightExceptionPartialStackTraceMatchFuzzy",
-      "rightExceptionRaisedInWrongFunctionFuzzy"
+      "rightExceptionPartialStackTraceMatch",
+      "rightExceptionRaisedInRightFunctionFuzzy"
+    ],
+    [
+      "checkExceptionLineCovered",
+      "rightExceptionPartialStackTraceMatch",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
+    ],
+    [
+      "checkExceptionLineCovered",
+      "rightExceptionRaisedInRightFunctionFuzzy",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
+    ],
+    [
+      "rightExceptionPartialStackTraceMatch",
+      "rightExceptionRaisedInRightFunctionFuzzy",
+      "wrongExceptionRaisedInRightFunctionFuzzy"
     ]
   ]
 }
