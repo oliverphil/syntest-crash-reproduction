@@ -56,7 +56,8 @@
     "@syntest/logging": "file:../../../syntest-core/libraries/logging",
     "@syntest/metric": "file:../../../syntest-core/libraries/metric",
     "@syntest/module": "file:../../../syntest-core/libraries/module",
-    "@syntest/search": "file:../../../syntest-core/libraries/search"
+    "@syntest/search": "file:../../../syntest-core/libraries/search",
+    "@syntest/storage": "file:../../../syntest-core/libraries/storage"
   },
   "engines": {
     "node": ">=16"
