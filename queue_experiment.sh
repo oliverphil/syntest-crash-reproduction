@@ -7,7 +7,7 @@ if [ "$3" -ge 30 ]; then
   qdel -u oliverphil
 fi
 
-if qstat | grep -P 'oliverphil\s*(?:(?:[r]+\s*[\d\/\s:\.]+all.q@[A-Za-z\-]+\.ecs)|(?:[qw]+\s*\d)+)' ; then
+if qstat | grep -P 'oliverphil\s*(?:(?:[r]+\s*[\d\/\s:\.]+all.q@(?!le-canard)[A-Za-z\-]+\.ecs)|(?:[qw]+\s*\d)+)' ; then
   echo "Jobs Running"
   echo ./queue_experiment.sh "$1" "$2" $(("$3" + 1)) | at now + 30 minutes
   atq
