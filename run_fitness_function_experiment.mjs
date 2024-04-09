@@ -40,6 +40,10 @@ const functionParamTypeMap = {
     "wrongExceptionRaisedInRightFunctionFuzzy": [
         "JavaScriptExecutionResult",
         "StackTrace"
+    ],
+    "rightExceptionPartialStackTraceMatch": [
+        "JavaScriptExecutionResult",
+        "StackTrace"
     ]
 }
 
@@ -122,14 +126,13 @@ withCombinations.forEach((config, index) => {
         ...JSON.parse(fs.readFileSync('.syntest.json').toString()),
         ...config
     };
-    // if (syntestFile.functions && (syntestFile.functions.map(f => f.functionName).includes('evoCrash')
+    if (syntestFile.functions && (syntestFile.functions.map(f => f.functionName).includes('rightExceptionPartialStackTraceMatch'))){
     // || syntestFile.functions.map(f => f.functionName).includes('wrongExceptionPartialStackTraceMatch')
     // || syntestFile.functions.map(f => f.functionName).includes('stackMatchWrongCrash'))) {
-    //     writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
-    // }
-    // if (syntestFile.function.functionName === 'wrongExceptionPartialStackTraceMatch'
-    // || syntestFile.function.functionName === 'stackMatchWrongCrash') {
-    writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
+        writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
+    }
+    // if (syntestFile.function.functionName === 'rightExceptionPartialStackTraceMatch') {
+    // writeFileSync(`.syntest-${index + 1}.json`, JSON.stringify(syntestFile, undefined, 4));
     // }
 
 });

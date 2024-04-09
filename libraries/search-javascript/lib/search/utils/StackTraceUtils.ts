@@ -70,7 +70,7 @@ export function createSingleObjectiveFunction(
         return (executionResult, stackTrace) => {
             let distance = 0;
             for (const function_ of functionHandles) {
-                if (function_.arguments.includes('StackError')) {
+                if (function_.arguments?.includes('StackError')) {
                     distance += function_.functionHandle(executionResult, stackTrace.error);
                 } else {
                     distance += function_.functionHandle(executionResult, stackTrace);

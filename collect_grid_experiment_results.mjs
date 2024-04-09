@@ -210,11 +210,11 @@ const createStats = (resultsDirectory, allResults) => {
 }
 
 const main = () => {
-    const resultsDirectory = 'results_archive/24-04-03_term_re_run';
+    const resultsDirectory = 'results_archive/24-04-08_function_re_run';
     // const resultsDirectory = 'results_archive/24-03-14_terms_with_coverage';
     cleanup(resultsDirectory);
-    const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
-    // const syntestFiles = ['.syntest-28.json', '.syntest-22.json'];
+    // const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
+    const syntestFiles = ['.syntest-25.json'];
     const allResults = {};
     const allResultsStrings = [];
     for (const file of syntestFiles.sort((a, b) => {
@@ -225,7 +225,7 @@ const main = () => {
         const num = file.split('-')[1].replaceAll('.json', '');
         console.log(num);
         const runConfiguration = JSON.parse(fs.readFileSync(`${resultsDirectory}/${file}`).toString());
-        if (runConfiguration.functions.map(f => f.functionName).includes('stackMatchWrongCrash')) continue;
+        // if (runConfiguration.functions.map(f => f.functionName).includes('stackMatchWrongCrash')) continue;
         try {
             execSync(`tar -zxf ${resultsDirectory}/output_${num}.tar.gz -C ${resultsDirectory} 2> /dev/null`);
         } catch {
