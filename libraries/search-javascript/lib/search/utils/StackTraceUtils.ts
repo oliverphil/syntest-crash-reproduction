@@ -116,6 +116,9 @@ export function createObjective(
 var funcs = {
     checkExceptionsMatch: (a, b) => checkExceptionsMatch(a, b),
     evoCrash: (a, b) => evoCrash(a, b),
+    evoCrash1: (a, b) => evoCrash1(a, b),
+    evoCrash2: (a, b) => evoCrash2(a, b),
+    evoCrash3: (a, b) => evoCrash3(a, b),
     rightExceptionRaised: (a, b) => rightExceptionRaised(a, b),
     rightExceptionRaisedFuzzy: (a, b) => rightExceptionRaisedFuzzy(a, b),
     rightExceptionRaisedOnRightLine: (a, b) => rightExceptionRaisedOnRightLine(a, b),
@@ -163,15 +166,14 @@ export function checkExceptionsMatch(executionResult: JavaScriptExecutionResult,
 }
 
 export function checkExceptionsMatchFuzzy(executionResult: JavaScriptExecutionResult, expectedStackException: StackError): number {
-    if (executionResult && executionResult.getError()) {
+    if (executionResult && executionResult.hasError()) {
         // const exception = executionResult.getError().message;
         const exceptionType = executionResult.getError().name;
         const fuse = new Fuse([expectedStackException.errorMessage], {includeScore: true});
         // const messageResult = exception === expectedStackException.errorMessage ? 0 : (fuse.search(exception)[0]?.score || 1);
         fuse.setCollection([expectedStackException.errorType]);
-        const typeResult = exceptionType === expectedStackException.errorType ? 0 : (fuse.search(exceptionType)[0]?.score || 1);
-        // return (messageResult + typeResult) / 2;
-        return typeResult;
+        if (exceptionType === expectedStackException.errorType) return 0;
+        return (fuse.search(exceptionType)[0]?.score || 1);
     }
     return 1;
 }
@@ -199,6 +201,29 @@ export function checkStackFramesCoveredAfterSearch(executionResult: JavaScriptEx
         }
     }
     return framesCovered;
+}
+
+export function evoCrash1(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    let lineReached = checkExceptionLineCovered(executionResult, stackTrace);
+    if (lineReached > 1) lineReached = 1;
+    return lineReached;
+}
+
+export function evoCrash2(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    let exceptionCovered = checkExceptionsMatchFuzzy(executionResult, stackTrace.error);
+    if (exceptionCovered > 1) exceptionCovered = 1;
+    return exceptionCovered;
+}
+
+export function evoCrash3(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {
+    if (!executionResult) return 1;
+    let stackDistance = executionResult.hasError() ?
+        stackTraceDistance(executionResult.getStackTrace().trace, stackTrace.trace) :
+        1;
+    if (stackDistance > 1) stackDistance = 1;
+    return stackDistance;
 }
 
 export function evoCrash(executionResult: JavaScriptExecutionResult, stackTrace: StackTrace): number {

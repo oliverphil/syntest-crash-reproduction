@@ -60,11 +60,11 @@
     ],
     "metric-middleware-pipeline": [],
     "output-metrics": [],
-    "syntest-project": "express",
+    "syntest-project": "moment",
     "syntest-crashes": "false",
     "syntest-type": "syntest-collected",
     "syntest-crash": [
-        "express-1"
+        "moment-71"
     ],
     "combination": false,
     "function": {
@@ -75,24 +75,10 @@
         ]
     },
     "useCoverage": true,
-    "singleObjective": true,
+    "singleObjective": false,
     "functions": [
         {
-            "functionName": "stackMatchWrongCrash",
-            "arguments": [
-                "JavaScriptExecutionResult",
-                "StackTrace"
-            ]
-        },
-        {
-            "functionName": "rightExceptionRaisedOnRightLineFuzzy",
-            "arguments": [
-                "JavaScriptExecutionResult",
-                "StackTrace"
-            ]
-        },
-        {
-            "functionName": "rightExceptionInNeighbouringFunctionFuzzy",
+            "functionName": "wrongExceptionRaisedInRightFunctionFuzzy",
             "arguments": [
                 "JavaScriptExecutionResult",
                 "StackTrace"

@@ -33,7 +33,7 @@ for (const i of functions) {
                 console.log(`Removing ${i}, ${j}, ${k} combination as dominated`);
                 continue;
             }
-            if ([i, j, k].includes('rightExceptionRaisedInRightFunctionFuzzy') || [i, j, k].includes('wrongExceptionRaisedInRightFunctionFuzzy')) {
+            if (![i, j, k].includes('rightExceptionRaisedInRightFunctionFuzzy') && ![i, j, k].includes('wrongExceptionRaisedInRightFunctionFuzzy')) {
                 permutations.push([i, j, k]);
                 console.log(i, j, k);
                 permCSV += `${i}, ${j}, ${k}\n`;

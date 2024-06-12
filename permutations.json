@@ -2,81 +2,21 @@
     [
         "rightExceptionRaisedOnRightLineFuzzy",
         "rightExceptionInNeighbouringFunction",
-        "rightExceptionRaisedInRightFunctionFuzzy"
+        "checkExceptionLineCovered"
     ],
     [
         "rightExceptionRaisedOnRightLineFuzzy",
         "rightExceptionInNeighbouringFunction",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
+        "rightExceptionPartialStackTraceMatch"
     ],
     [
         "rightExceptionRaisedOnRightLineFuzzy",
         "checkExceptionLineCovered",
-        "rightExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionRaisedOnRightLineFuzzy",
-        "checkExceptionLineCovered",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionRaisedOnRightLineFuzzy",
-        "rightExceptionPartialStackTraceMatch",
-        "rightExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionRaisedOnRightLineFuzzy",
-        "rightExceptionPartialStackTraceMatch",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionRaisedOnRightLineFuzzy",
-        "rightExceptionRaisedInRightFunctionFuzzy",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
+        "rightExceptionPartialStackTraceMatch"
     ],
     [
         "rightExceptionInNeighbouringFunction",
         "checkExceptionLineCovered",
-        "rightExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionInNeighbouringFunction",
-        "checkExceptionLineCovered",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionInNeighbouringFunction",
-        "rightExceptionPartialStackTraceMatch",
-        "rightExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionInNeighbouringFunction",
-        "rightExceptionPartialStackTraceMatch",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionInNeighbouringFunction",
-        "rightExceptionRaisedInRightFunctionFuzzy",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "checkExceptionLineCovered",
-        "rightExceptionPartialStackTraceMatch",
-        "rightExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "checkExceptionLineCovered",
-        "rightExceptionPartialStackTraceMatch",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "checkExceptionLineCovered",
-        "rightExceptionRaisedInRightFunctionFuzzy",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
-    ],
-    [
-        "rightExceptionPartialStackTraceMatch",
-        "rightExceptionRaisedInRightFunctionFuzzy",
-        "wrongExceptionRaisedInRightFunctionFuzzy"
+        "rightExceptionPartialStackTraceMatch"
     ]
 ]

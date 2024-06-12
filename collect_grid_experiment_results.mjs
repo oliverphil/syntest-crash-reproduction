@@ -219,13 +219,14 @@ const createStats = (resultsDirectory, allResults) => {
 }
 
 const main = () => {
-    const resultsDirectory = 'results_archive/24-04-08_function_re_run';
+    // const resultsDirectory = 'results_archive/24-06-13_missing_functions';
     // const resultsDirectory = 'results_archive/24-03-14_terms_with_coverage';
     // const resultsDirectory = 'results_archive/24-03-11_terms_no_coverage';
     // const resultsDirectory = 'results_archive/24-03-22_discrete_vs_continuous_2';
+    const resultsDirectory = 'results_archive/24-04-08_function_re_run';
     cleanup(resultsDirectory);
-    // const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
-    const syntestFiles = ['.syntest-25.json'];
+    const syntestFiles = fs.readdirSync(resultsDirectory).filter(file => file.includes('.syntest-'));
+    // const syntestFiles = ['.syntest-25.json'];
     const allResults = {};
     const allResultsStrings = [];
     for (const file of syntestFiles.sort((a, b) => {
